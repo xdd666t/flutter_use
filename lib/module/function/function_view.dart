@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_use/module/function/widget/function_items.dart';
+import 'package:flutter_use/module/common/widget/function_items.dart';
+import 'package:flutter_use/module/function/widget/function_card.dart';
 
 import 'function_cubit.dart';
 import 'function_state.dart';
@@ -16,8 +17,8 @@ class FunctionPage extends StatelessWidget {
   }
 
   Widget _body(BuildContext context, FunctionState state) {
-    return FunctionItems(
-      items: state.items,
+    return FunctionCard(
+      data: state.items,
       onItem: (String tag) {
         BlocProvider.of<FunctionCubit>(context).toFun(context, tag);
       },

@@ -16,8 +16,8 @@ class ExampleCubit extends Cubit<ExampleState> {
         NavigatorUtil.goCounterPage(context);
         break;
       case 'testLayout':
-        // NavigatorUtil.goTestLayoutPage(context);
-      SmartDialog.instance.show();
+        NavigatorUtil.goTestLayoutPage(context);
+        // SmartDialog.instance.show();
         break;
     }
   }

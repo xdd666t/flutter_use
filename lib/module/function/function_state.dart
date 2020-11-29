@@ -1,27 +1,37 @@
 import 'package:flutter_use/bean/common/btn_info.dart';
 
 class FunctionState {
-  List items;
+  List<BtnInfo> items;
 
   FunctionState init() {
-    var items = [
-      BtnInfo(title: '弹窗控件', tag: 'dialog'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-    ];
-    return FunctionState()..items = items;
+    return FunctionState()
+      ..items = [
+        BtnInfo(
+          title: 'SmartDialog',
+          tag: 'smartDialog',
+          bg: 'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/flutter_use/20201129134908.jpg',
+        ),
+        BtnInfo(
+          title: '弹窗控件',
+          tag: 'dialog',
+          bg: 'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/flutter_use/20201129134922.jpg',
+        ),
+        BtnInfo(
+          title: '测试',
+          tag: 'test',
+          bg: 'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/flutter_use/20201129134929.jpg',
+        ),
+        BtnInfo(
+          title: '测试',
+          tag: 'test',
+          bg: 'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/flutter_use/20201129134913.jpg',
+        ),
+        BtnInfo(
+          title: '测试',
+          tag: 'test',
+          bg: 'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/flutter_use/20201129134857.jpg',
+        ),
+      ];
   }
 
   FunctionState clone() {

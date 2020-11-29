@@ -28,4 +28,9 @@ class NavigatorUtil {
   static void goTestLayoutPage(BuildContext context) {
     Application.router.navigateTo(context, Routes.testLayout, replace: false);
   }
+
+  /// 跳转到演示SmartDialog页面
+  static void goSmartDialogPage(BuildContext context) {
+    Application.router.navigateTo(context, Routes.smartDialog, replace: false);
+  }
 }

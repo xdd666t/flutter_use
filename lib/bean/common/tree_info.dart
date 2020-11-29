@@ -11,5 +11,5 @@ class TreeTwiceInfo {
   String title;
 
   ///二级内容
-  List btnInfo;
+  List<BtnInfo> btnInfo;
 }

@@ -19,6 +19,8 @@ class SmartDialog {
   ///呈现的Widget
   Widget _widget;
   GlobalKey<SmartDialogViewState> _key;
+  ///该控件是全局覆盖在app页面上的控件,该库dialog便是基于此实现;
+  ///用户也可以用此控件自定义相关操作
   OverlayEntry overlayEntry;
 
   SmartDialog._internal() {
@@ -45,7 +47,7 @@ class SmartDialog {
       },
     );
 
-    rebuild();
+    _rebuild();
   }
 
   ///关闭动画
@@ -55,13 +57,13 @@ class SmartDialog {
     SmartDialogViewState smartDialogViewState = _key?.currentState;
     await smartDialogViewState?.dismiss();
 
-    rebuild();
+    _rebuild();
   }
 
   ///刷新重建
   ///
   /// 实际上是调用OverlayEntry中builder方法,重建布局
-  void rebuild() {
+  void _rebuild() {
     overlayEntry.markNeedsBuild();
   }
 }

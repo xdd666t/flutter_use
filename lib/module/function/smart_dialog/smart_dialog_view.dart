@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_use/module/common/widget/function_items.dart';
-import 'package:flutter_use/module/function/dialog/dialog_cubit.dart';
+import 'package:flutter_use/module/function/smart_dialog/smart_dialog_cubit.dart';
 
-class DialogPage extends StatelessWidget {
+class SmartDialogPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      ///在MainBloc上使用add方法,添加初始化事件
-      create: (BuildContext context) => DialogCubit(),
-      child: BlocBuilder<DialogCubit, DialogState>(builder: _buildBody),
+      create: (BuildContext context) => SmartDialogCubit(),
+      child:
+          BlocBuilder<SmartDialogCubit, SmartDialogState>(builder: _buildBody),
     );
   }
 
-  Widget _buildBody(BuildContext context, DialogState state) {
+  Widget _buildBody(BuildContext context, SmartDialogState state) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text('Dialog')),
+      appBar: AppBar(title: Text('SmartDialog')),
       body: FunctionItems(
         items: state.items,
         constraints: BoxConstraints(minWidth: 100, minHeight: 36),
         onItem: (String tag) {
-          BlocProvider.of<DialogCubit>(context).showFun(context, tag);
+          BlocProvider.of<SmartDialogCubit>(context).showFun(context, tag);
         },
       ),
     );

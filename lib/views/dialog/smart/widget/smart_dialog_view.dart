@@ -11,7 +11,7 @@ class SmartDialogView extends StatefulWidget {
     this.onBgTap,
     this.alignment = Alignment.bottomCenter,
     this.isPenetrate = true,
-    this.animationDuration = const Duration(milliseconds: 300),
+    this.animationDuration = const Duration(milliseconds: 260),
   }) : super(key: key);
 
   ///内容widget

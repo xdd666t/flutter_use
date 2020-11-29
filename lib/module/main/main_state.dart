@@ -14,32 +14,28 @@ class MainState {
   PageController pageController;
 
   MainState init() {
-    ///item栏目
-    List<BtnInfo> itemList = [
-      BtnInfo(
-        title: "范例",
-        icon: Icon(Icons.opacity),
-      ),
-      BtnInfo(
-        title: "功能",
-        icon: Icon(Icons.bubble_chart),
-      ),
-      BtnInfo(
-        title: "设置",
-        icon: Icon(Icons.settings),
-      ),
-    ];
-
-    ///PageView页面
-    List<Widget> pageList = [
-      ExamplePage(),
-      FunctionPage(),
-      Center(child: Container()),
-    ];
-
     return MainState()
-      ..pageList = pageList
-      ..itemList = itemList
+      //PageView页面
+      ..pageList = [
+        keepAliveWrapper(FunctionPage()),
+        keepAliveWrapper(ExamplePage()),
+        keepAliveWrapper(Center(child: Container())),
+      ]
+      //item栏目
+      ..itemList = [
+        BtnInfo(
+          title: "功能",
+          icon: Icon(Icons.bubble_chart),
+        ),
+        BtnInfo(
+          title: "范例",
+          icon: Icon(Icons.opacity),
+        ),
+        BtnInfo(
+          title: "设置",
+          icon: Icon(Icons.settings),
+        ),
+      ]
       ..pageController = PageController()
       ..selectedIndex = 0;
   }

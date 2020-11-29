@@ -16,6 +16,9 @@ class Routes {
   ///测试布局页面
   static String testLayout = "/testLayout";
 
+  ///演示SmartDialog控件
+  static String smartDialog = "/smartDialog";
+
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = new Handler(
       handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -29,5 +32,6 @@ class Routes {
     router.define(dialog, handler: dialogPageHandler);
     router.define(counter, handler: counterPageHandler);
     router.define(testLayout, handler: testLayoutPageHandler);
+    router.define(smartDialog, handler: smartDialogPageHandler);
   }
 }

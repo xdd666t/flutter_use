@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/bean/common/tree_info.dart';
-import 'package:flutter_use/module/function/widget/function_items.dart';
+import 'package:flutter_use/module/common/widget/function_items.dart';
 
 ///树形item控件
 class TreeItems extends StatelessWidget {

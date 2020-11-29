@@ -1,18 +1,17 @@
 part of 'dialog_cubit.dart';
 
 class DialogState {
-  List items;
+  List<BtnInfo> items;
 
   DialogState init() {
-    var items = [
-      BtnInfo(title: '底部弹窗', tag: 'bottom'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-      BtnInfo(title: '测试', tag: 'test'),
-    ];
-
-    return DialogState()..items = items;
+    return DialogState()
+      ..items = [
+        BtnInfo(title: '底部弹窗', tag: 'bottom'),
+        BtnInfo(title: '测试', tag: 'test'),
+        BtnInfo(title: '测试', tag: 'test'),
+        BtnInfo(title: '测试', tag: 'test'),
+        BtnInfo(title: '测试', tag: 'test'),
+      ];
   }
 
   DialogState clone() {
