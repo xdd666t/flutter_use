@@ -12,6 +12,7 @@ class SmartDialogView extends StatefulWidget {
     this.alignment = Alignment.bottomCenter,
     this.isPenetrate = true,
     this.animationDuration = const Duration(milliseconds: 260),
+    this.isUseAnimation = false,
   }) : super(key: key);
 
   ///内容widget
@@ -29,13 +30,16 @@ class SmartDialogView extends StatefulWidget {
   ///动画时间
   final Duration animationDuration;
 
+  ///是否使用动画
+  final bool isUseAnimation;
+
   @override
   SmartDialogViewState createState() => SmartDialogViewState();
 }
 
 class SmartDialogViewState extends State<SmartDialogView>
     with SingleTickerProviderStateMixin {
-  double _opacity = 0.0;
+  double _opacity;
 
   AnimationController _controller;
 
@@ -45,6 +49,7 @@ class SmartDialogViewState extends State<SmartDialogView>
   @override
   void initState() {
     //处理背景动画
+    _opacity = widget.isUseAnimation ? 0.0 : 1.0;
     Future.delayed(Duration(milliseconds: 10), () {
       setState(() {
         _opacity = 1.0;
@@ -87,23 +92,26 @@ class SmartDialogViewState extends State<SmartDialogView>
         onPointerDown: (event) {},
         child: Align(
           alignment: widget.alignment,
-          child: widget.alignment == Alignment.center
-              //中间弹窗使用缩放动画
-              ? ScaleTransition(
-                  scale: CurvedAnimation(
-                    parent: _controller,
-                    curve: Curves.linear,
-                  ),
-                  child: widget.child,
-                )
-              //出了中间弹窗,其它的都使用位移动画
-              : SlideTransition(
-                  position: Tween<Offset>(
-                    begin: _offset,
-                    end: Offset.zero,
-                  ).animate(_controller),
-                  child: widget.child,
-                ),
+          child: widget.isUseAnimation
+              //是否使用动画
+              ? (widget.alignment == Alignment.center
+                  //中间弹窗是否使用缩放动画
+                  ? ScaleTransition(
+                      scale: CurvedAnimation(
+                        parent: _controller,
+                        curve: Curves.linear,
+                      ),
+                      child: widget.child,
+                    )
+                  //除了中间弹窗,其它的都使用位移动画
+                  : SlideTransition(
+                      position: Tween<Offset>(
+                        begin: _offset,
+                        end: Offset.zero,
+                      ).animate(_controller),
+                      child: widget.child,
+                    ))
+              : widget.child,
         ),
       ),
     ]);
@@ -153,7 +161,9 @@ class SmartDialogViewState extends State<SmartDialogView>
     //内容widget结束动画
     _controller.reverse();
 
-    await Future.delayed(widget.animationDuration);
+    if (widget.isUseAnimation) {
+      await Future.delayed(widget.animationDuration);
+    }
   }
 
   @override

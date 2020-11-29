@@ -45,6 +45,8 @@ dependencies:
   focus_widget: ^1.0.2+2
   # iOS数字键盘添加收起按钮 https://pub.dev/packages/keyboard_actions
   keyboard_actions: ^3.3.0
+  # https://pub.flutter-io.cn/packages/logger
+  logger: ^0.9.4
 
 dev_dependencies:
   flutter_test:

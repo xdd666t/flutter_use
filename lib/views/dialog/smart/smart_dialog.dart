@@ -37,6 +37,9 @@ class SmartDialog {
     _key = GlobalKey<SmartDialogViewState>();
     _widget = SmartDialogView(
       key: _key,
+      alignment: Alignment.centerRight,
+      isPenetrate: false,
+      isUseAnimation: true,
       child: Container(
         height: 200,
         width: 500,
