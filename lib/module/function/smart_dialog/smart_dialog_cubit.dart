@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
-import 'package:flutter_use/views/dialog/smart/smart_dialog.dart';
 
 part 'smart_dialog_state.dart';
 

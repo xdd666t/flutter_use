@@ -1,10 +1,11 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 import 'app/routes/application.dart';
 import 'app/routes/routes.dart';
 import 'module/main/main_view.dart';
-import 'views/dialog/smart/flutter_smart_dialog.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,8 +25,10 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, Widget child) {
         return Material(
           type: MaterialType.transparency,
-          child: FlutterSmartDialog(
-            child: child,
+          child: FlutterEasyLoading(
+            child: FlutterSmartDialog(
+              child: child,
+            ),
           ),
         );
       },
