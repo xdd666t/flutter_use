@@ -1,28 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 //按照宽度适配
-num setWidth(num size){
+num setWidth(num size) {
   return ScreenUtil().setWidth(size);
 }
 
 //按照高度适配
-num setHeight(num size){
+num setHeight(num size) {
   return ScreenUtil().setHeight(size);
 }
 
 //适配文字
-num setSp(num size){
+num setSp(num size) {
 //  return ScreenUtil().setSp(size);
   return size.toDouble();
 }
 
 //自动适配,后面方便扩展
-num auto(num size){
+num auto(num size) {
   return size.toDouble();
 }
-
 
 //界面适配
 void autoUi(BuildContext context) {
