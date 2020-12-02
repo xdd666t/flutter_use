@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
     Routes.configureRoutes(router);
     Application.router = router;
 
+    SmartDialog();
+
     return MaterialApp(
       home: MainPage(),
       onGenerateRoute: Application.router.generator,
