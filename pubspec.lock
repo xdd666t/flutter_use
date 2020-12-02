@@ -121,10 +121,12 @@ packages:
   flutter_smart_dialog:
     dependency: "direct main"
     description:
-      name: flutter_smart_dialog
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.0.3"
+      path: "."
+      ref: HEAD
+      resolved-ref: "6b94d4bc3229b51bb108afe3927861d491e7eed3"
+      url: "git://github.com/CNAD666/flutter_smart_dialog.git"
+    source: git
+    version: "0.1.0"
   flutter_spinkit:
     dependency: transitive
     description:
