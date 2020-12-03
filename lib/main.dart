@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
     Routes.configureRoutes(router);
     Application.router = router;
 
-    SmartDialog();
 
     return MaterialApp(
       home: MainPage(),
@@ -27,10 +26,8 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, Widget child) {
         return Material(
           type: MaterialType.transparency,
-          child: FlutterEasyLoading(
-            child: FlutterSmartDialog(
-              child: child,
-            ),
+          child: FlutterSmartDialog(
+            child: child,
           ),
         );
       },
