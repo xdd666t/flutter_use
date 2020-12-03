@@ -10,7 +10,7 @@ class SmartDialogCubit extends Cubit<SmartDialogState> {
   SmartDialogCubit() : super(SmartDialogState().init());
 
   ///测试功能模块
-  void showFun(context, tag) async{
+  void showFun(context, tag) async {
     switch (tag) {
       case 'showToast':
         SmartDialog.instance.showToast('toast弹窗测试toast弹窗测试toast');
@@ -83,7 +83,7 @@ class SmartDialogCubit extends Cubit<SmartDialogState> {
               ),
 
               //分割线
-              Divider(),
+              Container(height: 1, color: Colors.black.withOpacity(0.1)),
             ],
           );
         },
