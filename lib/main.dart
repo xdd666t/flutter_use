@@ -1,6 +1,5 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 import 'app/routes/application.dart';
@@ -18,7 +17,6 @@ class MyApp extends StatelessWidget {
     final router = FluroRouter();
     Routes.configureRoutes(router);
     Application.router = router;
-
 
     return MaterialApp(
       home: MainPage(),
