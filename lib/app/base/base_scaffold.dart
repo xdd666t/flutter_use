@@ -103,19 +103,19 @@ class _BaseScaffoldState extends State<BaseScaffold> {
         drawerEnableOpenDragGesture: widget.drawerEnableOpenDragGesture,
         endDrawerEnableOpenDragGesture: widget.endDrawerEnableOpenDragGesture,
       ),
-      onWillPop: dealWillPop,
+      onWillPop: _dealWillPop,
     );
   }
 
   ///控件返回按钮
-  Future<bool> dealWillPop() async {
+  Future<bool> _dealWillPop() async {
     if (widget.onBack != null) {
       widget.onBack();
     }
 
     //处理弹窗问题
     if (SmartDialog.instance.config.isExist) {
-      SmartDialog.instance.dismiss();
+      SmartDialog.dismiss();
       return false;
     }
 
@@ -131,28 +131,12 @@ class _BaseScaffoldState extends State<BaseScaffold> {
         _lastPressedAt = DateTime.now();
 
         //弹窗提示
-        SmartDialog.instance.showToast("再点一次退出");
+        SmartDialog.showToast("再点一次退出");
         return false;
       }
       return true;
     } else {
       return true;
     }
-  }
-
-  ///一些周期生命周期
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void deactivate() {
-    super.deactivate();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 }
