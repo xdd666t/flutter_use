@@ -7,7 +7,7 @@ packages:
       name: async
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.5.0-nullsafety.1"
+    version: "2.5.0-nullsafety.3"
   bloc:
     dependency: transitive
     description:
@@ -21,35 +21,35 @@ packages:
       name: boolean_selector
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.1.0-nullsafety.1"
+    version: "2.1.0-nullsafety.3"
   characters:
     dependency: transitive
     description:
       name: characters
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.1.0-nullsafety.3"
+    version: "1.1.0-nullsafety.5"
   charcode:
     dependency: transitive
     description:
       name: charcode
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.2.0-nullsafety.1"
+    version: "1.2.0-nullsafety.3"
   clock:
     dependency: transitive
     description:
       name: clock
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.1.0-nullsafety.1"
+    version: "1.1.0-nullsafety.3"
   collection:
     dependency: transitive
     description:
       name: collection
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.15.0-nullsafety.3"
+    version: "1.15.0-nullsafety.5"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -70,7 +70,7 @@ packages:
       name: fake_async
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.2.0-nullsafety.1"
+    version: "1.2.0-nullsafety.3"
   fluro:
     dependency: "direct main"
     description:
@@ -124,7 +124,7 @@ packages:
       name: flutter_smart_dialog
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.1.0"
+    version: "0.1.1"
   flutter_spinkit:
     dependency: transitive
     description:
