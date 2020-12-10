@@ -1,15 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-
-enum ShowStatus {
-  show,
-  showProgress,
-  showSuccess,
-  showError,
-  showInfo,
-  showToast,
-}
 
 class EasyDialog {
   EasyDialog.init() {
@@ -18,14 +8,12 @@ class EasyDialog {
       ..isLoading = true
       ..isUseAnimation = true
       ..animationDuration = Duration(milliseconds: 270)
-      ..isPenetrate = true
-      ..maskColor = Colors.black.withOpacity(0.1)
+      ..isPenetrate = false
+      ..maskColor = Colors.black.withOpacity(0.3)
       ..isExist = false
       ..isExistExtra = false
       ..alignment = Alignment.center;
   }
-
-  static EasyLoading get instance => EasyLoading.instance;
 
   static Future<void> show({
     @required Widget widget,
@@ -51,8 +39,8 @@ class EasyDialog {
     );
   }
 
-  static Future<void> showLoading({String msg = '加载中...'}) {
-    return SmartDialog.showLoading(msg: msg);
+  static Future<void> showLoading() {
+    return SmartDialog.showLoading();
   }
 
   static Future<void> showToast(

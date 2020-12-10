@@ -35,6 +35,11 @@ dependencies:
   equatable: ^1.2.3 #增强对比
   # https://pub.dev/packages/flutter_hooks
   flutter_hooks: ^0.14.1 #分离状态逻辑和视图逻辑
+  # 图片选择器 https://pub.dev/packages/multi_image_picker
+  image_picker: ^0.6.7+4
+  multi_image_picker: ^4.7.14
+  # 预览图片 https://github.com/fireslime/photo_view
+  photo_view: ^0.10.3
   # 路由管理 https://pub.dev/packages/fluro
   fluro: ^1.7.8 #路由管理框架
   # 界面适配 https://pub.dev/packages/flutter_screenutil
