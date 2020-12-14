@@ -9,7 +9,7 @@ class SpanTwoCubit extends Cubit<SpanTwoState> {
   SpanTwoCubit() : super(SpanTwoState().init());
 
   void init(BuildContext context){
-    BlocProvider.of<SpanOneCubit>(context).init();
+    emit(state.init());
   }
 
   ///自增

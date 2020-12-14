@@ -2,7 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubit.dart';
 
-class SpanOnePage extends StatelessWidget {
+class SpanOnePage extends StatefulWidget {
+  @override
+  _SpanOnePageState createState() => _SpanOnePageState();
+}
+
+class _SpanOnePageState extends State<SpanOnePage> {
+
+  @override
+  void initState() {
+    BlocProvider.of<SpanOneCubit>(context).init();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<SpanOneCubit, SpanOneState>(builder: _body);

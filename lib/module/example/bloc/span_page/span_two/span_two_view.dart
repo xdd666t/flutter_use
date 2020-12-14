@@ -18,7 +18,7 @@ class SpanTwoPage extends StatelessWidget {
       appBar: AppBar(title: Text('跨页面-Two')),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          //改变上个页面
+          //改变SpanOneCubit模块数据
           BlocProvider.of<SpanOneCubit>(context).increase();
 
           //改变当前页面数据

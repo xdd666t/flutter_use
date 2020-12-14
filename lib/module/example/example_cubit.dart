@@ -15,7 +15,7 @@ class ExampleCubit extends Cubit<ExampleState> {
       case 'cubit':
         NavigatorUtil.goCounterPage(context);
         break;
-      case 'span':
+      case 'globalBloc':
         NavigatorUtil.goSpanOnePage(context);
         break;
       case 'testLayout':
