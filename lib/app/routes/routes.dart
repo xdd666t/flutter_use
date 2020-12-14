@@ -19,6 +19,10 @@ class Routes {
   ///演示SmartDialog控件
   static String smartDialog = "/smartDialog";
 
+  ///跨页面传递事件
+  static String spanOne = "/spanOne";
+  static String spanTwo = "/spanOne/spanTwo";
+
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = new Handler(
       handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -33,5 +37,7 @@ class Routes {
     router.define(counter, handler: counterPageHandler);
     router.define(testLayout, handler: testLayoutPageHandler);
     router.define(smartDialog, handler: smartDialogPageHandler);
+    router.define(spanOne, handler: spanOnePageHandler);
+    router.define(spanTwo, handler: spanTwoPageHandler);
   }
 }
