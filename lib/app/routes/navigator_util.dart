@@ -33,4 +33,12 @@ class NavigatorUtil {
   static void goSmartDialogPage(BuildContext context) {
     Application.router.navigateTo(context, Routes.smartDialog, replace: false);
   }
+
+  ///跨页面传递数据
+  static void goSpanOnePage(BuildContext context) {
+    Application.router.navigateTo(context, Routes.spanOne, replace: false);
+  }
+  static void goSpanTwoPage(BuildContext context) {
+    Application.router.navigateTo(context, Routes.spanTwo, replace: false);
+  }
 }

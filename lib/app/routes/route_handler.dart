@@ -1,6 +1,8 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/module/example/bloc/counter/counter_view.dart';
+import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_view.dart';
+import 'package:flutter_use/module/example/bloc/span_page/span_two/span_two_view.dart';
 import 'package:flutter_use/module/example/layout/test_layout/test_layout_view.dart';
 import 'package:flutter_use/module/function/dialog/dialog_view.dart';
 import 'package:flutter_use/module/function/smart_dialog/smart_dialog_view.dart';
@@ -39,5 +41,17 @@ Handler testLayoutPageHandler = Handler(
 Handler smartDialogPageHandler = Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
     return SmartDialogPage();
+  },
+);
+
+/// 跨页面传递数据
+Handler spanOnePageHandler = Handler(
+  handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+    return SpanOnePage();
+  },
+);
+Handler spanTwoPageHandler = Handler(
+  handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+    return SpanTwoPage();
   },
 );

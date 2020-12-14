@@ -11,6 +11,7 @@ class ExampleState {
           title: 'flutter_bloc',
           btnInfo: [
             BtnInfo(title: 'Cubit', tag: 'cubit'),
+            BtnInfo(title: '全局Bloc', tag: 'globalBloc'),
           ],
         ),
 
