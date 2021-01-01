@@ -124,7 +124,7 @@ packages:
       name: flutter_smart_dialog
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.2.0"
+    version: "1.2.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
