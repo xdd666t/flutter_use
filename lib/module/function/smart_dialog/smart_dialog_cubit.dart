@@ -16,9 +16,20 @@ class SmartDialogCubit extends Cubit<SmartDialogState> {
         SmartDialog.showToast('toast弹窗测试toast弹窗测试toast');
         break;
       case 'showLoading':
-        SmartDialog.showLoading();
+        SmartDialog.showLoading(
+          maskColorTemp: Colors.blue.withOpacity(0.3),
+        );
         await Future.delayed(Duration(seconds: 2));
         SmartDialog.dismiss();
+        break;
+      case 'centerDialog':
+        SmartDialog.show(
+          alignmentTemp: Alignment.center,
+          clickBgDismissTemp: true,
+          isLoadingTemp: false,
+          maskColorTemp: Colors.deepPurpleAccent.withOpacity(0.3),
+          widget: _contentWidget(maxHeight: 400, maxWidth: 300),
+        );
         break;
       case 'bottomDialog':
         SmartDialog.show(
