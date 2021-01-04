@@ -51,7 +51,7 @@ dependencies:
   # https://pub.flutter-io.cn/packages/logger
   logger: ^0.9.4
   # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
-  flutter_smart_dialog: any
+  flutter_smart_dialog: ^1.2.1
 #  flutter_smart_dialog:
 #    git:
 #      url: git://github.com/CNAD666/flutter_smart_dialog.git
