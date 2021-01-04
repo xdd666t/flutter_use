@@ -36,17 +36,17 @@ class SelectDialogView extends StatelessWidget {
 
   Widget _buildCancel() {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(auto(10)),
+      borderRadius: BorderRadius.circular(10.dp),
       child: Material(
         color: Colors.white,
         child: InkWell(
           onTap: () => EasyDialog.dismiss(),
           child: Container(
-            height: auto(100),
+            height: 100.dp,
             alignment: Alignment.center,
             child: Text(
               '取消',
-              style: TextStyle(color: Color(0xFF999999), fontSize: setSp(32)),
+              style: TextStyle(color: Color(0xFF999999), fontSize: 32.sp),
             ),
           ),
         ),
@@ -56,11 +56,11 @@ class SelectDialogView extends StatelessWidget {
 
   Widget _buildSelectItem() {
     return Container(
-      margin: EdgeInsets.only(bottom: auto(20)),
+      margin: EdgeInsets.only(bottom: 20.dp),
       child: ClipRRect(
         borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(auto(10)),
-          bottomLeft: Radius.circular(auto(10)),
+          bottomRight: Radius.circular(10.dp),
+          bottomLeft: Radius.circular(10.dp),
         ),
         child: Column(
           children: data.asMap().keys.map((index) {
@@ -81,14 +81,14 @@ class SelectDialogView extends StatelessWidget {
               onSelect(index);
             },
             child: Container(
-              margin: EdgeInsets.only(bottom: auto(1)),
-              height: auto(90),
+              margin: EdgeInsets.only(bottom: 1.dp),
+              height: 90.dp,
               alignment: Alignment.center,
               child: Text(
                 data[index],
                 style: TextStyle(
                   color: Color(0xFF333333),
-                  fontSize: setSp(30),
+                  fontSize: 30.sp,
                 ),
               ),
             ),
@@ -98,7 +98,7 @@ class SelectDialogView extends StatelessWidget {
         //分割线
         Visibility(
           visible: (data.length - 1) != index,
-          child: Container(height: auto(0.4), color: Colors.black),
+          child: Container(height: 0.4.dp, color: Colors.black),
         ),
       ],
     );
@@ -108,12 +108,12 @@ class SelectDialogView extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: auto(110),
+          height: 110.dp,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(auto(10)),
-              topRight: Radius.circular(auto(10)),
+              topLeft: Radius.circular(10.dp),
+              topRight: Radius.circular(10.dp),
             ),
           ),
           alignment: Alignment.center,
@@ -121,21 +121,21 @@ class SelectDialogView extends StatelessWidget {
             title,
             style: TextStyle(
               color: Color(0xFF333333),
-              fontSize: setSp(32),
+              fontSize: 32.sp,
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
 
         //分割线
-        Container(height: auto(0.8), color: Colors.black),
+        Container(height: 0.8.dp, color: Colors.black),
       ],
     );
   }
 
   Widget _buildBg({List<Widget> children}) {
     return Container(
-      margin: EdgeInsets.all(auto(10)),
+      margin: EdgeInsets.all(10.dp),
       child: Material(
         color: Colors.transparent,
         child: Column(

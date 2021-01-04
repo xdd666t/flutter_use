@@ -97,14 +97,14 @@ class _FullConfirmDialogViewState extends State<FullConfirmDialogView>
       children: [
         //分割线
         Container(
-          height: auto(1),
+          height: 1.dp,
           width: double.infinity,
           color: Color(0xFFEEEEEE),
         ),
 
         //确定和取消
         Container(
-          height: auto(90),
+          height: 90.dp,
           child: Row(
             children: [
               //取消
@@ -113,7 +113,7 @@ class _FullConfirmDialogViewState extends State<FullConfirmDialogView>
               //分割线
               Container(
                 height: double.infinity,
-                width: auto(1),
+                width: 1.dp,
                 color: Color(0xFFEEEEEE),
               ),
 
@@ -134,16 +134,16 @@ class _FullConfirmDialogViewState extends State<FullConfirmDialogView>
       },
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(auto(8)),
+          bottomRight: Radius.circular(8.dp),
         ),
       ),
-      height: auto(90),
+      height: 90.dp,
       child: Text(
         widget.confirm,
         style: widget.confirmStyle ??
             TextStyle(
               color: Color(0xFF0299FF),
-              fontSize: setSp(30),
+              fontSize: 30.sp,
             ),
       ),
     );
@@ -157,16 +157,16 @@ class _FullConfirmDialogViewState extends State<FullConfirmDialogView>
       },
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(auto(8)),
+          bottomLeft: Radius.circular(8.dp),
         ),
       ),
-      height: auto(90),
+      height: 90.dp,
       child: Text(
         widget.cancel,
         style: widget.cancelStyle ??
             TextStyle(
               color: Color(0xFF333333),
-              fontSize: setSp(30),
+              fontSize: 30.sp,
             ),
       ),
     );
@@ -175,26 +175,26 @@ class _FullConfirmDialogViewState extends State<FullConfirmDialogView>
   Widget _buildContent() {
     return widget.title != null
         ? Container(
-            padding: EdgeInsets.only(left: auto(47), right: auto(47)),
-            margin: EdgeInsets.only(top: auto(48), bottom: auto(48)),
+            padding: EdgeInsets.only(left: 47.dp, right: 47.dp),
+            margin: EdgeInsets.only(top: 48.dp, bottom: 48.dp),
             child: Text(
               widget.content ?? '',
               style: widget.contentStyle ??
                   TextStyle(
                     color: Color(0xFF333333),
-                    fontSize: setSp(28),
+                    fontSize: 28.sp,
                   ),
             ),
           )
         : Container(
-            padding: EdgeInsets.only(left: auto(47), right: auto(47)),
-            margin: EdgeInsets.only(top: auto(52), bottom: auto(94)),
+            padding: EdgeInsets.only(left: 47.dp, right: 47.dp),
+            margin: EdgeInsets.only(top: 52.dp, bottom: 94.dp),
             child: Text(
               widget.content ?? '',
               style: widget.contentStyle ??
                   TextStyle(
                     color: Color(0xFF333333),
-                    fontSize: setSp(32),
+                    fontSize: 32.sp,
                   ),
             ),
           );
@@ -204,13 +204,13 @@ class _FullConfirmDialogViewState extends State<FullConfirmDialogView>
     return Visibility(
       visible: widget.title != null,
       child: Container(
-        padding: EdgeInsets.only(left: auto(47), right: auto(47)),
+        padding: EdgeInsets.only(left: 47.dp, right: 47.dp),
         child: Text(
           widget.title ?? '',
           style: widget.titleStyle ??
               TextStyle(
                 color: Color(0xFF333333),
-                fontSize: setSp(32),
+                fontSize: 32.sp,
                 fontWeight: FontWeight.bold,
               ),
         ),
@@ -227,11 +227,11 @@ class _FullConfirmDialogViewState extends State<FullConfirmDialogView>
           curve: Curves.linear,
         ),
         child: Container(
-          width: auto(552),
-          padding: EdgeInsets.only(top: auto(42)),
+          width: 552.dp,
+          padding: EdgeInsets.only(top: 42.dp),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(auto(8)),
+            borderRadius: BorderRadius.circular(8.dp),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,

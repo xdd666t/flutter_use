@@ -18,15 +18,15 @@ showBottomDateDialog(
     }) {
   var picker = Picker(
     cancelText: cancelText,
-    cancelTextStyle: TextStyle(color: Color(0xFF999999), fontSize: setSp(33)),
+    cancelTextStyle: TextStyle(color: Color(0xFF999999), fontSize: 33.sp),
     confirmText: confirmText,
-    confirmTextStyle: TextStyle(color: Color(0xFF0299FF), fontSize: setSp(35)),
+    confirmTextStyle: TextStyle(color: Color(0xFF0299FF), fontSize: 35.sp),
     title: Text(title,
-        style: TextStyle(color: Color(0xFF333333), fontSize: setSp(33))),
-    textStyle: TextStyle(color: Color(0xFF333333), fontSize: setSp(30)),
+        style: TextStyle(color: Color(0xFF333333), fontSize: 33.sp)),
+    textStyle: TextStyle(color: Color(0xFF333333), fontSize: 30.sp),
     backgroundColor: Colors.transparent,
-    height: auto(400),
-    itemExtent: auto(75),
+    height: 400.dp,
+    itemExtent: 75.dp,
     headerDecoration: BoxDecoration(
       border: Border(
         bottom: BorderSide(color: Colors.black12, width: 0.5),

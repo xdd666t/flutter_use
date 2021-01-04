@@ -27,23 +27,23 @@ class FunctionCard extends StatelessWidget {
 
   Widget _buildItem(BtnInfo item) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(auto(20)),
+      borderRadius: BorderRadius.circular(20.dp),
       child: Stack(
         alignment: Alignment.center,
         children: [
           //背景
           Container(
-            width: auto(400),
-            height: auto(200),
+            width: 400.dp,
+            height: 200.dp,
             child: Image.network(item.bg, fit: BoxFit.cover),
           ),
 
           //毛玻璃背景
           ClipRRect(
-            borderRadius: BorderRadius.circular(auto(100)),
+            borderRadius: BorderRadius.circular(100.dp),
             child: Container(
-              height: auto(50),
-              width: auto(150),
+              height: 50.dp,
+              width: 150.dp,
               child: _blurryBg(),
             ),
           ),
@@ -53,7 +53,7 @@ class FunctionCard extends StatelessWidget {
             child: Text(
               item.title,
               style: TextStyle(
-                fontSize: setSp(20),
+                fontSize: 20.sp,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
@@ -86,13 +86,13 @@ class FunctionCard extends StatelessWidget {
 
   Widget _buildBg({List<Widget> children}) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: auto(30), vertical: auto(30)),
+      margin: EdgeInsets.symmetric(horizontal: 30.dp, vertical: 30.dp),
       child: GridView(
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: auto(350), //子控件最大宽度为100
+          maxCrossAxisExtent: 350.dp, //子控件最大宽度为100
           childAspectRatio: 2, //宽高比为2:1
-          crossAxisSpacing: auto(20),
-          mainAxisSpacing: auto(30),
+          crossAxisSpacing: 20.dp,
+          mainAxisSpacing: 30.dp,
         ),
         children: children,
       ),

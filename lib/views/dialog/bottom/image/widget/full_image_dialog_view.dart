@@ -37,15 +37,15 @@ class _FullImageDialogViewState extends State<FullImageDialogView> {
 
       //退出按钮
       Positioned(
-        top: auto(80),
-        right: auto(30),
+        top: 80.dp,
+        right: 30.dp,
         child: _buildExit(),
       ),
 
       //预览图片位置标识
       Positioned(
-        bottom: auto(30),
-        right: auto(30),
+        bottom: 30.dp,
+        right: 30.dp,
         child: _buildImageTag(),
       ),
     ]);
@@ -72,7 +72,7 @@ class _FullImageDialogViewState extends State<FullImageDialogView> {
   Widget _buildImageTag() {
     return Text(
       '${currentIndex + 1}/${widget.imageWidgets.length}',
-      style: TextStyle(color: Colors.white, fontSize: setSp(30)),
+      style: TextStyle(color: Colors.white, fontSize: 30.sp),
     );
   }
 

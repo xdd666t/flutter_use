@@ -120,7 +120,7 @@ class _SearchBarState extends State<SearchBar>
 
   Widget buildSearchDelete() {
     return Container(
-      margin: EdgeInsets.only(right: auto(18)),
+      margin: EdgeInsets.only(right: 18.dp),
       alignment: Alignment.centerRight,
       child: GestureDetector(
         onTap: () {
@@ -139,10 +139,10 @@ class _SearchBarState extends State<SearchBar>
         child: ScaleTransition(
           scale: animation,
           child: Container(
-            padding: EdgeInsets.all(auto(10)),
+            padding: EdgeInsets.all(10.dp),
             child: Icon(
               CupertinoIcons.clear_circled_solid,
-              size: auto(38),
+              size: 38.dp,
               color: widget.iconColor,
             ),
           ),
@@ -153,8 +153,8 @@ class _SearchBarState extends State<SearchBar>
 
   Widget buildSearchInput() {
     return Container(
-      width: auto(500),
-      padding: EdgeInsets.only(left: auto(24)),
+      width: 500.dp,
+      padding: EdgeInsets.only(left: 24.dp),
       child: InputActions(
         context: context,
         focusNode: focusNode,
@@ -166,7 +166,7 @@ class _SearchBarState extends State<SearchBar>
           textAlign: TextAlign.start,
           style: TextStyle(
             color: widget.textColor,
-            fontSize: setSp(28),
+            fontSize: 28.sp,
           ),
           inputFormatters: widget.inputFormatters,
           maxLengthEnforced: true,
@@ -177,7 +177,7 @@ class _SearchBarState extends State<SearchBar>
             hintText: widget.hintText,
             hintStyle: TextStyle(
               color: widget.hintColor,
-              fontSize: setSp(24),
+              fontSize: 24.sp,
             ),
             border: InputBorder.none,
             contentPadding: EdgeInsets.all(0.0),
@@ -202,7 +202,7 @@ class _SearchBarState extends State<SearchBar>
 
   Widget _buildSearchIcon() {
     return Container(
-      margin: EdgeInsets.only(left: auto(29)),
+      margin: EdgeInsets.only(left: 29.dp),
       child: Icon(Icons.search, color: widget.iconColor),
     );
   }
@@ -210,7 +210,7 @@ class _SearchBarState extends State<SearchBar>
   ///主体背景构造
   Widget _searchBg({Widget child}) {
     return Container(
-      height: auto(72),
+      height: 72.dp,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Colors.white,

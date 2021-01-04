@@ -63,7 +63,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
         _buildTitle(),
 
         //分割线
-        Container(height: auto(1), color: Colors.black.withOpacity(0.2)),
+        Container(height: 1.dp, color: Colors.black.withOpacity(0.2)),
 
         //内容列表
         Expanded(child: _buildContent()),
@@ -88,7 +88,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
 
   Widget _buildContent() {
     return CupertinoPicker(
-      itemExtent: auto(65),
+      itemExtent: 65.dp,
       useMagnifier: true,
       //选中项放大
       magnification: 1.2,
@@ -102,7 +102,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
           child: Text(
             widget.data[index],
             style: widget.itemTextStyle ??
-                TextStyle(color: Color(0xFF333333), fontSize: setSp(28)),
+                TextStyle(color: Color(0xFF333333), fontSize: 28.sp),
           ),
         );
       }).toList(),
@@ -114,7 +114,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
       title: widget.confirm,
       alignment: Alignment.centerRight,
       style: widget.confirmTextStyle ??
-          TextStyle(color: Color(0xFF0299FF), fontSize: setSp(33)),
+          TextStyle(color: Color(0xFF0299FF), fontSize: 33.sp),
       onPressed: () {
         if (widget.onConfirm != null) {
           widget.onConfirm(_selectedIndex);
@@ -129,7 +129,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
       child: Text(
         widget.title,
         style: widget.titleTextStyle ??
-            TextStyle(color: Color(0xFF333333), fontSize: setSp(33)),
+            TextStyle(color: Color(0xFF333333), fontSize: 33.sp),
       ),
     );
   }
@@ -139,7 +139,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
       title: widget.cancel,
       alignment: Alignment.centerLeft,
       style: widget.cancelTextStyle ??
-          TextStyle(color: Color(0xFF999999), fontSize: setSp(33)),
+          TextStyle(color: Color(0xFF999999), fontSize: 33.sp),
       onPressed: () {
         if (widget.onCancel != null) {
           widget.onCancel();
@@ -167,7 +167,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
 
   Widget _buildBg({List<Widget> children}) {
     return Container(
-      height: auto(650),
+      height: 650.dp,
       padding: EdgeInsets.only(top: 2),
       decoration: BoxDecoration(
         color: Colors.white,

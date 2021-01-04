@@ -55,22 +55,22 @@ class SideListDialogView extends StatelessWidget {
               children: [
                 //内容
                 Container(
-                  height: auto(100),
-                  margin: EdgeInsets.only(left: auto(40)),
+                  height: 100.dp,
+                  margin: EdgeInsets.only(left: 40.dp),
                   alignment: Alignment.centerLeft,
                   child: Text(
                     data[index],
                     style: TextStyle(
                       color: Color(0xFF333333),
-                      fontSize: setSp(28),
+                      fontSize: 28.sp,
                     ),
                   ),
                 ),
 
                 //分割线
                 Container(
-                  margin: EdgeInsets.only(left: auto(40)),
-                  height: auto(1),
+                  margin: EdgeInsets.only(left: 40.dp),
+                  height: 1.dp,
                   color: Colors.black.withOpacity(0.3),
                 ),
               ],
@@ -85,12 +85,12 @@ class SideListDialogView extends StatelessWidget {
     return Container(
       color: Color(0xFFEEEEEE),
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: auto(40), vertical: auto(20)),
+      padding: EdgeInsets.symmetric(horizontal: 40.dp, vertical: 20.dp),
       child: Text(
         title,
         style: TextStyle(
           color: Color(0xFF333333),
-          fontSize: setSp(28),
+          fontSize: 28.sp,
         ),
       ),
     );
@@ -98,17 +98,17 @@ class SideListDialogView extends StatelessWidget {
 
   Widget _buildTitle() {
     return Container(
-      padding: EdgeInsets.all(auto(40)),
+      padding: EdgeInsets.all(40.dp),
       child: Row(
         children: [
           //图片
           imageUrl != null && imageUrl != ''
               ? Container(
-                  margin: EdgeInsets.only(right: auto(20)),
+                  margin: EdgeInsets.only(right: 20.dp),
                   child: Image.network(
                     imageUrl,
-                    height: auto(50),
-                    width: auto(50),
+                    height: 50.dp,
+                    width: 50.dp,
                   ),
                 )
               : Container(),
@@ -118,7 +118,7 @@ class SideListDialogView extends StatelessWidget {
             title,
             style: TextStyle(
               color: Color(0xFF333333),
-              fontSize: setSp(32),
+              fontSize: 32.sp,
               fontWeight: FontWeight.bold,
             ),
           )
@@ -131,7 +131,7 @@ class SideListDialogView extends StatelessWidget {
     return Container(
       color: Colors.white,
       height: double.infinity,
-      width: auto(450),
+      width: 450.dp,
       padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
       child: Material(
         color: Colors.transparent,

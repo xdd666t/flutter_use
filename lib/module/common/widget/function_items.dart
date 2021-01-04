@@ -32,8 +32,8 @@ class FunctionItems extends StatelessWidget {
   Widget _function() {
     return _buildBg(
       child: Wrap(
-        spacing: auto(20),
-        runSpacing: auto(20),
+        spacing: 20.dp,
+        runSpacing: 20.dp,
         children: items.map((e) {
           return btnFunction(
             onItem: onItem,
@@ -66,11 +66,11 @@ Widget btnFunction({
   BoxConstraints constraints,
 }) {
   return Container(
-    padding: EdgeInsets.all(auto(15)),
+    padding: EdgeInsets.all(15.dp),
     child: RawMaterialButton(
       fillColor: Colors.white,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(auto(10)),
+        borderRadius: BorderRadius.circular(10.dp),
       ),
       constraints: constraints,
       elevation: 5,
@@ -79,8 +79,8 @@ Widget btnFunction({
       },
       child: Container(
         padding: EdgeInsets.symmetric(
-          vertical: auto(15),
-          horizontal: auto(20),
+          vertical: 15.dp,
+          horizontal: 20.dp,
         ),
         child: Text(
           data.title,

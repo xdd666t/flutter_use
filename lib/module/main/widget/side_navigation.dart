@@ -31,8 +31,8 @@ class SideNavigation extends HookWidget {
     //顶部widget
     Widget topWidget = Center(
       child: Container(
-        width: auto(80),
-        height: auto(80),
+        width: 80.dp,
+        height: 80.dp,
         margin: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
@@ -50,7 +50,7 @@ class SideNavigation extends HookWidget {
       padding: const EdgeInsets.all(20),
       child: Wrap(
         direction: Axis.vertical,
-        spacing: auto(20),
+        spacing: 20.dp,
         children: [
           //展开按钮
           CupertinoSwitch(
@@ -76,7 +76,7 @@ class SideNavigation extends HookWidget {
         return NavigationRailDestination(
           icon: item.icon,
           label: Container(
-            padding: EdgeInsets.only(top: auto(10)),
+            padding: EdgeInsets.only(top: 10.dp),
             child: Text(
               item.title,
             ),

@@ -24,7 +24,7 @@ class TreeItems extends StatelessWidget {
 
   Widget _treeItem() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: auto(30)),
+      margin: EdgeInsets.symmetric(horizontal: 30.dp),
       child: Column(
         children: data.map((e) {
           return _buildItem(e);
@@ -40,11 +40,11 @@ class TreeItems extends StatelessWidget {
       children: [
         //标题
         Container(
-          margin: EdgeInsets.only(top: auto(50), bottom: auto(10)),
+          margin: EdgeInsets.only(top: 50.dp, bottom: 10.dp),
           width: double.infinity,
           child: Text(
             e.title,
-            style: TextStyle(fontSize: setSp(20), fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
           ),
         ),
 
