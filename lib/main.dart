@@ -1,12 +1,11 @@
-import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubit.dart';
 import 'package:get/get.dart';
 
-import 'app/routes/application.dart';
-import 'app/routes/routes.dart';
+import 'app/config/route_config.dart';
+
 import 'module/main/main_view.dart';
 
 void main() {
@@ -16,14 +15,9 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //路由初始化代码
-    final router = FluroRouter();
-    Routes.configureRoutes(router);
-    Application.router = router;
-
     return GetMaterialApp(
-      home: MainPage(),
-      onGenerateRoute: Application.router.generator,
+      initialRoute: RouteConfig.main,
+      getPages: RouteConfig.getPages,
       builder: (BuildContext context, Widget child) {
         return MultiBlocProvider(
           providers: [

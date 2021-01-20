@@ -17,7 +17,7 @@ class JumpOnePage extends StatelessWidget {
       ),
       body: Center(
         child: Obx(
-          () => Text('SpanTwoPage点击了 ${logic.count.value} 次',
+          () => Text('JumpTwoPage点击了 ${logic.count.value} 次',
               style: TextStyle(fontSize: 30.0)),
         ),
       ),

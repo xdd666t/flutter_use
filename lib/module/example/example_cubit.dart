@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_use/app/routes/navigator_util.dart';
+import 'package:flutter_use/app/config/route_config.dart';
+
 import 'package:flutter_use/app/utils/ui/show.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:flutter_use/bean/common/tree_info.dart';
@@ -15,16 +16,16 @@ class ExampleCubit extends Cubit<ExampleState> {
   void toFun(context, tag) {
     switch (tag) {
       case 'globalGetX':
-        Get.to(JumpOnePage());
+        Get.toNamed(RouteConfig.jumpOne);
         break;
       case 'cubit':
-        NavigatorUtil.goCounterPage(context);
+        Get.toNamed(RouteConfig.counter);
         break;
       case 'globalBloc':
-        NavigatorUtil.goSpanOnePage(context);
+        Get.toNamed(RouteConfig.spanOne);
         break;
       case 'testLayout':
-        NavigatorUtil.goTestLayoutPage(context);
+        Get.toNamed(RouteConfig.testLayout);
         // SmartDialog.instance.show();
         break;
     }

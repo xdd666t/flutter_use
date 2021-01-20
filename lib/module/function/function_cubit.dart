@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_use/app/routes/navigator_util.dart';
+import 'package:flutter_use/app/config/route_config.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
+import 'package:get/get.dart';
 
 import 'function_state.dart';
 
@@ -11,10 +12,10 @@ class FunctionCubit extends Cubit<FunctionState> {
   void toFun(context, tag) {
     switch (tag) {
       case 'smartDialog':
-        NavigatorUtil.goSmartDialogPage(context);
+        Get.toNamed(RouteConfig.smartDialog);
         break;
       case 'dialog':
-        NavigatorUtil.goDialogPage(context);
+        Get.toNamed(RouteConfig.dialog);
         break;
       default:
         showSnackBar(context, '暂无');
