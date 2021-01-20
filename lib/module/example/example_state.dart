@@ -6,6 +6,14 @@ class ExampleState {
   ExampleState init() {
     return ExampleState()
       ..trees = [
+        //GetX
+        TreeTwiceInfo(
+          title: 'GetX',
+          btnInfo: [
+            BtnInfo(title: '全局GetX', tag: 'globalGetX'),
+          ],
+        ),
+
         //Bloc
         TreeTwiceInfo(
           title: 'flutter_bloc',

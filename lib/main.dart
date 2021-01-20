@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubit.dart';
+import 'package:get/get.dart';
 
 import 'app/routes/application.dart';
 import 'app/routes/routes.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     Routes.configureRoutes(router);
     Application.router = router;
 
-    return MaterialApp(
+    return GetMaterialApp(
       home: MainPage(),
       onGenerateRoute: Application.router.generator,
       builder: (BuildContext context, Widget child) {
