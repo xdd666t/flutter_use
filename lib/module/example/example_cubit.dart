@@ -15,7 +15,13 @@ class ExampleCubit extends Cubit<ExampleState> {
   ///跳转到功能模块
   void toFun(context, tag) {
     switch (tag) {
-      case 'globalGetX':
+      case 'counterGetX':
+        Get.toNamed(RouteConfig.counterGet);
+        break;
+        case 'counterEasyGetX':
+        Get.toNamed(RouteConfig.counterEasyGet);
+        break;
+      case 'jumpGetX':
         Get.toNamed(RouteConfig.jumpOne);
         break;
       case 'cubit':

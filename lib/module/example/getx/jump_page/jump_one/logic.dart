@@ -8,7 +8,6 @@ class JumpOneLogic extends GetxController {
   ///跳转到跨页面
   void toJumpTwo() {
     Get.toNamed(RouteConfig.jumpTwo);
-    Get.to(JumpTwoPage(), arguments: );
   }
 
   ///跳转到跨页面

@@ -10,7 +10,9 @@ class ExampleState {
         TreeTwiceInfo(
           title: 'GetX',
           btnInfo: [
-            BtnInfo(title: '全局GetX', tag: 'globalGetX'),
+            BtnInfo(title: '计数器-响应式', tag: 'counterGetX'),
+            BtnInfo(title: '计数器-简单式', tag: 'counterEasyGetX'),
+            BtnInfo(title: '跨页面事件交互', tag: 'jumpGetX'),
           ],
         ),
 
