@@ -11,7 +11,7 @@ class CounterHighGetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('计数器-响应式')),
+      appBar: AppBar(title: const Text('计数器-进阶版')),
       body: Center(
         child: Obx(
               () => Text('点击了 ${state.count.value} 次',
