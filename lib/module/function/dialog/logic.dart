@@ -4,7 +4,7 @@ import 'package:flutter_use/views/dialog/bottom/data/bottom_single_dialog.dart';
 import 'package:get/get.dart';
 
 class DialogLogic extends GetxController {
-  final state = DialogState().obs;
+  final state = DialogState();
 
   ///一些事件处理
   ///展示功能模块

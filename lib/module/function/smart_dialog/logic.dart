@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'state.dart';
 
 class SmartDialogLogic extends GetxController {
-  final state = SmartDialogState().obs;
+  final state = SmartDialogState();
 
   ///测试功能模块
   void showFun(context, tag) async {

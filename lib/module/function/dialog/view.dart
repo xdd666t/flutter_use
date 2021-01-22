@@ -8,7 +8,7 @@ import 'state.dart';
 
 class DialogPage extends StatelessWidget {
   final DialogLogic logic = Get.put(DialogLogic());
-  final DialogState state = Get.find<DialogLogic>().state();
+  final DialogState state = Get.find<DialogLogic>().state;
 
   @override
   Widget build(BuildContext context) {

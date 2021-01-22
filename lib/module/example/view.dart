@@ -7,7 +7,7 @@ import 'widget/tree_items.dart';
 
 class ExamplePage extends StatelessWidget {
   final ExampleLogic logic = Get.put(ExampleLogic());
-  final ExampleState state = Get.find<ExampleLogic>().state();
+  final ExampleState state = Get.find<ExampleLogic>().state;
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:flutter_use/module/example/getx/counter_easy_get/view.dart';
 import 'package:flutter_use/module/example/getx/counter_get/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_two/view.dart';
-import 'package:flutter_use/module/example/layout/test_layout/test_layout_view.dart';
+import 'package:flutter_use/module/example/layout/test_layout/view.dart';
 import 'package:flutter_use/module/function/dialog/view.dart';
 import 'package:flutter_use/module/function/smart_dialog/view.dart';
 import 'package:flutter_use/module/main/view.dart';

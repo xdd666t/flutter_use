@@ -3,13 +3,14 @@ import 'package:flutter_use/app/utils/ui/keep_alive_page.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:flutter_use/module/example/view.dart';
 import 'package:flutter_use/module/function/view.dart';
+import 'package:get/get.dart';
 
 class MainState {
-  ///选择index
-  var selectedIndex;
+  ///选择index - 响应式
+  RxInt selectedIndex;
 
-  ///控制是否展开
-  var isUnfold;
+  ///控制是否展开 - 响应式
+  RxBool isUnfold;
 
   ///分类按钮数据源
   List<BtnInfo> list;
@@ -23,9 +24,9 @@ class MainState {
 
   MainState() {
     //初始化index
-    selectedIndex = 0;
+    selectedIndex = 0.obs;
     //默认不展开
-    isUnfold = false;
+    isUnfold = false.obs;
     //PageView页面
     pageList = [
       keepAliveWrapper(FunctionPage()),

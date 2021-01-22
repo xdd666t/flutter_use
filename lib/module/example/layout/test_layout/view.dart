@@ -7,7 +7,7 @@ import 'state.dart';
 
 class TestLayoutPage extends StatelessWidget {
   final TestLayoutLogic logic = Get.put(TestLayoutLogic());
-  final TestLayoutState state = Get.find<TestLayoutLogic>().state();
+  final TestLayoutState state = Get.find<TestLayoutLogic>().state;
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ import 'widget/side_navigation.dart';
 
 class MainPage extends StatelessWidget {
   final MainLogic logic = Get.put(MainLogic());
-  final MainState state = Get.find<MainLogic>().state();
+  final MainState state = Get.find<MainLogic>().state;
 
   @override
   Widget build(BuildContext context) {
@@ -18,18 +18,23 @@ class MainPage extends StatelessWidget {
         ///侧边栏区域
         Obx(
           () => SideNavigation(
-            selectedIndex: state.selectedIndex,
+            selectedIndex: state.selectedIndex.value,
             sideItems: state.itemList,
             onItem: (index) {
               logic.switchTap(index);
               state.pageController.jumpToPage(index);
             },
-            isUnfold: logic.state().isUnfold,
-            onUnfold: (unfold){
+            isUnfold: state.isUnfold.value,
+            onUnfold: (unfold) {
               logic.onUnfold(unfold);
             },
           ),
         ),
+
+        Obx(() {
+          print("+_+_+_+_+_+_+_+_+_+_+");
+          return Text('data${state.isUnfold.value}');
+        }),
 
         ///Expanded占满剩下的空间
         Expanded(

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'state.dart';
 
 class ExampleLogic extends GetxController {
-  final state = ExampleState().obs;
+  final state = ExampleState();
 
   ///跳转到功能模块
   void toFun(context, tag) {
