@@ -1,13 +1,11 @@
-import 'package:bloc/bloc.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:flutter_use/bean/common/btn_info.dart';
+import 'package:get/get.dart';
 
-part 'smart_dialog_state.dart';
+import 'state.dart';
 
-class SmartDialogCubit extends Cubit<SmartDialogState> {
-  SmartDialogCubit() : super(SmartDialogState().init());
+class SmartDialogLogic extends GetxController {
+  final state = SmartDialogState().obs;
 
   ///测试功能模块
   void showFun(context, tag) async {

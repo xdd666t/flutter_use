@@ -6,8 +6,6 @@ import 'package:get/get.dart';
 
 import 'app/config/route_config.dart';
 
-import 'module/main/main_view.dart';
-
 void main() {
   runApp(MyApp());
 }

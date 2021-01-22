@@ -1,12 +1,10 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter_use/app/config/route_config.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
+import 'package:flutter_use/module/function/state.dart';
 import 'package:get/get.dart';
 
-import 'function_state.dart';
-
-class FunctionCubit extends Cubit<FunctionState> {
-  FunctionCubit() : super(FunctionState().init());
+class FunctionLogic extends GetxController {
+  final state = FunctionState().obs;
 
   ///跳转到功能模块
   void toFun(context, tag) {

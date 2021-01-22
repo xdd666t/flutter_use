@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/example/bloc/counter/counter_view.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_view.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_two/span_two_view.dart';
@@ -8,9 +6,9 @@ import 'package:flutter_use/module/example/getx/counter_get/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_two/view.dart';
 import 'package:flutter_use/module/example/layout/test_layout/test_layout_view.dart';
-import 'package:flutter_use/module/function/dialog/dialog_view.dart';
-import 'package:flutter_use/module/function/smart_dialog/smart_dialog_view.dart';
-import 'package:flutter_use/module/main/main_view.dart';
+import 'package:flutter_use/module/function/dialog/view.dart';
+import 'package:flutter_use/module/function/smart_dialog/view.dart';
+import 'package:flutter_use/module/main/view.dart';
 import 'package:get/get.dart';
 
 class RouteConfig {

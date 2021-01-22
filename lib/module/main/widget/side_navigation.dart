@@ -1,15 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 
 ///NavigationRail组件为侧边栏
-class SideNavigation extends HookWidget {
+class SideNavigation extends StatelessWidget {
   SideNavigation({
     this.onItem,
-    @required this.selectedIndex,
-    @required this.sideItems,
+    this.selectedIndex,
+    this.sideItems,
+    this.isUnfold,
+    this.onUnfold,
   });
 
   ///侧边栏item
@@ -19,6 +20,12 @@ class SideNavigation extends HookWidget {
   final int selectedIndex;
   final ParamSingleCallback onItem;
 
+  ///是否展开
+  final bool isUnfold;
+
+  ///点击展开事件
+  final ParamSingleCallback<bool> onUnfold;
+
   @override
   Widget build(BuildContext context) {
     return _navigationRailSide(context);
@@ -26,8 +33,6 @@ class SideNavigation extends HookWidget {
 
   //增加NavigationRail组件为侧边栏
   Widget _navigationRailSide(BuildContext context) {
-    final isExtend = useState(false);
-
     //顶部widget
     Widget topWidget = Center(
       child: Container(
@@ -54,10 +59,8 @@ class SideNavigation extends HookWidget {
         children: [
           //展开按钮
           CupertinoSwitch(
-            value: isExtend.value,
-            onChanged: (value) {
-              isExtend.value = !isExtend.value;
-            },
+            value: isUnfold,
+            onChanged: onUnfold,
           ),
         ],
       ),
@@ -67,8 +70,8 @@ class SideNavigation extends HookWidget {
       backgroundColor: Colors.white,
       //阴影Z轴高度
       elevation: 3,
-      extended: isExtend.value,
-      labelType: isExtend.value
+      extended: isUnfold,
+      labelType: isUnfold
           ? NavigationRailLabelType.none
           : NavigationRailLabelType.selected,
       //侧边栏中的item

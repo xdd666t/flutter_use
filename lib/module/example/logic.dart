@@ -1,16 +1,11 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter_use/app/config/route_config.dart';
-
 import 'package:flutter_use/app/utils/ui/show.dart';
-import 'package:flutter_use/bean/common/btn_info.dart';
-import 'package:flutter_use/bean/common/tree_info.dart';
-import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
 import 'package:get/get.dart';
 
-part 'example_state.dart';
+import 'state.dart';
 
-class ExampleCubit extends Cubit<ExampleState> {
-  ExampleCubit() : super(ExampleState().init());
+class ExampleLogic extends GetxController {
+  final state = ExampleState().obs;
 
   ///跳转到功能模块
   void toFun(context, tag) {
@@ -18,7 +13,7 @@ class ExampleCubit extends Cubit<ExampleState> {
       case 'counterGetX':
         Get.toNamed(RouteConfig.counterGet);
         break;
-        case 'counterEasyGetX':
+      case 'counterEasyGetX':
         Get.toNamed(RouteConfig.counterEasyGet);
         break;
       case 'jumpGetX':

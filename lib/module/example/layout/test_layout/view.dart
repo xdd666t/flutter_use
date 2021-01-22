@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
-import 'package:flutter_use/module/example/layout/test_layout/test_layout_cubit.dart';
+import 'package:get/get.dart';
+
+import 'logic.dart';
+import 'state.dart';
 
 class TestLayoutPage extends StatelessWidget {
+  final TestLayoutLogic logic = Get.put(TestLayoutLogic());
+  final TestLayoutState state = Get.find<TestLayoutLogic>().state();
+
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (BuildContext context) => TestLayoutCubit(),
-      child: BlocBuilder<TestLayoutCubit, TestLayoutState>(builder: _buildBody),
-    );
-  }
-
-  Widget _buildBody(BuildContext context, TestLayoutState state) {
     return _buildBg(children: [
       //底下
       Listener(

@@ -1,11 +1,10 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
+import 'package:flutter_use/module/function/dialog/state.dart';
 import 'package:flutter_use/views/dialog/bottom/data/bottom_single_dialog.dart';
+import 'package:get/get.dart';
 
-part 'dialog_state.dart';
-
-class DialogCubit extends Cubit<DialogState> {
-  DialogCubit() : super(DialogState().init());
+class DialogLogic extends GetxController {
+  final state = DialogState().obs;
 
   ///一些事件处理
   ///展示功能模块
@@ -19,7 +18,7 @@ class DialogCubit extends Cubit<DialogState> {
 }
 
 ///顶部弹窗
-void _bottom(context){
+void _bottom(context) {
   List<BtnInfo> list = [];
   for (var i = 0; i < 10; i++) {
     list.add(BtnInfo(title: "姓名-$i", tag: i.toString()));
