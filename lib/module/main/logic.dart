@@ -10,7 +10,7 @@ class MainLogic extends GetxController {
     state.selectedIndex.value = index;
   }
 
-  ///切换tab
+  ///是否展开侧边栏
   void onUnfold(bool unfold) {
     state.isUnfold.value = !state.isUnfold.value;
   }

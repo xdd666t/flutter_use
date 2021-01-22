@@ -3,6 +3,7 @@ import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_view
 import 'package:flutter_use/module/example/bloc/span_page/span_two/span_two_view.dart';
 import 'package:flutter_use/module/example/getx/counter_easy_get/view.dart';
 import 'package:flutter_use/module/example/getx/counter_get/view.dart';
+import 'package:flutter_use/module/example/getx/counter_high_get/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_two/view.dart';
 import 'package:flutter_use/module/example/layout/test_layout/view.dart';
@@ -34,6 +35,7 @@ class RouteConfig {
   ///GetX 计数器  跨页面交互
   static final String counterGet = "/counterGet";
   static final String counterEasyGet = "/counterEasyGet";
+  static final String counterHighGet = "/counterHighGet";
   static final String jumpOne = "/jumpOne";
   static final String jumpTwo = "/jumpOne/jumpTwo";
 
@@ -48,6 +50,7 @@ class RouteConfig {
     GetPage(name: spanTwo, page: () => SpanTwoPage()),
     GetPage(name: counterGet, page: () => CounterGetPage()),
     GetPage(name: counterEasyGet, page: () => CounterEasyGetPage()),
+    GetPage(name: counterHighGet, page: () => CounterHighGetPage()),
     GetPage(name: jumpOne, page: () => JumpOnePage()),
     GetPage(name: jumpTwo, page: () => JumpTwoPage()),
   ];

@@ -31,11 +31,6 @@ class MainPage extends StatelessWidget {
           ),
         ),
 
-        Obx(() {
-          print("+_+_+_+_+_+_+_+_+_+_+");
-          return Text('data${state.isUnfold.value}');
-        }),
-
         ///Expanded占满剩下的空间
         Expanded(
           child: PageView.builder(

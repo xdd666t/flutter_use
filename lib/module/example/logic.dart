@@ -16,6 +16,9 @@ class ExampleLogic extends GetxController {
       case 'counterEasyGetX':
         Get.toNamed(RouteConfig.counterEasyGet);
         break;
+      case 'counterHighGetX':
+        Get.toNamed(RouteConfig.counterHighGet);
+        break;
       case 'jumpGetX':
         Get.toNamed(RouteConfig.jumpOne);
         break;
