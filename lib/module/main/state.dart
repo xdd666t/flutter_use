@@ -3,6 +3,7 @@ import 'package:flutter_use/app/utils/ui/keep_alive_page.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:flutter_use/module/example/view.dart';
 import 'package:flutter_use/module/function/view.dart';
+import 'package:flutter_use/module/setting/view.dart';
 import 'package:get/get.dart';
 
 class MainState {
@@ -31,7 +32,7 @@ class MainState {
     pageList = [
       keepAliveWrapper(FunctionPage()),
       keepAliveWrapper(ExamplePage()),
-      keepAliveWrapper(Center(child: Container())),
+      keepAliveWrapper(SettingPage()),
     ];
     //item栏目
     itemList = [
