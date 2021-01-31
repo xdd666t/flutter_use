@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 //页面保活方法
-Widget keepAliveWrapper(Widget child) => KeepAliveWidget(child);
+Widget keepAliveWrapper(Widget child) => _KeepAliveWidget(child);
 
-class KeepAliveWidget extends StatefulWidget {
+class _KeepAliveWidget extends StatefulWidget {
   final Widget child;
-  const KeepAliveWidget(this.child);
+  const _KeepAliveWidget(this.child);
 
   @override
   State<StatefulWidget> createState() {
@@ -13,7 +13,7 @@ class KeepAliveWidget extends StatefulWidget {
   }
 }
 
-class _KeepAliveState extends State<KeepAliveWidget> with AutomaticKeepAliveClientMixin {
+class _KeepAliveState extends State<_KeepAliveWidget> with AutomaticKeepAliveClientMixin {
   @override
   bool get wantKeepAlive => true;
 
