@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:flutter_use/app/utils/ui/view_util.dart';
 import 'package:get/get.dart';
 
 import 'state.dart';
 
 class SmartDialogLogic extends GetxController {
   final state = SmartDialogState();
+
+  void init() async{
+    //必须等待界面加载完毕
+    await ViewUtil.initFinish();
+
+    SmartDialog.showToast('测试init方法');
+  }
 
   ///测试功能模块
   void showFun(context, tag) async {
