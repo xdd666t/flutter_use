@@ -21,10 +21,19 @@ class JumpTwoPage extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       body: Center(
-        child: Obx(
-          () => Text('跨页面-Two点击了 ${twoLogic.count.value} 次',
-              style: TextStyle(fontSize: 30.0)),
-        ),
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          //计数显示
+          Obx(
+            () => Text('跨页面-Two点击了 ${twoLogic.count.value} 次',
+                style: TextStyle(fontSize: 30.0)),
+          ),
+
+          //传递数据
+          Obx(
+            () => Text('传递的数据：${twoLogic.msg.value}',
+                style: TextStyle(fontSize: 30.0)),
+          ),
+        ]),
       ),
     );
   }
