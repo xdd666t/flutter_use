@@ -16,18 +16,24 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
-      builder: (BuildContext context, Widget child) {
-        return MultiBlocProvider(
-          providers: [
-            ///此处通过BlocProvider创建的Bloc或者Cubit是全局的
-            BlocProvider<SpanOneCubit>(
-              create: (BuildContext context) => SpanOneCubit(),
-            ),
-          ],
-          child: FlutterSmartDialog(child: child),
-        );
-        // return FlutterSmartDialog(child: child);
-      },
+      builder: builder,
     );
   }
 }
+
+///独立处理全局bloc
+Widget builder(BuildContext context, Widget child){
+  return MultiBlocProvider(
+    providers: [
+      ///此处通过BlocProvider创建的Bloc或者Cubit是全局的
+      BlocProvider<SpanOneCubit>(
+        create: (BuildContext context) => SpanOneCubit(),
+      ),
+    ],
+    child: FlutterSmartDialog(child: child),
+  );
+  // return FlutterSmartDialog(child: child);
+}
+
+
+
