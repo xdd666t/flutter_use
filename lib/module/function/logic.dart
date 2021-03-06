@@ -12,6 +12,9 @@ class FunctionLogic extends GetxController {
       case 'smartDialog':
         Get.toNamed(RouteConfig.smartDialog);
         break;
+      case 'himalaya':
+        Get.toNamed(RouteConfig.himalaya);
+        break;
       case 'dialog':
         Get.toNamed(RouteConfig.dialog);
         break;

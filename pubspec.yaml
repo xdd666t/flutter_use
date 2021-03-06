@@ -27,23 +27,22 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.3
+  cupertino_icons: ^1.0.2
   # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
-  get: ^3.24.0
+  get: ^4.0.0-nullsafety.2
   # 常用弹窗 https://pub.dev/packages/flutter_picker
   flutter_picker: ^1.1.5 #时间滚轮选择器
   # 解耦框架 https://pub.dev/packages/flutter_bloc
-  flutter_bloc: ^6.1.1 #状态管理框架
-  equatable: ^1.2.3 #增强对比
+  flutter_bloc: ^7.0.0-nullsafety.3 #状态管理框架
   # https://pub.dev/packages/flutter_hooks
-  flutter_hooks: ^0.14.1 #分离状态逻辑和视图逻辑
+  flutter_hooks: ^0.16.0 #分离状态逻辑和视图逻辑
   # 图片选择器 https://pub.dev/packages/multi_image_picker
   image_picker: ^0.6.7+4
   multi_image_picker: ^4.7.14
   # 预览图片 https://github.com/fireslime/photo_view
   photo_view: ^0.10.3
   # 界面适配 https://pub.dev/packages/flutter_screenutil
-  flutter_screenutil: ^3.2.0
+  flutter_screenutil: ^5.0.0-nullsafety.7
   # 取消输入框焦点 https://pub.dev/packages/focus_widget/install
   focus_widget: ^1.0.2+2
   # iOS数字键盘添加收起按钮 https://pub.dev/packages/keyboard_actions
@@ -53,7 +52,7 @@ dependencies:
   # 用于处理widget是否可见检测 https://pub.flutter-io.cn/packages/visibility_detector
   visibility_detector: ^0.1.5
   # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
-  flutter_smart_dialog: ^1.3.0
+  flutter_smart_dialog: ^2.0.1
 #  flutter_smart_dialog:
 #    git:
 #      url: git://github.com/CNAD666/flutter_smart_dialog.git

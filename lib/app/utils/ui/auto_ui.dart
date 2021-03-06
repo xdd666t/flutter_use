@@ -35,7 +35,12 @@ void autoUi(BuildContext context) {
 //    ScreenUtil.init(context, width: 750, height: 1334);
   //设置字体大小根据系统的“字体大小”辅助选项来进行缩放,默认为false
 //    ScreenUtil.init(context, width: 750, height: 1334, allowFontScaling: true);
-  ScreenUtil.init(context, designSize: Size(750, 1334), allowFontScaling: true);
+  ScreenUtil.init(
+    BoxConstraints(),
+    Orientation.portrait,
+    designSize: Size(750, 1334),
+    allowFontScaling: true,
+  );
 }
 
 extension NumExtend on num {

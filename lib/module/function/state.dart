@@ -1,3 +1,4 @@
+import 'package:flutter_use/app/config/image_config.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -10,29 +11,34 @@ class FunctionState {
     //初始化item
     items = [
       BtnInfo(
+        title: '喜马拉雅',
+        tag: 'himalaya',
+        bg: ImageHimalayaConfig.logo,
+      ),
+      BtnInfo(
         title: 'SmartDialog',
         tag: 'smartDialog',
-        bg: 'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/flutter_use/20201129134908.png',
+        bg: ImageFunctionConfig.functionBgOne,
       ),
       BtnInfo(
         title: '弹窗控件',
         tag: 'dialog',
-        bg: 'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/flutter_use/20201129134922.png',
+        bg: ImageFunctionConfig.functionBgTwo,
       ),
       BtnInfo(
         title: '测试',
         tag: 'test',
-        bg: 'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/flutter_use/20201129134929.png',
+        bg: ImageFunctionConfig.functionBgThree,
       ),
       BtnInfo(
         title: '测试',
         tag: 'test',
-        bg: 'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/flutter_use/20201129134913.png',
+        bg: ImageFunctionConfig.functionBgFour,
       ),
       BtnInfo(
         title: '测试',
         tag: 'test',
-        bg: 'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/flutter_use/20201129134857.png',
+        bg: ImageFunctionConfig.functionBgFive,
       ),
     ];
   }

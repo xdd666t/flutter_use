@@ -21,21 +21,13 @@ class FunctionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _buildBg(
-      children: data.map((e) => _buildItem(e)).toList(),
-    );
-  }
-
-  Widget _buildItem(BtnInfo item) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(20.dp),
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
+      children: data.map((item) {
+        return _buildItem(children: [
           //背景
           Container(
             width: 400.dp,
             height: 200.dp,
-            child: Image.network(item.bg, fit: BoxFit.cover),
+            child: Image.network(item.bg, fit: BoxFit.fitWidth),
           ),
 
           //毛玻璃背景
@@ -65,7 +57,17 @@ class FunctionCard extends StatelessWidget {
             color: Colors.transparent,
             child: InkWell(onTap: () => onItem(item.tag)),
           )
-        ],
+        ]);
+      }).toList(),
+    );
+  }
+
+  Widget _buildItem({List<Widget> children}) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20.dp),
+      child: Stack(
+        alignment: Alignment.center,
+        children: children,
       ),
     );
   }

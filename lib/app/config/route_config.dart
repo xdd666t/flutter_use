@@ -8,6 +8,7 @@ import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_two/view.dart';
 import 'package:flutter_use/module/example/layout/test_layout/view.dart';
 import 'package:flutter_use/module/function/dialog/view.dart';
+import 'package:flutter_use/module/function/himalaya/view.dart';
 import 'package:flutter_use/module/function/smart_dialog/view.dart';
 import 'package:flutter_use/module/main/view.dart';
 import 'package:get/get.dart';
@@ -39,6 +40,9 @@ class RouteConfig {
   static final String jumpOne = "/jumpOne";
   static final String jumpTwo = "/jumpOne/jumpTwo";
 
+  ///喜马拉雅
+  static final String himalaya = "/himalaya";
+
   ///别名映射页面
   static final List<GetPage> getPages = [
     GetPage(name: main, page: () => MainPage()),
@@ -53,5 +57,6 @@ class RouteConfig {
     GetPage(name: counterHighGet, page: () => CounterHighGetPage()),
     GetPage(name: jumpOne, page: () => JumpOnePage()),
     GetPage(name: jumpTwo, page: () => JumpTwoPage()),
+    GetPage(name: himalaya, page: () => HimalayaPage()),
   ];
 }
