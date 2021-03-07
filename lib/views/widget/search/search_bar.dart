@@ -22,7 +22,11 @@ class SearchBar extends StatefulWidget {
     this.onComplete,
     this.controller,
     this.onClear,
+    this.bgColor = Colors.white,
   });
+
+  ///背景色
+  final Color bgColor;
 
   ///限制输入条件
   final List<TextInputFormatter> inputFormatters;
@@ -96,26 +100,18 @@ class _SearchBarState extends State<SearchBar>
 
   @override
   Widget build(BuildContext context) {
-    return _buildSearchBody();
-  }
+    return _buildBg(children: [
+      //搜索icon
+      _buildSearchIcon(),
 
-  Widget _buildSearchBody() {
-    return _searchBg(
-      child: Row(
-        children: [
-          //搜索icon
-          _buildSearchIcon(),
+      //输入框
+      buildSearchInput(),
 
-          //输入框
-          buildSearchInput(),
-
-          //删除图标
-          Expanded(
-            child: buildSearchDelete(),
-          )
-        ],
-      ),
-    );
+      //删除图标
+      Expanded(
+        child: buildSearchDelete(),
+      )
+    ]);
   }
 
   Widget buildSearchDelete() {
@@ -169,7 +165,6 @@ class _SearchBarState extends State<SearchBar>
             fontSize: 28.sp,
           ),
           inputFormatters: widget.inputFormatters,
-          maxLengthEnforced: true,
           textInputAction: TextInputAction.search,
           decoration: InputDecoration(
             ///较小空间时，使组件正常渲染，包括文本垂直居中
@@ -208,15 +203,15 @@ class _SearchBarState extends State<SearchBar>
   }
 
   ///主体背景构造
-  Widget _searchBg({Widget child}) {
+  Widget _buildBg({List<Widget> children}) {
     return Container(
       height: 72.dp,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: widget.bgColor,
         borderRadius: BorderRadius.circular(36),
       ),
-      child: child,
+      child: Row(children: children),
     );
   }
 

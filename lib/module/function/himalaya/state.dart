@@ -1,11 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_use/app/config/image_config.dart';
 import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:get/get.dart';
 
 class HimalayaState {
   ///左边导航栏
   List<HimalayaItemInfo> leftItemList;
+
+  ///banner数据源
+  List<String> bannerList;
 
   HimalayaState() {
     //侧边导航栏目初始数据
@@ -78,6 +82,23 @@ class HimalayaState {
         ).obs,
       ]),
     ];
+
+    //banner图片数据源
+    bannerList = [
+      ImageHimalayaConfig.bannerSeven,
+      ImageHimalayaConfig.bannerTwo,
+      ImageHimalayaConfig.bannerThree,
+      ImageHimalayaConfig.bannerFour,
+      ImageHimalayaConfig.bannerFive,
+      ImageHimalayaConfig.bannerSix,
+      ImageHimalayaConfig.bannerOne,
+      ImageHimalayaConfig.bannerEight,
+      ImageHimalayaConfig.bannerNine,
+      ImageHimalayaConfig.bannerTen,
+      ImageHimalayaConfig.bannerEleven,
+    ];
+
+
   }
 }
 

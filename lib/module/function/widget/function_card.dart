@@ -31,26 +31,30 @@ class FunctionCard extends StatelessWidget {
           ),
 
           //毛玻璃背景
-          ClipRRect(
-            borderRadius: BorderRadius.circular(100.dp),
-            child: Container(
-              height: 50.dp,
-              width: 150.dp,
-              child: _blurryBg(),
-            ),
-          ),
+          !item.selected
+              ? ClipRRect(
+                  borderRadius: BorderRadius.circular(100.dp),
+                  child: Container(
+                    height: 50.dp,
+                    width: 150.dp,
+                    child: _blurryBg(),
+                  ),
+                )
+              : Container(),
 
           //文字
-          Center(
-            child: Text(
-              item.title,
-              style: TextStyle(
-                fontSize: 20.sp,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+          !item.selected
+              ? Center(
+                  child: Text(
+                    item.title,
+                    style: TextStyle(
+                      fontSize: 20.sp,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              : Container(),
 
           //点击效果
           Material(

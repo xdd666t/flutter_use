@@ -16,6 +16,8 @@ class ImageHimalayaConfig {
   ///logo图标
   static const String logo =
       'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/norm/20210306205207.png';
+  static const String headPic =
+      'https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/norm/20210307193405.png';
 
   ///banner图标
   static const String bannerOne =

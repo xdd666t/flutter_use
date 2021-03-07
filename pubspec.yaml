@@ -51,6 +51,13 @@ dependencies:
   logger: ^0.9.4
   # 用于处理widget是否可见检测 https://pub.flutter-io.cn/packages/visibility_detector
   visibility_detector: ^0.1.5
+  # 轮播图: https://pub.dev/packages/flutter_swiper
+  flutter_swiper: any
+  # 设置window窗口 https://github.com/google/flutter-desktop-embedding/tree/master/plugins/window_size
+  window_size:
+    git:
+      url: https://github.com/google/flutter-desktop-embedding.git
+      path: plugins/window_size
   # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
   flutter_smart_dialog: ^2.0.1
 #  flutter_smart_dialog:

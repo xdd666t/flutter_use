@@ -14,6 +14,7 @@ class FunctionState {
         title: '喜马拉雅',
         tag: 'himalaya',
         bg: ImageHimalayaConfig.logo,
+        selected: true,
       ),
       BtnInfo(
         title: 'SmartDialog',

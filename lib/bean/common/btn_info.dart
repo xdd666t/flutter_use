@@ -7,6 +7,7 @@ class BtnInfo {
     this.tag,
     this.icon,
     this.bg,
+    this.selected = false,
   });
 
   ///按钮名称
@@ -21,6 +22,9 @@ class BtnInfo {
   ///背景
   String bg;
 
+  ///做个控制
+  bool selected;
+
   /// jsonDecode(jsonStr) 方法中会调用实体类的这个方法。如果实体类中没有这个方法，会报错。
   Map toJson() {
     Map map = Map();
@@ -28,6 +32,7 @@ class BtnInfo {
     map["tag"] = this.tag;
     map["icon"] = this.icon;
     map["bg"] = this.bg;
+    map["selected"] = this.selected;
     return map;
   }
 }

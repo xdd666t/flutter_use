@@ -1,9 +1,15 @@
+import 'dart:io';
+
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 
 import 'state.dart';
 
 class MainLogic extends GetxController {
   final state = MainState();
+
+
 
   ///切换tab
   void switchTap(int index) {
