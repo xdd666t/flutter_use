@@ -1,3 +1,4 @@
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
 import 'package:get/get.dart';
@@ -7,6 +8,21 @@ import 'state.dart';
 
 class HimalayaLogic extends GetxController {
   final state = HimalayaState();
+
+  ///猜你喜欢: 换一批
+  void guessChange() async {
+    SmartDialog.showLoading(msg: '假装请求数据...');
+    await Future.delayed(Duration(milliseconds: 2000));
+    SmartDialog.dismiss();
+  }
+
+  ///处理点击banner事件
+  void clickBanner(int index) {
+    String pic = state.bannerList[index];
+    List<String> picNames = pic.split('/');
+
+    showToast(picNames[picNames.length - 1]);
+  }
 
   ///处理点击左箭头事件
   void dealLeftArrow() {

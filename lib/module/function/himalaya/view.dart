@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_audio_console.dart';
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_banner.dart';
+import 'package:flutter_use/module/function/himalaya/widget/himalaya_guess.dart';
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_personal_info.dart';
 import 'package:get/get.dart';
 
@@ -48,6 +49,14 @@ class HimalayaPage extends StatelessWidget {
           //轮播图
           HimalayaBanner(
             data: state.bannerList,
+            //点击banner的监听
+            onTap: (int index) => logic.clickBanner(index),
+          ),
+
+          //猜你喜欢
+          HimalayaGuess(
+            data: state.guessList,
+            onChange: () => logic.guessChange(),
           ),
         ]),
       ]),

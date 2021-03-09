@@ -11,6 +11,9 @@ class HimalayaState {
   ///banner数据源
   List<String> bannerList;
 
+  ///猜你喜欢数据源
+  List<HimalayaSubItemInfo> guessList;
+
   HimalayaState() {
     //侧边导航栏目初始数据
     leftItemList = [
@@ -98,7 +101,34 @@ class HimalayaState {
       ImageHimalayaConfig.bannerEleven,
     ];
 
-
+    //猜你喜欢：数据源
+    guessList = [
+      HimalayaSubItemInfo(
+        title: '阿朵的柒十柒',
+        subTitle: '阿朵',
+        tag: ImageHimalayaConfig.guessOne,
+      ),
+      HimalayaSubItemInfo(
+        title: '一星期一本书',
+        subTitle: '一星期一本书',
+        tag: ImageHimalayaConfig.guessTwo,
+      ),
+      HimalayaSubItemInfo(
+        title: '武动乾坤(上部)',
+        subTitle: '有声的紫襟',
+        tag: ImageHimalayaConfig.guessThree,
+      ),
+      HimalayaSubItemInfo(
+        title: '那些好听的女生翻唱',
+        subTitle: '花小小茵',
+        tag: ImageHimalayaConfig.guessFour,
+      ),
+      HimalayaSubItemInfo(
+        title: '斗罗之一锤99级',
+        subTitle: '清时_Koln',
+        tag: ImageHimalayaConfig.guessFive,
+      ),
+    ];
   }
 }
 
@@ -119,6 +149,7 @@ class HimalayaItemInfo {
 class HimalayaSubItemInfo {
   HimalayaSubItemInfo({
     this.title,
+    this.subTitle,
     this.tag,
     this.icon,
     this.isSelected = false,
@@ -126,6 +157,9 @@ class HimalayaSubItemInfo {
 
   ///按钮名称
   String title;
+
+  ///子标题
+  String subTitle;
 
   ///按钮标识
   String tag;

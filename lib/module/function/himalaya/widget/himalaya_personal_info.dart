@@ -35,57 +35,92 @@ class HimalayaPersonalInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _buildBg(children: [
-      //左右切换箭头 + 搜索框 + 刷新按钮
-      Row(children: [
-        //左右箭头 + 刷新图标
-        _buildArrowAndRefresh(),
+      //左图标
+      _buildLeftArrow(),
 
-        //搜索框
-        _buildSearch(),
-      ]),
+      //右图标
+      _buildRightArrow(),
 
-      //个人信息布局
-      _buildPersonal(),
+      //刷新图标
+      _buildRefresh(),
+
+      //搜索框
+      _buildSearch(),
+
+      //头像
+      _buildHeadImg(),
+
+      //皮肤
+      _buildSkin(),
+
+      //设置
+      _buildSetting(),
     ]);
   }
 
-  Widget _buildPersonal() {
-    return Row(children: [
-      //头像
-      ClipOval(
-        child: Image.network(
-          ImageHimalayaConfig.headPic,
-          height: 35.dp,
-          width: 35.dp,
-        ),
+  Widget _buildRefresh() {
+    return Container(
+      margin: EdgeInsets.only(left: 30.dp),
+      child: IconButton(
+        icon: Icon(Icons.autorenew, size: 16),
+        onPressed: onRefresh,
       ),
+    );
+  }
 
-      //皮肤
-      Container(
-        margin: EdgeInsets.only(left: 30.dp),
-        child: IconButton(
-          icon: Icon(
-            Icons.skip_next,
-            color: Colors.grey,
-            size: 20,
-          ),
-          onPressed: onSkin,
-        ),
+  Widget _buildRightArrow() {
+    return Container(
+      margin: EdgeInsets.only(left: 30.dp),
+      child: IconButton(
+        icon: Icon(Icons.arrow_forward_ios_outlined, size: 16),
+        onPressed: onRightArrow,
       ),
+    );
+  }
 
-      //设置
-      Container(
-        margin: EdgeInsets.only(left: 30.dp, right: 30.dp),
-        child: IconButton(
-          icon: Icon(
-            Icons.settings,
-            color: Colors.grey,
-            size: 20,
-          ),
-          onPressed: onSetting,
+  Widget _buildLeftArrow() {
+    return IconButton(
+      icon: Icon(Icons.arrow_back_ios, size: 16),
+      onPressed: onLeftArrow,
+    );
+  }
+
+  Widget _buildSetting() {
+    return Container(
+      margin: EdgeInsets.only(left: 30.dp, right: 30.dp),
+      child: IconButton(
+        icon: Icon(
+          Icons.settings,
+          color: Colors.grey,
+          size: 20,
         ),
-      )
-    ]);
+        onPressed: onSetting,
+      ),
+    );
+  }
+
+  Widget _buildSkin() {
+    return Container(
+      margin: EdgeInsets.only(left: 30.dp),
+      child: IconButton(
+        icon: Icon(
+          Icons.skip_next,
+          color: Colors.grey,
+          size: 20,
+        ),
+        onPressed: onSkin,
+      ),
+    );
+  }
+
+  Widget _buildHeadImg() {
+    return ClipOval(
+      child: Image.network(
+        ImageHimalayaConfig.headPic,
+        height: 35.dp,
+        width: 35.dp,
+      ),
+    );
   }
 
   Widget _buildSearch() {
@@ -122,36 +157,6 @@ class HimalayaPersonalInfo extends StatelessWidget {
           ),
         ),
       ]),
-    );
-  }
-
-  Widget _buildArrowAndRefresh() {
-    return Row(
-      children: [
-        //左图标
-        IconButton(
-          icon: Icon(Icons.arrow_back_ios, size: 16),
-          onPressed: onLeftArrow,
-        ),
-
-        //右图标
-        Container(
-          margin: EdgeInsets.only(left: 30.dp),
-          child: IconButton(
-            icon: Icon(Icons.arrow_forward_ios_outlined, size: 16),
-            onPressed: onRightArrow,
-          ),
-        ),
-
-        //刷新图标
-        Container(
-          margin: EdgeInsets.only(left: 30.dp),
-          child: IconButton(
-            icon: Icon(Icons.autorenew, size: 16),
-            onPressed: onRefresh,
-          ),
-        ),
-      ],
     );
   }
 

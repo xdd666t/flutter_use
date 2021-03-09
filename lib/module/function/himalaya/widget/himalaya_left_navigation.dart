@@ -6,6 +6,7 @@ import 'package:flutter_use/module/function/himalaya/state.dart';
 import 'package:get/get.dart';
 
 typedef ItemListBuilder = List<Widget> Function(HimalayaItemInfo item);
+typedef SubItemListBuilder = Widget Function(Rx<HimalayaSubItemInfo> item);
 
 class HimalayaLeftNavigation extends StatelessWidget {
   HimalayaLeftNavigation({
@@ -33,14 +34,81 @@ class HimalayaLeftNavigation extends StatelessWidget {
           _buildTitle(item.title),
 
           //子栏目 - 列表
-          Column(
-            children: item.subItemList.map((e) {
-              return _buildItem(item: e, callback: onTap);
-            }).toList(),
+          _buildSubItemListBg(
+            data: item,
+            subItem: (subItem) => _buildSubItemBg(data: subItem, children: [
+              //选中红色长方形条块
+              _buildRedTag(subItem),
+
+              //图标
+              _buildItemIcon(subItem),
+
+              //描述
+              _buildItemDesc(subItem),
+            ]),
           ),
         ];
       }),
     ]);
+  }
+
+  Widget _buildItemDesc(Rx<HimalayaSubItemInfo> subItem) {
+    return Obx(
+      () => Container(
+        margin: EdgeInsets.only(left: 10.dp),
+        child: Text(
+          subItem().title,
+          style: TextStyle(
+            color: subItem().isSelected ? Colors.red : Colors.black,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildItemIcon(Rx<HimalayaSubItemInfo> subItem) {
+    return Obx(
+      () => Icon(
+        subItem().icon,
+        size: 18,
+        color: subItem().isSelected ? Colors.red : Colors.black,
+      ),
+    );
+  }
+
+  Widget _buildRedTag(Rx<HimalayaSubItemInfo> subItem) {
+    return Obx(
+      () => Container(
+        height: 17.dp,
+        width: 2.dp,
+        color: subItem().isSelected ? Colors.red : Colors.transparent,
+        margin: EdgeInsets.only(right: 21.dp),
+      ),
+    );
+  }
+
+  Widget _buildSubItemBg({
+    Rx<HimalayaSubItemInfo> data,
+    List<Widget> children,
+  }) {
+    return InkWell(
+      onTap: () => onTap(data),
+      child: Container(
+        padding: EdgeInsets.symmetric(vertical: 9.dp),
+        child: Row(children: children),
+      ),
+    );
+  }
+
+  Widget _buildSubItemListBg({
+    HimalayaItemInfo data,
+    SubItemListBuilder subItem,
+  }) {
+    return Column(
+      children: data.subItemList.map((e) {
+        return subItem(e);
+      }).toList(),
+    );
   }
 
   Widget _buildItemListBg({ItemListBuilder itemListBuilder}) {
@@ -56,47 +124,6 @@ class HimalayaLeftNavigation extends StatelessWidget {
               );
             }).toList(),
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildItem({
-    Rx<HimalayaSubItemInfo> item,
-    ParamSingleCallback<Rx<HimalayaSubItemInfo>> callback,
-  }) {
-    return Obx(
-      () => InkWell(
-        onTap: () => callback(item),
-        child: Container(
-          padding: EdgeInsets.symmetric(vertical: 9.dp),
-          child: Row(children: [
-            //选中红色长方形条块
-            Container(
-              height: 17.dp,
-              width: 2.dp,
-              color: item().isSelected ? Colors.red : Colors.transparent,
-              margin: EdgeInsets.only(right: 21.dp),
-            ),
-
-            //图标
-            Icon(
-              item().icon,
-              size: 18,
-              color: item().isSelected ? Colors.red : Colors.black,
-            ),
-
-            //描述
-            Container(
-              margin: EdgeInsets.only(left: 10.dp),
-              child: Text(
-                item().title,
-                style: TextStyle(
-                  color: item().isSelected ? Colors.red : Colors.black,
-                ),
-              ),
-            ),
-          ]),
         ),
       ),
     );
