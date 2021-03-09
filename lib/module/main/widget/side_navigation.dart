@@ -11,6 +11,8 @@ class SideNavigation extends StatelessWidget {
     this.sideItems,
     this.isUnfold,
     this.onUnfold,
+    this.isScale,
+    this.onScale,
   });
 
   ///侧边栏item
@@ -20,21 +22,66 @@ class SideNavigation extends StatelessWidget {
   final int selectedIndex;
   final ParamSingleCallback onItem;
 
-  ///是否展开
+  ///是否展开  点击展开事件
   final bool isUnfold;
-
-  ///点击展开事件
   final ParamSingleCallback<bool> onUnfold;
+
+  ///缩放事件
+  final bool isScale;
+  final ParamSingleCallback<bool> onScale;
 
   @override
   Widget build(BuildContext context) {
-    return _navigationRailSide(context);
+    return NavigationRail(
+      backgroundColor: Colors.white,
+      //阴影Z轴高度
+      elevation: 3,
+      extended: isUnfold,
+      labelType: isUnfold
+          ? NavigationRailLabelType.none
+          : NavigationRailLabelType.selected,
+      //侧边栏中的item
+      destinations: sideItems.map((item) => _buildItem(item)).toList(),
+      //顶部widget
+      leading: _buildTopLeading(),
+      //底部widget
+      trailing: _buildBottomTrailing(),
+      selectedIndex: selectedIndex,
+      onDestinationSelected: (int index) => onItem(index),
+    );
   }
 
-  //增加NavigationRail组件为侧边栏
-  Widget _navigationRailSide(BuildContext context) {
-    //顶部widget
-    Widget topWidget = Center(
+  Widget _buildBottomTrailing() {
+    return Container(
+      alignment: Alignment.bottomLeft,
+      padding: const EdgeInsets.all(20),
+      child: Wrap(
+        direction: Axis.vertical,
+        spacing: 20.dp,
+        children: [
+          //展开按钮
+          // CupertinoSwitch(
+          //   value: isUnfold,
+          //   onChanged: onUnfold,
+          // ),
+
+          Container(
+            width: 70.dp,
+            child: Text('开启缩放'),
+          ),
+
+          //缩放按钮
+          CupertinoSwitch(
+            value: isScale,
+            onChanged: onScale,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTopLeading() {
+    return Center(
       child: Container(
         width: 80.dp,
         height: 80.dp,
@@ -48,52 +95,17 @@ class SideNavigation extends StatelessWidget {
         ),
       ),
     );
+  }
 
-    //底部widget
-    Widget bottomWidget = Container(
-      alignment: Alignment.bottomLeft,
-      padding: const EdgeInsets.all(20),
-      child: Wrap(
-        direction: Axis.vertical,
-        spacing: 20.dp,
-        children: [
-          //展开按钮
-          CupertinoSwitch(
-            value: isUnfold,
-            onChanged: onUnfold,
-          ),
-        ],
+  NavigationRailDestination _buildItem(item) {
+    return NavigationRailDestination(
+      icon: item.icon,
+      label: Container(
+        padding: EdgeInsets.only(top: 10.dp),
+        child: Text(
+          item.title,
+        ),
       ),
-    );
-
-    return NavigationRail(
-      backgroundColor: Colors.white,
-      //阴影Z轴高度
-      elevation: 3,
-      extended: isUnfold,
-      labelType: isUnfold
-          ? NavigationRailLabelType.none
-          : NavigationRailLabelType.selected,
-      //侧边栏中的item
-      destinations: sideItems.map((item) {
-        return NavigationRailDestination(
-          icon: item.icon,
-          label: Container(
-            padding: EdgeInsets.only(top: 10.dp),
-            child: Text(
-              item.title,
-            ),
-          ),
-        );
-      }).toList(),
-      //顶部widget
-      leading: topWidget,
-//    //底部widget
-      trailing: bottomWidget,
-      selectedIndex: selectedIndex,
-      onDestinationSelected: (int index) {
-        onItem(index);
-      },
     );
   }
 }

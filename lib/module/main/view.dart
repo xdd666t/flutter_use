@@ -19,15 +19,15 @@ class MainPage extends StatelessWidget {
         Obx(
           () => SideNavigation(
             selectedIndex: state.selectedIndex.value,
-            sideItems: state.itemList,
-            onItem: (index) {
-              logic.switchTap(index);
-              state.pageController.jumpToPage(index);
-            },
             isUnfold: state.isUnfold.value,
-            onUnfold: (unfold) {
-              logic.onUnfold(unfold);
-            },
+            isScale: state.isScale.value,
+            sideItems: state.itemList,
+            //点击item
+            onItem: (index) => logic.switchTap(index),
+            //展开侧边栏
+            onUnfold: (isUnfold) => logic.onUnfold(isUnfold),
+            //缩放整体布局
+            onScale: (isScale) => logic.onScale(isScale),
           ),
         ),
 

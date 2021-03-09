@@ -13,6 +13,9 @@ class MainState {
   ///控制是否展开 - 响应式
   RxBool isUnfold;
 
+  ///是否缩放 - 响应式
+  RxBool isScale;
+
   ///分类按钮数据源
   List<BtnInfo> list;
 
@@ -28,6 +31,8 @@ class MainState {
     selectedIndex = 0.obs;
     //默认不展开
     isUnfold = false.obs;
+    //默认不缩放
+    isScale = false.obs;
     //PageView页面
     pageList = [
       keepAliveWrapper(FunctionPage()),

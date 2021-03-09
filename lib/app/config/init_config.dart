@@ -1,31 +1,59 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:window_size/window_size.dart' as window_size;
 
 class InitConfig {
-  InitConfig.initApp() {
-    // 获取窗口信息，然后设置窗口信息
-    window_size.getWindowInfo().then((window) {
-      if (Platform.isAndroid || Platform.isIOS) {
-        return;
-      }
+  InitConfig.initApp(BuildContext context) {
+    //初始化窗口
+    initWindow();
 
-      if (window.screen != null) {
-        final screenFrame = window.screen.visibleFrame;
-        final width = 1030.0;
-        final height = 700.0;
-        final left = ((screenFrame.width - width) / 2).roundToDouble();
-        final top = ((screenFrame.height - height) / 3).roundToDouble();
-        final frame = Rect.fromLTWH(left, top, width, height);
-        //设置窗口信息
-        window_size.setWindowFrame(frame);
-        //设置窗口顶部标题
-        window_size.setWindowTitle('Flutter Use');
-        //限制最大最小窗口大小
-        window_size.setWindowMinSize(Size(1030, 700));
-        // window_size.setWindowMaxSize(Size(1230, 900));
-      }
-    });
+    //界面适配
+    initAutoUi(context);
   }
+
+  //界面适配
+  void initAutoUi(BuildContext context) {
+    ScreenUtil.init(
+      // 设备像素大小(必须在首页中获取)
+      BoxConstraints(
+        maxWidth: MediaQuery.of(context).size.width,
+        maxHeight: MediaQuery.of(context).size.height,
+      ),
+      Orientation.landscape,
+      // 设计尺寸
+      designSize: Size(1920, 1080),
+      allowFontScaling: false,
+    );
+  }
+}
+
+void initWindow({double scale: 1.0}) {
+  // 获取窗口信息，然后设置窗口信息
+  window_size.getWindowInfo().then((window) {
+    if (Platform.isAndroid || Platform.isIOS) {
+      return;
+    }
+
+    if (window.screen != null) {
+      final screenFrame = window.screen.visibleFrame;
+      final width = 1050.0.dp * scale;
+      final height = 700.0.dp * scale;
+      final left = ((screenFrame.width - width) / 2).roundToDouble();
+      final top = ((screenFrame.height - height) / 3).roundToDouble();
+      final frame = Rect.fromLTWH(left, top, width, height);
+      //设置窗口信息
+      window_size.setWindowFrame(frame);
+      //设置窗口顶部标题
+      window_size.setWindowTitle('Flutter Use');
+      //限制最大最小窗口大小
+      window_size.setWindowMinSize(Size(
+        1050.dp * scale,
+        700.dp * scale,
+      ));
+      // window_size.setWindowMaxSize(Size(1230, 900));
+    }
+  });
 }

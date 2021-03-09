@@ -14,9 +14,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    ///初始化应用信息
-    InitConfig.initApp();
-
     return GetMaterialApp(
       initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
