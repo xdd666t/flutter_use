@@ -158,6 +158,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
   Widget _buildBg({List<Widget> children}) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10.dp, horizontal: 18.dp),
+      width: 800.dp,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: children,
