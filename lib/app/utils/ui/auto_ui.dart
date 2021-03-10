@@ -20,6 +20,6 @@ extension NumExtend on num {
 
   ///配置文字,文字适配请用sp单位
   num get sp {
-    return ScreenUtil().setSp(this) * 3.4;
+    return ScreenUtil().setSp(this) * 2.72;
   }
 }

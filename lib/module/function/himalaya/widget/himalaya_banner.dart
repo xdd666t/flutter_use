@@ -19,12 +19,12 @@ class HimalayaBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 700.dp,
+      width: 800.dp,
       height: 200.dp,
       margin: EdgeInsets.only(top: 18.dp),
       child: Swiper(
         itemBuilder: (BuildContext context, int index) {
-          return InkWell(
+          return GestureDetector(
             onTap: () => onTap(index),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15.dp),

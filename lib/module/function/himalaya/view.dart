@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_audio_console.dart';
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_banner.dart';
@@ -9,6 +11,7 @@ import 'logic.dart';
 import 'state.dart';
 import 'widget/himalaya_function.dart';
 import 'widget/himalaya_left_navigation.dart';
+import 'widget/himalaya_newest.dart';
 
 class HimalayaPage extends StatelessWidget {
   final HimalayaLogic logic = Get.put(HimalayaLogic());
@@ -49,15 +52,21 @@ class HimalayaPage extends StatelessWidget {
           //轮播图
           HimalayaBanner(
             data: state.bannerList,
-            //点击banner的监听
+            //点击: 具体banner的监听
             onTap: (int index) => logic.clickBanner(index),
           ),
 
           //猜你喜欢
           HimalayaGuess(
             data: state.guessList,
+            //点击: 换一批
             onChange: () => logic.guessChange(),
+            //点击: 猜你喜欢具体卡片
+            onGuess: (HimalayaSubItemInfo item) => logic.guessDetail(item),
           ),
+
+          //最新精选
+          HimalayaNewest(),
         ]),
       ]),
 

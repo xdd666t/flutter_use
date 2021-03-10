@@ -1,4 +1,5 @@
 import 'package:flutter_use/app/config/init_config.dart';
+import 'package:flutter_use/app/utils/info/log_util.dart';
 import 'package:get/get.dart';
 
 import 'state.dart';
@@ -28,6 +29,6 @@ class MainLogic extends GetxController {
   void onScale(bool isScale) {
     state.isScale.value = !state.isScale.value;
 
-    initWindow(scale: state.isScale.value ? 1.25 : 1.0);
+    initWindow(scale: isScale ? 1.25 : 1.0);
   }
 }

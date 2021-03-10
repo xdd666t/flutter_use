@@ -30,30 +30,24 @@ class InitConfig {
   }
 }
 
-void initWindow({double scale: 1.0}) {
+//窗口设置只能放大，不能缩小，很奇怪
+void initWindow({double scale: 1.0}) async {
   // 获取窗口信息，然后设置窗口信息
-  window_size.getWindowInfo().then((window) {
-    if (Platform.isAndroid || Platform.isIOS) {
-      return;
-    }
 
-    if (window.screen != null) {
-      final screenFrame = window.screen.visibleFrame;
-      final width = 1050.0.dp * scale;
-      final height = 700.0.dp * scale;
-      final left = ((screenFrame.width - width) / 2).roundToDouble();
-      final top = ((screenFrame.height - height) / 3).roundToDouble();
-      final frame = Rect.fromLTWH(left, top, width, height);
-      //设置窗口信息
-      window_size.setWindowFrame(frame);
-      //设置窗口顶部标题
-      window_size.setWindowTitle('Flutter Use');
-      //限制最大最小窗口大小
-      window_size.setWindowMinSize(Size(
-        1050.dp * scale,
-        700.dp * scale,
-      ));
-      // window_size.setWindowMaxSize(Size(1230, 900));
-    }
-  });
+  var window = await window_size.getWindowInfo();
+  if (Platform.isAndroid || Platform.isIOS || window.screen == null) {
+    return;
+  }
+  final screenFrame = window.screen.visibleFrame;
+  final width = 1050.0.dp * scale;
+  final height = 700.0.dp * scale;
+  final left = ((screenFrame.width - width) / 2).roundToDouble();
+  final top = ((screenFrame.height - height) / 3).roundToDouble();
+  final frame = Rect.fromLTWH(left, top, width, height);
+  // //设置窗口信息
+  window_size.setWindowFrame(frame);
+  //设置窗口顶部标题
+  window_size.setWindowTitle('Flutter Use');
+  //限制最大最小窗口大小
+  window_size.setWindowMinSize(Size(1050.dp * scale, 700.dp * scale));
 }

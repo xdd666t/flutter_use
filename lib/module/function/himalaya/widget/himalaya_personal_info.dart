@@ -87,7 +87,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
 
   Widget _buildSetting() {
     return Container(
-      margin: EdgeInsets.only(left: 30.dp, right: 30.dp),
+      margin: EdgeInsets.only(left: 15.dp),
       child: IconButton(
         icon: Icon(
           Icons.settings,
@@ -101,7 +101,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
 
   Widget _buildSkin() {
     return Container(
-      margin: EdgeInsets.only(left: 30.dp),
+      margin: EdgeInsets.only(left: 15.dp),
       child: IconButton(
         icon: Icon(
           Icons.skip_next,
@@ -114,11 +114,14 @@ class HimalayaPersonalInfo extends StatelessWidget {
   }
 
   Widget _buildHeadImg() {
-    return ClipOval(
-      child: Image.network(
-        ImageHimalayaConfig.headPic,
-        height: 35.dp,
-        width: 35.dp,
+    return Container(
+      margin: EdgeInsets.only(left: 15.dp),
+      child: ClipOval(
+        child: Image.network(
+          ImageHimalayaConfig.headPic,
+          height: 35.dp,
+          width: 35.dp,
+        ),
       ),
     );
   }
@@ -127,7 +130,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
     return Container(
       height: 30.dp,
       width: 300.dp,
-      margin: EdgeInsets.only(left: 24.dp),
+      margin: EdgeInsets.symmetric(horizontal: 15.dp),
       decoration: BoxDecoration(
         color: Colors.grey.withOpacity(0.1),
         borderRadius: BorderRadius.circular(36),

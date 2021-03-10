@@ -14,6 +14,10 @@ class HimalayaState {
   ///猜你喜欢数据源
   List<HimalayaSubItemInfo> guessList;
 
+  ///最新精选数据源
+  List<Rx<HimalayaSubItemInfo>> newestSortList;
+  List<HimalayaSubItemInfo> newestCardList;
+
   HimalayaState() {
     //侧边导航栏目初始数据
     leftItemList = [
@@ -127,6 +131,86 @@ class HimalayaState {
         title: '斗罗之一锤99级',
         subTitle: '清时_Koln',
         tag: ImageHimalayaConfig.guessFive,
+      ),
+    ];
+
+    //最新精选数据源
+    newestSortList = [
+      HimalayaSubItemInfo(
+        title: '有声书',
+        isSelected: true,
+      ).obs,
+      HimalayaSubItemInfo(
+        title: '个人成长',
+        isSelected: false,
+      ).obs,
+      HimalayaSubItemInfo(
+        title: '人文',
+        isSelected: false,
+      ).obs,
+      HimalayaSubItemInfo(
+        title: '外语',
+        isSelected: false,
+      ).obs,
+      HimalayaSubItemInfo(
+        title: '娱乐',
+        isSelected: false,
+      ).obs,
+      HimalayaSubItemInfo(
+        title: '商业财经',
+        isSelected: false,
+      ).obs,
+    ];
+    newestCardList = [
+      HimalayaSubItemInfo(
+        title: '重生八零，媳妇有点辣',
+        subTitle: '君颜讲故事',
+        tag: ImageHimalayaConfig.featureOne,
+      ),
+      HimalayaSubItemInfo(
+        title: '慕少，狠霸道',
+        subTitle: '妙儿姐',
+        tag: ImageHimalayaConfig.featureTwo,
+      ),
+      HimalayaSubItemInfo(
+        title: '摸金天师（紫襟演播）',
+        subTitle: '有声的紫襟',
+        tag: ImageHimalayaConfig.featureThree,
+      ),
+      HimalayaSubItemInfo(
+        title: '猎罪者',
+        subTitle: '有声的紫襟',
+        tag: ImageHimalayaConfig.featureFour,
+      ),
+      HimalayaSubItemInfo(
+        title: '王的女人谁敢动',
+        subTitle: '一刀苏苏',
+        tag: ImageHimalayaConfig.featureFive,
+      ),
+      HimalayaSubItemInfo(
+        title: '绝世高手【头陀渊】',
+        subTitle: '头陀渊讲故事',
+        tag: ImageHimalayaConfig.featureSix,
+      ),
+      HimalayaSubItemInfo(
+        title: '中国民间故事',
+        subTitle: '霄旭讲故事',
+        tag: ImageHimalayaConfig.featureSeven,
+      ),
+      HimalayaSubItemInfo(
+        title: '雪中悍刀行',
+        subTitle: '大斌',
+        tag: ImageHimalayaConfig.featureEight,
+      ),
+      HimalayaSubItemInfo(
+        title: '我的老千江湖',
+        subTitle: '有声的紫襟',
+        tag: ImageHimalayaConfig.featureNine,
+      ),
+      HimalayaSubItemInfo(
+        title: '一剑独尊',
+        subTitle: '有声的紫襟',
+        tag: ImageHimalayaConfig.featureTen,
       ),
     ];
   }

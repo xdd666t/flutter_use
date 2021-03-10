@@ -11,6 +11,7 @@ class HimalayaGuess extends StatelessWidget {
     Key key,
     this.onChange,
     this.data,
+    this.onGuess,
   }) : super(key: key);
 
   ///数据源
@@ -18,6 +19,9 @@ class HimalayaGuess extends StatelessWidget {
 
   ///换一批点击监听
   final ParamVoidCallback onChange;
+
+  ///猜你喜欢具体栏目
+  final ParamSingleCallback<HimalayaSubItemInfo> onGuess;
 
   @override
   Widget build(BuildContext context) {
@@ -33,16 +37,34 @@ class HimalayaGuess extends StatelessWidget {
 
       //显示具体信息流
       _buildItemBg(itemBuilder: (item) {
-        return Column(children: [
-          //图片布局
-          Container(
-            width: 110.dp,
-            height: 100.dp,
-            child: Image.network(item.tag),
-          ),
+        return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          //图片卡片
+          _buildPicCard(item),
+
+          //文字描述
+          Text(item.title, style: TextStyle(fontSize: 15.sp)),
+
+          Text(item.subTitle,
+              style: TextStyle(fontSize: 13.sp, color: Colors.grey)),
         ]);
       })
     ]);
+  }
+
+  Widget _buildPicCard(HimalayaSubItemInfo item) {
+    return Container(
+      width: 150.dp,
+      height: 150.dp,
+      margin: EdgeInsets.only(top: 16.dp, bottom: 6.dp),
+      decoration: BoxDecoration(),
+      child: GestureDetector(
+        onTap: () => onGuess(item),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(15.dp),
+          child: Image.network(item.tag),
+        ),
+      ),
+    );
   }
 
   Widget _buildItemBg({ItemBuilder itemBuilder}) {
@@ -81,29 +103,15 @@ class HimalayaGuess extends StatelessWidget {
       '猜你喜欢',
       style: TextStyle(
         color: Colors.black,
-        fontSize: 18.sp,
-        fontWeight: FontWeight.w600,
+        fontSize: 21.sp,
       ),
-    );
-  }
-
-  Row buildTitleAndRefresh() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        //标题
-        _buildTitle(),
-
-        //换一批
-        _buildGuessChange()
-      ],
     );
   }
 
   Widget _buildBg({List<Widget> children}) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10.dp),
-      width: 700.dp,
+      margin: EdgeInsets.symmetric(vertical: 18.dp),
+      width: 800.dp,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: children,

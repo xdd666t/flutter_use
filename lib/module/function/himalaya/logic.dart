@@ -9,6 +9,13 @@ import 'state.dart';
 class HimalayaLogic extends GetxController {
   final state = HimalayaState();
 
+  ///猜你喜欢: 具体的卡片
+  void guessDetail(HimalayaSubItemInfo itemInfo) {
+    List<String> picNames = itemInfo.tag.split('/');
+
+    showToast(picNames[picNames.length - 1]);
+  }
+
   ///猜你喜欢: 换一批
   void guessChange() async {
     SmartDialog.showLoading(msg: '假装请求数据...');
