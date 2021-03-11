@@ -4,11 +4,14 @@ import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/module/function/himalaya/state.dart';
 import 'package:get/get.dart';
 
+typedef HimalayaNewestCardBuilder = Widget Function(HimalayaSubItemInfo item);
+
 class HimalayaNewest extends StatelessWidget {
   HimalayaNewest({
     Key key,
     this.data,
     this.onSortTitle,
+    this.onNewest,
   }) : super(key: key);
 
   ///数据源
@@ -16,6 +19,9 @@ class HimalayaNewest extends StatelessWidget {
 
   ///点击标题栏目
   final ParamSingleCallback<Rx<HimalayaSubItemInfo>> onSortTitle;
+
+  ///猜你喜欢具体栏目
+  final ParamSingleCallback<HimalayaSubItemInfo> onNewest;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +33,49 @@ class HimalayaNewest extends StatelessWidget {
 
         //分类标题
         _buildSortTitle(),
-      ])
+      ]),
+
+      //精选具体card
+      _buildCardBg(builder: (item) {
+        return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          //图片卡片
+          _buildPicCard(item),
+
+          //文字描述
+          Text(item.title, style: TextStyle(fontSize: 15.sp)),
+
+          //
+          Text(item.subTitle,
+              style: TextStyle(fontSize: 13.sp, color: Colors.grey)),
+        ]);
+      }),
     ]);
+  }
+
+  Widget _buildPicCard(HimalayaSubItemInfo item) {
+    return Container(
+      width: 150.dp,
+      height: 150.dp,
+      margin: EdgeInsets.only(top: 16.dp, bottom: 6.dp),
+      decoration: BoxDecoration(),
+      child: GestureDetector(
+        onTap: () => onNewest(item),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(15.dp),
+          child: Image.network(item.tag),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCardBg({HimalayaNewestCardBuilder builder}) {
+    return Wrap(
+      runSpacing: 20.dp,
+      spacing: 10.dp,
+      children: data.newestCardList.map((e) {
+        return builder(e);
+      }).toList(),
+    );
   }
 
   Widget _buildSortTitle() {
