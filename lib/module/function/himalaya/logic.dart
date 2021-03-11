@@ -9,6 +9,17 @@ import 'state.dart';
 class HimalayaLogic extends GetxController {
   final state = HimalayaState();
 
+  ///最新精选 选择分类标题
+  void sortTitle(Rx<HimalayaSubItemInfo> itemInfo) {
+    for (var item in state.newestSortList) {
+      if (item().isSelected) {
+        item.update((val) => val.isSelected = false);
+      }
+    }
+    itemInfo.update((val) => val.isSelected = true);
+    showToast(itemInfo().title);
+  }
+
   ///猜你喜欢: 具体的卡片
   void guessDetail(HimalayaSubItemInfo itemInfo) {
     List<String> picNames = itemInfo.tag.split('/');

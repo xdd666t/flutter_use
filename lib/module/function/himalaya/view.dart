@@ -66,7 +66,11 @@ class HimalayaPage extends StatelessWidget {
           ),
 
           //最新精选
-          HimalayaNewest(),
+          HimalayaNewest(
+            data: state,
+            //点击分类标题
+            onSortTitle: (itemInfo) => logic.sortTitle(itemInfo),
+          ),
         ]),
       ]),
 
