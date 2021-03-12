@@ -42,9 +42,7 @@ class HimalayaLogic extends GetxController {
 
   ///猜你喜欢: 具体的卡片
   void guessDetail(HimalayaSubItemInfo itemInfo) {
-    List<String> picNames = itemInfo.tag.split('/');
-
-    showToast(picNames[picNames.length - 1]);
+    showToast(itemInfo.title);
   }
 
   ///猜你喜欢: 换一批
