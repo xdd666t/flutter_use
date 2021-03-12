@@ -4,6 +4,9 @@ import 'package:flutter_use/app/config/image_config.dart';
 import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:get/get.dart';
 
+typedef HimalayaSubBuilder = Widget Function(HimalayaSubItemInfo item);
+typedef HimalayaRxSubBuilder = Widget Function(Rx<HimalayaSubItemInfo> item);
+typedef HimalayaItemBuilder = List<Widget> Function(HimalayaItemInfo item);
 class HimalayaState {
   ///左边导航栏
   List<HimalayaItemInfo> leftItemList;
@@ -17,6 +20,9 @@ class HimalayaState {
   ///最新精选数据源
   List<Rx<HimalayaSubItemInfo>> newestSortList;
   List<HimalayaSubItemInfo> newestCardList;
+
+  ///热门主播数据源
+  List<HimalayaSubItemInfo> anchorList;
 
   HimalayaState() {
     //侧边导航栏目初始数据
@@ -211,6 +217,35 @@ class HimalayaState {
         title: '一剑独尊',
         subTitle: '有声的紫襟',
         tag: ImageHimalayaConfig.featureTen,
+      ),
+    ];
+
+    //热门主播数据源
+    anchorList = [
+      HimalayaSubItemInfo(
+        title: '01',
+        subTitle: '有声的紫襟',
+        tag: ImageHimalayaConfig.anchorOne,
+      ),
+      HimalayaSubItemInfo(
+        title: '02',
+        subTitle: '头陀渊讲故事',
+        tag: ImageHimalayaConfig.anchorTwo,
+      ),
+      HimalayaSubItemInfo(
+        title: '03',
+        subTitle: '果维听书',
+        tag: ImageHimalayaConfig.anchorThree,
+      ),
+      HimalayaSubItemInfo(
+        title: '04',
+        subTitle: '_牛大宝_',
+        tag: ImageHimalayaConfig.anchorFour,
+      ),
+      HimalayaSubItemInfo(
+        title: '05',
+        subTitle: '365读书',
+        tag: ImageHimalayaConfig.anchorFive,
       ),
     ];
   }

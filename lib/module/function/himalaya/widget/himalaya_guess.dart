@@ -4,8 +4,6 @@ import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/module/function/himalaya/state.dart';
 
 ///猜你喜欢
-typedef ItemBuilder = Widget Function(HimalayaSubItemInfo item);
-
 class HimalayaGuess extends StatelessWidget {
   HimalayaGuess({
     Key key,
@@ -67,7 +65,7 @@ class HimalayaGuess extends StatelessWidget {
     );
   }
 
-  Widget _buildItemBg({ItemBuilder itemBuilder}) {
+  Widget _buildItemBg({HimalayaSubBuilder itemBuilder}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: data.map((e) {
@@ -98,7 +96,7 @@ class HimalayaGuess extends StatelessWidget {
     );
   }
 
-  Text _buildTitle() {
+  Widget _buildTitle() {
     return Text(
       '猜你喜欢',
       style: TextStyle(
@@ -110,8 +108,8 @@ class HimalayaGuess extends StatelessWidget {
 
   Widget _buildBg({List<Widget> children}) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 18.dp),
       width: 800.dp,
+      margin: EdgeInsets.only(top: 38.dp, bottom: 18.dp),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: children,

@@ -5,9 +5,6 @@ import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/module/function/himalaya/state.dart';
 import 'package:get/get.dart';
 
-typedef ItemListBuilder = List<Widget> Function(HimalayaItemInfo item);
-typedef SubItemListBuilder = Widget Function(Rx<HimalayaSubItemInfo> item);
-
 class HimalayaLeftNavigation extends StatelessWidget {
   HimalayaLeftNavigation({
     Key key,
@@ -28,7 +25,7 @@ class HimalayaLeftNavigation extends StatelessWidget {
       //遍历俩层循环：不同item栏目 - 可点击,可滑动
       //第一层：标题 + 子item列表
       //第二层：子item详细布局
-      _buildItemListBg(itemListBuilder: (item) {
+      _buildItemListBg(itemBuilder: (item) {
         return [
           //最外层item - 大标题
           _buildTitle(item.title),
@@ -36,7 +33,7 @@ class HimalayaLeftNavigation extends StatelessWidget {
           //子栏目 - 列表
           _buildSubItemListBg(
             data: item,
-            subItem: (subItem) => _buildSubItemBg(data: subItem, children: [
+            subBuilder: (subItem) => _buildSubItemBg(data: subItem, children: [
               //选中红色长方形条块
               _buildRedTag(subItem),
 
@@ -102,16 +99,16 @@ class HimalayaLeftNavigation extends StatelessWidget {
 
   Widget _buildSubItemListBg({
     HimalayaItemInfo data,
-    SubItemListBuilder subItem,
+    HimalayaRxSubBuilder subBuilder,
   }) {
     return Column(
       children: data.subItemList.map((e) {
-        return subItem(e);
+        return subBuilder(e);
       }).toList(),
     );
   }
 
-  Widget _buildItemListBg({ItemListBuilder itemListBuilder}) {
+  Widget _buildItemListBg({HimalayaItemBuilder itemBuilder}) {
     return Expanded(
       child: Scrollbar(
         child: SingleChildScrollView(
@@ -120,7 +117,7 @@ class HimalayaLeftNavigation extends StatelessWidget {
             children: data.leftItemList.map((e) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: itemListBuilder(e),
+                children: itemBuilder(e),
               );
             }).toList(),
           ),

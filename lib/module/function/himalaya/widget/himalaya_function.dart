@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/base/base_scaffold.dart';
+import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 
 ///喜马拉雅整体外层布局设置
 Widget himalayaBuildBg({List<Widget> children}) {
@@ -22,8 +23,20 @@ Widget himalayaBuildTopBg({List<Widget> children}) {
 ///顶部右侧信息流外层布局设置
 Widget himalayaBuildInfoListBg({List<Widget> children}) {
   return Expanded(
-    child: SingleChildScrollView(
-      child: Column(children: children),
+    child: Column(children: children),
+  );
+}
+
+///顶部右侧信息流外层布局设置 - 可滑动部分
+Widget himalayaBuildScrollInfoListBg({List<Widget> children}) {
+  return Expanded(
+    child: Scrollbar(
+      child: SingleChildScrollView(
+        child: Container(
+          width: 860.dp,
+          child: Column(children: children),
+        ),
+      ),
     ),
   );
 }

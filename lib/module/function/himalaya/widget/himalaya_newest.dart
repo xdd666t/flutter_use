@@ -4,8 +4,6 @@ import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/module/function/himalaya/state.dart';
 import 'package:get/get.dart';
 
-typedef HimalayaNewestCardBuilder = Widget Function(HimalayaSubItemInfo item);
-
 class HimalayaNewest extends StatelessWidget {
   HimalayaNewest({
     Key key,
@@ -68,10 +66,10 @@ class HimalayaNewest extends StatelessWidget {
     );
   }
 
-  Widget _buildCardBg({HimalayaNewestCardBuilder builder}) {
+  Widget _buildCardBg({HimalayaSubBuilder builder}) {
     return Wrap(
       runSpacing: 20.dp,
-      spacing: 10.dp,
+      spacing: 12.dp,
       children: data.newestCardList.map((e) {
         return builder(e);
       }).toList(),
@@ -113,8 +111,8 @@ class HimalayaNewest extends StatelessWidget {
 
   Widget _buildBg({List<Widget> children}) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 18.dp),
       width: 800.dp,
+      margin: EdgeInsets.only(top: 28.dp, bottom: 18.dp),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: children,

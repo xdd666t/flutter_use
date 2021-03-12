@@ -39,7 +39,7 @@ void initWindow({double scale: 1.0}) async {
     return;
   }
   final screenFrame = window.screen.visibleFrame;
-  final width = 1050.0.dp * scale;
+  final width = 1060.0.dp * scale;
   final height = 700.0.dp * scale;
   final left = ((screenFrame.width - width) / 2).roundToDouble();
   final top = ((screenFrame.height - height) / 3).roundToDouble();
@@ -49,5 +49,5 @@ void initWindow({double scale: 1.0}) async {
   //设置窗口顶部标题
   window_size.setWindowTitle('Flutter Use');
   //限制最大最小窗口大小
-  window_size.setWindowMinSize(Size(1050.dp * scale, 700.dp * scale));
+  window_size.setWindowMinSize(Size(1060.dp * scale, 700.dp * scale));
 }

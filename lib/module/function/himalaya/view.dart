@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_use/module/function/himalaya/widget/himalaya_anchor.dart';
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_audio_console.dart';
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_banner.dart';
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_guess.dart';
@@ -25,10 +26,8 @@ class HimalayaPage extends StatelessWidget {
         //左边导航栏
         HimalayaLeftNavigation(
           data: state,
-          onTap: (Rx<HimalayaSubItemInfo> item) {
-            //点击导航栏item回调
-            logic.navigationItem(item);
-          },
+          //点击导航栏item回调
+          onTap: (Rx<HimalayaSubItemInfo> item) => logic.navigationItem(item),
         ),
 
         //右边信息流
@@ -49,33 +48,43 @@ class HimalayaPage extends StatelessWidget {
             onSetting: () => logic.onSetting(),
           ),
 
-          //轮播图
-          HimalayaBanner(
-            data: state.bannerList,
-            //点击: 具体banner的监听
-            onTap: (int index) => logic.clickBanner(index),
-          ),
+          //右侧信息流 - 可滑动部分
+          himalayaBuildScrollInfoListBg(children: [
+            //轮播图
+            HimalayaBanner(
+              data: state.bannerList,
+              //点击: 具体banner的监听
+              onTap: (int index) => logic.clickBanner(index),
+            ),
 
-          //猜你喜欢
-          HimalayaGuess(
-            data: state.guessList,
-            //点击: 换一批
-            onChange: () => logic.guessChange(),
-            //点击: 猜你喜欢具体卡片
-            onGuess: (HimalayaSubItemInfo item) => logic.guessDetail(item),
-          ),
+            //猜你喜欢
+            HimalayaGuess(
+              data: state.guessList,
+              //点击: 换一批
+              onChange: () => logic.guessChange(),
+              //点击: 猜你喜欢具体卡片
+              onGuess: (HimalayaSubItemInfo item) => logic.guessDetail(item),
+            ),
 
-          //最新精选
-          HimalayaNewest(
-            data: state,
-            //点击分类标题
-            onSortTitle: (itemInfo) => logic.sortTitle(itemInfo),
-          ),
+            //最新精选
+            HimalayaNewest(
+              data: state,
+              //点击分类标题
+              onSortTitle: (itemInfo) => logic.sortTitle(itemInfo),
+            ),
+
+            //热门主播
+            HimalayaAnchor(
+              data: state.anchorList,
+            ),
+          ]),
         ]),
       ]),
 
       //底部：音频播放控制台
-      HimalayaAudioConsole(),
+      HimalayaAudioConsole(
+
+      ),
     ]);
   }
 }
