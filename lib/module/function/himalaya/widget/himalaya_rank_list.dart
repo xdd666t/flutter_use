@@ -32,16 +32,68 @@ class HimalayaRankList extends StatelessWidget {
           item: item,
           builder: (int index) => Row(children: [
             //名次
-            Text(index.toString()),
+            _buildItemRank(index),
 
             //图标
+            buildItemIcon(item, index),
 
-
-
+            //信息
+            _buildItemInfo(item, index),
           ]),
         ),
       ];
     });
+  }
+
+  Widget _buildItemInfo(HimalayaItemInfo item, int index) {
+    return Container(
+      margin: EdgeInsets.only(left: 10.dp),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          //标题
+          Text(
+            item.subItemList[index].title,
+            style: TextStyle(fontSize: 15.sp),
+          ),
+
+          //子标题
+          Container(
+            margin: EdgeInsets.only(top: 5.dp),
+            child: Text(
+              item.subItemList[index].subTitle,
+              style: TextStyle(fontSize: 13.sp, color: Colors.grey),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildItemIcon(HimalayaItemInfo item, int index) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(5.dp),
+      child: Container(
+        width: 60.dp,
+        height: 60.dp,
+        child: Image.network(item.subItemList[index].tag),
+      ),
+    );
+  }
+
+  Widget _buildItemRank(int index) {
+    return Container(
+      margin: EdgeInsets.only(right: 15.dp),
+      child: Text(
+        '${index + 1}',
+        style: TextStyle(
+          fontSize: 30.sp,
+          fontWeight: FontWeight.bold,
+          fontStyle: FontStyle.italic,
+          color: Colors.grey.withOpacity(0.3),
+        ),
+      ),
+    );
   }
 
   Widget _buildItemBg({
@@ -51,8 +103,15 @@ class HimalayaRankList extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(top: 20.dp),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: item.subItemList.asMap().keys.map((int index) {
-          return builder(index);
+          return Container(
+            margin: EdgeInsets.only(bottom: 20.dp),
+            child: GestureDetector(
+              onTap: () => onItem(item.subItemList[index]),
+              child: builder(index),
+            ),
+          );
         }).toList(),
       ),
     );
@@ -84,11 +143,12 @@ class HimalayaRankList extends StatelessWidget {
   Widget _buildBg({HimalayaItemBuilder builder}) {
     return Container(
       width: 800.dp,
-      margin: EdgeInsets.only(top: 38.dp, bottom: 10.dp),
+      margin: EdgeInsets.only(top: 38.dp, bottom: 50.dp),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: data.map((e) {
           return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: builder(e),
           );
         }).toList(),

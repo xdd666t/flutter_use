@@ -286,54 +286,54 @@ class HimalayaState {
         HimalayaSubItemInfo(
           title: '摸金天师（紫襟演播）',
           subTitle: '有声的紫襟',
-          tag: ImageHimalayaConfig.listClassicOne,
+          tag: ImageHimalayaConfig.listSoundOne,
         ),
         HimalayaSubItemInfo(
           title: '猎罪者',
           subTitle: '有声的紫襟',
-          tag: ImageHimalayaConfig.listClassicTwo,
+          tag: ImageHimalayaConfig.listSoundTwo,
         ),
         HimalayaSubItemInfo(
           title: '王的女人谁敢动',
           subTitle: '一刀苏苏',
-          tag: ImageHimalayaConfig.listClassicThree,
+          tag: ImageHimalayaConfig.listSoundThree,
         ),
         HimalayaSubItemInfo(
           title: '绝世高手',
           subTitle: '头陀渊讲故事',
-          tag: ImageHimalayaConfig.listClassicFour,
+          tag: ImageHimalayaConfig.listSoundFour,
         ),
         HimalayaSubItemInfo(
           title: '中国民间故事',
           subTitle: '霄旭讲故事',
-          tag: ImageHimalayaConfig.listClassicFive,
+          tag: ImageHimalayaConfig.listSoundFive,
         ),
       ]),
       HimalayaItemInfo(title: '相声评书免费榜', subItemList: [
         HimalayaSubItemInfo(
           title: '郭德纲21年相声精选',
           subTitle: '德云社郭德纲相声VIP',
-          tag: ImageHimalayaConfig.listClassicTwo,
+          tag: ImageHimalayaConfig.listCrosstalkOne,
         ),
         HimalayaSubItemInfo(
           title: '郭德纲相声经典',
           subTitle: '德云社郭德纲相声VIP',
-          tag: ImageHimalayaConfig.listClassicOne,
+          tag: ImageHimalayaConfig.listCrosstalkTwo,
         ),
         HimalayaSubItemInfo(
           title: '岳云鹏孙越爆笑相声',
           subTitle: '岳云鹏相声',
-          tag: ImageHimalayaConfig.listClassicThree,
+          tag: ImageHimalayaConfig.listCrosstalkThree,
         ),
         HimalayaSubItemInfo(
           title: '岳云鹏孙越相声集',
           subTitle: '岳云鹏相声',
-          tag: ImageHimalayaConfig.listClassicFour,
+          tag: ImageHimalayaConfig.listCrosstalkFour,
         ),
         HimalayaSubItemInfo(
           title: '乱世枭雄 | 单田芳经典',
           subTitle: '单田芳评书',
-          tag: ImageHimalayaConfig.listClassicFive,
+          tag: ImageHimalayaConfig.listCrosstalkFive,
         ),
       ]),
     ];
