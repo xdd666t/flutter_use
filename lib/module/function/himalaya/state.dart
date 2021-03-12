@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 typedef HimalayaSubBuilder = Widget Function(HimalayaSubItemInfo item);
 typedef HimalayaRxSubBuilder = Widget Function(Rx<HimalayaSubItemInfo> item);
 typedef HimalayaItemBuilder = List<Widget> Function(HimalayaItemInfo item);
+
 class HimalayaState {
   ///左边导航栏
   List<HimalayaItemInfo> leftItemList;
@@ -23,6 +24,9 @@ class HimalayaState {
 
   ///热门主播数据源
   List<HimalayaSubItemInfo> anchorList;
+
+  ///相关榜单
+  List<HimalayaItemInfo> rankList;
 
   HimalayaState() {
     //侧边导航栏目初始数据
@@ -248,6 +252,91 @@ class HimalayaState {
         tag: ImageHimalayaConfig.anchorFive,
       ),
     ];
+
+    //各类榜单源数据
+    rankList = [
+      HimalayaItemInfo(title: '经典免费榜', subItemList: [
+        HimalayaSubItemInfo(
+          title: '辽沈先声',
+          subTitle: '辽沈晚报',
+          tag: ImageHimalayaConfig.listClassicOne,
+        ),
+        HimalayaSubItemInfo(
+          title: '郭德纲21年相声精选',
+          subTitle: '德云社郭德纲相声VIP',
+          tag: ImageHimalayaConfig.listClassicTwo,
+        ),
+        HimalayaSubItemInfo(
+          title: '南都快讯',
+          subTitle: '南方都市报',
+          tag: ImageHimalayaConfig.listClassicThree,
+        ),
+        HimalayaSubItemInfo(
+          title: '鲜快报',
+          subTitle: '封面新闻',
+          tag: ImageHimalayaConfig.listClassicFour,
+        ),
+        HimalayaSubItemInfo(
+          title: '摸金天师（紫襟演播）',
+          subTitle: '有声的紫襟',
+          tag: ImageHimalayaConfig.listClassicFive,
+        ),
+      ]),
+      HimalayaItemInfo(title: '有声书免费榜', subItemList: [
+        HimalayaSubItemInfo(
+          title: '摸金天师（紫襟演播）',
+          subTitle: '有声的紫襟',
+          tag: ImageHimalayaConfig.listClassicOne,
+        ),
+        HimalayaSubItemInfo(
+          title: '猎罪者',
+          subTitle: '有声的紫襟',
+          tag: ImageHimalayaConfig.listClassicTwo,
+        ),
+        HimalayaSubItemInfo(
+          title: '王的女人谁敢动',
+          subTitle: '一刀苏苏',
+          tag: ImageHimalayaConfig.listClassicThree,
+        ),
+        HimalayaSubItemInfo(
+          title: '绝世高手',
+          subTitle: '头陀渊讲故事',
+          tag: ImageHimalayaConfig.listClassicFour,
+        ),
+        HimalayaSubItemInfo(
+          title: '中国民间故事',
+          subTitle: '霄旭讲故事',
+          tag: ImageHimalayaConfig.listClassicFive,
+        ),
+      ]),
+      HimalayaItemInfo(title: '相声评书免费榜', subItemList: [
+        HimalayaSubItemInfo(
+          title: '郭德纲21年相声精选',
+          subTitle: '德云社郭德纲相声VIP',
+          tag: ImageHimalayaConfig.listClassicTwo,
+        ),
+        HimalayaSubItemInfo(
+          title: '郭德纲相声经典',
+          subTitle: '德云社郭德纲相声VIP',
+          tag: ImageHimalayaConfig.listClassicOne,
+        ),
+        HimalayaSubItemInfo(
+          title: '岳云鹏孙越爆笑相声',
+          subTitle: '岳云鹏相声',
+          tag: ImageHimalayaConfig.listClassicThree,
+        ),
+        HimalayaSubItemInfo(
+          title: '岳云鹏孙越相声集',
+          subTitle: '岳云鹏相声',
+          tag: ImageHimalayaConfig.listClassicFour,
+        ),
+        HimalayaSubItemInfo(
+          title: '乱世枭雄 | 单田芳经典',
+          subTitle: '单田芳评书',
+          tag: ImageHimalayaConfig.listClassicFive,
+        ),
+      ]),
+    ];
   }
 }
 
@@ -262,7 +351,7 @@ class HimalayaItemInfo {
   String title;
 
   ///subItem列表
-  List<Rx<HimalayaSubItemInfo>> subItemList;
+  List<dynamic> subItemList;
 }
 
 class HimalayaSubItemInfo {

@@ -6,6 +6,7 @@ import 'package:flutter_use/module/function/himalaya/widget/himalaya_audio_conso
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_banner.dart';
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_guess.dart';
 import 'package:flutter_use/module/function/himalaya/widget/himalaya_personal_info.dart';
+import 'package:flutter_use/module/function/himalaya/widget/himalaya_rank_list.dart';
 import 'package:get/get.dart';
 
 import 'logic.dart';
@@ -70,21 +71,31 @@ class HimalayaPage extends StatelessWidget {
             HimalayaNewest(
               data: state,
               //点击分类标题
-              onSortTitle: (itemInfo) => logic.sortTitle(itemInfo),
+              onSortTitle: (item) => logic.sortTitle(item),
+              //点击具体精选卡片
+              onNewest: (HimalayaSubItemInfo item) => logic.onNewest(item),
             ),
 
             //热门主播
             HimalayaAnchor(
               data: state.anchorList,
+              onAnchor: (HimalayaSubItemInfo item) => logic.hotAnchor(item),
+            ),
+
+            //各类榜单
+            HimalayaRankList(
+              data: state.rankList,
+              //点击标题
+              onTitle: (String title) => logic.rankTitle(title),
+              //点击榜单上具体item
+              onItem: (HimalayaSubItemInfo item) => logic.rankItem(item),
             ),
           ]),
         ]),
       ]),
 
       //底部：音频播放控制台
-      HimalayaAudioConsole(
-
-      ),
+      HimalayaAudioConsole(),
     ]);
   }
 }

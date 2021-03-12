@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/module/function/himalaya/state.dart';
 
@@ -7,10 +8,14 @@ class HimalayaAnchor extends StatelessWidget {
   HimalayaAnchor({
     Key key,
     this.data,
+    this.onAnchor,
   }) : super(key: key);
 
   ///数据源
   final List<HimalayaSubItemInfo> data;
+
+  ///热门主播点击具体回调
+  final ParamSingleCallback<HimalayaSubItemInfo> onAnchor;
 
   @override
   Widget build(BuildContext context) {
@@ -55,13 +60,16 @@ class HimalayaAnchor extends StatelessWidget {
   Widget _buildHeadPic(HimalayaSubItemInfo itemInfo) {
     return Container(
       margin: EdgeInsets.only(top: 35.dp, right: 20.dp),
-      child: ClipOval(
-        child: Container(
-          height: 130.dp,
-          width: 130.dp,
-          child: Image.network(
-            itemInfo.tag,
-            fit: BoxFit.cover,
+      child: GestureDetector(
+        onTap: () => onAnchor(itemInfo),
+        child: ClipOval(
+          child: Container(
+            height: 130.dp,
+            width: 130.dp,
+            child: Image.network(
+              itemInfo.tag,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
       ),

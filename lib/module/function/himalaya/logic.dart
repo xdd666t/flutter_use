@@ -9,6 +9,21 @@ import 'state.dart';
 class HimalayaLogic extends GetxController {
   final state = HimalayaState();
 
+  ///榜单 - item
+  void rankItem(HimalayaSubItemInfo item) {
+    showToast(item.title);
+  }
+
+  ///榜单 - 标题
+  void rankTitle(String title) {
+    showToast(title);
+  }
+
+  ///热门主播
+  void hotAnchor(HimalayaSubItemInfo itemInfo) {
+    showToast(itemInfo.subTitle);
+  }
+
   ///最新精选 选择分类标题
   void sortTitle(Rx<HimalayaSubItemInfo> itemInfo) {
     for (var item in state.newestSortList) {
@@ -18,6 +33,11 @@ class HimalayaLogic extends GetxController {
     }
     itemInfo.update((val) => val.isSelected = true);
     showToast(itemInfo().title);
+  }
+
+  ///最新精选 点击具体card
+  void onNewest(HimalayaSubItemInfo itemInfo) {
+    showToast(itemInfo.title);
   }
 
   ///猜你喜欢: 具体的卡片
