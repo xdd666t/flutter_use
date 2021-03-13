@@ -35,20 +35,22 @@ class MainState {
     isScale = false.obs;
     //PageView页面
     pageList = [
-      keepAliveWrapper(FunctionPage()),
       keepAliveWrapper(ExamplePage()),
+      keepAliveWrapper(FunctionPage()),
+
       keepAliveWrapper(SettingPage()),
     ];
     //item栏目
     itemList = [
       BtnInfo(
-        title: "功能",
-        icon: Icon(Icons.bubble_chart),
-      ),
-      BtnInfo(
         title: "范例",
         icon: Icon(Icons.opacity),
       ),
+      BtnInfo(
+        title: "功能",
+        icon: Icon(Icons.bubble_chart),
+      ),
+
       BtnInfo(
         title: "设置",
         icon: Icon(Icons.settings),

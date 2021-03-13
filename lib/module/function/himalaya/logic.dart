@@ -1,8 +1,8 @@
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
+import 'package:flutter_use/app/utils/ui/window_size.dart';
 import 'package:get/get.dart';
-import 'package:window_size/window_size.dart' as window_size;
 
 import 'state.dart';
 
@@ -225,13 +225,13 @@ class HimalayaLogic extends GetxController {
   @override
   void onInit() {
     //设置窗口顶部标题
-    window_size.setWindowTitle('喜马拉雅演示demo');
+    WindowSize.setWindowTitle('喜马拉雅演示demo');
     super.onInit();
   }
 
   @override
   void onClose() {
-    window_size.setWindowTitle('Flutter Use');
+    WindowSize.setWindowTitle('Flutter Use');
     super.onClose();
   }
 }

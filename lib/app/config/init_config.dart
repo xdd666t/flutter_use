@@ -1,8 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_use/app/utils/info/log_util.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
+import 'package:flutter_use/app/utils/ui/window_size.dart';
 import 'package:window_size/window_size.dart' as window_size;
 
 class InitConfig {
@@ -11,31 +12,19 @@ class InitConfig {
     initWindow();
 
     //界面适配
-    initAutoUi(context);
-  }
-
-  //界面适配
-  void initAutoUi(BuildContext context) {
-    ScreenUtil.init(
-      // 设备像素大小(必须在首页中获取)
-      BoxConstraints(
-        maxWidth: MediaQuery.of(context).size.width,
-        maxHeight: MediaQuery.of(context).size.height,
-      ),
-      Orientation.landscape,
-      // 设计尺寸
-      designSize: Size(1920, 1080),
-      allowFontScaling: false,
-    );
+    AutoUi.init();
   }
 }
 
 //窗口设置只能放大，不能缩小，很奇怪
 void initWindow({double scale: 1.0}) async {
-  // 获取窗口信息，然后设置窗口信息
+  if(!WindowSize.jumpPlatform()) {
+    return;
+  }
 
+  // 获取窗口信息，然后设置窗口信息
   var window = await window_size.getWindowInfo();
-  if (Platform.isAndroid || Platform.isIOS || window.screen == null) {
+  if (window.screen == null) {
     return;
   }
   final screenFrame = window.screen.visibleFrame;
