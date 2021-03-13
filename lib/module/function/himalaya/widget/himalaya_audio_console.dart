@@ -1,8 +1,67 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
+import 'package:flutter_use/module/function/himalaya/state.dart';
+import 'package:get/get.dart';
 
 class HimalayaAudioConsole extends StatelessWidget {
+  HimalayaAudioConsole({
+    Key key,
+    this.data,
+    this.onRightArrow,
+    this.onLeftArrow,
+    this.onCatalog,
+    this.onCover,
+    this.onPlay,
+    this.onProgress,
+    this.onSpeed,
+    this.onSubtitle,
+    this.onTiming,
+    this.onVolume,
+    this.onLove,
+    this.onPlayModel,
+  }) : super(key: key);
+
+  ///数据源
+  final Rx<HimalayaSubItemInfo> data;
+
+  ///左切换
+  final ParamVoidCallback onLeftArrow;
+
+  ///右切换
+  final ParamVoidCallback onRightArrow;
+
+  ///播放
+  final ParamVoidCallback onPlay;
+
+  ///喜欢
+  final ParamVoidCallback onLove;
+
+  ///播放模式
+  final ParamVoidCallback onPlayModel;
+
+  ///封面
+  final ParamVoidCallback onCover;
+
+  ///进度条
+  final ParamVoidCallback onProgress;
+
+  ///音量
+  final ParamVoidCallback onVolume;
+
+  ///字幕
+  final ParamVoidCallback onSubtitle;
+
+  ///倍速
+  final ParamVoidCallback onSpeed;
+
+  ///定时
+  final ParamVoidCallback onTiming;
+
+  ///目录
+  final ParamVoidCallback onCatalog;
+
   @override
   Widget build(BuildContext context) {
     return _buildBg(children: [
@@ -24,81 +83,245 @@ class HimalayaAudioConsole extends StatelessWidget {
         _buildPlayMode(),
       ]),
 
-      //进度
-      Row(children: []),
+      //播放进度、信息
+      Expanded(
+        child: Row(children: [
+          //作品封面
+          _buildCover(),
+
+          //播放进度和作品信息
+          _buildPlayInfo(),
+        ]),
+      ),
 
       //播放设置
       Row(children: [
         //声音调节
-        Icon(
-          CupertinoIcons.speaker_1,
-          size: 20.dp,
-          color: Colors.grey,
-        ),
+        _buildVolume(),
 
         //字幕
-        Container(
-          margin: EdgeInsets.symmetric(horizontal: 20.dp),
-          child: Icon(
-            CupertinoIcons.compass,
-            size: 20.dp,
-            color: Colors.grey,
-          ),
-        ),
+        _buildSubtitle(),
 
+        //倍速
+        _buildSpeed(),
+
+        //定时
+        _buildTiming(),
+
+        //目录
+        _buildCatalog(),
       ]),
     ]);
   }
 
-  Widget _buildPlayMode() {
-    return Icon(
-      CupertinoIcons.arrow_2_squarepath,
-      size: 20.dp,
-      color: Colors.grey,
+  Widget _buildPlayInfo() {
+    return Expanded(
+      child: Container(
+        margin: EdgeInsets.only(right: 30.dp),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          //标题和事件
+          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            Row(children: [
+              //标题信息
+              Obx(() => Text(data().title, style: TextStyle(fontSize: 15.sp))),
+
+              Container(width: 15.dp),
+
+              //副标题信息
+              Obx(
+                () => Text(data().subTitle, style: TextStyle(fontSize: 15.sp)),
+              ),
+            ]),
+
+            //进度
+            Text('01:30 / 03:42', style: TextStyle(fontSize: 16.sp)),
+          ]),
+
+          //进度
+          GestureDetector(
+            onTap: () => onProgress(),
+            child: Container(
+              height: 10.dp,
+              margin: EdgeInsets.only(top: 7.dp),
+              child: Stack(alignment: Alignment.centerLeft, children: [
+                //总进度条
+                Container(
+                  height: 3.dp,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.dp),
+                    color: Colors.grey,
+                  ),
+                ),
+
+                //播放进度条
+                Container(
+                  width: 210.dp,
+                  height: 3.dp,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.dp),
+                    color: Colors.red,
+                  ),
+                ),
+
+                //锚点
+                Positioned(
+                  left: 200.dp,
+                  child: Icon(Icons.circle, size: 10.dp, color: Colors.red),
+                ),
+              ]),
+            ),
+          ),
+        ]),
+      ),
     );
   }
 
-  Widget _buildLove() {
+  Widget _buildCover() {
     return Container(
+      height: 50.dp,
+      width: 50.dp,
       margin: EdgeInsets.only(left: 30.dp, right: 20.dp),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(5.dp),
+        child: GestureDetector(
+          onTap: () => onCover(),
+          child: Obx(() => Image.network(data().tag)),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCatalog() {
+    return GestureDetector(
+      onTap: () => onCatalog(),
       child: Icon(
-        Icons.favorite_border,
+        CupertinoIcons.text_append,
         size: 20.dp,
         color: Colors.grey,
       ),
     );
   }
 
-  Widget _buildPlay() {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 15.dp),
+  Widget _buildTiming() {
+    return GestureDetector(
+      onTap: () => onTiming(),
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 20.dp),
+        child: Text(
+          '定时',
+          style: TextStyle(
+            fontSize: 16.sp,
+            fontWeight: FontWeight.bold,
+            color: Colors.grey.withOpacity(0.8),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSpeed() {
+    return GestureDetector(
+      onTap: () => onSpeed(),
+      child: Text(
+        '倍速',
+        style: TextStyle(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.bold,
+          color: Colors.grey.withOpacity(0.8),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSubtitle() {
+    return GestureDetector(
+      onTap: () => onSubtitle(),
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 20.dp),
+        child: Icon(
+          CupertinoIcons.textformat,
+          size: 20.dp,
+          color: Colors.grey,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildVolume() {
+    return GestureDetector(
+      onTap: () => onVolume(),
       child: Icon(
-        CupertinoIcons.arrowtriangle_right_circle_fill,
-        color: Colors.red,
-        size: 50.dp,
+        CupertinoIcons.speaker_1,
+        size: 20.dp,
+        color: Colors.grey,
+      ),
+    );
+  }
+
+  Widget _buildPlayMode() {
+    return GestureDetector(
+      onTap: () => onPlayModel(),
+      child: Icon(
+        CupertinoIcons.arrow_2_squarepath,
+        size: 20.dp,
+        color: Colors.grey,
+      ),
+    );
+  }
+
+  Widget _buildLove() {
+    return GestureDetector(
+      onTap: () => onLove(),
+      child: Container(
+        margin: EdgeInsets.only(left: 30.dp, right: 20.dp),
+        child: Icon(
+          Icons.favorite_border,
+          size: 20.dp,
+          color: Colors.grey,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPlay() {
+    return GestureDetector(
+      onTap: () => onPlay(),
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 15.dp),
+        child: Icon(
+          CupertinoIcons.arrowtriangle_right_circle_fill,
+          color: Colors.red,
+          size: 50.dp,
+        ),
       ),
     );
   }
 
   Widget _buildRightSwitch() {
-    return Icon(
-      CupertinoIcons.forward_end_fill,
-      color: Colors.red,
-      size: 17.dp,
+    return GestureDetector(
+      onTap: () => onRightArrow(),
+      child: Icon(
+        CupertinoIcons.forward_end_fill,
+        color: Colors.red,
+        size: 17.dp,
+      ),
     );
   }
 
   Widget _buildLeftSwitch() {
-    return Icon(
-      CupertinoIcons.backward_end_fill,
-      color: Colors.red,
-      size: 17.dp,
+    return GestureDetector(
+      onTap: () => onLeftArrow(),
+      child: Icon(
+        CupertinoIcons.backward_end_fill,
+        color: Colors.red,
+        size: 17.dp,
+      ),
     );
   }
 
   Widget _buildBg({List<Widget> children}) {
     return Container(
-      height: 60.dp,
+      height: 70.dp,
       padding: EdgeInsets.symmetric(horizontal: 23.dp),
       decoration: BoxDecoration(
         color: Colors.white,

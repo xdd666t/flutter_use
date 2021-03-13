@@ -9,9 +9,74 @@ import 'state.dart';
 class HimalayaLogic extends GetxController {
   final state = HimalayaState();
 
+  ///左切换
+  void onLeftArrow() {
+    showToast('左切换');
+  }
+
+  ///右切换
+  void onRightArrow() {
+    showToast('右切换');
+  }
+
+  ///播放
+  void onPlay() {
+    showToast('播放');
+  }
+
+  ///喜欢
+  void onLove() {
+    showToast('喜欢');
+  }
+
+  ///播放模式
+  void onPlayModel() {
+    showToast('播放模式');
+  }
+
+  ///封面
+  void onCover() {
+    showToast('封面');
+  }
+
+  ///进度条
+  void onProgress() {
+    showToast('进度条');
+  }
+
+  ///音量
+  void onVolume() {
+    showToast('音量');
+  }
+
+  ///字幕
+  void onSubtitle() {
+    showToast('字幕');
+  }
+
+  ///倍速
+  void onSpeed() {
+    showToast('倍速');
+  }
+
+  ///定时
+  void onTiming() {
+    showToast('定时');
+  }
+
+  ///目录
+  void onCatalog() {
+    showToast('目录');
+  }
+
   ///榜单 - item
-  void rankItem(HimalayaSubItemInfo item) {
-    showToast(item.title);
+  void rankItem(HimalayaSubItemInfo itemInfo) {
+    showToast(itemInfo.title);
+    state.audioPlayInfo.update((val) {
+      val.title = itemInfo.title;
+      val.subTitle = itemInfo.subTitle;
+      val.tag = itemInfo.tag;
+    });
   }
 
   ///榜单 - 标题
@@ -38,11 +103,21 @@ class HimalayaLogic extends GetxController {
   ///最新精选 点击具体card
   void onNewest(HimalayaSubItemInfo itemInfo) {
     showToast(itemInfo.title);
+    state.audioPlayInfo.update((val) {
+      val.title = itemInfo.title;
+      val.subTitle = itemInfo.subTitle;
+      val.tag = itemInfo.tag;
+    });
   }
 
   ///猜你喜欢: 具体的卡片
   void guessDetail(HimalayaSubItemInfo itemInfo) {
     showToast(itemInfo.title);
+    state.audioPlayInfo.update((val) {
+      val.title = itemInfo.title;
+      val.subTitle = itemInfo.subTitle;
+      val.tag = itemInfo.tag;
+    });
   }
 
   ///猜你喜欢: 换一批

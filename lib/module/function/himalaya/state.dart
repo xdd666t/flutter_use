@@ -28,13 +28,16 @@ class HimalayaState {
   ///相关榜单
   List<HimalayaItemInfo> rankList;
 
+  ///音频播放信息
+  Rx<HimalayaSubItemInfo> audioPlayInfo;
+
   HimalayaState() {
     //侧边导航栏目初始数据
     leftItemList = [
       HimalayaItemInfo(title: '推荐', subItemList: [
         HimalayaSubItemInfo(
           title: '发现',
-          icon:CupertinoIcons.compass,
+          icon: CupertinoIcons.compass,
           tag: TagHimalayaConfig.find,
           isSelected: true,
         ).obs,
@@ -337,6 +340,13 @@ class HimalayaState {
         ),
       ]),
     ];
+
+    //音频播放数据源
+    audioPlayInfo = HimalayaSubItemInfo(
+      title: '雪中悍刀行 | 大斌&免费有声小说',
+      subTitle: '《御龙行》徒有琴',
+      tag: ImageHimalayaConfig.featureEight,
+    ).obs;
   }
 }
 
