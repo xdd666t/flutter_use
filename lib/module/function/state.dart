@@ -11,10 +11,10 @@ class FunctionState {
     //初始化item
     items = [
       BtnInfo(
-        title: '喜马拉雅',
+        title: '代码规范',
         tag: 'himalaya',
         bg: ImageHimalayaConfig.logo,
-        selected: true,
+        selected: false,
       ),
       BtnInfo(
         title: 'SmartDialog',
