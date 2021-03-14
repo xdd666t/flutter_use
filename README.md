@@ -2,8 +2,9 @@
 
 ## 效果地址
 
-- [https://cnad666.github.io/flutter_use/web/index.html](https://cnad666.github.io/flutter_use/web/index.html)
+- Web：[https://cnad666.github.io/flutter_use/web/index.html](https://cnad666.github.io/flutter_use/web/index.html)
   - 编译的web代码及其资源在docs文件夹下，这边github page路径选择的是docs
+- Windows：[Windows平台安装包](https://wwa.lanzous.com/izW8Rmwws6f)
 
 ## 代码路径
 
