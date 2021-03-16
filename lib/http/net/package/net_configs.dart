@@ -28,8 +28,6 @@ class NetConfig {
 
   /// 请求内容类型 form，UTF-8
   static const String contentTypeForm = 'multipart/form-data;charset=utf-8';
-  static const String headerPublicParameter = "x-ehi-public-parameter";
-  static const String headerToken = "authorization";
   static const String headerContentType = "content-type";
 
   /// 是否启用缓存
