@@ -1,7 +1,6 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:multi_image_picker/multi_image_picker.dart';
 
 ///添加的文件显示状态
 enum FileInfoStatus {
@@ -24,7 +23,7 @@ class FileInfoBean {
   FileInfoStatus status;
 
   ///本地图片资源
-  Asset imageAsset;
+  // Asset imageAsset;
 
   ///id的作用组要是用来删除照片
   String id;
@@ -43,7 +42,7 @@ class FileInfoBean {
     @required this.isNet,
     this.imagePath,
     @required this.status,
-    this.imageAsset,
+    // this.imageAsset,
     this.byteData,
   });
 
