@@ -1,7 +1,5 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/utils/info/log_util.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/app/utils/ui/window_size.dart';
 import 'package:window_size/window_size.dart' as window_size;
@@ -18,7 +16,7 @@ class InitConfig {
 
 //窗口设置只能放大，不能缩小，很奇怪
 void initWindow({double scale: 1.0}) async {
-  if(!WindowSize.jumpPlatform()) {
+  if (!WindowSize.jumpPlatform()) {
     return;
   }
 

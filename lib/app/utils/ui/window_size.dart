@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter_use/app/utils/info/log_util.dart';
+import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:window_size/window_size.dart' as window_size;
 
 class WindowSize {

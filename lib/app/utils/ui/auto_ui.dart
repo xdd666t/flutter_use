@@ -40,12 +40,13 @@ class AutoUi {
 //界面适配
 void initAutoUi(BuildContext context) {
   ScreenUtil.init(
+
     // 设备像素大小(必须在首页中获取)
     BoxConstraints(
       maxWidth: MediaQuery.of(context).size.width,
       maxHeight: MediaQuery.of(context).size.height,
     ),
-    Orientation.landscape,
+    orientation: Orientation.landscape,
     // 设计尺寸
     designSize: Size(1920, 1080),
     allowFontScaling: false,

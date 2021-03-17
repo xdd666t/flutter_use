@@ -1,8 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
-
-import 'net/net_util.dart';
 
 class Http {
   static NetRequestCallback _callback;
@@ -21,7 +19,7 @@ class Http {
       receiveTimeout: receiveTimeout,
       interceptors: interceptors,
     );
-
+    //处理加载动画
     _dealLoading();
   }
 
@@ -126,7 +124,7 @@ class Http {
     return response.data;
   }
 
-  ///处理返回数据
+  ///处理返回数据 处理通用结构
   static Future _dealResponse(Future response) {
     //处理数据
 

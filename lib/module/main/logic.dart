@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_use/app/config/init_config.dart';
-import 'package:flutter_use/app/utils/info/log_util.dart';
 import 'package:get/get.dart';
 
 import 'state.dart';

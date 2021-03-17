@@ -38,13 +38,11 @@ dependencies:
   # 预览图片 https://pub.dev/packages/photo_view
   photo_view: ^0.11.1
   # 界面适配 https://pub.dev/packages/flutter_screenutil
-  flutter_screenutil: ^5.0.0-nullsafety.7
+  flutter_screenutil: ^5.0.0-nullsafety.11
   # 取消输入框焦点 https://pub.dev/packages/focus_widget/install
   focus_widget: ^1.0.2+2
   # iOS数字键盘添加收起按钮 https://pub.dev/packages/keyboard_actions
   keyboard_actions: ^3.4.0
-  # https://pub.flutter-io.cn/packages/logger
-  logger: ^1.0.0-nullsafety.0
   # 用于处理widget是否可见检测 https://pub.flutter-io.cn/packages/visibility_detector
   visibility_detector: ^0.2.0-nullsafety.1
   # 网络请求 https://pub.flutter-io.cn/packages/dio
@@ -58,6 +56,11 @@ dependencies:
     git:
       url: https://github.com/google/flutter-desktop-embedding.git
       path: plugins/window_size
+  # flutter工具包（自用）
+  # flutter_toolkit_easy: any
+  flutter_toolkit_easy:
+    git:
+      url: https://github.com/CNAD666/flutter_toolkit.git
   # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
   flutter_smart_dialog: ^2.0.1
 #  flutter_smart_dialog:
