@@ -61,6 +61,7 @@ dependencies:
   flutter_toolkit_easy:
     git:
       url: https://github.com/CNAD666/flutter_toolkit.git
+      version: 0.0.2
   # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
   flutter_smart_dialog: ^2.0.1
 #  flutter_smart_dialog:

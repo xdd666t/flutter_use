@@ -4,7 +4,6 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubit.dart';
 import 'package:get/get.dart';
 
-import 'app/config/init_config.dart';
 import 'app/config/route_config.dart';
 
 void main() {
