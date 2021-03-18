@@ -42,7 +42,7 @@ class HimalayaNewest extends StatelessWidget {
           //文字描述
           Text(item.title, style: TextStyle(fontSize: 15.sp)),
 
-          //
+          //子标题
           Text(item.subTitle,
               style: TextStyle(fontSize: 13.sp, color: Colors.grey)),
         ]);
