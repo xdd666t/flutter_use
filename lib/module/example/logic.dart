@@ -22,6 +22,9 @@ class ExampleLogic extends GetxController {
       case 'jumpGetX':
         Get.toNamed(RouteConfig.jumpOne);
         break;
+      case 'keepAlive':
+        Get.toNamed(RouteConfig.keepAliveOne);
+        break;
       case 'cubit':
         Get.toNamed(RouteConfig.counter);
         break;

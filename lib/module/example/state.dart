@@ -14,6 +14,7 @@ class ExampleState {
           BtnInfo(title: '计数器-简单式', tag: 'counterEasyGetX'),
           BtnInfo(title: '计数器-进阶版', tag: 'counterHighGetX'),
           BtnInfo(title: '跨页面事件交互', tag: 'jumpGetX'),
+          BtnInfo(title: '保活问题-GetX不销毁', tag: 'keepAlive'),
         ],
       ),
 

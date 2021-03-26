@@ -6,6 +6,8 @@ import 'package:flutter_use/module/example/getx/counter_get/view.dart';
 import 'package:flutter_use/module/example/getx/counter_high_get/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_two/view.dart';
+import 'package:flutter_use/module/example/getx/keep_alive/keep_alive_one/view.dart';
+import 'package:flutter_use/module/example/getx/keep_alive/keep_alive_two/view.dart';
 import 'package:flutter_use/module/example/layout/test_layout/view.dart';
 import 'package:flutter_use/module/function/dialog/view.dart';
 import 'package:flutter_use/module/function/himalaya/view.dart';
@@ -39,6 +41,8 @@ class RouteConfig {
   static final String counterHighGet = "/counterHighGet";
   static final String jumpOne = "/jumpOne";
   static final String jumpTwo = "/jumpOne/jumpTwo";
+  static final String keepAliveOne = "/keepAliveOne";
+  static final String keepAliveTwo = "/keepAliveOne/keepAliveTwo";
 
   ///喜马拉雅
   static final String himalaya = "/himalaya";
@@ -58,5 +62,7 @@ class RouteConfig {
     GetPage(name: jumpOne, page: () => JumpOnePage()),
     GetPage(name: jumpTwo, page: () => JumpTwoPage()),
     GetPage(name: himalaya, page: () => HimalayaPage()),
+    GetPage(name: keepAliveOne, page: () => KeepAliveOnePage()),
+    GetPage(name: keepAliveTwo, page: () => KeepAliveTwoPage()),
   ];
 }
