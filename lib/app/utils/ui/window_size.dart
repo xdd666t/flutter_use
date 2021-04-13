@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
+import 'package:flutter/foundation.dart';
 import 'package:window_size/window_size.dart' as window_size;
 
 class WindowSize {
@@ -12,17 +12,14 @@ class WindowSize {
   }
 
   static bool jumpPlatform() {
-    try {
-      if (Platform.isMacOS ||
-          Platform.isWindows ||
-          Platform.isFuchsia ||
-          Platform.isWindows) {
-        return true;
-      }
-      return false;
-    } catch (e) {
-      Log.d(e);
-      return false;
+    if (kIsWeb) return false;
+
+    if (Platform.isMacOS ||
+        Platform.isWindows ||
+        Platform.isFuchsia ||
+        Platform.isWindows) {
+      return true;
     }
+    return false;
   }
 }
