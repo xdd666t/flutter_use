@@ -13,25 +13,13 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(),
-      builder: (BuildContext context, Widget child) {
-        return FlutterSmartDialog(child: child);
-      },
+    return GetMaterialApp(
+      initialRoute: RouteConfig.main,
+      getPages: RouteConfig.getPages,
+      builder: builder,
     );
   }
 }
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return GetMaterialApp(
-//       initialRoute: RouteConfig.main,
-//       getPages: RouteConfig.getPages,
-//       builder: builder,
-//     );
-//   }
-// }
 
 ///独立处理全局bloc
 Widget builder(BuildContext context, Widget child) {

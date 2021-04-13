@@ -1,6 +1,21 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
+import 'package:flutter_use/bean/test/image_info_bean.dart';
 import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
+
+///举例  todo：暂时还有问题
+testHttp() async {
+  ///放到主入口初始化,必须
+  Http.init();
+
+  var query = {'return': 'json'};
+  var result = await Http.get(
+    'https://api.ixiaowai.cn/api/api.php',
+    queryParameters: query,
+  );
+  ImageInfoBean bean = ImageInfoBean().fromJson(result);
+  Log.d(bean.imgurl);
+}
 
 class Http {
   static NetRequestCallback _callback;
@@ -113,6 +128,7 @@ class Http {
     _callback.onStart();
     var response = await NetUtil.instance.request(
       path,
+      method: method,
       data: data,
       queryParameters: queryParameters,
       options: options,

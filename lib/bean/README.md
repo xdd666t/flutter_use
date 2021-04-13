@@ -10,3 +10,4 @@ flutter packages pub run build_runner watch
 flutter packages pub run build_runner build --delete-conflicting-outputs
 
 
+### JSON转实体网站：https://caijinglong.github.io/json2dart/index_ch.html
