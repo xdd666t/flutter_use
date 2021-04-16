@@ -27,11 +27,12 @@ class ExampleState {
         ],
       ),
 
-      //布局
+      //测试
       TreeTwiceInfo(
-        title: '布局',
+        title: '测试',
         btnInfo: [
           BtnInfo(title: '测试布局', tag: 'testLayout'),
+          BtnInfo(title: '测试网络', tag: 'testNet'),
         ],
       ),
     ];

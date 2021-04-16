@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
+import 'package:flutter_use/app/utils/ui/show.dart';
 import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
 
 ///举例  todo：暂时还有问题
@@ -8,9 +9,11 @@ testHttp() async {
   Http.init();
 
   Log.d('测试Http');
-  var result = await NetUtil.instance.get(
+  var result = await Http.get(
     'https://www.wanandroid.com/banner/json',
   );
+
+  showToast(result.toString());
   Log.i(result);
 }
 
@@ -49,7 +52,7 @@ class Http {
       options: options,
       cancelToken: cancelToken,
     );
-    return _dealResponse(response);
+    return response;
   }
 
   ///Post请求
@@ -68,7 +71,7 @@ class Http {
       options: options,
       cancelToken: cancelToken,
     );
-    return _dealResponse(response);
+    return response;
   }
 
   ///Put请求
@@ -87,7 +90,7 @@ class Http {
       options: options,
       cancelToken: cancelToken,
     );
-    return _dealResponse(response);
+    return response;
   }
 
   ///Delete请求
@@ -106,7 +109,7 @@ class Http {
       options: options,
       cancelToken: cancelToken,
     );
-    return _dealResponse(response);
+    return response;
   }
 
   /// Request 操作
@@ -134,11 +137,11 @@ class Http {
       onReceiveProgress: onReceiveProgress,
     );
     _callback.onEnd();
-    return response.data;
+    return _dealResponse(response);
   }
 
   ///处理返回数据 处理通用结构
-  static Future _dealResponse(Future response) {
+  static Future<Map> _dealResponse(var response) {
     //处理数据
 
     return response;

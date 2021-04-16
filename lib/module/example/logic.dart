@@ -33,8 +33,9 @@ class ExampleLogic extends GetxController {
         Get.toNamed(RouteConfig.spanOne);
         break;
       case 'testLayout':
-        // Get.toNamed(RouteConfig.testLayout);
-        // SmartDialog.instance.show();
+        Get.toNamed(RouteConfig.testLayout);
+        break;
+      case 'testNet':
         testHttp();
         break;
     }
