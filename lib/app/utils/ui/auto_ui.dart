@@ -14,14 +14,14 @@ extension NumExtend on num {
   ///自动适配移动界面
   double get dp {
     //如果没初始化,需要初始化,防止web端直接导航页面报错
-    // AutoUi.init();
+    AutoUi.init();
     return UiUtil().setWidth(this);
   }
 
   ///配置文字,文字适配请用sp单位
   double get sp {
     //如果没初始化,需要初始化,防止web端直接导航页面报错
-    // AutoUi.init();
+    AutoUi.init();
     return UiUtil().setWidth(this);
   }
 }
