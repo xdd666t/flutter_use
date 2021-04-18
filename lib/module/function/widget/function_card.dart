@@ -7,9 +7,9 @@ import 'package:flutter_use/bean/common/btn_info.dart';
 
 class FunctionCard extends StatelessWidget {
   FunctionCard({
-    Key key,
-    this.data,
-    this.onItem,
+    Key? key,
+    required this.data,
+    required this.onItem,
   }) : super(key: key);
 
   ///数据源
@@ -27,7 +27,7 @@ class FunctionCard extends StatelessWidget {
           Container(
             width: 400.dp,
             height: 200.dp,
-            child: Image.network(item.bg, fit: BoxFit.fitWidth),
+            child: Image.network(item.bg ?? '', fit: BoxFit.fitWidth),
           ),
 
           //毛玻璃背景
@@ -46,7 +46,7 @@ class FunctionCard extends StatelessWidget {
           !item.selected
               ? Center(
                   child: Text(
-                    item.title,
+                    item.title ?? '',
                     style: TextStyle(
                       fontSize: 20.sp,
                       color: Colors.white,
@@ -59,14 +59,14 @@ class FunctionCard extends StatelessWidget {
           //点击效果
           Material(
             color: Colors.transparent,
-            child: InkWell(onTap: () => onItem(item.tag)),
+            child: InkWell(onTap: () => onItem(item.tag ?? '')),
           )
         ]);
       }).toList(),
     );
   }
 
-  Widget _buildItem({List<Widget> children}) {
+  Widget _buildItem({required List<Widget> children}) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20.dp),
       child: Stack(
@@ -90,7 +90,7 @@ class FunctionCard extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 30.dp, vertical: 30.dp),
       child: GridView(

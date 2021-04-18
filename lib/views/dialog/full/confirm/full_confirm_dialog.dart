@@ -5,18 +5,18 @@ import 'package:flutter/material.dart';
 import 'widget/full_confirm_dialog_view.dart';
 
 Future<bool> fullConfirmDialog({
-  @required BuildContext context,
-  TextStyle titleStyle,
-  String title,
-  String cancel,
-  TextStyle cancelStyle,
-  String confirm,
-  TextStyle confirmStyle,
-  @required String content,
-  TextStyle contentStyle,
-  FullConfirmParamVoidCallback onCancel,
-  @required FullConfirmParamVoidCallback onConfirm,
-  bool barrierDismissible,
+  required  BuildContext context,
+  TextStyle? titleStyle,
+  String? title,
+  String? cancel,
+  TextStyle? cancelStyle,
+  String? confirm,
+  TextStyle? confirmStyle,
+  required  String content,
+  TextStyle? contentStyle,
+  FullConfirmParamVoidCallback? onCancel,
+  required  FullConfirmParamVoidCallback? onConfirm,
+  bool? barrierDismissible,
 }) {
   //处理同步操作
   Completer<bool> completer = Completer();

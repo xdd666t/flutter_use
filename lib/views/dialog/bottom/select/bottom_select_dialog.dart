@@ -9,8 +9,8 @@ import 'widget/select_dialog_view.dart';
 
 ///底部选择弹窗
 Future<E> showBottomSelectDialog<E>({
-  @required List<E> list,
-  @required DialogParamSingleCallback<E> callback,
+  required List<E> list,
+  DialogParamSingleCallback<E>? callback,
   String title = '请选择',
   String showKey = '',
 }) {

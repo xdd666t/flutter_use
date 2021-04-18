@@ -7,13 +7,13 @@ import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 ///搜索框 个人信息 设置等按钮
 class HimalayaPersonalInfo extends StatelessWidget {
   HimalayaPersonalInfo({
-    Key key,
-    this.onRefresh,
-    this.onLeftArrow,
-    this.onRightArrow,
-    this.onSetting,
-    this.onSkin,
-    this.onChanged,
+    Key? key,
+    required this.onRefresh,
+    required this.onLeftArrow,
+    required  this.onRightArrow,
+    required this.onSetting,
+    required this.onSkin,
+    required this.onChanged,
   }) : super(key: key);
 
   ///左右箭头回调
@@ -163,7 +163,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10.dp, horizontal: 18.dp),
       width: 800.dp,

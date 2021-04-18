@@ -8,9 +8,9 @@ import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
 import 'widget/side_list_dialog_view.dart';
 
 Future<E> showSideListDialog<E>({
-  @required List<E> list,
-  String imageUrl,
-  ParamSingleCallback<E> callback,
+  required List<E> list,
+  String? imageUrl,
+  ParamSingleCallback<E>? callback,
   String title = '请选择',
   String showKey = '',
 }) {

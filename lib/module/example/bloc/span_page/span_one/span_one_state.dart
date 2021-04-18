@@ -1,7 +1,7 @@
 part of 'span_one_cubit.dart';
 
 class SpanOneState {
-  int count;
+  late int count;
 
   ///初始化方法
   SpanOneState init() {

@@ -73,7 +73,7 @@ class HimalayaLogic extends GetxController {
   void rankItem(HimalayaSubItemInfo itemInfo) {
     showToast(itemInfo.title);
     state.audioPlayInfo.update((val) {
-      val.title = itemInfo.title;
+      val!.title = itemInfo.title;
       val.subTitle = itemInfo.subTitle;
       val.tag = itemInfo.tag;
     });
@@ -93,10 +93,10 @@ class HimalayaLogic extends GetxController {
   void sortTitle(Rx<HimalayaSubItemInfo> itemInfo) {
     for (var item in state.newestSortList) {
       if (item().isSelected) {
-        item.update((val) => val.isSelected = false);
+        item.update((val) => val!.isSelected = false);
       }
     }
-    itemInfo.update((val) => val.isSelected = true);
+    itemInfo.update((val) => val!.isSelected = true);
     showToast(itemInfo().title);
   }
 
@@ -104,7 +104,7 @@ class HimalayaLogic extends GetxController {
   void onNewest(HimalayaSubItemInfo itemInfo) {
     showToast(itemInfo.title);
     state.audioPlayInfo.update((val) {
-      val.title = itemInfo.title;
+      val!.title = itemInfo.title;
       val.subTitle = itemInfo.subTitle;
       val.tag = itemInfo.tag;
     });
@@ -114,7 +114,7 @@ class HimalayaLogic extends GetxController {
   void guessDetail(HimalayaSubItemInfo itemInfo) {
     showToast(itemInfo.title);
     state.audioPlayInfo.update((val) {
-      val.title = itemInfo.title;
+      val!.title = itemInfo.title;
       val.subTitle = itemInfo.subTitle;
       val.tag = itemInfo.tag;
     });
@@ -166,11 +166,11 @@ class HimalayaLogic extends GetxController {
   ///点击导航栏item
   void navigationItem(Rx<HimalayaSubItemInfo> item) {
     //显示点击的item栏目
-    showToast(item().title);
+    showToast(item.value.title);
 
     //处理不同item回调
-    _restoreNavigationStatus(item().tag);
-    switch (item().tag) {
+    _restoreNavigationStatus(item.value.tag);
+    switch (item.value.tag) {
       case TagHimalayaConfig.find:
         //发现
         break;
@@ -210,7 +210,7 @@ class HimalayaLogic extends GetxController {
     }
   }
 
-  void _restoreNavigationStatus(String tag) {
+  void _restoreNavigationStatus(String? tag) {
     state.leftItemList.forEach((element) {
       element.subItemList.forEach((subElement) {
         if (subElement().tag == tag) {

@@ -8,8 +8,8 @@ import 'package:photo_view/photo_view_gallery.dart';
 
 class FullImageDialogView extends StatefulWidget {
   FullImageDialogView({
-    this.imageWidgets,
-    this.currentIndex,
+    required this.imageWidgets,
+    required this.currentIndex,
   });
 
   final List<ImageProvider> imageWidgets;
@@ -21,7 +21,7 @@ class FullImageDialogView extends StatefulWidget {
 }
 
 class _FullImageDialogViewState extends State<FullImageDialogView> {
-  int currentIndex;
+  late int currentIndex;
 
   @override
   void initState() {
@@ -93,9 +93,9 @@ class _FullImageDialogViewState extends State<FullImageDialogView> {
           width: 20.0,
           height: 20.0,
           child: CircularProgressIndicator(
-            value: event == null
+            value: (event == null || event.expectedTotalBytes == null)
                 ? 0
-                : event.cumulativeBytesLoaded / event.expectedTotalBytes,
+                : event.cumulativeBytesLoaded / event.expectedTotalBytes!,
           ),
         ),
       ),
@@ -108,7 +108,7 @@ class _FullImageDialogViewState extends State<FullImageDialogView> {
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       color: Colors.black,
       child: Stack(

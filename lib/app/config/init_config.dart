@@ -6,7 +6,7 @@ import 'package:flutter_use/app/utils/ui/window_size.dart';
 import 'package:window_size/window_size.dart' as window_size;
 
 class InitConfig {
-  InitConfig.initApp(BuildContext context) {
+  InitConfig.initApp(BuildContext? context) {
     //初始化窗口
     initWindow();
 
@@ -26,7 +26,7 @@ void initWindow({double scale: 1.0}) async {
   if (window.screen == null) {
     return;
   }
-  final screenFrame = window.screen.visibleFrame;
+  final screenFrame = window.screen!.visibleFrame;
   final width = 1060.0.dp * scale;
   final height = 700.0.dp * scale;
   final left = ((screenFrame.width - width) / 2).roundToDouble();

@@ -4,18 +4,18 @@ import 'package:flutter_use/views/dialog/assist/typedef/function.dart';
 
 class SideListDialogView extends StatelessWidget {
   SideListDialogView({
-    Key key,
-    this.title,
+    Key? key,
+    required this.title,
     this.imageUrl,
-    this.data,
-    this.onItem,
+    required this.data,
+    required this.onItem,
   }) : super(key: key);
 
   ///标题
   final String title;
 
   ///标题图片
-  final String imageUrl;
+  final String? imageUrl;
 
   ///数据源
   final List<String> data;
@@ -106,7 +106,7 @@ class SideListDialogView extends StatelessWidget {
               ? Container(
                   margin: EdgeInsets.only(right: 20.dp),
                   child: Image.network(
-                    imageUrl,
+                    imageUrl!,
                     height: 50.dp,
                     width: 50.dp,
                   ),
@@ -127,7 +127,10 @@ class SideListDialogView extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({List<Widget> children, BuildContext context}) {
+  Widget _buildBg({
+    required List<Widget> children,
+    required BuildContext context,
+  }) {
     return Container(
       color: Colors.white,
       height: double.infinity,

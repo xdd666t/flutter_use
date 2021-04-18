@@ -3,8 +3,8 @@ import 'btn_info.dart';
 ///树形信息
 class TreeTwiceInfo {
   TreeTwiceInfo({
-    this.title,
-    this.btnInfo,
+    required this.title,
+    required this.btnInfo,
   });
 
   ///一级大标题

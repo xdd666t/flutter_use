@@ -11,16 +11,16 @@ class BtnInfo {
   });
 
   ///按钮名称
-  String title;
+  String? title;
 
   ///按钮标识
-  String tag;
+  String? tag;
 
   ///正常情况图标
-  Icon icon;
+  Icon? icon;
 
   ///背景
-  String bg;
+  String? bg;
 
   ///做个控制
   bool selected;

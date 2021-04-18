@@ -5,10 +5,10 @@ import 'package:flutter_use/module/function/himalaya/state.dart';
 
 class HimalayaRankList extends StatelessWidget {
   HimalayaRankList({
-    Key key,
-    this.data,
-    this.onItem,
-    this.onTitle,
+    Key? key,
+    required this.data,
+    required this.onItem,
+    required this.onTitle,
   }) : super(key: key);
 
   ///数据源
@@ -97,8 +97,8 @@ class HimalayaRankList extends StatelessWidget {
   }
 
   Widget _buildItemBg({
-    HimalayaItemInfo item,
-    Widget Function(int index) builder,
+    required HimalayaItemInfo item,
+    required Widget Function(int index) builder,
   }) {
     return Container(
       margin: EdgeInsets.only(top: 20.dp),
@@ -140,7 +140,7 @@ class HimalayaRankList extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({HimalayaItemBuilder builder}) {
+  Widget _buildBg({required HimalayaItemBuilder builder}) {
     return Container(
       width: 800.dp,
       margin: EdgeInsets.only(top: 38.dp, bottom: 50.dp),

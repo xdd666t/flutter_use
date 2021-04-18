@@ -10,26 +10,26 @@ typedef HimalayaItemBuilder = List<Widget> Function(HimalayaItemInfo item);
 
 class HimalayaState {
   ///左边导航栏
-  List<HimalayaItemInfo> leftItemList;
+  late List<HimalayaItemInfo> leftItemList;
 
   ///banner数据源
-  List<String> bannerList;
+  late List<String> bannerList;
 
   ///猜你喜欢数据源
-  List<HimalayaSubItemInfo> guessList;
+  late List<HimalayaSubItemInfo> guessList;
 
   ///最新精选数据源
-  List<Rx<HimalayaSubItemInfo>> newestSortList;
-  List<HimalayaSubItemInfo> newestCardList;
+  late List<Rx<HimalayaSubItemInfo>> newestSortList;
+  late List<HimalayaSubItemInfo> newestCardList;
 
   ///热门主播数据源
-  List<HimalayaSubItemInfo> anchorList;
+  late List<HimalayaSubItemInfo> anchorList;
 
   ///相关榜单
-  List<HimalayaItemInfo> rankList;
+  late List<HimalayaItemInfo> rankList;
 
   ///音频播放信息
-  Rx<HimalayaSubItemInfo> audioPlayInfo;
+  late Rx<HimalayaSubItemInfo> audioPlayInfo;
 
   HimalayaState() {
     //侧边导航栏目初始数据
@@ -353,8 +353,8 @@ class HimalayaState {
 ///侧边栏数据
 class HimalayaItemInfo {
   HimalayaItemInfo({
-    this.title,
-    this.subItemList,
+    required this.title,
+    required this.subItemList,
   });
 
   ///item名称
@@ -366,7 +366,7 @@ class HimalayaItemInfo {
 
 class HimalayaSubItemInfo {
   HimalayaSubItemInfo({
-    this.title,
+    required this.title,
     this.subTitle,
     this.tag,
     this.icon,
@@ -377,13 +377,13 @@ class HimalayaSubItemInfo {
   String title;
 
   ///子标题
-  String subTitle;
+  String? subTitle;
 
   ///按钮标识
-  String tag;
+  String? tag;
 
   ///正常情况图标
-  IconData icon;
+  IconData? icon;
 
   ///是否被选中
   bool isSelected;

@@ -5,8 +5,8 @@ import 'package:flutter_use/bean/common/btn_info.dart';
 
 class FunctionItems extends StatelessWidget {
   FunctionItems({
-    this.items,
-    this.onItem,
+    required this.items,
+    required this.onItem,
     this.constraints = const BoxConstraints(minWidth: 150, minHeight: 36.0),
     this.padding = const EdgeInsets.all(30),
   });
@@ -33,7 +33,7 @@ class FunctionItems extends StatelessWidget {
     return _buildBg(
       child: Wrap(
         spacing: 20.dp,
-        runSpacing: 20.dp,
+        runSpacing: 20,
         children: items.map((e) {
           return btnFunction(
             onItem: onItem,
@@ -61,9 +61,9 @@ class FunctionItems extends StatelessWidget {
 
 ///功能性按钮
 Widget btnFunction({
-  ParamSingleCallback<String> onItem,
+  required ParamSingleCallback<String> onItem,
   data,
-  BoxConstraints constraints,
+  required BoxConstraints constraints,
 }) {
   return Container(
     padding: EdgeInsets.all(15.dp),

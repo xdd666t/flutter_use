@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 class CounterHighGetState {
-  RxInt count;
+  late RxInt count;
 
   CounterHighGetState() {
     count = 0.obs;

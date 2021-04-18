@@ -12,9 +12,13 @@ void showSnackBar(BuildContext context, String msg) {
 }
 
 Future<void> showToast(
-  String msg, {
+  String? msg, {
   Duration time = const Duration(milliseconds: 1500),
   alignment: Alignment.bottomCenter,
 }) async {
+  if (msg == null) {
+    return;
+  }
+
   SmartDialog.showToast(msg, time: time, alignment: alignment);
 }

@@ -9,9 +9,9 @@ showBottomDateDialog(
       bool isNumberMonth = true,
       int yearBegin = 1900,
       int yearEnd = 2100,
-      DateTime minValue,
-      DateTime maxValue,
-      @required DialogParamTwiceCallback<String, List<int>> callback,
+      required DateTime minValue,
+      required DateTime maxValue,
+      required DialogParamTwiceCallback<String, List<int>> callback,
       String title = '选择日期',
       String cancelText = '取消',
       String confirmText = '确定',
@@ -78,7 +78,7 @@ showBottomDateDialog(
         ),
       ),
     ],
-    onConfirm: (Picker picker, List value) {
+    onConfirm: (Picker picker, List<int> value) {
       ///截取字符串
       String date = '';
       String deal = picker.adapter.text;

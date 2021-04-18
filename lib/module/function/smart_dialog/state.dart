@@ -1,7 +1,7 @@
 import 'package:flutter_use/bean/common/btn_info.dart';
 
 class SmartDialogState {
-  List<BtnInfo> items;
+  late List<BtnInfo> items;
 
   SmartDialogState() {
     items = [

@@ -12,19 +12,19 @@ import 'widget/bottom_single_dialog_view.dart';
 ///硬编码不单独提出，方便后期控件移植
 Future<E> showBottomSingleDialog<E>(
   BuildContext context, {
-  @required List<E> list,
-  @required DialogParamSingleCallback<E> callback,
+  required List<E> list,
+  required DialogParamSingleCallback<E> callback,
   String title = '请选择',
   String showKey = '',
   //这是一种显示选择内容的展示方式
-  List<String> showFormatter,
+  List<String>? showFormatter,
 }) {
   List<String> stringList = [];
-  Completer completer = Completer();
+  Completer<E> completer = Completer();
 
   for (E item in list) {
     String showContent;
-    Map map;
+    Map map = {};
 
     if (showKey == '') {
       //兼容泛型为String的情况

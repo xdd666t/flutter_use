@@ -18,18 +18,18 @@ class FullDialog {
   ///
   /// 支持同步返回,类型Future<bool>  true:确定  false:取消
   static Future<bool> showConfirm({
-    @required BuildContext context,
-    TextStyle titleStyle,
-    String title,
-    String cancel,
-    TextStyle cancelStyle,
-    String confirm,
-    TextStyle confirmStyle,
-    @required String content,
-    TextStyle contentStyle,
-    FullConfirmParamVoidCallback onCancel,
-    FullConfirmParamVoidCallback onConfirm,
-    bool barrierDismissible,
+    required BuildContext context,
+    TextStyle? titleStyle,
+    String? title,
+    String? cancel,
+    TextStyle? cancelStyle,
+    String? confirm,
+    TextStyle? confirmStyle,
+    required String content,
+    TextStyle? contentStyle,
+    FullConfirmParamVoidCallback? onCancel,
+    FullConfirmParamVoidCallback? onConfirm,
+    bool? barrierDismissible,
   }) {
     return fullConfirmDialog(
       context: context,

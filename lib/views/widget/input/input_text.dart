@@ -17,7 +17,7 @@ class InputText extends StatefulWidget {
     this.textSize,
     this.keyboardType,
     this.autofocus,
-    @required this.onChanged,
+    this.onChanged,
     this.controller,
     this.textAlign = TextAlign.start,
     this.widget,
@@ -33,69 +33,69 @@ class InputText extends StatefulWidget {
     this.onTap,
   });
 
-  final double height;
-  final double widget;
+  final double? height;
+  final double? widget;
 
   ///限制输入条件
-  final List<TextInputFormatter> inputFormatters;
+  final List<TextInputFormatter>? inputFormatters;
 
   ///提示文字、样式颜色、大小
   final String hintText;
   final Color hintColor;
-  final double hintSize;
+  final double? hintSize;
 
   ///显示文字颜色、大小
   final Color textColor;
-  final double textSize;
+  final double? textSize;
 
   ///唤起不同的键盘类型
-  final TextInputType keyboardType;
+  final TextInputType? keyboardType;
 
   ///是否自动聚焦焦点
-  final bool autofocus;
+  final bool? autofocus;
 
   ///回调输入的数据
-  final InputParamSingleCallback<String> onChanged;
+  final InputParamSingleCallback<String>? onChanged;
 
   ///输入完成回调
-  final InputParamVoidCallback onComplete;
+  final InputParamVoidCallback? onComplete;
 
   ///控制器
-  final TextEditingController controller;
+  final TextEditingController? controller;
 
   ///文字展示方形
   final TextAlign textAlign;
 
   ///失去焦点
-  final InputParamVoidCallback onLoseFocus;
+  final InputParamVoidCallback? onLoseFocus;
 
   ///获取焦点
-  final InputParamVoidCallback onGetFocus;
+  final InputParamVoidCallback? onGetFocus;
 
   ///点击输入框
-  final InputParamVoidCallback onTap;
+  final InputParamVoidCallback? onTap;
 
   ///最大行数
-  final int maxLines;
+  final int? maxLines;
 
   /// 最小行数
-  final int minLines;
+  final int? minLines;
 
   ///编辑的字体样式
-  final TextStyle style;
+  final TextStyle? style;
 
   ///最大长度
-  final int maxLength;
+  final int? maxLength;
 
   ///装饰类
-  final InputDecoration decoration;
+  final InputDecoration? decoration;
 
   @override
   _InputTextState createState() => _InputTextState();
 }
 
 class _InputTextState extends State<InputText> {
-  FocusNode focusNode;
+  late FocusNode focusNode;
 
   @override
   void initState() {
@@ -103,9 +103,9 @@ class _InputTextState extends State<InputText> {
     //监听焦点获得和失去
     focusNode.addListener(() {
       if (focusNode.hasFocus && widget.onGetFocus != null) {
-        widget.onGetFocus();
+        widget.onGetFocus!();
       } else if (!focusNode.hasFocus && widget.onLoseFocus != null) {
-        widget.onLoseFocus();
+        widget.onLoseFocus!();
       }
     });
 
@@ -157,13 +157,13 @@ class _InputTextState extends State<InputText> {
         onChanged: (msg) {
           //监听输入的数值
           if (widget.onChanged != null) {
-            widget.onChanged(msg);
+            widget.onChanged!(msg);
           }
         },
         onEditingComplete: widget.onComplete,
         onTap: () {
           if (widget.onTap != null) {
-            widget.onTap();
+            widget.onTap!();
           }
         },
       ),

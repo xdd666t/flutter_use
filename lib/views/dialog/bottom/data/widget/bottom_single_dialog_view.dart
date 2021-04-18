@@ -5,10 +5,10 @@ import 'package:flutter_use/views/dialog/assist/typedef/function.dart';
 
 class BottomSingleDialogView extends StatefulWidget {
   BottomSingleDialogView({
-    Key key,
-    this.onCancel,
-    this.onConfirm,
-    this.data,
+    Key? key,
+    required this.onCancel,
+    required this.onConfirm,
+    required this.data,
     this.title = '请选择',
     this.cancel = '取消',
     this.confirm = '确认',
@@ -37,16 +37,16 @@ class BottomSingleDialogView extends StatefulWidget {
   final String confirm;
 
   ///取消文本样式
-  final TextStyle cancelTextStyle;
+  final TextStyle? cancelTextStyle;
 
   ///标题文本样式
-  final TextStyle titleTextStyle;
+  final TextStyle? titleTextStyle;
 
   ///确认文本样式
-  final TextStyle confirmTextStyle;
+  final TextStyle? confirmTextStyle;
 
   ///item样式样式
-  final TextStyle itemTextStyle;
+  final TextStyle? itemTextStyle;
 
   @override
   _BottomSingleDialogViewState createState() => _BottomSingleDialogViewState();
@@ -149,10 +149,10 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
   }
 
   Widget _buildBtn({
-    VoidCallback onPressed,
-    String title,
-    AlignmentGeometry alignment,
-    TextStyle style,
+    required VoidCallback onPressed,
+    required String title,
+    required AlignmentGeometry alignment,
+    required TextStyle style,
   }) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10),
@@ -165,7 +165,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       height: 650.dp,
       padding: EdgeInsets.only(top: 2),

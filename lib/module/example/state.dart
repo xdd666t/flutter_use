@@ -2,7 +2,7 @@ import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:flutter_use/bean/common/tree_info.dart';
 
 class ExampleState {
-  List<TreeTwiceInfo> trees;
+  late List<TreeTwiceInfo> trees;
 
   ExampleState() {
     trees = [

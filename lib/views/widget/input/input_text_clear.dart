@@ -31,38 +31,38 @@ class InputTextClear extends StatefulWidget {
   });
 
   ///输入框的长宽
-  final double height;
-  final double widget;
+  final double? height;
+  final double? widget;
 
   ///限制输入条件
-  final List<TextInputFormatter> inputFormatters;
+  final List<TextInputFormatter>? inputFormatters;
 
   ///提示文字、样式颜色、大小
   final String hintText;
   final Color hintColor;
-  final double hintSize;
+  final double? hintSize;
 
   ///显示文字颜色、大小
   final Color textColor;
-  final double textSize;
+  final double? textSize;
 
   ///唤起不同的键盘类型
-  final TextInputType keyboardType;
+  final TextInputType? keyboardType;
 
   ///是否自动聚焦焦点
-  final bool autofocus;
+  final bool? autofocus;
 
   ///回调输入的数据
-  final InputClearParamSingleCallback<String> onChanged;
+  final InputClearParamSingleCallback<String>? onChanged;
 
   ///输入完成回调
-  final InputClearParamVoidCallback onComplete;
+  final InputClearParamVoidCallback? onComplete;
 
   ///点击
-  final InputClearParamVoidCallback onTap;
+  final InputClearParamVoidCallback? onTap;
 
   ///控制器
-  final TextEditingController controller;
+  final TextEditingController? controller;
 
   ///文字展示方形
   final TextAlign textAlign;
@@ -71,10 +71,10 @@ class InputTextClear extends StatefulWidget {
   final Color iconColor;
 
   ///删除监听
-  final InputClearParamVoidCallback onClear;
+  final InputClearParamVoidCallback? onClear;
 
   ///是否禁止输入
-  final bool enabled;
+  final bool? enabled;
 
   @override
   _InputTextClearState createState() => _InputTextClearState();
@@ -82,12 +82,12 @@ class InputTextClear extends StatefulWidget {
 
 class _InputTextClearState extends State<InputTextClear>
     with SingleTickerProviderStateMixin {
-  FocusNode _focusNode;
-  TextEditingController _textController;
+  late FocusNode _focusNode;
+  late TextEditingController _textController;
 
   ///动画
-  AnimationController _animationController;
-  Animation _animation;
+  late AnimationController _animationController;
+  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -130,6 +130,7 @@ class _InputTextClearState extends State<InputTextClear>
 
   Widget _buildInput() {
     return _buildInputBg(
+      context: context,
       child: TextField(
         focusNode: _focusNode,
         controller: _textController,
@@ -141,7 +142,6 @@ class _InputTextClearState extends State<InputTextClear>
           fontSize: 28,
         ),
         inputFormatters: widget.inputFormatters,
-        maxLengthEnforced: true,
         textInputAction: TextInputAction.search,
         enabled: widget.enabled,
         decoration: InputDecoration(
@@ -159,12 +159,12 @@ class _InputTextClearState extends State<InputTextClear>
         onChanged: (msg) {
           //监听输入的数值
           if (widget.onChanged != null) {
-            widget.onChanged(msg);
+            widget.onChanged!(msg);
           }
         },
         onEditingComplete: () {
           if (widget.onComplete != null) {
-            widget.onComplete();
+            widget.onComplete!();
           }
 
           FocusScope.of(context).requestFocus(FocusNode());
@@ -184,11 +184,11 @@ class _InputTextClearState extends State<InputTextClear>
           _textController.clear();
 
           if (widget.onChanged != null) {
-            widget.onChanged(_textController.text);
+            widget.onChanged!(_textController.text);
           }
 
           if (widget.onClear != null) {
-            widget.onClear();
+            widget.onClear!();
           }
         },
         child: ScaleTransition(
@@ -206,16 +206,16 @@ class _InputTextClearState extends State<InputTextClear>
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Row(
       children: children,
     );
   }
 
-  Widget _buildInputBg({BuildContext context, Widget child}) {
+  Widget _buildInputBg({required BuildContext context, required Widget child}) {
     return Container(
-      height: widget.height ??50,
-      width: widget.widget ??300,
+      height: widget.height ?? 50,
+      width: widget.widget ?? 300,
       alignment: Alignment.center,
       child: InputActions(
         context: context,

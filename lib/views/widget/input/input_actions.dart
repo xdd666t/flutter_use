@@ -5,9 +5,9 @@ import 'package:keyboard_actions/keyboard_actions.dart';
 
 class InputActions extends StatelessWidget {
   InputActions({
-    @required this.context,
-    @required this.focusNode,
-    @required this.child,
+    required this.context,
+    required this.focusNode,
+    required this.child,
   });
 
   final BuildContext context;
@@ -33,7 +33,7 @@ class InputActions extends StatelessWidget {
   /// 配置iOS数字输入框
   static KeyboardActionsConfig buildIOSKeyBoardNumberConfig(
       BuildContext context, FocusNode focusNode,
-      {ParamVoidCallback doneCallBack}) {
+      {ParamVoidCallback? doneCallBack}) {
     return KeyboardActionsConfig(
       keyboardActionsPlatform: KeyboardActionsPlatform.IOS,
       keyboardBarColor: Colors.grey[200],
@@ -43,14 +43,20 @@ class InputActions extends StatelessWidget {
           focusNode: focusNode,
           displayDoneButton: true,
           onTapAction: () {
-            doneCallBack();
+            if (doneCallBack != null) {
+              doneCallBack();
+            }
+
             focusNode.unfocus();
           },
           toolbarButtons: [
             (node) {
               return GestureDetector(
                 onTap: () {
-                  doneCallBack();
+                  if (doneCallBack != null) {
+                    doneCallBack();
+                  }
+
                   node.unfocus();
                 },
                 child: Container(

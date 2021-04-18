@@ -1,7 +1,7 @@
 part of 'counter_cubit.dart';
 
 class CounterState {
-  int count;
+  late int count;
 
   CounterState init() {
     return CounterState()..count = 0;

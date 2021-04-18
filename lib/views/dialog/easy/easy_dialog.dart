@@ -16,14 +16,14 @@ class EasyDialog {
   }
 
   static Future<void> show({
-    @required Widget widget,
-    AlignmentGeometry alignmentTemp,
-    bool isPenetrateTemp,
-    bool isUseAnimationTemp,
-    Duration animationDurationTemp,
-    bool isLoadingTemp,
-    Color maskColorTemp,
-    bool clickBgDismissTemp,
+    required Widget widget,
+    AlignmentGeometry? alignmentTemp,
+    bool? isPenetrateTemp,
+    bool? isUseAnimationTemp,
+    Duration? animationDurationTemp,
+    bool? isLoadingTemp,
+    Color? maskColorTemp,
+    bool? clickBgDismissTemp,
     bool isUseExtraWidget = false,
   }) {
     return SmartDialog.show(

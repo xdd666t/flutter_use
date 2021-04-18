@@ -6,10 +6,10 @@ import 'package:flutter_use/module/function/himalaya/state.dart';
 ///猜你喜欢
 class HimalayaGuess extends StatelessWidget {
   HimalayaGuess({
-    Key key,
-    this.onChange,
-    this.data,
-    this.onGuess,
+    Key? key,
+    required this.onChange,
+    required this.data,
+    required this.onGuess,
   }) : super(key: key);
 
   ///数据源
@@ -42,7 +42,7 @@ class HimalayaGuess extends StatelessWidget {
           //文字描述
           Text(item.title, style: TextStyle(fontSize: 15.sp)),
 
-          Text(item.subTitle,
+          Text(item.subTitle ?? '',
               style: TextStyle(fontSize: 13.sp, color: Colors.grey)),
         ]);
       })
@@ -59,13 +59,13 @@ class HimalayaGuess extends StatelessWidget {
         onTap: () => onGuess(item),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(15.dp),
-          child: Image.network(item.tag),
+          child: Image.network(item.tag ?? ''),
         ),
       ),
     );
   }
 
-  Widget _buildItemBg({HimalayaSubBuilder itemBuilder}) {
+  Widget _buildItemBg({required HimalayaSubBuilder itemBuilder}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: data.map((e) {
@@ -106,7 +106,7 @@ class HimalayaGuess extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       width: 800.dp,
       margin: EdgeInsets.only(top: 38.dp, bottom: 18.dp),

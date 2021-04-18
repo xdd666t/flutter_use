@@ -1,7 +1,7 @@
 import 'package:flutter_use/bean/common/btn_info.dart';
 
 class DialogState {
-  List<BtnInfo> items;
+  late List<BtnInfo> items;
 
   DialogState() {
     items = [

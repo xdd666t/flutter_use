@@ -1,4 +1,4 @@
-## 实体命名生成
+# 实体命名生成
 
 ### 使用 build_runner 生成 .g.dart 文件
 flutter packages pub run build_runner build

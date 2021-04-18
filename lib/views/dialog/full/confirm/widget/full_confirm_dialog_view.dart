@@ -9,7 +9,7 @@ typedef FullConfirmParamVoidCallback = void Function();
 
 class FullConfirmDialogView extends StatefulWidget {
   FullConfirmDialogView({
-    Key key,
+    Key? key,
     this.titleStyle,
     this.title,
     this.cancel = '取消',
@@ -23,34 +23,34 @@ class FullConfirmDialogView extends StatefulWidget {
   });
 
   ///取消回调
-  final FullConfirmParamVoidCallback onCancel;
+  final FullConfirmParamVoidCallback? onCancel;
 
   ///确定回调
-  final FullConfirmParamVoidCallback onConfirm;
+  final FullConfirmParamVoidCallback? onConfirm;
 
   ///标题内容
-  final String title;
+  final String? title;
 
   ///内容样式
-  final TextStyle titleStyle;
+  final TextStyle? titleStyle;
 
   ///内容信息
-  final String content;
+  final String? content;
 
   ///标题样式
-  final TextStyle contentStyle;
+  final TextStyle? contentStyle;
 
   ///标题内容
   final String cancel;
 
   ///标题样式
-  final TextStyle cancelStyle;
+  final TextStyle? cancelStyle;
 
   ///标题内容
   final String confirm;
 
   ///标题样式
-  final TextStyle confirmStyle;
+  final TextStyle? confirmStyle;
 
   @override
   _FullConfirmDialogViewState createState() => _FullConfirmDialogViewState();
@@ -58,7 +58,7 @@ class FullConfirmDialogView extends StatefulWidget {
 
 class _FullConfirmDialogViewState extends State<FullConfirmDialogView>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   Widget build(BuildContext context) {
@@ -219,7 +219,7 @@ class _FullConfirmDialogViewState extends State<FullConfirmDialogView>
   }
 
   ///关于一些背景设置
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Center(
       child: ScaleTransition(
         scale: CurvedAnimation(
@@ -242,7 +242,7 @@ class _FullConfirmDialogViewState extends State<FullConfirmDialogView>
     );
   }
 
-  void _dealCloseLogic(FullConfirmParamVoidCallback callBack) async {
+  void _dealCloseLogic(FullConfirmParamVoidCallback? callBack) async {
     close();
     if (callBack != null) {
       callBack();

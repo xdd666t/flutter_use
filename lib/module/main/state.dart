@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/utils/ui/keep_alive_page.dart';
+import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:flutter_use/module/example/view.dart';
 import 'package:flutter_use/module/function/view.dart';
@@ -8,23 +8,23 @@ import 'package:get/get.dart';
 
 class MainState {
   ///选择index - 响应式
-  RxInt selectedIndex;
+  late RxInt selectedIndex;
 
   ///控制是否展开 - 响应式
-  RxBool isUnfold;
+  late RxBool isUnfold;
 
   ///是否缩放 - 响应式
-  RxBool isScale;
+  late RxBool isScale;
 
   ///分类按钮数据源
-  List<BtnInfo> list;
+  late List<BtnInfo> list;
 
   ///Navigation的item信息
-  List<BtnInfo> itemList;
+  late List<BtnInfo> itemList;
 
   ///PageView页面
-  List<Widget> pageList;
-  PageController pageController;
+  late List<Widget> pageList;
+  late PageController pageController;
 
   MainState() {
     //初始化index
@@ -35,9 +35,9 @@ class MainState {
     isScale = false.obs;
     //PageView页面
     pageList = [
-      keepAliveWrapper(FunctionPage()),
-      keepAliveWrapper(ExamplePage()),
-      keepAliveWrapper(SettingPage()),
+      KeepAlivePage(FunctionPage()),
+      KeepAlivePage(ExamplePage()),
+      KeepAlivePage(SettingPage()),
     ];
     //item栏目
     itemList = [

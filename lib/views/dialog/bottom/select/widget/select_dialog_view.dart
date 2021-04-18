@@ -5,9 +5,9 @@ import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
 
 class SelectDialogView extends StatelessWidget {
   SelectDialogView({
-    Key key,
-    @required this.data,
-    @required this.onSelect,
+    Key? key,
+    required this.data,
+    required this.onSelect,
     this.title = '请选择',
   }) : super(key: key);
 
@@ -133,7 +133,7 @@ class SelectDialogView extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       margin: EdgeInsets.all(10.dp),
       child: Material(

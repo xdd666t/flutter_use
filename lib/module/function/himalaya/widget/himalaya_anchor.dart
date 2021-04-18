@@ -6,9 +6,9 @@ import 'package:flutter_use/module/function/himalaya/state.dart';
 ///热门主播
 class HimalayaAnchor extends StatelessWidget {
   HimalayaAnchor({
-    Key key,
-    this.data,
-    this.onAnchor,
+    Key? key,
+    required this.data,
+    required this.onAnchor,
   }) : super(key: key);
 
   ///数据源
@@ -48,7 +48,7 @@ class HimalayaAnchor extends StatelessWidget {
         margin: EdgeInsets.only(top: 120.dp),
         alignment: Alignment.bottomCenter,
         child: Text(
-          itemInfo.subTitle,
+          itemInfo.subTitle ?? '',
           style: TextStyle(
             fontSize: 18.sp,
           ),
@@ -67,7 +67,7 @@ class HimalayaAnchor extends StatelessWidget {
             height: 130.dp,
             width: 130.dp,
             child: Image.network(
-              itemInfo.tag,
+              itemInfo.tag ?? '',
               fit: BoxFit.cover,
             ),
           ),
@@ -101,7 +101,7 @@ class HimalayaAnchor extends StatelessWidget {
     );
   }
 
-  Widget _buildCardBg({HimalayaSubBuilder builder}) {
+  Widget _buildCardBg({required HimalayaSubBuilder builder}) {
     return Container(
       margin: EdgeInsets.only(top: 10.dp),
       child: Row(
@@ -117,7 +117,7 @@ class HimalayaAnchor extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       width: 800.dp,
       margin: EdgeInsets.only(top: 28.dp, bottom: 10.dp),

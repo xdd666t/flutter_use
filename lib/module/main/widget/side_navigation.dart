@@ -6,13 +6,13 @@ import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 ///NavigationRail组件为侧边栏
 class SideNavigation extends StatelessWidget {
   SideNavigation({
-    this.onItem,
-    this.selectedIndex,
-    this.sideItems,
-    this.isUnfold,
-    this.onUnfold,
-    this.isScale,
-    this.onScale,
+    required this.onItem,
+    required this.selectedIndex,
+    required this.sideItems,
+    required this.isUnfold,
+    required this.onUnfold,
+    required this.isScale,
+    required this.onScale,
   });
 
   ///侧边栏item

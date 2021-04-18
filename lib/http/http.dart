@@ -18,14 +18,14 @@ testHttp() async {
 }
 
 class Http {
-  static NetRequestCallback _callback;
+  static late NetRequestCallback _callback;
 
   static void init({
-    String baseUrl,
-    int connectTimeout,
-    int sendTimeout,
-    int receiveTimeout,
-    List<Interceptor> interceptors,
+    String baseUrl = '',
+    int? connectTimeout,
+    int? sendTimeout,
+    int? receiveTimeout,
+    List<Interceptor>? interceptors,
   }) {
     NetUtil.instance.init(
       baseUrl: baseUrl,
@@ -41,9 +41,9 @@ class Http {
   ///Get请求
   static Future get(
     String path, {
-    Map<String, dynamic> queryParameters,
-    Options options,
-    CancelToken cancelToken,
+    Map<String, dynamic>? queryParameters,
+    Options? options,
+    CancelToken? cancelToken,
   }) async {
     var response = await request(
       path,
@@ -59,9 +59,9 @@ class Http {
   static Future post(
     String path, {
     data,
-    Map<String, dynamic> queryParameters,
-    Options options,
-    CancelToken cancelToken,
+    Map<String, dynamic>? queryParameters,
+    Options? options,
+    CancelToken? cancelToken,
   }) async {
     var response = await request(
       path,
@@ -78,9 +78,9 @@ class Http {
   static Future put(
     String path, {
     data,
-    Map<String, dynamic> queryParameters,
-    Options options,
-    CancelToken cancelToken,
+    Map<String, dynamic>? queryParameters,
+    Options? options,
+    CancelToken? cancelToken,
   }) async {
     var response = await request(
       path,
@@ -97,9 +97,9 @@ class Http {
   static Future delete(
     String path, {
     data,
-    Map<String, dynamic> queryParameters,
-    Options options,
-    CancelToken cancelToken,
+    Map<String, dynamic>? queryParameters,
+    Options? options,
+    CancelToken? cancelToken,
   }) async {
     var response = await request(
       path,
@@ -119,11 +119,11 @@ class Http {
     String path, {
     HttpMethod method = HttpMethod.get,
     data,
-    Map<String, dynamic> queryParameters,
-    Options options,
-    CancelToken cancelToken,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    Map<String, dynamic>? queryParameters,
+    Options? options,
+    CancelToken? cancelToken,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     _callback.onStart();
     var response = await NetUtil.instance.request(
@@ -167,7 +167,7 @@ class Http {
   }
 
   ///设置取消token
-  static void cancelRequests({CancelToken token}) {
+  static void cancelRequests({CancelToken? token}) {
     NetUtil.instance.cancelRequests(token: token);
   }
 }
@@ -177,8 +177,8 @@ typedef HttpCallback = void Function();
 
 class NetRequestCallback {
   NetRequestCallback({
-    this.onEnd,
-    this.onStart,
+    required this.onEnd,
+    required this.onStart,
   });
 
   ///开始

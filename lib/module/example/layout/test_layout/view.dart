@@ -38,7 +38,7 @@ class TestLayoutPage extends StatelessWidget {
     ]);
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Scaffold(
       appBar: AppBar(title: Text('测试布局')),
       body: Center(

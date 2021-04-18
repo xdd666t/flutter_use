@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -28,37 +28,37 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
-  get: ^4.1.4
+  get: 4.1.4
   # 时间滚轮选择器 https://pub.dev/packages/flutter_picker
-  flutter_picker: ^2.0.1
+  flutter_picker: 2.0.1
   # 状态管理框架 https://pub.dev/packages/flutter_bloc
-  flutter_bloc: ^7.0.0
+  flutter_bloc: 7.0.0
   # 图片选择器 https://pub.dev/packages/wechat_assets_picker
   wechat_assets_picker: ^5.1.2
   # 预览图片 https://pub.dev/packages/photo_view
-  photo_view: ^0.11.1
+  photo_view: 0.11.1
   # 取消输入框焦点 https://pub.dev/packages/focus_widget/install
-  focus_widget: ^1.0.5+2
+  focus_widget: 1.0.5+2
   # iOS数字键盘添加收起按钮 https://pub.dev/packages/keyboard_actions
-  keyboard_actions: ^3.4.0
+  keyboard_actions: 3.4.0
   # 用于处理widget是否可见检测 https://pub.flutter-io.cn/packages/visibility_detector
-  visibility_detector: ^0.2.0
+  visibility_detector: 0.2.0
   # 本地缓存 https://pub.flutter-io.cn/packages/shared_preferences
-  shared_preferences: ^2.0.5
+  shared_preferences: 2.0.5
   # 轮播图: https://pub.dev/packages/flutter_card_swipper
-  flutter_card_swipper: ^0.4.0
+  flutter_card_swipper: 0.4.0
   # 设置window窗口 https://github.com/google/flutter-desktop-embedding/tree/master/plugins/window_size
   window_size:
     git:
       url: https://github.com/google/flutter-desktop-embedding.git
       path: plugins/window_size
   # flutter工具包（自用） https://pub.flutter-io.cn/packages/flutter_toolkit_easy
-  flutter_toolkit_easy: ^0.0.7
-#  flutter_toolkit_easy:
-#    git:
-#      url: https://github.com/CNAD666/flutter_toolkit.git
+  flutter_toolkit_easy: any
+  #  flutter_toolkit_easy:
+  #    git:
+  #      url: https://github.com/CNAD666/flutter_toolkit.git
   # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
-  flutter_smart_dialog: ^2.0.3
+  flutter_smart_dialog: any
 #  flutter_smart_dialog:
 #    git:
 #      url: git://github.com/CNAD666/flutter_smart_dialog.git

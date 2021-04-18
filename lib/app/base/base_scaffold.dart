@@ -6,7 +6,7 @@ typedef ScaffoldParamVoidCallback = void Function();
 
 class BaseScaffold extends StatefulWidget {
   const BaseScaffold({
-    Key key,
+    Key? key,
     this.appBar,
     this.body,
     this.floatingActionButton,
@@ -39,22 +39,22 @@ class BaseScaffold extends StatefulWidget {
   ///系统Scaffold的属性
   final bool extendBody;
   final bool extendBodyBehindAppBar;
-  final PreferredSizeWidget appBar;
-  final Widget body;
-  final Widget floatingActionButton;
-  final FloatingActionButtonLocation floatingActionButtonLocation;
-  final FloatingActionButtonAnimator floatingActionButtonAnimator;
-  final List<Widget> persistentFooterButtons;
-  final Widget drawer;
-  final Widget endDrawer;
-  final Color drawerScrimColor;
-  final Color backgroundColor;
-  final Widget bottomNavigationBar;
-  final Widget bottomSheet;
-  final bool resizeToAvoidBottomInset;
+  final PreferredSizeWidget? appBar;
+  final Widget? body;
+  final Widget? floatingActionButton;
+  final FloatingActionButtonLocation? floatingActionButtonLocation;
+  final FloatingActionButtonAnimator? floatingActionButtonAnimator;
+  final List<Widget>? persistentFooterButtons;
+  final Widget? drawer;
+  final Widget? endDrawer;
+  final Color? drawerScrimColor;
+  final Color? backgroundColor;
+  final Widget? bottomNavigationBar;
+  final Widget? bottomSheet;
+  final bool? resizeToAvoidBottomInset;
   final bool primary;
   final DragStartBehavior drawerDragStartBehavior;
-  final double drawerEdgeDragWidth;
+  final double? drawerEdgeDragWidth;
   final bool drawerEnableOpenDragGesture;
   final bool endDrawerEnableOpenDragGesture;
 
@@ -66,14 +66,14 @@ class BaseScaffold extends StatefulWidget {
   final bool isCanBack;
 
   ///监听返回事件
-  final ScaffoldParamVoidCallback onBack;
+  final ScaffoldParamVoidCallback? onBack;
 
   @override
   _BaseScaffoldState createState() => _BaseScaffoldState();
 }
 
 class _BaseScaffoldState extends State<BaseScaffold> {
-  DateTime _lastPressedAt; //上次点击时间
+  DateTime? _lastPressedAt; //上次点击时间
 
   @override
   Widget build(BuildContext context) {
@@ -100,14 +100,14 @@ class _BaseScaffoldState extends State<BaseScaffold> {
         drawerEnableOpenDragGesture: widget.drawerEnableOpenDragGesture,
         endDrawerEnableOpenDragGesture: widget.endDrawerEnableOpenDragGesture,
       ),
-      onWillPop: _dealWillPop,
+      onWillPop: dealWillPop,
     );
   }
 
   ///控件返回按钮
-  Future<bool> _dealWillPop() async {
+  Future<bool> dealWillPop() async {
     if (widget.onBack != null) {
-      widget.onBack();
+      widget.onBack!();
     }
 
     //处理弹窗问题
@@ -123,7 +123,7 @@ class _BaseScaffoldState extends State<BaseScaffold> {
 
     if (widget.isTwiceBack) {
       if (_lastPressedAt == null ||
-          DateTime.now().difference(_lastPressedAt) > Duration(seconds: 1)) {
+          DateTime.now().difference(_lastPressedAt!) > Duration(seconds: 1)) {
         //两次点击间隔超过1秒则重新计时
         _lastPressedAt = DateTime.now();
 

@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 }
 
 ///独立处理全局bloc
-Widget builder(BuildContext context, Widget child) {
+Widget builder(BuildContext context, Widget? child) {
   return MultiBlocProvider(
     providers: [
       ///此处通过BlocProvider创建的Bloc或者Cubit是全局的

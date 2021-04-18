@@ -7,20 +7,20 @@ import 'package:get/get.dart';
 
 class HimalayaAudioConsole extends StatelessWidget {
   HimalayaAudioConsole({
-    Key key,
-    this.data,
-    this.onRightArrow,
-    this.onLeftArrow,
-    this.onCatalog,
-    this.onCover,
-    this.onPlay,
-    this.onProgress,
-    this.onSpeed,
-    this.onSubtitle,
-    this.onTiming,
-    this.onVolume,
-    this.onLove,
-    this.onPlayModel,
+    Key? key,
+    required this.data,
+    required this.onRightArrow,
+    required this.onLeftArrow,
+    required this.onCatalog,
+    required this.onCover,
+    required this.onPlay,
+    required this.onProgress,
+    required this.onSpeed,
+    required this.onSubtitle,
+    required this.onTiming,
+    required this.onVolume,
+    required this.onLove,
+    required this.onPlayModel,
   }) : super(key: key);
 
   ///数据源
@@ -129,7 +129,7 @@ class HimalayaAudioConsole extends StatelessWidget {
 
               //副标题信息
               Obx(
-                () => Text(data().subTitle, style: TextStyle(fontSize: 15.sp)),
+                () => Text(data().subTitle ?? '', style: TextStyle(fontSize: 15.sp)),
               ),
             ]),
 
@@ -185,7 +185,7 @@ class HimalayaAudioConsole extends StatelessWidget {
         borderRadius: BorderRadius.circular(5.dp),
         child: GestureDetector(
           onTap: () => onCover(),
-          child: Obx(() => Image.network(data().tag)),
+          child: Obx(() => Image.network(data().tag ?? '')),
         ),
       ),
     );
@@ -319,7 +319,7 @@ class HimalayaAudioConsole extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       height: 70.dp,
       padding: EdgeInsets.symmetric(horizontal: 23.dp),

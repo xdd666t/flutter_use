@@ -7,8 +7,8 @@ import 'package:flutter_use/module/common/widget/function_items.dart';
 ///树形item控件
 class TreeItems extends StatelessWidget {
   TreeItems({
-    this.data,
-    this.onItem,
+    required this.data,
+    required this.onItem,
   });
 
   ///树形数据源

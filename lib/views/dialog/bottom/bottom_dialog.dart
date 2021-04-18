@@ -26,12 +26,12 @@ class BottomDialog {
   static Future<E> showSingle<E>(
     BuildContext context, {
     //数据源使用任意泛型
-    @required List<E> list,
+    required List<E> list,
     //回调你选择的item数据
-    @required DialogParamSingleCallback<E> callback,
+    required DialogParamSingleCallback<E> callback,
     String title = '请选择',
     String showKey = '',
-    List<String> showFormatter,
+    List<String>? showFormatter,
   }) {
     return showBottomSingleDialog<E>(
       context,
@@ -50,12 +50,12 @@ class BottomDialog {
     bool isNumberMonth = true,
     int yearBegin = 1900,
     int yearEnd = 2100,
-    @required DialogParamTwiceCallback<String, List<int>> callback,
+    required DialogParamTwiceCallback<String, List<int>> callback,
     String title = '选择日期',
     String cancelText = '取消',
     String confirmText = '确定',
-    DateTime minValue,
-    DateTime maxValue,
+    required DateTime minValue,
+    required DateTime maxValue,
   }) {
     showBottomDateDialog(context,
         type: type,
@@ -77,10 +77,10 @@ class BottomDialog {
   /// isSort：是否开启排序，默认false，开启后，按照数据源的塞入顺序预览图片，
   /// 默认false情况一律按照网络图片在前，本地图片在后的方式预览图片
   static Future<void> showImage({
-    @required BuildContext context,
-    @required List<FileInfoBean> imageList,
-    @required int currentIndex,
-    bool isSort,
+    required BuildContext context,
+    required List<FileInfoBean> imageList,
+    required int currentIndex,
+    bool? isSort,
   }) async {
     await bottomImageDialog(
       context: context,
@@ -94,8 +94,8 @@ class BottomDialog {
   ///
   /// 自带标题和取消控件
   static Future<E> showSelect<E>({
-    @required List<E> list,
-    DialogParamSingleCallback<E> callback,
+    required List<E> list,
+    required DialogParamSingleCallback<E> callback,
     String title = '请选择',
     String showKey = '',
   }) {

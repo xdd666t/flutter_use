@@ -7,10 +7,10 @@ import 'widget/full_image_dialog_view.dart';
 
 ///展示图片
 Future<void> bottomImageDialog({
-  @required List<FileInfoBean> imageList,
-  @required BuildContext context,
-  @required int currentIndex,
-  bool isSort,
+  required List<FileInfoBean> imageList,
+  required BuildContext context,
+  required int currentIndex,
+  bool? isSort,
 }) async {
   // List<ImageProvider> images = [];
   //

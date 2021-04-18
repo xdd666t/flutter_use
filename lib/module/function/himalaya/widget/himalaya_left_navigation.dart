@@ -7,9 +7,9 @@ import 'package:get/get.dart';
 
 class HimalayaLeftNavigation extends StatelessWidget {
   HimalayaLeftNavigation({
-    Key key,
-    this.data,
-    this.onTap,
+    Key? key,
+    required this.data,
+    required this.onTap,
   }) : super(key: key);
 
   final HimalayaState data;
@@ -85,8 +85,8 @@ class HimalayaLeftNavigation extends StatelessWidget {
   }
 
   Widget _buildSubItemBg({
-    Rx<HimalayaSubItemInfo> data,
-    List<Widget> children,
+    required Rx<HimalayaSubItemInfo> data,
+    required List<Widget> children,
   }) {
     return InkWell(
       onTap: () => onTap(data),
@@ -98,8 +98,8 @@ class HimalayaLeftNavigation extends StatelessWidget {
   }
 
   Widget _buildSubItemListBg({
-    HimalayaItemInfo data,
-    HimalayaRxSubBuilder subBuilder,
+    required HimalayaItemInfo data,
+    required HimalayaRxSubBuilder subBuilder,
   }) {
     return Column(
       children: data.subItemList.map((e) {
@@ -108,7 +108,7 @@ class HimalayaLeftNavigation extends StatelessWidget {
     );
   }
 
-  Widget _buildItemListBg({HimalayaItemBuilder itemBuilder}) {
+  Widget _buildItemListBg({required HimalayaItemBuilder itemBuilder}) {
     return Expanded(
       child: Scrollbar(
         child: SingleChildScrollView(
@@ -149,7 +149,7 @@ class HimalayaLeftNavigation extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       color: Colors.grey.withOpacity(0.06),
       padding: EdgeInsets.only(top: 18.dp),

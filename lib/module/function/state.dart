@@ -3,7 +3,7 @@ import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class FunctionState {
-  List<BtnInfo> items;
+  late List<BtnInfo> items;
 
   FunctionState() {
     //回调在每一帧的末尾触发,避免widget未加载完产生的报错

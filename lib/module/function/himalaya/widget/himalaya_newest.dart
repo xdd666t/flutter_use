@@ -6,10 +6,10 @@ import 'package:get/get.dart';
 
 class HimalayaNewest extends StatelessWidget {
   HimalayaNewest({
-    Key key,
-    this.data,
-    this.onSortTitle,
-    this.onNewest,
+    Key? key,
+    required this.data,
+    required this.onSortTitle,
+    required this.onNewest,
   }) : super(key: key);
 
   ///数据源
@@ -43,7 +43,7 @@ class HimalayaNewest extends StatelessWidget {
           Text(item.title, style: TextStyle(fontSize: 15.sp)),
 
           //子标题
-          Text(item.subTitle,
+          Text(item.subTitle ?? '',
               style: TextStyle(fontSize: 13.sp, color: Colors.grey)),
         ]);
       }),
@@ -60,13 +60,13 @@ class HimalayaNewest extends StatelessWidget {
         onTap: () => onNewest(item),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(15.dp),
-          child: Image.network(item.tag),
+          child: Image.network(item.tag ?? ''),
         ),
       ),
     );
   }
 
-  Widget _buildCardBg({HimalayaSubBuilder builder}) {
+  Widget _buildCardBg({required HimalayaSubBuilder builder}) {
     return Wrap(
       runSpacing: 20.dp,
       spacing: 12.dp,
@@ -109,7 +109,7 @@ class HimalayaNewest extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       width: 800.dp,
       margin: EdgeInsets.only(top: 28.dp, bottom: 18.dp),

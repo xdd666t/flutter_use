@@ -29,7 +29,7 @@ class SearchBar extends StatefulWidget {
   final Color bgColor;
 
   ///限制输入条件
-  final List<TextInputFormatter> inputFormatters;
+  final List<TextInputFormatter>? inputFormatters;
 
   ///提示文字和样式颜色
   final String hintText;
@@ -39,25 +39,25 @@ class SearchBar extends StatefulWidget {
   final Color textColor;
 
   ///唤起不同的键盘类型
-  final TextInputType keyboardType;
+  final TextInputType? keyboardType;
 
   ///是否自动聚焦焦点
-  final bool autofocus;
+  final bool? autofocus;
 
   ///icon颜色
   final Color iconColor;
 
   ///回调输入的数据
-  final SearchParamSingleCallback<String> onChanged;
+  final SearchParamSingleCallback<String>? onChanged;
 
   ///输入完成  点击键盘上: 收缩,Ok等按钮
-  final SearchParamSingleCallback<String> onComplete;
+  final SearchParamSingleCallback<String>? onComplete;
 
   ///删除监听
-  final SearchParamVoidCallback onClear;
+  final SearchParamVoidCallback? onClear;
 
   ///输入框控制器
-  final TextEditingController controller;
+  final TextEditingController? controller;
 
   @override
   _SearchBarState createState() => _SearchBarState();
@@ -65,12 +65,12 @@ class SearchBar extends StatefulWidget {
 
 class _SearchBarState extends State<SearchBar>
     with SingleTickerProviderStateMixin {
-  FocusNode focusNode;
-  TextEditingController controller;
+  late FocusNode focusNode;
+  late TextEditingController controller;
 
   ///动画
-  AnimationController animationController;
-  Animation animation;
+  late AnimationController animationController;
+  late Animation<double> animation;
 
   @override
   void initState() {
@@ -125,11 +125,11 @@ class _SearchBarState extends State<SearchBar>
           controller.clear();
 
           if (widget.onChanged != null) {
-            widget.onChanged(controller.text);
+            widget.onChanged!(controller.text);
           }
 
           if (widget.onClear != null) {
-            widget.onClear();
+            widget.onClear!();
           }
         },
         child: ScaleTransition(
@@ -180,12 +180,12 @@ class _SearchBarState extends State<SearchBar>
           onChanged: (msg) {
             //监听输入的数值
             if (widget.onChanged != null) {
-              widget.onChanged(msg);
+              widget.onChanged!(msg);
             }
           },
           onEditingComplete: () {
             if (widget.onComplete != null) {
-              widget.onComplete(controller.text);
+              widget.onComplete!(controller.text);
             }
 
             FocusScope.of(context).requestFocus(FocusNode());
@@ -203,7 +203,7 @@ class _SearchBarState extends State<SearchBar>
   }
 
   ///主体背景构造
-  Widget _buildBg({List<Widget> children}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       height: 72.dp,
       width: MediaQuery.of(context).size.width,

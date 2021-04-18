@@ -1,7 +1,5 @@
 import 'dart:typed_data';
 
-import 'package:flutter/material.dart';
-
 ///添加的文件显示状态
 enum FileInfoStatus {
   ///可删除状态
@@ -17,7 +15,7 @@ enum FileInfoStatus {
 ///文件信息实体
 class FileInfoBean {
   ///网络图片url信息
-  String imagePath;
+  String? imagePath;
 
   ///该文件状态
   FileInfoStatus status;
@@ -26,27 +24,23 @@ class FileInfoBean {
   // Asset imageAsset;
 
   ///id的作用组要是用来删除照片
-  String id;
+  String? id;
 
   ///判断是否是网络图片
   bool isNet;
 
   ///本地数据源全部使用源数据
-  ByteData byteData;
+  ByteData? byteData;
 
   ///图片压缩质量
   static int quality = 60;
 
   FileInfoBean({
     this.id,
-    @required this.isNet,
+    required this.isNet,
     this.imagePath,
-    @required this.status,
+    required this.status,
     // this.imageAsset,
     this.byteData,
   });
-
-  Future<ByteData> getByteData() async {
-    return byteData;
-  }
 }

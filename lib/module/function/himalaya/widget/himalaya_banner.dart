@@ -5,9 +5,9 @@ import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 
 class HimalayaBanner extends StatelessWidget {
   HimalayaBanner({
-    Key key,
-    this.data,
-    this.onTap,
+    Key? key,
+    required this.data,
+    required this.onTap,
   }) : super(key: key);
 
   ///数据源
