@@ -3,7 +3,7 @@ import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
 import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
 
-///举例  todo：暂时还有问题
+///举例
 testHttp() async {
   ///放到主入口初始化,必须
   Http.init();
