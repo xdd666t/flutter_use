@@ -141,7 +141,7 @@ class Http {
   }
 
   ///处理返回数据 处理通用结构
-  static Future<Map> _dealResponse(var response) {
+  static dynamic _dealResponse(var response) {
     //处理数据
 
     return response;
