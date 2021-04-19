@@ -1,24 +1,33 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
-import 'package:flutter_use/app/utils/ui/show.dart';
+import 'package:flutter_use/bean/test/base_info_bean.dart';
+import 'package:flutter_use/generated/json/base/json_convert_content.dart';
 import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
 
-///举例
+///举例：搞定
 testHttp() async {
-  ///放到主入口初始化,必须
-  Http.init();
-
   Log.d('测试Http');
   var result = await Http.get(
     'https://www.wanandroid.com/banner/json',
+    // 'https://api.ixiaowai.cn/api/api.php?return=json',
   );
 
-  showToast(result.toString());
-  Log.i(result);
+  // List list = jsonDecode(result);
+  // List<NetTestBean> mList = list.map((e) {
+  //   return NetTestBean().fromJson(jsonDecode(e));
+  // }).toList();
+  //
+  // showToast(mList[0].title);
+  Log.i(result.toString());
 }
 
 class Http {
-  static late NetRequestCallback _callback;
+  static NetRequestCallback _callback = NetRequestCallback(
+    //请求开始
+    onStart: () => EasyDialog.showLoading(),
+    //请求结束
+    onEnd: () => EasyDialog.dismiss(),
+  );
 
   static void init({
     String baseUrl = '',
@@ -34,8 +43,6 @@ class Http {
       receiveTimeout: receiveTimeout,
       interceptors: interceptors,
     );
-    //处理加载动画
-    _dealLoading();
   }
 
   ///Get请求
@@ -142,23 +149,11 @@ class Http {
 
   ///处理返回数据 处理通用结构
   static dynamic _dealResponse(var response) {
+    Log.i(response);
     //处理数据
+    BaseInfoBean bean = BaseInfoBean().fromJson(response);
 
-    return response;
-  }
-
-  ///处理加载动画
-  static void _dealLoading() {
-    _callback = NetRequestCallback(
-      onStart: () {
-        //请求开始
-        EasyDialog.showLoading();
-      },
-      onEnd: () {
-        //请求结束
-        EasyDialog.dismiss();
-      },
-    );
+    return bean.data;
   }
 
   ///设置请求头
