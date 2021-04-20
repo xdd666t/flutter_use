@@ -1,6 +1,6 @@
-import 'package:flutter_use/bean/test/net_test_bean.dart';
+import 'package:flutter_use/bean/test/net_list_bean.dart';
 
-netTestBeanFromJson(NetTestBean data, Map<String, dynamic> json) {
+netListBeanFromJson(NetListBean data, Map<String, dynamic> json) {
 	if (json['desc'] != null) {
 		data.desc = json['desc'].toString();
 	}
@@ -36,7 +36,7 @@ netTestBeanFromJson(NetTestBean data, Map<String, dynamic> json) {
 	return data;
 }
 
-Map<String, dynamic> netTestBeanToJson(NetTestBean entity) {
+Map<String, dynamic> netListBeanToJson(NetListBean entity) {
 	final Map<String, dynamic> data = new Map<String, dynamic>();
 	data['desc'] = entity.desc;
 	data['id'] = entity.id;

@@ -1,24 +1,37 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
-import 'package:flutter_use/bean/test/base_info_bean.dart';
-import 'package:flutter_use/generated/json/base/json_convert_content.dart';
+import 'package:flutter_use/app/utils/ui/show.dart';
+import 'package:flutter_use/bean/base/base_response.dart';
+import 'package:flutter_use/bean/test/net_list_bean.dart';
+import 'package:flutter_use/bean/test/net_object_bean.dart';
 import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
 
 ///举例：搞定
 testHttp() async {
   Log.d('测试Http');
+
+  //内数据源是实体
+  var query = {'cid': '60'};
   var result = await Http.get(
+    'https://www.wanandroid.com/article/list/0/json',
+    queryParameters: query,
+  );
+
+  var bean = NetObjectBean().fromJson(result);
+  showToast(bean.datas[0].title);
+  Log.i(result);
+
+  //内数据源是列表
+  var resultList = await Http.get(
     'https://www.wanandroid.com/banner/json',
     // 'https://api.ixiaowai.cn/api/api.php?return=json',
   );
 
-  // List list = jsonDecode(result);
-  // List<NetTestBean> mList = list.map((e) {
-  //   return NetTestBean().fromJson(jsonDecode(e));
-  // }).toList();
-  //
-  // showToast(mList[0].title);
-  Log.i(result.toString());
+  var list = (resultList as List).map((e) {
+    return NetListBean().fromJson(e);
+  }).toList();
+  showToast(list[0].title);
+  Log.i(resultList);
 }
 
 class Http {
@@ -149,9 +162,13 @@ class Http {
 
   ///处理返回数据 处理通用结构
   static dynamic _dealResponse(var response) {
-    Log.i(response);
-    //处理数据
-    BaseInfoBean bean = BaseInfoBean().fromJson(response);
+    //处理最外层数据结构
+    BaseResponse bean = BaseResponse.fromJson(response);
+
+    //可以在此处处理一些通用的错误信息
+    // if(bean.errorCode == 1) {
+    //   /// to implement you logic
+    // }
 
     return bean.data;
   }
