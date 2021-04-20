@@ -32,7 +32,7 @@ class ExampleState {
         title: '测试',
         btnInfo: [
           BtnInfo(title: '测试布局', tag: 'testLayout'),
-          BtnInfo(title: '测试网络', tag: 'testNet'),
+          BtnInfo(title: '测试网络（不支持web)', tag: 'testNet'),
         ],
       ),
     ];
