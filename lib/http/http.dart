@@ -194,14 +194,14 @@ class LoadingInterceptor extends Interceptor {
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     //打开加载弹窗
     EasyDialog.showLoading();
-    super.onRequest(options, handler);
+    handler.next(options);
   }
 
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     //关闭弹窗
     EasyDialog.dismiss();
-    super.onResponse(response, handler);
+    handler.next(response);
   }
 
   @override
@@ -211,6 +211,6 @@ class LoadingInterceptor extends Interceptor {
       EasyDialog.dismiss();
     }
     Log.i(err);
-    super.onError(err, handler);
+    handler.next(err);
   }
 }
