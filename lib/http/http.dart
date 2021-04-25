@@ -96,45 +96,8 @@ class Http {
     return response;
   }
 
-  ///Put请求
-  static Future put(
-    String path, {
-    data,
-    Map<String, dynamic>? queryParameters,
-    Options? options,
-    CancelToken? cancelToken,
-  }) async {
-    var response = await request(
-      path,
-      method: HttpMethod.put,
-      data: data,
-      queryParameters: queryParameters,
-      options: options,
-      cancelToken: cancelToken,
-    );
-    return response;
-  }
-
-  ///Delete请求
-  static Future delete(
-    String path, {
-    data,
-    Map<String, dynamic>? queryParameters,
-    Options? options,
-    CancelToken? cancelToken,
-  }) async {
-    var response = await request(
-      path,
-      method: HttpMethod.delete,
-      data: data,
-      queryParameters: queryParameters,
-      options: options,
-      cancelToken: cancelToken,
-    );
-    return response;
-  }
-
   /// Request 操作
+  /// Put、Delete请求之类都请使用Request请求
   ///
   /// 所有类型请求,都是调用此请求
   static Future request(
