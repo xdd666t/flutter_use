@@ -16,4 +16,36 @@ class TagHimalayaConfig {
   ///我创建的听单
   static const String sound = 'sound';
   static const String music = 'music';
- }
+}
+
+class ExampleConfig {
+  ///GetX栏目
+  static const String counterGetX = 'counterGetX';
+  static const String counterEasyGetX = 'counterEasyGetX';
+  static const String counterHighGetX = 'counterHighGetX';
+  static const String jumpGetX = 'jumpGetX';
+  static const String keepAlive = 'keepAlive';
+  static const String autoDispose = 'autoDispose';
+
+  ///Bloc栏目
+  static const String cubit = 'cubit';
+  static const String globalBloc = 'globalBloc';
+
+  ///测试栏目
+  static const String testLayout = 'testLayout';
+  static const String testNet = 'testNet';
+}
+
+class FunctionConfig {
+  ///喜马拉雅 代码规范
+  static const String himalaya = 'himalaya';
+
+  ///SmartDialog
+  static const String smartDialog = 'smartDialog';
+
+  ///dialog封装技巧
+  static const String dialog = 'dialog';
+
+  ///测试
+  static const String test = 'test';
+}

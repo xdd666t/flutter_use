@@ -1,6 +1,8 @@
 import 'package:flutter_use/app/config/route_config.dart';
+import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
 import 'package:flutter_use/http/http.dart';
+import 'package:flutter_use/module/example/getx/auto_dispose/auto_dispose_view.dart';
 import 'package:get/get.dart';
 
 import 'state.dart';
@@ -9,34 +11,37 @@ class ExampleLogic extends GetxController {
   final state = ExampleState();
 
   ///跳转到功能模块
-  void toFun(context, tag) {
+  void toFun(context, tag) async {
     switch (tag) {
-      case 'counterGetX':
+      case ExampleConfig.counterGetX:
         Get.toNamed(RouteConfig.counterGet);
         break;
-      case 'counterEasyGetX':
+      case ExampleConfig.counterEasyGetX:
         Get.toNamed(RouteConfig.counterEasyGet);
         break;
-      case 'counterHighGetX':
+      case ExampleConfig.counterHighGetX:
         Get.toNamed(RouteConfig.counterHighGet);
         break;
-      case 'jumpGetX':
+      case ExampleConfig.jumpGetX:
         Get.toNamed(RouteConfig.jumpOne);
         break;
-      case 'keepAlive':
+      case ExampleConfig.keepAlive:
         Get.toNamed(RouteConfig.keepAliveOne);
         break;
-      case 'cubit':
+      case ExampleConfig.cubit:
         Get.toNamed(RouteConfig.counter);
         break;
-      case 'globalBloc':
+      case ExampleConfig.globalBloc:
         Get.toNamed(RouteConfig.spanOne);
         break;
-      case 'testLayout':
+      case ExampleConfig.testLayout:
         Get.toNamed(RouteConfig.testLayout);
         break;
-      case 'testNet':
+      case ExampleConfig.testNet:
         testHttp();
+        break;
+      case ExampleConfig.autoDispose:
+        Get.to(AutoDisposePage());
         break;
     }
   }

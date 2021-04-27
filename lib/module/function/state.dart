@@ -1,4 +1,5 @@
 import 'package:flutter_use/app/config/image_config.dart';
+import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -12,33 +13,33 @@ class FunctionState {
     items = [
       BtnInfo(
         title: '代码规范',
-        tag: 'himalaya',
+        tag: FunctionConfig.himalaya,
         bg: ImageHimalayaConfig.logo,
         selected: false,
       ),
       BtnInfo(
         title: 'SmartDialog',
-        tag: 'smartDialog',
+        tag: FunctionConfig.smartDialog,
         bg: ImageFunctionConfig.functionBgOne,
       ),
       BtnInfo(
         title: '弹窗控件',
-        tag: 'dialog',
+        tag: FunctionConfig.dialog,
         bg: ImageFunctionConfig.functionBgTwo,
       ),
       BtnInfo(
         title: '测试',
-        tag: 'test',
+        tag: FunctionConfig.test,
         bg: ImageFunctionConfig.functionBgThree,
       ),
       BtnInfo(
         title: '测试',
-        tag: 'test',
+        tag: FunctionConfig.test,
         bg: ImageFunctionConfig.functionBgFour,
       ),
       BtnInfo(
         title: '测试',
-        tag: 'test',
+        tag: FunctionConfig.test,
         bg: ImageFunctionConfig.functionBgFive,
       ),
     ];
