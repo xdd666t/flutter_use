@@ -8,7 +8,7 @@ import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
 
 ///举例：搞定
 testHttp() async {
-  //处理一些初始化设置,此处加了一个自定义response拦截器
+  //处理一些初始化设置，必须
   Http.init();
   Log.d('测试Http');
 
@@ -39,6 +39,8 @@ testHttp() async {
 }
 
 class Http {
+  static LoadingInterceptor loadingInterceptor = LoadingInterceptor();
+
   static void init({
     String baseUrl = '',
     int? connectTimeout,
@@ -57,7 +59,7 @@ class Http {
     //处理通用的实体
     NetUtil.instance.addInterceptor(ResponseInterceptor());
     //处理全局loading
-    NetUtil.instance.addInterceptor(LoadingInterceptor());
+    NetUtil.instance.addInterceptor(loadingInterceptor);
   }
 
   ///Get请求
@@ -66,6 +68,7 @@ class Http {
     Map<String, dynamic>? queryParameters,
     Options? options,
     CancelToken? cancelToken,
+    bool isLoading = true,
   }) async {
     var response = await request(
       path,
@@ -73,6 +76,7 @@ class Http {
       queryParameters: queryParameters,
       options: options,
       cancelToken: cancelToken,
+      isLoading: isLoading,
     );
     return response;
   }
@@ -84,6 +88,7 @@ class Http {
     Map<String, dynamic>? queryParameters,
     Options? options,
     CancelToken? cancelToken,
+    bool isLoading = true,
   }) async {
     var response = await request(
       path,
@@ -92,61 +97,28 @@ class Http {
       queryParameters: queryParameters,
       options: options,
       cancelToken: cancelToken,
-    );
-    return response;
-  }
-
-  ///Put请求
-  static Future put(
-    String path, {
-    data,
-    Map<String, dynamic>? queryParameters,
-    Options? options,
-    CancelToken? cancelToken,
-  }) async {
-    var response = await request(
-      path,
-      method: HttpMethod.put,
-      data: data,
-      queryParameters: queryParameters,
-      options: options,
-      cancelToken: cancelToken,
-    );
-    return response;
-  }
-
-  ///Delete请求
-  static Future delete(
-    String path, {
-    data,
-    Map<String, dynamic>? queryParameters,
-    Options? options,
-    CancelToken? cancelToken,
-  }) async {
-    var response = await request(
-      path,
-      method: HttpMethod.delete,
-      data: data,
-      queryParameters: queryParameters,
-      options: options,
-      cancelToken: cancelToken,
+      isLoading: isLoading,
     );
     return response;
   }
 
   /// Request 操作
+  /// Put、Delete请求之类都请使用Request请求
   ///
   /// 所有类型请求,都是调用此请求
   static Future request(
     String path, {
     HttpMethod method = HttpMethod.get,
     data,
+    bool isLoading = true,
     Map<String, dynamic>? queryParameters,
     Options? options,
     CancelToken? cancelToken,
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
+    loadingInterceptor.isLoading = isLoading;
+
     var response = await NetUtil.instance.request(
       path,
       method: method,
@@ -190,27 +162,30 @@ class ResponseInterceptor extends Interceptor {
 
 ///此处定义一个弹窗加载拦截器
 class LoadingInterceptor extends Interceptor {
+  bool isLoading = true;
+
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     //打开加载弹窗
-    EasyDialog.showLoading();
-    super.onRequest(options, handler);
+    if (isLoading) EasyDialog.showLoading();
+
+    handler.next(options);
   }
 
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     //关闭弹窗
-    EasyDialog.dismiss();
-    super.onResponse(response, handler);
+    if (isLoading && EasyDialog.isExist()) EasyDialog.dismiss();
+
+    handler.next(response);
   }
 
   @override
   void onError(DioError err, ErrorInterceptorHandler handler) {
     //关闭弹窗
-    if (EasyDialog.isExist()) {
-      EasyDialog.dismiss();
-    }
+    if (isLoading && EasyDialog.isExist()) EasyDialog.dismiss();
+
     Log.i(err);
-    super.onError(err, handler);
+    handler.next(err);
   }
 }
