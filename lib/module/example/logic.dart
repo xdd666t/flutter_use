@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_use/app/config/route_config.dart';
 import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
@@ -25,9 +27,6 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.jumpGetX:
         Get.toNamed(RouteConfig.jumpOne);
         break;
-      case ExampleConfig.keepAlive:
-        Get.toNamed(RouteConfig.keepAliveOne);
-        break;
       case ExampleConfig.cubit:
         Get.toNamed(RouteConfig.counter);
         break;
@@ -41,7 +40,12 @@ class ExampleLogic extends GetxController {
         testHttp();
         break;
       case ExampleConfig.autoDispose:
-        Get.to(AutoDisposePage());
+        //不使用GetX路由跳转，会使得GetX无法监控页面
+        //AutoDisposePage模块提供一种自动释放的解决方案
+        Navigator.push(
+          Get.context!,
+          MaterialPageRoute(builder: (context) => AutoDisposePage()),
+        );
         break;
     }
   }
