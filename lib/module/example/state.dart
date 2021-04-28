@@ -1,3 +1,4 @@
+import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:flutter_use/bean/common/tree_info.dart';
 
@@ -10,11 +11,11 @@ class ExampleState {
       TreeTwiceInfo(
         title: 'GetX',
         btnInfo: [
-          BtnInfo(title: '计数器-响应式', tag: 'counterGetX'),
-          BtnInfo(title: '计数器-简单式', tag: 'counterEasyGetX'),
-          BtnInfo(title: '计数器-进阶版', tag: 'counterHighGetX'),
-          BtnInfo(title: '跨页面事件交互', tag: 'jumpGetX'),
-          BtnInfo(title: '保活问题-GetX不销毁', tag: 'keepAlive'),
+          BtnInfo(title: '计数器-响应式', tag: ExampleConfig.counterGetX),
+          BtnInfo(title: '计数器-简单式', tag: ExampleConfig.counterEasyGetX),
+          BtnInfo(title: '计数器-进阶版', tag: ExampleConfig.counterHighGetX),
+          BtnInfo(title: '跨页面事件交互', tag: ExampleConfig.jumpGetX),
+          BtnInfo(title: 'GetX实例-自动释放', tag: ExampleConfig.autoDispose),
         ],
       ),
 
@@ -22,8 +23,8 @@ class ExampleState {
       TreeTwiceInfo(
         title: 'flutter_bloc',
         btnInfo: [
-          BtnInfo(title: 'Cubit', tag: 'cubit'),
-          BtnInfo(title: '全局Bloc', tag: 'globalBloc'),
+          BtnInfo(title: 'Cubit', tag: ExampleConfig.cubit),
+          BtnInfo(title: '全局Bloc', tag: ExampleConfig.globalBloc),
         ],
       ),
 
@@ -31,8 +32,8 @@ class ExampleState {
       TreeTwiceInfo(
         title: '测试',
         btnInfo: [
-          BtnInfo(title: '测试布局', tag: 'testLayout'),
-          BtnInfo(title: '测试网络（不支持web)', tag: 'testNet'),
+          BtnInfo(title: '测试布局', tag: ExampleConfig.testLayout),
+          BtnInfo(title: '测试网络（不支持web)', tag: ExampleConfig.testNet),
         ],
       ),
     ];
