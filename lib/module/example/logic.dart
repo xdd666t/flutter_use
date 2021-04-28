@@ -46,7 +46,6 @@ class ExampleLogic extends GetxController {
           Get.context!,
           MaterialPageRoute(builder: (context) => AutoDisposePage()),
         );
-        // Get.to(AutoDisposePage());
         break;
     }
   }

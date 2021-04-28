@@ -5,27 +5,6 @@ import 'package:get/get.dart';
 
 import 'auto_dispose_logic.dart';
 
-// class AutoDisposePage extends StatelessWidget {
-//   final AutoDisposeLogic logic = AutoDisposeLogic()..onInit();
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return BaseScaffold(
-//       appBar: AppBar(title: const Text('计数器-自动释放')),
-//       body: Center(
-//         child: Obx(
-//           () => Text('点击了 ${logic.count.value} 次',
-//               style: TextStyle(fontSize: 30.0)),
-//         ),
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: () => logic.increase(),
-//         child: const Icon(Icons.add),
-//       ),
-//     );
-//   }
-// }
-
 class AutoDisposePage extends StatefulWidget {
   @override
   _AutoDisposePageState createState() => _AutoDisposePageState();
