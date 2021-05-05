@@ -154,7 +154,7 @@ class ResponseInterceptor extends Interceptor {
 
     //可以在此处处理一些通用的错误信息
     // if(bean.errorCode == 1) {
-    //   /// to implement you logic
+    //   /// to implement your logic
     // }
     response.data = bean.data;
 

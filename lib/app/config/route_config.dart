@@ -1,6 +1,7 @@
 import 'package:flutter_use/module/example/bloc/counter/counter_view.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_view.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_two/span_two_view.dart';
+import 'package:flutter_use/module/example/getx/auto_dispose/auto_dispose_view.dart';
 import 'package:flutter_use/module/example/getx/counter_easy_get/view.dart';
 import 'package:flutter_use/module/example/getx/counter_get/view.dart';
 import 'package:flutter_use/module/example/getx/counter_high_get/view.dart';
@@ -39,8 +40,6 @@ class RouteConfig {
   static final String counterHighGet = "/counterHighGet";
   static final String jumpOne = "/jumpOne";
   static final String jumpTwo = "/jumpOne/jumpTwo";
-  static final String keepAliveOne = "/keepAliveOne";
-  static final String keepAliveTwo = "/keepAliveOne/keepAliveTwo";
 
   ///喜马拉雅
   static final String himalaya = "/himalaya";

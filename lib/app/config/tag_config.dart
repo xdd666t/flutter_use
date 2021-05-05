@@ -24,7 +24,6 @@ class ExampleConfig {
   static const String counterEasyGetX = 'counterEasyGetX';
   static const String counterHighGetX = 'counterHighGetX';
   static const String jumpGetX = 'jumpGetX';
-  static const String keepAlive = 'keepAlive';
   static const String autoDispose = 'autoDispose';
 
   ///Bloc栏目
