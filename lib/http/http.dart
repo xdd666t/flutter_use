@@ -1,16 +1,18 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
+import 'package:flutter_toolkit_easy/flutter_toolkit.dart' as Toolkit;
 import 'package:flutter_use/app/utils/ui/show.dart';
 import 'package:flutter_use/bean/base/base_response.dart';
 import 'package:flutter_use/bean/test/net_list_bean.dart';
 import 'package:flutter_use/bean/test/net_object_bean.dart';
 import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
 
+import 'net/net_util.dart';
+
 ///举例：搞定
 testHttp() async {
   //处理一些初始化设置，必须
   Http.init();
-  Log.d('测试Http');
+  Toolkit.Log.d('测试Http');
 
   // 内数据源是实体
   var query = {'cid': '60'};
@@ -21,7 +23,7 @@ testHttp() async {
 
   var bean = NetObjectBean().fromJson(result);
   showToast(bean.datas[0].title);
-  Log.i(result);
+  Toolkit.Log.i(result);
 
   ///--------------------------------------------------------------
 
@@ -35,7 +37,7 @@ testHttp() async {
     return NetListBean().fromJson(e);
   }).toList();
   showToast(list[0].title);
-  Log.i(resultList);
+  Toolkit.Log.i(resultList);
 }
 
 class Http {
@@ -185,7 +187,7 @@ class LoadingInterceptor extends Interceptor {
     //关闭弹窗
     if (isLoading && EasyDialog.isExist()) EasyDialog.dismiss();
 
-    Log.i(err);
+    Toolkit.Log.i(err);
     handler.next(err);
   }
 }
