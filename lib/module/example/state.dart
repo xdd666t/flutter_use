@@ -28,6 +28,14 @@ class ExampleState {
         ],
       ),
 
+      //Bloc
+      TreeTwiceInfo(
+        title: 'provider',
+        btnInfo: [
+          BtnInfo(title: 'provider', tag: ExampleConfig.provider),
+        ],
+      ),
+
       //测试
       TreeTwiceInfo(
         title: '测试',

@@ -33,6 +33,8 @@ dependencies:
   flutter_picker: 2.0.1
   # 状态管理框架 https://pub.dev/packages/flutter_bloc
   flutter_bloc: 7.0.0
+  # 状态管理框架 https://pub.dev/packages/provider
+  provider: ^5.0.0
   # 图片选择器 https://pub.dev/packages/wechat_assets_picker
   wechat_assets_picker: ^5.1.2
   # 预览图片 https://pub.dev/packages/photo_view

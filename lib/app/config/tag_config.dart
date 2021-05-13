@@ -30,6 +30,9 @@ class ExampleConfig {
   static const String cubit = 'cubit';
   static const String globalBloc = 'globalBloc';
 
+  ///Provider栏目
+  static const String provider = 'provider';
+
   ///测试栏目
   static const String testLayout = 'testLayout';
   static const String testNet = 'testNet';

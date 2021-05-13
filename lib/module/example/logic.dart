@@ -36,6 +36,9 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.testLayout:
         Get.toNamed(RouteConfig.testLayout);
         break;
+      case ExampleConfig.provider:
+        Get.toNamed(RouteConfig.provider);
+        break;
       case ExampleConfig.testNet:
         testHttp();
         break;
