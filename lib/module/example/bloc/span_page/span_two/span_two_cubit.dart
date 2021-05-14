@@ -5,8 +5,8 @@ import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubi
 
 part 'span_two_state.dart';
 
-class SpanTwoCubit extends Cubit<SpanTwoState> {
-  SpanTwoCubit() : super(SpanTwoState().init());
+class BlocSpanTwoCubit extends Cubit<BlocSpanTwoState> {
+  BlocSpanTwoCubit() : super(BlocSpanTwoState().init());
 
   void init(BuildContext context){
     emit(state.init());

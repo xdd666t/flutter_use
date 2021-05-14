@@ -16,28 +16,28 @@ class ExampleLogic extends GetxController {
   void toFun(context, tag) async {
     switch (tag) {
       case ExampleConfig.counterGetX:
-        Get.toNamed(RouteConfig.counterGet);
+        Get.toNamed(RouteConfig.getCounter);
         break;
       case ExampleConfig.counterEasyGetX:
-        Get.toNamed(RouteConfig.counterEasyGet);
+        Get.toNamed(RouteConfig.getCounterEasy);
         break;
       case ExampleConfig.counterHighGetX:
-        Get.toNamed(RouteConfig.counterHighGet);
+        Get.toNamed(RouteConfig.getCounterHigh);
         break;
       case ExampleConfig.jumpGetX:
-        Get.toNamed(RouteConfig.jumpOne);
+        Get.toNamed(RouteConfig.getJumpOne);
         break;
       case ExampleConfig.cubit:
-        Get.toNamed(RouteConfig.counter);
+        Get.toNamed(RouteConfig.blocCounter);
         break;
       case ExampleConfig.globalBloc:
-        Get.toNamed(RouteConfig.spanOne);
+        Get.toNamed(RouteConfig.cubitSpanOne);
         break;
       case ExampleConfig.testLayout:
         Get.toNamed(RouteConfig.testLayout);
         break;
       case ExampleConfig.provider:
-        Get.toNamed(RouteConfig.provider);
+        Get.toNamed(RouteConfig.providerCounter);
         break;
       case ExampleConfig.testNet:
         testHttp();

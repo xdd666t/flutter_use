@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/logic.dart';
 import 'package:get/get.dart';
 
-class JumpOnePage extends StatelessWidget {
+class GetJumpOnePage extends StatelessWidget {
   /// 使用Get.put()实例化你的类，使其对当下的所有子路由可用。
-  final JumpOneLogic logic = Get.put(JumpOneLogic());
+  final GetJumpOneLogic logic = Get.put(GetJumpOneLogic());
 
   @override
   Widget build(BuildContext context) {

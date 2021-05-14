@@ -1,14 +1,14 @@
 part of 'counter_cubit.dart';
 
-class CounterState {
+class BlocCounterState {
   late int count;
 
-  CounterState init() {
-    return CounterState()..count = 0;
+  BlocCounterState init() {
+    return BlocCounterState()..count = 0;
   }
 
-  CounterState clone() {
-    return CounterState()..count = count;
+  BlocCounterState clone() {
+    return BlocCounterState()..count = count;
   }
 }
 

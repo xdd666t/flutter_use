@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class JumpTwoLogic extends GetxController {
+class GetJumpTwoLogic extends GetxController {
   var count = 0.obs;
   var msg = ''.obs;
 

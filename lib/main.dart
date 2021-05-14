@@ -26,8 +26,8 @@ Widget builder(BuildContext context, Widget? child) {
   return MultiBlocProvider(
     providers: [
       ///此处通过BlocProvider创建的Bloc或者Cubit是全局的
-      BlocProvider<SpanOneCubit>(
-        create: (BuildContext context) => SpanOneCubit(),
+      BlocProvider<BlocSpanOneCubit>(
+        create: (BuildContext context) => BlocSpanOneCubit(),
       ),
     ],
     child: FlutterSmartDialog(child: child),

@@ -1,10 +1,13 @@
-import 'package:flutter/material.dart';
+class ProviderCounterState {
+  late int count;
 
-class CounterProvider with ChangeNotifier {
-  int count = 0;
+  ///初始化方法
+  ProviderCounterState init() {
+    return ProviderCounterState()..count = 0;
+  }
 
-  void increment() {
-    count++;
-    notifyListeners();
+  ///克隆方法,针对于刷新界面数据
+  ProviderCounterState clone() {
+    return ProviderCounterState()..count = count;
   }
 }

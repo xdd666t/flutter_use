@@ -4,15 +4,15 @@ import 'package:get/get.dart';
 
 import 'logic.dart';
 
-class CounterEasyGetPage extends StatelessWidget {
-  final CounterEasyGetLogic logic = Get.put(CounterEasyGetLogic());
+class GetCounterEasyPage extends StatelessWidget {
+  final GetCounterEasyLogic logic = Get.put(GetCounterEasyLogic());
 
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
       appBar: AppBar(title: const Text('计数器-简单式')),
       body: Center(
-        child: GetBuilder<CounterEasyGetLogic>(
+        child: GetBuilder<GetCounterEasyLogic>(
           builder: (logicGet) => Text(
             '点击了 ${logicGet.count} 次',
             style: TextStyle(fontSize: 30.0),

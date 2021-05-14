@@ -3,8 +3,8 @@ import 'package:flutter_use/app/base/base_scaffold.dart';
 import 'package:flutter_use/module/example/getx/counter_get/logic.dart';
 import 'package:get/get.dart';
 
-class CounterGetPage extends StatelessWidget {
-  final CounterGetLogic logic = Get.put(CounterGetLogic());
+class GetCounterPage extends StatelessWidget {
+  final GetCounterLogic logic = Get.put(GetCounterLogic());
 
   @override
   Widget build(BuildContext context) {
