@@ -6,7 +6,8 @@ import 'package:flutter_use/module/example/getx/counter_get/view.dart';
 import 'package:flutter_use/module/example/getx/counter_high_get/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_two/view.dart';
-import 'package:flutter_use/module/example/provider/counter/view.dart';
+import 'package:flutter_use/module/example/provider/counter_easy/view.dart';
+import 'package:flutter_use/module/example/provider/counter_high/view.dart';
 import 'package:flutter_use/module/example/test/test_layout/view.dart';
 import 'package:flutter_use/module/function/dialog/view.dart';
 import 'package:flutter_use/module/function/himalaya/view.dart';
@@ -39,7 +40,8 @@ class RouteConfig {
   static final String getJumpTwo = "/jumpOne/jumpTwo";
 
   ///Provider
-  static final String providerCounter = "/providerCounter";
+  static final String proEasyCounterPage = "/proEasyCounterPage";
+  static final String proHighCounterPage = "/proHighCounterPage";
 
   ///别名映射页面
   static final List<GetPage> getPages = [
@@ -56,6 +58,7 @@ class RouteConfig {
     GetPage(name: getJumpOne, page: () => GetJumpOnePage()),
     GetPage(name: getJumpTwo, page: () => GetJumpTwoPage()),
     GetPage(name: himalaya, page: () => HimalayaPage()),
-    GetPage(name: providerCounter, page: () => ProviderCounterPage()),
+    GetPage(name: proEasyCounterPage, page: () => ProEasyCounterPage()),
+    GetPage(name: proHighCounterPage, page: () => ProHighCounterPage()),
   ];
 }

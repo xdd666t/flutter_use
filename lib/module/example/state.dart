@@ -32,7 +32,8 @@ class ExampleState {
       TreeTwiceInfo(
         title: 'provider',
         btnInfo: [
-          BtnInfo(title: 'Provider', tag: ExampleConfig.provider),
+          BtnInfo(title: 'Easy', tag: ExampleConfig.providerEasy),
+          BtnInfo(title: 'High', tag: ExampleConfig.providerHigh),
         ],
       ),
 

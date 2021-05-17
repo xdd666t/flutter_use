@@ -31,7 +31,8 @@ class ExampleConfig {
   static const String globalBloc = 'globalBloc';
 
   ///Provider栏目
-  static const String provider = 'provider';
+  static const String providerEasy = 'providerEasy';
+  static const String providerHigh = 'providerHigh';
 
   ///测试栏目
   static const String testLayout = 'testLayout';
