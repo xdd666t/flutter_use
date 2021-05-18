@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:flutter_use/app/config/route_config.dart';
 import 'package:get/get.dart';
 
@@ -14,8 +13,8 @@ class BlocSpanOneCubit extends Cubit<BlocSpanOneState> {
   }
 
   ///跳转到跨页面
-  void toSpanTwo(BuildContext context) {
-    Get.toNamed(RouteConfig.cubitSpanOne);
+  void toSpanTwo() {
+    Get.toNamed(RouteConfig.cubitSpanTwo);
   }
 
   ///自增

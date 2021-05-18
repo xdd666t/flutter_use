@@ -29,12 +29,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
   get: 4.1.4
-  # 时间滚轮选择器 https://pub.dev/packages/flutter_picker
-  flutter_picker: 2.0.1
   # 状态管理框架 https://pub.dev/packages/flutter_bloc
   flutter_bloc: 7.0.0
   # 状态管理框架 https://pub.dev/packages/provider
   provider: ^5.0.0
+  # 时间滚轮选择器 https://pub.dev/packages/flutter_picker
+  flutter_picker: 2.0.1
   # 图片选择器 https://pub.dev/packages/wechat_assets_picker
   wechat_assets_picker: ^5.1.2
   # 预览图片 https://pub.dev/packages/photo_view

@@ -33,6 +33,8 @@ class ExampleConfig {
   ///Provider栏目
   static const String providerEasy = 'providerEasy';
   static const String providerHigh = 'providerHigh';
+  static const String providerExtended = 'providerExtended';
+  static const String providerSpanOne = 'providerSpanOne';
 
   ///测试栏目
   static const String testLayout = 'testLayout';

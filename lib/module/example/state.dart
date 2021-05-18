@@ -32,8 +32,10 @@ class ExampleState {
       TreeTwiceInfo(
         title: 'provider',
         btnInfo: [
-          BtnInfo(title: 'Easy', tag: ExampleConfig.providerEasy),
-          BtnInfo(title: 'High', tag: ExampleConfig.providerHigh),
+          BtnInfo(title: '计数器-简单版', tag: ExampleConfig.providerEasy),
+          BtnInfo(title: '计数器-进阶版', tag: ExampleConfig.providerHigh),
+          BtnInfo(title: '计数器-拓展版', tag: ExampleConfig.providerExtended),
+          BtnInfo(title: '全局Provider', tag: ExampleConfig.providerSpanOne),
         ],
       ),
 

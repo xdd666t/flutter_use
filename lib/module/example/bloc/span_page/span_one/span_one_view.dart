@@ -8,7 +8,6 @@ class CubitSpanOnePage extends StatefulWidget {
 }
 
 class _SpanOnePageState extends State<CubitSpanOnePage> {
-
   @override
   void initState() {
     BlocProvider.of<BlocSpanOneCubit>(context).init();
@@ -25,8 +24,7 @@ class _SpanOnePageState extends State<CubitSpanOnePage> {
       backgroundColor: Colors.white,
       appBar: AppBar(title: Text('跨页面-One')),
       floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            BlocProvider.of<BlocSpanOneCubit>(context).toSpanTwo(context),
+        onPressed: () => BlocProvider.of<BlocSpanOneCubit>(context).toSpanTwo(),
         child: const Icon(Icons.arrow_forward_outlined),
       ),
       body: Center(

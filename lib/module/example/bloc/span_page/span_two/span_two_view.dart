@@ -19,7 +19,7 @@ class CubitSpanTwoPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           //改变SpanOneCubit模块数据
-          BlocProvider.of<BlocSpanTwoCubit>(context).increase();
+          BlocProvider.of<BlocSpanOneCubit>(context).increase();
 
           //改变当前页面数据
           BlocProvider.of<BlocSpanTwoCubit>(context).increase();
