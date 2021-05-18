@@ -21,7 +21,7 @@ class ExampleState {
 
       //Bloc
       TreeTwiceInfo(
-        title: 'flutter_bloc',
+        title: 'Bloc',
         btnInfo: [
           BtnInfo(title: 'Cubit', tag: ExampleConfig.cubit),
           BtnInfo(title: '全局Bloc', tag: ExampleConfig.globalBloc),
@@ -30,7 +30,7 @@ class ExampleState {
 
       //Provider
       TreeTwiceInfo(
-        title: 'provider',
+        title: 'Provider',
         btnInfo: [
           BtnInfo(title: '计数器-简单版', tag: ExampleConfig.providerEasy),
           BtnInfo(title: '计数器-进阶版', tag: ExampleConfig.providerHigh),
