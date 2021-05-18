@@ -8,5 +8,4 @@ class ProSpanTwoProvider extends ChangeNotifier {
     count++;
     notifyListeners();
   }
-
 }

@@ -6,19 +6,16 @@ import 'provider.dart';
 class ProSpanOnePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (BuildContext context) => ProSpanOneProvider(),
-      child: Consumer<ProSpanOneProvider>(
-        builder: (context, provider, child) {
-          return _buildConsumer(context, provider);
-        },
-      ),
+    return Consumer<ProSpanOneProvider>(
+      builder: (context, provider, child) {
+        return _buildConsumer(context, provider);
+      },
     );
   }
 
   Widget _buildConsumer(BuildContext context, ProSpanOneProvider provider) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Provider-SpanOne范例')),
+      appBar: AppBar(title: const Text('SpanOne范例')),
       body: Center(
         child: Text('点击了 ${provider.count} 次', style: TextStyle(fontSize: 30.0)),
       ),

@@ -20,14 +20,14 @@ class ProSpanTwoPage extends StatelessWidget {
   Widget _buildConsumer(BuildContext context, ProSpanTwoProvider provider) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text('Provider-SpanTwo范例')),
+      appBar: AppBar(title: Text('SpanTwo范例')),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           //自增
           provider.increase();
 
           //改变ProSpanOnePage页面数据
-          Provider.of<ProSpanOneProvider>(context, listen: true).increase();
+          Provider.of<ProSpanOneProvider>(context, listen: false).increase();
         },
         child: const Icon(Icons.add),
       ),
@@ -39,5 +39,4 @@ class ProSpanTwoPage extends StatelessWidget {
       ),
     );
   }
-
 }

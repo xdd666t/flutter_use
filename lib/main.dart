@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 Widget _builder(BuildContext context, Widget? child) {
   return MultiBlocProvider(
     providers: [
-      //此处通过BlocProvider创建的Bloc或者Cubit是全局的
+      //此处通过MultiBlocProvider创建的Bloc或者Cubit是全局的
       BlocProvider.value(value: BlocSpanOneCubit()),
     ],
     child: MultiProvider(
