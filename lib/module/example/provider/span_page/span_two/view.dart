@@ -5,19 +5,17 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class ProSpanTwoPage extends StatelessWidget {
+  final provider = ProSpanTwoProvider();
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (BuildContext context) => ProSpanTwoProvider(),
-      child: Consumer<ProSpanTwoProvider>(
-        builder: (ctx, provider, child) {
-          return _buildConsumer(ctx, provider);
-        },
-      ),
+      create: (BuildContext context) => provider,
+      child: _buildPage(context),
     );
   }
 
-  Widget _buildConsumer(BuildContext context, ProSpanTwoProvider provider) {
+  Widget _buildPage(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(title: Text('SpanTwo范例')),
@@ -29,13 +27,15 @@ class ProSpanTwoPage extends StatelessWidget {
           //改变ProSpanOnePage页面数据
           Provider.of<ProSpanOneProvider>(context, listen: false).increase();
         },
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
       body: Center(
-        child: Text(
-          '当前点击了 ${provider.count} 次',
-          style: TextStyle(fontSize: 30.0),
-        ),
+        child: Consumer<ProSpanTwoProvider>(builder: (_, __, ___) {
+          return Text(
+            '当前点击了 ${provider.count} 次',
+            style: TextStyle(fontSize: 30.0),
+          );
+        }),
       ),
     );
   }

@@ -3,21 +3,24 @@ import 'package:provider/provider.dart';
 
 import 'provider.dart';
 
+// ignore: must_be_immutable
 class ProSpanOnePage extends StatelessWidget {
+  //不用final 防止全局刷新报错
+  late ProSpanOneProvider provider;
+
   @override
   Widget build(BuildContext context) {
-    return Consumer<ProSpanOneProvider>(
-      builder: (context, provider, child) {
-        return _buildConsumer(context, provider);
-      },
-    );
-  }
+    provider = Provider.of<ProSpanOneProvider>(context, listen: false);
 
-  Widget _buildConsumer(BuildContext context, ProSpanOneProvider provider) {
     return Scaffold(
       appBar: AppBar(title: const Text('SpanOne范例')),
       body: Center(
-        child: Text('点击了 ${provider.count} 次', style: TextStyle(fontSize: 30.0)),
+        child: Consumer<ProSpanOneProvider>(builder: (_, __, ___) {
+          return Text(
+            '点击了 ${provider.count} 次',
+            style: TextStyle(fontSize: 30.0),
+          );
+        }),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => provider.toSpanTwo(),
