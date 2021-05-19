@@ -34,7 +34,6 @@ class ExampleState {
         btnInfo: [
           BtnInfo(title: '计数器-简单版', tag: ExampleConfig.providerEasy),
           BtnInfo(title: '计数器-进阶版', tag: ExampleConfig.providerHigh),
-          BtnInfo(title: '计数器-拓展版', tag: ExampleConfig.providerExtended),
           BtnInfo(title: '全局Provider', tag: ExampleConfig.providerSpanOne),
         ],
       ),

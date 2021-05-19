@@ -4,23 +4,26 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class ProEasyCounterPage extends StatelessWidget {
+  final provider = ProEasyCounterProvider();
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (BuildContext context) => ProEasyCounterProvider(),
-      child: Consumer<ProEasyCounterProvider>(
-        builder: (context, provider, child) {
-          return _buildConsumer(context, provider);
-        },
-      ),
+      create: (BuildContext context) => provider,
+      child: _buildPage(),
     );
   }
 
-  Widget _buildConsumer(BuildContext context, ProEasyCounterProvider provider) {
+  Widget _buildPage() {
     return Scaffold(
       appBar: AppBar(title: const Text('Provider-Easy范例')),
       body: Center(
-        child: Text('点击了 ${provider.count} 次', style: TextStyle(fontSize: 30.0)),
+        child: Consumer<ProEasyCounterProvider>(builder: (_, __, ___) {
+          return Text(
+            '点击了 ${provider.count} 次',
+            style: TextStyle(fontSize: 30.0),
+          );
+        }),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => provider.increment(),

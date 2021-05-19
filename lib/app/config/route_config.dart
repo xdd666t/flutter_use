@@ -7,7 +7,6 @@ import 'package:flutter_use/module/example/getx/counter_high_get/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_two/view.dart';
 import 'package:flutter_use/module/example/provider/counter_easy/view.dart';
-import 'package:flutter_use/module/example/provider/counter_extended/view.dart';
 import 'package:flutter_use/module/example/provider/counter_high/view.dart';
 import 'package:flutter_use/module/example/provider/span_page/span_one/view.dart';
 import 'package:flutter_use/module/example/provider/span_page/span_two/view.dart';
@@ -45,7 +44,6 @@ class RouteConfig {
   ///Provider
   static final String proEasyCounterPage = "/proEasyCounterPage";
   static final String proHighCounterPage = "/proHighCounterPage";
-  static final String proExtendedCounterPage = "/proExtendedCounterPage";
   static final String proSpanOnePage = "/proSpanOnePage";
   static final String proSpanTwoPage = "/proSpanOnePage/proSpanTwoPage";
 
@@ -66,7 +64,6 @@ class RouteConfig {
     GetPage(name: himalaya, page: () => HimalayaPage()),
     GetPage(name: proEasyCounterPage, page: () => ProEasyCounterPage()),
     GetPage(name: proHighCounterPage, page: () => ProHighCounterPage()),
-    GetPage(name: proExtendedCounterPage, page: () => ProExtendedCounterPage()),
     GetPage(name: proSpanOnePage, page: () => ProSpanOnePage()),
     GetPage(name: proSpanTwoPage, page: () => ProSpanTwoPage()),
   ];
