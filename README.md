@@ -8,6 +8,18 @@
 
 ## 代码路径
 
+- 代码规范：[Flutter 改善套娃地狱问题（仿喜马拉雅PC页面举例）](https://juejin.cn/post/6939774499399139336)
+  - 每一个靓仔应该去了解了解的奇技淫巧
+
+```dart
+├─lib
+│  ├─module
+│  │  ├─function
+│  │  │  ├─himalaya       ///仿喜马拉雅PC代码在此目录下
+│  │  │  │  └─widget
+```
+
+
 - GetX：[Flutter GetX使用---简洁的魅力！](https://juejin.cn/post/6924104248275763208)
 
 ```dart
@@ -23,16 +35,6 @@
 │  │  │  │      └─jump_two
 ```
 
-- 代码规范：[Flutter 改善套娃地狱问题（仿喜马拉雅PC页面举例）](https://juejin.cn/post/6939774499399139336)
-  - 每一个靓仔应该去了解了解的奇技淫巧
-
-```dart
-├─lib
-│  ├─module
-│  │  ├─function
-│  │  │  ├─himalaya       ///仿喜马拉雅PC代码在此目录下
-│  │  │  │  └─widget
-```
 
 ## 关于编译
 
