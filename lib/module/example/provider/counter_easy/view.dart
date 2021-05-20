@@ -16,7 +16,7 @@ class ProEasyCounterPage extends StatelessWidget {
 
   Widget _buildPage() {
     return Scaffold(
-      appBar: AppBar(title: const Text('Provider-Easy范例')),
+      appBar: AppBar(title: Text('Provider-Easy范例')),
       body: Center(
         child: Consumer<ProEasyCounterProvider>(builder: (_, __, ___) {
           return Text(

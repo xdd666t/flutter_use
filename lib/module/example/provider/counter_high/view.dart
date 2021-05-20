@@ -16,7 +16,7 @@ class ProHighCounterPage extends StatelessWidget {
 
   Widget _buildPage() {
     return Scaffold(
-      appBar: AppBar(title: const Text('Provider-High范例')),
+      appBar: AppBar(title: Text('Provider-High范例')),
       body: Center(
         child: Consumer<ProHighCounterProvider>(builder: (_, __, ___) {
           return Text(
@@ -34,7 +34,7 @@ class ProHighCounterPage extends StatelessWidget {
 
   Widget _buildSelector() {
     return Scaffold(
-      appBar: AppBar(title: const Text('Provider-Extended范例')),
+      appBar: AppBar(title: Text('Provider-Extended范例')),
       body: Center(
         child: Selector(
           shouldRebuild: (previous, next) {
