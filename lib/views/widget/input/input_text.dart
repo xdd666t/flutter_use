@@ -102,10 +102,10 @@ class _InputTextState extends State<InputText> {
     focusNode = FocusNode();
     //监听焦点获得和失去
     focusNode.addListener(() {
-      if (focusNode.hasFocus && widget.onGetFocus != null) {
-        widget.onGetFocus!();
-      } else if (!focusNode.hasFocus && widget.onLoseFocus != null) {
-        widget.onLoseFocus!();
+      if (focusNode.hasFocus) {
+        widget.onGetFocus?.call();
+      } else if (!focusNode.hasFocus) {
+        widget.onLoseFocus?.call();
       }
     });
 
@@ -156,15 +156,11 @@ class _InputTextState extends State<InputText> {
             ),
         onChanged: (msg) {
           //监听输入的数值
-          if (widget.onChanged != null) {
-            widget.onChanged!(msg);
-          }
+          widget.onChanged?.call(msg);
         },
         onEditingComplete: widget.onComplete,
         onTap: () {
-          if (widget.onTap != null) {
-            widget.onTap!();
-          }
+          widget.onTap?.call();
         },
       ),
     );

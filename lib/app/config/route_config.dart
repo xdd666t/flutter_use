@@ -10,6 +10,7 @@ import 'package:flutter_use/module/example/provider/counter_easy/view.dart';
 import 'package:flutter_use/module/example/provider/counter_high/view.dart';
 import 'package:flutter_use/module/example/provider/span_page/span_one/view.dart';
 import 'package:flutter_use/module/example/provider/span_page/span_two/view.dart';
+import 'package:flutter_use/module/example/provider/test_notifier/view.dart';
 import 'package:flutter_use/module/example/test/test_layout/view.dart';
 import 'package:flutter_use/module/function/dialog/view.dart';
 import 'package:flutter_use/module/function/himalaya/view.dart';
@@ -46,6 +47,7 @@ class RouteConfig {
   static final String proHighCounterPage = "/proHighCounterPage";
   static final String proSpanOnePage = "/proSpanOnePage";
   static final String proSpanTwoPage = "/proSpanOnePage/proSpanTwoPage";
+  static final String testNotifierPage = "/testNotifierPage";
 
   ///别名映射页面
   static final List<GetPage> getPages = [
@@ -66,5 +68,6 @@ class RouteConfig {
     GetPage(name: proHighCounterPage, page: () => ProHighCounterPage()),
     GetPage(name: proSpanOnePage, page: () => ProSpanOnePage()),
     GetPage(name: proSpanTwoPage, page: () => ProSpanTwoPage()),
+    GetPage(name: testNotifierPage, page: () => TestNotifierPage()),
   ];
 }

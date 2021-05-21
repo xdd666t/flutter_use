@@ -45,6 +45,9 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.providerSpanOne:
         Get.toNamed(RouteConfig.proSpanOnePage);
         break;
+      case ExampleConfig.testNotifier:
+        Get.toNamed(RouteConfig.testNotifierPage);
+        break;
       case ExampleConfig.testNet:
         testHttp();
         break;

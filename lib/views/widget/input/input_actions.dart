@@ -43,9 +43,7 @@ class InputActions extends StatelessWidget {
           focusNode: focusNode,
           displayDoneButton: true,
           onTapAction: () {
-            if (doneCallBack != null) {
-              doneCallBack();
-            }
+            doneCallBack?.call();
 
             focusNode.unfocus();
           },
@@ -53,10 +51,7 @@ class InputActions extends StatelessWidget {
             (node) {
               return GestureDetector(
                 onTap: () {
-                  if (doneCallBack != null) {
-                    doneCallBack();
-                  }
-
+                  doneCallBack?.call();
                   node.unfocus();
                 },
                 child: Container(
