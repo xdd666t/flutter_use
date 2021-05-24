@@ -187,7 +187,6 @@ class LoadingInterceptor extends Interceptor {
     //关闭弹窗
     if (isLoading && EasyDialog.isExist()) EasyDialog.dismiss();
 
-    Toolkit.Log.i(err);
     handler.next(err);
   }
 }
