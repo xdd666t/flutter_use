@@ -33,7 +33,9 @@ Widget _builder(BuildContext context, Widget? child) {
     child: MultiProvider(
       providers: [
         //此处通过MultiProvider创建的Provider是全局的
-        ChangeNotifierProvider.value(value: ProSpanOneProvider())
+        ChangeNotifierProvider.value(value: ProSpanOneProvider()),
+
+        ChangeNotifierProvider(create: (context) => ProSpanOneProvider()),
       ],
       child: FlutterSmartDialog(child: child),
     ),
