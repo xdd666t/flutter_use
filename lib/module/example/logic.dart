@@ -48,6 +48,9 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.testNotifier:
         Get.toNamed(RouteConfig.testNotifierPage);
         break;
+      case ExampleConfig.customBuilder:
+        Get.toNamed(RouteConfig.customBuilderPage);
+        break;
       case ExampleConfig.testNet:
         testHttp();
         break;

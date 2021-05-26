@@ -36,6 +36,7 @@ class ExampleState {
           BtnInfo(title: '计数器-进阶版', tag: ExampleConfig.providerHigh),
           BtnInfo(title: '全局Provider', tag: ExampleConfig.providerSpanOne),
           BtnInfo(title: 'ChangeNotifier使用', tag: ExampleConfig.testNotifier),
+          BtnInfo(title: '自定义Builder', tag: ExampleConfig.customBuilder),
         ],
       ),
 

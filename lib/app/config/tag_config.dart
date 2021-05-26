@@ -35,6 +35,7 @@ class ExampleConfig {
   static const String providerHigh = 'providerHigh';
   static const String providerSpanOne = 'providerSpanOne';
   static const String testNotifier = 'testNotifier';
+  static const String customBuilder = 'customBuilder';
 
   ///测试栏目
   static const String testLayout = 'testLayout';
