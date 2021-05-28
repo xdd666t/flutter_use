@@ -27,7 +27,9 @@ class CustomBuilderPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => provider.increment(),
-        child: Icon(Icons.add),
+        child: EasyBuilder<CustomBuilderProvider>(
+          () => Icon(Icons.add),
+        ),
       ),
     );
   }
