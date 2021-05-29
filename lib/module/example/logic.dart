@@ -15,6 +15,8 @@ class ExampleLogic extends GetxController {
   ///跳转到功能模块
   void toFun(context, tag) async {
     switch (tag) {
+
+      ///GetX页面跳转
       case ExampleConfig.counterGetX:
         Get.toNamed(RouteConfig.getCounter);
         break;
@@ -27,15 +29,24 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.jumpGetX:
         Get.toNamed(RouteConfig.getJumpOne);
         break;
+      case ExampleConfig.autoDispose:
+        //不使用GetX路由跳转，会使得GetX无法监控页面
+        //AutoDisposePage模块提供一种自动释放的解决方案
+        Navigator.push(
+          Get.context!,
+          MaterialPageRoute(builder: (context) => AutoDisposePage()),
+        );
+        break;
+
+      ///Bloc页面跳转
       case ExampleConfig.cubit:
         Get.toNamed(RouteConfig.blocCounter);
         break;
       case ExampleConfig.globalBloc:
         Get.toNamed(RouteConfig.cubitSpanOne);
         break;
-      case ExampleConfig.testLayout:
-        Get.toNamed(RouteConfig.testLayout);
-        break;
+
+      ///Provider页面跳转
       case ExampleConfig.providerEasy:
         Get.toNamed(RouteConfig.proEasyCounterPage);
         break;
@@ -51,16 +62,16 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.customBuilder:
         Get.toNamed(RouteConfig.customBuilderPage);
         break;
+      case ExampleConfig.counterEasyP:
+        Get.toNamed(RouteConfig.counterEasyPPage);
+        break;
+
+      ///测试模块
       case ExampleConfig.testNet:
         testHttp();
         break;
-      case ExampleConfig.autoDispose:
-        //不使用GetX路由跳转，会使得GetX无法监控页面
-        //AutoDisposePage模块提供一种自动释放的解决方案
-        Navigator.push(
-          Get.context!,
-          MaterialPageRoute(builder: (context) => AutoDisposePage()),
-        );
+      case ExampleConfig.testLayout:
+        Get.toNamed(RouteConfig.testLayout);
         break;
     }
   }
