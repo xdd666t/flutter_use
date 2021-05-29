@@ -37,6 +37,7 @@ class ExampleConfig {
   static const String testNotifier = 'testNotifier';
   static const String customBuilder = 'customBuilder';
   static const String counterEasyP = 'counterEasyP';
+  static const String counterGlobalEasyP = 'counterGlobalEasyP';
 
   ///测试栏目
   static const String testLayout = 'testLayout';

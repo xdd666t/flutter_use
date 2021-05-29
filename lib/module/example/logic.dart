@@ -65,6 +65,9 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.counterEasyP:
         Get.toNamed(RouteConfig.counterEasyPPage);
         break;
+      case ExampleConfig.counterGlobalEasyP:
+        Get.toNamed(RouteConfig.counterGlobalEasyPPage);
+        break;
 
       ///测试模块
       case ExampleConfig.testNet:

@@ -38,6 +38,7 @@ class ExampleState {
           BtnInfo(title: 'ChangeNotifier使用', tag: ExampleConfig.testNotifier),
           BtnInfo(title: '自定义Builder', tag: ExampleConfig.customBuilder),
           BtnInfo(title: '自定义状态管理框架-EasyP', tag: ExampleConfig.counterEasyP),
+          BtnInfo(title: '自定义状态管理框架-EasyP全局', tag: ExampleConfig.counterGlobalEasyP),
         ],
       ),
 

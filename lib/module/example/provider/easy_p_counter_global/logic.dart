@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CounterEasyP extends ChangeNotifier {
+class CounterGlobalEasyP extends ChangeNotifier {
   int count = 0;
 
   void increment() {

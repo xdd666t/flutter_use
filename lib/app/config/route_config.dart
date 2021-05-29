@@ -10,6 +10,7 @@ import 'package:flutter_use/module/example/provider/counter_easy/view.dart';
 import 'package:flutter_use/module/example/provider/counter_high/view.dart';
 import 'package:flutter_use/module/example/provider/custom_builder/view.dart';
 import 'package:flutter_use/module/example/provider/easy_p_counter/view.dart';
+import 'package:flutter_use/module/example/provider/easy_p_counter_global/view.dart';
 import 'package:flutter_use/module/example/provider/span_page/span_one/view.dart';
 import 'package:flutter_use/module/example/provider/span_page/span_two/view.dart';
 import 'package:flutter_use/module/example/provider/test_notifier/view.dart';
@@ -52,6 +53,7 @@ class RouteConfig {
   static final String testNotifierPage = "/testNotifierPage";
   static final String customBuilderPage = "/customBuilderPage";
   static final String counterEasyPPage = "/counterEasyPPage";
+  static final String counterGlobalEasyPPage = "/counterGlobalEasyPPage";
 
   ///别名映射页面
   static final List<GetPage> getPages = [
@@ -75,5 +77,6 @@ class RouteConfig {
     GetPage(name: testNotifierPage, page: () => TestNotifierPage()),
     GetPage(name: customBuilderPage, page: () => CustomBuilderPage()),
     GetPage(name: counterEasyPPage, page: () => CounterEasyPPage()),
+    GetPage(name: counterGlobalEasyPPage, page: () => CounterGlobalEasyPPage()),
   ];
 }
