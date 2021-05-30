@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 
 class ChangeNotifierEasyP<T extends ChangeNotifier> extends InheritedWidget {
   ChangeNotifierEasyP({
