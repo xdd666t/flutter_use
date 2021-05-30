@@ -22,6 +22,7 @@ class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
   bool _firstBuild = true;
   bool _shouldNotify = false;
   late T _value;
+  late void Function() callBack;
 
   T get value => _value;
 
@@ -31,7 +32,7 @@ class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
       _firstBuild = false;
       _value = (widget as ChangeNotifierEasyP<T>).create(this);
 
-      _value.addListener(() {
+      _value.addListener(callBack = () {
         // 处理刷新逻辑，此处无法直接调用notifyClients
         // 会导致owner!._debugCurrentBuildTarget为null，触发断言条件，无法向后执行
         _shouldNotify = true;
@@ -58,9 +59,9 @@ class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
     // super.notifyDependent(oldWidget, dependent);
   }
 
-
   @override
   void unmount() {
+    _value.removeListener(callBack);
     _value.dispose();
     super.unmount();
   }
