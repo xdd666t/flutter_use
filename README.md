@@ -20,6 +20,26 @@
 ```
 
 
+- Provider
+
+```dart
+├─lib
+│  ├─module
+│  │  ├─example
+│  │  │  ├─provider        /// rovider演示代码在此目录下
+│  │  │  │  ├─counter_easy
+│  │  │  │  ├─counter_high
+│  │  │  │  ├─custom_builder
+│  │  │  │  ├─easy_p
+│  │  │  │  ├─easy_p_counter
+│  │  │  │  ├─easy_p_counter_global
+│  │  │  │  ├─span_page
+│  │  │  │  │  ├─span_one
+│  │  │  │  │  └─span_two
+│  │  │  │  └─test_notifier
+```
+
+
 - GetX：[Flutter GetX使用---简洁的魅力！](https://juejin.cn/post/6924104248275763208)
 
 ```dart
