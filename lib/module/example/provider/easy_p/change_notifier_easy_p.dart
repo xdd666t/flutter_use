@@ -57,4 +57,11 @@ class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
     dependent.markNeedsBuild();
     // super.notifyDependent(oldWidget, dependent);
   }
+
+
+  @override
+  void unmount() {
+    _value.dispose();
+    super.unmount();
+  }
 }
