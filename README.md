@@ -21,7 +21,7 @@
 ```
 
 
-- Provider
+- Provider：[使用+源码剖析：Flutter Provider的另一面（万字图文）](https://juejin.cn/post/6968272002515894303)
 
 ```dart
 ├─lib
