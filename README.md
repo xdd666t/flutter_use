@@ -27,7 +27,7 @@
 ├─lib
 │  ├─module
 │  │  ├─example
-│  │  │  ├─provider        /// rovider演示代码在此目录下
+│  │  │  ├─provider        /// provider演示代码在此目录下
 │  │  │  │  ├─counter_easy
 │  │  │  │  ├─counter_high
 │  │  │  │  ├─custom_builder
