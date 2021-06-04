@@ -13,9 +13,9 @@ class GetCounterEasyPage extends StatelessWidget {
       appBar: AppBar(title: const Text('计数器-简单式')),
       body: Center(
         child: GetBuilder<GetCounterEasyLogic>(
-          builder: (logicGet) {
+          builder: (logic) {
             return Text(
-              '点击了 ${logicGet.count} 次',
+              '点击了 ${logic.count} 次',
               style: TextStyle(fontSize: 30.0),
             );
           },
