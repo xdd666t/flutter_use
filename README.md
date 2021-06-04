@@ -4,7 +4,8 @@
 
 - Web：[https://cnad666.github.io/flutter_use/web/index.html](https://cnad666.github.io/flutter_use/web/index.html)
   - 编译的web代码及其资源在docs文件夹下，这边github page路径选择的是docs
-- Windows：[Windows平台安装包](https://wwa.lanzous.com/izW8Rmwws6f)
+- Windows：[Windows平台安装包](https://wwa.lanzoui.com/b099z6w6d)
+  - 密码：xdd666
 
 ## 代码路径
 
@@ -17,6 +18,26 @@
 │  │  ├─function
 │  │  │  ├─himalaya       ///仿喜马拉雅PC代码在此目录下
 │  │  │  │  └─widget
+```
+
+
+- Provider：[使用+源码剖析：Flutter Provider的另一面（万字图文）](https://juejin.cn/post/6968272002515894303)
+
+```dart
+├─lib
+│  ├─module
+│  │  ├─example
+│  │  │  ├─provider        /// provider演示代码在此目录下
+│  │  │  │  ├─counter_easy
+│  │  │  │  ├─counter_high
+│  │  │  │  ├─custom_builder
+│  │  │  │  ├─easy_p
+│  │  │  │  ├─easy_p_counter
+│  │  │  │  ├─easy_p_counter_global
+│  │  │  │  ├─span_page
+│  │  │  │  │  ├─span_one
+│  │  │  │  │  └─span_two
+│  │  │  │  └─test_notifier
 ```
 
 
