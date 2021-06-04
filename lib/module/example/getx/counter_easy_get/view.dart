@@ -13,10 +13,12 @@ class GetCounterEasyPage extends StatelessWidget {
       appBar: AppBar(title: const Text('计数器-简单式')),
       body: Center(
         child: GetBuilder<GetCounterEasyLogic>(
-          builder: (logicGet) => Text(
-            '点击了 ${logicGet.count} 次',
-            style: TextStyle(fontSize: 30.0),
-          ),
+          builder: (logicGet) {
+            return Text(
+              '点击了 ${logicGet.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
+          },
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -26,3 +28,25 @@ class GetCounterEasyPage extends StatelessWidget {
     );
   }
 }
+
+// class Counter extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Text('Counter'),
+//     );
+//   }
+// }
+
+// class Counter extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: GetBuilder<SubjectController>(
+//         builder: (controller) {
+//           return Text('Counter');
+//         },
+//       ),
+//     );
+//   }
+// }

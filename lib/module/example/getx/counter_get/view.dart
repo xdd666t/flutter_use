@@ -11,15 +11,37 @@ class GetCounterPage extends StatelessWidget {
     return BaseScaffold(
       appBar: AppBar(title: const Text('计数器-响应式')),
       body: Center(
-        child: Obx(
-          () => Text('点击了 ${logic.count.value} 次',
-              style: TextStyle(fontSize: 30.0)),
-        ),
+        child: Obx(() {
+          return Text(
+            '点击了 ${logic.count.value} 次',
+            style: TextStyle(fontSize: 30.0),
+          );
+        }),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => logic.increase(),
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
     );
   }
 }
+
+// class Counter extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Text('Counter'),
+//     );
+//   }
+// }
+
+// class Counter extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Obx(() {
+//         return Text('Counter');
+//       }),
+//     );
+//   }
+// }
