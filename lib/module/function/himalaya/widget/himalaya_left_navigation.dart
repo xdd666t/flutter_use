@@ -33,16 +33,17 @@ class HimalayaLeftNavigation extends StatelessWidget {
           //子栏目 - 列表
           _buildSubItemListBg(
             data: item,
-            subBuilder: (subItem) => _buildSubItemBg(data: subItem, children: [
-              //选中红色长方形条块
-              _buildRedTag(subItem),
+            subBuilder: (subItem) =>
+                _buildSubItemBg(data: subItem, children: [
+                  //选中红色长方形条块
+                  _buildRedTag(subItem),
 
-              //图标
-              _buildItemIcon(subItem),
+                  //图标
+                  _buildItemIcon(subItem),
 
-              //描述
-              _buildItemDesc(subItem),
-            ]),
+                  //描述
+                  _buildItemDesc(subItem),
+                ]),
           ),
         ];
       }),
@@ -50,8 +51,8 @@ class HimalayaLeftNavigation extends StatelessWidget {
   }
 
   Widget _buildItemDesc(Rx<HimalayaSubItemInfo> subItem) {
-    return Obx(
-      () => Container(
+    return Obx(() {
+      return Container(
         margin: EdgeInsets.only(left: 10.dp),
         child: Text(
           subItem().title,
@@ -59,29 +60,29 @@ class HimalayaLeftNavigation extends StatelessWidget {
             color: subItem().isSelected ? Colors.red : Colors.black,
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 
   Widget _buildItemIcon(Rx<HimalayaSubItemInfo> subItem) {
-    return Obx(
-      () => Icon(
-        subItem().icon,
+    return Obx(() {
+      return Icon(
+        subItem.value.icon,
         size: 18,
         color: subItem().isSelected ? Colors.red : Colors.black,
-      ),
-    );
+      );
+    });
   }
 
   Widget _buildRedTag(Rx<HimalayaSubItemInfo> subItem) {
-    return Obx(
-      () => Container(
+    return Obx(() {
+      return Container(
         height: 17.dp,
         width: 2.dp,
-        color: subItem().isSelected ? Colors.red : Colors.transparent,
+        color: subItem.value.isSelected ? Colors.red : Colors.transparent,
         margin: EdgeInsets.only(right: 21.dp),
-      ),
-    );
+      );
+    });
   }
 
   Widget _buildSubItemBg({
