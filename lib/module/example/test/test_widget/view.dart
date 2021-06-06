@@ -9,9 +9,16 @@ class TestWidgetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Obx(() {
-        return Container();
-      }),
+      child: Text(''),
+    );
+  }
+}
+
+class Counter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Text(''),
     );
   }
 }
