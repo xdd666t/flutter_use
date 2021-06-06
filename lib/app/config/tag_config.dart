@@ -27,7 +27,7 @@ class ExampleConfig {
   static const String autoDispose = 'autoDispose';
 
   ///Bloc栏目
-  static const String cubit = 'cubit';
+  static const String blCubitCounter = 'blCubitCounter';
   static const String globalBloc = 'globalBloc';
 
   ///Provider栏目

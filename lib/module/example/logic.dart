@@ -39,8 +39,8 @@ class ExampleLogic extends GetxController {
         break;
 
       ///Bloc页面跳转
-      case ExampleConfig.cubit:
-        Get.toNamed(RouteConfig.blocCounter);
+      case ExampleConfig.blCubitCounter:
+        Get.toNamed(RouteConfig.blCubitCounterPage);
         break;
       case ExampleConfig.globalBloc:
         Get.toNamed(RouteConfig.cubitSpanOne);
