@@ -3,11 +3,11 @@ import 'package:bloc/bloc.dart';
 import 'event.dart';
 import 'state.dart';
 
-class BlBlocCounterBloc extends Bloc<CounterEvent, BlBlocCounterState> {
+class BlBlocCounterBloc extends Bloc<BlBlocCounterEvent, BlBlocCounterState> {
   BlBlocCounterBloc() : super(BlBlocCounterState().init());
 
   @override
-  Stream<BlBlocCounterState> mapEventToState(CounterEvent event) async* {
+  Stream<BlBlocCounterState> mapEventToState(BlBlocCounterEvent event) async* {
     if (event is InitEvent) {
       yield await init();
     } else if (event is CounterIncrementEvent) {

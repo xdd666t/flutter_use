@@ -28,6 +28,7 @@ class ExampleConfig {
 
   ///Bloc栏目
   static const String blCubitCounter = 'blCubitCounter';
+  static const String blBlocCounter = 'blBlocCounter';
   static const String globalBloc = 'globalBloc';
 
   ///Provider栏目

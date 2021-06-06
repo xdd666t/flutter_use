@@ -1,5 +1,5 @@
-abstract class CounterEvent {}
+abstract class BlBlocCounterEvent {}
 
-class InitEvent extends CounterEvent {}
+class InitEvent extends BlBlocCounterEvent {}
 
-class CounterIncrementEvent extends CounterEvent {}
+class CounterIncrementEvent extends BlBlocCounterEvent {}

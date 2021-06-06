@@ -42,6 +42,9 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.blCubitCounter:
         Get.toNamed(RouteConfig.blCubitCounterPage);
         break;
+      case ExampleConfig.blBlocCounter:
+        Get.toNamed(RouteConfig.blBlocCounterPage);
+        break;
       case ExampleConfig.globalBloc:
         Get.toNamed(RouteConfig.cubitSpanOne);
         break;

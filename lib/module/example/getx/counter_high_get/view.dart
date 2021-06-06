@@ -6,9 +6,7 @@ import 'state.dart';
 
 class GetCounterHighPage extends StatelessWidget {
   final GetCounterHighLogic logic = Get.put(GetCounterHighLogic());
-  final GetCounterHighState state = Get
-      .find<GetCounterHighLogic>()
-      .state;
+  final GetCounterHighState state = Get.find<GetCounterHighLogic>().state;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +22,7 @@ class GetCounterHighPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => logic.increase(),
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
     );
   }

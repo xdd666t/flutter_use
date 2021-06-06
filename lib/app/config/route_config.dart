@@ -1,3 +1,4 @@
+import 'package:flutter_use/module/example/bloc/counter_bloc/view.dart';
 import 'package:flutter_use/module/example/bloc/counter_cubit/view.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_view.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_two/span_two_view.dart';
@@ -32,6 +33,7 @@ class RouteConfig {
 
   ///bloc计数器模块 Bloc跨页面传递事件
   static final String blCubitCounterPage = "/blCubitCounterPage";
+  static final String blBlocCounterPage = "/blBlocCounterPage";
   static final String cubitSpanOne = "/cubitSpanOne";
   static final String cubitSpanTwo = "/cubitSpanOne/cubitSpanTwo";
 
@@ -60,6 +62,7 @@ class RouteConfig {
     GetPage(name: main, page: () => MainPage()),
     GetPage(name: dialog, page: () => DialogPage()),
     GetPage(name: blCubitCounterPage, page: () => BlCubitCounterPage()),
+    GetPage(name: blBlocCounterPage, page: () => BlBlocCounterPage()),
     GetPage(name: testLayout, page: () => TestLayoutPage()),
     GetPage(name: smartDialog, page: () => SmartDialogPage()),
     GetPage(name: cubitSpanOne, page: () => CubitSpanOnePage()),

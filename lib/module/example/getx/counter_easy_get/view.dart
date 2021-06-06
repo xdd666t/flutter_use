@@ -23,30 +23,8 @@ class GetCounterEasyPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => logic.increase(),
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
     );
   }
 }
-
-// class Counter extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Text('Counter'),
-//     );
-//   }
-// }
-
-// class Counter extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: GetBuilder<SubjectController>(
-//         builder: (controller) {
-//           return Text('Counter');
-//         },
-//       ),
-//     );
-//   }
-// }

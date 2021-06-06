@@ -5,7 +5,7 @@ import 'bloc.dart';
 import 'event.dart';
 import 'state.dart';
 
-class BlCubitCounterPage extends StatelessWidget {
+class BlBlocCounterPage extends StatelessWidget {
   final BlBlocCounterBloc bloc = BlBlocCounterBloc();
 
   @override

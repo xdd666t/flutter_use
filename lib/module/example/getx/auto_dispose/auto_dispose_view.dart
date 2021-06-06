@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:flutter_use/app/base/base_scaffold.dart';
 import 'package:get/get.dart';
 
@@ -25,7 +24,7 @@ class _AutoDisposePageState extends State<AutoDisposePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => logic.increase(),
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
     );
   }

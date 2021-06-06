@@ -23,7 +23,8 @@ class ExampleState {
       TreeTwiceInfo(
         title: 'Bloc',
         btnInfo: [
-          BtnInfo(title: 'Cubit', tag: ExampleConfig.blCubitCounter),
+          BtnInfo(title: '计数器-Cubit', tag: ExampleConfig.blCubitCounter),
+          BtnInfo(title: '计数器-Bloc', tag: ExampleConfig.blBlocCounter),
           BtnInfo(title: '全局Bloc', tag: ExampleConfig.globalBloc),
         ],
       ),
