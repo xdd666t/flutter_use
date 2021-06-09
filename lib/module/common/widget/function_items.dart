@@ -5,11 +5,12 @@ import 'package:flutter_use/bean/common/btn_info.dart';
 
 class FunctionItems extends StatelessWidget {
   FunctionItems({
+    Key? key,
     required this.items,
     required this.onItem,
     this.constraints = const BoxConstraints(minWidth: 150, minHeight: 36.0),
     this.padding = const EdgeInsets.all(30),
-  });
+  }) : super(key: key);
 
   ///数据源
   final List<BtnInfo> items;
@@ -25,34 +26,25 @@ class FunctionItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _function();
-  }
-
-  ///功能主体
-  Widget _function() {
     return _buildBg(
-      child: Wrap(
-        spacing: 20.dp,
-        runSpacing: 20,
-        children: items.map((e) {
-          return btnFunction(
-            onItem: onItem,
-            data: e,
-            constraints: constraints,
-          );
-        }).toList(),
-      ),
+      children: items.map((e) {
+        return btnFunction(
+          data: e,
+          onItem: onItem,
+          constraints: constraints,
+        );
+      }).toList(),
     );
   }
 
   ///整体背景
-  Widget _buildBg({child}) {
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       padding: padding,
       child: SingleChildScrollView(
         child: Material(
           color: Colors.white,
-          child: child,
+          child: Wrap(spacing: 20.dp, runSpacing: 20, children: children),
         ),
       ),
     );
@@ -74,17 +66,10 @@ Widget btnFunction({
       ),
       constraints: constraints,
       elevation: 5,
-      onPressed: () {
-        onItem(data.tag);
-      },
+      onPressed: () => onItem(data.tag),
       child: Container(
-        padding: EdgeInsets.symmetric(
-          vertical: 15.dp,
-          horizontal: 20.dp,
-        ),
-        child: Text(
-          data.title,
-        ),
+        padding: EdgeInsets.symmetric(vertical: 15.dp, horizontal: 20.dp),
+        child: Text(data.title),
       ),
     ),
   );
