@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 
 class ChangeNotifierEasyP<T extends ChangeNotifier> extends InheritedWidget {
   ChangeNotifierEasyP({
@@ -23,7 +22,7 @@ class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
   bool _firstBuild = true;
   bool _shouldNotify = false;
   late T _value;
-  late void Function() callBack;
+  late void Function() _callBack;
 
   T get value => _value;
 
@@ -33,7 +32,7 @@ class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
       _firstBuild = false;
       _value = (widget as ChangeNotifierEasyP<T>).create(this);
 
-      _value.addListener(callBack = () {
+      _value.addListener(_callBack = () {
         // 处理刷新逻辑，此处无法直接调用notifyClients
         // 会导致owner!._debugCurrentBuildTarget为null，触发断言条件，无法向后执行
         _shouldNotify = true;
@@ -62,7 +61,7 @@ class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
 
   @override
   void unmount() {
-    _value.removeListener(callBack);
+    _value.removeListener(_callBack);
     _value.dispose();
     super.unmount();
   }
