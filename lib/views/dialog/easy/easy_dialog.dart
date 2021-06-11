@@ -11,7 +11,6 @@ class EasyDialog {
       ..isPenetrate = false
       ..maskColor = Colors.black.withOpacity(0.3)
       ..isExist = false
-      ..isExistExtra = false
       ..alignment = Alignment.center;
   }
 
@@ -35,7 +34,6 @@ class EasyDialog {
       isLoadingTemp: isLoadingTemp,
       maskColorTemp: maskColorTemp,
       clickBgDismissTemp: clickBgDismissTemp,
-      isUseExtraWidget: isUseExtraWidget,
     );
   }
 
@@ -57,9 +55,5 @@ class EasyDialog {
 
   static bool isExist() {
     return SmartDialog.instance.config.isExist;
-  }
-
-  static bool isExistExtra() {
-    return SmartDialog.instance.config.isExistExtra;
   }
 }
