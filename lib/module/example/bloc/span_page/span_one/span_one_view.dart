@@ -16,10 +16,6 @@ class _SpanOnePageState extends State<CubitSpanOnePage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<BlocSpanOneCubit, BlocSpanOneState>(builder: _body);
-  }
-
-  Widget _body(BuildContext context, BlocSpanOneState state) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(title: Text('跨页面-One')),
@@ -28,9 +24,13 @@ class _SpanOnePageState extends State<CubitSpanOnePage> {
         child: const Icon(Icons.arrow_forward_outlined),
       ),
       body: Center(
-        child: Text(
-          'SpanTwoPage点击了 ${state.count} 次',
-          style: TextStyle(fontSize: 30.0),
+        child: BlocBuilder<BlocSpanOneCubit, BlocSpanOneState>(
+          builder: (context, state) {
+            return Text(
+              'SpanTwoPage点击了 ${state.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
+          },
         ),
       ),
     );
