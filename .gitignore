@@ -47,3 +47,4 @@ app.*.map.json
 
 pubspec.lock
 local.properties
+.gradle/
