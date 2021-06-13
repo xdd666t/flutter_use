@@ -26,6 +26,7 @@ class ExampleState {
           BtnInfo(title: '计数器-Cubit', tag: ExampleConfig.blCubitCounter),
           BtnInfo(title: '计数器-Bloc', tag: ExampleConfig.blBlocCounter),
           BtnInfo(title: '全局Bloc', tag: ExampleConfig.globalBloc),
+          BtnInfo(title: 'Stream应用', tag: ExampleConfig.stream),
         ],
       ),
 

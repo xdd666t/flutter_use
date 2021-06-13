@@ -7,7 +7,6 @@ import 'package:flutter_use/http/http.dart';
 import 'package:flutter_use/module/example/getx/auto_dispose/auto_dispose_view.dart';
 import 'package:get/get.dart';
 
-import 'provider/counter/view.dart';
 import 'state.dart';
 
 class ExampleLogic extends GetxController {
@@ -49,11 +48,14 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.globalBloc:
         Get.toNamed(RouteConfig.cubitSpanOne);
         break;
+      case ExampleConfig.stream:
+        Get.toNamed(RouteConfig.streamPage);
+        break;
 
       ///Provider页面跳转
       case ExampleConfig.providerEasy:
-        // Get.toNamed(RouteConfig.proEasyCounterPage);
-        Get.to(CounterPage());
+        Get.toNamed(RouteConfig.proEasyCounterPage);
+        // Get.to(CounterPage());
         break;
       case ExampleConfig.providerHigh:
         Get.toNamed(RouteConfig.proHighCounterPage);

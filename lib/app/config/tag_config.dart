@@ -30,6 +30,7 @@ class ExampleConfig {
   static const String blCubitCounter = 'blCubitCounter';
   static const String blBlocCounter = 'blBlocCounter';
   static const String globalBloc = 'globalBloc';
+  static const String stream = 'stream';
 
   ///Provider栏目
   static const String providerEasy = 'providerEasy';
