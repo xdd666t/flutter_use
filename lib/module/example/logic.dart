@@ -33,7 +33,7 @@ class ExampleLogic extends GetxController {
         //不使用GetX路由跳转，会使得GetX无法监控页面
         //AutoDisposePage模块提供一种自动释放的解决方案
         Navigator.push(
-          Get.context!,
+          context,
           MaterialPageRoute(builder: (context) => AutoDisposePage()),
         );
         break;
@@ -51,11 +51,13 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.stream:
         Get.toNamed(RouteConfig.streamPage);
         break;
+      case ExampleConfig.blCustomBuilder:
+        Get.toNamed(RouteConfig.blCustomBuilderPage);
+        break;
 
       ///Provider页面跳转
       case ExampleConfig.providerEasy:
         Get.toNamed(RouteConfig.proEasyCounterPage);
-        // Get.to(CounterPage());
         break;
       case ExampleConfig.providerHigh:
         Get.toNamed(RouteConfig.proHighCounterPage);

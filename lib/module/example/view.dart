@@ -13,9 +13,7 @@ class ExamplePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return TreeItems(
       data: state.trees,
-      onItem: (String tag) {
-        logic.toFun(context, tag);
-      },
+      onItem: (String tag) => logic.toFun(context, tag),
     );
   }
 }
