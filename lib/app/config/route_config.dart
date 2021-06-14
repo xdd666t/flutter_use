@@ -1,6 +1,7 @@
 import 'package:flutter_use/module/example/bloc/counter_bloc/view.dart';
 import 'package:flutter_use/module/example/bloc/counter_cubit/view.dart';
 import 'package:flutter_use/module/example/bloc/custom_builder/view.dart';
+import 'package:flutter_use/module/example/bloc/easy_c_counter/view.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_view.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_two/span_two_view.dart';
 import 'package:flutter_use/module/example/bloc/stream/view.dart';
@@ -40,6 +41,7 @@ class RouteConfig {
   static final String cubitSpanTwo = "/cubitSpanOne/cubitSpanTwo";
   static final String streamPage = "/streamPage";
   static final String blCustomBuilderPage = "/blCustomBuilderPage";
+  static final String counterEasyCPage = "/counterEasyCPage";
 
   ///测试布局页面
   static final String testLayout = "/testLayout";
@@ -69,6 +71,7 @@ class RouteConfig {
     GetPage(name: blBlocCounterPage, page: () => BlBlocCounterPage()),
     GetPage(name: streamPage, page: () => StreamPage()),
     GetPage(name: blCustomBuilderPage, page: () => BlCustomBuilderPage()),
+    GetPage(name: counterEasyCPage, page: () => CounterEasyCPage()),
     GetPage(name: testLayout, page: () => TestLayoutPage()),
     GetPage(name: smartDialog, page: () => SmartDialogPage()),
     GetPage(name: cubitSpanOne, page: () => CubitSpanOnePage()),

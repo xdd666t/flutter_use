@@ -54,6 +54,9 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.blCustomBuilder:
         Get.toNamed(RouteConfig.blCustomBuilderPage);
         break;
+      case ExampleConfig.counterEasyC:
+        Get.toNamed(RouteConfig.counterEasyCPage);
+        break;
 
       ///Provider页面跳转
       case ExampleConfig.providerEasy:

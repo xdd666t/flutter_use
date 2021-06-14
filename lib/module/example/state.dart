@@ -28,6 +28,7 @@ class ExampleState {
           BtnInfo(title: '全局Bloc', tag: ExampleConfig.globalBloc),
           BtnInfo(title: 'Stream应用', tag: ExampleConfig.stream),
           BtnInfo(title: '自定义Builder', tag: ExampleConfig.blCustomBuilder),
+          BtnInfo(title: '自定义状态管理框架-EasyC', tag: ExampleConfig.counterEasyC),
         ],
       ),
 

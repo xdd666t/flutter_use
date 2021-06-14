@@ -32,6 +32,7 @@ class ExampleConfig {
   static const String globalBloc = 'globalBloc';
   static const String stream = 'stream';
   static const String blCustomBuilder = 'blCustomBuilder';
+  static const String counterEasyC = 'counterEasyC';
 
   ///Provider栏目
   static const String providerEasy = 'providerEasy';
