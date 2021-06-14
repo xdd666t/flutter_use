@@ -51,7 +51,7 @@ class _BlocEasyBuilderState<T extends BlocBase<V>, V>
     extends State<BlocEasyBuilder<T, V>> {
   late T _bloc;
   late V _state;
-  late StreamSubscription<V> _listen;
+  StreamSubscription<V>? _listen;
 
   @override
   void initState() {
@@ -72,7 +72,7 @@ class _BlocEasyBuilderState<T extends BlocBase<V>, V>
 
   @override
   void dispose() {
-    _listen.cancel();
+    _listen?.cancel();
     super.dispose();
   }
 }
