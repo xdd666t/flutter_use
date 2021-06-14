@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,7 +14,7 @@ class BlCustomBuilderPage extends StatelessWidget {
     return BlocProvider(
       create: (BuildContext context) => cubit,
       child: Scaffold(
-        appBar: AppBar(title: Text('Bloc-Cubit范例')),
+        appBar: AppBar(title: Text('Bloc-自定义Builder范例')),
         body: Center(
           child: BlocEasyBuilder<BlCustomBuilderCubit, BlCustomBuilderState>(
             builder: (context, state) {
@@ -49,6 +51,7 @@ class _BlocEasyBuilderState<T extends BlocBase<V>, V>
     extends State<BlocEasyBuilder<T, V>> {
   late T _bloc;
   late V _state;
+  late StreamSubscription<V> _listen;
 
   @override
   void initState() {
@@ -56,7 +59,7 @@ class _BlocEasyBuilderState<T extends BlocBase<V>, V>
     _state = _bloc.state;
 
     //数据改变刷新Widget
-    _bloc.stream.listen((event) {
+    _listen = _bloc.stream.listen((event) {
       setState(() {});
     });
     super.initState();
@@ -65,5 +68,11 @@ class _BlocEasyBuilderState<T extends BlocBase<V>, V>
   @override
   Widget build(BuildContext context) {
     return widget.builder(context, _state);
+  }
+
+  @override
+  void dispose() {
+    _listen.cancel();
+    super.dispose();
   }
 }
