@@ -57,6 +57,28 @@
 │  │  │  │      └─jump_two
 ```
 
+- Bloc
+  - 使用篇：[flutter_bloc使用解析---骚年，你还在手搭bloc吗！](https://juejin.cn/post/6856268776510504968)
+
+```dart
+├─lib
+│  ├─module
+│  │  ├─common
+│  │  │  └─widget
+│  │  ├─example
+│  │  │  ├─bloc               ///bloc演示代码在此目录下
+│  │  │  │  ├─counter_bloc
+│  │  │  │  ├─counter_cubit
+│  │  │  │  ├─custom_builder
+│  │  │  │  ├─easy_c
+│  │  │  │  ├─easy_c_counter
+│  │  │  │  ├─span_page
+│  │  │  │  │  ├─span_one
+│  │  │  │  │  └─span_two
+│  │  │  │  └─stream
+```
+
+
 
 ## 关于编译
 
