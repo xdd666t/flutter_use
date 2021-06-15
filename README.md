@@ -59,6 +59,7 @@
 
 - Bloc
   - 使用篇：[flutter_bloc使用解析---骚年，你还在手搭bloc吗！](https://juejin.cn/post/6856268776510504968)
+  - 源码篇：[Flutter Bloc背后的思想](https://juejin.cn/post/6973900070358319135)
 
 ```dart
 ├─lib
