@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/base/base_scaffold.dart';
-import 'package:flutter_use/module/example/getx/counter_get/logic.dart';
 import 'package:get/get.dart';
+
+import 'logic.dart';
 
 class GetCounterPage extends StatelessWidget {
   final GetCounterLogic logic = Get.put(GetCounterLogic());
