@@ -55,7 +55,7 @@ dependencies:
       url: https://github.com/google/flutter-desktop-embedding.git
       path: plugins/window_size
   # flutter工具包（自用） https://pub.flutter-io.cn/packages/flutter_toolkit_easy
-  flutter_toolkit_easy: 0.2.1
+  flutter_toolkit_easy: any
   #  flutter_toolkit_easy:
   #    git:
   #      url: https://github.com/CNAD666/flutter_toolkit.git

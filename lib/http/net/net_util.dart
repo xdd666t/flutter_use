@@ -23,16 +23,11 @@ enum HttpMethod {
 
 ///网络封装
 class NetUtil {
+  factory NetUtil() => instance;
+
   static NetUtil? _instance;
 
-  static NetUtil get instance => _getInstance();
-
-  static NetUtil _getInstance() {
-    if (_instance == null) {
-      _instance = NetUtil._internal();
-    }
-    return _instance!;
-  }
+  static NetUtil get instance => _instance ??= NetUtil._internal();
 
   Dio dio = Dio();
   CancelToken _cancelToken = CancelToken();
