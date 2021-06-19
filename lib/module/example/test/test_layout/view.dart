@@ -11,6 +11,10 @@ class TestLayoutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ModalRoute?.of(context)?.addScopedWillPopCallback(()async {
+      return false;
+    });
+
     return _buildBg(children: [
       //底下
       Listener(
