@@ -6,6 +6,8 @@ import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_view
 import 'package:flutter_use/module/example/bloc/span_page/span_two/span_two_view.dart';
 import 'package:flutter_use/module/example/bloc/stream/view.dart';
 import 'package:flutter_use/module/example/getx/counter/view.dart';
+import 'package:flutter_use/module/example/getx/counter_binding/binding.dart';
+import 'package:flutter_use/module/example/getx/counter_binding/view.dart';
 import 'package:flutter_use/module/example/getx/counter_easy/view.dart';
 import 'package:flutter_use/module/example/getx/counter_high_get/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
@@ -52,6 +54,7 @@ class RouteConfig {
   static final String getCounterHigh = "/counterHighGet";
   static final String getJumpOne = "/jumpOne";
   static final String getJumpTwo = "/jumpOne/jumpTwo";
+  static final String getCounterBinding = "/getCounterBinding";
 
   ///Provider
   static final String proEasyCounterPage = "/proEasyCounterPage";
@@ -81,6 +84,11 @@ class RouteConfig {
     GetPage(name: getCounterHigh, page: () => GetCounterHighPage()),
     GetPage(name: getJumpOne, page: () => GetJumpOnePage()),
     GetPage(name: getJumpTwo, page: () => GetJumpTwoPage()),
+    GetPage(
+      name: getCounterBinding,
+      page: () => GetCounterBindingPage(),
+      binding: GetCounterBinding(),
+    ),
     GetPage(name: himalaya, page: () => HimalayaPage()),
     GetPage(name: proEasyCounterPage, page: () => ProEasyCounterPage()),
     GetPage(name: proHighCounterPage, page: () => ProHighCounterPage()),
