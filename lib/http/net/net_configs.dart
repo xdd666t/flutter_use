@@ -1,5 +1,3 @@
-import 'package:dio/dio.dart';
-
 /// 网络配置
 class NetConfig {
   /// 禁用实例化HttpConfig类
@@ -24,7 +22,7 @@ class NetConfig {
   static const String headerContentType = "content-type";
 
   /// 是否启用缓存  缓存的最长时间，单位（秒）  最大缓存数
-  // static const cacheEnable = true;
-  // static const cacheMaxAge = 1000;
-  // static const cacheMaxCount = 100;
+// static const cacheEnable = true;
+// static const cacheMaxAge = 1000;
+// static const cacheMaxCount = 100;
 }

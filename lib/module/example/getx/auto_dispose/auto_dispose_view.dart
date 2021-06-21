@@ -17,10 +17,12 @@ class _AutoDisposePageState extends State<AutoDisposePage> {
     return BaseScaffold(
       appBar: AppBar(title: const Text('计数器-自动释放')),
       body: Center(
-        child: Obx(
-          () => Text('点击了 ${logic.count.value} 次',
-              style: TextStyle(fontSize: 30.0)),
-        ),
+        child: Obx(() {
+          return Text(
+            '点击了 ${logic.count.value} 次',
+            style: TextStyle(fontSize: 30.0),
+          );
+        }),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => logic.increase(),
