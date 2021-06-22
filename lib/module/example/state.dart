@@ -16,6 +16,7 @@ class ExampleState {
           BtnInfo(title: '计数器-进阶版', tag: ExampleConfig.counterHighGetX),
           BtnInfo(title: '跨页面事件交互', tag: ExampleConfig.jumpGetX),
           BtnInfo(title: 'GetX实例-自动释放', tag: ExampleConfig.autoDispose),
+          BtnInfo(title: '计数器-binding', tag: ExampleConfig.counterBinding),
         ],
       ),
 

@@ -37,6 +37,9 @@ class ExampleLogic extends GetxController {
           MaterialPageRoute(builder: (context) => AutoDisposePage()),
         );
         break;
+      case ExampleConfig.counterBinding:
+        Get.toNamed(RouteConfig.getCounterBinding);
+        break;
 
       ///Bloc页面跳转
       case ExampleConfig.blCubitCounter:
