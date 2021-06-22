@@ -52,3 +52,16 @@ Widget _customGlobalWidget(Widget? child) {
     child: FlutterSmartDialog(child: child),
   );
 }
+
+// Widget _builder(BuildContext context, Widget? child) {
+//   Get.context;
+//   return MultiProvider(
+//     providers: [
+//       //此处通过MultiProvider创建的Provider是全局的
+//       ChangeNotifierProvider.value(value: ProSpanOneProvider()),
+//
+//       // ChangeNotifierProvider(create: (context) => ProSpanOneProvider()),
+//     ],
+//     child: _customGlobalWidget(child),
+//   );
+// }
