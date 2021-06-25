@@ -22,11 +22,12 @@ class FunctionState {
         tag: FunctionConfig.smartDialog,
         bg: ImageFunctionConfig.functionBgOne,
       ),
-      BtnInfo(
-        title: '弹窗控件',
-        tag: FunctionConfig.dialog,
-        bg: ImageFunctionConfig.functionBgTwo,
-      ),
+      //暂不需要
+      // BtnInfo(
+      //   title: '弹窗控件',
+      //   tag: FunctionConfig.dialog,
+      //   bg: ImageFunctionConfig.functionBgTwo,
+      // ),
       BtnInfo(
         title: '测试',
         tag: FunctionConfig.test,
