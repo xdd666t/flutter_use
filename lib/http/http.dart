@@ -8,7 +8,7 @@ import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
 
 import 'net/net_util.dart';
 
-///举例：搞定
+///dio封装 使用举例
 testHttp() async {
   //处理一些初始化设置，必须
   Http.init();
