@@ -1,5 +1,3 @@
-import 'package:get/get.dart';
-
 class GetCounterHighState {
   late int count;
 

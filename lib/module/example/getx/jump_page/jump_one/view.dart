@@ -18,10 +18,8 @@ class GetJumpOnePage extends StatelessWidget {
       body: Center(
         child: GetBuilder<GetJumpOneLogic>(
           builder: (logic) {
-            return Text(
-              '跨页面-Two点击了 ${logic.count} 次',
-              style: TextStyle(fontSize: 30.0),
-            );
+            return Text('跨页面-Two点击了 ${logic.count} 次',
+                style: TextStyle(fontSize: 30.0));
           },
         ),
       ),
