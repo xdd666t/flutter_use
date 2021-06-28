@@ -21,7 +21,7 @@ extension NumExtend on num {
   ///配置文字,文字适配请用sp单位
   double get sp {
     //如果没初始化,需要初始化,防止web端直接导航页面报错
-    AutoUi();
+    AutoUi().init();
     return UiUtil().setWidth(this);
   }
 }
@@ -39,10 +39,8 @@ class AutoUi {
   bool first = true;
 
   void init() {
-    if (first) {
-      first = false;
-      return;
-    }
+    if (!first) return;
+    first = false;
 
     BuildContext? context = Get.context;
     if (context != null) return;

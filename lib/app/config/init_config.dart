@@ -11,7 +11,7 @@ class InitConfig {
     initWindow();
 
     //界面适配
-    AutoUi.init();
+    AutoUi().init();
   }
 }
 
