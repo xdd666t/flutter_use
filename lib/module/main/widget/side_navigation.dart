@@ -55,28 +55,24 @@ class SideNavigation extends StatelessWidget {
     return Container(
       alignment: Alignment.bottomLeft,
       padding: const EdgeInsets.all(20),
-      child: Wrap(
-        direction: Axis.vertical,
-        spacing: 20.dp,
-        children: [
-          //展开按钮
-          // CupertinoSwitch(
-          //   value: isUnfold,
-          //   onChanged: onUnfold,
-          // ),
+      child: Wrap(direction: Axis.vertical, spacing: 20.dp, children: [
+        //展开按钮
+        // CupertinoSwitch(
+        //   value: isUnfold,
+        //   onChanged: onUnfold,
+        // ),
 
-          Container(
-            width: 70.dp,
-            child: Text('开启缩放'),
-          ),
+        Container(
+          width: 70.dp,
+          child: Text('开启缩放'),
+        ),
 
-          //缩放按钮
-          CupertinoSwitch(
-            value: isScale,
-            onChanged: onScale,
-          ),
-        ],
-      ),
+        //缩放按钮
+        CupertinoSwitch(
+          value: isScale,
+          onChanged: onScale,
+        ),
+      ]),
     );
   }
 

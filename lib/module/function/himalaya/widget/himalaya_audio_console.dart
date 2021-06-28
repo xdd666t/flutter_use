@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
+import 'package:flutter_use/module/function/himalaya/logic.dart';
 import 'package:flutter_use/module/function/himalaya/state.dart';
 import 'package:get/get.dart';
 
@@ -24,7 +25,7 @@ class HimalayaAudioConsole extends StatelessWidget {
   }) : super(key: key);
 
   ///数据源
-  final Rx<HimalayaSubItemInfo> data;
+  final HimalayaSubItemInfo data;
 
   ///左切换
   final ParamVoidCallback onLeftArrow;
@@ -123,13 +124,25 @@ class HimalayaAudioConsole extends StatelessWidget {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Row(children: [
               //标题信息
-              Obx(() => Text(data().title, style: TextStyle(fontSize: 15.sp))),
+              GetBuilder<HimalayaLogic>(
+                builder: (logic) {
+                  return Text(
+                    data.title,
+                    style: TextStyle(fontSize: 15.sp),
+                  );
+                },
+              ),
 
               Container(width: 15.dp),
 
               //副标题信息
-              Obx(
-                () => Text(data().subTitle ?? '', style: TextStyle(fontSize: 15.sp)),
+              GetBuilder<HimalayaLogic>(
+                builder: (logic) {
+                  return Text(
+                    data.subTitle ?? '',
+                    style: TextStyle(fontSize: 15.sp),
+                  );
+                },
               ),
             ]),
 
@@ -185,7 +198,11 @@ class HimalayaAudioConsole extends StatelessWidget {
         borderRadius: BorderRadius.circular(5.dp),
         child: GestureDetector(
           onTap: () => onCover(),
-          child: Obx(() => Image.network(data().tag ?? '')),
+          child: GetBuilder<HimalayaLogic>(
+            builder: (logic) {
+              return Image.network(data.tag ?? '');
+            },
+          ),
         ),
       ),
     );

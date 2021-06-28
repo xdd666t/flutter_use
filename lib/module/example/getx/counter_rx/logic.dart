@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class GetCounterLogic extends GetxController {
+class GetCounterRxLogic extends GetxController {
   var count = 0.obs;
 
   ///自增

@@ -1,5 +1,3 @@
 import 'package:get/get.dart';
 
-class TestWidgetLogic extends GetxController {
-
-}
+class TestWidgetLogic extends GetxController {}

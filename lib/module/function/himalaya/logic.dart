@@ -72,11 +72,12 @@ class HimalayaLogic extends GetxController {
   ///榜单 - item
   void rankItem(HimalayaSubItemInfo itemInfo) {
     showToast(itemInfo.title);
-    state.audioPlayInfo.update((val) {
-      val!.title = itemInfo.title;
-      val.subTitle = itemInfo.subTitle;
-      val.tag = itemInfo.tag;
-    });
+
+    state.audioPlayInfo.title = itemInfo.title;
+    state.audioPlayInfo.subTitle = itemInfo.subTitle;
+    state.audioPlayInfo.tag = itemInfo.tag;
+
+    update();
   }
 
   ///榜单 - 标题
@@ -90,34 +91,36 @@ class HimalayaLogic extends GetxController {
   }
 
   ///最新精选 选择分类标题
-  void sortTitle(Rx<HimalayaSubItemInfo> itemInfo) {
+  void sortTitle(HimalayaSubItemInfo itemInfo) {
     for (var item in state.newestSortList) {
-      if (item().isSelected) {
-        item.update((val) => val!.isSelected = false);
+      if (item.isSelected) {
+        item.isSelected = false;
       }
     }
-    itemInfo.update((val) => val!.isSelected = true);
-    showToast(itemInfo().title);
+    itemInfo.isSelected = true;
+    showToast(itemInfo.title);
+
+    update();
   }
 
   ///最新精选 点击具体card
   void onNewest(HimalayaSubItemInfo itemInfo) {
     showToast(itemInfo.title);
-    state.audioPlayInfo.update((val) {
-      val!.title = itemInfo.title;
-      val.subTitle = itemInfo.subTitle;
-      val.tag = itemInfo.tag;
-    });
+    state.audioPlayInfo.title = itemInfo.title;
+    state.audioPlayInfo.subTitle = itemInfo.subTitle;
+    state.audioPlayInfo.tag = itemInfo.tag;
+
+    update();
   }
 
   ///猜你喜欢: 具体的卡片
   void guessDetail(HimalayaSubItemInfo itemInfo) {
     showToast(itemInfo.title);
-    state.audioPlayInfo.update((val) {
-      val!.title = itemInfo.title;
-      val.subTitle = itemInfo.subTitle;
-      val.tag = itemInfo.tag;
-    });
+    state.audioPlayInfo.title = itemInfo.title;
+    state.audioPlayInfo.subTitle = itemInfo.subTitle;
+    state.audioPlayInfo.tag = itemInfo.tag;
+
+    update();
   }
 
   ///猜你喜欢: 换一批
@@ -164,13 +167,13 @@ class HimalayaLogic extends GetxController {
   void onSearch(String msg) {}
 
   ///点击导航栏item
-  void navigationItem(Rx<HimalayaSubItemInfo> item) {
+  void navigationItem(HimalayaSubItemInfo item) {
     //显示点击的item栏目
-    showToast(item.value.title);
+    showToast(item.title);
 
     //处理不同item回调
-    _restoreNavigationStatus(item.value.tag);
-    switch (item.value.tag) {
+    _restoreNavigationStatus(item.tag);
+    switch (item.tag) {
       case TagHimalayaConfig.find:
         //发现
         break;
@@ -213,13 +216,15 @@ class HimalayaLogic extends GetxController {
   void _restoreNavigationStatus(String? tag) {
     state.leftItemList.forEach((element) {
       element.subItemList.forEach((subElement) {
-        if (subElement().tag == tag) {
-          subElement.update((item) => item.isSelected = true);
+        if (subElement.tag == tag) {
+          subElement.isSelected = true;
         } else {
-          subElement.update((item) => item.isSelected = false);
+          subElement.isSelected = false;
         }
       });
     });
+
+    update();
   }
 
   @override

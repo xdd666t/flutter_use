@@ -20,12 +20,12 @@ class TagHimalayaConfig {
 
 class ExampleConfig {
   ///GetX栏目
-  static const String counterGetX = 'counterGetX';
-  static const String counterEasyGetX = 'counterEasyGetX';
-  static const String counterHighGetX = 'counterHighGetX';
-  static const String jumpGetX = 'jumpGetX';
-  static const String autoDispose = 'autoDispose';
-  static const String counterBinding = 'counterBinding';
+  static const String getCounterRx = 'getCounterRx';
+  static const String getCounterEasy = 'getCounterEasy';
+  static const String getCounterHigh = 'getCounterHigh';
+  static const String getJump = 'getJump';
+  static const String getAutoDispose = 'getAutoDispose';
+  static const String getCounterBinding = 'getCounterBinding';
 
   ///Bloc栏目
   static const String blCubitCounter = 'blCubitCounter';

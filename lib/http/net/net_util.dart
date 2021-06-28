@@ -227,6 +227,13 @@ class NetUtil {
 
   /// 添加拦截器
   void addInterceptor(Interceptor interceptor) {
+    //一钟类型的拦截器只能添加一次
+    for (var item in dio.interceptors) {
+      if (item.runtimeType == interceptor.runtimeType) {
+        return;
+      }
+    }
+
     dio.interceptors.add(interceptor);
   }
 

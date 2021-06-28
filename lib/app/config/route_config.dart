@@ -5,11 +5,11 @@ import 'package:flutter_use/module/example/bloc/easy_c_counter/view.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_view.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_two/span_two_view.dart';
 import 'package:flutter_use/module/example/bloc/stream/view.dart';
-import 'package:flutter_use/module/example/getx/counter/view.dart';
 import 'package:flutter_use/module/example/getx/counter_binding/binding.dart';
 import 'package:flutter_use/module/example/getx/counter_binding/view.dart';
 import 'package:flutter_use/module/example/getx/counter_easy/view.dart';
 import 'package:flutter_use/module/example/getx/counter_high_get/view.dart';
+import 'package:flutter_use/module/example/getx/counter_rx/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_two/view.dart';
 import 'package:flutter_use/module/example/provider/counter_easy/view.dart';
@@ -49,7 +49,7 @@ class RouteConfig {
   static final String testLayout = "/testLayout";
 
   ///GetX 计数器  跨页面交互
-  static final String getCounter = "/getCounter";
+  static final String getCounterRx = "/getCounterRx";
   static final String getCounterEasy = "/counterEasyGet";
   static final String getCounterHigh = "/counterHighGet";
   static final String getJumpOne = "/jumpOne";
@@ -79,7 +79,7 @@ class RouteConfig {
     GetPage(name: smartDialog, page: () => SmartDialogPage()),
     GetPage(name: cubitSpanOne, page: () => CubitSpanOnePage()),
     GetPage(name: cubitSpanTwo, page: () => CubitSpanTwoPage()),
-    GetPage(name: getCounter, page: () => GetCounterPage()),
+    GetPage(name: getCounterRx, page: () => GetCounterRxPage()),
     GetPage(name: getCounterEasy, page: () => GetCounterEasyPage()),
     GetPage(name: getCounterHigh, page: () => GetCounterHighPage()),
     GetPage(name: getJumpOne, page: () => GetJumpOnePage()),

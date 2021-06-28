@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 
 import 'logic.dart';
 
-class GetCounterPage extends StatelessWidget {
-  final GetCounterLogic logic = Get.put(GetCounterLogic());
+class GetCounterRxPage extends StatelessWidget {
+  final GetCounterRxLogic logic = Get.put(GetCounterRxLogic());
 
   @override
   Widget build(BuildContext context) {

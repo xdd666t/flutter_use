@@ -17,19 +17,19 @@ class ExampleLogic extends GetxController {
     switch (tag) {
 
       ///GetX页面跳转
-      case ExampleConfig.counterGetX:
-        Get.toNamed(RouteConfig.getCounter);
+      case ExampleConfig.getCounterRx:
+        Get.toNamed(RouteConfig.getCounterRx);
         break;
-      case ExampleConfig.counterEasyGetX:
+      case ExampleConfig.getCounterEasy:
         Get.toNamed(RouteConfig.getCounterEasy);
         break;
-      case ExampleConfig.counterHighGetX:
+      case ExampleConfig.getCounterHigh:
         Get.toNamed(RouteConfig.getCounterHigh);
         break;
-      case ExampleConfig.jumpGetX:
+      case ExampleConfig.getJump:
         Get.toNamed(RouteConfig.getJumpOne);
         break;
-      case ExampleConfig.autoDispose:
+      case ExampleConfig.getAutoDispose:
         //不使用GetX路由跳转，会使得GetX无法监控页面
         //AutoDisposePage模块提供一种自动释放的解决方案
         Navigator.push(
@@ -37,7 +37,7 @@ class ExampleLogic extends GetxController {
           MaterialPageRoute(builder: (context) => AutoDisposePage()),
         );
         break;
-      case ExampleConfig.counterBinding:
+      case ExampleConfig.getCounterBinding:
         Get.toNamed(RouteConfig.getCounterBinding);
         break;
 

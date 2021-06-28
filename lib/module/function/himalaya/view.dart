@@ -26,7 +26,7 @@ class HimalayaPage extends StatelessWidget {
         HimalayaLeftNavigation(
           data: state,
           //导航栏item回调
-          onTap: (Rx<HimalayaSubItemInfo> item) => logic.navigationItem(item),
+          onTap: (HimalayaSubItemInfo item) => logic.navigationItem(item),
         ),
 
         //右边信息流

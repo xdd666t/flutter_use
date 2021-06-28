@@ -11,12 +11,12 @@ class ExampleState {
       TreeTwiceInfo(
         title: 'GetX',
         btnInfo: [
-          BtnInfo(title: '计数器-响应式', tag: ExampleConfig.counterGetX),
-          BtnInfo(title: '计数器-简单式', tag: ExampleConfig.counterEasyGetX),
-          BtnInfo(title: '计数器-进阶版', tag: ExampleConfig.counterHighGetX),
-          BtnInfo(title: '跨页面事件交互', tag: ExampleConfig.jumpGetX),
-          BtnInfo(title: 'GetX实例-自动释放', tag: ExampleConfig.autoDispose),
-          BtnInfo(title: '计数器-binding', tag: ExampleConfig.counterBinding),
+          BtnInfo(title: '计数器-响应式', tag: ExampleConfig.getCounterRx),
+          BtnInfo(title: '计数器-简单式', tag: ExampleConfig.getCounterEasy),
+          BtnInfo(title: '计数器-进阶版', tag: ExampleConfig.getCounterHigh),
+          BtnInfo(title: '跨页面事件交互', tag: ExampleConfig.getJump),
+          BtnInfo(title: 'GetX实例-自动释放', tag: ExampleConfig.getAutoDispose),
+          BtnInfo(title: '计数器-binding', tag: ExampleConfig.getCounterBinding),
         ],
       ),
 
@@ -43,7 +43,9 @@ class ExampleState {
           BtnInfo(title: 'ChangeNotifier使用', tag: ExampleConfig.testNotifier),
           BtnInfo(title: '自定义Builder', tag: ExampleConfig.customBuilder),
           BtnInfo(title: '自定义状态管理框架-EasyP', tag: ExampleConfig.counterEasyP),
-          BtnInfo(title: '自定义状态管理框架-EasyP全局', tag: ExampleConfig.counterGlobalEasyP),
+          BtnInfo(
+              title: '自定义状态管理框架-EasyP全局',
+              tag: ExampleConfig.counterGlobalEasyP),
         ],
       ),
 

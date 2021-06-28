@@ -16,19 +16,21 @@ class MainPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Row(children: [
         ///侧边栏区域
-        Obx(
-          () => SideNavigation(
-            selectedIndex: state.selectedIndex.value,
-            isUnfold: state.isUnfold.value,
-            isScale: state.isScale.value,
-            sideItems: state.itemList,
-            //点击item
-            onItem: (index) => logic.switchTap(index),
-            //展开侧边栏
-            onUnfold: (isUnfold) => logic.onUnfold(isUnfold),
-            //缩放整体布局
-            onScale: (isScale) => logic.onScale(isScale),
-          ),
+        GetBuilder<MainLogic>(
+          builder: (logic) {
+            return SideNavigation(
+              selectedIndex: state.selectedIndex,
+              isUnfold: state.isUnfold,
+              isScale: state.isScale,
+              sideItems: state.itemList,
+              //点击item
+              onItem: (index) => logic.switchTap(index),
+              //展开侧边栏
+              onUnfold: (isUnfold) => logic.onUnfold(isUnfold),
+              //缩放整体布局
+              onScale: (isScale) => logic.onScale(isScale),
+            );
+          },
         ),
 
         ///Expanded占满剩下的空间

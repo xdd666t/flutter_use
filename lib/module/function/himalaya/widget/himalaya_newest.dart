@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
+import 'package:flutter_use/module/function/himalaya/logic.dart';
 import 'package:flutter_use/module/function/himalaya/state.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +17,7 @@ class HimalayaNewest extends StatelessWidget {
   final HimalayaState data;
 
   ///点击标题栏目
-  final ParamSingleCallback<Rx<HimalayaSubItemInfo>> onSortTitle;
+  final ParamSingleCallback<HimalayaSubItemInfo> onSortTitle;
 
   ///猜你喜欢具体栏目
   final ParamSingleCallback<HimalayaSubItemInfo> onNewest;
@@ -83,13 +84,17 @@ class HimalayaNewest extends StatelessWidget {
           onTap: () => onSortTitle(e),
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 8.dp),
-            child: Obx(() => Text(
-                  e().title,
+            child: GetBuilder<HimalayaLogic>(
+              builder: (logic) {
+                return Text(
+                  e.title,
                   style: TextStyle(
                     fontSize: 16.dp,
-                    color: e().isSelected ? Colors.red : Colors.grey,
+                    color: e.isSelected ? Colors.red : Colors.grey,
                   ),
-                )),
+                );
+              },
+            ),
           ),
         );
       }).toList(),

@@ -13,12 +13,14 @@ class GetCounterBindingPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('计数器-进阶版')),
       body: Center(
-        child: Obx(() {
-          return Text(
-            '点击了 ${state.count.value} 次',
-            style: TextStyle(fontSize: 30.0),
-          );
-        }),
+        child: GetBuilder<GetCounterBindingLogic>(
+          builder: (logic) {
+            return Text(
+              '点击了 ${state.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
+          },
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => logic.increase(),

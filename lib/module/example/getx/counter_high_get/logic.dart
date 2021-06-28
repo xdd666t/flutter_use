@@ -5,5 +5,8 @@ class GetCounterHighLogic extends GetxController {
   final state = GetCounterHighState();
 
   ///自增
-  void increase() => ++state.count;
+  void increase() {
+    state.count = ++state.count;
+    update();
+  }
 }

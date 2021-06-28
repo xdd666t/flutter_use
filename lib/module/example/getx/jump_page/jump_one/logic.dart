@@ -3,7 +3,7 @@ import 'package:flutter_use/app/config/route_config.dart';
 import 'package:get/get.dart';
 
 class GetJumpOneLogic extends GetxController {
-  var count = 0.obs;
+  var count = 0;
 
   ///跳转到跨页面
   void toJumpTwo() {
@@ -11,5 +11,8 @@ class GetJumpOneLogic extends GetxController {
   }
 
   ///跳转到跨页面
-  void increase() => count++;
+  void increase() {
+    count = ++count;
+    update();
+  }
 }

@@ -4,17 +4,16 @@ import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:flutter_use/module/example/view.dart';
 import 'package:flutter_use/module/function/view.dart';
 import 'package:flutter_use/module/setting/view.dart';
-import 'package:get/get.dart';
 
 class MainState {
-  ///选择index - 响应式
-  late RxInt selectedIndex;
+  ///选择index
+  late int selectedIndex;
 
-  ///控制是否展开 - 响应式
-  late RxBool isUnfold;
+  ///控制是否展开
+  late bool isUnfold;
 
-  ///是否缩放 - 响应式
-  late RxBool isScale;
+  ///是否缩放
+  late bool isScale;
 
   ///分类按钮数据源
   late List<BtnInfo> list;
@@ -28,11 +27,11 @@ class MainState {
 
   MainState() {
     //初始化index
-    selectedIndex = 0.obs;
+    selectedIndex = 0;
     //默认不展开
-    isUnfold = false.obs;
+    isUnfold = false;
     //默认不缩放
-    isScale = false.obs;
+    isScale = false;
     //PageView页面
     pageList = [
       KeepAlivePage(FunctionPage()),

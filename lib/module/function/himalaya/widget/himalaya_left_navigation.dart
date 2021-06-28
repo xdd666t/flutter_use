@@ -5,6 +5,8 @@ import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/module/function/himalaya/state.dart';
 import 'package:get/get.dart';
 
+import '../logic.dart';
+
 class HimalayaLeftNavigation extends StatelessWidget {
   HimalayaLeftNavigation({
     Key? key,
@@ -14,7 +16,7 @@ class HimalayaLeftNavigation extends StatelessWidget {
 
   final HimalayaState data;
 
-  final ParamSingleCallback<Rx<HimalayaSubItemInfo>> onTap;
+  final ParamSingleCallback<HimalayaSubItemInfo> onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -33,60 +35,67 @@ class HimalayaLeftNavigation extends StatelessWidget {
           //子栏目 - 列表
           _buildSubItemListBg(
             data: item,
-            subBuilder: (subItem) =>
-                _buildSubItemBg(data: subItem, children: [
-                  //选中红色长方形条块
-                  _buildRedTag(subItem),
+            subBuilder: (subItem) {
+              return _buildSubItemBg(data: subItem, children: [
+                //选中红色长方形条块
+                _buildRedTag(subItem),
 
-                  //图标
-                  _buildItemIcon(subItem),
+                //图标
+                _buildItemIcon(subItem),
 
-                  //描述
-                  _buildItemDesc(subItem),
-                ]),
+                //描述
+                _buildItemDesc(subItem),
+              ]);
+            },
           ),
         ];
       }),
     ]);
   }
 
-  Widget _buildItemDesc(Rx<HimalayaSubItemInfo> subItem) {
-    return Obx(() {
-      return Container(
-        margin: EdgeInsets.only(left: 10.dp),
-        child: Text(
-          subItem().title,
-          style: TextStyle(
-            color: subItem().isSelected ? Colors.red : Colors.black,
-          ),
-        ),
-      );
-    });
+  Widget _buildItemDesc(HimalayaSubItemInfo subItem) {
+    return Container(
+      margin: EdgeInsets.only(left: 10.dp),
+      child: GetBuilder<HimalayaLogic>(
+        builder: (logic) {
+          return Text(
+            subItem.title,
+            style: TextStyle(
+              color: subItem.isSelected ? Colors.red : Colors.black,
+            ),
+          );
+        },
+      ),
+    );
   }
 
-  Widget _buildItemIcon(Rx<HimalayaSubItemInfo> subItem) {
-    return Obx(() {
-      return Icon(
-        subItem.value.icon,
-        size: 18,
-        color: subItem().isSelected ? Colors.red : Colors.black,
-      );
-    });
+  Widget _buildItemIcon(HimalayaSubItemInfo subItem) {
+    return GetBuilder<HimalayaLogic>(
+      builder: (logic) {
+        return Icon(
+          subItem.icon,
+          size: 18,
+          color: subItem.isSelected ? Colors.red : Colors.black,
+        );
+      },
+    );
   }
 
-  Widget _buildRedTag(Rx<HimalayaSubItemInfo> subItem) {
-    return Obx(() {
-      return Container(
-        height: 17.dp,
-        width: 2.dp,
-        color: subItem.value.isSelected ? Colors.red : Colors.transparent,
-        margin: EdgeInsets.only(right: 21.dp),
-      );
-    });
+  Widget _buildRedTag(HimalayaSubItemInfo subItem) {
+    return GetBuilder<HimalayaLogic>(
+      builder: (logic) {
+        return Container(
+          height: 17.dp,
+          width: 2.dp,
+          color: subItem.isSelected ? Colors.red : Colors.transparent,
+          margin: EdgeInsets.only(right: 21.dp),
+        );
+      },
+    );
   }
 
   Widget _buildSubItemBg({
-    required Rx<HimalayaSubItemInfo> data,
+    required HimalayaSubItemInfo data,
     required List<Widget> children,
   }) {
     return InkWell(
