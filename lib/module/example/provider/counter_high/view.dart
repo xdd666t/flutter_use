@@ -18,12 +18,14 @@ class ProHighCounterPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Provider-High范例')),
       body: Center(
-        child: Consumer<ProHighCounterProvider>(builder: (_, __, ___) {
-          return Text(
-            '点击了 ${provider.state.count} 次',
-            style: TextStyle(fontSize: 30.0),
-          );
-        }),
+        child: Consumer<ProHighCounterProvider>(
+          builder: (context, provider, child) {
+            return Text(
+              '点击了 ${provider.state.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
+          },
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => provider.increment(),

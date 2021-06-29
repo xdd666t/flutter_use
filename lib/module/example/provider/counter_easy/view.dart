@@ -19,12 +19,14 @@ class ProEasyCounterPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Provider-Easy范例')),
       body: Center(
-        child: Consumer<ProEasyCounterProvider>(builder: (_, __, ___) {
-          return Text(
-            '点击了 ${provider.count} 次',
-            style: TextStyle(fontSize: 30.0),
-          );
-        }),
+        child: Consumer<ProEasyCounterProvider>(
+          builder: (context, provider, child) {
+            return Text(
+              '点击了 ${provider.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
+          },
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => provider.increment(),
