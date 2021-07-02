@@ -26,23 +26,3 @@ class GetCounterRxPage extends StatelessWidget {
     );
   }
 }
-
-// class Counter extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Text('Counter'),
-//     );
-//   }
-// }
-
-// class Counter extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Obx(() {
-//         return Text('Counter');
-//       }),
-//     );
-//   }
-// }
