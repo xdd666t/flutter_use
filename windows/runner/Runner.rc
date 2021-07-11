@@ -90,10 +90,10 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.tao" "\0"
-            VALUE "FileDescription", "A new Flutter application." "\0"
+            VALUE "FileDescription", "A new Flutter project." "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "flutter_use" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2020 com.tao. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2021 com.tao. All rights reserved." "\0"
             VALUE "OriginalFilename", "flutter_use.exe" "\0"
             VALUE "ProductName", "flutter_use" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"

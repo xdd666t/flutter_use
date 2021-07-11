@@ -28,3 +28,28 @@ class GetCounterEasyPage extends StatelessWidget {
     );
   }
 }
+
+class TransferDataWidget extends InheritedWidget {
+  TransferDataWidget({required Widget child}) : super(child: child);
+
+  @override
+  bool updateShouldNotify(InheritedWidget oldWidget) => false;
+
+  @override
+  InheritedElement createElement() => TransferDataElement(this);
+}
+
+class TransferDataElement extends InheritedElement {
+  TransferDataElement(InheritedWidget widget) : super(widget);
+
+  ///随便初始化什么, 设置只读都行
+  String value = '传输数据';
+}
+
+class Test {
+  test() {
+    var transferDataElement = BuildContext().getElementForInheritedWidgetOfExactType<TransferDataWidget>()
+            as TransferDataElement?;
+    var msg = transferDataElement.value;
+  }
+}
