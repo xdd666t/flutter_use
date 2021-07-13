@@ -17,6 +17,8 @@ class ExampleState {
           BtnInfo(title: '跨页面事件交互', tag: ExampleConfig.getJump),
           BtnInfo(title: 'GetX实例-自动释放', tag: ExampleConfig.getAutoDispose),
           BtnInfo(title: '计数器-binding', tag: ExampleConfig.getCounterBinding),
+          BtnInfo(title: 'EasyX-自定义EasyBuilder刷新机制', tag: ExampleConfig.counterEasyXBuilder),
+          BtnInfo(title: 'EasyX-自定义ebx刷新机制', tag: ExampleConfig.counterEasyXEbx),
         ],
       ),
 

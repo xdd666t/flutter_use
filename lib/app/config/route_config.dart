@@ -10,6 +10,9 @@ import 'package:flutter_use/module/example/getx/counter_binding/view.dart';
 import 'package:flutter_use/module/example/getx/counter_easy/view.dart';
 import 'package:flutter_use/module/example/getx/counter_high_get/view.dart';
 import 'package:flutter_use/module/example/getx/counter_rx/view.dart';
+import 'package:flutter_use/module/example/getx/easy_x/easy_builder/easy_x_controller.dart';
+import 'package:flutter_use/module/example/getx/easy_x_builder/view.dart';
+import 'package:flutter_use/module/example/getx/easy_x_ebx/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_two/view.dart';
 import 'package:flutter_use/module/example/provider/counter_easy/view.dart';
@@ -55,6 +58,8 @@ class RouteConfig {
   static final String getJumpOne = "/jumpOne";
   static final String getJumpTwo = "/jumpOne/jumpTwo";
   static final String getCounterBinding = "/getCounterBinding";
+  static final String counterEasyXBuilderPage = "/counterEasyXBuilder";
+  static final String counterEasyXEbxPage = "/counterEasyXEbx";
 
   ///Provider
   static final String proEasyCounterPage = "/proEasyCounterPage";
@@ -89,6 +94,8 @@ class RouteConfig {
       page: () => GetCounterBindingPage(),
       binding: GetCounterBinding(),
     ),
+    GetPage(name: counterEasyXBuilderPage, page: () => EasyXCounterPage()),
+    GetPage(name: counterEasyXEbxPage, page: () => EasyXEbxCounterPage()),
     GetPage(name: himalaya, page: () => HimalayaPage()),
     GetPage(name: proEasyCounterPage, page: () => ProEasyCounterPage()),
     GetPage(name: proHighCounterPage, page: () => ProHighCounterPage()),

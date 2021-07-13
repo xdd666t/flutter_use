@@ -26,7 +26,8 @@ class ExampleConfig {
   static const String getJump = 'getJump';
   static const String getAutoDispose = 'getAutoDispose';
   static const String getCounterBinding = 'getCounterBinding';
-
+  static const String counterEasyXBuilder = 'counterEasyXBuilder';
+  static const String counterEasyXEbx = 'counterEasyXEbx';
   ///Bloc栏目
   static const String blCubitCounter = 'blCubitCounter';
   static const String blBlocCounter = 'blBlocCounter';

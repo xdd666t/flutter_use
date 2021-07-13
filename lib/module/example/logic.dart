@@ -40,6 +40,12 @@ class ExampleLogic extends GetxController {
       case ExampleConfig.getCounterBinding:
         Get.toNamed(RouteConfig.getCounterBinding);
         break;
+      case ExampleConfig.counterEasyXBuilder:
+        Get.toNamed(RouteConfig.counterEasyXBuilderPage);
+        break;
+      case ExampleConfig.counterEasyXEbx:
+        Get.toNamed(RouteConfig.counterEasyXEbxPage);
+        break;
 
       ///Bloc页面跳转
       case ExampleConfig.blCubitCounter:
