@@ -22,7 +22,7 @@ class _EbxState extends State<Ebx> {
     super.initState();
 
     _rxEasy.easyXNotifier.addListener(_remove = () {
-      setState(() {});
+      if (mounted) setState(() {});
     });
   }
 

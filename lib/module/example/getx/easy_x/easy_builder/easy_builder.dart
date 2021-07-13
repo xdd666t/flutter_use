@@ -32,7 +32,7 @@ class _EasyBuilderState<T extends EasyXController>
     controller = Easy.find<T>(tag: widget.tag);
 
     controller!.xNotifier.addListener(_remove = () {
-      setState(() {});
+      if (mounted) setState(() {});
     });
   }
 
