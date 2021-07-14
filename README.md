@@ -21,8 +21,9 @@
 ```
 
 
-- Provider：[使用+源码剖析：Flutter Provider的另一面（万字图文）](https://juejin.cn/post/6968272002515894303)
-  - Provider的刷新机制真的很有趣！
+- Provider：Provider的刷新机制真的很有趣！
+
+  - 使用+源码深度剖析：[Flutter Provider的另一面（万字图文）](https://juejin.cn/post/6968272002515894303)
 
 ```dart
 ├─lib
@@ -42,19 +43,30 @@
 ```
 
 
-- GetX：[Flutter GetX使用---简洁的魅力！](https://juejin.cn/post/6924104248275763208)
+- GetX
+
+  - 使用篇：[Flutter GetX使用---简洁的魅力！](https://juejin.cn/post/6924104248275763208)
+  - 源码篇：[Flutter GetX深度剖析 | 我们终将走出自己的路（万字图文）](https://juejin.cn/post/6984593635681517582)
 
 ```dart
 ├─lib
 │  ├─module
 │  │  ├─example
-│  │  │  ├─getx                ///getx演示代码在此目录下
-│  │  │  │  ├─counter_easy_get
-│  │  │  │  ├─counter_get
+│  │  │  ├─getx                 ///getx演示代码在此目录下
+│  │  │  │  ├─auto_dispose
+│  │  │  │  ├─counter_binding
+│  │  │  │  ├─counter_easy
 │  │  │  │  ├─counter_high_get
-│  │  │  │  └─jump_page
-│  │  │  │      ├─jump_one
-│  │  │  │      └─jump_two
+│  │  │  │  ├─counter_rx
+│  │  │  │  ├─easy_x
+│  │  │  │  │  ├─easy_builder
+│  │  │  │  │  └─ebx
+│  │  │  │  ├─easy_x_builder
+│  │  │  │  ├─easy_x_ebx
+│  │  │  │  ├─jump_page
+│  │  │  │  │  ├─jump_one
+│  │  │  │  │  └─jump_two
+│  │  │  │  └─widget
 ```
 
 - Bloc
