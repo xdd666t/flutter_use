@@ -15,18 +15,17 @@ class Ebx extends StatefulWidget {
 
 class _EbxState extends State<Ebx> {
   RxEasy _rxEasy = RxEasy();
-  VoidCallback? _remove;
 
   @override
   void initState() {
     super.initState();
 
-    _rxEasy.easyXNotifier.addListener(_remove = () {
+    _rxEasy.easyXNotifier.addListener(() {
       if (mounted) setState(() {});
     });
   }
 
-  Widget get notifyChildren {
+  Widget get notifyChild {
     final observer = RxEasy.proxy;
     RxEasy.proxy = _rxEasy;
     final result = widget.builder();
@@ -39,12 +38,12 @@ class _EbxState extends State<Ebx> {
 
   @override
   Widget build(BuildContext context) {
-    return notifyChildren;
+    return notifyChild;
   }
 
   @override
   void dispose() {
-    _remove = null;
+    _rxEasy.easyXNotifier.dispose();
 
     super.dispose();
   }

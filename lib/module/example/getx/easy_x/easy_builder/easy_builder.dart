@@ -23,33 +23,30 @@ class EasyBuilder<T extends EasyXController> extends StatefulWidget {
 
 class _EasyBuilderState<T extends EasyXController>
     extends State<EasyBuilder<T>> {
-  T? controller;
-  VoidCallback? _remove;
+  late T controller;
 
   @override
   void initState() {
     super.initState();
-    controller = Easy.find<T>(tag: widget.tag);
 
-    controller!.xNotifier.addListener(_remove = () {
+    controller = Easy.find<T>(tag: widget.tag);
+    controller.xNotifier.addListener(() {
       if (mounted) setState(() {});
     });
   }
 
   @override
   void dispose() {
-    super.dispose();
     if (widget.autoRemove) {
       Easy.delete<T>(tag: widget.tag);
     }
+    controller.xNotifier.dispose();
 
-    controller!.xNotifier.dispose();
-    controller = null;
-    _remove = null;
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return widget.builder(controller!);
+    return widget.builder(controller);
   }
 }
