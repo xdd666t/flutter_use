@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:get/get.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -14,7 +15,7 @@ class SettingPage extends StatelessWidget {
     return VisibilityDetector(
       key: Key('Setting'),
       onVisibilityChanged: (info) {
-        print(info.visibleFraction);
+        Log.d(info.visibleFraction);
       },
       child: Container(
         alignment: Alignment.center,
