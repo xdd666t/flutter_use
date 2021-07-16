@@ -20,29 +20,6 @@
 │  │  │  │  └─widget
 ```
 
-
-- Provider：Provider的刷新机制真的很有趣！
-
-  - 使用+源码深度剖析：[Flutter Provider的另一面（万字图文）](https://juejin.cn/post/6968272002515894303)
-
-```dart
-├─lib
-│  ├─module
-│  │  ├─example
-│  │  │  ├─provider        /// provider演示代码在此目录下
-│  │  │  │  ├─counter_easy
-│  │  │  │  ├─counter_high
-│  │  │  │  ├─custom_builder
-│  │  │  │  ├─easy_p
-│  │  │  │  ├─easy_p_counter
-│  │  │  │  ├─easy_p_counter_global
-│  │  │  │  ├─span_page
-│  │  │  │  │  ├─span_one
-│  │  │  │  │  └─span_two
-│  │  │  │  └─test_notifier
-```
-
-
 - GetX
 
   - 使用篇：[Flutter GetX使用---简洁的魅力！](https://juejin.cn/post/6924104248275763208)
@@ -68,6 +45,29 @@
 │  │  │  │  │  └─jump_two
 │  │  │  │  └─widget
 ```
+
+
+- Provider：Provider的刷新机制真的很有趣！
+
+  - 使用+源码深度剖析：[Flutter Provider的另一面（万字图文）](https://juejin.cn/post/6968272002515894303)
+
+```dart
+├─lib
+│  ├─module
+│  │  ├─example
+│  │  │  ├─provider        /// provider演示代码在此目录下
+│  │  │  │  ├─counter_easy
+│  │  │  │  ├─counter_high
+│  │  │  │  ├─custom_builder
+│  │  │  │  ├─easy_p
+│  │  │  │  ├─easy_p_counter
+│  │  │  │  ├─easy_p_counter_global
+│  │  │  │  ├─span_page
+│  │  │  │  │  ├─span_one
+│  │  │  │  │  └─span_two
+│  │  │  │  └─test_notifier
+```
+
 
 - Bloc
   - 使用篇：[flutter_bloc使用解析---骚年，你还在手搭bloc吗！](https://juejin.cn/post/6856268776510504968)
