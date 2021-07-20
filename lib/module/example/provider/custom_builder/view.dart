@@ -8,9 +8,7 @@ class CustomBuilderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (BuildContext context) => CustomBuilderProvider(),
-      builder: (context, child) {
-        return _buildPage(context);
-      },
+      builder: (context, child) => _buildPage(context),
     );
   }
 

@@ -6,17 +6,17 @@ import 'event.dart';
 import 'state.dart';
 
 class BlBlocCounterPage extends StatelessWidget {
-  final BlBlocCounterBloc bloc = BlBlocCounterBloc();
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => bloc..add(InitEvent()),
-      child: _buildPage(),
+      create: (BuildContext context) => BlBlocCounterBloc()..add(InitEvent()),
+      child: Builder(builder: (context) => _buildPage(context)),
     );
   }
 
-  Widget _buildPage() {
+  Widget _buildPage(BuildContext context) {
+    final bloc = BlocProvider.of<BlBlocCounterBloc>(context);
+
     return Scaffold(
       appBar: AppBar(title: Text('Bloc-Bloc范例')),
       body: Center(

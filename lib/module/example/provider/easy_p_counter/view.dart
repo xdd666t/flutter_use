@@ -10,9 +10,7 @@ class CounterEasyPPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierEasyP(
       create: (BuildContext context) => CounterEasyP(),
-      builder: (context) {
-        return _buildPage(context);
-      },
+      builder: (context) => _buildPage(context),
     );
   }
 

@@ -7,28 +7,32 @@ import 'cubit.dart';
 import 'state.dart';
 
 class BlCustomBuilderPage extends StatelessWidget {
-  final cubit = BlCustomBuilderCubit();
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => cubit,
-      child: Scaffold(
-        appBar: AppBar(title: Text('Bloc-自定义Builder范例')),
-        body: Center(
-          child: BlocEasyBuilder<BlCustomBuilderCubit, BlCustomBuilderState>(
-            builder: (context, state) {
-              return Text(
-                '点击了 ${cubit.state.count} 次',
-                style: TextStyle(fontSize: 30.0),
-              );
-            },
-          ),
+      create: (BuildContext context) => BlCustomBuilderCubit(),
+      child: Builder(builder: (context) => _buildPage(context)),
+    );
+  }
+
+  Widget _buildPage(BuildContext context) {
+    final cubit = BlocProvider.of<BlCustomBuilderCubit>(context);
+
+    return Scaffold(
+      appBar: AppBar(title: Text('Bloc-自定义Builder范例')),
+      body: Center(
+        child: BlocEasyBuilder<BlCustomBuilderCubit, BlCustomBuilderState>(
+          builder: (context, state) {
+            return Text(
+              '点击了 ${cubit.state.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
+          },
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => cubit.increment(),
-          child: Icon(Icons.add),
-        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => cubit.increment(),
+        child: Icon(Icons.add),
       ),
     );
   }

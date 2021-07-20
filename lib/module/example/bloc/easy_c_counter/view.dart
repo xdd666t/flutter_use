@@ -6,28 +6,32 @@ import 'logic.dart';
 import 'state.dart';
 
 class CounterEasyCPage extends StatelessWidget {
-  final easyC = CounterEasyC();
-
   @override
   Widget build(BuildContext context) {
     return EasyCProvider(
-      create: (BuildContext context) => easyC,
-      child: Scaffold(
-        appBar: AppBar(title: Text('自定义状态管理框架-EasyC范例')),
-        body: Center(
-          child: EasyCBuilder<CounterEasyC, CounterEasyCState>(
-            builder: (context, state) {
-              return Text(
-                '点击了 ${easyC.state.count} 次',
-                style: TextStyle(fontSize: 30.0),
-              );
-            },
-          ),
+      create: (BuildContext context) => CounterEasyC(),
+      child: Builder(builder: (context) => _buildPage(context)),
+    );
+  }
+
+  Widget _buildPage(BuildContext context) {
+    final easyC = EasyCProvider.of<CounterEasyC>(context);
+
+    return Scaffold(
+      appBar: AppBar(title: Text('自定义状态管理框架-EasyC范例')),
+      body: Center(
+        child: EasyCBuilder<CounterEasyC, CounterEasyCState>(
+          builder: (context, state) {
+            return Text(
+              '点击了 ${easyC.state.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
+          },
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => easyC.increment(),
-          child: Icon(Icons.add),
-        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => easyC.increment(),
+        child: Icon(Icons.add),
       ),
     );
   }

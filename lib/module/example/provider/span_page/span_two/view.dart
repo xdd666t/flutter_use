@@ -9,9 +9,7 @@ class ProSpanTwoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (BuildContext context) => ProSpanTwoProvider(),
-      builder: (context, child) {
-        return _buildPage(context);
-      },
+      builder: (context, child) => _buildPage(context),
     );
   }
 

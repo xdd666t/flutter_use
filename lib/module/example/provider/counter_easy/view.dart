@@ -9,8 +9,7 @@ class ProEasyCounterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (BuildContext context) => ProEasyCounterProvider(),
-
-
+      builder: (context, child) => _buildPage(context),
     );
   }
 

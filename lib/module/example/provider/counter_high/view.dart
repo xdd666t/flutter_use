@@ -8,9 +8,7 @@ class ProHighCounterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (BuildContext context) => ProHighCounterProvider(),
-      builder: (context, child) {
-        return _buildPage(context);
-      },
+      builder: (context, child) => _buildPage(context),
     );
   }
 
