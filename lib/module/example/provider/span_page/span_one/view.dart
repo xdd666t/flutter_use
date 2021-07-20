@@ -3,14 +3,10 @@ import 'package:provider/provider.dart';
 
 import 'provider.dart';
 
-// ignore: must_be_immutable
 class ProSpanOnePage extends StatelessWidget {
-  //不用final 防止全局刷新报错
-  late ProSpanOneProvider provider;
-
   @override
   Widget build(BuildContext context) {
-    provider = Provider.of<ProSpanOneProvider>(context, listen: false);
+    final provider = context.read<ProSpanOneProvider>();
 
     return Scaffold(
       appBar: AppBar(title: const Text('SpanOne范例')),

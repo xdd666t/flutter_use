@@ -4,17 +4,19 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class CustomBuilderPage extends StatelessWidget {
-  final provider = CustomBuilderProvider();
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (BuildContext context) => provider,
-      child: _buildPage(),
+      create: (BuildContext context) => CustomBuilderProvider(),
+      builder: (context, child) {
+        return _buildPage(context);
+      },
     );
   }
 
-  Widget _buildPage() {
+  Widget _buildPage(BuildContext context) {
+    final provider = context.read<CustomBuilderProvider>();
+
     return Scaffold(
       appBar: AppBar(title: Text('Provider-自定义Builder范例')),
       body: Center(
@@ -27,9 +29,7 @@ class CustomBuilderPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => provider.increment(),
-        child: EasyBuilder<CustomBuilderProvider>(
-          () => Icon(Icons.add),
-        ),
+        child: Icon(Icons.add),
       ),
     );
   }

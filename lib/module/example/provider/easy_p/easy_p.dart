@@ -20,7 +20,7 @@ class EasyP {
   static EasyPInheritedElement<T>
       _getInheritedElement<T extends ChangeNotifier>(BuildContext context) {
     var inheritedElement = context
-            .getElementForInheritedWidgetOfExactType<ChangeNotifierEasyP<T>>()
+            .getElementForInheritedWidgetOfExactType<EasyPInherited<T>>()
         as EasyPInheritedElement<T>?;
 
     if (inheritedElement == null) {

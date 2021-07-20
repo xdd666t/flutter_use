@@ -1,11 +1,40 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class ChangeNotifierEasyP<T extends ChangeNotifier> extends InheritedWidget {
+class ChangeNotifierEasyP<T extends ChangeNotifier> extends StatelessWidget {
   ChangeNotifierEasyP({
     Key? key,
-    Widget? child,
     required this.create,
-  }) : super(key: key, child: child ?? Container());
+    this.builder,
+    this.child,
+  }) : super(key: key);
+
+  final T Function(BuildContext context) create;
+
+  final Widget Function(BuildContext context)? builder;
+  final Widget? child;
+
+  @override
+  Widget build(BuildContext context) {
+    assert(
+      builder != null || child != null,
+      '$runtimeType  must specify a child',
+    );
+
+    return EasyPInherited(
+      create: create,
+      child: builder != null
+          ? Builder(builder: (context) => builder!(context))
+          : child!,
+    );
+  }
+}
+
+class EasyPInherited<T extends ChangeNotifier> extends InheritedWidget {
+  EasyPInherited({
+    Key? key,
+    required Widget child,
+    required this.create,
+  }) : super(key: key, child: child);
 
   final T Function(BuildContext context) create;
 
@@ -17,7 +46,7 @@ class ChangeNotifierEasyP<T extends ChangeNotifier> extends InheritedWidget {
 }
 
 class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
-  EasyPInheritedElement(ChangeNotifierEasyP<T> widget) : super(widget);
+  EasyPInheritedElement(EasyPInherited<T> widget) : super(widget);
 
   bool _firstBuild = true;
   bool _shouldNotify = false;
@@ -30,7 +59,7 @@ class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
   void performRebuild() {
     if (_firstBuild) {
       _firstBuild = false;
-      _value = (widget as ChangeNotifierEasyP<T>).create(this);
+      _value = (widget as EasyPInherited<T>).create(this);
 
       _value.addListener(_callBack = () {
         // 处理刷新逻辑，此处无法直接调用notifyClients

@@ -5,17 +5,18 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class ProEasyCounterPage extends StatelessWidget {
-  final provider = ProEasyCounterProvider();
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (BuildContext context) => provider,
-      child: _buildPage(),
+      create: (BuildContext context) => ProEasyCounterProvider(),
+
+
     );
   }
 
-  Widget _buildPage() {
+  Widget _buildPage(BuildContext context) {
+    final provider = context.read<ProEasyCounterProvider>();
+
     return Scaffold(
       appBar: AppBar(title: Text('Provider-Easy范例')),
       body: Center(

@@ -5,17 +5,19 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class ProSpanTwoPage extends StatelessWidget {
-  final provider = ProSpanTwoProvider();
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (BuildContext context) => provider,
-      child: _buildPage(context),
+      create: (BuildContext context) => ProSpanTwoProvider(),
+      builder: (context, child) {
+        return _buildPage(context);
+      },
     );
   }
 
   Widget _buildPage(BuildContext context) {
+    final provider = context.read<ProSpanTwoProvider>();
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(title: Text('SpanTwo范例')),
