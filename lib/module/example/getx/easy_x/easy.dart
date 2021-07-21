@@ -26,8 +26,8 @@ class _EasyInstance {
   ///注入实例
   T put<T>(T dependency, {String? tag}) {
     final key = _getKey(T, tag);
-    //多次注入会覆盖
-    _single[key] = _InstanceInfo<T>(dependency);
+    //只保存第一次注入
+    _single.putIfAbsent(key, () => _InstanceInfo<T>(dependency));
     return find<T>(tag: tag);
   }
 
