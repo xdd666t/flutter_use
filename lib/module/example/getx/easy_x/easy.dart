@@ -26,7 +26,7 @@ class _EasyInstance {
   ///注入实例
   T put<T>(T dependency, {String? tag}) {
     final key = _getKey(T, tag);
-    //只保存第一次注入
+    //只保存第一次注入：针对自动刷新机制优化，每次热重载的时候，数据不会重置
     _single.putIfAbsent(key, () => _InstanceInfo<T>(dependency));
     return find<T>(tag: tag);
   }
