@@ -47,6 +47,7 @@ android {
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
 
         ndk {
             //设置支持的SO库架构

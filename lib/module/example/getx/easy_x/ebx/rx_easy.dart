@@ -1,3 +1,4 @@
+
 import '../easy_x_notifier.dart';
 
 class RxEasy {
@@ -11,8 +12,6 @@ class RxEasy {
 
   void addListener(EasyXNotifier notifier) {
     if (!_listenerMap.containsKey(notifier)) {
-      //重要：将Ebx中的监听对象转换到此处
-      easyXNotifier = proxy!.easyXNotifier;
       //变量监听中刷新
       notifier.addListener(() {
         //刷新ebx中添加的监听
