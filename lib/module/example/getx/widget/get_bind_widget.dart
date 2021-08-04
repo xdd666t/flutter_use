@@ -51,11 +51,11 @@ class GetBindWidget extends StatefulWidget {
     this.binds,
     this.tags,
     required this.child,
-  })   : assert(
-  binds == null || tags == null || binds.length == tags.length,
-  'The binds and tags arrays length should be equal\n'
-      'and the elements in the two arrays correspond one-to-one',
-  ),
+  })  : assert(
+          binds == null || tags == null || binds.length == tags.length,
+          'The binds and tags arrays length should be equal\n'
+          'and the elements in the two arrays correspond one-to-one',
+        ),
         super(key: key);
 
   final GetxController? bind;
