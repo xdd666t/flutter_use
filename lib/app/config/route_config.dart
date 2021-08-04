@@ -10,7 +10,6 @@ import 'package:flutter_use/module/example/getx/counter_binding/view.dart';
 import 'package:flutter_use/module/example/getx/counter_easy/view.dart';
 import 'package:flutter_use/module/example/getx/counter_high_get/view.dart';
 import 'package:flutter_use/module/example/getx/counter_rx/view.dart';
-import 'package:flutter_use/module/example/getx/easy_x/easy_builder/easy_x_controller.dart';
 import 'package:flutter_use/module/example/getx/easy_x_builder/view.dart';
 import 'package:flutter_use/module/example/getx/easy_x_ebx/view.dart';
 import 'package:flutter_use/module/example/getx/jump_page/jump_one/view.dart';
@@ -32,44 +31,44 @@ import 'package:get/get.dart';
 
 class RouteConfig {
   ///主页面
-  static final String main = "/";
+  static const String main = "/";
 
   ///演示SmartDialog控件 喜马拉雅  dialog页面
-  static final String smartDialog = "/smartDialog";
-  static final String himalaya = "/himalaya";
-  static final String dialog = "/dialog";
+  static const String smartDialog = "/smartDialog";
+  static const String himalaya = "/himalaya";
+  static const String dialog = "/dialog";
 
   ///bloc计数器模块 Bloc跨页面传递事件
-  static final String blCubitCounterPage = "/blCubitCounterPage";
-  static final String blBlocCounterPage = "/blBlocCounterPage";
-  static final String cubitSpanOne = "/cubitSpanOne";
-  static final String cubitSpanTwo = "/cubitSpanOne/cubitSpanTwo";
-  static final String streamPage = "/streamPage";
-  static final String blCustomBuilderPage = "/blCustomBuilderPage";
-  static final String counterEasyCPage = "/counterEasyCPage";
+  static const String blCubitCounterPage = "/blCubitCounterPage";
+  static const String blBlocCounterPage = "/blBlocCounterPage";
+  static const String cubitSpanOne = "/cubitSpanOne";
+  static const String cubitSpanTwo = "/cubitSpanOne/cubitSpanTwo";
+  static const String streamPage = "/streamPage";
+  static const String blCustomBuilderPage = "/blCustomBuilderPage";
+  static const String counterEasyCPage = "/counterEasyCPage";
 
   ///测试布局页面
-  static final String testLayout = "/testLayout";
+  static const String testLayout = "/testLayout";
 
   ///GetX 计数器  跨页面交互
-  static final String getCounterRx = "/getCounterRx";
-  static final String getCounterEasy = "/counterEasyGet";
-  static final String getCounterHigh = "/counterHighGet";
-  static final String getJumpOne = "/jumpOne";
-  static final String getJumpTwo = "/jumpOne/jumpTwo";
-  static final String getCounterBinding = "/getCounterBinding";
-  static final String counterEasyXBuilderPage = "/counterEasyXBuilder";
-  static final String counterEasyXEbxPage = "/counterEasyXEbx";
+  static const String getCounterRx = "/getCounterRx";
+  static const String getCounterEasy = "/counterEasyGet";
+  static const String getCounterHigh = "/counterHighGet";
+  static const String getJumpOne = "/jumpOne";
+  static const String getJumpTwo = "/jumpOne/jumpTwo";
+  static const String getCounterBinding = "/getCounterBinding";
+  static const String counterEasyXBuilderPage = "/counterEasyXBuilder";
+  static const String counterEasyXEbxPage = "/counterEasyXEbx";
 
   ///Provider
-  static final String proEasyCounterPage = "/proEasyCounterPage";
-  static final String proHighCounterPage = "/proHighCounterPage";
-  static final String proSpanOnePage = "/proSpanOnePage";
-  static final String proSpanTwoPage = "/proSpanOnePage/proSpanTwoPage";
-  static final String testNotifierPage = "/testNotifierPage";
-  static final String customBuilderPage = "/customBuilderPage";
-  static final String counterEasyPPage = "/counterEasyPPage";
-  static final String counterGlobalEasyPPage = "/counterGlobalEasyPPage";
+  static const String proEasyCounterPage = "/proEasyCounterPage";
+  static const String proHighCounterPage = "/proHighCounterPage";
+  static const String proSpanOnePage = "/proSpanOnePage";
+  static const String proSpanTwoPage = "/proSpanOnePage/proSpanTwoPage";
+  static const String testNotifierPage = "/testNotifierPage";
+  static const String customBuilderPage = "/customBuilderPage";
+  static const String counterEasyPPage = "/counterEasyPPage";
+  static const String counterGlobalEasyPPage = "/counterGlobalEasyPPage";
 
   ///别名映射页面
   static final List<GetPage> getPages = [
