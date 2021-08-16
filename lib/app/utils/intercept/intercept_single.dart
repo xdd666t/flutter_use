@@ -1,4 +1,4 @@
-///俩层通用拦截器，T的类型必须一致
+///一层通用拦截器，T的类型必须一致
 abstract class InterceptSingle<T> {
   void intercept(T data, SingleHandler handler) => handler.next(data);
 }
