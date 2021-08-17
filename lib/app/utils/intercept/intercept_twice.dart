@@ -7,8 +7,8 @@ abstract class InterceptTwice<T> {
 
 ///添加拦截器,触发拦截器方法入口
 class InterceptTwiceRealHandler<T> {
-  _TwiceInitHandler _init = _TwiceInitHandler();
-  _TwiceSubmitHandler _submit = _TwiceSubmitHandler();
+  _TwiceInitHandler _init = _TwiceInitHandler(index: 0, intercepts: []);
+  _TwiceSubmitHandler _submit = _TwiceSubmitHandler(index: 0, intercepts: []);
 
   void add(InterceptTwice intercept) {
     //一种类型的拦截器只能添加一次
@@ -48,8 +48,8 @@ class _TwiceInitHandler extends TwiceHandler {
   int index;
 
   _TwiceInitHandler({
-    this.index = 0,
-    this.intercepts = const [],
+    required this.index,
+    required this.intercepts,
   });
 
   @override
@@ -72,8 +72,8 @@ class _TwiceSubmitHandler extends TwiceHandler {
   int index;
 
   _TwiceSubmitHandler({
-    this.index = 0,
-    this.intercepts = const [],
+    required this.index,
+    required this.intercepts,
   });
 
   @override
