@@ -39,18 +39,14 @@ class AutoUi {
   bool first = true;
 
   void init() {
-    if (!first) return;
+    if (Get.context == null || !first) return;
     first = false;
-
-    BuildContext? context = Get.context;
-    if (context != null) return;
 
     UiUtil.init(
       // 通过context获取设备像素大小
-      context: context!,
-      // 设计尺寸
-      // designSize: Size(1920 / 2.72, 1080 / 2.72),
-      designSize: Size(1920, 1080),
+      context: Get.context!,
+      // 设计尺寸(前期是先写布局，后做pc/web尺寸适配，故此处统一处理下)
+      designSize: Size(1920 / 1.72, 1080 / 1.72),
     );
   }
 }
