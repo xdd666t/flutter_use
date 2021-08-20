@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:flutter_use/app/utils/intercept/intercept_chain.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubit.dart';
 import 'package:flutter_use/module/example/provider/easy_p_counter_global/logic.dart';
 import 'package:get/get.dart';
