@@ -4,7 +4,7 @@ abstract class InterceptSingle<T> {
 }
 
 ///添加拦截器,触发拦截器方法入口
-class InterceptSingleRealHandler<T> {
+class InterceptSingleHandler<T> {
   _InterceptSingleHandler _handler = _InterceptSingleHandler(
     index: 0,
     intercepts: [],

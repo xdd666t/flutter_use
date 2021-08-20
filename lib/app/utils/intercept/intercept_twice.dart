@@ -6,7 +6,7 @@ abstract class InterceptTwice<T> {
 }
 
 ///添加拦截器,触发拦截器方法入口
-class InterceptTwiceRealHandler<T> {
+class InterceptTwiceHandler<T> {
   _TwiceInitHandler _init = _TwiceInitHandler(index: 0, intercepts: []);
   _TwiceSubmitHandler _submit = _TwiceSubmitHandler(index: 0, intercepts: []);
 
