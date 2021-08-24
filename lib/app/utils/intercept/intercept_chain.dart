@@ -2,7 +2,9 @@
 abstract class InterceptChain<T> {
   InterceptChain? next;
 
-  void intercept(T data) => next?.intercept(data);
+  void intercept(T data) {
+    next?.intercept(data);
+  }
 }
 
 class InterceptChainHandler<T> {
