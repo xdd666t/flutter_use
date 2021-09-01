@@ -32,7 +32,9 @@ class InterceptSingleHandler<T> {
 
 ///------------实现不同处理器 参照 dio api设计 和 OkHttp实现思想---------------
 abstract class SingleHandler {
-  next(dynamic data);
+  /// span: 设置该参数，可控跨越多级节点
+  /// 默认0，则不跨越节点（遍历所有节点）
+  next(dynamic data, {int span = 0});
 }
 
 ///实现init处理器
@@ -47,14 +49,14 @@ class _InterceptSingleHandler extends SingleHandler {
   });
 
   @override
-  next(dynamic data) {
-    if (index >= intercepts.length) {
-      return;
-    }
+  next(dynamic data, {int span = 0}) {
+    if ((index + span) >= intercepts.length) return;
 
-    var intercept = intercepts[index];
-    var handler =
-        _InterceptSingleHandler(index: index + 1, intercepts: intercepts);
+    var intercept = intercepts[index + span];
+    var handler = _InterceptSingleHandler(
+      index: index + (span + 1),
+      intercepts: intercepts,
+    );
 
     intercept.intercept(data, handler);
   }
