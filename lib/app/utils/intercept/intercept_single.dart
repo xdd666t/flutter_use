@@ -5,10 +5,7 @@ abstract class InterceptSingle<T> {
 
 ///添加拦截器,触发拦截器方法入口
 class InterceptSingleHandler<T> {
-  _InterceptSingleHandler _handler = _InterceptSingleHandler(
-    index: 0,
-    intercepts: [],
-  );
+  _InterceptSingleHandler _handler = _InterceptSingleHandler();
 
   void add(InterceptSingle intercept) {
     //一种类型的拦截器只能添加一次
@@ -44,8 +41,8 @@ class _InterceptSingleHandler extends SingleHandler {
   int index;
 
   _InterceptSingleHandler({
-    required this.index,
-    required this.intercepts,
+    this.index = 0,
+    this.intercepts = const [],
   });
 
   @override
