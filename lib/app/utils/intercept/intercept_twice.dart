@@ -85,7 +85,7 @@ class _TwiceSubmitHandler extends TwiceHandler {
       return;
     }
 
-    var intercept = intercepts[index + 1];
+    var intercept = intercepts[index + span];
     var handler = _TwiceSubmitHandler(
       index: index + (span + 1),
       intercepts: intercepts,
