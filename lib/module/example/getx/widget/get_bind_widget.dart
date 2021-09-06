@@ -22,27 +22,6 @@ import 'package:get/get.dart';
 ///     );
 ///   }
 /// }
-/// GetBindWidget can bind GetxController, and when the page is disposed,
-/// it can automatically destroy the bound related GetXController
-///
-///
-/// Sample:
-///
-/// class SampleController extends GetxController {
-///   final String title = 'My Awesome View';
-/// }
-///
-/// class SamplePage extends StatelessWidget {
-///   final controller = SampleController();
-///
-///   @override
-///   Widget build(BuildContext context) {
-///     return GetBindWidget(
-///       bind: controller,
-///       child: Container(),
-///     );
-///   }
-/// }
 class GetBindWidget extends StatefulWidget {
   const GetBindWidget({
     Key? key,
