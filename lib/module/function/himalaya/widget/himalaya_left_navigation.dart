@@ -6,6 +6,7 @@ import 'package:flutter_use/module/function/himalaya/state.dart';
 import 'package:get/get.dart';
 
 import '../logic.dart';
+import 'himalaya_function.dart';
 
 class HimalayaLeftNavigation extends StatelessWidget {
   HimalayaLeftNavigation({
@@ -121,15 +122,19 @@ class HimalayaLeftNavigation extends StatelessWidget {
   Widget _buildItemListBg({required HimalayaItemBuilder itemBuilder}) {
     return Expanded(
       child: Scrollbar(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: data.leftItemList.map((e) {
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: itemBuilder(e),
-              );
-            }).toList(),
+        child: ScrollConfiguration(
+          behavior: MyCustomScrollBehavior(),
+          child: SingleChildScrollView(
+            controller: ScrollController(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: data.leftItemList.map((e) {
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: itemBuilder(e),
+                );
+              }).toList(),
+            ),
           ),
         ),
       ),

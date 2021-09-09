@@ -30,7 +30,11 @@ class HimalayaState {
   ///音频播放信息
   late HimalayaSubItemInfo audioPlayInfo;
 
+  late ScrollController scrollController;
+
   HimalayaState() {
+    scrollController = ScrollController(initialScrollOffset: 50.0);
+
     //侧边导航栏目初始数据
     leftItemList = [
       HimalayaItemInfo(title: '推荐', subItemList: [
