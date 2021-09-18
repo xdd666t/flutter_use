@@ -66,6 +66,7 @@ dependencies:
 #      url: git://github.com/CNAD666/flutter_smart_dialog.git
 #  flutter_smart_dialog:
 #    path: F:\GitHub\flutter_smart_dialog
+#  flutter_lints: ^1.0.4
 
 dev_dependencies:
   flutter_test:

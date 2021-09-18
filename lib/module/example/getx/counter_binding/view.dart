@@ -6,7 +6,7 @@ import 'state.dart';
 
 class GetCounterBindingPage extends StatelessWidget {
   final logic = Get.find<GetCounterBindingLogic>();
-  final GetCounterBindingState state = Get.find<GetCounterBindingLogic>().state;
+  final state = Get.find<GetCounterBindingLogic>().state;
 
   @override
   Widget build(BuildContext context) {
