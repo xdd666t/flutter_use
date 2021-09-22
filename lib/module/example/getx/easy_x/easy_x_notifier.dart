@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 class EasyXNotifier {
   List<VoidCallback> _listeners = [];
 
-  void addListener(VoidCallback listener) {
-    _listeners.add(listener);
-  }
+  void addListener(VoidCallback listener) => _listeners.add(listener);
 
   void removeListener(VoidCallback listener) {
     for (final entry in _listeners) {
@@ -17,9 +15,7 @@ class EasyXNotifier {
     }
   }
 
-  void dispose() {
-    _listeners.clear();
-  }
+  void dispose() => _listeners.clear();
 
   void notify() {
     if (_listeners.isEmpty) return;
