@@ -6,7 +6,7 @@ import 'package:flutter_use/module/example/getx/easy_x/easy_builder/easy_builder
 import 'logic.dart';
 
 class EasyXCounterPage extends StatelessWidget {
-  final EasyXCounterLogic logic = Easy.put(EasyXCounterLogic());
+  final logic = Easy.put(EasyXCounterLogic());
 
   @override
   Widget build(BuildContext context) {

@@ -21,11 +21,7 @@ class EasyXNotifier {
     if (_listeners.isEmpty) return;
 
     for (final entry in _listeners) {
-      try {
-        entry.call();
-      } catch (e) {
-        print(e.toString());
-      }
+      entry.call();
     }
   }
 }
