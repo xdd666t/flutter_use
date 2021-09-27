@@ -6,7 +6,7 @@ import 'logic.dart';
 
 class GetJumpTwoPage extends StatelessWidget {
   final oneLogic = Get.find<GetJumpOneLogic>();
-  final GetJumpTwoLogic twoLogic = Get.put(GetJumpTwoLogic());
+  final twoLogic = Get.put(GetJumpTwoLogic());
 
   @override
   Widget build(BuildContext context) {

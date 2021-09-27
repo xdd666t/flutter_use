@@ -10,7 +10,7 @@ class AutoDisposePage extends StatefulWidget {
 }
 
 class _AutoDisposePageState extends State<AutoDisposePage> {
-  final AutoDisposeLogic logic = Get.put(AutoDisposeLogic());
+  final logic = Get.put(AutoDisposeLogic());
 
   @override
   Widget build(BuildContext context) {
