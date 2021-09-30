@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
-///跑马灯控件 
+///跑马灯控件
 class MarqueeWidget extends StatefulWidget {
   const MarqueeWidget.vertical({
     Key? key,
