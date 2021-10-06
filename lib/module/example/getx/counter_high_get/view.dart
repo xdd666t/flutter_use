@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'logic.dart';
-import 'state.dart';
 
 class GetCounterHighPage extends StatelessWidget {
-  final GetCounterHighLogic logic = Get.put(GetCounterHighLogic());
-  final GetCounterHighState state = Get.find<GetCounterHighLogic>().state;
+  final logic = Get.put(GetCounterHighLogic());
+  final state = Get.find<GetCounterHighLogic>().state;
 
   @override
   Widget build(BuildContext context) {
