@@ -10,7 +10,6 @@ class SettingLogic extends GetxController {
   void onInit() {
     //回调在每一帧的末尾触发,避免widget未加载完产生的报错
     VisibilityDetectorController.instance.updateInterval = Duration.zero;
-
     super.onInit();
   }
 }

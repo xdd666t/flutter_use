@@ -13,9 +13,7 @@ class SettingPage extends StatelessWidget {
 
     return VisibilityDetector(
       key: Key('Setting'),
-      onVisibilityChanged: (info) {
-        Log.d(info.visibleFraction);
-      },
+      onVisibilityChanged: (info) => Log.d(info.visibleFraction),
       child: Container(
         alignment: Alignment.center,
         child: Text("设置页面"),

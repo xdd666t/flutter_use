@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      navigatorKey: FlutterSmartDialog.navigatorKey,
       initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
       builder: (BuildContext context, Widget? child) {
