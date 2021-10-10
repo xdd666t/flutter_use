@@ -5,7 +5,7 @@ import 'package:flutter_use/module/function/state.dart';
 import 'package:get/get.dart';
 
 class FunctionLogic extends GetxController {
-  final state = FunctionState();
+  final FunctionState state = FunctionState();
 
   ///跳转到功能模块
   void toFun(context, tag) {
