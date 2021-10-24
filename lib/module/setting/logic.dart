@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:get/get.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -19,5 +17,4 @@ class SettingLogic extends GetxController {
   void onReady() {
     super.onReady();
   }
-
 }
