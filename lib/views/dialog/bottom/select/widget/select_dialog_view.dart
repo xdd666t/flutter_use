@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/views/dialog/assist/typedef/function.dart';
-import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class SelectDialogView extends StatelessWidget {
   SelectDialogView({
@@ -40,7 +40,7 @@ class SelectDialogView extends StatelessWidget {
       child: Material(
         color: Colors.white,
         child: InkWell(
-          onTap: () => EasyDialog.dismiss(),
+          onTap: () => SmartDialog.dismiss(),
           child: Container(
             height: 100.dp,
             alignment: Alignment.center,

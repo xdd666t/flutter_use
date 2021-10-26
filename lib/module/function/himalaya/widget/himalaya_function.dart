@@ -1,13 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/base/base_scaffold.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
-import 'package:flutter_use/module/function/himalaya/logic.dart';
-import 'package:get/get.dart';
 
 ///喜马拉雅整体外层布局设置
 Widget himalayaBuildBg({required List<Widget> children}) {
-  return BaseScaffold(
+  return Scaffold(
     backgroundColor: Colors.white,
     body: Column(children: children),
   );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/base/base_scaffold.dart';
 import 'package:flutter_use/module/main/logic.dart';
 import 'package:flutter_use/module/main/state.dart';
 import 'package:get/get.dart';
@@ -12,7 +11,7 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       body: Row(children: [
         ///侧边栏区域

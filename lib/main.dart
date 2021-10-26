@@ -17,6 +17,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    FlutterSmartDialog.monitor();
     return GetMaterialApp(
       initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,

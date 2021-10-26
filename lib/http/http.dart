@@ -4,7 +4,7 @@ import 'package:flutter_use/app/utils/ui/show.dart';
 import 'package:flutter_use/bean/base/base_response.dart';
 import 'package:flutter_use/bean/test/net_list_bean.dart';
 import 'package:flutter_use/bean/test/net_object_bean.dart';
-import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 import 'net/net_util.dart';
 
@@ -169,7 +169,7 @@ class LoadingInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     //打开加载弹窗
-    if (isLoading) EasyDialog.showLoading();
+    if (isLoading) SmartDialog.showLoading();
 
     handler.next(options);
   }
@@ -177,7 +177,8 @@ class LoadingInterceptor extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) async {
     //关闭弹窗
-    if (isLoading && EasyDialog.isExist()) await EasyDialog.dismiss();
+    if (isLoading && SmartDialog.config.isExistLoading)
+      await SmartDialog.dismiss();
 
     handler.next(response);
   }
@@ -185,7 +186,8 @@ class LoadingInterceptor extends Interceptor {
   @override
   void onError(DioError err, ErrorInterceptorHandler handler) async {
     //关闭弹窗
-    if (isLoading && EasyDialog.isExist()) await EasyDialog.dismiss();
+    if (isLoading && SmartDialog.config.isExistLoading)
+      await SmartDialog.dismiss();
 
     handler.next(err);
   }

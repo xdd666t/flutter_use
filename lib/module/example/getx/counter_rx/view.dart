@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/base/base_scaffold.dart';
 import 'package:get/get.dart';
 
 import 'logic.dart';
@@ -9,7 +8,7 @@ class GetCounterRxPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScaffold(
+    return Scaffold(
       appBar: AppBar(title: const Text('计数器-响应式')),
       body: Center(
         child: Obx(() {
