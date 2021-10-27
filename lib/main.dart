@@ -17,19 +17,16 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    FlutterSmartDialog.monitor();
     return GetMaterialApp(
       initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
-      builder: (BuildContext context, Widget? child) {
-        return FlutterSmartDialog(child: _builder(child));
-      },
+      builder: initFlutterSmartDialog(builder: _builder),
     );
   }
 }
 
 ///独立处理全局 Bloc 和 Provider
-Widget _builder(Widget? child) {
+Widget _builder(BuildContext context, Widget? child) {
   return MultiBlocProvider(
     providers: [
       //此处通过MultiBlocProvider创建的Bloc或者Cubit是全局的
