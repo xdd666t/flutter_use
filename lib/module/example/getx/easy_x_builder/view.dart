@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/base/base_scaffold.dart';
 import 'package:flutter_use/module/example/getx/easy_x/easy.dart';
 import 'package:flutter_use/module/example/getx/easy_x/easy_builder/easy_builder.dart';
 
@@ -10,7 +9,7 @@ class EasyXCounterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScaffold(
+    return Scaffold(
       appBar: AppBar(title: const Text('EasyX-自定义EasyBuilder刷新机制')),
       body: Center(
         child: EasyBuilder<EasyXCounterLogic>(builder: (logic) {

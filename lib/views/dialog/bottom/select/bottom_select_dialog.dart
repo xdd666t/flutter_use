@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/views/dialog/assist/typedef/function.dart';
-import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
 
 import 'widget/select_dialog_view.dart';
 
@@ -31,14 +31,14 @@ Future<E> showBottomSelectDialog<E>({
     stringList.add(showContent);
   }
 
-  EasyDialog.show(
+  SmartDialog.show(
     alignmentTemp: Alignment.bottomCenter,
     animationDurationTemp: Duration(milliseconds: 200),
     widget: SelectDialogView(
       data: stringList,
       onSelect: (int index) {
         //关闭弹窗
-        EasyDialog.dismiss();
+        SmartDialog.dismiss();
 
         //同步数据
         completer.complete(list[index]);

@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/typedef/function.dart';
-import 'package:flutter_use/views/dialog/easy/easy_dialog.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 import 'widget/side_list_dialog_view.dart';
 
@@ -31,7 +31,7 @@ Future<E> showSideListDialog<E>({
     stringList.add(showContent);
   }
 
-  EasyDialog.show(
+  SmartDialog.show(
     alignmentTemp: Alignment.centerRight,
     animationDurationTemp: Duration(milliseconds: 200),
     widget: SideListDialogView(
@@ -40,7 +40,7 @@ Future<E> showSideListDialog<E>({
       imageUrl: imageUrl,
       onItem: (int index) {
         //关闭弹窗
-        EasyDialog.dismiss();
+        SmartDialog.dismiss();
 
         //同步数据
         completer.complete(list[index]);

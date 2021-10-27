@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/base/base_scaffold.dart';
 import 'package:flutter_use/module/example/getx/easy_x/easy.dart';
 import 'package:flutter_use/module/example/getx/easy_x/ebx/easy_bind_widget.dart';
 import 'package:flutter_use/module/example/getx/easy_x/ebx/ebx.dart';
@@ -13,7 +12,7 @@ class EasyXEbxCounterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return EasyBindWidget(
       bind: logic,
-      child: BaseScaffold(
+      child: Scaffold(
         appBar: AppBar(title: const Text('EasyX-自定义Ebx刷新机制')),
         body: Center(
           child: Ebx(() {

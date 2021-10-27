@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/base/base_scaffold.dart';
 import 'package:flutter_use/module/common/widget/function_items.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +11,7 @@ class DialogPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(title: Text('Dialog')),
       body: FunctionItems(
