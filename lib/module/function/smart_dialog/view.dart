@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/module/common/widget/function_items.dart';
+import 'package:flutter_use/module/example/widget/tree_items.dart';
 import 'package:get/get.dart';
 
 import 'logic.dart';
@@ -13,13 +13,9 @@ class SmartDialogPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text('SmartDialog')),
-      body: FunctionItems(
-        items: state.items,
-        constraints: BoxConstraints(minWidth: 100, minHeight: 36),
-        onItem: (String tag) {
-          logic.showFun(context, tag);
-        },
+      body: TreeItems(
+        data: state.trees,
+        onItem: (String tag) => logic.showFun(tag),
       ),
     );
   }

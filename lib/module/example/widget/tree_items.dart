@@ -19,42 +19,43 @@ class TreeItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(child: _treeItem());
-  }
-
-  Widget _treeItem() {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 30.dp),
-      child: Column(
-        children: data.map((e) {
-          return _buildItem(e);
-        }).toList(),
-      ),
-    );
-  }
-
-  ///俩层item样式
-  Widget _buildItem(TreeTwiceInfo e) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+    return _buildBg(builder: (item) {
+      return [
         //标题
         Container(
           margin: EdgeInsets.only(top: 50.dp, bottom: 10.dp),
           width: double.infinity,
           child: Text(
-            e.title,
+            item.title,
             style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
           ),
         ),
 
         //按钮入口
         FunctionItems(
-          items: e.btnInfo,
+          items: item.btnInfo,
           onItem: onItem,
           padding: EdgeInsets.zero,
         )
-      ],
+      ];
+    });
+  }
+
+  Widget _buildBg({
+    required List<Widget> Function(TreeTwiceInfo item) builder,
+  }) {
+    return SingleChildScrollView(
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 30.dp),
+        child: Column(
+          children: data.map((e) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: builder(e),
+            );
+          }).toList(),
+        ),
+      ),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubit.dart';
@@ -11,6 +12,7 @@ import 'module/example/provider/easy_p/change_notifier_easy_p.dart';
 import 'module/example/provider/span_page/span_one/provider.dart';
 
 void main() {
+  _initOrientation();
   runApp(MyApp());
 }
 
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
-      builder: initFlutterSmartDialog(builder: _builder),
+      builder: FlutterSmartDialog.init(builder: _builder),
     );
   }
 }
@@ -64,3 +66,10 @@ Widget _customGlobalWidget(Widget? child) {
 //     child: _customGlobalWidget(child),
 //   );
 // }
+
+void _initOrientation() {
+  //必须
+  WidgetsFlutterBinding.ensureInitialized();
+  //强制横屏
+  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
+}
