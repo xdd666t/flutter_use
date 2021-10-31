@@ -22,6 +22,7 @@ class SmartDialogState {
         title: 'Loading',
         btnInfo: [
           BtnInfo(title: 'default', tag: SmartDialogStatus.loadingDefault),
+          BtnInfo(title: 'param', tag: SmartDialogStatus.loadingParam),
           BtnInfo(title: 'custom', tag: SmartDialogStatus.loadingCustom),
         ],
       ),
@@ -30,9 +31,10 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Dialog',
         btnInfo: [
+          BtnInfo(title: 'easy', tag: SmartDialogStatus.dialogEasy),
           BtnInfo(title: 'location', tag: SmartDialogStatus.dialogLocation),
-          BtnInfo(title: 'dialogStack', tag: SmartDialogStatus.dialogStack),
           BtnInfo(title: 'penetrate', tag: SmartDialogStatus.dialogPenetrate),
+          BtnInfo(title: 'dialogStack', tag: SmartDialogStatus.dialogStack),
         ],
       ),
     ];
@@ -48,10 +50,12 @@ class SmartDialogStatus {
 
   /// loading
   static const String loadingDefault = 'loadingDefault';
+  static const String loadingParam = 'loadingParam';
   static const String loadingCustom = 'loadingCustom';
 
   /// dialog
+  static const String dialogEasy = 'dialogEasy';
   static const String dialogLocation = 'dialogLocation';
-  static const String dialogStack = 'dialogStack';
   static const String dialogPenetrate = 'dialogPenetrate';
+  static const String dialogStack = 'dialogStack';
 }
