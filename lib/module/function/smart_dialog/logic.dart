@@ -161,7 +161,7 @@ class SmartDialogLogic extends GetxController {
       maskColorTemp: Colors.transparent,
       widget: Container(
         height: double.infinity,
-        width: 200,
+        width: 150,
         color: Colors.white,
         alignment: Alignment.center,
         child: ElevatedButton(

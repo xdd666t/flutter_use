@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
+      navigatorObservers: [FlutterSmartDialog.observer],
       builder: FlutterSmartDialog.init(builder: _builder),
     );
   }
