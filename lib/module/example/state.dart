@@ -1,4 +1,3 @@
-import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:flutter_use/bean/common/tree_info.dart';
 
@@ -11,14 +10,17 @@ class ExampleState {
       TreeTwiceInfo(
         title: 'GetX',
         btnInfo: [
-          BtnInfo(title: '计数器-响应式', tag: ExampleConfig.getCounterRx),
-          BtnInfo(title: '计数器-简单式', tag: ExampleConfig.getCounterEasy),
-          BtnInfo(title: '计数器-进阶版', tag: ExampleConfig.getCounterHigh),
-          BtnInfo(title: '跨页面事件交互', tag: ExampleConfig.getJump),
-          BtnInfo(title: 'GetX实例-自动释放', tag: ExampleConfig.getAutoDispose),
-          BtnInfo(title: '计数器-binding', tag: ExampleConfig.getCounterBinding),
-          BtnInfo(title: 'EasyX-自定义EasyBuilder刷新机制', tag: ExampleConfig.counterEasyXBuilder),
-          BtnInfo(title: 'EasyX-自定义ebx刷新机制', tag: ExampleConfig.counterEasyXEbx),
+          BtnInfo(title: '计数器-响应式', tag: ExampleStatus.getCounterRx),
+          BtnInfo(title: '计数器-简单式', tag: ExampleStatus.getCounterEasy),
+          BtnInfo(title: '计数器-进阶版', tag: ExampleStatus.getCounterHigh),
+          BtnInfo(title: '跨页面事件交互', tag: ExampleStatus.getJump),
+          BtnInfo(title: 'GetX实例-自动释放', tag: ExampleStatus.getAutoDispose),
+          BtnInfo(title: '计数器-binding', tag: ExampleStatus.getCounterBinding),
+          BtnInfo(
+              title: 'EasyX-自定义EasyBuilder刷新机制',
+              tag: ExampleStatus.counterEasyXBuilder),
+          BtnInfo(
+              title: 'EasyX-自定义ebx刷新机制', tag: ExampleStatus.counterEasyXEbx),
         ],
       ),
 
@@ -26,12 +28,12 @@ class ExampleState {
       TreeTwiceInfo(
         title: 'Bloc',
         btnInfo: [
-          BtnInfo(title: '计数器-Cubit', tag: ExampleConfig.blCubitCounter),
-          BtnInfo(title: '计数器-Bloc', tag: ExampleConfig.blBlocCounter),
-          BtnInfo(title: '全局Bloc', tag: ExampleConfig.globalBloc),
-          BtnInfo(title: 'Stream应用', tag: ExampleConfig.stream),
-          BtnInfo(title: '自定义Builder', tag: ExampleConfig.blCustomBuilder),
-          BtnInfo(title: '自定义状态管理框架-EasyC', tag: ExampleConfig.counterEasyC),
+          BtnInfo(title: '计数器-Cubit', tag: ExampleStatus.blCubitCounter),
+          BtnInfo(title: '计数器-Bloc', tag: ExampleStatus.blBlocCounter),
+          BtnInfo(title: '全局Bloc', tag: ExampleStatus.globalBloc),
+          BtnInfo(title: 'Stream应用', tag: ExampleStatus.stream),
+          BtnInfo(title: '自定义Builder', tag: ExampleStatus.blCustomBuilder),
+          BtnInfo(title: '自定义状态管理框架-EasyC', tag: ExampleStatus.counterEasyC),
         ],
       ),
 
@@ -39,15 +41,15 @@ class ExampleState {
       TreeTwiceInfo(
         title: 'Provider',
         btnInfo: [
-          BtnInfo(title: '计数器-简单版', tag: ExampleConfig.providerEasy),
-          BtnInfo(title: '计数器-进阶版', tag: ExampleConfig.providerHigh),
-          BtnInfo(title: '全局Provider', tag: ExampleConfig.providerSpanOne),
-          BtnInfo(title: 'ChangeNotifier使用', tag: ExampleConfig.testNotifier),
-          BtnInfo(title: '自定义Builder', tag: ExampleConfig.customBuilder),
-          BtnInfo(title: '自定义状态管理框架-EasyP', tag: ExampleConfig.counterEasyP),
+          BtnInfo(title: '计数器-简单版', tag: ExampleStatus.providerEasy),
+          BtnInfo(title: '计数器-进阶版', tag: ExampleStatus.providerHigh),
+          BtnInfo(title: '全局Provider', tag: ExampleStatus.providerSpanOne),
+          BtnInfo(title: 'ChangeNotifier使用', tag: ExampleStatus.testNotifier),
+          BtnInfo(title: '自定义Builder', tag: ExampleStatus.customBuilder),
+          BtnInfo(title: '自定义状态管理框架-EasyP', tag: ExampleStatus.counterEasyP),
           BtnInfo(
               title: '自定义状态管理框架-EasyP全局',
-              tag: ExampleConfig.counterGlobalEasyP),
+              tag: ExampleStatus.counterGlobalEasyP),
         ],
       ),
 
@@ -55,11 +57,43 @@ class ExampleState {
       TreeTwiceInfo(
         title: '测试',
         btnInfo: [
-          BtnInfo(title: '测试布局', tag: ExampleConfig.testLayout),
-          BtnInfo(title: '测试网络（不支持web)', tag: ExampleConfig.testNet),
+          BtnInfo(title: '测试布局', tag: ExampleStatus.testLayout),
+          BtnInfo(title: '测试网络（不支持web)', tag: ExampleStatus.testNet),
         ],
       ),
     ];
   }
 }
 
+class ExampleStatus {
+  ///GetX栏目
+  static const String getCounterRx = 'getCounterRx';
+  static const String getCounterEasy = 'getCounterEasy';
+  static const String getCounterHigh = 'getCounterHigh';
+  static const String getJump = 'getJump';
+  static const String getAutoDispose = 'getAutoDispose';
+  static const String getCounterBinding = 'getCounterBinding';
+  static const String counterEasyXBuilder = 'counterEasyXBuilder';
+  static const String counterEasyXEbx = 'counterEasyXEbx';
+
+  ///Bloc栏目
+  static const String blCubitCounter = 'blCubitCounter';
+  static const String blBlocCounter = 'blBlocCounter';
+  static const String globalBloc = 'globalBloc';
+  static const String stream = 'stream';
+  static const String blCustomBuilder = 'blCustomBuilder';
+  static const String counterEasyC = 'counterEasyC';
+
+  ///Provider栏目
+  static const String providerEasy = 'providerEasy';
+  static const String providerHigh = 'providerHigh';
+  static const String providerSpanOne = 'providerSpanOne';
+  static const String testNotifier = 'testNotifier';
+  static const String customBuilder = 'customBuilder';
+  static const String counterEasyP = 'counterEasyP';
+  static const String counterGlobalEasyP = 'counterGlobalEasyP';
+
+  ///测试栏目
+  static const String testLayout = 'testLayout';
+  static const String testNet = 'testNet';
+}

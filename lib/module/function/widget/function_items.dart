@@ -24,67 +24,39 @@ class FunctionItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _function();
-  }
-
-  ///功能主体
-  Widget _function() {
-    return _buildBg(
-      child: Wrap(
-        spacing: 20.dp,
-        runSpacing: 20.dp,
-        children: items.map((e) {
-          return btnFunction(
-            onItem: onItem,
-            data: e,
-            constraints: constraints,
-          );
-        }).toList(),
-      ),
-    );
+    return _buildBg(builder: (item) {
+      return Container(
+        padding: EdgeInsets.all(15.dp),
+        child: RawMaterialButton(
+          fillColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.dp),
+          ),
+          constraints: constraints,
+          elevation: 5,
+          onPressed: () => onItem(item.tag),
+          child: Container(
+            padding: EdgeInsets.symmetric(vertical: 10.dp, horizontal: 15.dp),
+            child: Text('${item.title}'),
+          ),
+        ),
+      );
+    });
   }
 
   ///整体背景
-  Widget _buildBg({child}) {
+  Widget _buildBg({required Widget Function(dynamic item) builder}) {
     return Container(
       padding: padding,
       child: SingleChildScrollView(
-        child: Material(
-          color: Colors.white,
-          child: child,
+        child: Wrap(
+          spacing: 20.dp,
+          runSpacing: 20.dp,
+          children: items.map((e) {
+            return builder(e);
+          }).toList(),
         ),
       ),
     );
   }
-}
-
-///功能性按钮
-Widget btnFunction({
-  required ParamSingleCallback<String> onItem,
-  data,
-  required  BoxConstraints constraints,
-}) {
-  return Container(
-    padding: EdgeInsets.all(15.dp),
-    child: RawMaterialButton(
-      fillColor: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.dp),
-      ),
-      constraints: constraints,
-      elevation: 5,
-      onPressed: () {
-        onItem(data.tag);
-      },
-      child: Container(
-        padding: EdgeInsets.symmetric(
-          vertical: 15.dp,
-          horizontal: 20.dp,
-        ),
-        child: Text(
-          data.title,
-        ),
-      ),
-    ),
-  );
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
+import 'package:flutter_use/views/widget/custom/custom_single_child_scroll_view.dart';
 
 ///喜马拉雅整体外层布局设置
 Widget himalayaBuildBg({required List<Widget> children}) {
@@ -30,23 +31,11 @@ Widget himalayaBuildInfoListBg({required List<Widget> children}) {
 ///顶部右侧信息流外层布局设置 - 可滑动部分
 Widget himalayaBuildScrollInfoListBg({required List<Widget> children}) {
   return Expanded(
-    child: ScrollConfiguration(
-      behavior: MyCustomScrollBehavior(),
-      child: SingleChildScrollView(
-        child: Container(
-          width: 860.dp,
-          child: Column(children: children),
-        ),
+    child: CustomSingleChildScrollView(
+      child: Container(
+        width: 860.dp,
+        child: Column(children: children),
       ),
     ),
   );
-}
-
-///自定义手势滑动
-class MyCustomScrollBehavior extends MaterialScrollBehavior {
-  @override
-  Set<PointerDeviceKind> get dragDevices => {
-        PointerDeviceKind.touch,
-        PointerDeviceKind.mouse,
-      };
 }

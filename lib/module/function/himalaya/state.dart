@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/config/image_config.dart';
-import 'package:flutter_use/app/config/tag_config.dart';
 
 typedef HimalayaSubBuilder = Widget Function(HimalayaSubItemInfo item);
 typedef HimalayaRxSubBuilder = Widget Function(HimalayaSubItemInfo item);
@@ -41,67 +40,67 @@ class HimalayaState {
         HimalayaSubItemInfo(
           title: '发现',
           icon: CupertinoIcons.compass,
-          tag: TagHimalayaConfig.find,
+          tag: HimalayaStatus.find,
           isSelected: true,
         ),
         HimalayaSubItemInfo(
           title: '广播电台',
           icon: Icons.web,
-          tag: TagHimalayaConfig.broadcast,
+          tag: HimalayaStatus.broadcast,
         ),
         HimalayaSubItemInfo(
           title: '私人FM',
           icon: Icons.wb_auto_outlined,
-          tag: TagHimalayaConfig.fm,
+          tag: HimalayaStatus.fm,
         ),
         HimalayaSubItemInfo(
           title: '排行榜',
           icon: Icons.assessment_outlined,
-          tag: TagHimalayaConfig.rank,
+          tag: HimalayaStatus.rank,
         ),
         HimalayaSubItemInfo(
           title: '全部分类',
           icon: Icons.widgets_outlined,
-          tag: TagHimalayaConfig.sort,
+          tag: HimalayaStatus.sort,
         ),
       ]),
       HimalayaItemInfo(title: '我听', subItemList: [
         HimalayaSubItemInfo(
           title: '我的订阅',
           icon: Icons.star_border,
-          tag: TagHimalayaConfig.subscription,
+          tag: HimalayaStatus.subscription,
         ),
         HimalayaSubItemInfo(
           title: '全部更新',
           icon: Icons.autorenew_outlined,
-          tag: TagHimalayaConfig.update,
+          tag: HimalayaStatus.update,
         ),
         HimalayaSubItemInfo(
           title: '下载中心',
           icon: Icons.system_update_alt,
-          tag: TagHimalayaConfig.download,
+          tag: HimalayaStatus.download,
         ),
         HimalayaSubItemInfo(
           title: '收听历史',
           icon: Icons.history,
-          tag: TagHimalayaConfig.history,
+          tag: HimalayaStatus.history,
         ),
         HimalayaSubItemInfo(
           title: '我的已购',
           icon: Icons.shopping_cart_outlined,
-          tag: TagHimalayaConfig.shop,
+          tag: HimalayaStatus.shop,
         ),
       ]),
       HimalayaItemInfo(title: '我创建的听单', subItemList: [
         HimalayaSubItemInfo(
           title: '我喜欢的声音',
           icon: Icons.favorite_border,
-          tag: TagHimalayaConfig.sound,
+          tag: HimalayaStatus.sound,
         ),
         HimalayaSubItemInfo(
           title: '我喜欢的音乐',
           icon: Icons.mood_outlined,
-          tag: TagHimalayaConfig.music,
+          tag: HimalayaStatus.music,
         ),
       ]),
     ];
@@ -333,6 +332,26 @@ class HimalayaState {
       tag: ImageHimalayaConfig.featureEight,
     );
   }
+}
+
+class HimalayaStatus {
+  ///推荐
+  static const String find = 'find';
+  static const String broadcast = 'broadcast';
+  static const String fm = 'fm';
+  static const String rank = 'rank';
+  static const String sort = 'sort';
+
+  ///我听
+  static const String subscription = 'subscription';
+  static const String update = 'update';
+  static const String download = 'download';
+  static const String history = 'history';
+  static const String shop = 'shop';
+
+  ///我创建的听单
+  static const String sound = 'sound';
+  static const String music = 'music';
 }
 
 ///侧边栏数据

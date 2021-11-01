@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
+import 'package:flutter_use/module/function/smart_dialog/widget/custom_loading.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_toast.dart';
+import 'package:flutter_use/module/function/smart_dialog/widget/other_trick.dart';
 import 'package:flutter_use/views/widget/input/input_text.dart';
 import 'package:get/get.dart';
 
 import 'state.dart';
-import 'widget/param_loading.dart';
+import 'widget/multi_handle_widget.dart';
 
 class SmartDialogLogic extends GetxController {
   final state = SmartDialogState();
@@ -40,7 +41,10 @@ class SmartDialogLogic extends GetxController {
         _loadingDefault();
         break;
       case SmartDialogStatus.loadingParam:
-        _loadingSteerable();
+        _loadingParam();
+        break;
+      case SmartDialogStatus.loadingCustom:
+        _loadingCustom();
         break;
 
       ///dialog
@@ -56,10 +60,117 @@ class SmartDialogLogic extends GetxController {
       case SmartDialogStatus.dialogStack:
         _dialogStack();
         break;
+
+      ///other
+      case SmartDialogStatus.otherTrick:
+        _otherTrick();
+        break;
     }
   }
 
-  void _dialogStack() {}
+  void _dialogStack() async {
+    var stack = ({
+      double width = double.infinity,
+      double height = double.infinity,
+      String? msg,
+    }) {
+      return Container(
+        width: width,
+        height: height,
+        color: randomColor(),
+        alignment: Alignment.center,
+        child: Text('弹窗$msg', style: TextStyle(color: Colors.white)),
+      );
+    };
+
+    //left
+    SmartDialog.show(
+      tag: 'A',
+      widget: stack(msg: 'A', width: 60),
+      alignmentTemp: Alignment.centerLeft,
+    );
+    await Future.delayed(Duration(milliseconds: 500));
+    //top
+    SmartDialog.show(
+      tag: 'B',
+      widget: stack(msg: 'B', height: 60),
+      alignmentTemp: Alignment.topCenter,
+    );
+    await Future.delayed(Duration(milliseconds: 500));
+    //right
+    SmartDialog.show(
+      tag: 'C',
+      widget: stack(msg: 'C', width: 60),
+      alignmentTemp: Alignment.centerRight,
+    );
+    await Future.delayed(Duration(milliseconds: 500));
+    //bottom
+    SmartDialog.show(
+      tag: 'D',
+      widget: stack(msg: 'D', height: 60),
+      alignmentTemp: Alignment.bottomCenter,
+    );
+    await Future.delayed(Duration(milliseconds: 500));
+
+    //center：the stack handler
+    SmartDialog.show(
+      alignmentTemp: Alignment.center,
+      isLoadingTemp: false,
+      widget: Container(
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(15)),
+        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        child: Wrap(spacing: 20, children: [
+          ElevatedButton(
+            child: Text('关闭弹窗A'),
+            onPressed: () => SmartDialog.dismiss(tag: 'A'),
+          ),
+          ElevatedButton(
+            child: Text('关闭弹窗B'),
+            onPressed: () => SmartDialog.dismiss(tag: 'B'),
+          ),
+          ElevatedButton(
+            child: Text('关闭弹窗C'),
+            onPressed: () => SmartDialog.dismiss(tag: 'C'),
+          ),
+          ElevatedButton(
+            child: Text('关闭弹窗D'),
+            onPressed: () => SmartDialog.dismiss(tag: 'D'),
+          ),
+        ]),
+      ),
+    );
+  }
+
+  void _otherTrick() async {
+    VoidCallback? callback;
+
+    // display
+    SmartDialog.show(
+      alignmentTemp: Alignment.center,
+      widget: OtherTrick(
+        onUpdate: (VoidCallback onInvoke) => callback = onInvoke,
+      ),
+    );
+
+    await Future.delayed(Duration(milliseconds: 500));
+
+    // handler
+    SmartDialog.show(
+      alignmentTemp: Alignment.centerRight,
+      maskColorTemp: Colors.transparent,
+      widget: Container(
+        height: double.infinity,
+        width: 200,
+        color: Colors.white,
+        alignment: Alignment.center,
+        child: ElevatedButton(
+          child: Text('add'),
+          onPressed: () => callback?.call(),
+        ),
+      ),
+    );
+  }
 
   void _dialogPenetrate() {
     SmartDialog.show(
@@ -114,7 +225,31 @@ class SmartDialogLogic extends GetxController {
     );
   }
 
-  void _loadingSteerable() {
+  void _loadingCustom() async {
+    var list = ['smile', 'icon', 'normal'];
+    var onItem = (String msg) async {
+      if (list[0] == msg) {
+        SmartDialog.showLoading(isLoadingTemp: false, widget: CustomLoading());
+      } else if (list[1] == msg) {
+        SmartDialog.showLoading(
+          isLoadingTemp: false,
+          widget: CustomLoading(type: 1),
+        );
+      } else if (list[2] == msg) {
+        SmartDialog.showLoading(widget: CustomLoading(type: 2));
+      }
+
+      await Future.delayed(Duration(seconds: 2));
+      SmartDialog.dismiss();
+    };
+
+    SmartDialog.show(
+      alignmentTemp: Alignment.centerRight,
+      widget: MultiHandleWidget(list: list, onItem: onItem),
+    );
+  }
+
+  void _loadingParam() {
     var list = [
       'maskWidget',
       'maskColor',
@@ -130,7 +265,7 @@ class SmartDialogLogic extends GetxController {
           child: Opacity(
             opacity: 0.6,
             child: Image.network(
-              'http://img.netbian.com/file/2015/0908/06c2d5e2172ed6b62a37d0228c2e41fc.jpg',
+              'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211101103911.jpeg',
               fit: BoxFit.fill,
             ),
           ),
@@ -152,7 +287,7 @@ class SmartDialogLogic extends GetxController {
 
     SmartDialog.show(
       alignmentTemp: Alignment.centerLeft,
-      widget: ParamLoading(list: list, onItem: onItem),
+      widget: MultiHandleWidget(list: list, onItem: onItem),
     );
   }
 
@@ -201,9 +336,13 @@ class SmartDialogLogic extends GetxController {
 
   void _toastLocation() {
     SmartDialog.showToast('the toast at the bottom');
-    SmartDialog.showToast('the toast at the center',
-        alignment: Alignment.center);
-    SmartDialog.showToast('the toast at the top',
-        alignment: Alignment.topCenter);
+    SmartDialog.showToast(
+      'the toast at the center',
+      alignment: Alignment.center,
+    );
+    SmartDialog.showToast(
+      'the toast at the top',
+      alignment: Alignment.topCenter,
+    );
   }
 }

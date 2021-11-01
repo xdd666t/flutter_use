@@ -3,6 +3,8 @@ import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/bean/common/tree_info.dart';
 import 'package:flutter_use/module/common/widget/function_items.dart';
+import 'package:flutter_use/module/function/himalaya/widget/himalaya_function.dart';
+import 'package:flutter_use/views/widget/custom/custom_single_child_scroll_view.dart';
 
 ///树形item控件
 class TreeItems extends StatelessWidget {
@@ -44,7 +46,7 @@ class TreeItems extends StatelessWidget {
   Widget _buildBg({
     required List<Widget> Function(TreeTwiceInfo item) builder,
   }) {
-    return SingleChildScrollView(
+    return CustomSingleChildScrollView(
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 30.dp),
         child: Column(

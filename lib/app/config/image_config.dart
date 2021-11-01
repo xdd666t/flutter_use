@@ -1,4 +1,4 @@
-class ImageFunctionConfig {
+class ImageFunctionStatus {
   ///功能背景区
   static const String functionBgOne =
       'https://cdn.jsdelivr.net/gh/CNAD666/MyData@release/pic/flutter/flutter_use/20201129134908.png';

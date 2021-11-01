@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/config/route_config.dart';
-import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
 import 'package:flutter_use/http/http.dart';
 import 'package:flutter_use/module/example/getx/auto_dispose/auto_dispose_view.dart';
@@ -17,19 +16,19 @@ class ExampleLogic extends GetxController {
     switch (tag) {
 
       ///GetX页面跳转
-      case ExampleConfig.getCounterRx:
+      case ExampleStatus.getCounterRx:
         Get.toNamed(RouteConfig.getCounterRx);
         break;
-      case ExampleConfig.getCounterEasy:
+      case ExampleStatus.getCounterEasy:
         Get.toNamed(RouteConfig.getCounterEasy);
         break;
-      case ExampleConfig.getCounterHigh:
+      case ExampleStatus.getCounterHigh:
         Get.toNamed(RouteConfig.getCounterHigh);
         break;
-      case ExampleConfig.getJump:
+      case ExampleStatus.getJump:
         Get.toNamed(RouteConfig.getJumpOne);
         break;
-      case ExampleConfig.getAutoDispose:
+      case ExampleStatus.getAutoDispose:
         //不使用GetX路由跳转，会使得GetX无法监控页面
         //AutoDisposePage模块提供一种自动释放的解决方案
         Navigator.push(
@@ -37,64 +36,64 @@ class ExampleLogic extends GetxController {
           MaterialPageRoute(builder: (context) => AutoDisposePage()),
         );
         break;
-      case ExampleConfig.getCounterBinding:
+      case ExampleStatus.getCounterBinding:
         Get.toNamed(RouteConfig.getCounterBinding);
         break;
-      case ExampleConfig.counterEasyXBuilder:
+      case ExampleStatus.counterEasyXBuilder:
         Get.toNamed(RouteConfig.counterEasyXBuilderPage);
         break;
-      case ExampleConfig.counterEasyXEbx:
+      case ExampleStatus.counterEasyXEbx:
         Get.toNamed(RouteConfig.counterEasyXEbxPage);
         break;
 
       ///Bloc页面跳转
-      case ExampleConfig.blCubitCounter:
+      case ExampleStatus.blCubitCounter:
         Get.toNamed(RouteConfig.blCubitCounterPage);
         break;
-      case ExampleConfig.blBlocCounter:
+      case ExampleStatus.blBlocCounter:
         Get.toNamed(RouteConfig.blBlocCounterPage);
         break;
-      case ExampleConfig.globalBloc:
+      case ExampleStatus.globalBloc:
         Get.toNamed(RouteConfig.cubitSpanOne);
         break;
-      case ExampleConfig.stream:
+      case ExampleStatus.stream:
         Get.toNamed(RouteConfig.streamPage);
         break;
-      case ExampleConfig.blCustomBuilder:
+      case ExampleStatus.blCustomBuilder:
         Get.toNamed(RouteConfig.blCustomBuilderPage);
         break;
-      case ExampleConfig.counterEasyC:
+      case ExampleStatus.counterEasyC:
         Get.toNamed(RouteConfig.counterEasyCPage);
         break;
 
       ///Provider页面跳转
-      case ExampleConfig.providerEasy:
+      case ExampleStatus.providerEasy:
         Get.toNamed(RouteConfig.proEasyCounterPage);
         break;
-      case ExampleConfig.providerHigh:
+      case ExampleStatus.providerHigh:
         Get.toNamed(RouteConfig.proHighCounterPage);
         break;
-      case ExampleConfig.providerSpanOne:
+      case ExampleStatus.providerSpanOne:
         Get.toNamed(RouteConfig.proSpanOnePage);
         break;
-      case ExampleConfig.testNotifier:
+      case ExampleStatus.testNotifier:
         Get.toNamed(RouteConfig.testNotifierPage);
         break;
-      case ExampleConfig.customBuilder:
+      case ExampleStatus.customBuilder:
         Get.toNamed(RouteConfig.customBuilderPage);
         break;
-      case ExampleConfig.counterEasyP:
+      case ExampleStatus.counterEasyP:
         Get.toNamed(RouteConfig.counterEasyPPage);
         break;
-      case ExampleConfig.counterGlobalEasyP:
+      case ExampleStatus.counterGlobalEasyP:
         Get.toNamed(RouteConfig.counterGlobalEasyPPage);
         break;
 
       ///测试模块
-      case ExampleConfig.testNet:
+      case ExampleStatus.testNet:
         testHttp();
         break;
-      case ExampleConfig.testLayout:
+      case ExampleStatus.testLayout:
         Get.toNamed(RouteConfig.testLayout);
         break;
     }

@@ -37,6 +37,14 @@ class SmartDialogState {
           BtnInfo(title: 'dialogStack', tag: SmartDialogStatus.dialogStack),
         ],
       ),
+
+      //Other
+      TreeTwiceInfo(
+        title: 'Other',
+        btnInfo: [
+          BtnInfo(title: 'trick', tag: SmartDialogStatus.otherTrick),
+        ],
+      ),
     ];
   }
 }
@@ -58,4 +66,7 @@ class SmartDialogStatus {
   static const String dialogLocation = 'dialogLocation';
   static const String dialogPenetrate = 'dialogPenetrate';
   static const String dialogStack = 'dialogStack';
+
+  /// other
+  static const String otherTrick = 'otherTrick';
 }

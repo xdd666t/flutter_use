@@ -1,5 +1,4 @@
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
 import 'package:flutter_use/app/utils/ui/window_size.dart';
 import 'package:get/get.dart';
@@ -174,40 +173,40 @@ class HimalayaLogic extends GetxController {
     //处理不同item回调
     _restoreNavigationStatus(item.tag);
     switch (item.tag) {
-      case TagHimalayaConfig.find:
+      case HimalayaStatus.find:
         //发现
         break;
-      case TagHimalayaConfig.broadcast:
+      case HimalayaStatus.broadcast:
         //广播电台
         break;
-      case TagHimalayaConfig.fm:
+      case HimalayaStatus.fm:
         //私人FM
         break;
-      case TagHimalayaConfig.rank:
+      case HimalayaStatus.rank:
         //排行榜
         break;
-      case TagHimalayaConfig.sort:
+      case HimalayaStatus.sort:
         //全部分类
         break;
-      case TagHimalayaConfig.subscription:
+      case HimalayaStatus.subscription:
         //我的订阅
         break;
-      case TagHimalayaConfig.update:
+      case HimalayaStatus.update:
         //全部更新
         break;
-      case TagHimalayaConfig.download:
+      case HimalayaStatus.download:
         //下载中心
         break;
-      case TagHimalayaConfig.history:
+      case HimalayaStatus.history:
         //收听历史
         break;
-      case TagHimalayaConfig.shop:
+      case HimalayaStatus.shop:
         //我的已购
         break;
-      case TagHimalayaConfig.sound:
+      case HimalayaStatus.sound:
         //我喜欢的声音
         break;
-      case TagHimalayaConfig.music:
+      case HimalayaStatus.music:
         //我喜欢的音乐
         break;
     }
