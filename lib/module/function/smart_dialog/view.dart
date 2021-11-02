@@ -15,7 +15,7 @@ class SmartDialogPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: kIsWeb || Platform.isAndroid
+      appBar: kIsWeb || !Platform.isAndroid
           ? AppBar(title: Text('SmartDialog'))
           : null,
       backgroundColor: Colors.white,

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_loading.dart';
@@ -72,7 +73,50 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _otherHardClose() async {
-
+    SmartDialog.show(
+      backDismiss: false,
+      clickBgDismissTemp: false,
+      isLoadingTemp: false,
+      widget: Container(
+        height: 480,
+        width: 500,
+        padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.white,
+        ),
+        alignment: Alignment.topCenter,
+        child: SingleChildScrollView(
+          child: Wrap(
+            direction: Axis.vertical,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            spacing: 10,
+            children: [
+              // title
+              Text(
+                '特大公告',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+              // content
+              Text('鄙人日夜钻研下面秘籍，终于成功钓到富婆'),
+              Image.network(
+                'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211102213746.jpeg',
+                height: 200,
+                width: 400,
+              ),
+              Text('鄙人思考了三秒钟，怀着\'沉重\'的心情，决定弃坑本开源软件'),
+              Text('本人今后的生活是富婆和远方，已无\'精力\' 再维护本开源软件了'),
+              Text('各位叼毛，有缘江湖再见！'),
+              // button (only method of close the dialog)
+              ElevatedButton(
+                onPressed: () => SmartDialog.dismiss(),
+                child: Text('再会！'),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   void _dialogStack() async {
