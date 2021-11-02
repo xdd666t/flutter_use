@@ -228,7 +228,6 @@ class SmartDialogLogic extends GetxController {
       alignmentTemp: Alignment.centerRight,
       isPenetrateTemp: true,
       clickBgDismissTemp: false,
-      isUseAnimationTemp: false,
       widget: Container(
         width: 80,
         height: double.infinity,
