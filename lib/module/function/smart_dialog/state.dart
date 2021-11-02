@@ -43,6 +43,7 @@ class SmartDialogState {
         title: 'Other',
         btnInfo: [
           BtnInfo(title: 'trick', tag: SmartDialogStatus.otherTrick),
+          BtnInfo(title: 'hardClose', tag: SmartDialogStatus.otherHardClose),
         ],
       ),
     ];
@@ -69,4 +70,5 @@ class SmartDialogStatus {
 
   /// other
   static const String otherTrick = 'otherTrick';
+  static const String otherHardClose = 'otherHardClose';
 }

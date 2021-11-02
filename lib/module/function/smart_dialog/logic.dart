@@ -65,7 +65,14 @@ class SmartDialogLogic extends GetxController {
       case SmartDialogStatus.otherTrick:
         _otherTrick();
         break;
+      case SmartDialogStatus.otherHardClose:
+        _otherHardClose();
+        break;
     }
+  }
+
+  void _otherHardClose() async {
+
   }
 
   void _dialogStack() async {
@@ -177,6 +184,7 @@ class SmartDialogLogic extends GetxController {
       alignmentTemp: Alignment.centerRight,
       isPenetrateTemp: true,
       clickBgDismissTemp: false,
+      isUseAnimationTemp: false,
       widget: Container(
         width: 80,
         height: double.infinity,
