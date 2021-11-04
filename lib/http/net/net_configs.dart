@@ -20,9 +20,4 @@ class NetConfig {
   /// 请求内容类型 form，UTF-8
   static const String contentTypeForm = 'multipart/form-data;charset=utf-8';
   static const String headerContentType = "content-type";
-
-  /// 是否启用缓存  缓存的最长时间，单位（秒）  最大缓存数
-// static const cacheEnable = true;
-// static const cacheMaxAge = 1000;
-// static const cacheMaxCount = 100;
 }
