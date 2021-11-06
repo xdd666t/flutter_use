@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_loading.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_toast.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/other_trick.dart';
@@ -130,35 +131,35 @@ class SmartDialogLogic extends GetxController {
         height: height,
         color: randomColor(),
         alignment: Alignment.center,
-        child: Text('弹窗$msg', style: TextStyle(color: Colors.white)),
+        child: Text('dialog $msg', style: TextStyle(color: Colors.white)),
       );
     };
 
     //left
     SmartDialog.show(
       tag: 'A',
-      widget: stack(msg: 'A', width: 60),
+      widget: stack(msg: 'A', width: 70),
       alignmentTemp: Alignment.centerLeft,
     );
     await Future.delayed(Duration(milliseconds: 500));
     //top
     SmartDialog.show(
       tag: 'B',
-      widget: stack(msg: 'B', height: 60),
+      widget: stack(msg: 'B', height: 70),
       alignmentTemp: Alignment.topCenter,
     );
     await Future.delayed(Duration(milliseconds: 500));
     //right
     SmartDialog.show(
       tag: 'C',
-      widget: stack(msg: 'C', width: 60),
+      widget: stack(msg: 'C', width: 70),
       alignmentTemp: Alignment.centerRight,
     );
     await Future.delayed(Duration(milliseconds: 500));
     //bottom
     SmartDialog.show(
       tag: 'D',
-      widget: stack(msg: 'D', height: 60),
+      widget: stack(msg: 'D', height: 70),
       alignmentTemp: Alignment.bottomCenter,
     );
     await Future.delayed(Duration(milliseconds: 500));
@@ -173,19 +174,19 @@ class SmartDialogLogic extends GetxController {
         padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
         child: Wrap(spacing: 20, children: [
           ElevatedButton(
-            child: Text('关闭弹窗A'),
+            child: Text('close dialog A'),
             onPressed: () => SmartDialog.dismiss(tag: 'A'),
           ),
           ElevatedButton(
-            child: Text('关闭弹窗B'),
+            child: Text('close dialog B'),
             onPressed: () => SmartDialog.dismiss(tag: 'B'),
           ),
           ElevatedButton(
-            child: Text('关闭弹窗C'),
+            child: Text('close dialog C'),
             onPressed: () => SmartDialog.dismiss(tag: 'C'),
           ),
           ElevatedButton(
-            child: Text('关闭弹窗D'),
+            child: Text('close dialog D'),
             onPressed: () => SmartDialog.dismiss(tag: 'D'),
           ),
         ]),
@@ -246,25 +247,25 @@ class SmartDialogLogic extends GetxController {
 
     //left
     SmartDialog.show(
-      widget: location(width: 50),
+      widget: location(width: 70),
       alignmentTemp: Alignment.centerLeft,
     );
     await Future.delayed(Duration(milliseconds: 500));
     //top
     SmartDialog.show(
-      widget: location(height: 50),
+      widget: location(height: 70),
       alignmentTemp: Alignment.topCenter,
     );
     await Future.delayed(Duration(milliseconds: 500));
     //right
     SmartDialog.show(
-      widget: location(width: 50),
+      widget: location(width: 70),
       alignmentTemp: Alignment.centerRight,
     );
     await Future.delayed(Duration(milliseconds: 500));
     //bottom
     SmartDialog.show(
-      widget: location(height: 50),
+      widget: location(height: 70),
       alignmentTemp: Alignment.bottomCenter,
     );
     await Future.delayed(Duration(milliseconds: 500));
