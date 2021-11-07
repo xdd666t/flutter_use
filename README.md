@@ -20,8 +20,18 @@
 │  │  │  │  └─widget
 ```
 
-- GetX
+- 一个更优雅的Flutter Dialog解决方案：[这一次，解决Flutter Dialog的各种痛点！](https://juejin.cn/post/7026150456673959943)
+  - 简洁，强大，侵入性极低的Flutter Dialog解决方案
 
+```dart
+├─lib
+│  ├─module
+│  │  ├─function
+│  │  │  ├─smart_dialog   ///SmartDialog功能演示demo代码在此目录下
+│  │  │  │  └─widget
+```
+
+- dartGetX
   - 使用篇：[Flutter GetX使用---简洁的魅力！](https://juejin.cn/post/6924104248275763208)
   - 源码篇：[Flutter GetX深度剖析 | 我们终将走出自己的路（万字图文）](https://juejin.cn/post/6984593635681517582)
 
