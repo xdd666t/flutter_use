@@ -10,6 +10,7 @@ class BlBlocCounterBloc extends Bloc<BlBlocCounterEvent, BlBlocCounterState> {
   }
 
   void _init(InitEvent event, Emitter<BlBlocCounterState> emit) async {
+    //处理一些初始化操作,然后刷新界面
     emit(state.clone());
   }
 
