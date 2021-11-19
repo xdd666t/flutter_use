@@ -4,23 +4,21 @@ import 'event.dart';
 import 'state.dart';
 
 class BlBlocCounterBloc extends Bloc<BlBlocCounterEvent, BlBlocCounterState> {
-  BlBlocCounterBloc() : super(BlBlocCounterState().init());
-
-  @override
-  Stream<BlBlocCounterState> mapEventToState(BlBlocCounterEvent event) async* {
-    if (event is InitEvent) {
-      yield await init();
-    } else if (event is CounterIncrementEvent) {
-      yield increment();
-    }
+  BlBlocCounterBloc() : super(BlBlocCounterState().init()) {
+    on<InitEvent>(_init);
+    on<CounterIncrementEvent>(_increment);
   }
 
-  Future<BlBlocCounterState> init() async {
-    return state.clone();
+  void _init(InitEvent event, Emitter<BlBlocCounterState> emit) async {
+    emit(state.clone());
   }
 
   ///自增
-  BlBlocCounterState increment() {
-    return state.clone()..count = ++state.count;
+  void _increment(
+    CounterIncrementEvent event,
+    Emitter<BlBlocCounterState> emit,
+  ) {
+    state.count = ++state.count;
+    emit(state.clone());
   }
 }
