@@ -19,7 +19,7 @@ class BlBlocCounterBloc extends Bloc<BlBlocCounterEvent, BlBlocCounterState> {
     CounterIncrementEvent event,
     Emitter<BlBlocCounterState> emit,
   ) {
-    state.count = ++state.count;
+    state.count++;
     emit(state.clone());
   }
 }
