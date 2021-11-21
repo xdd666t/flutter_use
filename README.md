@@ -31,7 +31,7 @@
 │  │  │  │  └─widget
 ```
 
-- dartGetX
+- GetX
   - 使用篇：[Flutter GetX使用---简洁的魅力！](https://juejin.cn/post/6924104248275763208)
   - 源码篇：[Flutter GetX深度剖析 | 我们终将走出自己的路（万字图文）](https://juejin.cn/post/6984593635681517582)
 
