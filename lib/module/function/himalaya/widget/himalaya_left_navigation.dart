@@ -35,21 +35,18 @@ class HimalayaLeftNavigation extends StatelessWidget {
           _buildTitle(item.title),
 
           //子栏目 - 列表
-          _buildSubItemListBg(
-            data: item,
-            subBuilder: (subItem) {
-              return _buildSubItemBg(data: subItem, children: [
-                //选中红色长方形条块
-                _buildRedTag(subItem),
+          _buildSubItemListBg(item, subBuilder: (subItem) {
+            return [
+              //选中红色长方形条块
+              _buildRedTag(subItem),
 
-                //图标
-                _buildItemIcon(subItem),
+              //图标
+              _buildItemIcon(subItem),
 
-                //描述
-                _buildItemDesc(subItem),
-              ]);
-            },
-          ),
+              //描述
+              _buildItemDesc(subItem),
+            ];
+          })
         ];
       }),
     ]);
@@ -96,42 +93,37 @@ class HimalayaLeftNavigation extends StatelessWidget {
     );
   }
 
-  Widget _buildSubItemBg({
-    required HimalayaSubItemInfo data,
-    required List<Widget> children,
-  }) {
-    return InkWell(
-      onTap: () => onTap(data),
-      child: Container(
-        padding: EdgeInsets.symmetric(vertical: 9.dp),
-        child: Row(children: children),
-      ),
-    );
-  }
-
-  Widget _buildSubItemListBg({
-    required HimalayaItemInfo data,
-    required HimalayaRxSubBuilder subBuilder,
+  Widget _buildSubItemListBg(
+    HimalayaItemInfo item, {
+    required List<Widget> Function(HimalayaSubItemInfo item) subBuilder,
   }) {
     return Column(
-      children: data.subItemList.map((e) {
-        return subBuilder(e);
-      }).toList(),
+      children: List.generate(item.subItemList.length, (index) {
+        return InkWell(
+          onTap: () => onTap(item.subItemList[index]),
+          child: Container(
+            padding: EdgeInsets.symmetric(vertical: 9.dp),
+            child: Row(children: subBuilder(item.subItemList[index])),
+          ),
+        );
+      }),
     );
   }
 
-  Widget _buildItemListBg({required HimalayaItemBuilder itemBuilder}) {
+  Widget _buildItemListBg({
+    required List<Widget> Function(HimalayaItemInfo item) itemBuilder,
+  }) {
     return Expanded(
       child: Scrollbar(
         child: CustomSingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: data.leftItemList.map((e) {
+            children: List.generate(data.leftItemList.length, (index) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: itemBuilder(e),
+                children: itemBuilder(data.leftItemList[index]),
               );
-            }).toList(),
+            }),
           ),
         ),
       ),

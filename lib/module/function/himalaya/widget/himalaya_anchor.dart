@@ -25,7 +25,7 @@ class HimalayaAnchor extends StatelessWidget {
 
       //卡片
       _buildCardBg(builder: (HimalayaSubItemInfo itemInfo) {
-        return Stack(children: [
+        return [
           //排名信息
           _buildRank(itemInfo),
 
@@ -34,7 +34,7 @@ class HimalayaAnchor extends StatelessWidget {
 
           //主播名称
           _buildAnchorName(itemInfo),
-        ]);
+        ];
       })
     ]);
   }
@@ -101,18 +101,20 @@ class HimalayaAnchor extends StatelessWidget {
     );
   }
 
-  Widget _buildCardBg({required HimalayaSubBuilder builder}) {
+  Widget _buildCardBg({
+    required List<Widget> Function(HimalayaSubItemInfo item) builder,
+  }) {
     return Container(
       margin: EdgeInsets.only(top: 10.dp),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: data.map((e) {
+        children: List.generate(data.length, (index) {
           return Container(
             width: 150.dp,
             height: 200.dp,
-            child: builder(e),
+            child: Stack(children: builder(data[index])),
           );
-        }).toList(),
+        }),
       ),
     );
   }

@@ -28,9 +28,8 @@ class HimalayaRankList extends StatelessWidget {
         _buildTitle(item.title),
 
         //榜单
-        _buildItemBg(
-          item: item,
-          builder: (int index) => Row(children: [
+        _buildItemBg(item, builder: (int index) {
+          return [
             //名次
             _buildItemRank(index),
 
@@ -39,8 +38,8 @@ class HimalayaRankList extends StatelessWidget {
 
             //信息
             _buildItemInfo(item, index),
-          ]),
-        ),
+          ];
+        })
       ];
     });
   }
@@ -96,23 +95,23 @@ class HimalayaRankList extends StatelessWidget {
     );
   }
 
-  Widget _buildItemBg({
-    required HimalayaItemInfo item,
-    required Widget Function(int index) builder,
+  Widget _buildItemBg(
+    HimalayaItemInfo item, {
+    required List<Widget> Function(int index) builder,
   }) {
     return Container(
       margin: EdgeInsets.only(top: 20.dp),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: item.subItemList.asMap().keys.map((int index) {
+        children: List.generate(item.subItemList.length, (index) {
           return Container(
             margin: EdgeInsets.only(bottom: 20.dp),
             child: GestureDetector(
               onTap: () => onItem(item.subItemList[index]),
-              child: builder(index),
+              child: Row(children: builder(index)),
             ),
           );
-        }).toList(),
+        }),
       ),
     );
   }
@@ -140,18 +139,20 @@ class HimalayaRankList extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({required HimalayaItemBuilder builder}) {
+  Widget _buildBg({
+    required List<Widget> Function(HimalayaItemInfo item) builder,
+  }) {
     return Container(
       width: 800.dp,
       margin: EdgeInsets.only(top: 38.dp, bottom: 50.dp),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: data.map((e) {
+        children: List.generate(data.length, (index) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: builder(e),
+            children: builder(data[index]),
           );
-        }).toList(),
+        }),
       ),
     );
   }

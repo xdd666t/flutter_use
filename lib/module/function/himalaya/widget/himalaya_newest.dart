@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
@@ -36,7 +37,7 @@ class HimalayaNewest extends StatelessWidget {
 
       //精选具体card
       _buildCardBg(builder: (item) {
-        return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        return [
           //图片卡片
           _buildPicCard(item),
 
@@ -44,11 +45,17 @@ class HimalayaNewest extends StatelessWidget {
           Text(item.title, style: TextStyle(fontSize: 15.sp)),
 
           //子标题
-          Text(item.subTitle ?? '',
-              style: TextStyle(fontSize: 13.sp, color: Colors.grey)),
-        ]);
+          _buildSubTitle(item),
+        ];
       }),
     ]);
+  }
+
+  Widget _buildSubTitle(HimalayaSubItemInfo item) {
+    return Text(
+      '${item.subTitle}',
+      style: TextStyle(fontSize: 13.sp, color: Colors.grey),
+    );
   }
 
   Widget _buildPicCard(HimalayaSubItemInfo item) {
@@ -67,13 +74,18 @@ class HimalayaNewest extends StatelessWidget {
     );
   }
 
-  Widget _buildCardBg({required HimalayaSubBuilder builder}) {
+  Widget _buildCardBg({
+    required List<Widget> Function(HimalayaSubItemInfo item) builder,
+  }) {
     return Wrap(
       runSpacing: 20.dp,
       spacing: 12.dp,
-      children: data.newestCardList.map((e) {
-        return builder(e);
-      }).toList(),
+      children: List.generate(data.newestCardList.length, (index) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: builder(data.newestCardList[index]),
+        );
+      }),
     );
   }
 

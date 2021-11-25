@@ -10,7 +10,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
     Key? key,
     required this.onRefresh,
     required this.onLeftArrow,
-    required  this.onRightArrow,
+    required this.onRightArrow,
     required this.onSetting,
     required this.onSkin,
     required this.onChanged,

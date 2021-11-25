@@ -2,10 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/config/image_config.dart';
 
-typedef HimalayaSubBuilder = Widget Function(HimalayaSubItemInfo item);
-typedef HimalayaRxSubBuilder = Widget Function(HimalayaSubItemInfo item);
-typedef HimalayaItemBuilder = List<Widget> Function(HimalayaItemInfo item);
-
 class HimalayaState {
   ///左边导航栏
   late List<HimalayaItemInfo> leftItemList;

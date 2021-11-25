@@ -7,8 +7,8 @@ import 'package:flutter_use/module/function/himalaya/state.dart';
 class HimalayaGuess extends StatelessWidget {
   HimalayaGuess({
     Key? key,
-    required this.onChange,
     required this.data,
+    required this.onChange,
     required this.onGuess,
   }) : super(key: key);
 
@@ -35,18 +35,25 @@ class HimalayaGuess extends StatelessWidget {
 
       //显示具体信息流
       _buildItemBg(itemBuilder: (item) {
-        return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        return [
           //图片卡片
           _buildPicCard(item),
 
           //文字描述
           Text(item.title, style: TextStyle(fontSize: 15.sp)),
 
-          Text(item.subTitle ?? '',
-              style: TextStyle(fontSize: 13.sp, color: Colors.grey)),
-        ]);
+          //子标题
+          _buildSubTitle(item),
+        ];
       })
     ]);
+  }
+
+  Widget _buildSubTitle(HimalayaSubItemInfo item) {
+    return Text(
+      '${item.subTitle}',
+      style: TextStyle(fontSize: 13.sp, color: Colors.grey),
+    );
   }
 
   Widget _buildPicCard(HimalayaSubItemInfo item) {
@@ -65,12 +72,17 @@ class HimalayaGuess extends StatelessWidget {
     );
   }
 
-  Widget _buildItemBg({required HimalayaSubBuilder itemBuilder}) {
+  Widget _buildItemBg({
+    required List<Widget> Function(HimalayaSubItemInfo item) itemBuilder,
+  }) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: data.map((e) {
-        return itemBuilder(e);
-      }).toList(),
+      children: List.generate(data.length, (index) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: itemBuilder(data[index]),
+        );
+      }),
     );
   }
 
