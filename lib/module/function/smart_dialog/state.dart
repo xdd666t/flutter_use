@@ -13,6 +13,7 @@ class SmartDialogState {
           BtnInfo(title: 'default', tag: SmartDialogStatus.toastDefault),
           BtnInfo(title: 'location', tag: SmartDialogStatus.toastLocation),
           BtnInfo(title: 'custom', tag: SmartDialogStatus.toastCustom),
+          BtnInfo(title: 'type', tag: SmartDialogStatus.toastType),
           BtnInfo(title: 'smart', tag: SmartDialogStatus.toastSmart),
         ],
       ),
@@ -55,6 +56,7 @@ class SmartDialogStatus {
   static const String toastDefault = 'toastDefault';
   static const String toastLocation = 'toastLocation';
   static const String toastCustom = 'toastCustom';
+  static const String toastType = 'toastType';
   static const String toastSmart = 'toastSmart';
 
   /// loading
