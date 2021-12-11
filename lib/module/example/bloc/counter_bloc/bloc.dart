@@ -5,7 +5,9 @@ import 'state.dart';
 
 class BlBlocCounterBloc extends Bloc<BlBlocCounterEvent, BlBlocCounterState> {
   BlBlocCounterBloc() : super(BlBlocCounterState().init()) {
+    //页面初始化时刻
     on<InitEvent>(_init);
+    //计数器自增
     on<CounterIncrementEvent>(_increment);
   }
 

@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_loading.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_toast.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/other_trick.dart';
@@ -33,6 +32,9 @@ class SmartDialogLogic extends GetxController {
         break;
       case SmartDialogStatus.toastCustom:
         SmartDialog.showToast('', widget: CustomToast('custom toast'));
+        break;
+      case SmartDialogStatus.toastType:
+        _toastType();
         break;
       case SmartDialogStatus.toastSmart:
         _toastSmart();
@@ -361,6 +363,34 @@ class SmartDialogLogic extends GetxController {
     SmartDialog.showLoading();
     await Future.delayed(Duration(seconds: 2));
     SmartDialog.dismiss();
+  }
+
+  void _toastType() {
+    var list = ['normal', 'first', 'last', 'firstAndLast'];
+    var onItem = (String msg) {
+      var type = SmartToastType.normal;
+      if (list[0] == msg) {
+        type = SmartToastType.normal;
+      } else if (list[1] == msg) {
+        type = SmartToastType.first;
+      } else if (list[2] == msg) {
+        type = SmartToastType.last;
+      } else if (list[3] == msg) {
+        type = SmartToastType.firstAndLast;
+      }
+
+      SmartDialog.showToast('1', type: type);
+      SmartDialog.showToast('2', type: type);
+      SmartDialog.showToast('3', type: type);
+      SmartDialog.showToast('4', type: type);
+      SmartDialog.showToast('5', type: type);
+      SmartDialog.showToast('6', type: type);
+    };
+
+    SmartDialog.show(
+      alignmentTemp: Alignment.centerLeft,
+      widget: MultiHandleWidget(list: list, onItem: onItem),
+    );
   }
 
   void _toastSmart() {
