@@ -21,7 +21,7 @@ testHttp() async {
     queryParameters: query,
   );
 
-  var bean = NetObjectBean().fromJson(result);
+  var bean = NetObjectBean.fromJson(result);
   showToast(bean.datas[0].title);
   Toolkit.Log.i(result);
 
@@ -34,7 +34,7 @@ testHttp() async {
   );
 
   var list = (resultList as List).map((e) {
-    return NetListBean().fromJson(e);
+    return NetListBean.fromJson(e);
   }).toList();
   showToast(list[0].title);
   Toolkit.Log.i(resultList);

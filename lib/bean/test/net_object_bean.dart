@@ -1,6 +1,16 @@
-import 'package:flutter_use/generated/json/base/json_convert_content.dart';
+import 'package:flutter_use/generated/json/base/json_field.dart';
+import 'package:flutter_use/generated/json/net_object_bean.g.dart';
 
-class NetObjectBean with JsonConvert<NetObjectBean> {
+
+@JsonSerializable()
+class NetObjectBean {
+
+	NetObjectBean();
+
+	factory NetObjectBean.fromJson(Map<String, dynamic> json) => $NetObjectBeanFromJson(json);
+
+	Map<String, dynamic> toJson() => $NetObjectBeanToJson(this);
+
 	late int curPage;
 	late List<NetObjectDatas> datas;
 	late int offset;
@@ -10,7 +20,15 @@ class NetObjectBean with JsonConvert<NetObjectBean> {
 	late int total;
 }
 
-class NetObjectDatas with JsonConvert<NetObjectDatas> {
+@JsonSerializable()
+class NetObjectDatas {
+
+	NetObjectDatas();
+
+	factory NetObjectDatas.fromJson(Map<String, dynamic> json) => $NetObjectDatasFromJson(json);
+
+	Map<String, dynamic> toJson() => $NetObjectDatasToJson(this);
+
 	late String apkLink;
 	late int audit;
 	late String author;
