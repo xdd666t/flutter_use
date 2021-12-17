@@ -10,11 +10,11 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Toast',
         btnInfo: [
-          BtnInfo(title: 'default', tag: SmartDialogStatus.toastDefault),
-          BtnInfo(title: 'location', tag: SmartDialogStatus.toastLocation),
-          BtnInfo(title: 'custom', tag: SmartDialogStatus.toastCustom),
-          BtnInfo(title: 'type', tag: SmartDialogStatus.toastType),
-          BtnInfo(title: 'smart', tag: SmartDialogStatus.toastSmart),
+          BtnInfo(title: 'default', tag: SmartTag.toastDefault),
+          BtnInfo(title: 'location', tag: SmartTag.toastLocation),
+          BtnInfo(title: 'custom', tag: SmartTag.toastCustom),
+          BtnInfo(title: 'type', tag: SmartTag.toastType),
+          BtnInfo(title: 'smart', tag: SmartTag.toastSmart),
         ],
       ),
 
@@ -22,9 +22,9 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Loading',
         btnInfo: [
-          BtnInfo(title: 'default', tag: SmartDialogStatus.loadingDefault),
-          BtnInfo(title: 'param', tag: SmartDialogStatus.loadingParam),
-          BtnInfo(title: 'custom', tag: SmartDialogStatus.loadingCustom),
+          BtnInfo(title: 'default', tag: SmartTag.loadingDefault),
+          BtnInfo(title: 'param', tag: SmartTag.loadingParam),
+          BtnInfo(title: 'custom', tag: SmartTag.loadingCustom),
         ],
       ),
 
@@ -32,10 +32,10 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Dialog',
         btnInfo: [
-          BtnInfo(title: 'easy', tag: SmartDialogStatus.dialogEasy),
-          BtnInfo(title: 'location', tag: SmartDialogStatus.dialogLocation),
-          BtnInfo(title: 'penetrate', tag: SmartDialogStatus.dialogPenetrate),
-          BtnInfo(title: 'dialogStack', tag: SmartDialogStatus.dialogStack),
+          BtnInfo(title: 'easy', tag: SmartTag.dialogEasy),
+          BtnInfo(title: 'location', tag: SmartTag.dialogLocation),
+          BtnInfo(title: 'penetrate', tag: SmartTag.dialogPenetrate),
+          BtnInfo(title: 'dialogStack', tag: SmartTag.dialogStack),
         ],
       ),
 
@@ -43,15 +43,15 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Other',
         btnInfo: [
-          BtnInfo(title: 'trick', tag: SmartDialogStatus.otherTrick),
-          BtnInfo(title: 'hardClose', tag: SmartDialogStatus.otherHardClose),
+          BtnInfo(title: 'trick', tag: SmartTag.otherTrick),
+          BtnInfo(title: 'hardClose', tag: SmartTag.otherHardClose),
         ],
       ),
     ];
   }
 }
 
-class SmartDialogStatus {
+class SmartTag {
   /// toast
   static const String toastDefault = 'toastDefault';
   static const String toastLocation = 'toastLocation';
