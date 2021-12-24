@@ -35,6 +35,7 @@ class SmartDialogState {
           BtnInfo(title: 'easy', tag: SmartDialogStatus.dialogEasy),
           BtnInfo(title: 'location', tag: SmartDialogStatus.dialogLocation),
           BtnInfo(title: 'penetrate', tag: SmartDialogStatus.dialogPenetrate),
+          BtnInfo(title: 'keepSingle', tag: SmartDialogStatus.dialogKeepSingle),
           BtnInfo(title: 'dialogStack', tag: SmartDialogStatus.dialogStack),
         ],
       ),
@@ -68,6 +69,7 @@ class SmartDialogStatus {
   static const String dialogEasy = 'dialogEasy';
   static const String dialogLocation = 'dialogLocation';
   static const String dialogPenetrate = 'dialogPenetrate';
+  static const String dialogKeepSingle = 'dialogKeepSingle';
   static const String dialogStack = 'dialogStack';
 
   /// other

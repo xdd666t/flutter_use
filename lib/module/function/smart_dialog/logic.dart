@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
@@ -60,6 +62,9 @@ class SmartDialogLogic extends GetxController {
         break;
       case SmartDialogStatus.dialogPenetrate:
         _dialogPenetrate();
+        break;
+      case SmartDialogStatus.dialogKeepSingle:
+        _dialogKeepSingle();
         break;
       case SmartDialogStatus.dialogStack:
         _dialogStack();
@@ -224,6 +229,41 @@ class SmartDialogLogic extends GetxController {
         ),
       ),
     );
+  }
+
+  void _dialogKeepSingle() async {
+    var single = (bool keepSingle, AlignmentGeometry alignment) async {
+      SmartDialog.show(
+        alignmentTemp: alignment,
+        keepSingle: keepSingle,
+        widget: Container(
+          width: alignment == Alignment.bottomCenter ||
+                  alignment == Alignment.topCenter
+              ? double.infinity
+              : 100,
+          height: alignment == Alignment.bottomCenter ||
+                  alignment == Alignment.topCenter
+              ? 100
+              : double.infinity,
+          color: randomColor(),
+          child: Center(
+            child: Text(
+              keepSingle ? 'single' : 'multiple',
+              style: TextStyle(color: Colors.white, fontSize: 25),
+            ),
+          ),
+        ),
+      );
+      await Future.delayed(Duration(seconds: 1));
+    };
+
+    await single(false, Alignment.bottomCenter);
+    await single(true, Alignment.centerRight);
+    await single(true, Alignment.centerRight);
+    await single(false, Alignment.topCenter);
+    await single(false, Alignment.centerLeft);
+    await single(true, Alignment.centerRight);
+    await single(true, Alignment.centerRight);
   }
 
   void _dialogPenetrate() {
