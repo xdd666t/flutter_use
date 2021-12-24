@@ -26,55 +26,55 @@ class SmartDialogLogic extends GetxController {
     switch (tag) {
 
       ///toast
-      case SmartDialogStatus.toastDefault:
+      case SmartTag.toastDefault:
         SmartDialog.showToast('test toast');
         break;
-      case SmartDialogStatus.toastLocation:
+      case SmartTag.toastLocation:
         _toastLocation();
         break;
-      case SmartDialogStatus.toastCustom:
+      case SmartTag.toastCustom:
         SmartDialog.showToast('', widget: CustomToast('custom toast'));
         break;
-      case SmartDialogStatus.toastType:
+      case SmartTag.toastType:
         _toastType();
         break;
-      case SmartDialogStatus.toastSmart:
+      case SmartTag.toastSmart:
         _toastSmart();
         break;
 
       ///loading
-      case SmartDialogStatus.loadingDefault:
+      case SmartTag.loadingDefault:
         _loadingDefault();
         break;
-      case SmartDialogStatus.loadingParam:
+      case SmartTag.loadingParam:
         _loadingParam();
         break;
-      case SmartDialogStatus.loadingCustom:
+      case SmartTag.loadingCustom:
         _loadingCustom();
         break;
 
       ///dialog
-      case SmartDialogStatus.dialogEasy:
+      case SmartTag.dialogEasy:
         _dialogEasy();
         break;
-      case SmartDialogStatus.dialogLocation:
+      case SmartTag.dialogLocation:
         _dialogLocation();
         break;
-      case SmartDialogStatus.dialogPenetrate:
+      case SmartTag.dialogPenetrate:
         _dialogPenetrate();
         break;
-      case SmartDialogStatus.dialogKeepSingle:
+      case SmartTag.dialogKeepSingle:
         _dialogKeepSingle();
         break;
-      case SmartDialogStatus.dialogStack:
+      case SmartTag.dialogStack:
         _dialogStack();
         break;
 
       ///other
-      case SmartDialogStatus.otherTrick:
+      case SmartTag.otherTrick:
         _otherTrick();
         break;
-      case SmartDialogStatus.otherHardClose:
+      case SmartTag.otherHardClose:
         _otherHardClose();
         break;
     }
