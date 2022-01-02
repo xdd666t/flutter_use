@@ -9,7 +9,7 @@ import 'logic.dart';
 import 'state.dart';
 
 class SmartDialogPage extends StatelessWidget {
-  final SmartDialogLogic logic = Get.put(SmartDialogLogic())..init();
+  final SmartDialogLogic logic = Get.put(SmartDialogLogic());
   final SmartDialogState state = Get.find<SmartDialogLogic>().state;
 
   @override

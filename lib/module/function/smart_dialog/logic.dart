@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_loading.dart';
@@ -15,43 +14,9 @@ import 'widget/multi_handle_widget.dart';
 class SmartDialogLogic extends GetxController {
   final state = SmartDialogState();
 
-  void init() async {
-    //必须等待界面加载完毕
-    // await ViewUtil.initFinish();
-    // SmartDialog.showToast('test init');
-  }
-
   ///测试功能模块
   void showFun(tag) async {
     switch (tag) {
-
-      ///toast
-      case SmartTag.toastDefault:
-        SmartDialog.showToast('test toast');
-        break;
-      case SmartTag.toastLocation:
-        _toastLocation();
-        break;
-      case SmartTag.toastCustom:
-        SmartDialog.showToast('', widget: CustomToast('custom toast'));
-        break;
-      case SmartTag.toastType:
-        _toastType();
-        break;
-      case SmartTag.toastSmart:
-        _toastSmart();
-        break;
-
-      ///loading
-      case SmartTag.loadingDefault:
-        _loadingDefault();
-        break;
-      case SmartTag.loadingParam:
-        _loadingParam();
-        break;
-      case SmartTag.loadingCustom:
-        _loadingCustom();
-        break;
 
       ///dialog
       case SmartTag.dialogEasy:
@@ -70,6 +35,48 @@ class SmartDialogLogic extends GetxController {
         _dialogStack();
         break;
 
+      ///attach
+      case SmartTag.attachLocation:
+        _attachLocation();
+        break;
+      case SmartTag.attachPoint:
+        _attachPoint();
+        break;
+      case SmartTag.attachImitate:
+        _attachImitate();
+        break;
+      case SmartTag.attachBusiness:
+        _attachBusiness();
+        break;
+
+      ///loading
+      case SmartTag.loadingDefault:
+        _loadingDefault();
+        break;
+      case SmartTag.loadingParam:
+        _loadingParam();
+        break;
+      case SmartTag.loadingCustom:
+        _loadingCustom();
+        break;
+
+      ///toast
+      case SmartTag.toastDefault:
+        SmartDialog.showToast('test toast');
+        break;
+      case SmartTag.toastLocation:
+        _toastLocation();
+        break;
+      case SmartTag.toastCustom:
+        SmartDialog.showToast('', widget: CustomToast('custom toast'));
+        break;
+      case SmartTag.toastType:
+        _toastType();
+        break;
+      case SmartTag.toastSmart:
+        _toastSmart();
+        break;
+
       ///other
       case SmartTag.otherTrick:
         _otherTrick();
@@ -78,6 +85,315 @@ class SmartDialogLogic extends GetxController {
         _otherHardClose();
         break;
     }
+  }
+
+  void _attachBusiness() {
+    var attachA = (BuildContext context) {
+      SmartDialog.showAttach(
+        targetContext: context,
+        alignmentTemp: Alignment.bottomCenter,
+        widget: Container(
+          height: 200,
+          width: 350,
+          margin: EdgeInsets.only(top: 8),
+          color: Colors.white,
+          child: ListView(children: [
+            ListTile(title: Center(child: Text('选项A'))),
+            ListTile(title: Center(child: Text('选项B'))),
+            ListTile(title: Center(child: Text('选项C'))),
+            ListTile(title: Center(child: Text('选项D'))),
+            ListTile(title: Center(child: Text('选项E'))),
+          ]),
+        ),
+      );
+    };
+
+    var businessA = Container(
+      width: 350,
+      height: double.infinity,
+      color: Colors.red,
+      child: Scaffold(
+        appBar: AppBar(title: Text('Business A')),
+        body: Column(children: [
+          Container(
+            width: double.infinity,
+            height: 40,
+            padding: EdgeInsets.only(top: 8),
+            alignment: Alignment.center,
+            child: Builder(builder: (context) {
+              return GestureDetector(
+                onTap: () => attachA(context),
+                child: Row(mainAxisSize: MainAxisSize.min, children: [
+                  Text('下拉弹窗'),
+                  Icon(Icons.arrow_drop_down),
+                ]),
+              );
+            }),
+          ),
+          Divider(),
+        ]),
+      ),
+    );
+    var businessB = Container(
+      width: 350,
+      height: double.infinity,
+      color: Colors.red,
+      child: Scaffold(
+        appBar: AppBar(title: Text('Business B')),
+      ),
+    );
+    SmartDialog.show(
+      isLoadingTemp: false,
+      widget: Container(
+        width: double.infinity,
+        height: double.infinity,
+        alignment: Alignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [businessA, businessB],
+        ),
+      ),
+    );
+  }
+
+  void _attachImitate() {
+    //模仿DropdownButton
+    var imitate = (BuildContext context) {
+      var list = ['小呆呆', '小菲菲', '小猪猪'];
+      SmartDialog.showAttach(
+        targetContext: context,
+        isPenetrateTemp: true,
+        widget: Container(
+          margin: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)
+            ],
+          ),
+          child: Column(
+            children: List.generate(list.length, (index) {
+              return Material(
+                color: Colors.white,
+                child: InkWell(
+                  onTap: () => SmartDialog.dismiss(),
+                  child: Container(
+                    height: 50,
+                    width: 100,
+                    alignment: Alignment.center,
+                    child: Text('${list[index]}'),
+                  ),
+                ),
+              );
+            }),
+          ),
+        ),
+      );
+    };
+
+    SmartDialog.show(
+      isLoadingTemp: false,
+      widget: Container(
+        width: 600,
+        height: 400,
+        alignment: Alignment.center,
+        padding: EdgeInsets.symmetric(horizontal: 100),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.white,
+        ),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              DropdownButton<String>(
+                value: '1',
+                items: [
+                  DropdownMenuItem(value: '1', child: Text('Dropdown：小呆呆')),
+                  DropdownMenuItem(value: '2', child: Text('小菲菲')),
+                  DropdownMenuItem(value: '3', child: Text('小猪猪'))
+                ],
+                onChanged: (value) {},
+              ),
+              Builder(builder: (context) {
+                return Stack(children: [
+                  DropdownButton<String>(
+                    value: '1',
+                    items: [
+                      DropdownMenuItem(value: '1', child: Text('Attach：小呆呆'))
+                    ],
+                    onChanged: (value) {},
+                  ),
+                  GestureDetector(
+                    onTap: () => imitate(context),
+                    child: Container(
+                      height: 50,
+                      width: 140,
+                      color: Colors.transparent,
+                    ),
+                  )
+                ]);
+              }),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _attachPoint() async {
+    var attach = (Offset offset) {
+      var random = Random().nextInt(100) % 5;
+      var alignment = Alignment.topCenter;
+      if (random == 0) alignment = Alignment.topCenter;
+      if (random == 1) alignment = Alignment.centerLeft;
+      if (random == 2) alignment = Alignment.center;
+      if (random == 3) alignment = Alignment.centerRight;
+      if (random == 4) alignment = Alignment.bottomCenter;
+      SmartDialog.showAttach(
+        targetContext: null,
+        target: offset,
+        isPenetrateTemp: true,
+        clickBgDismissTemp: false,
+        alignmentTemp: alignment,
+        keepSingle: true,
+        widget: ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: Container(width: 100, height: 100, color: randomColor()),
+        ),
+      );
+    };
+
+    SmartDialog.show(
+      isLoadingTemp: false,
+      widget: Container(
+        width: 600,
+        height: 400,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.white,
+        ),
+        child: GestureDetector(
+          onTapDown: (detail) => attach(detail.globalPosition),
+          child: Container(
+            width: 500,
+            height: 300,
+            color: Colors.grey,
+            alignment: Alignment.center,
+            child: Text('click me', style: TextStyle(color: Colors.white)),
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _attachLocation() async {
+    var attach = (BuildContext context, AlignmentGeometry alignment) async {
+      SmartDialog.showAttach(
+        targetContext: context,
+        isPenetrateTemp: true,
+        alignmentTemp: alignment,
+        clickBgDismissTemp: false,
+        widget: Container(width: 100, height: 100, color: randomColor()),
+      );
+      await Future.delayed(Duration(milliseconds: 350));
+    };
+
+    //target widget
+    List<BuildContext> list = [];
+    var btn = ({
+      required String title,
+      required Function(BuildContext context) onTap,
+    }) {
+      return Builder(builder: (context) {
+        Color? color = title.contains('all') ? randomColor() : null;
+        list.add(context);
+        return Container(
+          width: 130,
+          child: ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: ButtonStyleButton.allOrNull<Color>(color),
+            ),
+            onPressed: () => onTap(context),
+            child: Text('$title'),
+          ),
+        );
+      });
+    };
+
+    SmartDialog.show(
+      isLoadingTemp: false,
+      widget: Container(
+        width: 700,
+        padding: EdgeInsets.all(70),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.white,
+        ),
+        child: Wrap(
+          spacing: 50,
+          runSpacing: 50,
+          alignment: WrapAlignment.spaceEvenly,
+          children: [
+            btn(
+              title: 'topLeft',
+              onTap: (context) => attach(context, Alignment.topLeft),
+            ),
+            btn(
+              title: 'topCenter',
+              onTap: (context) => attach(context, Alignment.topCenter),
+            ),
+            btn(
+              title: 'topRight',
+              onTap: (context) => attach(context, Alignment.topRight),
+            ),
+            btn(
+              title: 'centerLeft',
+              onTap: (context) => attach(context, Alignment.centerLeft),
+            ),
+            btn(
+              title: 'center',
+              onTap: (context) => attach(context, Alignment.center),
+            ),
+            btn(
+              title: 'centerRight',
+              onTap: (context) => attach(context, Alignment.centerRight),
+            ),
+            btn(
+              title: 'bottomLeft',
+              onTap: (context) => attach(context, Alignment.bottomLeft),
+            ),
+            btn(
+              title: 'bottomCenter',
+              onTap: (context) => attach(context, Alignment.bottomCenter),
+            ),
+            btn(
+              title: 'bottomRight',
+              onTap: (context) => attach(context, Alignment.bottomRight),
+            ),
+            btn(
+              title: 'allOpen',
+              onTap: (_) async {
+                await attach(list[0], Alignment.topLeft);
+                await attach(list[1], Alignment.topCenter);
+                await attach(list[2], Alignment.topRight);
+                await attach(list[3], Alignment.centerLeft);
+                await attach(list[4], Alignment.center);
+                await attach(list[5], Alignment.centerRight);
+                await attach(list[6], Alignment.bottomLeft);
+                await attach(list[7], Alignment.bottomCenter);
+                await attach(list[8], Alignment.bottomRight);
+              },
+            ),
+            btn(
+              title: 'allClose',
+              onTap: (_) => SmartDialog.dismiss(status: SmartStatus.allDialog),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   void _otherHardClose() async {
@@ -391,7 +707,7 @@ class SmartDialogLogic extends GetxController {
       width: 180,
       decoration: BoxDecoration(
         color: Colors.black,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
       ),
       alignment: Alignment.center,
       child: Text('easy custom dialog', style: TextStyle(color: Colors.white)),
