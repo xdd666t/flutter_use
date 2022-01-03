@@ -26,6 +26,7 @@ class SmartDialogState {
           BtnInfo(title: 'point', tag: SmartTag.attachPoint),
           BtnInfo(title: 'imitate', tag: SmartTag.attachImitate),
           BtnInfo(title: 'business', tag: SmartTag.attachBusiness),
+          BtnInfo(title: 'guide', tag: SmartTag.attachGuide),
         ],
       ),
 
@@ -76,6 +77,7 @@ class SmartTag {
   static const String attachPoint = 'attachPoint';
   static const String attachImitate = 'attachImitate';
   static const String attachBusiness = 'attachBusiness';
+  static const String attachGuide = 'attachGuide';
 
   /// loading
   static const String loadingDefault = 'loadingDefault';

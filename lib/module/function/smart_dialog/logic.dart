@@ -48,6 +48,9 @@ class SmartDialogLogic extends GetxController {
       case SmartTag.attachBusiness:
         _attachBusiness();
         break;
+      case SmartTag.attachGuide:
+        _attachGuide();
+        break;
 
       ///loading
       case SmartTag.loadingDefault:
@@ -87,51 +90,201 @@ class SmartDialogLogic extends GetxController {
     }
   }
 
+  void _attachGuide() async {
+    //guide dialog
+    late BuildContext aContext;
+    late BuildContext bContext;
+    var guide = ({required VoidCallback? onTap}) {
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(7),
+          color: Colors.blue,
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        child: Column(children: [
+          Text('xdd666', style: TextStyle(color: Colors.white, fontSize: 20)),
+          ElevatedButton(
+            onPressed: () => onTap?.call(),
+            child: Text('next'),
+          )
+        ]),
+      );
+    };
+    var guideB = (BuildContext context) {
+      SmartDialog.showAttach(
+        targetContext: context,
+        alignmentTemp: Alignment.bottomCenter,
+        highlight: Positioned(
+          right: 190,
+          bottom: 190,
+          child: Container(
+            height: 120,
+            width: 120,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.white,
+            ),
+          ),
+        ),
+        isLoadingTemp: true,
+        clickBgDismissTemp: false,
+        widget: guide(onTap: () {
+          SmartDialog.showToast('over');
+          SmartDialog.dismiss();
+        }),
+      );
+    };
+    var guideA = (BuildContext context) {
+      SmartDialog.showAttach(
+        targetContext: context,
+        alignmentTemp: Alignment.bottomCenter,
+        highlight: Positioned(
+          left: 190,
+          top: 190,
+          child: Container(
+            height: 120,
+            width: 120,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.white,
+            ),
+          ),
+        ),
+        isLoadingTemp: true,
+        clickBgDismissTemp: false,
+        widget: guide(onTap: () async {
+          await SmartDialog.dismiss();
+          guideB(bContext);
+        }),
+      );
+    };
+
+    //point widget
+    var point = ({required VoidCallback onTap, required String url}) {
+      return GestureDetector(
+        onTap: onTap,
+        child: Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)
+            ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.network(url, height: 100, width: 100),
+          ),
+        ),
+      );
+    };
+    var pointA = Positioned(
+      left: 100,
+      top: 100,
+      child: Builder(builder: (context) {
+        aContext = context;
+        return point(
+          onTap: () => guideA(context),
+          url:
+              'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220103124847.jpg',
+        );
+      }),
+    );
+    var pointB = Positioned(
+      right: 100,
+      bottom: 100,
+      child: Builder(builder: (context) {
+        bContext = context;
+        return point(
+          onTap: () => guideB(context),
+          url:
+              'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220103124847.jpg',
+        );
+      }),
+    );
+    SmartDialog.show(
+      isLoadingTemp: false,
+      widget: Container(
+        width: double.infinity,
+        height: double.infinity,
+        alignment: Alignment.center,
+        margin: EdgeInsets.all(100),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.white,
+        ),
+        child: Stack(children: [pointA, pointB]),
+      ),
+    );
+    await Future.delayed(Duration(milliseconds: 500));
+    guideA(aContext);
+  }
+
   void _attachBusiness() {
+    //attach
+    var listDialog = () {
+      var list = ['小呆呆', '小菲菲', '小猪猪', '懒羊羊', '慢羊羊'];
+      return Container(
+        height: 200,
+        width: 350,
+        color: Colors.white,
+        child: ListView(
+          children: List.generate(list.length, (index) {
+            return ListTile(title: Center(child: Text('${list[index]}')));
+          }),
+        ),
+      );
+    };
     var attachA = (BuildContext context) {
       SmartDialog.showAttach(
         targetContext: context,
         alignmentTemp: Alignment.bottomCenter,
-        widget: Container(
-          height: 200,
-          width: 350,
-          margin: EdgeInsets.only(top: 8),
-          color: Colors.white,
-          child: ListView(children: [
-            ListTile(title: Center(child: Text('选项A'))),
-            ListTile(title: Center(child: Text('选项B'))),
-            ListTile(title: Center(child: Text('选项C'))),
-            ListTile(title: Center(child: Text('选项D'))),
-            ListTile(title: Center(child: Text('选项E'))),
-          ]),
+        highlight: Positioned(
+          child: Container(
+            height: AppBar().preferredSize.height + 40,
+            width: 350,
+            color: Colors.white,
+          ),
         ),
+        widget: listDialog(),
+      );
+    };
+    var attachB = (BuildContext context) {
+      SmartDialog.showAttach(
+        targetContext: context,
+        alignmentTemp: Alignment.topCenter,
+        highlight: Positioned(
+          right: 0,
+          bottom: 0,
+          child: Container(height: 40, width: 350, color: Colors.white),
+        ),
+        widget: listDialog(),
       );
     };
 
+    //business widget
     var businessA = Container(
       width: 350,
       height: double.infinity,
       color: Colors.red,
       child: Scaffold(
         appBar: AppBar(title: Text('Business A')),
-        body: Column(children: [
-          Container(
-            width: double.infinity,
-            height: 40,
-            padding: EdgeInsets.only(top: 8),
-            alignment: Alignment.center,
-            child: Builder(builder: (context) {
-              return GestureDetector(
+        body: Builder(builder: (context) {
+          return Column(mainAxisSize: MainAxisSize.min, children: [
+            Container(
+              width: double.infinity,
+              height: 40,
+              alignment: Alignment.center,
+              child: GestureDetector(
                 onTap: () => attachA(context),
                 child: Row(mainAxisSize: MainAxisSize.min, children: [
                   Text('下拉弹窗'),
                   Icon(Icons.arrow_drop_down),
                 ]),
-              );
-            }),
-          ),
-          Divider(),
-        ]),
+              ),
+            ),
+            Container(height: 1, width: double.infinity, color: Colors.grey),
+          ]);
+        }),
       ),
     );
     var businessB = Container(
@@ -140,6 +293,26 @@ class SmartDialogLogic extends GetxController {
       color: Colors.red,
       child: Scaffold(
         appBar: AppBar(title: Text('Business B')),
+        body: Align(
+          alignment: Alignment.bottomCenter,
+          child: Builder(builder: (context) {
+            return Column(mainAxisSize: MainAxisSize.min, children: [
+              Container(height: 1, width: double.infinity, color: Colors.grey),
+              Container(
+                width: double.infinity,
+                height: 40,
+                alignment: Alignment.center,
+                child: GestureDetector(
+                  onTap: () => attachB(context),
+                  child: Row(mainAxisSize: MainAxisSize.min, children: [
+                    Text('上弹弹窗'),
+                    Icon(Icons.arrow_drop_up),
+                  ]),
+                ),
+              ),
+            ]);
+          }),
+        ),
       ),
     );
     SmartDialog.show(
@@ -190,6 +363,29 @@ class SmartDialogLogic extends GetxController {
       );
     };
 
+    //imitate widget
+    var dropdownButton = ({String title = 'Dropdown'}) {
+      return DropdownButton<String>(
+        value: '1',
+        items: [
+          DropdownMenuItem(value: '1', child: Text('$title：小呆呆')),
+          DropdownMenuItem(value: '2', child: Text('小菲菲')),
+          DropdownMenuItem(value: '3', child: Text('小猪猪'))
+        ],
+        onChanged: (value) {},
+      );
+    };
+    var imitateDropdownButton = () {
+      return Builder(builder: (context) {
+        return Stack(children: [
+          dropdownButton(title: 'Attach'),
+          GestureDetector(
+            onTap: () => imitate(context),
+            child: Container(height: 50, width: 140, color: Colors.transparent),
+          )
+        ]);
+      });
+    };
     SmartDialog.show(
       isLoadingTemp: false,
       widget: Container(
@@ -205,36 +401,7 @@ class SmartDialogLogic extends GetxController {
           debugShowCheckedModeBanner: false,
           home: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              DropdownButton<String>(
-                value: '1',
-                items: [
-                  DropdownMenuItem(value: '1', child: Text('Dropdown：小呆呆')),
-                  DropdownMenuItem(value: '2', child: Text('小菲菲')),
-                  DropdownMenuItem(value: '3', child: Text('小猪猪'))
-                ],
-                onChanged: (value) {},
-              ),
-              Builder(builder: (context) {
-                return Stack(children: [
-                  DropdownButton<String>(
-                    value: '1',
-                    items: [
-                      DropdownMenuItem(value: '1', child: Text('Attach：小呆呆'))
-                    ],
-                    onChanged: (value) {},
-                  ),
-                  GestureDetector(
-                    onTap: () => imitate(context),
-                    child: Container(
-                      height: 50,
-                      width: 140,
-                      color: Colors.transparent,
-                    ),
-                  )
-                ]);
-              }),
-            ],
+            children: [dropdownButton(), imitateDropdownButton()],
           ),
         ),
       ),
@@ -301,14 +468,25 @@ class SmartDialogLogic extends GetxController {
     };
 
     //target widget
-    List<BuildContext> list = [];
+    List<BuildContext> contextList = [];
+    List<Future Function()> funList = [
+      () async => await attach(contextList[0], Alignment.topLeft),
+      () async => await attach(contextList[1], Alignment.topCenter),
+      () async => await attach(contextList[2], Alignment.topRight),
+      () async => await attach(contextList[3], Alignment.centerLeft),
+      () async => await attach(contextList[4], Alignment.center),
+      () async => await attach(contextList[5], Alignment.centerRight),
+      () async => await attach(contextList[6], Alignment.bottomLeft),
+      () async => await attach(contextList[7], Alignment.bottomCenter),
+      () async => await attach(contextList[8], Alignment.bottomRight),
+    ];
     var btn = ({
       required String title,
       required Function(BuildContext context) onTap,
     }) {
       return Builder(builder: (context) {
         Color? color = title.contains('all') ? randomColor() : null;
-        list.add(context);
+        contextList.add(context);
         return Container(
           width: 130,
           child: ElevatedButton(
@@ -336,59 +514,26 @@ class SmartDialogLogic extends GetxController {
           runSpacing: 50,
           alignment: WrapAlignment.spaceEvenly,
           children: [
-            btn(
-              title: 'topLeft',
-              onTap: (context) => attach(context, Alignment.topLeft),
-            ),
-            btn(
-              title: 'topCenter',
-              onTap: (context) => attach(context, Alignment.topCenter),
-            ),
-            btn(
-              title: 'topRight',
-              onTap: (context) => attach(context, Alignment.topRight),
-            ),
-            btn(
-              title: 'centerLeft',
-              onTap: (context) => attach(context, Alignment.centerLeft),
-            ),
-            btn(
-              title: 'center',
-              onTap: (context) => attach(context, Alignment.center),
-            ),
-            btn(
-              title: 'centerRight',
-              onTap: (context) => attach(context, Alignment.centerRight),
-            ),
-            btn(
-              title: 'bottomLeft',
-              onTap: (context) => attach(context, Alignment.bottomLeft),
-            ),
-            btn(
-              title: 'bottomCenter',
-              onTap: (context) => attach(context, Alignment.bottomCenter),
-            ),
-            btn(
-              title: 'bottomRight',
-              onTap: (context) => attach(context, Alignment.bottomRight),
-            ),
+            btn(title: 'topLeft', onTap: (context) => funList[0]()),
+            btn(title: 'topCenter', onTap: (context) => funList[1]()),
+            btn(title: 'topRight', onTap: (context) => funList[2]()),
+            btn(title: 'centerLeft', onTap: (context) => funList[3]()),
+            btn(title: 'center', onTap: (context) => funList[4]()),
+            btn(title: 'centerRight', onTap: (context) => funList[5]()),
+            btn(title: 'bottomLeft', onTap: (context) => funList[6]()),
+            btn(title: 'bottomCenter', onTap: (context) => funList[7]()),
+            btn(title: 'bottomRight', onTap: (context) => funList[8]()),
             btn(
               title: 'allOpen',
               onTap: (_) async {
-                await attach(list[0], Alignment.topLeft);
-                await attach(list[1], Alignment.topCenter);
-                await attach(list[2], Alignment.topRight);
-                await attach(list[3], Alignment.centerLeft);
-                await attach(list[4], Alignment.center);
-                await attach(list[5], Alignment.centerRight);
-                await attach(list[6], Alignment.bottomLeft);
-                await attach(list[7], Alignment.bottomCenter);
-                await attach(list[8], Alignment.bottomRight);
+                for (var item in funList) {
+                  await item();
+                }
               },
             ),
             btn(
               title: 'allClose',
-              onTap: (_) => SmartDialog.dismiss(status: SmartStatus.allDialog),
+              onTap: (_) => SmartDialog.dismiss(status: SmartStatus.allAttach),
             ),
           ],
         ),
