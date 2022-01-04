@@ -14,16 +14,15 @@ class ProHighCounterPage extends StatelessWidget {
 
   Widget _buildPage(BuildContext context) {
     final provider = context.read<ProHighCounterProvider>();
+    final state = provider.state;
 
     return Scaffold(
       appBar: AppBar(title: Text('Provider-High范例')),
       body: Center(
-        child: Consumer<ProHighCounterProvider>(
-          builder: (context, provider, child) {
-            return Text(
-              '点击了 ${provider.state.count} 次',
-              style: TextStyle(fontSize: 30.0),
-            );
+        child: Selector<ProHighCounterProvider, int>(
+          selector: (context, provider) => state.count,
+          builder: (context, value, child) {
+            return Text('点击了 ${value} 次', style: TextStyle(fontSize: 30.0));
           },
         ),
       ),
