@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubit.dart';
@@ -52,24 +51,4 @@ Widget _customGlobalWidget(Widget? child) {
     create: (BuildContext context) => CounterGlobalEasyP(),
     child: child,
   );
-}
-
-// Widget _builder(BuildContext context, Widget? child) {
-//   Get.context;
-//   return MultiProvider(
-//     providers: [
-//       //此处通过MultiProvider创建的Provider是全局的
-//       ChangeNotifierProvider.value(value: ProSpanOneProvider()),
-//
-//       // ChangeNotifierProvider(create: (context) => ProSpanOneProvider()),
-//     ],
-//     child: _customGlobalWidget(child),
-//   );
-// }
-
-void _initOrientation() {
-  //必须
-  WidgetsFlutterBinding.ensureInitialized();
-  //强制横屏
-  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
 }
