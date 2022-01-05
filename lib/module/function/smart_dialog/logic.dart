@@ -205,6 +205,7 @@ class SmartDialogLogic extends GetxController {
         ),
         isLoadingTemp: true,
         clickBgDismissTemp: false,
+        keepSingle: true,
         widget: guide(onTap: () {
           SmartDialog.showToast('over');
           SmartDialog.dismiss();
@@ -229,10 +230,8 @@ class SmartDialogLogic extends GetxController {
         ),
         isLoadingTemp: true,
         clickBgDismissTemp: false,
-        widget: guide(onTap: () async {
-          await SmartDialog.dismiss();
-          guideB(bContext);
-        }),
+        keepSingle: true,
+        widget: guide(onTap: () => guideB(bContext)),
       );
     };
 
