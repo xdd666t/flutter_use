@@ -231,7 +231,10 @@ class SmartDialogLogic extends GetxController {
         isLoadingTemp: true,
         clickBgDismissTemp: false,
         keepSingle: true,
-        widget: guide(onTap: () => guideB(bContext)),
+        widget: guide(onTap: () async {
+          if (Random().nextBool()) await SmartDialog.dismiss();
+          guideB(bContext);
+        }),
       );
     };
 
