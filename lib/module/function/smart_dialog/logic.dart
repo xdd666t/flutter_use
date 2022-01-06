@@ -187,22 +187,25 @@ class SmartDialogLogic extends GetxController {
         ]),
       );
     };
+    //example：highlightBuilder
     var guideB = (BuildContext context) {
       SmartDialog.showAttach(
         targetContext: context,
         alignmentTemp: Alignment.bottomCenter,
-        highlight: Positioned(
-          right: 190,
-          bottom: 190,
-          child: Container(
-            height: 120,
-            width: 120,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
+        highlightBuilder: (Offset targetOffset, Size targetSize) {
+          return Positioned(
+            top: targetOffset.dy - 10,
+            left: targetOffset.dx - 10,
+            child: Container(
+              height: targetSize.height + 20,
+              width: targetSize.width + 20,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
             ),
-          ),
-        ),
+          );
+        },
         isLoadingTemp: true,
         clickBgDismissTemp: false,
         keepSingle: true,
@@ -212,6 +215,7 @@ class SmartDialogLogic extends GetxController {
         }),
       );
     };
+    //example：highlight
     var guideA = (BuildContext context) {
       SmartDialog.showAttach(
         targetContext: context,
