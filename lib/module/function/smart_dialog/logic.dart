@@ -316,20 +316,24 @@ class SmartDialogLogic extends GetxController {
         ),
       );
     };
+    //example：highlightBuilder
     var attachA = (BuildContext context) {
       SmartDialog.showAttach(
         targetContext: context,
         alignmentTemp: Alignment.bottomCenter,
-        highlight: Positioned(
-          child: Container(
-            height: AppBar().preferredSize.height + 40,
-            width: 350,
-            color: Colors.white,
-          ),
-        ),
+        highlightBuilder: (Offset targetOffset, Size targetSize) {
+          return Positioned(
+            child: Container(
+              height: targetOffset.dy + targetSize.height,
+              width: targetSize.width,
+              color: Colors.white,
+            ),
+          );
+        },
         widget: listDialog(),
       );
     };
+    //example：highlight
     var attachB = (BuildContext context) {
       SmartDialog.showAttach(
         targetContext: context,
