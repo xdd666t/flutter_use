@@ -42,8 +42,8 @@ class SideNavigation extends StatelessWidget {
           : NavigationRailLabelType.selected,
       //侧边栏中的item
       destinations: sideItems.map((item) => _buildItem(item)).toList(),
-      //顶部widget
-      leading: _buildTopLeading(),
+      //顶部头像
+      leading: _buildTopHead(),
       //底部widget
       trailing: _buildBottomTrailing(),
       selectedIndex: selectedIndex,
@@ -76,7 +76,7 @@ class SideNavigation extends StatelessWidget {
     );
   }
 
-  Widget _buildTopLeading() {
+  Widget _buildTopHead() {
     return Center(
       child: Container(
         width: 80.dp,
@@ -84,10 +84,19 @@ class SideNavigation extends StatelessWidget {
         margin: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.blue.withOpacity(0.5),
+              blurRadius: 8,
+              spreadRadius: 0.2,
+            )
+          ],
           image: DecorationImage(
-              image: NetworkImage(
-                  "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3383029432,2292503864&fm=26&gp=0.jpg"),
-              fit: BoxFit.cover),
+            image: NetworkImage(
+              "https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220103124847.jpg",
+            ),
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
