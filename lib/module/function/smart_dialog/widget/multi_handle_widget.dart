@@ -21,7 +21,7 @@ class MultiHandleWidget extends StatelessWidget {
 
     return Container(
       height: double.infinity,
-      width: 280                                                                ,
+      width: 350                                                                ,
       color: Colors.white,
       alignment: Alignment.topCenter,
       child: FunctionItems(
