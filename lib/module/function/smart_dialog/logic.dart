@@ -691,10 +691,13 @@ class SmartDialogLogic extends GetxController {
       );
       await Future.delayed(Duration(milliseconds: 800));
       Get.to(
-        Container(
-          color: randomColor(),
-          alignment: Alignment.center,
-          child: Text('New Page', style: TextStyle(color: Colors.white)),
+        Scaffold(
+          appBar: AppBar(title: Text('New Page')),
+          body: Container(
+            color: randomColor(),
+            alignment: Alignment.center,
+            child: Text('New Page', style: TextStyle(color: Colors.white)),
+          ),
         ),
         preventDuplicates: false,
       );
@@ -735,48 +738,34 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _dialogStack() async {
-    var stack = ({
+    stackDialog({
+      required AlignmentGeometry alignment,
+      required String tag,
       double width = double.infinity,
       double height = double.infinity,
-      String? msg,
-    }) {
-      return Container(
-        width: width,
-        height: height,
-        color: randomColor(),
-        alignment: Alignment.center,
-        child: Text('dialog $msg', style: TextStyle(color: Colors.white)),
+    }) async {
+      SmartDialog.show(
+        tag: tag,
+        alignmentTemp: alignment,
+        widget: Container(
+          width: width,
+          height: height,
+          color: randomColor(),
+          alignment: Alignment.center,
+          child: Text('dialog $tag', style: TextStyle(color: Colors.white)),
+        ),
       );
-    };
+      await Future.delayed(Duration(milliseconds: 500));
+    }
 
     //left
-    SmartDialog.show(
-      tag: 'A',
-      widget: stack(msg: 'A', width: 70),
-      alignmentTemp: Alignment.centerLeft,
-    );
-    await Future.delayed(Duration(milliseconds: 500));
+    await stackDialog(tag: 'A', width: 70, alignment: Alignment.centerLeft);
     //top
-    SmartDialog.show(
-      tag: 'B',
-      widget: stack(msg: 'B', height: 70),
-      alignmentTemp: Alignment.topCenter,
-    );
-    await Future.delayed(Duration(milliseconds: 500));
+    await stackDialog(tag: 'B', height: 70, alignment: Alignment.topCenter);
     //right
-    SmartDialog.show(
-      tag: 'C',
-      widget: stack(msg: 'C', width: 70),
-      alignmentTemp: Alignment.centerRight,
-    );
-    await Future.delayed(Duration(milliseconds: 500));
+    await stackDialog(tag: 'C', width: 70, alignment: Alignment.centerRight);
     //bottom
-    SmartDialog.show(
-      tag: 'D',
-      widget: stack(msg: 'D', height: 70),
-      alignmentTemp: Alignment.bottomCenter,
-    );
-    await Future.delayed(Duration(milliseconds: 500));
+    await stackDialog(tag: 'D', height: 70, alignment: Alignment.bottomCenter);
 
     //center：the stack handler
     SmartDialog.show(
@@ -784,7 +773,9 @@ class SmartDialogLogic extends GetxController {
       isLoadingTemp: false,
       widget: Container(
         decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(15)),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15),
+        ),
         padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
         child: Wrap(spacing: 20, children: [
           ElevatedButton(
@@ -839,7 +830,7 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _dialogKeepSingle() async {
-    var single = (bool keepSingle, AlignmentGeometry alignment) async {
+    singleDialog(bool keepSingle, AlignmentGeometry alignment) async {
       SmartDialog.show(
         alignmentTemp: alignment,
         keepSingle: keepSingle,
@@ -862,15 +853,15 @@ class SmartDialogLogic extends GetxController {
         ),
       );
       await Future.delayed(Duration(seconds: 1));
-    };
+    }
 
-    await single(false, Alignment.bottomCenter);
-    await single(true, Alignment.centerRight);
-    await single(true, Alignment.centerRight);
-    await single(false, Alignment.topCenter);
-    await single(false, Alignment.centerLeft);
-    await single(true, Alignment.centerRight);
-    await single(true, Alignment.centerRight);
+    await singleDialog(false, Alignment.bottomCenter);
+    await singleDialog(true, Alignment.centerRight);
+    await singleDialog(true, Alignment.centerRight);
+    await singleDialog(false, Alignment.topCenter);
+    await singleDialog(false, Alignment.centerLeft);
+    await singleDialog(true, Alignment.centerRight);
+    await singleDialog(true, Alignment.centerRight);
   }
 
   void _dialogPenetrate() {
