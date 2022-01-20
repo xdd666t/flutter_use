@@ -34,6 +34,9 @@ class SmartDialogLogic extends GetxController {
       case SmartTag.dialogStack:
         _dialogStack();
         break;
+      case SmartTag.dialogUseSystem:
+        _dialogUseSystem();
+        break;
 
       ///attach
       case SmartTag.attachLocation:
@@ -674,6 +677,63 @@ class SmartDialogLogic extends GetxController {
     );
   }
 
+  void _dialogUseSystem() async {
+    toNewPage(bool useSystem) async {
+      SmartDialog.show(
+        useSystem: useSystem,
+        isLoadingTemp: false,
+        widget: Container(
+          width: 300,
+          height: 100,
+          color: Colors.white,
+          child: Center(child: Text('跳转页面前测试弹窗')),
+        ),
+      );
+      await Future.delayed(Duration(milliseconds: 800));
+      Get.to(
+        Container(
+          color: randomColor(),
+          alignment: Alignment.center,
+          child: Text('我是新页面', style: TextStyle(color: Colors.white)),
+        ),
+        preventDuplicates: false,
+      );
+    }
+
+    SmartDialog.show(
+      isLoadingTemp: false,
+      useSystem: true,
+      widget: Container(
+        width: 500,
+        height: 300,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(children: [
+          Container(
+            margin: EdgeInsets.only(top: 50),
+            child: Text('使用useSystem参数，可解决在弹窗上跳转新页面问题'),
+          ),
+          Expanded(
+            child: Center(
+              child: Wrap(spacing: 50, children: [
+                ElevatedButton(
+                  onPressed: () => toNewPage(false),
+                  child: Text('不使用useSystem'),
+                ),
+                ElevatedButton(
+                  onPressed: () => toNewPage(true),
+                  child: Text('使用useSystem'),
+                ),
+              ]),
+            ),
+          )
+        ]),
+      ),
+    );
+  }
+
   void _dialogStack() async {
     var stack = ({
       double width = double.infinity,
@@ -759,7 +819,7 @@ class SmartDialogLogic extends GetxController {
       ),
     );
 
-    await Future.delayed(Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 500));
 
     // handler
     SmartDialog.show(
@@ -771,7 +831,7 @@ class SmartDialogLogic extends GetxController {
         color: Colors.white,
         alignment: Alignment.center,
         child: ElevatedButton(
-          child: Text('add'),
+          child: const Text('add'),
           onPressed: () => callback?.call(),
         ),
       ),
