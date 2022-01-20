@@ -686,7 +686,7 @@ class SmartDialogLogic extends GetxController {
           width: 300,
           height: 100,
           color: Colors.white,
-          child: Center(child: Text('跳转页面前测试弹窗')),
+          child: Center(child: Text('跳转页面前测试弹窗，useSystem：$useSystem')),
         ),
       );
       await Future.delayed(Duration(milliseconds: 800));
@@ -694,7 +694,7 @@ class SmartDialogLogic extends GetxController {
         Container(
           color: randomColor(),
           alignment: Alignment.center,
-          child: Text('我是新页面', style: TextStyle(color: Colors.white)),
+          child: Text('New Page', style: TextStyle(color: Colors.white)),
         ),
         preventDuplicates: false,
       );
@@ -720,11 +720,11 @@ class SmartDialogLogic extends GetxController {
               child: Wrap(spacing: 50, children: [
                 ElevatedButton(
                   onPressed: () => toNewPage(false),
-                  child: Text('不使用useSystem'),
+                  child: Text('not useSystem'),
                 ),
                 ElevatedButton(
                   onPressed: () => toNewPage(true),
-                  child: Text('使用useSystem'),
+                  child: Text('useSystem'),
                 ),
               ]),
             ),
