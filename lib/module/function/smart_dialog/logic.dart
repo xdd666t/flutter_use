@@ -615,9 +615,7 @@ class SmartDialogLogic extends GetxController {
             btn(
               title: 'allOpen',
               onTap: (_) async {
-                for (var item in funList) {
-                  await item();
-                }
+                for (var item in funList) await item();
               },
             ),
             btn(
