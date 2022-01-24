@@ -420,7 +420,7 @@ class SmartDialogLogic extends GetxController {
 
   void _attachImitate() {
     //模仿DropdownButton
-    var imitate = (BuildContext context) {
+    imitateDialog(BuildContext context) {
       var list = ['小呆呆', '小菲菲', '小猪猪'];
       SmartDialog.showAttach(
         targetContext: context,
@@ -450,10 +450,10 @@ class SmartDialogLogic extends GetxController {
           ),
         ),
       );
-    };
+    }
 
     //imitate widget
-    var dropdownButton = ({String title = 'Dropdown'}) {
+    dropdownButton({String title = 'Dropdown'}) {
       return DropdownButton<String>(
         value: '1',
         items: [
@@ -463,18 +463,20 @@ class SmartDialogLogic extends GetxController {
         ],
         onChanged: (value) {},
       );
-    };
-    var imitateDropdownButton = () {
+    }
+
+    imitateDropdownButton() {
       return Builder(builder: (context) {
         return Stack(children: [
           dropdownButton(title: 'Attach'),
-          GestureDetector(
-            onTap: () => imitate(context),
+          InkWell(
+            onTap: () => imitateDialog(context),
             child: Container(height: 50, width: 140, color: Colors.transparent),
           )
         ]);
       });
-    };
+    }
+
     SmartDialog.show(
       isLoadingTemp: false,
       widget: Container(
@@ -498,7 +500,7 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _attachPoint() async {
-    var attach = (Offset offset) {
+    targetDialog(Offset offset) {
       var random = Random().nextInt(100) % 5;
       var alignment = Alignment.topCenter;
       if (random == 0) alignment = Alignment.topCenter;
@@ -518,7 +520,7 @@ class SmartDialogLogic extends GetxController {
           child: Container(width: 100, height: 100, color: randomColor()),
         ),
       );
-    };
+    }
 
     SmartDialog.show(
       isLoadingTemp: false,
@@ -531,7 +533,7 @@ class SmartDialogLogic extends GetxController {
           color: Colors.white,
         ),
         child: GestureDetector(
-          onTapDown: (detail) => attach(detail.globalPosition),
+          onTapDown: (detail) => targetDialog(detail.globalPosition),
           child: Container(
             width: 500,
             height: 300,
@@ -545,7 +547,7 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _attachLocation() async {
-    var attach = (BuildContext context, AlignmentGeometry alignment) async {
+    attachDialog(BuildContext context, AlignmentGeometry alignment) async {
       SmartDialog.showAttach(
         targetContext: context,
         isPenetrateTemp: true,
@@ -554,78 +556,75 @@ class SmartDialogLogic extends GetxController {
         widget: Container(width: 100, height: 100, color: randomColor()),
       );
       await Future.delayed(Duration(milliseconds: 350));
-    };
+    }
 
     //target widget
     List<BuildContext> contextList = [];
     List<Future Function()> funList = [
-      () async => await attach(contextList[0], Alignment.topLeft),
-      () async => await attach(contextList[1], Alignment.topCenter),
-      () async => await attach(contextList[2], Alignment.topRight),
-      () async => await attach(contextList[3], Alignment.centerLeft),
-      () async => await attach(contextList[4], Alignment.center),
-      () async => await attach(contextList[5], Alignment.centerRight),
-      () async => await attach(contextList[6], Alignment.bottomLeft),
-      () async => await attach(contextList[7], Alignment.bottomCenter),
-      () async => await attach(contextList[8], Alignment.bottomRight),
+      () async => await attachDialog(contextList[0], Alignment.topLeft),
+      () async => await attachDialog(contextList[1], Alignment.topCenter),
+      () async => await attachDialog(contextList[2], Alignment.topRight),
+      () async => await attachDialog(contextList[3], Alignment.centerLeft),
+      () async => await attachDialog(contextList[4], Alignment.center),
+      () async => await attachDialog(contextList[5], Alignment.centerRight),
+      () async => await attachDialog(contextList[6], Alignment.bottomLeft),
+      () async => await attachDialog(contextList[7], Alignment.bottomCenter),
+      () async => await attachDialog(contextList[8], Alignment.bottomRight),
     ];
-    var btn = ({
+    btn({
       required String title,
       required Function(BuildContext context) onTap,
     }) {
-      return Builder(builder: (context) {
-        Color? color = title.contains('all') ? randomColor() : null;
-        contextList.add(context);
-        return Container(
-          width: 130,
-          child: ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor: ButtonStyleButton.allOrNull<Color>(color),
+      return Container(
+        margin: EdgeInsets.all(25),
+        child: Builder(builder: (context) {
+          Color? color = title.contains('all') ? randomColor() : null;
+          contextList.add(context);
+          return Container(
+            width: 130,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: ButtonStyleButton.allOrNull<Color>(color),
+              ),
+              onPressed: () => onTap(context),
+              child: Text('$title'),
             ),
-            onPressed: () => onTap(context),
-            child: Text('$title'),
-          ),
-        );
-      });
-    };
+          );
+        }),
+      );
+    }
 
     SmartDialog.show(
       isLoadingTemp: false,
       widget: Container(
         width: 700,
-        padding: EdgeInsets.all(70),
+        padding: EdgeInsets.all(50),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
         ),
         child: SingleChildScrollView(
-          child: Wrap(
-            spacing: 50,
-            runSpacing: 50,
-            alignment: WrapAlignment.spaceEvenly,
-            children: [
-              btn(title: 'topLeft', onTap: (context) => funList[0]()),
-              btn(title: 'topCenter', onTap: (context) => funList[1]()),
-              btn(title: 'topRight', onTap: (context) => funList[2]()),
-              btn(title: 'centerLeft', onTap: (context) => funList[3]()),
-              btn(title: 'center', onTap: (context) => funList[4]()),
-              btn(title: 'centerRight', onTap: (context) => funList[5]()),
-              btn(title: 'bottomLeft', onTap: (context) => funList[6]()),
-              btn(title: 'bottomCenter', onTap: (context) => funList[7]()),
-              btn(title: 'bottomRight', onTap: (context) => funList[8]()),
-              btn(
-                title: 'allOpen',
-                onTap: (_) async {
-                  for (var item in funList) await item();
-                },
-              ),
-              btn(
-                title: 'allClose',
-                onTap: (_) =>
-                    SmartDialog.dismiss(status: SmartStatus.allAttach),
-              ),
-            ],
-          ),
+          child: Wrap(alignment: WrapAlignment.spaceEvenly, children: [
+            btn(title: 'topLeft', onTap: (context) => funList[0]()),
+            btn(title: 'topCenter', onTap: (context) => funList[1]()),
+            btn(title: 'topRight', onTap: (context) => funList[2]()),
+            btn(title: 'centerLeft', onTap: (context) => funList[3]()),
+            btn(title: 'center', onTap: (context) => funList[4]()),
+            btn(title: 'centerRight', onTap: (context) => funList[5]()),
+            btn(title: 'bottomLeft', onTap: (context) => funList[6]()),
+            btn(title: 'bottomCenter', onTap: (context) => funList[7]()),
+            btn(title: 'bottomRight', onTap: (context) => funList[8]()),
+            btn(
+              title: 'allOpen',
+              onTap: (_) async {
+                for (var item in funList) await item();
+              },
+            ),
+            btn(
+              title: 'allClose',
+              onTap: (_) => SmartDialog.dismiss(status: SmartStatus.allAttach),
+            ),
+          ]),
         ),
       ),
     );
@@ -879,43 +878,29 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _dialogLocation() async {
-    var location = ({
+    locationDialog({
+      required AlignmentGeometry alignment,
       double width = double.infinity,
       double height = double.infinity,
-    }) {
-      return Container(width: width, height: height, color: randomColor());
-    };
+    }) async {
+      SmartDialog.show(
+        isLoadingTemp: false,
+        alignmentTemp: alignment,
+        widget: Container(width: width, height: height, color: randomColor()),
+      );
+      await Future.delayed(Duration(milliseconds: 500));
+    }
 
     //left
-    SmartDialog.show(
-      widget: location(width: 70),
-      alignmentTemp: Alignment.centerLeft,
-    );
-    await Future.delayed(Duration(milliseconds: 500));
+    await locationDialog(width: 70, alignment: Alignment.centerLeft);
     //top
-    SmartDialog.show(
-      widget: location(height: 70),
-      alignmentTemp: Alignment.topCenter,
-    );
-    await Future.delayed(Duration(milliseconds: 500));
+    await locationDialog(height: 70, alignment: Alignment.topCenter);
     //right
-    SmartDialog.show(
-      widget: location(width: 70),
-      alignmentTemp: Alignment.centerRight,
-    );
-    await Future.delayed(Duration(milliseconds: 500));
+    await locationDialog(width: 70, alignment: Alignment.centerRight);
     //bottom
-    SmartDialog.show(
-      widget: location(height: 70),
-      alignmentTemp: Alignment.bottomCenter,
-    );
-    await Future.delayed(Duration(milliseconds: 500));
+    await locationDialog(height: 70, alignment: Alignment.bottomCenter);
     //center
-    SmartDialog.show(
-      widget: location(height: 100, width: 100),
-      alignmentTemp: Alignment.center,
-      isLoadingTemp: false,
-    );
+    await locationDialog(height: 100, width: 100, alignment: Alignment.center);
   }
 
   void _loadingCustom() async {
