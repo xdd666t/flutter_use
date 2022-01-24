@@ -224,7 +224,7 @@ class SmartDialogLogic extends GetxController {
         targetContext: context,
         alignmentTemp: Alignment.bottomCenter,
         highlight: Positioned(
-          left: 190,
+          left: 170,
           top: 190,
           child: Container(
             height: 120,
@@ -292,7 +292,7 @@ class SmartDialogLogic extends GetxController {
         width: double.infinity,
         height: double.infinity,
         alignment: Alignment.center,
-        margin: EdgeInsets.all(100),
+        margin: EdgeInsets.symmetric(vertical: 100, horizontal: 80),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
@@ -598,31 +598,34 @@ class SmartDialogLogic extends GetxController {
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
         ),
-        child: Wrap(
-          spacing: 50,
-          runSpacing: 50,
-          alignment: WrapAlignment.spaceEvenly,
-          children: [
-            btn(title: 'topLeft', onTap: (context) => funList[0]()),
-            btn(title: 'topCenter', onTap: (context) => funList[1]()),
-            btn(title: 'topRight', onTap: (context) => funList[2]()),
-            btn(title: 'centerLeft', onTap: (context) => funList[3]()),
-            btn(title: 'center', onTap: (context) => funList[4]()),
-            btn(title: 'centerRight', onTap: (context) => funList[5]()),
-            btn(title: 'bottomLeft', onTap: (context) => funList[6]()),
-            btn(title: 'bottomCenter', onTap: (context) => funList[7]()),
-            btn(title: 'bottomRight', onTap: (context) => funList[8]()),
-            btn(
-              title: 'allOpen',
-              onTap: (_) async {
-                for (var item in funList) await item();
-              },
-            ),
-            btn(
-              title: 'allClose',
-              onTap: (_) => SmartDialog.dismiss(status: SmartStatus.allAttach),
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Wrap(
+            spacing: 50,
+            runSpacing: 50,
+            alignment: WrapAlignment.spaceEvenly,
+            children: [
+              btn(title: 'topLeft', onTap: (context) => funList[0]()),
+              btn(title: 'topCenter', onTap: (context) => funList[1]()),
+              btn(title: 'topRight', onTap: (context) => funList[2]()),
+              btn(title: 'centerLeft', onTap: (context) => funList[3]()),
+              btn(title: 'center', onTap: (context) => funList[4]()),
+              btn(title: 'centerRight', onTap: (context) => funList[5]()),
+              btn(title: 'bottomLeft', onTap: (context) => funList[6]()),
+              btn(title: 'bottomCenter', onTap: (context) => funList[7]()),
+              btn(title: 'bottomRight', onTap: (context) => funList[8]()),
+              btn(
+                title: 'allOpen',
+                onTap: (_) async {
+                  for (var item in funList) await item();
+                },
+              ),
+              btn(
+                title: 'allClose',
+                onTap: (_) =>
+                    SmartDialog.dismiss(status: SmartStatus.allAttach),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -21,22 +21,23 @@ class FunctionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _buildBg(
-      children: data.map((item) {
+      children: List.generate(data.length, (index) {
+        var item = data[index];
         return _buildItem(children: [
           //背景
           Container(
-            width: 400.dp,
-            height: 200.dp,
+            width: 400,
+            height: 200,
             child: Image.network(item.bg ?? '', fit: BoxFit.fitWidth),
           ),
 
           //毛玻璃背景
           !item.selected
               ? ClipRRect(
-                  borderRadius: BorderRadius.circular(100.dp),
+                  borderRadius: BorderRadius.circular(100),
                   child: Container(
-                    height: 50.dp,
-                    width: 150.dp,
+                    height: 50,
+                    width: 150,
                     child: _blurryBg(),
                   ),
                 )
@@ -48,7 +49,7 @@ class FunctionCard extends StatelessWidget {
                   child: Text(
                     item.title ?? '',
                     style: TextStyle(
-                      fontSize: 20.sp,
+                      fontSize: 20,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
@@ -62,7 +63,7 @@ class FunctionCard extends StatelessWidget {
             child: InkWell(onTap: () => onItem(item.tag ?? '')),
           )
         ]);
-      }).toList(),
+      }),
     );
   }
 
@@ -92,13 +93,13 @@ class FunctionCard extends StatelessWidget {
 
   Widget _buildBg({required List<Widget> children}) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 30.dp, vertical: 30.dp),
+      margin: EdgeInsets.all(20),
       child: GridView(
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 350.dp, //子控件最大宽度为100
+          maxCrossAxisExtent: 400, //子控件最大宽度
           childAspectRatio: 2, //宽高比为2:1
-          crossAxisSpacing: 20.dp,
-          mainAxisSpacing: 30.dp,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 30,
         ),
         children: children,
       ),

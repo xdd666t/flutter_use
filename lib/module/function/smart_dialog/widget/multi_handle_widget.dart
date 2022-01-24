@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/typedef/function.dart';
+import 'package:flutter_use/app/utils/ui/ui_util.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
 import 'package:flutter_use/module/function/widget/function_items.dart';
 
@@ -22,6 +23,7 @@ class MultiHandleWidget extends StatelessWidget {
     return Container(
       height: double.infinity,
       width: 350,
+      padding: EdgeInsets.only(top: ScreenParam.statusBar),
       color: Colors.white,
       alignment: Alignment.topCenter,
       child: FunctionItems(
