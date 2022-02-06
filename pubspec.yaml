@@ -49,7 +49,7 @@ dependencies:
   shared_preferences: 2.0.5
   # 轮播图: https://pub.dev/packages/flutter_card_swipper
   flutter_card_swipper: 0.4.0
-  # window打包 https://pub.dev/packages/msix
+  # windows打包 https://pub.dev/packages/msix
   # flutter build windows
   # flutter pub run msix:create
   msix: ^2.8.15
