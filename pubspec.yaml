@@ -49,6 +49,10 @@ dependencies:
   shared_preferences: 2.0.5
   # 轮播图: https://pub.dev/packages/flutter_card_swipper
   flutter_card_swipper: 0.4.0
+  # window打包 https://pub.dev/packages/msix
+  # flutter build windows
+  # flutter pub run msix:create
+  msix: ^2.8.15
   # 设置window窗口 https://github.com/google/flutter-desktop-embedding/tree/master/plugins/window_size
   window_size:
     git:
@@ -68,6 +72,17 @@ dependencies:
   # flutter_lints库：https://pub.dev/packages/flutter_lints
 #  flutter_lints: ^1.0.4
 
+msix_config:
+  display_name: flutter use
+  publisher_display_name: xdd666
+  publisher: 小呆呆666
+  identity_name: xdd666.flutter.use
+  msix_version: 1.7.0.0
+  logo_path: images/icon.png
+  capabilities: "internetClient,location,microphone,webcam"
+  output_path: build/app_release
+  output_name: flutter_use(v1.7)
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -84,9 +99,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - images/icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
