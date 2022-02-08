@@ -28,7 +28,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
-  get: 4.1.4
+  get: 4.6.1
   # 状态管理框架 https://pub.dev/packages/flutter_bloc
   flutter_bloc: 8.0.0
   # 状态管理框架 https://pub.dev/packages/provider
