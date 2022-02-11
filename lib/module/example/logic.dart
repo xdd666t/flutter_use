@@ -31,6 +31,7 @@ class ExampleLogic extends GetxController {
       case ExampleStatus.getAutoDispose:
         //不使用GetX路由跳转，会使得GetX无法监控页面
         //AutoDisposePage模块提供一种自动释放的解决方案
+        //GetXRouteObserver中已经全局处理
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => AutoDisposePage()),
