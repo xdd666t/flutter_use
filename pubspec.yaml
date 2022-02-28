@@ -28,7 +28,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
-  get: 4.1.4
+  get: 4.6.1
   # 状态管理框架 https://pub.dev/packages/flutter_bloc
   flutter_bloc: 8.0.0
   # 状态管理框架 https://pub.dev/packages/provider
@@ -49,6 +49,10 @@ dependencies:
   shared_preferences: 2.0.5
   # 轮播图: https://pub.dev/packages/flutter_card_swipper
   flutter_card_swipper: 0.4.0
+  # windows打包 https://pub.dev/packages/msix
+  # flutter build windows
+  # flutter pub run msix:create
+  msix: ^2.8.15
   # 设置window窗口 https://github.com/google/flutter-desktop-embedding/tree/master/plugins/window_size
   window_size:
     git:
@@ -57,7 +61,7 @@ dependencies:
   # flutter工具包（自用） https://pub.flutter-io.cn/packages/flutter_toolkit_easy
   flutter_toolkit_easy: any
   # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
-  flutter_smart_dialog: 3.3.7
+  flutter_smart_dialog: 3.3.8
 #  flutter_smart_dialog:
 #    path: ..\flutter_smart_dialog
   #  flutter_smart_dialog:
@@ -67,6 +71,17 @@ dependencies:
   #    path: F:\GitHub\flutter_smart_dialog
   # flutter_lints库：https://pub.dev/packages/flutter_lints
 #  flutter_lints: ^1.0.4
+
+msix_config:
+  display_name: flutter use
+  publisher_display_name: xdd666
+  publisher: 小呆呆666
+  identity_name: xdd666.flutter.use
+  msix_version: 1.7.0.0
+  logo_path: images/icon.png
+  capabilities: "internetClient,location,microphone,webcam"
+  output_path: build/app_release
+  output_name: flutter_use(v1.7)
 
 dev_dependencies:
   flutter_test:
@@ -84,9 +99,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - images/icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

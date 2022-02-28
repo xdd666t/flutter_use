@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 import 'app/config/route_config.dart';
+import 'app/helper/getx_route_observer.dart';
 import 'module/example/provider/easy_p/change_notifier_easy_p.dart';
 import 'module/example/provider/span_page/span_one/provider.dart';
 import 'views/widget/custom/custom_loading_widget.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
-      navigatorObservers: [FlutterSmartDialog.observer],
+      navigatorObservers: [FlutterSmartDialog.observer, GetXRouteObserver()],
       builder: FlutterSmartDialog.init(
         toastBuilder: (String msg, AlignmentGeometry alignment) {
           return CustomToastWidget(msg: msg, alignment: alignment);
@@ -62,6 +63,3 @@ Widget _customGlobalWidget(Widget? child) {
     child: child,
   );
 }
-
-
-

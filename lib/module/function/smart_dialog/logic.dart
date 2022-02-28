@@ -683,10 +683,12 @@ class SmartDialogLogic extends GetxController {
         useSystem: useSystem,
         isLoadingTemp: false,
         widget: Container(
-          width: 300,
-          height: 100,
           color: Colors.white,
-          child: Center(child: Text('跳转页面前测试弹窗，useSystem：$useSystem')),
+          padding: EdgeInsets.all(30),
+          child: Text(
+            '跳转页面前测试弹窗(Test dialog before jumping to the page)\n\nuseSystem：$useSystem',
+            textAlign: TextAlign.center,
+          ),
         ),
       );
       await Future.delayed(Duration(milliseconds: 800));
@@ -716,7 +718,12 @@ class SmartDialogLogic extends GetxController {
         child: Column(children: [
           Container(
             margin: EdgeInsets.only(top: 50),
-            child: Text('使用useSystem参数，可解决在弹窗上跳转新页面问题'),
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            child: Text(
+              '使用useSystem参数，可解决在弹窗上跳转新页面问题 \n\n'
+              'Use the useSystem param to solve the problem of jumping to a new page on the dialog',
+              textAlign: TextAlign.center,
+            ),
           ),
           Expanded(
             child: Center(

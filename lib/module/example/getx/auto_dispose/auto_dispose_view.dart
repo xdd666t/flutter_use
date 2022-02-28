@@ -3,12 +3,8 @@ import 'package:get/get.dart';
 
 import 'auto_dispose_logic.dart';
 
-class AutoDisposePage extends StatefulWidget {
-  @override
-  _AutoDisposePageState createState() => _AutoDisposePageState();
-}
-
-class _AutoDisposePageState extends State<AutoDisposePage> {
+///GetXRouteObserver
+class AutoDisposePage extends StatelessWidget {
   final logic = Get.put(AutoDisposeLogic());
 
   @override
@@ -28,11 +24,5 @@ class _AutoDisposePageState extends State<AutoDisposePage> {
         child: Icon(Icons.add),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    Get.delete<AutoDisposeLogic>();
-    super.dispose();
   }
 }
