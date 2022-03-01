@@ -1047,11 +1047,8 @@ class SmartDialogLogic extends GetxController {
     );
   }
 
-  void _toastDefault() async{
-    SmartDialog.showToast('test toast', time: Duration(seconds: 5));
-    await Future.delayed(Duration(milliseconds: 500));
-    SmartDialog.dismiss(status: SmartStatus.toast);
-    SmartDialog.showToast('test toast', time: Duration(seconds: 5));
+  void _toastDefault() async {
+    SmartDialog.showToast('test toast');
   }
 
   void _toastLocation() {
