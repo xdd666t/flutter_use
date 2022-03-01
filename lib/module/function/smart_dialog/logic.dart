@@ -71,7 +71,7 @@ class SmartDialogLogic extends GetxController {
 
       ///toast
       case SmartTag.toastDefault:
-        SmartDialog.showToast('test toast');
+        _toastDefault();
         break;
       case SmartTag.toastLocation:
         _toastLocation();
@@ -1045,6 +1045,13 @@ class SmartDialogLogic extends GetxController {
         child: InputText(textSize: 15, hintSize: 15),
       ),
     );
+  }
+
+  void _toastDefault() async{
+    SmartDialog.showToast('test toast', time: Duration(seconds: 5));
+    await Future.delayed(Duration(milliseconds: 500));
+    SmartDialog.dismiss(status: SmartStatus.toast);
+    SmartDialog.showToast('test toast', time: Duration(seconds: 5));
   }
 
   void _toastLocation() {
