@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
@@ -20,51 +21,49 @@ class FunctionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(
-      children: List.generate(data.length, (index) {
-        var item = data[index];
-        return _buildItem(children: [
-          //背景
-          Container(
-            width: 400,
-            height: 200,
-            child: Image.network(item.bg ?? '', fit: BoxFit.fitWidth),
-          ),
+    return _buildBg(builder: (index) {
+      var item = data[index];
+      return _buildItem(children: [
+        //背景
+        Container(
+          width: 400,
+          height: 200,
+          child: Image.network(item.bg ?? '', fit: BoxFit.fitWidth),
+        ),
 
-          //毛玻璃背景
-          !item.selected
-              ? ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Container(
-                    height: 50,
-                    width: 150,
-                    child: _blurryBg(),
+        //毛玻璃背景
+        !item.selected
+            ? ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Container(
+                  height: 50,
+                  width: 150,
+                  child: _blurryBg(),
+                ),
+              )
+            : Container(),
+
+        //文字
+        !item.selected
+            ? Center(
+                child: Text(
+                  item.title ?? '',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
                   ),
-                )
-              : Container(),
+                ),
+              )
+            : Container(),
 
-          //文字
-          !item.selected
-              ? Center(
-                  child: Text(
-                    item.title ?? '',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                )
-              : Container(),
-
-          //点击效果
-          Material(
-            color: Colors.transparent,
-            child: InkWell(onTap: () => onItem(item.tag ?? '')),
-          )
-        ]);
-      }),
-    );
+        //点击效果
+        Material(
+          color: Colors.transparent,
+          child: InkWell(onTap: () => onItem(item.tag ?? '')),
+        )
+      ]);
+    });
   }
 
   Widget _buildItem({required List<Widget> children}) {
@@ -91,7 +90,7 @@ class FunctionCard extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({required List<Widget> children}) {
+  Widget _buildBg({required Widget builder(int index)}) {
     return Container(
       margin: EdgeInsets.all(20),
       child: GridView(
@@ -101,7 +100,9 @@ class FunctionCard extends StatelessWidget {
           crossAxisSpacing: 20,
           mainAxisSpacing: 30,
         ),
-        children: children,
+        children: List.generate(data.length, (index) {
+          return builder(index);
+        }),
       ),
     );
   }
