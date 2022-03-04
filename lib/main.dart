@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
@@ -14,24 +16,30 @@ import 'views/widget/custom/custom_loading_widget.dart';
 import 'views/widget/custom/custom_toast_widget.dart';
 
 void main() {
-  runApp(MyApp());
+  // 解决启动白屏问题 或 Flutter2.5+首屏页面复杂，导致的加载异常问题
+  // main()方法并不是在Flutter给physicalSize赋值后才运行的，
+  // 这就导致部分机型性能比较好，还没赋值屏幕大小就可能启动渲染界面了。
+  // 如果size为有数值，监听测量回调，在回调中runApp
+  if (window.physicalSize.isEmpty) {
+    metricsFinish() {
+      if (!window.physicalSize.isEmpty) {
+        window.onMetricsChanged = null;
+        runApp(MyApp());
+      }
+    }
+
+    window.onMetricsChanged = metricsFinish;
+  } else {
+    runApp(MyApp());
+  }
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      // initialRoute: RouteConfig.main,
+      initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
-      home: Center(
-        child: ElevatedButton(
-          child: Text('跳转'),
-          onPressed: () async {
-            await Future.delayed(Duration(microseconds: 2000));
-            Get.toNamed(RouteConfig.main);
-          },
-        ),
-      ),
       navigatorObservers: [FlutterSmartDialog.observer, GetXRouteObserver()],
       builder: FlutterSmartDialog.init(
         toastBuilder: (String msg, AlignmentGeometry alignment) {
