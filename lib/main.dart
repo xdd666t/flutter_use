@@ -21,8 +21,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: RouteConfig.main,
+      // initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
+      home: Center(
+        child: ElevatedButton(
+          child: Text('跳转'),
+          onPressed: () async {
+            await Future.delayed(Duration(microseconds: 2000));
+            Get.toNamed(RouteConfig.main);
+          },
+        ),
+      ),
       navigatorObservers: [FlutterSmartDialog.observer, GetXRouteObserver()],
       builder: FlutterSmartDialog.init(
         toastBuilder: (String msg, AlignmentGeometry alignment) {
