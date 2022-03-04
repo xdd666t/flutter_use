@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:keyboard_actions/external/platform_check/platform_check.dart';
 
 class CustomSingleChildScrollView extends StatelessWidget {
   const CustomSingleChildScrollView({Key? key, this.child}) : super(key: key);
@@ -9,6 +10,10 @@ class CustomSingleChildScrollView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (PlatformCheck.isAndroid || PlatformCheck.isIOS) {
+      return SingleChildScrollView(child: child);
+    }
+
     return ScrollConfiguration(
       behavior: MyCustomScrollBehavior(),
       child: SingleChildScrollView(
