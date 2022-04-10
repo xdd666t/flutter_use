@@ -483,16 +483,19 @@ class SmartDialogLogic extends GetxController {
         width: 600,
         height: 400,
         alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 100),
+        margin: EdgeInsets.all(20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
         ),
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [dropdownButton(), imitateDropdownButton()],
+          home: Container(
+            padding: EdgeInsets.symmetric(horizontal: 100),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [dropdownButton(), imitateDropdownButton()],
+            ),
           ),
         ),
       ),
@@ -1013,9 +1016,6 @@ class SmartDialogLogic extends GetxController {
       SmartDialog.showToast('1', type: type);
       SmartDialog.showToast('2', type: type);
       SmartDialog.showToast('3', type: type);
-      SmartDialog.showToast('4', type: type);
-      SmartDialog.showToast('5', type: type);
-      SmartDialog.showToast('6', type: type);
     };
 
     SmartDialog.show(
