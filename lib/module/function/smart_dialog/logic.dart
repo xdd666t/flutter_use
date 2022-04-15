@@ -696,7 +696,7 @@ class SmartDialogLogic extends GetxController {
       );
       await Future.delayed(Duration(milliseconds: 800));
       Get.to(
-        Scaffold(
+        () => Scaffold(
           appBar: AppBar(title: Text('New Page')),
           body: Container(
             color: randomColor(),
