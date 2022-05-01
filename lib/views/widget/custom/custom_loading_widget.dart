@@ -4,11 +4,9 @@ class CustomLoadingWidget extends StatelessWidget {
   CustomLoadingWidget({
     Key? key,
     required this.msg,
-    required this.background,
   }) : super(key: key);
 
   final String msg;
-  final Color background;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +26,7 @@ class CustomLoadingWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       decoration: BoxDecoration(
-        color: background,
+        color: Colors.black,
         borderRadius: BorderRadius.circular(15),
       ),
       child: Column(mainAxisSize: MainAxisSize.min, children: children),

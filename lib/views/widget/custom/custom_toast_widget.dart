@@ -4,16 +4,14 @@ class CustomToastWidget extends StatelessWidget {
   CustomToastWidget({
     Key? key,
     required this.msg,
-    required this.alignment,
   }) : super(key: key);
 
   final String msg;
-  final AlignmentGeometry alignment;
 
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: alignment,
+      alignment: Alignment.bottomCenter,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
         padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),

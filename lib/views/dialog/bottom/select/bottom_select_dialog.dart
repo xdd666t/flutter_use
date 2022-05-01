@@ -32,24 +32,25 @@ Future<E> showBottomSelectDialog<E>({
   }
 
   SmartDialog.show(
-    alignmentTemp: Alignment.bottomCenter,
-    animationDurationTemp: Duration(milliseconds: 200),
-    widget: SelectDialogView(
-      data: stringList,
-      onSelect: (int index) {
-        //关闭弹窗
-        SmartDialog.dismiss();
+    alignment: Alignment.bottomCenter,
+    builder: (_) {
+      return SelectDialogView(
+        data: stringList,
+        onSelect: (int index) {
+          //关闭弹窗
+          SmartDialog.dismiss();
 
-        //同步数据
-        completer.complete(list[index]);
+          //同步数据
+          completer.complete(list[index]);
 
-        //异步数据
-        if (callback == null) {
-          return;
-        }
-        callback(list[index]);
-      },
-    ),
+          //异步数据
+          if (callback == null) {
+            return;
+          }
+          callback(list[index]);
+        },
+      );
+    },
   );
 
   return completer.future;

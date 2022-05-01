@@ -73,11 +73,8 @@ class SmartDialogLogic extends GetxController {
       case SmartTag.toastDefault:
         _toastDefault();
         break;
-      case SmartTag.toastLocation:
-        _toastLocation();
-        break;
       case SmartTag.toastCustom:
-        SmartDialog.showToast('', widget: CustomToast('custom toast'));
+        SmartDialog.showToast('', builder: (_) => CustomToast('custom toast'));
         break;
       case SmartTag.toastType:
         _toastType();
@@ -102,7 +99,7 @@ class SmartDialogLogic extends GetxController {
       required String url,
       required bool left,
     }) async {
-      SmartDialog.showAttach(
+      SmartDialog.compatible.showAttach(
         targetContext: null,
         target: target,
         isPenetrateTemp: true,
@@ -192,7 +189,7 @@ class SmartDialogLogic extends GetxController {
     };
     //example：highlightBuilder
     var guideB = (BuildContext context) {
-      SmartDialog.showAttach(
+      SmartDialog.compatible.showAttach(
         targetContext: context,
         alignmentTemp: Alignment.bottomCenter,
         highlightBuilder: (Offset targetOffset, Size targetSize) {
@@ -213,14 +210,14 @@ class SmartDialogLogic extends GetxController {
         clickBgDismissTemp: false,
         keepSingle: true,
         widget: guide(onTap: () {
-          SmartDialog.showToast('over');
+          SmartDialog.compatible.showToast('over');
           SmartDialog.dismiss();
         }),
       );
     };
     //example：highlight
     var guideA = (BuildContext context) {
-      SmartDialog.showAttach(
+      SmartDialog.compatible.showAttach(
         targetContext: context,
         alignmentTemp: Alignment.bottomCenter,
         highlight: Positioned(
@@ -286,7 +283,7 @@ class SmartDialogLogic extends GetxController {
         );
       }),
     );
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       isLoadingTemp: false,
       widget: Container(
         width: double.infinity,
@@ -321,7 +318,7 @@ class SmartDialogLogic extends GetxController {
     };
     //example：highlightBuilder
     var attachA = (BuildContext context) {
-      SmartDialog.showAttach(
+      SmartDialog.compatible.showAttach(
         targetContext: context,
         alignmentTemp: Alignment.bottomCenter,
         highlightBuilder: (Offset targetOffset, Size targetSize) {
@@ -338,7 +335,7 @@ class SmartDialogLogic extends GetxController {
     };
     //example：highlight
     var attachB = (BuildContext context) {
-      SmartDialog.showAttach(
+      SmartDialog.compatible.showAttach(
         targetContext: context,
         alignmentTemp: Alignment.topCenter,
         highlight: Positioned(
@@ -404,7 +401,7 @@ class SmartDialogLogic extends GetxController {
         ),
       ),
     );
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       isLoadingTemp: false,
       widget: Container(
         width: double.infinity,
@@ -422,7 +419,7 @@ class SmartDialogLogic extends GetxController {
     //模仿DropdownButton
     imitateDialog(BuildContext context) {
       var list = ['小呆呆', '小菲菲', '小猪猪'];
-      SmartDialog.showAttach(
+      SmartDialog.compatible.showAttach(
         targetContext: context,
         isPenetrateTemp: true,
         widget: Container(
@@ -477,7 +474,7 @@ class SmartDialogLogic extends GetxController {
       });
     }
 
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       isLoadingTemp: false,
       widget: Container(
         width: 600,
@@ -511,7 +508,7 @@ class SmartDialogLogic extends GetxController {
       if (random == 2) alignment = Alignment.center;
       if (random == 3) alignment = Alignment.centerRight;
       if (random == 4) alignment = Alignment.bottomCenter;
-      SmartDialog.showAttach(
+      SmartDialog.compatible.showAttach(
         targetContext: null,
         target: offset,
         isPenetrateTemp: true,
@@ -525,7 +522,7 @@ class SmartDialogLogic extends GetxController {
       );
     }
 
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       isLoadingTemp: false,
       widget: Container(
         width: 600,
@@ -551,7 +548,7 @@ class SmartDialogLogic extends GetxController {
 
   void _attachLocation() async {
     attachDialog(BuildContext context, AlignmentGeometry alignment) async {
-      SmartDialog.showAttach(
+      SmartDialog.compatible.showAttach(
         targetContext: context,
         isPenetrateTemp: true,
         alignmentTemp: alignment,
@@ -597,7 +594,7 @@ class SmartDialogLogic extends GetxController {
       );
     }
 
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       isLoadingTemp: false,
       widget: Container(
         width: 700,
@@ -634,7 +631,7 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _otherHardClose() async {
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       backDismiss: false,
       clickBgDismissTemp: false,
       isLoadingTemp: false,
@@ -682,7 +679,7 @@ class SmartDialogLogic extends GetxController {
 
   void _dialogUseSystem() async {
     toNewPage(bool useSystem) async {
-      SmartDialog.show(
+      SmartDialog.compatible.show(
         useSystem: useSystem,
         isLoadingTemp: false,
         widget: Container(
@@ -708,7 +705,7 @@ class SmartDialogLogic extends GetxController {
       );
     }
 
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       isLoadingTemp: false,
       useSystem: true,
       widget: Container(
@@ -754,7 +751,7 @@ class SmartDialogLogic extends GetxController {
       double width = double.infinity,
       double height = double.infinity,
     }) async {
-      SmartDialog.show(
+      SmartDialog.compatible.show(
         tag: tag,
         alignmentTemp: alignment,
         widget: Container(
@@ -778,7 +775,7 @@ class SmartDialogLogic extends GetxController {
     await stackDialog(tag: 'D', height: 70, alignment: Alignment.bottomCenter);
 
     //center：the stack handler
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       alignmentTemp: Alignment.center,
       isLoadingTemp: false,
       widget: Container(
@@ -813,7 +810,7 @@ class SmartDialogLogic extends GetxController {
     VoidCallback? callback;
 
     // display
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       alignmentTemp: Alignment.center,
       widget: OtherTrick(
         onUpdate: (VoidCallback onInvoke) => callback = onInvoke,
@@ -823,7 +820,7 @@ class SmartDialogLogic extends GetxController {
     await Future.delayed(const Duration(milliseconds: 500));
 
     // handler
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       alignmentTemp: Alignment.centerRight,
       maskColorTemp: Colors.transparent,
       widget: Container(
@@ -841,7 +838,7 @@ class SmartDialogLogic extends GetxController {
 
   void _dialogKeepSingle() async {
     singleDialog(bool keepSingle, AlignmentGeometry alignment) async {
-      SmartDialog.show(
+      SmartDialog.compatible.show(
         alignmentTemp: alignment,
         keepSingle: keepSingle,
         widget: Container(
@@ -875,7 +872,7 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _dialogPenetrate() {
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       alignmentTemp: Alignment.centerRight,
       isPenetrateTemp: true,
       clickBgDismissTemp: false,
@@ -893,7 +890,7 @@ class SmartDialogLogic extends GetxController {
       double width = double.infinity,
       double height = double.infinity,
     }) async {
-      SmartDialog.show(
+      SmartDialog.compatible.show(
         isLoadingTemp: false,
         alignmentTemp: alignment,
         widget: Container(width: width, height: height, color: randomColor()),
@@ -917,21 +914,22 @@ class SmartDialogLogic extends GetxController {
     var list = ['smile', 'icon', 'normal'];
     var onItem = (String msg) async {
       if (list[0] == msg) {
-        SmartDialog.showLoading(isLoadingTemp: false, widget: CustomLoading());
+        SmartDialog.compatible
+            .showLoading(isLoadingTemp: false, widget: CustomLoading());
       } else if (list[1] == msg) {
-        SmartDialog.showLoading(
+        SmartDialog.compatible.showLoading(
           isLoadingTemp: false,
           widget: CustomLoading(type: 1),
         );
       } else if (list[2] == msg) {
-        SmartDialog.showLoading(widget: CustomLoading(type: 2));
+        SmartDialog.compatible.showLoading(widget: CustomLoading(type: 2));
       }
 
       await Future.delayed(Duration(seconds: 2));
       SmartDialog.dismiss();
     };
 
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       alignmentTemp: Alignment.centerRight,
       widget: MultiHandleWidget(list: list, onItem: onItem),
     );
@@ -941,7 +939,6 @@ class SmartDialogLogic extends GetxController {
     var list = [
       'maskWidget',
       'maskColor',
-      'background',
       'isLoading',
       'isPenetrate',
     ];
@@ -958,22 +955,21 @@ class SmartDialogLogic extends GetxController {
             ),
           ),
         );
-        SmartDialog.showLoading(maskWidgetTemp: maskWidget);
+        SmartDialog.compatible.showLoading(maskWidgetTemp: maskWidget);
       } else if (list[1] == msg) {
-        SmartDialog.showLoading(maskColorTemp: randomColor().withOpacity(0.3));
+        SmartDialog.compatible
+            .showLoading(maskColorTemp: randomColor().withOpacity(0.3));
       } else if (list[2] == msg) {
-        SmartDialog.showLoading(background: randomColor());
+        SmartDialog.compatible.showLoading(isLoadingTemp: false);
       } else if (list[3] == msg) {
-        SmartDialog.showLoading(isLoadingTemp: false);
-      } else if (list[4] == msg) {
-        SmartDialog.showLoading(isPenetrateTemp: true);
+        SmartDialog.compatible.showLoading(isPenetrateTemp: true);
       }
 
       await Future.delayed(Duration(seconds: 2));
       SmartDialog.dismiss();
     };
 
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       alignmentTemp: Alignment.centerLeft,
       widget: MultiHandleWidget(list: list, onItem: onItem),
     );
@@ -990,11 +986,11 @@ class SmartDialogLogic extends GetxController {
       alignment: Alignment.center,
       child: Text('easy custom dialog', style: TextStyle(color: Colors.white)),
     );
-    SmartDialog.show(widget: custom, isLoadingTemp: false);
+    SmartDialog.compatible.show(widget: custom, isLoadingTemp: false);
   }
 
   void _loadingDefault() async {
-    SmartDialog.showLoading();
+    SmartDialog.compatible.showLoading();
     await Future.delayed(Duration(seconds: 2));
     SmartDialog.dismiss();
   }
@@ -1013,25 +1009,25 @@ class SmartDialogLogic extends GetxController {
         type = SmartToastType.firstAndLast;
       }
 
-      SmartDialog.showToast('1', type: type);
-      SmartDialog.showToast('2', type: type);
-      SmartDialog.showToast('3', type: type);
+      SmartDialog.compatible.showToast('1', type: type);
+      SmartDialog.compatible.showToast('2', type: type);
+      SmartDialog.compatible.showToast('3', type: type);
     };
 
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       alignmentTemp: Alignment.centerLeft,
       widget: MultiHandleWidget(list: list, onItem: onItem),
     );
   }
 
   void _toastSmart() {
-    SmartDialog.showToast(
+    SmartDialog.compatible.showToast(
       "I'm a smart toast",
       time: Duration(seconds: 6),
     );
-    if (SmartDialog.config.isExistMain) return;
+    if (SmartDialog.config.custom.isExist) return;
 
-    SmartDialog.show(
+    SmartDialog.compatible.show(
       isPenetrateTemp: true,
       clickBgDismissTemp: false,
       widget: Container(
@@ -1048,18 +1044,6 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _toastDefault() async {
-    SmartDialog.showToast('test toast');
-  }
-
-  void _toastLocation() {
-    SmartDialog.showToast('the toast at the bottom');
-    SmartDialog.showToast(
-      'the toast at the center',
-      alignment: Alignment.center,
-    );
-    SmartDialog.showToast(
-      'the toast at the top',
-      alignment: Alignment.topCenter,
-    );
+    SmartDialog.compatible.showToast('test toast');
   }
 }

@@ -47,7 +47,6 @@ class SmartDialogState {
         title: 'Toast',
         btnInfo: [
           BtnInfo(title: 'default', tag: SmartTag.toastDefault),
-          BtnInfo(title: 'location', tag: SmartTag.toastLocation),
           BtnInfo(title: 'custom', tag: SmartTag.toastCustom),
           BtnInfo(title: 'type', tag: SmartTag.toastType),
           BtnInfo(title: 'smart', tag: SmartTag.toastSmart),

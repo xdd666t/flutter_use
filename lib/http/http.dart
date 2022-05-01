@@ -169,7 +169,7 @@ class LoadingInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     //打开加载弹窗
-    if (isLoading) SmartDialog.showLoading();
+    if (isLoading) SmartDialog.compatible.showLoading();
 
     handler.next(options);
   }

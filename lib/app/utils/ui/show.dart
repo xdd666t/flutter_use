@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
@@ -20,5 +19,5 @@ Future<void> showToast(
     return;
   }
 
-  SmartDialog.showToast(msg, time: time, alignment: alignment);
+  SmartDialog.showToast(msg, displayTime: time);
 }
