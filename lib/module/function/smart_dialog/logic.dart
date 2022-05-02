@@ -37,6 +37,9 @@ class SmartDialogLogic extends GetxController {
       case SmartTag.dialogUseSystem:
         _dialogUseSystem();
         break;
+      case SmartTag.dialogBindPage:
+        _dialogBindPage();
+        break;
 
       ///attach
       case SmartTag.attachLocation:
@@ -99,36 +102,38 @@ class SmartDialogLogic extends GetxController {
       required String url,
       required bool left,
     }) async {
-      SmartDialog.compatible.showAttach(
+      SmartDialog.showAttach(
         targetContext: null,
         target: target,
-        isPenetrateTemp: true,
-        alignmentTemp: left ? Alignment.centerRight : Alignment.centerLeft,
-        widget: Container(
-          height: 100,
-          width: 200,
-          margin: EdgeInsets.only(
-            top: 10,
-            bottom: 10,
-            left: left ? 0 : 10,
-            right: left ? 10 : 0,
-          ),
-          padding: EdgeInsets.only(right: left ? 50 : 0, left: left ? 0 : 50),
-          alignment: left ? Alignment.centerRight : Alignment.centerLeft,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(left ? 0 : 20),
-              bottomLeft: Radius.circular(left ? 0 : 20),
-              topRight: Radius.circular(left ? 20 : 0),
-              bottomRight: Radius.circular(left ? 20 : 0),
+        usePenetrate: true,
+        alignment: left ? Alignment.centerRight : Alignment.centerLeft,
+        builder: (_) {
+          return Container(
+            height: 100,
+            width: 200,
+            margin: EdgeInsets.only(
+              top: 10,
+              bottom: 10,
+              left: left ? 0 : 10,
+              right: left ? 10 : 0,
             ),
-            boxShadow: [
-              BoxShadow(color: Colors.blue, blurRadius: 8, spreadRadius: 0.2)
-            ],
-          ),
-          child: Image.network(url),
-        ),
+            padding: EdgeInsets.only(right: left ? 50 : 0, left: left ? 0 : 50),
+            alignment: left ? Alignment.centerRight : Alignment.centerLeft,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(left ? 0 : 20),
+                bottomLeft: Radius.circular(left ? 0 : 20),
+                topRight: Radius.circular(left ? 20 : 0),
+                bottomRight: Radius.circular(left ? 20 : 0),
+              ),
+              boxShadow: [
+                BoxShadow(color: Colors.blue, blurRadius: 8, spreadRadius: 0.2)
+              ],
+            ),
+            child: Image.network(url),
+          );
+        },
       );
       await Future.delayed(Duration(milliseconds: 1500));
     };
@@ -188,10 +193,10 @@ class SmartDialogLogic extends GetxController {
       );
     };
     //example：highlightBuilder
-    var guideB = (BuildContext context) {
-      SmartDialog.compatible.showAttach(
+    guideB(BuildContext context) {
+      SmartDialog.showAttach(
         targetContext: context,
-        alignmentTemp: Alignment.bottomCenter,
+        alignment: Alignment.bottomCenter,
         highlightBuilder: (Offset targetOffset, Size targetSize) {
           return Positioned(
             top: targetOffset.dy - 10,
@@ -206,44 +211,51 @@ class SmartDialogLogic extends GetxController {
             ),
           );
         },
-        isLoadingTemp: true,
-        clickBgDismissTemp: false,
+        animationType: SmartAnimationType.fade,
+        clickMaskDismiss: false,
         keepSingle: true,
-        widget: guide(onTap: () {
-          SmartDialog.compatible.showToast('over');
-          SmartDialog.dismiss();
-        }),
+        builder: (_) {
+          return guide(onTap: () {
+            SmartDialog.showToast('over');
+            SmartDialog.dismiss();
+          });
+        },
       );
-    };
+    }
+
     //example：highlight
-    var guideA = (BuildContext context) {
-      SmartDialog.compatible.showAttach(
+    guideA(BuildContext context) {
+      SmartDialog.showAttach(
         targetContext: context,
-        alignmentTemp: Alignment.bottomCenter,
-        highlight: Positioned(
-          left: 170,
-          top: 190,
-          child: Container(
-            height: 120,
-            width: 120,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
+        alignment: Alignment.bottomCenter,
+        highlightBuilder: (_, __) {
+          return Positioned(
+            left: 170,
+            top: 190,
+            child: Container(
+              height: 120,
+              width: 120,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
             ),
-          ),
-        ),
-        isLoadingTemp: true,
-        clickBgDismissTemp: false,
+          );
+        },
+        animationType: SmartAnimationType.fade,
+        clickMaskDismiss: false,
         keepSingle: true,
-        widget: guide(onTap: () async {
-          if (Random().nextBool()) await SmartDialog.dismiss();
-          guideB(bContext);
-        }),
+        builder: (_) {
+          return guide(onTap: () async {
+            if (Random().nextBool()) await SmartDialog.dismiss();
+            guideB(bContext);
+          });
+        },
       );
-    };
+    }
 
     //point widget
-    var point = ({required VoidCallback onTap, required String url}) {
+    point({required VoidCallback onTap, required String url}) {
       return GestureDetector(
         onTap: onTap,
         child: Container(
@@ -258,7 +270,8 @@ class SmartDialogLogic extends GetxController {
           ),
         ),
       );
-    };
+    }
+
     var pointA = Positioned(
       left: 100,
       top: 100,
@@ -283,9 +296,8 @@ class SmartDialogLogic extends GetxController {
         );
       }),
     );
-    SmartDialog.compatible.show(
-      isLoadingTemp: false,
-      widget: Container(
+    SmartDialog.show(builder: (_) {
+      return Container(
         width: double.infinity,
         height: double.infinity,
         alignment: Alignment.center,
@@ -295,8 +307,8 @@ class SmartDialogLogic extends GetxController {
           color: Colors.white,
         ),
         child: Stack(children: [pointA, pointB]),
-      ),
-    );
+      );
+    });
     await Future.delayed(Duration(milliseconds: 500));
     guideA(aContext);
   }
@@ -316,11 +328,11 @@ class SmartDialogLogic extends GetxController {
         ),
       );
     };
-    //example：highlightBuilder
+
     var attachA = (BuildContext context) {
-      SmartDialog.compatible.showAttach(
+      SmartDialog.showAttach(
         targetContext: context,
-        alignmentTemp: Alignment.bottomCenter,
+        alignment: Alignment.bottomCenter,
         highlightBuilder: (Offset targetOffset, Size targetSize) {
           return Positioned(
             child: Container(
@@ -330,20 +342,22 @@ class SmartDialogLogic extends GetxController {
             ),
           );
         },
-        widget: listDialog(),
+        builder: (_) => listDialog(),
       );
     };
-    //example：highlight
+
     var attachB = (BuildContext context) {
-      SmartDialog.compatible.showAttach(
+      SmartDialog.showAttach(
         targetContext: context,
-        alignmentTemp: Alignment.topCenter,
-        highlight: Positioned(
-          right: 0,
-          bottom: 0,
-          child: Container(height: 40, width: 350, color: Colors.white),
-        ),
-        widget: listDialog(),
+        alignment: Alignment.topCenter,
+        highlightBuilder: (_, __) {
+          return Positioned(
+            right: 0,
+            bottom: 0,
+            child: Container(height: 40, width: 350, color: Colors.white),
+          );
+        },
+        builder: (_) => listDialog(),
       );
     };
 
@@ -401,9 +415,8 @@ class SmartDialogLogic extends GetxController {
         ),
       ),
     );
-    SmartDialog.compatible.show(
-      isLoadingTemp: false,
-      widget: Container(
+    SmartDialog.show(builder: (_) {
+      return Container(
         width: double.infinity,
         height: double.infinity,
         alignment: Alignment.center,
@@ -411,41 +424,41 @@ class SmartDialogLogic extends GetxController {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [businessA, businessB],
         ),
-      ),
-    );
+      );
+    });
   }
 
   void _attachImitate() {
     //模仿DropdownButton
     imitateDialog(BuildContext context) {
       var list = ['小呆呆', '小菲菲', '小猪猪'];
-      SmartDialog.compatible.showAttach(
+      SmartDialog.showAttach(
         targetContext: context,
-        isPenetrateTemp: true,
-        widget: Container(
-          margin: EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            boxShadow: [
+        usePenetrate: true,
+        builder: (_) {
+          return Container(
+            margin: EdgeInsets.all(10),
+            decoration: BoxDecoration(boxShadow: [
               BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)
-            ],
-          ),
-          child: Column(
-            children: List.generate(list.length, (index) {
-              return Material(
-                color: Colors.white,
-                child: InkWell(
-                  onTap: () => SmartDialog.dismiss(),
-                  child: Container(
-                    height: 50,
-                    width: 100,
-                    alignment: Alignment.center,
-                    child: Text('${list[index]}'),
+            ]),
+            child: Column(
+              children: List.generate(list.length, (index) {
+                return Material(
+                  color: Colors.white,
+                  child: InkWell(
+                    onTap: () => SmartDialog.dismiss(),
+                    child: Container(
+                      height: 50,
+                      width: 100,
+                      alignment: Alignment.center,
+                      child: Text('${list[index]}'),
+                    ),
                   ),
-                ),
-              );
-            }),
-          ),
-        ),
+                );
+              }),
+            ),
+          );
+        },
       );
     }
 
@@ -474,9 +487,8 @@ class SmartDialogLogic extends GetxController {
       });
     }
 
-    SmartDialog.compatible.show(
-      isLoadingTemp: false,
-      widget: Container(
+    SmartDialog.show(builder: (_) {
+      return Container(
         width: 600,
         height: 400,
         alignment: Alignment.center,
@@ -495,8 +507,8 @@ class SmartDialogLogic extends GetxController {
             ),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 
   void _attachPoint() async {
@@ -508,23 +520,24 @@ class SmartDialogLogic extends GetxController {
       if (random == 2) alignment = Alignment.center;
       if (random == 3) alignment = Alignment.centerRight;
       if (random == 4) alignment = Alignment.bottomCenter;
-      SmartDialog.compatible.showAttach(
+      SmartDialog.showAttach(
         targetContext: null,
         target: offset,
-        isPenetrateTemp: true,
-        clickBgDismissTemp: false,
-        alignmentTemp: alignment,
+        usePenetrate: true,
+        clickMaskDismiss: false,
+        alignment: alignment,
         keepSingle: true,
-        widget: ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: Container(width: 100, height: 100, color: randomColor()),
-        ),
+        builder: (_) {
+          return ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Container(width: 100, height: 100, color: randomColor()),
+          );
+        },
       );
     }
 
-    SmartDialog.compatible.show(
-      isLoadingTemp: false,
-      widget: Container(
+    SmartDialog.show(builder: (_) {
+      return Container(
         width: 600,
         height: 400,
         alignment: Alignment.center,
@@ -542,18 +555,19 @@ class SmartDialogLogic extends GetxController {
             child: Text('click me', style: TextStyle(color: Colors.white)),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 
   void _attachLocation() async {
     attachDialog(BuildContext context, AlignmentGeometry alignment) async {
-      SmartDialog.compatible.showAttach(
+      SmartDialog.showAttach(
         targetContext: context,
-        isPenetrateTemp: true,
-        alignmentTemp: alignment,
-        clickBgDismissTemp: false,
-        widget: Container(width: 100, height: 100, color: randomColor()),
+        usePenetrate: true,
+        alignment: alignment,
+        clickMaskDismiss: false,
+        builder: (_) =>
+            Container(width: 100, height: 100, color: randomColor()),
       );
       await Future.delayed(Duration(milliseconds: 350));
     }
@@ -594,9 +608,8 @@ class SmartDialogLogic extends GetxController {
       );
     }
 
-    SmartDialog.compatible.show(
-      isLoadingTemp: false,
-      widget: Container(
+    SmartDialog.show(builder: (_) {
+      return Container(
         width: 700,
         padding: EdgeInsets.all(50),
         decoration: BoxDecoration(
@@ -626,70 +639,116 @@ class SmartDialogLogic extends GetxController {
             ),
           ]),
         ),
-      ),
-    );
+      );
+    });
   }
 
   void _otherHardClose() async {
-    SmartDialog.compatible.show(
+    SmartDialog.show(
       backDismiss: false,
-      clickBgDismissTemp: false,
-      isLoadingTemp: false,
-      widget: Container(
-        height: 480,
-        width: 500,
-        padding: EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-        ),
-        alignment: Alignment.topCenter,
-        child: SingleChildScrollView(
-          child: Wrap(
-            direction: Axis.vertical,
-            crossAxisAlignment: WrapCrossAlignment.center,
-            spacing: 10,
-            children: [
-              // title
-              Text(
-                '特大公告',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
-              // content
-              Text('鄙人日夜钻研下面秘籍，终于成功钓到富婆'),
-              Image.network(
-                'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211102213746.jpeg',
-                height: 200,
-                width: 400,
-              ),
-              Text('鄙人思考了三秒钟，怀着\'沉重\'的心情，决定弃坑本开源软件'),
-              Text('本人今后的生活是富婆和远方，已无\'精力\' 再维护本开源软件了'),
-              Text('各位叼毛，有缘江湖再见！'),
-              // button (only method of close the dialog)
-              ElevatedButton(
-                onPressed: () => SmartDialog.dismiss(),
-                child: Text('再会！'),
-              )
-            ],
+      clickMaskDismiss: false,
+      builder: (_) {
+        return Container(
+          height: 480,
+          width: 500,
+          padding: EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.white,
           ),
-        ),
-      ),
+          alignment: Alignment.topCenter,
+          child: SingleChildScrollView(
+            child: Wrap(
+              direction: Axis.vertical,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              spacing: 10,
+              children: [
+                // title
+                Text(
+                  '特大公告',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+                // content
+                Text('鄙人日夜钻研下面秘籍，终于成功钓到富婆'),
+                Image.network(
+                  'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211102213746.jpeg',
+                  height: 200,
+                  width: 400,
+                ),
+                Text('鄙人思考了三秒钟，怀着\'沉重\'的心情，决定弃坑本开源软件'),
+                Text('本人今后的生活是富婆和远方，已无\'精力\' 再维护本开源软件了'),
+                Text('各位叼毛，有缘江湖再见！'),
+                // button (only method of close the dialog)
+                ElevatedButton(
+                  onPressed: () => SmartDialog.dismiss(),
+                  child: Text('再会！'),
+                )
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 
+void _dialogBindPage() async {
+  var index = 0;
+  Function()? showDialog;
+
+  toNewPage(bool useSystem) async {
+    Get.to(
+      () {
+        return Scaffold(
+          appBar: AppBar(title: Text('New Page ${++index}')),
+          body: Container(
+            color: randomColor(),
+            alignment: Alignment.center,
+            child: ElevatedButton(
+              onPressed: () => showDialog?.call(),
+              child: Text('test bindPage $index'),
+            ),
+          ),
+        );
+      },
+      preventDuplicates: false,
+    );
+  }
+
+  showDialog = () {
+    SmartDialog.show(builder: (_) {
+      return Container(
+        width: 300,
+        height: 170,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: ElevatedButton(
+          onPressed: () => toNewPage(false),
+          child: Text('test bindPage $index'),
+        ),
+      );
+    });
+  };
+
+  showDialog();
+}
+
   void _dialogUseSystem() async {
     toNewPage(bool useSystem) async {
-      SmartDialog.compatible.show(
+      SmartDialog.show(
         useSystem: useSystem,
-        isLoadingTemp: false,
-        widget: Container(
-          color: Colors.white,
-          padding: EdgeInsets.all(30),
-          child: Text(
-            '跳转页面前测试弹窗(Test dialog before jumping to the page)\n\nuseSystem：$useSystem',
-            textAlign: TextAlign.center,
-          ),
-        ),
+        builder: (_) {
+          return Container(
+            color: Colors.white,
+            padding: EdgeInsets.all(30),
+            child: Text(
+              '跳转页面前测试弹窗(Test dialog before jumping to the page)\n\nuseSystem：$useSystem',
+              textAlign: TextAlign.center,
+            ),
+          );
+        },
       );
       await Future.delayed(Duration(milliseconds: 800));
       Get.to(
@@ -705,42 +764,43 @@ class SmartDialogLogic extends GetxController {
       );
     }
 
-    SmartDialog.compatible.show(
-      isLoadingTemp: false,
+    SmartDialog.show(
       useSystem: true,
-      widget: Container(
-        width: 500,
-        height: 300,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Column(children: [
-          Container(
-            margin: EdgeInsets.only(top: 50),
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: Text(
-              '使用useSystem参数，可解决在弹窗上跳转新页面问题 \n\n'
-              'Use the useSystem param to solve the problem of jumping to a new page on the dialog',
-              textAlign: TextAlign.center,
-            ),
+      builder: (_) {
+        return Container(
+          width: 500,
+          height: 300,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
           ),
-          Expanded(
-            child: Center(
-              child: Wrap(spacing: 50, children: [
-                ElevatedButton(
-                  onPressed: () => toNewPage(false),
-                  child: Text('not useSystem'),
-                ),
-                ElevatedButton(
-                  onPressed: () => toNewPage(true),
-                  child: Text('useSystem'),
-                ),
-              ]),
+          child: Column(children: [
+            Container(
+              margin: EdgeInsets.only(top: 50),
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: Text(
+                '使用useSystem参数，可解决在弹窗上跳转新页面问题 \n\n'
+                'Use the useSystem param to solve the problem of jumping to a new page on the dialog',
+                textAlign: TextAlign.center,
+              ),
             ),
-          )
-        ]),
-      ),
+            Expanded(
+              child: Center(
+                child: Wrap(spacing: 50, children: [
+                  ElevatedButton(
+                    onPressed: () => toNewPage(false),
+                    child: Text('not useSystem'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () => toNewPage(true),
+                    child: Text('useSystem'),
+                  ),
+                ]),
+              ),
+            )
+          ]),
+        );
+      },
     );
   }
 
@@ -751,16 +811,18 @@ class SmartDialogLogic extends GetxController {
       double width = double.infinity,
       double height = double.infinity,
     }) async {
-      SmartDialog.compatible.show(
+      SmartDialog.show(
         tag: tag,
-        alignmentTemp: alignment,
-        widget: Container(
-          width: width,
-          height: height,
-          color: randomColor(),
-          alignment: Alignment.center,
-          child: Text('dialog $tag', style: TextStyle(color: Colors.white)),
-        ),
+        alignment: alignment,
+        builder: (_) {
+          return Container(
+            width: width,
+            height: height,
+            color: randomColor(),
+            alignment: Alignment.center,
+            child: Text('dialog $tag', style: TextStyle(color: Colors.white)),
+          );
+        },
       );
       await Future.delayed(Duration(milliseconds: 500));
     }
@@ -775,34 +837,35 @@ class SmartDialogLogic extends GetxController {
     await stackDialog(tag: 'D', height: 70, alignment: Alignment.bottomCenter);
 
     //center：the stack handler
-    SmartDialog.compatible.show(
-      alignmentTemp: Alignment.center,
-      isLoadingTemp: false,
-      widget: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(15),
-        ),
-        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-        child: Wrap(spacing: 20, children: [
-          ElevatedButton(
-            child: Text('close dialog A'),
-            onPressed: () => SmartDialog.dismiss(tag: 'A'),
+    SmartDialog.show(
+      alignment: Alignment.center,
+      builder: (_) {
+        return Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(15),
           ),
-          ElevatedButton(
-            child: Text('close dialog B'),
-            onPressed: () => SmartDialog.dismiss(tag: 'B'),
-          ),
-          ElevatedButton(
-            child: Text('close dialog C'),
-            onPressed: () => SmartDialog.dismiss(tag: 'C'),
-          ),
-          ElevatedButton(
-            child: Text('close dialog D'),
-            onPressed: () => SmartDialog.dismiss(tag: 'D'),
-          ),
-        ]),
-      ),
+          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          child: Wrap(spacing: 20, children: [
+            ElevatedButton(
+              child: Text('close dialog A'),
+              onPressed: () => SmartDialog.dismiss(tag: 'A'),
+            ),
+            ElevatedButton(
+              child: Text('close dialog B'),
+              onPressed: () => SmartDialog.dismiss(tag: 'B'),
+            ),
+            ElevatedButton(
+              child: Text('close dialog C'),
+              onPressed: () => SmartDialog.dismiss(tag: 'C'),
+            ),
+            ElevatedButton(
+              child: Text('close dialog D'),
+              onPressed: () => SmartDialog.dismiss(tag: 'D'),
+            ),
+          ]),
+        );
+      },
     );
   }
 
@@ -810,54 +873,57 @@ class SmartDialogLogic extends GetxController {
     VoidCallback? callback;
 
     // display
-    SmartDialog.compatible.show(
-      alignmentTemp: Alignment.center,
-      widget: OtherTrick(
-        onUpdate: (VoidCallback onInvoke) => callback = onInvoke,
-      ),
+    SmartDialog.show(
+      alignment: Alignment.center,
+      builder: (_) =>
+          OtherTrick(onUpdate: (VoidCallback onInvoke) => callback = onInvoke),
     );
 
     await Future.delayed(const Duration(milliseconds: 500));
 
     // handler
-    SmartDialog.compatible.show(
-      alignmentTemp: Alignment.centerRight,
-      maskColorTemp: Colors.transparent,
-      widget: Container(
-        height: double.infinity,
-        width: 150,
-        color: Colors.white,
-        alignment: Alignment.center,
-        child: ElevatedButton(
-          child: const Text('add'),
-          onPressed: () => callback?.call(),
-        ),
-      ),
+    SmartDialog.show(
+      alignment: Alignment.centerRight,
+      maskColor: Colors.transparent,
+      builder: (_) {
+        return Container(
+          height: double.infinity,
+          width: 150,
+          color: Colors.white,
+          alignment: Alignment.center,
+          child: ElevatedButton(
+            child: const Text('add'),
+            onPressed: () => callback?.call(),
+          ),
+        );
+      },
     );
   }
 
   void _dialogKeepSingle() async {
     singleDialog(bool keepSingle, AlignmentGeometry alignment) async {
-      SmartDialog.compatible.show(
-        alignmentTemp: alignment,
+      SmartDialog.show(
+        alignment: alignment,
         keepSingle: keepSingle,
-        widget: Container(
-          width: alignment == Alignment.bottomCenter ||
-                  alignment == Alignment.topCenter
-              ? double.infinity
-              : 100,
-          height: alignment == Alignment.bottomCenter ||
-                  alignment == Alignment.topCenter
-              ? 100
-              : double.infinity,
-          color: randomColor(),
-          child: Center(
-            child: Text(
-              keepSingle ? 'single' : 'multiple',
-              style: TextStyle(color: Colors.white, fontSize: 25),
+        builder: (_) {
+          return Container(
+            width: alignment == Alignment.bottomCenter ||
+                    alignment == Alignment.topCenter
+                ? double.infinity
+                : 100,
+            height: alignment == Alignment.bottomCenter ||
+                    alignment == Alignment.topCenter
+                ? 100
+                : double.infinity,
+            color: randomColor(),
+            child: Center(
+              child: Text(
+                keepSingle ? 'single' : 'multiple',
+                style: TextStyle(color: Colors.white, fontSize: 25),
+              ),
             ),
-          ),
-        ),
+          );
+        },
       );
       await Future.delayed(Duration(seconds: 1));
     }
@@ -872,15 +938,17 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _dialogPenetrate() {
-    SmartDialog.compatible.show(
-      alignmentTemp: Alignment.centerRight,
-      isPenetrateTemp: true,
-      clickBgDismissTemp: false,
-      widget: Container(
-        width: 80,
-        height: double.infinity,
-        color: randomColor(),
-      ),
+    SmartDialog.show(
+      alignment: Alignment.centerRight,
+      usePenetrate: true,
+      clickMaskDismiss: false,
+      builder: (_) {
+        return Container(
+          width: 80,
+          height: double.infinity,
+          color: randomColor(),
+        );
+      },
     );
   }
 
@@ -890,10 +958,10 @@ class SmartDialogLogic extends GetxController {
       double width = double.infinity,
       double height = double.infinity,
     }) async {
-      SmartDialog.compatible.show(
-        isLoadingTemp: false,
-        alignmentTemp: alignment,
-        widget: Container(width: width, height: height, color: randomColor()),
+      SmartDialog.show(
+        alignment: alignment,
+        builder: (_) =>
+            Container(width: width, height: height, color: randomColor()),
       );
       await Future.delayed(Duration(milliseconds: 500));
     }
@@ -914,24 +982,26 @@ class SmartDialogLogic extends GetxController {
     var list = ['smile', 'icon', 'normal'];
     var onItem = (String msg) async {
       if (list[0] == msg) {
-        SmartDialog.compatible
-            .showLoading(isLoadingTemp: false, widget: CustomLoading());
+        SmartDialog.showLoading(
+          animationType: SmartAnimationType.scale,
+          builder: (_) => CustomLoading(),
+        );
       } else if (list[1] == msg) {
-        SmartDialog.compatible.showLoading(
-          isLoadingTemp: false,
-          widget: CustomLoading(type: 1),
+        SmartDialog.showLoading(
+          animationType: SmartAnimationType.scale,
+          builder: (_) => CustomLoading(type: 1),
         );
       } else if (list[2] == msg) {
-        SmartDialog.compatible.showLoading(widget: CustomLoading(type: 2));
+        SmartDialog.showLoading(builder: (_) => CustomLoading(type: 2));
       }
 
       await Future.delayed(Duration(seconds: 2));
       SmartDialog.dismiss();
     };
 
-    SmartDialog.compatible.show(
-      alignmentTemp: Alignment.centerRight,
-      widget: MultiHandleWidget(list: list, onItem: onItem),
+    SmartDialog.show(
+      alignment: Alignment.centerRight,
+      builder: (_) => MultiHandleWidget(list: list, onItem: onItem),
     );
   }
 
@@ -939,8 +1009,8 @@ class SmartDialogLogic extends GetxController {
     var list = [
       'maskWidget',
       'maskColor',
-      'isLoading',
-      'isPenetrate',
+      'SmartAnimationType.scale',
+      'usePenetrate',
     ];
     var onItem = (String msg) async {
       if (list[0] == msg) {
@@ -955,42 +1025,43 @@ class SmartDialogLogic extends GetxController {
             ),
           ),
         );
-        SmartDialog.compatible.showLoading(maskWidgetTemp: maskWidget);
+        SmartDialog.showLoading(maskWidget: maskWidget);
       } else if (list[1] == msg) {
-        SmartDialog.compatible
-            .showLoading(maskColorTemp: randomColor().withOpacity(0.3));
+        SmartDialog.showLoading(maskColor: randomColor().withOpacity(0.3));
       } else if (list[2] == msg) {
-        SmartDialog.compatible.showLoading(isLoadingTemp: false);
+        SmartDialog.showLoading(animationType: SmartAnimationType.scale);
       } else if (list[3] == msg) {
-        SmartDialog.compatible.showLoading(isPenetrateTemp: true);
+        SmartDialog.showLoading(usePenetrate: true);
       }
 
       await Future.delayed(Duration(seconds: 2));
       SmartDialog.dismiss();
     };
 
-    SmartDialog.compatible.show(
-      alignmentTemp: Alignment.centerLeft,
-      widget: MultiHandleWidget(list: list, onItem: onItem),
+    SmartDialog.show(
+      alignment: Alignment.centerLeft,
+      builder: (_) => MultiHandleWidget(list: list, onItem: onItem),
     );
   }
 
   void _dialogEasy() {
-    var custom = Container(
-      height: 80,
-      width: 180,
-      decoration: BoxDecoration(
-        color: Colors.black,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      alignment: Alignment.center,
-      child: Text('easy custom dialog', style: TextStyle(color: Colors.white)),
-    );
-    SmartDialog.compatible.show(widget: custom, isLoadingTemp: false);
+    SmartDialog.show(builder: (_) {
+      return Container(
+        height: 80,
+        width: 180,
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        alignment: Alignment.center,
+        child:
+            Text('easy custom dialog', style: TextStyle(color: Colors.white)),
+      );
+    });
   }
 
   void _loadingDefault() async {
-    SmartDialog.compatible.showLoading();
+    SmartDialog.showLoading();
     await Future.delayed(Duration(seconds: 2));
     SmartDialog.dismiss();
   }
@@ -1009,41 +1080,43 @@ class SmartDialogLogic extends GetxController {
         type = SmartToastType.firstAndLast;
       }
 
-      SmartDialog.compatible.showToast('1', type: type);
-      SmartDialog.compatible.showToast('2', type: type);
-      SmartDialog.compatible.showToast('3', type: type);
+      SmartDialog.showToast('1', displayType: type);
+      SmartDialog.showToast('2', displayType: type);
+      SmartDialog.showToast('3', displayType: type);
     };
 
-    SmartDialog.compatible.show(
-      alignmentTemp: Alignment.centerLeft,
-      widget: MultiHandleWidget(list: list, onItem: onItem),
+    SmartDialog.show(
+      alignment: Alignment.centerLeft,
+      builder: (_) => MultiHandleWidget(list: list, onItem: onItem),
     );
   }
 
   void _toastSmart() {
-    SmartDialog.compatible.showToast(
+    SmartDialog.showToast(
       "I'm a smart toast",
-      time: Duration(seconds: 6),
+      displayTime: const Duration(seconds: 6),
     );
-    if (SmartDialog.config.custom.isExist) return;
+    if (SmartDialog.config.isExistDialog) return;
 
-    SmartDialog.compatible.show(
-      isPenetrateTemp: true,
-      clickBgDismissTemp: false,
-      widget: Container(
-        height: 40,
-        width: 100,
-        padding: EdgeInsets.only(left: 20),
-        decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.6),
-          borderRadius: BorderRadius.circular(100),
-        ),
-        child: InputText(textSize: 15, hintSize: 15),
-      ),
+    SmartDialog.show(
+      usePenetrate: true,
+      clickMaskDismiss: false,
+      builder: (_) {
+        return Container(
+          height: 40,
+          width: 100,
+          padding: EdgeInsets.only(left: 20),
+          decoration: BoxDecoration(
+            color: Colors.black.withOpacity(0.6),
+            borderRadius: BorderRadius.circular(100),
+          ),
+          child: InputText(textSize: 15, hintSize: 15),
+        );
+      },
     );
   }
 
   void _toastDefault() async {
-    SmartDialog.compatible.showToast('test toast');
+    SmartDialog.showToast('test toast');
   }
 }

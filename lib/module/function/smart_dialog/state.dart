@@ -16,6 +16,7 @@ class SmartDialogState {
           BtnInfo(title: 'keepSingle', tag: SmartTag.dialogKeepSingle),
           BtnInfo(title: 'dialogStack', tag: SmartTag.dialogStack),
           BtnInfo(title: 'useSystem', tag: SmartTag.dialogUseSystem),
+          BtnInfo(title: 'bindPage', tag: SmartTag.dialogBindPage),
         ],
       ),
 
@@ -73,6 +74,7 @@ class SmartTag {
   static const String dialogKeepSingle = 'dialogKeepSingle';
   static const String dialogStack = 'dialogStack';
   static const String dialogUseSystem = 'dialogUseSystem';
+  static const String dialogBindPage = 'dialogBindPage';
 
   /// attach
   static const String attachLocation = 'attachLocation';
