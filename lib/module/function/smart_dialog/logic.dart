@@ -40,6 +40,12 @@ class SmartDialogLogic extends GetxController {
       case SmartTag.dialogBindPage:
         _dialogBindPage();
         break;
+      case SmartTag.dialogCarryResult:
+        _dialogCarryResult();
+        break;
+      case SmartTag.dialogPermanent:
+        _dialogPermanent();
+        break;
 
       ///attach
       case SmartTag.attachLocation:
@@ -71,6 +77,9 @@ class SmartDialogLogic extends GetxController {
       case SmartTag.loadingCustom:
         _loadingCustom();
         break;
+      case SmartTag.loadingLeastTime:
+        _loadingLeastTime();
+        break;
 
       ///toast
       case SmartTag.toastDefault:
@@ -84,6 +93,9 @@ class SmartDialogLogic extends GetxController {
         break;
       case SmartTag.toastSmart:
         _toastSmart();
+        break;
+      case SmartTag.toastIntervalTime:
+        _toastIntervalTime();
         break;
 
       ///other
@@ -691,30 +703,34 @@ class SmartDialogLogic extends GetxController {
     );
   }
 
-void _dialogBindPage() async {
-  var index = 0;
-  Function()? showDialog;
-
-  toNewPage(bool useSystem) async {
-    Get.to(
-      () {
-        return Scaffold(
-          appBar: AppBar(title: Text('New Page ${++index}')),
-          body: Container(
-            color: randomColor(),
+  void _dialogPermanent() async {
+    openPermanentDialog() {
+      SmartDialog.show(
+        permanent: true,
+        alignment: Alignment.centerRight,
+        usePenetrate: true,
+        clickMaskDismiss: false,
+        builder: (_) {
+          return Container(
+            width: 150,
+            height: double.infinity,
             alignment: Alignment.center,
-            child: ElevatedButton(
-              onPressed: () => showDialog?.call(),
-              child: Text('test bindPage $index'),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                bottomLeft: Radius.circular(20),
+              ),
+              boxShadow: [
+                BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2)
+              ],
             ),
-          ),
-        );
-      },
-      preventDuplicates: false,
-    );
-  }
+            child: Text('permanent dialog'),
+          );
+        },
+      );
+    }
 
-  showDialog = () {
     SmartDialog.show(builder: (_) {
       return Container(
         width: 300,
@@ -724,16 +740,93 @@ void _dialogBindPage() async {
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
         ),
-        child: ElevatedButton(
-          onPressed: () => toNewPage(false),
-          child: Text('test bindPage $index'),
-        ),
+        child: Wrap(spacing: 20, children: [
+          ElevatedButton(
+            onPressed: () => openPermanentDialog(),
+            child: Text('open'),
+          ),
+          ElevatedButton(
+            onPressed: () => SmartDialog.dismiss(force: true),
+            child: Text('close'),
+          )
+        ]),
       );
     });
-  };
+  }
 
-  showDialog();
-}
+  void _dialogCarryResult() async {
+    var result = await SmartDialog.show(
+      builder: (_) {
+        var message = '';
+        return Container(
+          width: 300,
+          height: 170,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Container(
+              width: 100,
+              margin: EdgeInsets.only(bottom: 30),
+              child: TextField(onChanged: (msg) => message = msg),
+            ),
+            ElevatedButton(
+              onPressed: () => SmartDialog.dismiss(result: message),
+              child: Text('show result'),
+            )
+          ]),
+        );
+      },
+    );
+
+    SmartDialog.showToast("$result");
+  }
+
+  void _dialogBindPage() async {
+    var index = 0;
+    Function()? showDialog;
+
+    toNewPage(bool useSystem) async {
+      Get.to(
+        () {
+          return Scaffold(
+            appBar: AppBar(title: Text('New Page ${++index}')),
+            body: Container(
+              color: randomColor(),
+              alignment: Alignment.center,
+              child: ElevatedButton(
+                onPressed: () => showDialog?.call(),
+                child: Text('test bindPage $index'),
+              ),
+            ),
+          );
+        },
+        preventDuplicates: false,
+      );
+    }
+
+    showDialog = () {
+      SmartDialog.show(builder: (_) {
+        return Container(
+          width: 300,
+          height: 170,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: ElevatedButton(
+            onPressed: () => toNewPage(false),
+            child: Text('test bindPage $index'),
+          ),
+        );
+      });
+    };
+
+    showDialog();
+  }
 
   void _dialogUseSystem() async {
     toNewPage(bool useSystem) async {
@@ -978,6 +1071,15 @@ void _dialogBindPage() async {
     await locationDialog(height: 100, width: 100, alignment: Alignment.center);
   }
 
+  void _loadingLeastTime() async {
+    SmartDialog.config.loading = SmartConfigLoading(
+      leastLoadingTime: const Duration(seconds: 2),
+    );
+    SmartDialog.showLoading();
+    SmartDialog.dismiss();
+    SmartDialog.config.loading = SmartConfigLoading();
+  }
+
   void _loadingCustom() async {
     var list = ['smile', 'icon', 'normal'];
     var onItem = (String msg) async {
@@ -1089,6 +1191,19 @@ void _dialogBindPage() async {
       alignment: Alignment.centerLeft,
       builder: (_) => MultiHandleWidget(list: list, onItem: onItem),
     );
+  }
+
+  void _toastIntervalTime() async {
+    SmartDialog.config.toast = SmartConfigToast(
+      intervalTime: const Duration(milliseconds: 800),
+    );
+    for (var i = 0; i < 3; i++) {
+      SmartDialog.showToast("toast $i").then((value) {
+        if (!SmartDialog.config.isExistToast) {
+          SmartDialog.config.toast = SmartConfigToast();
+        }
+      });
+    }
   }
 
   void _toastSmart() {

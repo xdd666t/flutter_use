@@ -17,6 +17,8 @@ class SmartDialogState {
           BtnInfo(title: 'dialogStack', tag: SmartTag.dialogStack),
           BtnInfo(title: 'useSystem', tag: SmartTag.dialogUseSystem),
           BtnInfo(title: 'bindPage', tag: SmartTag.dialogBindPage),
+          BtnInfo(title: 'carryResult', tag: SmartTag.dialogCarryResult),
+          BtnInfo(title: 'permanent', tag: SmartTag.dialogPermanent),
         ],
       ),
 
@@ -40,6 +42,7 @@ class SmartDialogState {
           BtnInfo(title: 'default', tag: SmartTag.loadingDefault),
           BtnInfo(title: 'param', tag: SmartTag.loadingParam),
           BtnInfo(title: 'custom', tag: SmartTag.loadingCustom),
+          BtnInfo(title: 'leastTime', tag: SmartTag.loadingLeastTime),
         ],
       ),
 
@@ -51,6 +54,7 @@ class SmartDialogState {
           BtnInfo(title: 'custom', tag: SmartTag.toastCustom),
           BtnInfo(title: 'type', tag: SmartTag.toastType),
           BtnInfo(title: 'smart', tag: SmartTag.toastSmart),
+          BtnInfo(title: 'intervalTime', tag: SmartTag.toastIntervalTime),
         ],
       ),
 
@@ -75,6 +79,8 @@ class SmartTag {
   static const String dialogStack = 'dialogStack';
   static const String dialogUseSystem = 'dialogUseSystem';
   static const String dialogBindPage = 'dialogBindPage';
+  static const String dialogCarryResult = 'dialogCarryResult';
+  static const String dialogPermanent = 'dialogPermanent';
 
   /// attach
   static const String attachLocation = 'attachLocation';
@@ -88,6 +94,7 @@ class SmartTag {
   static const String loadingDefault = 'loadingDefault';
   static const String loadingParam = 'loadingParam';
   static const String loadingCustom = 'loadingCustom';
+  static const String loadingLeastTime = 'loadingLeastTime';
 
   /// toast
   static const String toastDefault = 'toastDefault';
@@ -95,6 +102,7 @@ class SmartTag {
   static const String toastCustom = 'toastCustom';
   static const String toastType = 'toastType';
   static const String toastSmart = 'toastSmart';
+  static const String toastIntervalTime = 'toastIntervalTime';
 
   /// other
   static const String otherTrick = 'otherTrick';
