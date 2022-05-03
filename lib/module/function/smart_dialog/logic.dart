@@ -86,7 +86,7 @@ class SmartDialogLogic extends GetxController {
         _toastDefault();
         break;
       case SmartTag.toastCustom:
-        SmartDialog.showToast('', builder: (_) => CustomToast('custom toast'));
+        _toastCustom();
         break;
       case SmartTag.toastType:
         _toastType();
@@ -571,7 +571,7 @@ class SmartDialogLogic extends GetxController {
     });
   }
 
-  void _attachLocation() async {
+  void _attachLocation() {
     attachDialog(BuildContext context, AlignmentGeometry alignment) async {
       SmartDialog.showAttach(
         targetContext: context,
@@ -1231,6 +1231,9 @@ class SmartDialogLogic extends GetxController {
     );
   }
 
+  void _toastCustom() async {
+    SmartDialog.showToast('', builder: (_) => CustomToast('custom toast'));
+  }
   void _toastDefault() async {
     SmartDialog.showToast('test toast');
   }

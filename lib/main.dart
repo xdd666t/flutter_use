@@ -42,12 +42,8 @@ class MyApp extends StatelessWidget {
       getPages: RouteConfig.getPages,
       navigatorObservers: [FlutterSmartDialog.observer, GetXRouteObserver()],
       builder: FlutterSmartDialog.init(
-        toastBuilder: (String msg) {
-          return CustomToastWidget(msg: msg);
-        },
-        loadingBuilder: (String msg) {
-          return CustomLoadingWidget(msg: msg);
-        },
+        toastBuilder: (String msg) => CustomToastWidget(msg: msg),
+        loadingBuilder: (String msg) => CustomLoadingWidget(msg: msg),
         builder: _builder,
       ),
     );
