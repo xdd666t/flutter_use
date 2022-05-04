@@ -718,8 +718,8 @@ class SmartDialogLogic extends GetxController {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                bottomLeft: Radius.circular(20),
+                topLeft: Radius.circular(15),
+                bottomLeft: Radius.circular(15),
               ),
               boxShadow: [
                 BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2)
@@ -832,12 +832,13 @@ class SmartDialogLogic extends GetxController {
     toNewPage(bool useSystem) async {
       SmartDialog.show(
         useSystem: useSystem,
+        bindPage: false,
         builder: (_) {
           return Container(
             color: Colors.white,
             padding: EdgeInsets.all(30),
             child: Text(
-              '跳转页面前测试弹窗(Test dialog before jumping to the page)\n\nuseSystem：$useSystem',
+              '跳转页面前测试弹窗(Test dialog before jumping to the page)\n\nuseSystem：$useSystem\nbindPage：false',
               textAlign: TextAlign.center,
             ),
           );
@@ -1234,6 +1235,7 @@ class SmartDialogLogic extends GetxController {
   void _toastCustom() async {
     SmartDialog.showToast('', builder: (_) => CustomToast('custom toast'));
   }
+
   void _toastDefault() async {
     SmartDialog.showToast('test toast');
   }
