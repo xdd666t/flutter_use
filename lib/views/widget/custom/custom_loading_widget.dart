@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomLoadingWidget extends StatelessWidget {
-  CustomLoadingWidget({
-    Key? key,
-    required this.msg,
-  }) : super(key: key);
+  CustomLoadingWidget({Key? key, required this.msg}) : super(key: key);
 
   final String msg;
 
