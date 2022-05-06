@@ -755,31 +755,29 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _dialogCarryResult() async {
-    var result = await SmartDialog.show(
-      builder: (_) {
-        var message = '';
-        return Container(
-          width: 300,
-          height: 170,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
+    var result = await SmartDialog.show(builder: (_) {
+      var message = '';
+      return Container(
+        width: 300,
+        height: 170,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          Container(
+            width: 100,
+            margin: EdgeInsets.only(bottom: 30),
+            child: TextField(onChanged: (msg) => message = msg),
           ),
-          child: Column(mainAxisSize: MainAxisSize.min, children: [
-            Container(
-              width: 100,
-              margin: EdgeInsets.only(bottom: 30),
-              child: TextField(onChanged: (msg) => message = msg),
-            ),
-            ElevatedButton(
-              onPressed: () => SmartDialog.dismiss(result: message),
-              child: Text('show result'),
-            )
-          ]),
-        );
-      },
-    );
+          ElevatedButton(
+            onPressed: () => SmartDialog.dismiss(result: message),
+            child: Text('show result'),
+          )
+        ]),
+      );
+    });
 
     SmartDialog.showToast("$result");
   }
