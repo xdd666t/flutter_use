@@ -13,7 +13,6 @@ import 'widget/multi_handle_widget.dart';
 
 class SmartDialogLogic extends GetxController {
   final state = SmartDialogState();
-
   ///测试功能模块
   void showFun(tag) async {
     switch (tag) {
@@ -1097,7 +1096,7 @@ class SmartDialogLogic extends GetxController {
       }
 
       await Future.delayed(Duration(seconds: 2));
-      SmartDialog.dismiss();
+      SmartDialog.dismiss(status: SmartStatus.loading);
     };
 
     SmartDialog.show(
@@ -1136,7 +1135,7 @@ class SmartDialogLogic extends GetxController {
       }
 
       await Future.delayed(Duration(seconds: 2));
-      SmartDialog.dismiss();
+      SmartDialog.dismiss(status: SmartStatus.loading);
     };
 
     SmartDialog.show(
