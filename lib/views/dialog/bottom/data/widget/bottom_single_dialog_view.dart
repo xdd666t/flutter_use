@@ -115,11 +115,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
       alignment: Alignment.centerRight,
       style: widget.confirmTextStyle ??
           TextStyle(color: Color(0xFF0299FF), fontSize: 33.sp),
-      onPressed: () {
-        if (widget.onConfirm != null) {
-          widget.onConfirm(_selectedIndex);
-        }
-      },
+      onPressed: () => widget.onConfirm(_selectedIndex),
     );
   }
 
@@ -141,9 +137,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
       style: widget.cancelTextStyle ??
           TextStyle(color: Color(0xFF999999), fontSize: 33.sp),
       onPressed: () {
-        if (widget.onCancel != null) {
-          widget.onCancel();
-        }
+        widget.onCancel();
       },
     );
   }

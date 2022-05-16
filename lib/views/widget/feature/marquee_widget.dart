@@ -65,7 +65,7 @@ class _MarqueeWidgetState extends State<MarqueeWidget> {
   }
 
   _initScroll() {
-    SchedulerBinding.instance?.addPostFrameCallback((timeStamp) {
+    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
       if (!mounted || _childCount == 0) return;
 
       //deal different condition

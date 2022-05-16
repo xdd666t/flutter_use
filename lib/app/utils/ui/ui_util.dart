@@ -1,7 +1,4 @@
-import 'dart:ui' as ui;
-
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/utils/info/log_util.dart';
 
 class ScreenParam {
   /// 每个逻辑像素的字体像素数，字体的缩放比例
@@ -31,7 +28,7 @@ class UiUtil {
   late double _bottomBar;
 
   UiUtil._internal() {
-    var window = WidgetsBinding.instance?.window ?? ui.window;
+    var window = WidgetsBinding.instance.window;
     _pixelRatio = window.devicePixelRatio;
     _statusBar = window.padding.top;
     _bottomBar = window.padding.bottom;

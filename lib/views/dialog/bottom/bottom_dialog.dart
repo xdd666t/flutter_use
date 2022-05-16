@@ -100,7 +100,7 @@ class BottomDialog {
     String showKey = '',
   }) {
     return showBottomSelectDialog<E>(
-      list: list ?? [],
+      list: list,
       callback: callback,
       title: title,
       showKey: showKey,

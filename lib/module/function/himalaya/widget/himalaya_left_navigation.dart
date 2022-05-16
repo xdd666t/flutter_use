@@ -7,7 +7,6 @@ import 'package:flutter_use/views/widget/custom/custom_single_child_scroll_view.
 import 'package:get/get.dart';
 
 import '../logic.dart';
-import 'himalaya_function.dart';
 
 class HimalayaLeftNavigation extends StatelessWidget {
   HimalayaLeftNavigation({

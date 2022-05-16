@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:flutter_use/app/typedef/function.dart';
 
 import 'widget/side_list_dialog_view.dart';
 

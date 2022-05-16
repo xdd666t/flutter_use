@@ -7,7 +7,7 @@ class ViewUtil {
   static Future<void> initFinish() async {
     Completer<void> completer = Completer();
 
-    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       completer.complete();
     });
 

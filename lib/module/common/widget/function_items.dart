@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
 import 'package:flutter_use/bean/common/btn_info.dart';
-import 'package:flutter_use/module/function/himalaya/widget/himalaya_function.dart';
 import 'package:flutter_use/views/widget/custom/custom_single_child_scroll_view.dart';
 
 class FunctionItems extends StatelessWidget {

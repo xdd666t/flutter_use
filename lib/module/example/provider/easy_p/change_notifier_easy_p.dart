@@ -76,7 +76,7 @@ class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
   Widget build() {
     if (_shouldNotify) {
       _shouldNotify = false;
-      notifyClients(widget);
+      notifyClients(widget as EasyPInherited<T>);
     }
     return super.build();
   }

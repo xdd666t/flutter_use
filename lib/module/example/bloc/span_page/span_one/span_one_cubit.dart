@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
 import 'package:flutter_use/app/config/route_config.dart';
 import 'package:get/get.dart';
 

@@ -138,7 +138,6 @@ class _InputTextState extends State<InputText> {
               fontSize: widget.textSize ?? 28,
             ),
         inputFormatters: widget.inputFormatters,
-        maxLengthEnforced: true,
         maxLines: widget.maxLines,
         minLines: widget.minLines,
         maxLength: widget.maxLength,

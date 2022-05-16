@@ -1,9 +1,5 @@
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_use/views/dialog/assist/bean/file_info_bean.dart';
-
-import 'widget/full_image_dialog_view.dart';
 
 ///展示图片
 Future<void> bottomImageDialog({
