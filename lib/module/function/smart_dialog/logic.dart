@@ -14,6 +14,11 @@ import 'widget/multi_handle_widget.dart';
 class SmartDialogLogic extends GetxController {
   final state = SmartDialogState();
 
+  @override
+  void onInit() {
+    super.onInit();
+  }
+
   ///测试功能模块
   void showFun(tag) async {
     switch (tag) {
