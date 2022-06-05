@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/utils/ui/auto_ui.dart';
-import 'package:flutter_use/app/utils/ui/window_size.dart';
+import 'package:flutter_use/app/ui/auto_ui.dart';
+import 'package:flutter_use/app/ui/window_size.dart';
 import 'package:window_size/window_size.dart' as window_size;
 
 class InitConfig {

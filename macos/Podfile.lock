@@ -2,7 +2,7 @@ PODS:
   - FlutterMacOS (1.0.0)
   - path_provider_macos (0.0.1):
     - FlutterMacOS
-  - photo_manager (1.0.0):
+  - photo_manager (2.0.0):
     - Flutter
     - FlutterMacOS
   - shared_preferences_macos (0.0.1):
@@ -31,8 +31,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FlutterMacOS: 57701585bf7de1b3fc2bb61f6378d73bbdea8424
-  path_provider_macos: 160cab0d5461f0c0e02995469a98f24bdb9a3f1f
-  photo_manager: 84fa94fbeb82e607333ea9a13c43b58e0903a463
+  path_provider_macos: 3c0c3b4b0d4a76d2bf989a913c2de869c5641a19
+  photo_manager: 4f6810b7dfc4feb03b461ac1a70dacf91fba7604
   shared_preferences_macos: a64dc611287ed6cbe28fd1297898db1336975727
   window_size: 339dafa0b27a95a62a843042038fa6c3c48de195
 

@@ -1,5 +1,5 @@
-import 'package:flutter_use/bean/common/btn_info.dart';
-import 'package:flutter_use/bean/common/tree_info.dart';
+import 'package:flutter_use/entity/common/btn_info.dart';
+import 'package:flutter_use/entity/common/tree_info.dart';
 
 class SmartDialogState {
   late List<TreeTwiceInfo> trees;

@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:flutter_toolkit_easy/flutter_toolkit.dart' as Toolkit;
-import 'package:flutter_use/app/utils/ui/show.dart';
-import 'package:flutter_use/bean/base/base_response.dart';
-import 'package:flutter_use/bean/test/net_list_bean.dart';
-import 'package:flutter_use/bean/test/net_object_bean.dart';
+import 'package:flutter_use/app/ui/show.dart';
+import 'package:flutter_use/entity/base/base_response.dart';
+import 'package:flutter_use/entity/test/net_list_bean.dart';
+import 'package:flutter_use/entity/test/net_object_bean.dart';
+import 'package:flutter_use/toolkit/utils/log_util.dart';
 
 import 'net/net_util.dart';
 
@@ -12,7 +12,7 @@ import 'net/net_util.dart';
 testHttp() async {
   //处理一些初始化设置
   Http.init();
-  Toolkit.Log.d('测试Http');
+  Log.d('测试Http');
 
   // 内数据源是实体
   var query = {'cid': '60'};
@@ -23,7 +23,7 @@ testHttp() async {
 
   var bean = NetObjectBean.fromJson(result);
   showToast(bean.datas[0].title);
-  Toolkit.Log.i(result);
+  Log.i(result);
 
   ///--------------------------------------------------------------
 
@@ -37,7 +37,7 @@ testHttp() async {
     return NetListBean.fromJson(e);
   }).toList();
   showToast(list[0].title);
-  Toolkit.Log.i(resultList);
+  Log.i(resultList);
 }
 
 class Http {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_toolkit_easy/flutter_toolkit.dart';
-import 'package:flutter_use/bean/common/btn_info.dart';
+import 'package:flutter_use/app/ui/keep_alive_page.dart';
+import 'package:flutter_use/entity/common/btn_info.dart';
 import 'package:flutter_use/module/example/view.dart';
 import 'package:flutter_use/module/function/view.dart';
 import 'package:flutter_use/module/setting/view.dart';

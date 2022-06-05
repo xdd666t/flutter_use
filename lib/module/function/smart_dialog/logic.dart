@@ -5,7 +5,7 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_loading.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_toast.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/other_trick.dart';
-import 'package:flutter_use/views/widget/input/input_text.dart';
+import 'package:flutter_use/toolkit/view/input/input_text.dart';
 import 'package:get/get.dart';
 
 import 'state.dart';

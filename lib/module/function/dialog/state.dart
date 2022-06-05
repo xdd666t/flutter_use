@@ -1,4 +1,4 @@
-import 'package:flutter_use/bean/common/btn_info.dart';
+import 'package:flutter_use/entity/common/btn_info.dart';
 
 class DialogState {
   late List<BtnInfo> items;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/typedef/function.dart';
-import 'package:flutter_use/app/utils/ui/auto_ui.dart';
+import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/module/function/himalaya/state.dart';
+import 'package:flutter_use/toolkit/typedef/function.dart';
 
 ///猜你喜欢
 class HimalayaGuess extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:flutter_use/bean/test/net_object_bean.dart';
+import 'package:flutter_use/entity/test/net_object_bean.dart';
 import 'package:flutter_use/generated/json/base/json_convert_content.dart';
 
 NetObjectBean $NetObjectBeanFromJson(Map<String, dynamic> json) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/utils/ui/auto_ui.dart';
-import 'package:flutter_use/views/widget/custom/custom_single_child_scroll_view.dart';
+import 'package:flutter_use/app/ui/auto_ui.dart';
+import 'package:flutter_use/toolkit/view/custom/custom_single_child_scroll_view.dart';
 
 ///喜马拉雅整体外层布局设置
 Widget himalayaBuildBg({required List<Widget> children}) {

@@ -1,6 +1,6 @@
-import 'package:flutter_use/bean/common/btn_info.dart';
+import 'package:flutter_use/entity/common/btn_info.dart';
 import 'package:flutter_use/module/function/dialog/state.dart';
-import 'package:flutter_use/views/dialog/bottom/data/bottom_single_dialog.dart';
+import 'package:flutter_use/toolkit/dialog/bottom/data/bottom_single_dialog.dart';
 import 'package:get/get.dart';
 
 class DialogLogic extends GetxController {

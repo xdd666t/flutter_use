@@ -1,4 +1,4 @@
-import 'package:flutter_use/bean/test/net_list_bean.dart';
+import 'package:flutter_use/entity/test/net_list_bean.dart';
 import 'package:flutter_use/generated/json/base/json_convert_content.dart';
 
 NetListBean $NetListBeanFromJson(Map<String, dynamic> json) {

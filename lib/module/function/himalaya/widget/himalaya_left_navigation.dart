@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/config/image_config.dart';
-import 'package:flutter_use/app/typedef/function.dart';
-import 'package:flutter_use/app/utils/ui/auto_ui.dart';
+import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/module/function/himalaya/state.dart';
-import 'package:flutter_use/views/widget/custom/custom_single_child_scroll_view.dart';
+import 'package:flutter_use/toolkit/typedef/function.dart';
+import 'package:flutter_use/toolkit/view/custom/custom_single_child_scroll_view.dart';
 import 'package:get/get.dart';
 
 import '../logic.dart';

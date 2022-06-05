@@ -1,5 +1,5 @@
 import 'package:flutter_use/app/config/image_config.dart';
-import 'package:flutter_use/bean/common/btn_info.dart';
+import 'package:flutter_use/entity/common/btn_info.dart';
 
 class FunctionState {
   late List<BtnInfo> items;

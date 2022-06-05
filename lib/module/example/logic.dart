@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/config/route_config.dart';
-import 'package:flutter_use/app/utils/ui/show.dart';
+import 'package:flutter_use/app/ui/show.dart';
 import 'package:flutter_use/http/http.dart';
 import 'package:flutter_use/module/example/getx/auto_dispose/auto_dispose_view.dart';
 import 'package:get/get.dart';

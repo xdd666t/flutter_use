@@ -1,6 +1,6 @@
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:flutter_use/app/utils/ui/show.dart';
-import 'package:flutter_use/app/utils/ui/window_size.dart';
+import 'package:flutter_use/app/ui/show.dart';
+import 'package:flutter_use/app/ui/window_size.dart';
 import 'package:get/get.dart';
 
 import 'state.dart';

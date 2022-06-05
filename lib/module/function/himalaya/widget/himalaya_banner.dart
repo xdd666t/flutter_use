@@ -1,7 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/typedef/function.dart';
-import 'package:flutter_use/app/utils/ui/auto_ui.dart';
+import 'package:flutter_use/app/ui/auto_ui.dart';
+import 'package:flutter_use/toolkit/typedef/function.dart';
 
 class HimalayaBanner extends StatelessWidget {
   HimalayaBanner({

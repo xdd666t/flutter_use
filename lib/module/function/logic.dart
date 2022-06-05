@@ -1,5 +1,5 @@
 import 'package:flutter_use/app/config/route_config.dart';
-import 'package:flutter_use/app/utils/ui/show.dart';
+import 'package:flutter_use/app/ui/show.dart';
 import 'package:flutter_use/module/function/state.dart';
 import 'package:get/get.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/typedef/function.dart';
-import 'package:flutter_use/app/utils/ui/auto_ui.dart';
+import 'package:flutter_use/app/ui/auto_ui.dart';
+import 'package:flutter_use/toolkit/typedef/function.dart';
 
 ///NavigationRail组件为侧边栏
 class SideNavigation extends StatelessWidget {

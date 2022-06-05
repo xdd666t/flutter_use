@@ -12,8 +12,8 @@ import 'app/config/route_config.dart';
 import 'app/helper/getx_route_observer.dart';
 import 'module/example/provider/easy_p/change_notifier_easy_p.dart';
 import 'module/example/provider/span_page/span_one/provider.dart';
-import 'views/widget/custom/custom_loading_widget.dart';
-import 'views/widget/custom/custom_toast_widget.dart';
+import 'toolkit/view/custom/custom_loading_widget.dart';
+import 'toolkit/view/custom/custom_toast_widget.dart';
 
 void main() {
   // 解决启动白屏问题 或 Flutter2.5+首屏页面复杂，导致的加载异常问题
