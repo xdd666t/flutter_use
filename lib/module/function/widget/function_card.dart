@@ -81,10 +81,7 @@ class FunctionCard extends StatelessWidget {
       child: BackdropFilter(
         //设置图片模糊度 配套ClipRect使用，不然会造成全局模糊：BackdropFilter-毛玻璃效果
         filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
-        child: Opacity(
-          opacity: 0.1,
-          child: Container(color: Colors.black),
-        ),
+        child: Container(color: Colors.black.withOpacity(0.1)),
       ),
     );
   }

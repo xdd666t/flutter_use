@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_picker/Picker.dart';
+import 'package:flutter_use/toolkit/dialog/entity/file_info_bean.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
 import 'data/bottom_single_dialog.dart';
@@ -27,7 +28,7 @@ class BottomDialog {
     //数据源使用任意泛型
     required List<E> list,
     //回调你选择的item数据
-    required DialogParamSingleCallback<E> callback,
+    required ParamSingleCallback<E> callback,
     String title = '请选择',
     String showKey = '',
     List<String>? showFormatter,
@@ -49,7 +50,7 @@ class BottomDialog {
     bool isNumberMonth = true,
     int yearBegin = 1900,
     int yearEnd = 2100,
-    required DialogParamTwiceCallback<String, List<int>> callback,
+    required ParamTwiceCallback<String, List<int>> callback,
     String title = '选择日期',
     String cancelText = '取消',
     String confirmText = '确定',
@@ -94,7 +95,7 @@ class BottomDialog {
   /// 自带标题和取消控件
   static Future<E> showSelect<E>({
     required List<E> list,
-    required DialogParamSingleCallback<E> callback,
+    required ParamSingleCallback<E> callback,
     String title = '请选择',
     String showKey = '',
   }) {
