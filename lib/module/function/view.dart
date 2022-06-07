@@ -12,9 +12,7 @@ class FunctionPage extends StatelessWidget {
 
     return FunctionCard(
       data: state.items,
-      onItem: (String tag) {
-        logic.toFun(context, tag);
-      },
+      onItem: (String tag) => logic.toFun(context, tag),
     );
   }
 }

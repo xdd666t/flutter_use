@@ -15,8 +15,8 @@ class FunctionLogic extends GetxController {
       case FunctionStatus.himalaya:
         Get.toNamed(RouteConfig.himalaya);
         break;
-      case FunctionStatus.dialog:
-        Get.toNamed(RouteConfig.dialog);
+      case FunctionStatus.animation:
+        Get.toNamed(RouteConfig.animation);
         break;
       default:
         showSnackBar(context, '暂无');

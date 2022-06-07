@@ -23,7 +23,7 @@ import 'package:flutter_use/module/example/provider/span_page/span_one/view.dart
 import 'package:flutter_use/module/example/provider/span_page/span_two/view.dart';
 import 'package:flutter_use/module/example/provider/test_notifier/view.dart';
 import 'package:flutter_use/module/example/test/test_layout/view.dart';
-import 'package:flutter_use/module/function/dialog/view.dart';
+import 'package:flutter_use/module/function/animation/view.dart';
 import 'package:flutter_use/module/function/himalaya/view.dart';
 import 'package:flutter_use/module/function/smart_dialog/view.dart';
 import 'package:flutter_use/module/main/view.dart';
@@ -33,10 +33,10 @@ class RouteConfig {
   ///主页面
   static const String main = "/";
 
-  ///演示SmartDialog控件 喜马拉雅  dialog页面
-  static const String smartDialog = "/smartDialog";
+  ///演示SmartDialog控件 喜马拉雅  Animation
   static const String himalaya = "/himalaya";
-  static const String dialog = "/dialog";
+  static const String smartDialog = "/smartDialog";
+  static const String animation = "/animation";
 
   ///bloc计数器模块 Bloc跨页面传递事件
   static const String blCubitCounterPage = "/blCubitCounterPage";
@@ -73,7 +73,6 @@ class RouteConfig {
   ///别名映射页面
   static final List<GetPage> getPages = [
     GetPage(name: main, page: () => MainPage()),
-    GetPage(name: dialog, page: () => DialogPage()),
     GetPage(name: blCubitCounterPage, page: () => BlCubitCounterPage()),
     GetPage(name: blBlocCounterPage, page: () => BlBlocCounterPage()),
     GetPage(name: streamPage, page: () => StreamPage()),
@@ -104,5 +103,6 @@ class RouteConfig {
     GetPage(name: customBuilderPage, page: () => CustomBuilderPage()),
     GetPage(name: counterEasyPPage, page: () => CounterEasyPPage()),
     GetPage(name: counterGlobalEasyPPage, page: () => CounterGlobalEasyPPage()),
+    GetPage(name: animation, page: () => AnimationPage()),
   ];
 }

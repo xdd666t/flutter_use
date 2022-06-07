@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_loading.dart';
@@ -70,6 +71,9 @@ class SmartDialogLogic extends GetxController {
         break;
       case SmartTag.attachGuide:
         _attachGuide();
+        break;
+      case SmartTag.attachScalePoint:
+        _attachScalePoint();
         break;
 
       ///loading
@@ -185,6 +189,107 @@ class SmartDialogLogic extends GetxController {
       url:
           'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220104101304.gif',
       left: false,
+    );
+  }
+
+  void _attachScalePoint() async {
+    TextEditingController? ctlOne;
+    TextEditingController? ctlTwo;
+
+    scalePoint(BuildContext context) {
+      SmartDialog.showAttach(
+        targetContext: context,
+        animationType: SmartAnimationType.scale,
+        scalePoint: Offset(
+          double.tryParse(ctlOne?.text ?? '25') ?? 25,
+          double.tryParse(ctlTwo?.text ?? '0') ?? 0,
+        ),
+        builder: (_) {
+          return Container(
+            width: 50,
+            height: 200,
+            child: Stack(children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(left: 25),
+                child: Container(
+                  width: 14,
+                  height: 14,
+                  color: Colors.white,
+                  transform: Matrix4.rotationZ(pi / 4),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 7),
+                width: 80,
+                height: 130,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(4)),
+                ),
+                alignment: Alignment.center,
+                child: Text('指\n定\n缩\n放\n点'),
+              ),
+            ]),
+          );
+        },
+      );
+    }
+
+    SmartDialog.show(
+      onDismiss: () {
+        ctlOne?.dispose();
+        ctlTwo?.dispose();
+      },
+      builder: (_) {
+        Widget inputText(TextEditingController? controller) {
+          return Container(
+            width: 50,
+            child: TextField(
+              textAlign: TextAlign.center,
+              controller: controller,
+            ),
+          );
+        }
+
+        return Container(
+          width: 450,
+          height: 350,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.white,
+          ),
+          child: Column(children: [
+            //获取dx和dy数据
+            Container(
+              margin: EdgeInsets.only(top: 20, bottom: 50),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text('dx:  '),
+                  inputText(ctlOne = TextEditingController(text: '25')),
+                  SizedBox(width: 30),
+                  Text('dy:  '),
+                  inputText(ctlTwo = TextEditingController(text: '0')),
+                ],
+              ),
+            ),
+
+            Text('click add icon'),
+            SizedBox(height: 20),
+            Builder(builder: (context) {
+              return Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () => scalePoint(context),
+                  child: Icon(Icons.add),
+                ),
+              );
+            })
+          ]),
+        );
+      },
     );
   }
 

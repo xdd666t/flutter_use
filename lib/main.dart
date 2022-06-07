@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       initialRoute: RouteConfig.main,
+      // home: TestPage(),
       getPages: RouteConfig.getPages,
       navigatorObservers: [FlutterSmartDialog.observer, GetXRouteObserver()],
       builder: FlutterSmartDialog.init(
@@ -76,3 +77,55 @@ Widget _customGlobalWidget(Widget? child) {
     child: child,
   );
 }
+
+// class TestPage extends StatefulWidget {
+//   const TestPage({Key? key}) : super(key: key);
+//
+//   @override
+//   State<TestPage> createState() => _TestPageState();
+// }
+//
+// class _TestPageState extends State<TestPage> {
+//   late double _opacity;
+//
+//   @override
+//   void initState() {
+//     super.initState();
+//     _opacity = 0;
+//     test();
+//   }
+//
+//   void test() async {
+//     await Future.delayed(Duration(seconds: 5));
+//     _opacity = 1;
+//     setState(() {});
+//     await Future.delayed(Duration(seconds: 5));
+//     _opacity = 0;
+//     setState(() {});
+//     await Future.delayed(Duration(seconds: 5));
+//     _opacity = 1;
+//     setState(() {});
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       color: Colors.blue.withOpacity(0.9),
+//       alignment: Alignment.center,
+//       child: AnimatedOpacity(
+//         opacity: _opacity,
+//         duration: Duration(seconds: 3),
+//         child: Container(
+//           height: 500,
+//           width: 500,
+//           child: ClipRRect(
+//             child: BackdropFilter(
+//               filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+//               child: Container(color: Colors.black.withOpacity(0.3)),
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }

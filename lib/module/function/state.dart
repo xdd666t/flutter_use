@@ -18,20 +18,14 @@ class FunctionState {
         tag: FunctionStatus.smartDialog,
         bg: ImageFunctionStatus.functionBgOne,
       ),
-      //暂不需要
-      // BtnInfo(
-      //   title: '弹窗控件',
-      //   tag: FunctionStatus.dialog,
-      //   bg: ImageFunctionStatus.functionBgTwo,
-      // ),
       BtnInfo(
-        title: '测试',
-        tag: FunctionStatus.test,
+        title: 'Animation',
+        tag: FunctionStatus.animation,
         bg: ImageFunctionStatus.functionBgThree,
       ),
       BtnInfo(
         title: '测试',
-        tag: FunctionStatus.test,
+        tag: FunctionStatus.animation,
         bg: ImageFunctionStatus.functionBgFour,
       ),
       BtnInfo(
@@ -50,8 +44,8 @@ class FunctionStatus {
   ///SmartDialog
   static const String smartDialog = 'smartDialog';
 
-  ///dialog封装技巧
-  static const String dialog = 'dialog';
+  ///Animation
+  static const String animation = 'animation';
 
   ///测试
   static const String test = 'test';
