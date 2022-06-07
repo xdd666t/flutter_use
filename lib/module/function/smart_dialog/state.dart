@@ -32,7 +32,7 @@ class SmartDialogState {
           BtnInfo(title: 'imitate', tag: SmartTag.attachImitate),
           BtnInfo(title: 'business', tag: SmartTag.attachBusiness),
           BtnInfo(title: 'guide', tag: SmartTag.attachGuide),
-          BtnInfo(title: 'scalePoint', tag: SmartTag.attachScalePoint),
+          BtnInfo(title: 'scalePointBuilder', tag: SmartTag.attachScalePoint),
         ],
       ),
 

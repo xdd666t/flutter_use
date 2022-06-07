@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_loading.dart';
@@ -125,7 +124,7 @@ class SmartDialogLogic extends GetxController {
     }) async {
       SmartDialog.showAttach(
         targetContext: null,
-        target: target,
+        targetBuilder: (_, __) => target,
         usePenetrate: true,
         alignment: left ? Alignment.centerRight : Alignment.centerLeft,
         builder: (_) {
@@ -199,15 +198,21 @@ class SmartDialogLogic extends GetxController {
     scalePoint(BuildContext context) {
       SmartDialog.showAttach(
         targetContext: context,
+        targetBuilder: (targetOffset, targetSize) {
+          return Offset(targetOffset.dx, targetOffset.dy);
+        },
+        alignment: Alignment.bottomCenter,
         animationType: SmartAnimationType.scale,
-        scalePoint: Offset(
-          double.tryParse(ctlOne?.text ?? '25') ?? 25,
-          double.tryParse(ctlTwo?.text ?? '0') ?? 0,
-        ),
+        scalePointBuilder: (selfSize) {
+          var halfWidth = (selfSize.width / 2);
+          return Offset(
+            double.tryParse(ctlOne?.text ?? halfWidth.toString()) ?? halfWidth,
+            double.tryParse(ctlTwo?.text ?? '0') ?? 0,
+          );
+        },
         builder: (_) {
           return Container(
             width: 50,
-            height: 200,
             child: Stack(children: <Widget>[
               Container(
                 margin: EdgeInsets.only(left: 25),
@@ -644,7 +649,7 @@ class SmartDialogLogic extends GetxController {
       if (random == 4) alignment = Alignment.bottomCenter;
       SmartDialog.showAttach(
         targetContext: null,
-        target: offset,
+        targetBuilder: (_, __) => offset,
         usePenetrate: true,
         clickMaskDismiss: false,
         alignment: alignment,
