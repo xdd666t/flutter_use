@@ -1,10 +1,5 @@
 PODS:
   - FlutterMacOS (1.0.0)
-  - path_provider_macos (0.0.1):
-    - FlutterMacOS
-  - photo_manager (2.0.0):
-    - Flutter
-    - FlutterMacOS
   - shared_preferences_macos (0.0.1):
     - FlutterMacOS
   - window_size (0.0.2):
@@ -12,18 +7,12 @@ PODS:
 
 DEPENDENCIES:
   - FlutterMacOS (from `Flutter/ephemeral`)
-  - path_provider_macos (from `Flutter/ephemeral/.symlinks/plugins/path_provider_macos/macos`)
-  - photo_manager (from `Flutter/ephemeral/.symlinks/plugins/photo_manager/macos`)
   - shared_preferences_macos (from `Flutter/ephemeral/.symlinks/plugins/shared_preferences_macos/macos`)
   - window_size (from `Flutter/ephemeral/.symlinks/plugins/window_size/macos`)
 
 EXTERNAL SOURCES:
   FlutterMacOS:
     :path: Flutter/ephemeral
-  path_provider_macos:
-    :path: Flutter/ephemeral/.symlinks/plugins/path_provider_macos/macos
-  photo_manager:
-    :path: Flutter/ephemeral/.symlinks/plugins/photo_manager/macos
   shared_preferences_macos:
     :path: Flutter/ephemeral/.symlinks/plugins/shared_preferences_macos/macos
   window_size:
@@ -31,8 +20,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FlutterMacOS: 57701585bf7de1b3fc2bb61f6378d73bbdea8424
-  path_provider_macos: 3c0c3b4b0d4a76d2bf989a913c2de869c5641a19
-  photo_manager: 4f6810b7dfc4feb03b461ac1a70dacf91fba7604
   shared_preferences_macos: a64dc611287ed6cbe28fd1297898db1336975727
   window_size: 339dafa0b27a95a62a843042038fa6c3c48de195
 
