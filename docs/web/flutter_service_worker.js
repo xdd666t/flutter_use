@@ -4,10 +4,9 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "b985c4d1d914ac8c0ed39c4fc9c883e2",
-"index.html": "52775240020b0c10cb9690299ad6e16f",
-"/": "52775240020b0c10cb9690299ad6e16f",
-"main.dart.js": "87bd54681b618f2dc34cf2cec23a18ba",
-"flutter.js": "0816e65a103ba8ba51b174eeeeb2cb67",
+"index.html": "2ad68f1cae608793cdeef427cbd3a353",
+"/": "2ad68f1cae608793cdeef427cbd3a353",
+"main.dart.js": "0402d6cfdaa009aee7c40fd05283f2aa",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
@@ -16,14 +15,11 @@ const RESOURCES = {
 "manifest.json": "22d6902bd5c1b4ab416be7902fd5230c",
 "assets/images/icon.png": "2a78f8396437fadef80ea568d8396cc1",
 "assets/AssetManifest.json": "c03e33114057d7d42e409b85cd9e4795",
-"assets/NOTICES": "00d9cde35dbf9dd23c09a6c6e3e8efce",
+"assets/NOTICES": "9b58a1268e65b06afb0299db7fc70033",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
-"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
-"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
-"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
-"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba"
+"assets/shaders/ink_sparkle.frag": "8e302cf0daaef6366d4d141d3f673691",
+"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -31,7 +27,6 @@ const RESOURCES = {
 const CORE = [
   "main.dart.js",
 "index.html",
-"assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 // During install, the TEMP cache is populated with the application shell files.
@@ -130,9 +125,11 @@ self.addEventListener("fetch", (event) => {
     .then((cache) =>  {
       return cache.match(event.request).then((response) => {
         // Either respond with the cached resource, or perform a fetch and
-        // lazily populate the cache.
+        // lazily populate the cache only if the resource was successfully fetched.
         return response || fetch(event.request).then((response) => {
-          cache.put(event.request, response.clone());
+          if (response && Boolean(response.ok)) {
+            cache.put(event.request, response.clone());
+          }
           return response;
         });
       })

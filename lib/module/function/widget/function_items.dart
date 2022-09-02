@@ -3,12 +3,12 @@ import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
 class FunctionItems extends StatelessWidget {
-  FunctionItems({
+  const FunctionItems({Key? key,
     required this.items,
     required this.onItem,
     this.constraints = const BoxConstraints(minWidth: 150, minHeight: 36.0),
     this.padding = const EdgeInsets.all(30),
-  });
+  }) : super(key: key);
 
   ///数据源
   final List items;

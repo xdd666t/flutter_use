@@ -6,7 +6,7 @@ import 'package:flutter_use/toolkit/typedef/function.dart';
 import 'package:get/get.dart';
 
 class HimalayaNewest extends StatelessWidget {
-  HimalayaNewest({
+  const HimalayaNewest({
     Key? key,
     required this.data,
     required this.onSortTitle,
@@ -62,7 +62,7 @@ class HimalayaNewest extends StatelessWidget {
       width: 150.dp,
       height: 150.dp,
       margin: EdgeInsets.only(top: 16.dp, bottom: 6.dp),
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: GestureDetector(
         onTap: () => onNewest(item),
         child: ClipRRect(

@@ -31,7 +31,7 @@ Widget himalayaBuildInfoListBg({required List<Widget> children}) {
 Widget himalayaBuildScrollInfoListBg({required List<Widget> children}) {
   return Expanded(
     child: CustomSingleChildScrollView(
-      child: Container(
+      child: SizedBox(
         width: 860.dp,
         child: Column(children: children),
       ),

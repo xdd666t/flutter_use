@@ -5,7 +5,7 @@ import 'package:flutter_use/toolkit/typedef/function.dart';
 
 ///热门主播
 class HimalayaAnchor extends StatelessWidget {
-  HimalayaAnchor({
+  const HimalayaAnchor({
     Key? key,
     required this.data,
     required this.onAnchor,
@@ -63,7 +63,7 @@ class HimalayaAnchor extends StatelessWidget {
       child: GestureDetector(
         onTap: () => onAnchor(itemInfo),
         child: ClipOval(
-          child: Container(
+          child: SizedBox(
             height: 130.dp,
             width: 130.dp,
             child: Image.network(
@@ -109,7 +109,7 @@ class HimalayaAnchor extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(data.length, (index) {
-          return Container(
+          return SizedBox(
             width: 150.dp,
             height: 200.dp,
             child: Stack(children: builder(data[index])),

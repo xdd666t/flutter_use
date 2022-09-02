@@ -5,7 +5,7 @@ import 'package:flutter_use/toolkit/typedef/function.dart';
 
 ///NavigationRail组件为侧边栏
 class SideNavigation extends StatelessWidget {
-  SideNavigation({
+  const SideNavigation({Key? key,
     required this.onItem,
     required this.selectedIndex,
     required this.sideItems,
@@ -13,7 +13,7 @@ class SideNavigation extends StatelessWidget {
     required this.onUnfold,
     required this.isScale,
     required this.onScale,
-  });
+  }) : super(key: key);
 
   ///侧边栏item
   final List sideItems;
@@ -62,9 +62,9 @@ class SideNavigation extends StatelessWidget {
         //   onChanged: onUnfold,
         // ),
 
-        Container(
+        SizedBox(
           width: 70.dp,
-          child: Text('开启缩放'),
+          child: const Text('开启缩放'),
         ),
 
         //缩放按钮
@@ -91,7 +91,7 @@ class SideNavigation extends StatelessWidget {
               spreadRadius: 0.2,
             )
           ],
-          image: DecorationImage(
+          image: const DecorationImage(
             image: NetworkImage(
               "https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220103124847.jpg",
             ),

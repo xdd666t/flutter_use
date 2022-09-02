@@ -6,7 +6,7 @@ import 'package:flutter_use/entity/common/btn_info.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
 class FunctionCard extends StatelessWidget {
-  FunctionCard({
+  const FunctionCard({
     Key? key,
     required this.data,
     required this.onItem,
@@ -24,7 +24,7 @@ class FunctionCard extends StatelessWidget {
       var item = data[index];
       return _buildItem(children: [
         //背景
-        Container(
+        SizedBox(
           width: 400,
           height: 200,
           child: Image.network(item.bg ?? '', fit: BoxFit.fitWidth),
@@ -34,7 +34,7 @@ class FunctionCard extends StatelessWidget {
         !item.selected
             ? ClipRRect(
                 borderRadius: BorderRadius.circular(100),
-                child: Container(
+                child: SizedBox(
                   height: 50,
                   width: 150,
                   child: _blurryBg(),
@@ -47,7 +47,7 @@ class FunctionCard extends StatelessWidget {
             ? Center(
                 child: Text(
                   item.title ?? '',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -86,11 +86,11 @@ class FunctionCard extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({required Widget builder(int index)}) {
+  Widget _buildBg({required Widget Function(int index) builder}) {
     return Container(
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       child: GridView(
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 400, //子控件最大宽度
           childAspectRatio: 2, //宽高比为2:1
           crossAxisSpacing: 20,

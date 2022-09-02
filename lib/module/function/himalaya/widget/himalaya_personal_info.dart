@@ -6,7 +6,7 @@ import 'package:flutter_use/toolkit/typedef/function.dart';
 
 ///搜索框 个人信息 设置等按钮
 class HimalayaPersonalInfo extends StatelessWidget {
-  HimalayaPersonalInfo({
+  const HimalayaPersonalInfo({
     Key? key,
     required this.onRefresh,
     required this.onLeftArrow,
@@ -62,7 +62,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 30.dp),
       child: IconButton(
-        icon: Icon(Icons.autorenew, size: 16),
+        icon: const Icon(Icons.autorenew, size: 16),
         onPressed: onRefresh,
       ),
     );
@@ -72,7 +72,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 30.dp),
       child: IconButton(
-        icon: Icon(Icons.arrow_forward_ios_outlined, size: 16),
+        icon: const Icon(Icons.arrow_forward_ios_outlined, size: 16),
         onPressed: onRightArrow,
       ),
     );
@@ -80,7 +80,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
 
   Widget _buildLeftArrow() {
     return IconButton(
-      icon: Icon(Icons.arrow_back_ios, size: 16),
+      icon: const Icon(Icons.arrow_back_ios, size: 16),
       onPressed: onLeftArrow,
     );
   }
@@ -89,7 +89,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 15.dp),
       child: IconButton(
-        icon: Icon(
+        icon: const Icon(
           Icons.settings,
           color: Colors.grey,
           size: 20,
@@ -103,7 +103,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 15.dp),
       child: IconButton(
-        icon: Icon(
+        icon: const Icon(
           CupertinoIcons.sparkles,
           color: Colors.grey,
           size: 20,
@@ -139,7 +139,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
         //搜索图标
         Container(
           margin: EdgeInsets.only(left: 10.dp),
-          child: Icon(Icons.search, color: Colors.grey, size: 18),
+          child: const Icon(Icons.search, color: Colors.grey, size: 18),
         ),
 
         //输入框
@@ -150,7 +150,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
             autofocus: false,
             textAlign: TextAlign.start,
             textInputAction: TextInputAction.search,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               ///较小空间时，使组件正常渲染，包括文本垂直居中
               isDense: true,
               border: InputBorder.none,

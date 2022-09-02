@@ -14,6 +14,8 @@ import 'widget/himalaya_left_navigation.dart';
 import 'widget/himalaya_newest.dart';
 
 class HimalayaPage extends StatelessWidget {
+  HimalayaPage({Key? key}) : super(key: key);
+
   final logic = Get.put(HimalayaLogic());
   final state = Get.find<HimalayaLogic>().state;
 

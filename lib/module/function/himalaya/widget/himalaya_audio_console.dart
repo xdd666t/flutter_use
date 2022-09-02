@@ -7,7 +7,7 @@ import 'package:flutter_use/toolkit/typedef/function.dart';
 import 'package:get/get.dart';
 
 class HimalayaAudioConsole extends StatelessWidget {
-  HimalayaAudioConsole({
+  const HimalayaAudioConsole({
     Key? key,
     required this.data,
     required this.onRightArrow,
@@ -340,7 +340,7 @@ class HimalayaAudioConsole extends StatelessWidget {
     return Container(
       height: 70.dp,
       padding: EdgeInsets.symmetric(horizontal: 23.dp),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(color: Colors.black12, blurRadius: 10, spreadRadius: 2)

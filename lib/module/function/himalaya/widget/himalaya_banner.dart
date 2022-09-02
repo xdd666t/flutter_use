@@ -4,7 +4,7 @@ import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
 class HimalayaBanner extends StatelessWidget {
-  HimalayaBanner({
+  const HimalayaBanner({
     Key? key,
     required this.data,
     required this.onTap,

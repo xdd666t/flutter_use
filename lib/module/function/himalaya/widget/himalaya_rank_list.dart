@@ -4,7 +4,7 @@ import 'package:flutter_use/module/function/himalaya/state.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
 class HimalayaRankList extends StatelessWidget {
-  HimalayaRankList({
+  const HimalayaRankList({
     Key? key,
     required this.data,
     required this.onItem,
@@ -72,7 +72,7 @@ class HimalayaRankList extends StatelessWidget {
   Widget buildItemIcon(HimalayaItemInfo item, int index) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(5.dp),
-      child: Container(
+      child: SizedBox(
         width: 60.dp,
         height: 60.dp,
         child: Image.network(item.subItemList[index].tag),
@@ -129,7 +129,7 @@ class HimalayaRankList extends StatelessWidget {
         //图标
         Container(
           margin: EdgeInsets.only(left: 10.dp),
-          child: Icon(
+          child: const Icon(
             Icons.arrow_forward_ios,
             color: Colors.grey,
             size: 15,

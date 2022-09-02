@@ -6,6 +6,8 @@ import 'package:get/get.dart';
 import 'widget/side_navigation.dart';
 
 class MainPage extends StatelessWidget {
+  MainPage({Key? key}) : super(key: key);
+
   final MainLogic logic = Get.put(MainLogic());
   final MainState state = Get.find<MainLogic>().state;
 

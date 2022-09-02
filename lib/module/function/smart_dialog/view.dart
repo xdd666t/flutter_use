@@ -9,6 +9,8 @@ import 'logic.dart';
 import 'state.dart';
 
 class SmartDialogPage extends StatelessWidget {
+  SmartDialogPage({Key? key}) : super(key: key);
+
   final SmartDialogLogic logic = Get.put(SmartDialogLogic());
   final SmartDialogState state = Get.find<SmartDialogLogic>().state;
 
@@ -16,7 +18,7 @@ class SmartDialogPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: kIsWeb || !Platform.isAndroid
-          ? AppBar(title: Text('SmartDialog'))
+          ? AppBar(title: const Text('SmartDialog'))
           : null,
       backgroundColor: Colors.white,
       body: TreeItems(

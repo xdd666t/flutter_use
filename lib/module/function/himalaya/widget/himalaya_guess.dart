@@ -5,7 +5,7 @@ import 'package:flutter_use/toolkit/typedef/function.dart';
 
 ///猜你喜欢
 class HimalayaGuess extends StatelessWidget {
-  HimalayaGuess({
+  const HimalayaGuess({
     Key? key,
     required this.data,
     required this.onChange,
@@ -61,7 +61,7 @@ class HimalayaGuess extends StatelessWidget {
       width: 150.dp,
       height: 150.dp,
       margin: EdgeInsets.only(top: 16.dp, bottom: 6.dp),
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: GestureDetector(
         onTap: () => onGuess(item),
         child: ClipRRect(
@@ -94,7 +94,7 @@ class HimalayaGuess extends StatelessWidget {
         margin: EdgeInsets.symmetric(vertical: 5.dp, horizontal: 15.dp),
         child: Row(children: [
           //图标
-          Icon(Icons.autorenew, size: 15),
+          const Icon(Icons.autorenew, size: 15),
 
           Container(width: 12.dp),
 

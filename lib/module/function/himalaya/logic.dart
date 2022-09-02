@@ -125,7 +125,7 @@ class HimalayaLogic extends GetxController {
   ///猜你喜欢: 换一批
   void guessChange() async {
     SmartDialog.showLoading(msg: '假装请求数据...');
-    await Future.delayed(Duration(milliseconds: 2000));
+    await Future.delayed(const Duration(milliseconds: 2000));
     SmartDialog.dismiss();
   }
 
@@ -213,15 +213,15 @@ class HimalayaLogic extends GetxController {
   }
 
   void _restoreNavigationStatus(String? tag) {
-    state.leftItemList.forEach((element) {
-      element.subItemList.forEach((subElement) {
+    for (var element in state.leftItemList) {
+      for (var subElement in element.subItemList) {
         if (subElement.tag == tag) {
           subElement.isSelected = true;
         } else {
           subElement.isSelected = false;
         }
-      });
-    });
+      }
+    }
 
     update();
   }

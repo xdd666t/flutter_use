@@ -14,11 +14,6 @@ import 'widget/multi_handle_widget.dart';
 class SmartDialogLogic extends GetxController {
   final state = SmartDialogState();
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
   ///测试功能模块
   void showFun(tag) async {
     switch (tag) {
@@ -50,6 +45,9 @@ class SmartDialogLogic extends GetxController {
         break;
       case SmartTag.dialogPermanent:
         _dialogPermanent();
+        break;
+      case SmartTag.dialogAnimationBuilder:
+        _dialogAnimationBuilder();
         break;
 
       ///attach
@@ -117,7 +115,7 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _attachTarget() async {
-    var targetDialog = ({
+    targetDialog({
       required Offset target,
       required String url,
       required bool left,
@@ -147,7 +145,7 @@ class SmartDialogLogic extends GetxController {
                 topRight: Radius.circular(left ? 20 : 0),
                 bottomRight: Radius.circular(left ? 20 : 0),
               ),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(color: Colors.blue, blurRadius: 8, spreadRadius: 0.2)
               ],
             ),
@@ -155,30 +153,30 @@ class SmartDialogLogic extends GetxController {
           );
         },
       );
-      await Future.delayed(Duration(milliseconds: 1500));
-    };
+      await Future.delayed(const Duration(milliseconds: 1500));
+    }
 
     await targetDialog(
-      target: Offset(0, 100),
+      target: const Offset(0, 100),
       url:
           'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220104101555.jpeg',
       left: true,
     );
 
     await targetDialog(
-      target: Offset(0, 220),
+      target: const Offset(0, 220),
       url:
           'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220104101608.jpg',
       left: true,
     );
     await targetDialog(
-      target: Offset(0, 340),
+      target: const Offset(0, 340),
       url:
           'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220104110204.png',
       left: true,
     );
     await targetDialog(
-      target: Offset(0, 460),
+      target: const Offset(0, 460),
       url:
           'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220104110147.png',
       left: true,
@@ -211,11 +209,11 @@ class SmartDialogLogic extends GetxController {
           );
         },
         builder: (_) {
-          return Container(
+          return SizedBox(
             width: 50,
             child: Stack(children: <Widget>[
               Container(
-                margin: EdgeInsets.only(left: 25),
+                margin: const EdgeInsets.only(left: 25),
                 child: Container(
                   width: 14,
                   height: 14,
@@ -224,15 +222,15 @@ class SmartDialogLogic extends GetxController {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 7),
+                margin: const EdgeInsets.only(top: 7),
                 width: 80,
                 height: 130,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(4)),
                 ),
                 alignment: Alignment.center,
-                child: Text('指\n定\n缩\n放\n点'),
+                child: const Text('指\n定\n缩\n放\n点'),
               ),
             ]),
           );
@@ -247,7 +245,7 @@ class SmartDialogLogic extends GetxController {
       },
       builder: (_) {
         Widget inputText(TextEditingController? controller) {
-          return Container(
+          return SizedBox(
             width: 50,
             child: TextField(
               textAlign: TextAlign.center,
@@ -267,28 +265,28 @@ class SmartDialogLogic extends GetxController {
           child: Column(children: [
             //获取dx和dy数据
             Container(
-              margin: EdgeInsets.only(top: 20, bottom: 50),
+              margin: const EdgeInsets.only(top: 20, bottom: 50),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('dx:  '),
+                  const Text('dx:  '),
                   inputText(ctlOne = TextEditingController(text: '25')),
-                  SizedBox(width: 30),
-                  Text('dy:  '),
+                  const SizedBox(width: 30),
+                  const Text('dy:  '),
                   inputText(ctlTwo = TextEditingController(text: '0')),
                 ],
               ),
             ),
 
-            Text('click add icon'),
-            SizedBox(height: 20),
+            const Text('click add icon'),
+            const SizedBox(height: 20),
             Builder(builder: (context) {
               return Material(
                 color: Colors.transparent,
                 child: InkWell(
                   onTap: () => scalePoint(context),
-                  child: Icon(Icons.add),
+                  child: const Icon(Icons.add),
                 ),
               );
             })
@@ -302,23 +300,27 @@ class SmartDialogLogic extends GetxController {
     //guide dialog
     late BuildContext aContext;
     late BuildContext bContext;
-    var guide = ({required VoidCallback? onTap}) {
+    guide({required VoidCallback? onTap}) {
       return Container(
-        margin: EdgeInsets.only(top: 20),
+        margin: const EdgeInsets.only(top: 20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(7),
           color: Colors.blue,
         ),
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(children: [
-          Text('xdd666', style: TextStyle(color: Colors.white, fontSize: 20)),
+          const Text(
+            'xdd666',
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
           ElevatedButton(
             onPressed: () => onTap?.call(),
-            child: Text('next'),
+            child: const Text('next'),
           )
         ]),
       );
-    };
+    }
+
     //example：highlightBuilder
     guideB(BuildContext context) {
       SmartDialog.showAttach(
@@ -386,7 +388,7 @@ class SmartDialogLogic extends GetxController {
       return GestureDetector(
         onTap: onTap,
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             boxShadow: [
               BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)
             ],
@@ -428,7 +430,7 @@ class SmartDialogLogic extends GetxController {
         width: double.infinity,
         height: double.infinity,
         alignment: Alignment.center,
-        margin: EdgeInsets.symmetric(vertical: 100, horizontal: 80),
+        margin: const EdgeInsets.symmetric(vertical: 100, horizontal: 80),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
@@ -436,13 +438,13 @@ class SmartDialogLogic extends GetxController {
         child: Stack(children: [pointA, pointB]),
       );
     });
-    await Future.delayed(Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 500));
     guideA(aContext);
   }
 
   void _attachBusiness() {
     //attach
-    var listDialog = () {
+    listDialog() {
       var list = ['小呆呆', '小菲菲', '小猪猪', '懒羊羊', '慢羊羊'];
       return Container(
         height: 200,
@@ -450,13 +452,13 @@ class SmartDialogLogic extends GetxController {
         color: Colors.white,
         child: ListView(
           children: List.generate(list.length, (index) {
-            return ListTile(title: Center(child: Text('${list[index]}')));
+            return ListTile(title: Center(child: Text(list[index])));
           }),
         ),
       );
-    };
+    }
 
-    var attachA = (BuildContext context) {
+    attachA(BuildContext context) {
       SmartDialog.showAttach(
         targetContext: context,
         alignment: Alignment.bottomCenter,
@@ -471,9 +473,9 @@ class SmartDialogLogic extends GetxController {
         },
         builder: (_) => listDialog(),
       );
-    };
+    }
 
-    var attachB = (BuildContext context) {
+    attachB(BuildContext context) {
       SmartDialog.showAttach(
         targetContext: context,
         alignment: Alignment.topCenter,
@@ -486,7 +488,7 @@ class SmartDialogLogic extends GetxController {
         },
         builder: (_) => listDialog(),
       );
-    };
+    }
 
     //business widget
     var businessA = Container(
@@ -494,7 +496,7 @@ class SmartDialogLogic extends GetxController {
       height: double.infinity,
       color: Colors.red,
       child: Scaffold(
-        appBar: AppBar(title: Text('Business A')),
+        appBar: AppBar(title: const Text('Business A')),
         body: Builder(builder: (context) {
           return Column(mainAxisSize: MainAxisSize.min, children: [
             Container(
@@ -503,7 +505,7 @@ class SmartDialogLogic extends GetxController {
               alignment: Alignment.center,
               child: GestureDetector(
                 onTap: () => attachA(context),
-                child: Row(mainAxisSize: MainAxisSize.min, children: [
+                child: Row(mainAxisSize: MainAxisSize.min, children: const [
                   Text('下拉弹窗'),
                   Icon(Icons.arrow_drop_down),
                 ]),
@@ -519,7 +521,7 @@ class SmartDialogLogic extends GetxController {
       height: double.infinity,
       color: Colors.red,
       child: Scaffold(
-        appBar: AppBar(title: Text('Business B')),
+        appBar: AppBar(title: const Text('Business B')),
         body: Align(
           alignment: Alignment.bottomCenter,
           child: Builder(builder: (context) {
@@ -531,7 +533,7 @@ class SmartDialogLogic extends GetxController {
                 alignment: Alignment.center,
                 child: GestureDetector(
                   onTap: () => attachB(context),
-                  child: Row(mainAxisSize: MainAxisSize.min, children: [
+                  child: Row(mainAxisSize: MainAxisSize.min, children: const [
                     Text('上弹弹窗'),
                     Icon(Icons.arrow_drop_up),
                   ]),
@@ -564,8 +566,8 @@ class SmartDialogLogic extends GetxController {
         usePenetrate: true,
         builder: (_) {
           return Container(
-            margin: EdgeInsets.all(10),
-            decoration: BoxDecoration(boxShadow: [
+            margin: const EdgeInsets.all(10),
+            decoration: const BoxDecoration(boxShadow: [
               BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)
             ]),
             child: Column(
@@ -578,7 +580,7 @@ class SmartDialogLogic extends GetxController {
                       height: 50,
                       width: 100,
                       alignment: Alignment.center,
-                      child: Text('${list[index]}'),
+                      child: Text(list[index]),
                     ),
                   ),
                 );
@@ -595,8 +597,8 @@ class SmartDialogLogic extends GetxController {
         value: '1',
         items: [
           DropdownMenuItem(value: '1', child: Text('$title：小呆呆')),
-          DropdownMenuItem(value: '2', child: Text('小菲菲')),
-          DropdownMenuItem(value: '3', child: Text('小猪猪'))
+          const DropdownMenuItem(value: '2', child: Text('小菲菲')),
+          const DropdownMenuItem(value: '3', child: Text('小猪猪'))
         ],
         onChanged: (value) {},
       );
@@ -619,7 +621,7 @@ class SmartDialogLogic extends GetxController {
         width: 600,
         height: 400,
         alignment: Alignment.center,
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
@@ -627,7 +629,7 @@ class SmartDialogLogic extends GetxController {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           home: Container(
-            padding: EdgeInsets.symmetric(horizontal: 100),
+            padding: const EdgeInsets.symmetric(horizontal: 100),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [dropdownButton(), imitateDropdownButton()],
@@ -679,7 +681,10 @@ class SmartDialogLogic extends GetxController {
             height: 300,
             color: Colors.grey,
             alignment: Alignment.center,
-            child: Text('click me', style: TextStyle(color: Colors.white)),
+            child: const Text(
+              'click me',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ),
       );
@@ -696,7 +701,7 @@ class SmartDialogLogic extends GetxController {
         builder: (_) =>
             Container(width: 100, height: 100, color: randomColor()),
       );
-      await Future.delayed(Duration(milliseconds: 350));
+      await Future.delayed(const Duration(milliseconds: 350));
     }
 
     //target widget
@@ -717,18 +722,18 @@ class SmartDialogLogic extends GetxController {
       required Function(BuildContext context) onTap,
     }) {
       return Container(
-        margin: EdgeInsets.all(25),
+        margin: const EdgeInsets.all(25),
         child: Builder(builder: (context) {
           Color? color = title.contains('all') ? randomColor() : null;
           contextList.add(context);
-          return Container(
+          return SizedBox(
             width: 130,
             child: ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: ButtonStyleButton.allOrNull<Color>(color),
               ),
               onPressed: () => onTap(context),
-              child: Text('$title'),
+              child: Text(title),
             ),
           );
         }),
@@ -738,7 +743,7 @@ class SmartDialogLogic extends GetxController {
     SmartDialog.show(builder: (_) {
       return Container(
         width: 700,
-        padding: EdgeInsets.all(50),
+        padding: const EdgeInsets.all(50),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
@@ -757,7 +762,9 @@ class SmartDialogLogic extends GetxController {
             btn(
               title: 'allOpen',
               onTap: (_) async {
-                for (var item in funList) await item();
+                for (var item in funList) {
+                  await item();
+                }
               },
             ),
             btn(
@@ -778,7 +785,7 @@ class SmartDialogLogic extends GetxController {
         return Container(
           height: 480,
           width: 500,
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             color: Colors.white,
@@ -791,28 +798,51 @@ class SmartDialogLogic extends GetxController {
               spacing: 10,
               children: [
                 // title
-                Text(
+                const Text(
                   '特大公告',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
                 // content
-                Text('鄙人日夜钻研下面秘籍，终于成功钓到富婆'),
+                const Text('鄙人日夜钻研下面秘籍，终于成功钓到富婆'),
                 Image.network(
                   'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211102213746.jpeg',
                   height: 200,
                   width: 400,
                 ),
-                Text('鄙人思考了三秒钟，怀着\'沉重\'的心情，决定弃坑本开源软件'),
-                Text('本人今后的生活是富婆和远方，已无\'精力\' 再维护本开源软件了'),
-                Text('各位叼毛，有缘江湖再见！'),
+                const Text('鄙人思考了三秒钟，怀着\'沉重\'的心情，决定弃坑本开源软件'),
+                const Text('本人今后的生活是富婆和远方，已无\'精力\' 再维护本开源软件了'),
+                const Text('各位叼毛，有缘江湖再见！'),
                 // button (only method of close the dialog)
                 ElevatedButton(
                   onPressed: () => SmartDialog.dismiss(),
-                  child: Text('再会！'),
+                  child: const Text('再会！'),
                 )
               ],
             ),
           ),
+        );
+      },
+    );
+  }
+
+  void _dialogAnimationBuilder() async {
+    SmartDialog.show(
+      animationTime: const Duration(milliseconds: 3000),
+      animationBuilder: (
+        AnimationController controller,
+        Widget child,
+        AnimationParam animationParam,
+      ) {
+        return RotationTransition(
+          turns: CurvedAnimation(parent: controller, curve: Curves.elasticIn),
+          child: child,
+        );
+      },
+      builder: (_) {
+        return Container(
+          color: Colors.white,
+          padding: const EdgeInsets.all(30),
+          child: const Text('custom animation dialog'),
         );
       },
     );
@@ -830,7 +860,7 @@ class SmartDialogLogic extends GetxController {
             width: 150,
             height: double.infinity,
             alignment: Alignment.center,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(15),
@@ -840,7 +870,7 @@ class SmartDialogLogic extends GetxController {
                 BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2)
               ],
             ),
-            child: Text('permanent dialog'),
+            child: const Text('permanent dialog'),
           );
         },
       );
@@ -858,11 +888,11 @@ class SmartDialogLogic extends GetxController {
         child: Wrap(spacing: 20, children: [
           ElevatedButton(
             onPressed: () => openPermanentDialog(),
-            child: Text('open'),
+            child: const Text('open'),
           ),
           ElevatedButton(
             onPressed: () => SmartDialog.dismiss(force: true),
-            child: Text('close'),
+            child: const Text('close'),
           )
         ]),
       );
@@ -883,12 +913,12 @@ class SmartDialogLogic extends GetxController {
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           Container(
             width: 100,
-            margin: EdgeInsets.only(bottom: 30),
+            margin: const EdgeInsets.only(bottom: 30),
             child: TextField(onChanged: (msg) => message = msg),
           ),
           ElevatedButton(
             onPressed: () => SmartDialog.dismiss(result: message),
-            child: Text('show result'),
+            child: const Text('show result'),
           )
         ]),
       );
@@ -949,7 +979,7 @@ class SmartDialogLogic extends GetxController {
         builder: (_) {
           return Container(
             color: Colors.white,
-            padding: EdgeInsets.all(30),
+            padding: const EdgeInsets.all(30),
             child: Text(
               '跳转页面前测试弹窗(Test dialog before jumping to the page)\n\nuseSystem：$useSystem\nbindPage：false',
               textAlign: TextAlign.center,
@@ -957,14 +987,17 @@ class SmartDialogLogic extends GetxController {
           );
         },
       );
-      await Future.delayed(Duration(milliseconds: 800));
+      await Future.delayed(const Duration(milliseconds: 800));
       Get.to(
         () => Scaffold(
-          appBar: AppBar(title: Text('New Page')),
+          appBar: AppBar(title: const Text('New Page')),
           body: Container(
             color: randomColor(),
             alignment: Alignment.center,
-            child: Text('New Page', style: TextStyle(color: Colors.white)),
+            child: const Text(
+              'New Page',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ),
         preventDuplicates: false,
@@ -983,9 +1016,9 @@ class SmartDialogLogic extends GetxController {
           ),
           child: Column(children: [
             Container(
-              margin: EdgeInsets.only(top: 50),
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: Text(
+              margin: const EdgeInsets.only(top: 50),
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: const Text(
                 '使用useSystem参数，可解决在弹窗上跳转新页面问题 \n\n'
                 'Use the useSystem param to solve the problem of jumping to a new page on the dialog',
                 textAlign: TextAlign.center,
@@ -996,11 +1029,11 @@ class SmartDialogLogic extends GetxController {
                 child: Wrap(spacing: 50, children: [
                   ElevatedButton(
                     onPressed: () => toNewPage(false),
-                    child: Text('not useSystem'),
+                    child: const Text('not useSystem'),
                   ),
                   ElevatedButton(
                     onPressed: () => toNewPage(true),
-                    child: Text('useSystem'),
+                    child: const Text('useSystem'),
                   ),
                 ]),
               ),
@@ -1027,11 +1060,14 @@ class SmartDialogLogic extends GetxController {
             height: height,
             color: randomColor(),
             alignment: Alignment.center,
-            child: Text('dialog $tag', style: TextStyle(color: Colors.white)),
+            child: Text(
+              'dialog $tag',
+              style: const TextStyle(color: Colors.white),
+            ),
           );
         },
       );
-      await Future.delayed(Duration(milliseconds: 500));
+      await Future.delayed(const Duration(milliseconds: 500));
     }
 
     //left
@@ -1052,22 +1088,22 @@ class SmartDialogLogic extends GetxController {
             color: Colors.white,
             borderRadius: BorderRadius.circular(15),
           ),
-          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           child: Wrap(spacing: 20, children: [
             ElevatedButton(
-              child: Text('close dialog A'),
+              child: const Text('close dialog A'),
               onPressed: () => SmartDialog.dismiss(tag: 'A'),
             ),
             ElevatedButton(
-              child: Text('close dialog B'),
+              child: const Text('close dialog B'),
               onPressed: () => SmartDialog.dismiss(tag: 'B'),
             ),
             ElevatedButton(
-              child: Text('close dialog C'),
+              child: const Text('close dialog C'),
               onPressed: () => SmartDialog.dismiss(tag: 'C'),
             ),
             ElevatedButton(
-              child: Text('close dialog D'),
+              child: const Text('close dialog D'),
               onPressed: () => SmartDialog.dismiss(tag: 'D'),
             ),
           ]),
@@ -1126,13 +1162,13 @@ class SmartDialogLogic extends GetxController {
             child: Center(
               child: Text(
                 keepSingle ? 'single' : 'multiple',
-                style: TextStyle(color: Colors.white, fontSize: 25),
+                style: const TextStyle(color: Colors.white, fontSize: 25),
               ),
             ),
           );
         },
       );
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
     }
 
     await singleDialog(false, Alignment.bottomCenter);
@@ -1170,7 +1206,7 @@ class SmartDialogLogic extends GetxController {
         builder: (_) =>
             Container(width: width, height: height, color: randomColor()),
       );
-      await Future.delayed(Duration(milliseconds: 500));
+      await Future.delayed(const Duration(milliseconds: 500));
     }
 
     //left
@@ -1196,24 +1232,24 @@ class SmartDialogLogic extends GetxController {
 
   void _loadingCustom() async {
     var list = ['smile', 'icon', 'normal'];
-    var onItem = (String msg) async {
+    onItem(String msg) async {
       if (list[0] == msg) {
         SmartDialog.showLoading(
           animationType: SmartAnimationType.scale,
-          builder: (_) => CustomLoading(),
+          builder: (_) => const CustomLoading(),
         );
       } else if (list[1] == msg) {
         SmartDialog.showLoading(
           animationType: SmartAnimationType.scale,
-          builder: (_) => CustomLoading(type: 1),
+          builder: (_) => const CustomLoading(type: 1),
         );
       } else if (list[2] == msg) {
-        SmartDialog.showLoading(builder: (_) => CustomLoading(type: 2));
+        SmartDialog.showLoading(builder: (_) => const CustomLoading(type: 2));
       }
 
-      await Future.delayed(Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 2));
       SmartDialog.dismiss(status: SmartStatus.loading);
-    };
+    }
 
     SmartDialog.show(
       alignment: Alignment.centerRight,
@@ -1228,9 +1264,9 @@ class SmartDialogLogic extends GetxController {
       'SmartAnimationType.scale',
       'usePenetrate',
     ];
-    var onItem = (String msg) async {
+    onItem(String msg) async {
       if (list[0] == msg) {
-        var maskWidget = Container(
+        var maskWidget = SizedBox(
           width: double.infinity,
           height: double.infinity,
           child: Opacity(
@@ -1250,9 +1286,9 @@ class SmartDialogLogic extends GetxController {
         SmartDialog.showLoading(usePenetrate: true);
       }
 
-      await Future.delayed(Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 2));
       SmartDialog.dismiss(status: SmartStatus.loading);
-    };
+    }
 
     SmartDialog.show(
       alignment: Alignment.centerLeft,
@@ -1270,21 +1306,23 @@ class SmartDialogLogic extends GetxController {
           borderRadius: BorderRadius.circular(10),
         ),
         alignment: Alignment.center,
-        child:
-            Text('easy custom dialog', style: TextStyle(color: Colors.white)),
+        child: const Text(
+          'easy custom dialog',
+          style: TextStyle(color: Colors.white),
+        ),
       );
     });
   }
 
   void _loadingDefault() async {
     SmartDialog.showLoading();
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
     SmartDialog.dismiss();
   }
 
   void _toastType() {
     var list = ['normal', 'first', 'last', 'firstAndLast'];
-    var onItem = (String msg) {
+    onItem(String msg) {
       var type = SmartToastType.normal;
       if (list[0] == msg) {
         type = SmartToastType.normal;
@@ -1299,7 +1337,7 @@ class SmartDialogLogic extends GetxController {
       SmartDialog.showToast('1', displayType: type);
       SmartDialog.showToast('2', displayType: type);
       SmartDialog.showToast('3', displayType: type);
-    };
+    }
 
     SmartDialog.show(
       alignment: Alignment.centerLeft,
@@ -1334,7 +1372,7 @@ class SmartDialogLogic extends GetxController {
         return Container(
           height: 40,
           width: 100,
-          padding: EdgeInsets.only(left: 20),
+          padding: const EdgeInsets.only(left: 20),
           decoration: BoxDecoration(
             color: Colors.black.withOpacity(0.6),
             borderRadius: BorderRadius.circular(100),
@@ -1346,7 +1384,10 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _toastCustom() async {
-    SmartDialog.showToast('', builder: (_) => CustomToast('custom toast'));
+    SmartDialog.showToast(
+      '',
+      builder: (_) => const CustomToast('custom toast'),
+    );
   }
 
   void _toastDefault() async {
