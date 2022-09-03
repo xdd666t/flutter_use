@@ -651,7 +651,7 @@ class SmartDialogLogic extends GetxController {
       if (random == 4) alignment = Alignment.bottomCenter;
       SmartDialog.showAttach(
         targetContext: null,
-        targetBuilder: (_, __) => offset,
+        targetBuilder: (Offset targetOffset, Size targetSize) => offset,
         usePenetrate: true,
         clickMaskDismiss: false,
         alignment: alignment,
