@@ -78,53 +78,63 @@ Widget _customGlobalWidget(Widget? child) {
   );
 }
 
-// class TestPage extends StatefulWidget {
+// class TestPage extends StatelessWidget {
 //   const TestPage({Key? key}) : super(key: key);
 //
 //   @override
-//   State<TestPage> createState() => _TestPageState();
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Container(
+//         alignment: Alignment.center,
+//         child: ElevatedButton(
+//           onPressed: () => _onTap(context),
+//           child: const Text("弹窗"),
+//         ),
+//       ),
+//     );
+//   }
+//
+//   void _onTap(BuildContext context) {
+//     SmartDialog.show(
+//       onDismiss: () => FocusScope.of(context).requestFocus(),
+//       builder: (_) => const TestDialog(),
+//     );
+//   }
 // }
 //
-// class _TestPageState extends State<TestPage> {
-//   late double _opacity;
+// class TestDialog extends StatefulWidget {
+//   const TestDialog({Key? key}) : super(key: key);
+//
+//   @override
+//   State<TestDialog> createState() => _TestDialogState();
+// }
+//
+// class _TestDialogState extends State<TestDialog> {
+//   final _focusNode = FocusNode();
 //
 //   @override
 //   void initState() {
-//     super.initState();
-//     _opacity = 0;
-//     test();
-//   }
+//     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+//       _focusNode.requestFocus();
+//     });
 //
-//   void test() async {
-//     await Future.delayed(Duration(seconds: 5));
-//     _opacity = 1;
-//     setState(() {});
-//     await Future.delayed(Duration(seconds: 5));
-//     _opacity = 0;
-//     setState(() {});
-//     await Future.delayed(Duration(seconds: 5));
-//     _opacity = 1;
-//     setState(() {});
+//     super.initState();
 //   }
 //
 //   @override
 //   Widget build(BuildContext context) {
-//     return Container(
-//       color: Colors.blue.withOpacity(0.9),
-//       alignment: Alignment.center,
-//       child: AnimatedOpacity(
-//         opacity: _opacity,
-//         duration: Duration(seconds: 3),
-//         child: Container(
-//           height: 500,
-//           width: 500,
-//           child: ClipRRect(
-//             child: BackdropFilter(
-//               filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
-//               child: Container(color: Colors.black.withOpacity(0.3)),
-//             ),
-//           ),
+//     return AnimatedPadding(
+//       padding: MediaQuery.of(context).viewInsets,
+//       duration: const Duration(milliseconds: 100),
+//       child: Container(
+//         height: 100,
+//         width: 300,
+//         decoration: BoxDecoration(
+//           color: Colors.white,
+//           borderRadius: BorderRadius.circular(10),
 //         ),
+//         alignment: Alignment.center,
+//         child: TextField(focusNode: _focusNode),
 //       ),
 //     );
 //   }
