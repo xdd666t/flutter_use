@@ -34,9 +34,9 @@ class MainState {
     isScale = false;
     //PageView页面
     pageList = [
-      KeepAlivePage(FunctionPage()),
-      KeepAlivePage(ExamplePage()),
-      KeepAlivePage(SettingPage()),
+      const KeepAlivePage(child: FunctionPage()),
+      KeepAlivePage(child: ExamplePage()),
+      const KeepAlivePage(child: SettingPage()),
     ];
     //item栏目
     itemList = [

@@ -19,7 +19,11 @@ class SmartDialogState {
           BtnInfo(title: 'bindPage', tag: SmartTag.dialogBindPage),
           BtnInfo(title: 'carryResult', tag: SmartTag.dialogCarryResult),
           BtnInfo(title: 'permanent', tag: SmartTag.dialogPermanent),
-          BtnInfo(title: 'animationBuilder', tag: SmartTag.dialogAnimationBuilder),
+          BtnInfo(
+            title: 'animationBuilder',
+            tag: SmartTag.dialogAnimationBuilder,
+          ),
+          BtnInfo(title: 'bindWidget', tag: SmartTag.dialogBindWidget),
         ],
       ),
 
@@ -84,6 +88,7 @@ class SmartTag {
   static const String dialogCarryResult = 'dialogCarryResult';
   static const String dialogPermanent = 'dialogPermanent';
   static const String dialogAnimationBuilder = 'dialogAnimationBuilder';
+  static const String dialogBindWidget = 'dialogBindWidget';
 
   /// attach
   static const String attachLocation = 'attachLocation';

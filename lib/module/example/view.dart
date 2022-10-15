@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import 'widget/tree_items.dart';
 
 class ExamplePage extends StatelessWidget {
+  const ExamplePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final logic = Get.put(ExampleLogic());

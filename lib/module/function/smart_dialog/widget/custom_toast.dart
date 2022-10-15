@@ -12,8 +12,8 @@ class CustomToast extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        margin: EdgeInsets.only(bottom: 30),
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 7),
+        margin: const EdgeInsets.only(bottom: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
         decoration: BoxDecoration(
           color: randomColor(),
           borderRadius: BorderRadius.circular(100),
@@ -21,12 +21,12 @@ class CustomToast extends StatelessWidget {
         child: Row(mainAxisSize: MainAxisSize.min, children: [
           //icon
           Container(
-            margin: EdgeInsets.only(right: 15),
+            margin: const EdgeInsets.only(right: 15),
             child: Icon(Icons.add_moderator, color: randomColor()),
           ),
 
           //msg
-          Text('$msg', style: TextStyle(color: Colors.white)),
+          Text(msg, style: const TextStyle(color: Colors.white)),
         ]),
       ),
     );
@@ -34,4 +34,8 @@ class CustomToast extends StatelessWidget {
 }
 
 Color randomColor() => Color.fromRGBO(
-    Random().nextInt(256), Random().nextInt(256), Random().nextInt(256), 1);
+      Random().nextInt(256),
+      Random().nextInt(256),
+      Random().nextInt(256),
+      1,
+    );
