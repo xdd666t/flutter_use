@@ -568,6 +568,7 @@ class SmartDialogLogic extends GetxController {
       SmartDialog.showAttach(
         targetContext: context,
         usePenetrate: true,
+        nonAnimationTypes: [SmartNonAnimationType.maskClose_nonAnimation],
         builder: (_) {
           return Container(
             margin: const EdgeInsets.all(10),
@@ -853,7 +854,10 @@ class SmartDialogLogic extends GetxController {
               color: randomColor(),
               boxShadow: [
                 BoxShadow(
-                    color: randomColor(), blurRadius: 8, spreadRadius: 0.2)
+                  color: randomColor(),
+                  blurRadius: 8,
+                  spreadRadius: 0.2,
+                )
               ],
             ),
           );
@@ -1276,6 +1280,7 @@ class SmartDialogLogic extends GetxController {
       alignment: Alignment.centerRight,
       usePenetrate: true,
       clickMaskDismiss: false,
+      bindPage: false,
       builder: (_) {
         return Container(
           width: 80,
