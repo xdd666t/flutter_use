@@ -23,7 +23,7 @@ class SmartDialogPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: TreeItems(
         data: state.trees,
-        onItem: (String tag) => logic.showFun(tag),
+        onItem: (String tag) => logic.showFun(context, tag),
       ),
     );
   }

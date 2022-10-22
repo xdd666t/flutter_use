@@ -16,7 +16,7 @@ class SmartDialogLogic extends GetxController {
   final state = SmartDialogState();
 
   ///测试功能模块
-  void showFun(tag) async {
+  void showFun(BuildContext context, String tag) async {
     switch (tag) {
 
       ///dialog
@@ -39,7 +39,7 @@ class SmartDialogLogic extends GetxController {
         _dialogUseSystem();
         break;
       case SmartTag.dialogBindPage:
-        _dialogBindPage();
+        _dialogBindPage(context);
         break;
       case SmartTag.dialogCarryResult:
         _dialogCarryResult();
@@ -899,6 +899,7 @@ class SmartDialogLogic extends GetxController {
             appBar: AppBar(title: const Text("bindWidget")),
             body: PageView(
               controller: controller,
+              allowImplicitScrolling: true,
               children: [childPage(), childPage(), childPage()],
             ),
             bottomNavigationBar: BottomNavigationBar(
@@ -1022,7 +1023,7 @@ class SmartDialogLogic extends GetxController {
     SmartDialog.showToast("$result");
   }
 
-  void _dialogBindPage() async {
+  void _dialogBindPage(BuildContext context) async {
     var index = 0;
     Function()? showDialog;
 
