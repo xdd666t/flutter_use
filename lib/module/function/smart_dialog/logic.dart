@@ -899,7 +899,6 @@ class SmartDialogLogic extends GetxController {
             appBar: AppBar(title: const Text("bindWidget")),
             body: PageView(
               controller: controller,
-              allowImplicitScrolling: true,
               children: [childPage(), childPage(), childPage()],
             ),
             bottomNavigationBar: BottomNavigationBar(
