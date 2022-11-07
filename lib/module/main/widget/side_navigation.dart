@@ -93,7 +93,7 @@ class SideNavigation extends StatelessWidget {
           ],
           image: const DecorationImage(
             image: NetworkImage(
-              "https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220103124847.jpg",
+              "https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220103124847.jpg",
             ),
             fit: BoxFit.cover,
           ),

@@ -49,13 +49,13 @@ class _CustomLoadingState extends State<CustomLoading>
         alignment: Alignment.center,
         turns: _controller,
         child: Image.network(
-          'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211101174606.png',
+          'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20211101174606.png',
           height: 110,
           width: 110,
         ),
       ),
       Image.network(
-        'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211101181404.png',
+        'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20211101181404.png',
         height: 60,
         width: 60,
       ),
@@ -65,7 +65,7 @@ class _CustomLoadingState extends State<CustomLoading>
   Widget _buildLoadingTwo() {
     return Stack(alignment: Alignment.center, children: [
       Image.network(
-        'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211101162946.png',
+        'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20211101162946.png',
         height: 50,
         width: 50,
       ),
@@ -73,7 +73,7 @@ class _CustomLoadingState extends State<CustomLoading>
         alignment: Alignment.center,
         turns: _controller,
         child: Image.network(
-          'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211101173708.png',
+          'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20211101173708.png',
           height: 80,
           width: 80,
         ),
@@ -96,7 +96,7 @@ class _CustomLoadingState extends State<CustomLoading>
             alignment: Alignment.center,
             turns: _controller,
             child: Image.network(
-              'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211101163010.png',
+              'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20211101163010.png',
               height: 50,
               width: 50,
             ),

@@ -108,7 +108,7 @@
 - 因为引用了：window_size 依赖，可能会导致编译运行报错（window上），进行下述设置即可解决
   - Window 10系统：设置 -> 更新和安全 -> 开发者选项 -> 开发人员模式：从任意元（包括松散文件）安装应用 -> 开启即可
 
-![image-20210309154335161](https://cdn.jsdelivr.net/gh/CNAD666/MyData/pic/flutter/blog/20210309154345.png)
+![image-20210309154335161](https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20210309154345.png)
 
 # 打包操作
 

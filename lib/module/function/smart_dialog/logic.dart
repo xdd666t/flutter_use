@@ -149,9 +149,7 @@ class SmartDialogLogic extends GetxController {
                 topRight: Radius.circular(left ? 20 : 0),
                 bottomRight: Radius.circular(left ? 20 : 0),
               ),
-              boxShadow: const [
-                BoxShadow(color: Colors.blue, blurRadius: 8, spreadRadius: 0.2)
-              ],
+              boxShadow: const [BoxShadow(color: Colors.blue, blurRadius: 8, spreadRadius: 0.2)],
             ),
             child: Image.network(url),
           );
@@ -162,33 +160,28 @@ class SmartDialogLogic extends GetxController {
 
     await targetDialog(
       target: const Offset(0, 100),
-      url:
-          'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220104101555.jpeg',
+      url: 'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104101555.jpeg',
       left: true,
     );
 
     await targetDialog(
       target: const Offset(0, 220),
-      url:
-          'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220104101608.jpg',
+      url: 'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104101608.jpg',
       left: true,
     );
     await targetDialog(
       target: const Offset(0, 340),
-      url:
-          'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220104110204.png',
+      url: 'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104110204.png',
       left: true,
     );
     await targetDialog(
       target: const Offset(0, 460),
-      url:
-          'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220104110147.png',
+      url: 'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104110147.png',
       left: true,
     );
     await targetDialog(
       target: Offset(MediaQuery.of(Get.context!).size.width, 580),
-      url:
-          'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220104101304.gif',
+      url: 'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104101304.gif',
       left: false,
     );
   }
@@ -393,9 +386,7 @@ class SmartDialogLogic extends GetxController {
         onTap: onTap,
         child: Container(
           decoration: const BoxDecoration(
-            boxShadow: [
-              BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)
-            ],
+            boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)],
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
@@ -413,7 +404,7 @@ class SmartDialogLogic extends GetxController {
         return point(
           onTap: () => guideA(context),
           url:
-              'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220103124847.jpg',
+              'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220103124847.jpg',
         );
       }),
     );
@@ -425,7 +416,7 @@ class SmartDialogLogic extends GetxController {
         return point(
           onTap: () => guideB(context),
           url:
-              'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20220103124847.jpg',
+              'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220103124847.jpg',
         );
       }),
     );
@@ -572,9 +563,8 @@ class SmartDialogLogic extends GetxController {
         builder: (_) {
           return Container(
             margin: const EdgeInsets.all(10),
-            decoration: const BoxDecoration(boxShadow: [
-              BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)
-            ]),
+            decoration: const BoxDecoration(
+                boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)]),
             child: Column(
               children: List.generate(list.length, (index) {
                 return Material(
@@ -703,8 +693,7 @@ class SmartDialogLogic extends GetxController {
         usePenetrate: true,
         alignment: alignment,
         clickMaskDismiss: false,
-        builder: (_) =>
-            Container(width: 100, height: 100, color: randomColor()),
+        builder: (_) => Container(width: 100, height: 100, color: randomColor()),
       );
       await Future.delayed(const Duration(milliseconds: 350));
     }
@@ -810,7 +799,7 @@ class SmartDialogLogic extends GetxController {
                 // content
                 const Text('鄙人日夜钻研下面秘籍，终于成功钓到富婆'),
                 Image.network(
-                  'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211102213746.jpeg',
+                  'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20211102213746.jpeg',
                   height: 200,
                   width: 400,
                 ),
@@ -961,9 +950,7 @@ class SmartDialogLogic extends GetxController {
                 topLeft: Radius.circular(15),
                 bottomLeft: Radius.circular(15),
               ),
-              boxShadow: [
-                BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2)
-              ],
+              boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2)],
             ),
             child: const Text('permanent dialog'),
           );
@@ -1213,8 +1200,7 @@ class SmartDialogLogic extends GetxController {
     // display
     SmartDialog.show(
       alignment: Alignment.center,
-      builder: (_) =>
-          OtherTrick(onUpdate: (VoidCallback onInvoke) => callback = onInvoke),
+      builder: (_) => OtherTrick(onUpdate: (VoidCallback onInvoke) => callback = onInvoke),
     );
 
     await Future.delayed(const Duration(milliseconds: 500));
@@ -1245,12 +1231,10 @@ class SmartDialogLogic extends GetxController {
         keepSingle: keepSingle,
         builder: (_) {
           return Container(
-            width: alignment == Alignment.bottomCenter ||
-                    alignment == Alignment.topCenter
+            width: alignment == Alignment.bottomCenter || alignment == Alignment.topCenter
                 ? double.infinity
                 : 100,
-            height: alignment == Alignment.bottomCenter ||
-                    alignment == Alignment.topCenter
+            height: alignment == Alignment.bottomCenter || alignment == Alignment.topCenter
                 ? 100
                 : double.infinity,
             color: randomColor(),
@@ -1299,8 +1283,7 @@ class SmartDialogLogic extends GetxController {
     }) async {
       SmartDialog.show(
         alignment: alignment,
-        builder: (_) =>
-            Container(width: width, height: height, color: randomColor()),
+        builder: (_) => Container(width: width, height: height, color: randomColor()),
       );
       await Future.delayed(const Duration(milliseconds: 500));
     }
@@ -1368,7 +1351,7 @@ class SmartDialogLogic extends GetxController {
           child: Opacity(
             opacity: 0.6,
             child: Image.network(
-              'https://cdn.jsdelivr.net/gh/xdd666t/MyData@master/pic/flutter/blog/20211101103911.jpeg',
+              'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20211101103911.jpeg',
               fit: BoxFit.fill,
             ),
           ),
@@ -1488,5 +1471,7 @@ class SmartDialogLogic extends GetxController {
 
   void _toastDefault() async {
     SmartDialog.showToast('test toast');
+    await Future.delayed(const Duration(milliseconds: 200));
+    Get.to(() => const Scaffold(body: Center(child: Text("111111"))));
   }
 }
