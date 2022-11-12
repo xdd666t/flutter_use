@@ -691,7 +691,7 @@ class SmartDialogLogic extends GetxController {
     });
   }
 
-  void _attachLocation() {
+  void _attachLocation() async {
     attachDialog(BuildContext context, AlignmentGeometry alignment) async {
       SmartDialog.showAttach(
         targetContext: context,
@@ -739,14 +739,6 @@ class SmartDialogLogic extends GetxController {
       );
     }
 
-    SmartDialog.config
-      ..custom = SmartConfigCustom()
-      ..attach = SmartConfigAttach(
-        attachAlignmentType: SmartAttachAlignmentType.inside,
-      )
-      ..loading = SmartConfigLoading()
-      ..toast = SmartConfigToast();
-
     radio() {
       var curIndex = 1;
       var list = [
@@ -778,42 +770,46 @@ class SmartDialogLogic extends GetxController {
       });
     }
 
-    SmartDialog.show(builder: (_) {
-      return Container(
-        width: 700,
-        padding: const EdgeInsets.all(50),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-        ),
-        child: SingleChildScrollView(
-          child: Wrap(alignment: WrapAlignment.spaceEvenly, children: [
-            btn(title: 'topLeft', onTap: (context) => funList[0]()),
-            btn(title: 'topCenter', onTap: (context) => funList[1]()),
-            btn(title: 'topRight', onTap: (context) => funList[2]()),
-            btn(title: 'centerLeft', onTap: (context) => funList[3]()),
-            btn(title: 'center', onTap: (context) => funList[4]()),
-            btn(title: 'centerRight', onTap: (context) => funList[5]()),
-            btn(title: 'bottomLeft', onTap: (context) => funList[6]()),
-            btn(title: 'bottomCenter', onTap: (context) => funList[7]()),
-            btn(title: 'bottomRight', onTap: (context) => funList[8]()),
-            radio(),
-            btn(
-              title: 'allOpen',
-              onTap: (_) async {
-                for (var item in funList) {
-                  await item();
-                }
-              },
-            ),
-            btn(
-              title: 'allClose',
-              onTap: (_) => SmartDialog.dismiss(status: SmartStatus.allAttach),
-            ),
-          ]),
-        ),
-      );
-    });
+    await SmartDialog.show(
+      //还原设置
+      onDismiss: () => SmartDialog.config.attach = SmartConfigAttach(),
+      builder: (_) {
+        return Container(
+          width: 700,
+          padding: const EdgeInsets.all(50),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.white,
+          ),
+          child: SingleChildScrollView(
+            child: Wrap(alignment: WrapAlignment.spaceEvenly, children: [
+              btn(title: 'topLeft', onTap: (context) => funList[0]()),
+              btn(title: 'topCenter', onTap: (context) => funList[1]()),
+              btn(title: 'topRight', onTap: (context) => funList[2]()),
+              btn(title: 'centerLeft', onTap: (context) => funList[3]()),
+              btn(title: 'center', onTap: (context) => funList[4]()),
+              btn(title: 'centerRight', onTap: (context) => funList[5]()),
+              btn(title: 'bottomLeft', onTap: (context) => funList[6]()),
+              btn(title: 'bottomCenter', onTap: (context) => funList[7]()),
+              btn(title: 'bottomRight', onTap: (context) => funList[8]()),
+              radio(),
+              btn(
+                title: 'allOpen',
+                onTap: (_) async {
+                  for (var item in funList) {
+                    await item();
+                  }
+                },
+              ),
+              btn(
+                title: 'allClose',
+                onTap: (_) => SmartDialog.dismiss(status: SmartStatus.allAttach),
+              ),
+            ]),
+          ),
+        );
+      },
+    );
   }
 
   void _otherHardClose() async {
