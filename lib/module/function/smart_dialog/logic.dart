@@ -160,28 +160,33 @@ class SmartDialogLogic extends GetxController {
 
     await targetDialog(
       target: const Offset(0, 100),
-      url: 'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104101555.jpeg',
+      url:
+          'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104101555.jpeg',
       left: true,
     );
 
     await targetDialog(
       target: const Offset(0, 220),
-      url: 'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104101608.jpg',
+      url:
+          'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104101608.jpg',
       left: true,
     );
     await targetDialog(
       target: const Offset(0, 340),
-      url: 'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104110204.png',
+      url:
+          'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104110204.png',
       left: true,
     );
     await targetDialog(
       target: const Offset(0, 460),
-      url: 'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104110147.png',
+      url:
+          'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104110147.png',
       left: true,
     );
     await targetDialog(
       target: Offset(MediaQuery.of(Get.context!).size.width, 580),
-      url: 'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104101304.gif',
+      url:
+          'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220104101304.gif',
       left: false,
     );
   }
@@ -734,6 +739,45 @@ class SmartDialogLogic extends GetxController {
       );
     }
 
+    SmartDialog.config
+      ..custom = SmartConfigCustom()
+      ..attach = SmartConfigAttach(
+        attachAlignmentType: SmartAttachAlignmentType.inside,
+      )
+      ..loading = SmartConfigLoading()
+      ..toast = SmartConfigToast();
+
+    radio() {
+      var curIndex = 1;
+      var list = [
+        SmartAttachAlignmentType.inside,
+        SmartAttachAlignmentType.center,
+        SmartAttachAlignmentType.outside
+      ];
+      return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+        return Row(
+          mainAxisSize: MainAxisSize.min,
+          children: List.generate(list.length, (index) {
+            return Row(children: [
+              if (index == 0) const Text("SmartAttachAlignmentType(  "),
+              Text("${list[index].toString()}: ".replaceAll("SmartAttachAlignmentType.", "")),
+              Radio(
+                value: index,
+                groupValue: curIndex,
+                onChanged: (value) {
+                  curIndex = value as int;
+                  SmartDialog.config.attach = SmartConfigAttach(attachAlignmentType: list[index]);
+                  setState(() {});
+                },
+              ),
+              if (index == list.length - 1) const Text(" )"),
+              const SizedBox(width: 10),
+            ]);
+          }),
+        );
+      });
+    }
+
     SmartDialog.show(builder: (_) {
       return Container(
         width: 700,
@@ -753,6 +797,7 @@ class SmartDialogLogic extends GetxController {
             btn(title: 'bottomLeft', onTap: (context) => funList[6]()),
             btn(title: 'bottomCenter', onTap: (context) => funList[7]()),
             btn(title: 'bottomRight', onTap: (context) => funList[8]()),
+            radio(),
             btn(
               title: 'allOpen',
               onTap: (_) async {
