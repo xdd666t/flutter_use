@@ -24,26 +24,30 @@ class _SideNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return _buildBg(children: [
+      // 拖拽区域
+      SizedBox(height: 20, width: double.maxFinite, child: MoveWindow()),
+
+      Expanded(
+        child: Column(children: [
+          // 头像
+          _buildHeadImage(),
+
+          // 侧边栏选项
+          _buildItems(),
+
+          // 缩放
+          _buildScale(),
+        ]),
+      ),
+    ]);
+  }
+
+  Widget _buildBg({required List<Widget> children}) {
     return Container(
       width: 120,
       color: const Color(0xFFF6F6F6),
-      child: Column(children: [
-        // 拖拽区域
-        SizedBox(height: 20, width: double.maxFinite, child: MoveWindow()),
-
-        Expanded(
-          child: Column(children: [
-            // 头像
-            _buildHeadImage(),
-
-            // 侧边栏选项
-            _buildItems(),
-
-            // 缩放
-            _buildScale(),
-          ]),
-        ),
-      ]),
+      child: Column(children: children),
     );
   }
 
@@ -86,6 +90,7 @@ class _SideNavigation extends StatelessWidget {
                                 ? activeColor
                                 : normalColor,
                           ),
+                          const SizedBox(width: 3),
                           Text(
                             item.title ?? "",
                             style: TextStyle(
@@ -94,6 +99,7 @@ class _SideNavigation extends StatelessWidget {
                                   : normalColor,
                             ),
                           ),
+                          const SizedBox(width: 7),
                         ]),
                       ),
                     )
@@ -131,8 +137,8 @@ class _SideNavigation extends StatelessWidget {
   Widget _buildHeadImage() {
     return Center(
       child: Container(
-        width: 80.dp,
-        height: 80.dp,
+        width: 75,
+        height: 75,
         padding: const EdgeInsets.all(8.0),
         margin: const EdgeInsets.only(bottom: 30),
         decoration: BoxDecoration(
