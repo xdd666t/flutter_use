@@ -52,10 +52,6 @@ dependencies:
   shared_preferences:
 # 轮播图: https://pub.dev/packages/card_swiper
   card_swiper:
-# windows打包 https://pub.dev/packages/msix
-# flutter build windows
-# flutter pub run msix:create
-  msix: 3.7.0
   # 设置桌面端: https://github.com/bitsdojo/bitsdojo_window
   bitsdojo_window: ^0.1.5
 # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
@@ -75,16 +71,20 @@ dependencies:
 #      url: 'https://github.com/alibaba/flutter_boost.git'
 #      ref: 'v3.0-null-safety-release.2'
 
-msix_config:
-  display_name: flutter use
-  publisher_display_name: xdd666
-  publisher: 小呆呆666
-  identity_name: xdd666.flutter.use
-  msix_version: 1.7.0.0
-  logo_path: images/icon.png
-  capabilities: "internetClient,location,microphone,webcam"
-  output_path: build/app_release
-  output_name: flutter_use(v1.7)
+  # windows打包 https://pub.dev/packages/msix
+  # flutter build windows
+  # flutter pub run msix:create
+#  msix: 3.7.0
+#msix_config:
+#  display_name: flutter use
+#  publisher_display_name: xdd666
+#  publisher: 小呆呆666
+#  identity_name: xdd666.flutter.use
+#  msix_version: 1.7.0.0
+#  logo_path: images/icon.png
+#  capabilities: "internetClient,location,microphone,webcam"
+#  output_path: build/app_release
+#  output_name: flutter_use(v1.7)
 
 dev_dependencies:
   flutter_test:
