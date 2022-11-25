@@ -6,9 +6,9 @@
 
 #include "generated_plugin_registrant.h"
 
-#include <window_size/window_size_plugin.h>
+#include <bitsdojo_window_windows/bitsdojo_window_plugin.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
-  WindowSizePluginRegisterWithRegistrar(
-      registry->GetRegistrarForPlugin("WindowSizePlugin"));
+  BitsdojoWindowPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("BitsdojoWindowPlugin"));
 }

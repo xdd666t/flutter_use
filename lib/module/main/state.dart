@@ -15,11 +15,8 @@ class MainState {
   ///是否缩放
   late bool isScale;
 
-  ///分类按钮数据源
-  late List<BtnInfo> list;
-
   ///Navigation的item信息
-  late List<BtnInfo> itemList;
+  late List<BtnInfo> sideItems;
 
   ///PageView页面
   late List<Widget> pageList;
@@ -35,22 +32,23 @@ class MainState {
     //PageView页面
     pageList = [
       const KeepAlivePage(child: FunctionPage()),
-      KeepAlivePage(child: ExamplePage()),
+      const KeepAlivePage(child: ExamplePage()),
       const KeepAlivePage(child: SettingPage()),
     ];
+
     //item栏目
-    itemList = [
+    sideItems = [
       BtnInfo(
         title: "功能",
-        icon: Icon(Icons.bubble_chart),
+        icon: const Icon(Icons.bubble_chart),
       ),
       BtnInfo(
         title: "范例",
-        icon: Icon(Icons.opacity),
+        icon: const Icon(Icons.opacity),
       ),
       BtnInfo(
         title: "设置",
-        icon: Icon(Icons.settings),
+        icon: const Icon(Icons.settings),
       ),
     ];
     //页面控制器

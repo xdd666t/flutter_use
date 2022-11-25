@@ -30,7 +30,6 @@ class MainLogic extends GetxController {
   void onScale(bool isScale) {
     state.isScale = !state.isScale;
     update();
-
     initWindow(scale: isScale ? 1.25 : 1.0);
   }
 }

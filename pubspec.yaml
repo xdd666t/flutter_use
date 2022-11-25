@@ -55,12 +55,9 @@ dependencies:
 # windows打包 https://pub.dev/packages/msix
 # flutter build windows
 # flutter pub run msix:create
-  msix: 3.6.2
-# 设置window窗口 https://github.com/google/flutter-desktop-embedding/tree/master/plugins/window_size
-  window_size:
-    git:
-      url: https://github.com/google/flutter-desktop-embedding.git
-      path: plugins/window_size
+  msix: 3.7.0
+  # 设置桌面端: https://github.com/bitsdojo/bitsdojo_window
+  bitsdojo_window: ^0.1.5
 # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
   flutter_smart_dialog: 4.7.1
 #  flutter_smart_dialog:

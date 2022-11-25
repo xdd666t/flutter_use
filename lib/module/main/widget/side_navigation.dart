@@ -1,87 +1,140 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_use/app/ui/auto_ui.dart';
-import 'package:flutter_use/toolkit/typedef/function.dart';
+part of "../view.dart";
 
 ///NavigationRail组件为侧边栏
-class SideNavigation extends StatelessWidget {
-  const SideNavigation({Key? key,
+class _SideNavigation extends StatelessWidget {
+  const _SideNavigation({
+    Key? key,
+    required this.data,
     required this.onItem,
-    required this.selectedIndex,
-    required this.sideItems,
-    required this.isUnfold,
     required this.onUnfold,
-    required this.isScale,
     required this.onScale,
   }) : super(key: key);
 
-  ///侧边栏item
-  final List sideItems;
+  /// 数据源
+  final MainState data;
 
   ///选择的index
-  final int selectedIndex;
   final ParamSingleCallback onItem;
 
   ///是否展开  点击展开事件
-  final bool isUnfold;
   final ParamSingleCallback<bool> onUnfold;
 
   ///缩放事件
-  final bool isScale;
   final ParamSingleCallback<bool> onScale;
 
   @override
   Widget build(BuildContext context) {
-    return NavigationRail(
-      backgroundColor: Colors.white,
-      //阴影Z轴高度
-      elevation: 3,
-      extended: isUnfold,
-      labelType: isUnfold
-          ? NavigationRailLabelType.none
-          : NavigationRailLabelType.selected,
-      //侧边栏中的item
-      destinations: sideItems.map((item) => _buildItem(item)).toList(),
-      //顶部头像
-      leading: _buildTopHead(),
-      //底部widget
-      trailing: _buildBottomTrailing(),
-      selectedIndex: selectedIndex,
-      onDestinationSelected: (int index) => onItem(index),
-    );
-  }
-
-  Widget _buildBottomTrailing() {
     return Container(
-      alignment: Alignment.bottomLeft,
-      padding: const EdgeInsets.all(20),
-      child: Wrap(direction: Axis.vertical, spacing: 20.dp, children: [
-        //展开按钮
-        // CupertinoSwitch(
-        //   value: isUnfold,
-        //   onChanged: onUnfold,
-        // ),
+      width: 120,
+      color: const Color(0xFFF6F6F6),
+      child: Column(children: [
+        // 拖拽区域
+        SizedBox(height: 20, width: double.maxFinite, child: MoveWindow()),
 
-        SizedBox(
-          width: 70.dp,
-          child: const Text('开启缩放'),
-        ),
+        Expanded(
+          child: Column(children: [
+            // 头像
+            _buildHeadImage(),
 
-        //缩放按钮
-        CupertinoSwitch(
-          value: isScale,
-          onChanged: onScale,
+            // 侧边栏选项
+            _buildItems(),
+
+            // 缩放
+            _buildScale(),
+          ]),
         ),
       ]),
     );
   }
 
-  Widget _buildTopHead() {
+  Widget _buildItems() {
+    var activeColor = Colors.blue;
+    var normalColor = Colors.black;
+    return Expanded(
+      child: Column(
+        children: List.generate(data.sideItems.length, (index) {
+          var item = data.sideItems[index];
+          return GetBuilder<MainLogic>(builder: (logic) {
+            return Container(
+              margin: const EdgeInsets.symmetric(vertical: 10),
+              child: InkWell(
+                onTap: () => onItem(index),
+                child: SizedBox(
+                  height: 50,
+                  child: Row(children: [
+                    //激活条
+                    Container(
+                      height: double.infinity,
+                      width: 5,
+                      color: data.selectedIndex == index
+                          ? activeColor
+                          : Colors.transparent,
+                    ),
+
+                    //item
+                    Expanded(
+                      child: Container(
+                        width: double.maxFinite,
+                        alignment: Alignment.center,
+                        color: data.selectedIndex == index
+                            ? Colors.white
+                            : const Color(0xFFF6F6F6),
+                        child: Row(mainAxisSize: MainAxisSize.min, children: [
+                          Icon(
+                            item.icon?.icon ?? Icons.abc,
+                            color: data.selectedIndex == index
+                                ? activeColor
+                                : normalColor,
+                          ),
+                          Text(
+                            item.title ?? "",
+                            style: TextStyle(
+                              color: data.selectedIndex == index
+                                  ? activeColor
+                                  : normalColor,
+                            ),
+                          ),
+                        ]),
+                      ),
+                    )
+                  ]),
+                ),
+              ),
+            );
+          });
+        }),
+      ),
+    );
+  }
+
+  Widget _buildScale() {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 40),
+      alignment: Alignment.center,
+      child: Wrap(direction: Axis.vertical, spacing: 15, children: [
+        const Text('开启缩放'),
+
+        //缩放按钮
+        GetBuilder<MainLogic>(builder: (logic) {
+          return CupertinoSwitch(
+            activeColor: Colors.blue,
+            trackColor: Colors.white,
+            thumbColor: Colors.white,
+            value: data.isScale,
+            onChanged: onScale,
+          );
+        }),
+      ]),
+    );
+  }
+
+  Widget _buildHeadImage() {
     return Center(
       child: Container(
         width: 80.dp,
         height: 80.dp,
-        margin: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
+        margin: const EdgeInsets.only(bottom: 30),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           boxShadow: [
@@ -97,18 +150,6 @@ class SideNavigation extends StatelessWidget {
             ),
             fit: BoxFit.cover,
           ),
-        ),
-      ),
-    );
-  }
-
-  NavigationRailDestination _buildItem(item) {
-    return NavigationRailDestination(
-      icon: item.icon,
-      label: Container(
-        padding: EdgeInsets.only(top: 10.dp),
-        child: Text(
-          item.title,
         ),
       ),
     );
