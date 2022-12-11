@@ -38,7 +38,7 @@ class AutoUi {
       // 通过context获取设备像素大小
       context: Get.context!,
       // 设计尺寸(前期是先写布局，后做pc/web尺寸适配，故此处统一处理下)
-      designSize: Size(1920 / 1.72, 1080 / 1.72),
+      designSize: const Size(1920 / 1.72, 1080 / 1.72),
     );
   }
 }

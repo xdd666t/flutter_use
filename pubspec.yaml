@@ -52,7 +52,7 @@ dependencies:
   shared_preferences:
 # 轮播图: https://pub.dev/packages/card_swiper
   card_swiper:
-  # 设置桌面端: https://github.com/bitsdojo/bitsdojo_window
+# 设置桌面端: https://github.com/bitsdojo/bitsdojo_window
   bitsdojo_window: ^0.1.5
 # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
   flutter_smart_dialog: 4.7.1

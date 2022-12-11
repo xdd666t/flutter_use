@@ -1,17 +1,12 @@
 import 'dart:io';
-import 'dart:math';
 
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/ui/auto_ui.dart';
-import 'package:get/get.dart';
 
 class InitConfig {
   static initApp(BuildContext? context) async {
-    //初始化窗口
-    await initWindow();
-
     //界面适配
     AutoUi().init();
   }

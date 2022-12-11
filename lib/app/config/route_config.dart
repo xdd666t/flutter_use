@@ -75,7 +75,7 @@ class RouteConfig {
     GetPage(name: main, page: () => MainPage()),
     GetPage(name: blCubitCounterPage, page: () => BlCubitCounterPage()),
     GetPage(name: blBlocCounterPage, page: () => BlBlocCounterPage()),
-    GetPage(name: streamPage, page: () => StreamPage()),
+    GetPage(name: streamPage, page: () => const StreamPage()),
     GetPage(name: blCustomBuilderPage, page: () => BlCustomBuilderPage()),
     GetPage(name: counterEasyCPage, page: () => CounterEasyCPage()),
     GetPage(name: testLayout, page: () => TestLayoutPage()),

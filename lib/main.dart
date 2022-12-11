@@ -8,6 +8,7 @@ import 'package:flutter_use/module/example/provider/easy_p_counter_global/logic.
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
+import 'app/config/init_config.dart';
 import 'app/config/route_config.dart';
 import 'app/helper/getx_route_observer.dart';
 import 'module/example/provider/easy_p/change_notifier_easy_p.dart';
@@ -20,21 +21,24 @@ void main() {
   // main()方法并不是在Flutter给physicalSize赋值后才运行的，
   // 这就导致部分机型性能比较好，还没赋值屏幕大小就可能启动渲染界面了。
   // 如果size为有数值，监听测量回调，在回调中runApp
-  if (window.physicalSize.isEmpty) {
-    metricsFinish() {
-      if (!window.physicalSize.isEmpty) {
-        window.onMetricsChanged = null;
-        runApp(MyApp());
-      }
+  appReady() {
+    if (!window.physicalSize.isEmpty) {
+      window.onMetricsChanged = null;
+      runApp(const MyApp());
+      initWindow();
     }
+  }
 
-    window.onMetricsChanged = metricsFinish;
+  if (window.physicalSize.isEmpty) {
+    window.onMetricsChanged = appReady;
   } else {
-    runApp(MyApp());
+    appReady();
   }
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(

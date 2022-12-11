@@ -26,7 +26,7 @@ class _SideNavigation extends StatelessWidget {
   Widget build(BuildContext context) {
     return _buildBg(children: [
       // 拖拽区域
-      SizedBox(height: 20, width: double.maxFinite, child: MoveWindow()),
+      SizedBox(height: 30, width: double.maxFinite, child: MoveWindow()),
 
       Expanded(
         child: Column(children: [

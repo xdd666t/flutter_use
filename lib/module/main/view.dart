@@ -1,7 +1,6 @@
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/module/main/logic.dart';
 import 'package:flutter_use/module/main/state.dart';
 import 'package:get/get.dart';
@@ -36,7 +35,18 @@ class MainPage extends StatelessWidget {
         Expanded(
           child: Column(children: [
             // 拖拽区域
-            SizedBox(height: 20, width: double.maxFinite, child: MoveWindow()),
+            SizedBox(
+              height: 30,
+              width: double.maxFinite,
+              child: Stack(children: [
+                MoveWindow(),
+                Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                  MinimizeWindowButton(),
+                  MaximizeWindowButton(),
+                  CloseWindowButton(),
+                ])
+              ]),
+            ),
 
             Expanded(
               child: PageView.builder(
