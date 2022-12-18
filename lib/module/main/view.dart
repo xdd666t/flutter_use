@@ -1,4 +1,3 @@
-import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/module/main/logic.dart';
@@ -33,31 +32,16 @@ class MainPage extends StatelessWidget {
 
         // Expanded占满剩下的空间
         Expanded(
-          child: Column(children: [
-            // 拖拽区域
-            SizedBox(
-              height: 30,
-              width: double.maxFinite,
-              child: Stack(children: [
-                MoveWindow(),
-                Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                  MinimizeWindowButton(),
-                  MaximizeWindowButton(),
-                  CloseWindowButton(),
-                ])
-              ]),
+          child: Container(
+            padding: const EdgeInsets.only(top: 30),
+            child: PageView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: state.pageList.length,
+              itemBuilder: (context, index) => state.pageList[index],
+              controller: state.pageController,
             ),
-
-            Expanded(
-              child: PageView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: state.pageList.length,
-                itemBuilder: (context, index) => state.pageList[index],
-                controller: state.pageController,
-              ),
-            ),
-          ]),
-        )
+          ),
+        ),
       ]),
     );
   }
