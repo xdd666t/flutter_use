@@ -33,7 +33,7 @@ class MainPage extends StatelessWidget {
         // Expanded占满剩下的空间
         Expanded(
           child: Container(
-            padding: const EdgeInsets.only(top: 30),
+            padding: const EdgeInsets.only(top: 20),
             child: PageView.builder(
               physics: const NeverScrollableScrollPhysics(),
               itemCount: state.pageList.length,
