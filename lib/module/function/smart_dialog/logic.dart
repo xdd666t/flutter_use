@@ -391,7 +391,9 @@ class SmartDialogLogic extends GetxController {
         onTap: onTap,
         child: Container(
           decoration: const BoxDecoration(
-            boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)],
+            boxShadow: [
+              BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)
+            ],
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
@@ -568,8 +570,9 @@ class SmartDialogLogic extends GetxController {
         builder: (_) {
           return Container(
             margin: const EdgeInsets.all(10),
-            decoration: const BoxDecoration(
-                boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)]),
+            decoration: const BoxDecoration(boxShadow: [
+              BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)
+            ]),
             child: Column(
               children: List.generate(list.length, (index) {
                 return Material(
@@ -698,7 +701,8 @@ class SmartDialogLogic extends GetxController {
         usePenetrate: true,
         alignment: alignment,
         clickMaskDismiss: false,
-        builder: (_) => Container(width: 100, height: 100, color: randomColor()),
+        builder: (_) =>
+            Container(width: 100, height: 100, color: randomColor()),
       );
       await Future.delayed(const Duration(milliseconds: 350));
     }
@@ -746,19 +750,22 @@ class SmartDialogLogic extends GetxController {
         SmartAttachAlignmentType.center,
         SmartAttachAlignmentType.outside
       ];
-      return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+      return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
         return Row(
           mainAxisSize: MainAxisSize.min,
           children: List.generate(list.length, (index) {
             return Row(children: [
               if (index == 0) const Text("SmartAttachAlignmentType(  "),
-              Text("${list[index].toString()}: ".replaceAll("SmartAttachAlignmentType.", "")),
+              Text("${list[index].toString()}: "
+                  .replaceAll("SmartAttachAlignmentType.", "")),
               Radio(
                 value: index,
                 groupValue: curIndex,
                 onChanged: (value) {
                   curIndex = value as int;
-                  SmartDialog.config.attach = SmartConfigAttach(attachAlignmentType: list[index]);
+                  SmartDialog.config.attach =
+                      SmartConfigAttach(attachAlignmentType: list[index]);
                   setState(() {});
                 },
               ),
@@ -803,7 +810,8 @@ class SmartDialogLogic extends GetxController {
               ),
               btn(
                 title: 'allClose',
-                onTap: (_) => SmartDialog.dismiss(status: SmartStatus.allAttach),
+                onTap: (_) =>
+                    SmartDialog.dismiss(status: SmartStatus.allAttach),
               ),
             ]),
           ),
@@ -991,7 +999,9 @@ class SmartDialogLogic extends GetxController {
                 topLeft: Radius.circular(15),
                 bottomLeft: Radius.circular(15),
               ),
-              boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2)],
+              boxShadow: [
+                BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2)
+              ],
             ),
             child: const Text('permanent dialog'),
           );
@@ -1241,7 +1251,8 @@ class SmartDialogLogic extends GetxController {
     // display
     SmartDialog.show(
       alignment: Alignment.center,
-      builder: (_) => OtherTrick(onUpdate: (VoidCallback onInvoke) => callback = onInvoke),
+      builder: (_) =>
+          OtherTrick(onUpdate: (VoidCallback onInvoke) => callback = onInvoke),
     );
 
     await Future.delayed(const Duration(milliseconds: 500));
@@ -1272,10 +1283,12 @@ class SmartDialogLogic extends GetxController {
         keepSingle: keepSingle,
         builder: (_) {
           return Container(
-            width: alignment == Alignment.bottomCenter || alignment == Alignment.topCenter
+            width: alignment == Alignment.bottomCenter ||
+                    alignment == Alignment.topCenter
                 ? double.infinity
                 : 100,
-            height: alignment == Alignment.bottomCenter || alignment == Alignment.topCenter
+            height: alignment == Alignment.bottomCenter ||
+                    alignment == Alignment.topCenter
                 ? 100
                 : double.infinity,
             color: randomColor(),
@@ -1305,12 +1318,16 @@ class SmartDialogLogic extends GetxController {
       alignment: Alignment.centerRight,
       usePenetrate: true,
       clickMaskDismiss: false,
-      bindPage: false,
+      bindPage: Random().nextBool(),
       builder: (_) {
         return Container(
           width: 80,
           height: double.infinity,
           color: randomColor(),
+          child: ElevatedButton(
+            onPressed: () => SmartDialog.dismiss(),
+            child: const Text('close'),
+          ),
         );
       },
     );
@@ -1324,7 +1341,8 @@ class SmartDialogLogic extends GetxController {
     }) async {
       SmartDialog.show(
         alignment: alignment,
-        builder: (_) => Container(width: width, height: height, color: randomColor()),
+        builder: (_) =>
+            Container(width: width, height: height, color: randomColor()),
       );
       await Future.delayed(const Duration(milliseconds: 500));
     }
