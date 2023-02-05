@@ -149,7 +149,9 @@ class SmartDialogLogic extends GetxController {
                 topRight: Radius.circular(left ? 20 : 0),
                 bottomRight: Radius.circular(left ? 20 : 0),
               ),
-              boxShadow: const [BoxShadow(color: Colors.blue, blurRadius: 8, spreadRadius: 0.2)],
+              boxShadow: const [
+                BoxShadow(color: Colors.blue, blurRadius: 8, spreadRadius: 0.2)
+              ],
             ),
             child: Image.network(url),
           );
