@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
 
 # 编译web命令
+# flutter build web --web-renderer canvaskit
 # flutter build web --web-renderer html
 # cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets
 
