@@ -27,12 +27,10 @@ dependencies:
 # 编译web命令
 # flutter build web --web-renderer canvaskit
 # flutter build web --web-renderer html
-# cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets
+# 去掉未使用icons
+# - flutter build apk
+# - cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets
 
-
-# The following adds the Cupertino Icons font to your application.
-# Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
 # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
   get: 4.6.5
 # 状态管理框架 https://pub.dev/packages/flutter_bloc
@@ -101,6 +99,11 @@ flutter:
   # To add assets to your application, add an assets section, like this:
 #  assets:
 #    - images/icon.png
+
+  fonts:
+    - family: IconFont
+      fonts:
+        - asset: assets/fonts/iconfont.ttf
 
 #deferred-components:
 #  - name: xdd666

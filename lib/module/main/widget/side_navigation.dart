@@ -40,7 +40,7 @@ class _SideNavigation extends StatelessWidget {
     return Container(
       width: 120,
       padding: const EdgeInsets.only(top: 20),
-      color: const Color(0xFFF6F6F6),
+      color: Colors.grey.withOpacity(0.12),
       child: Column(children: children),
     );
   }
@@ -54,49 +54,37 @@ class _SideNavigation extends StatelessWidget {
           var item = data.sideItems[index];
           return GetBuilder<MainLogic>(builder: (logic) {
             return Container(
-              margin: const EdgeInsets.symmetric(vertical: 10),
+              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
               child: InkWell(
                 onTap: () => onItem(index),
-                child: SizedBox(
-                  height: 50,
+                child: Container(
+                  height: 35,
+                  padding: const EdgeInsets.only(left: 12),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: data.selectedIndex == index
+                        ? activeColor.withOpacity(0.1)
+                        : null,
+                  ),
+                  alignment: Alignment.center,
                   child: Row(children: [
-                    //激活条
-                    Container(
-                      height: double.infinity,
-                      width: 5,
+                    Icon(
+                      item.icon?.icon,
                       color: data.selectedIndex == index
                           ? activeColor
-                          : Colors.transparent,
+                          : normalColor,
+                      size: 15,
                     ),
-
-                    //item
-                    Expanded(
-                      child: Container(
-                        width: double.maxFinite,
-                        alignment: Alignment.center,
+                    const SizedBox(width: 8),
+                    Text(
+                      item.title ?? "",
+                      style: TextStyle(
+                        fontSize: 13,
                         color: data.selectedIndex == index
-                            ? Colors.white
-                            : const Color(0xFFF6F6F6),
-                        child: Row(mainAxisSize: MainAxisSize.min, children: [
-                          Icon(
-                            item.icon?.icon ?? Icons.abc,
-                            color: data.selectedIndex == index
-                                ? activeColor
-                                : normalColor,
-                          ),
-                          const SizedBox(width: 3),
-                          Text(
-                            item.title ?? "",
-                            style: TextStyle(
-                              color: data.selectedIndex == index
-                                  ? activeColor
-                                  : normalColor,
-                            ),
-                          ),
-                          const SizedBox(width: 7),
-                        ]),
+                            ? activeColor
+                            : normalColor,
                       ),
-                    )
+                    ),
                   ]),
                 ),
               ),
@@ -155,3 +143,4 @@ class _SideNavigation extends StatelessWidget {
     );
   }
 }
+

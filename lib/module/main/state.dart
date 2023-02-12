@@ -5,6 +5,8 @@ import 'package:flutter_use/module/example/view.dart';
 import 'package:flutter_use/module/function/view.dart';
 import 'package:flutter_use/module/setting/view.dart';
 
+import '../../app/icon/x_icons.dart';
+
 class MainState {
   ///选择index
   late int selectedIndex;
@@ -40,15 +42,15 @@ class MainState {
     sideItems = [
       BtnInfo(
         title: "功能",
-        icon: const Icon(Icons.bubble_chart),
+        icon: const Icon(XIcons.iterate),
       ),
       BtnInfo(
         title: "范例",
-        icon: const Icon(Icons.opacity),
+        icon: const Icon(XIcons.product),
       ),
       BtnInfo(
         title: "设置",
-        icon: const Icon(Icons.settings),
+        icon: const Icon(XIcons.settings),
       ),
     ];
     //页面控制器
