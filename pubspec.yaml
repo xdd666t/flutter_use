@@ -30,6 +30,7 @@ dependencies:
 # 去掉未使用icons
 # - flutter build apk
 # - cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets
+# 资源hash: flutter pub run flutter_web_optimizer optimize
 
 # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
   get: 4.6.5
@@ -38,7 +39,7 @@ dependencies:
 # 状态管理框架 https://pub.dev/packages/provider
   provider:
 # 网络请求 https://pub.flutter-io.cn/packages/dio
-  dio:
+  dio: 5.0.1
 # https://pub.flutter-io.cn/packages/logger
   logger:
 # 时间滚轮选择器 https://pub.dev/packages/flutter_picker
@@ -57,22 +58,21 @@ dependencies:
   card_swiper:
 # 设置桌面端: https://pub.dev/packages/window_manager
   window_manager: 0.3.0
+# flutter_lints库：https://pub.dev/packages/flutter_lints
+  flutter_lints: ^1.0.4
 # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
-  flutter_smart_dialog: ^4.8.2+2
+  flutter_smart_dialog: ^4.9.0+1
 #  flutter_smart_dialog:
 #    path: ../flutter_smart_dialog
-#    flutter_smart_dialog:
-  #    git:
-  #      url: git://github.com/CNAD666/flutter_smart_dialog.git
-  #  flutter_smart_dialog:
-  #    path: F:\GitHub\flutter_smart_dialog
-  # flutter_lints库：https://pub.dev/packages/flutter_lints
-  flutter_lints: ^1.0.4
-
+# 一个命令行工具，针对flutter web加载慢和缓存问题提供了一套解决方案
+# https://pub.flutter-io.cn/packages/flutter_web_optimizer
+#  flutter_web_optimizer: ^1.1.9
+#  flutter_web_optimizer:
+#    path: ../flutter_web_optimizer
 #  flutter_boost:
 #    git:
 #      url: 'https://github.com/alibaba/flutter_boost.git'
-#      ref: 'v3.0-null-safety-release.2'
+#      ref: '4.2.0'
 
   # windows打包 https://pub.dev/packages/msix
   # flutter build windows

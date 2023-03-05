@@ -41,6 +41,18 @@ class SmartDialogState {
         ],
       ),
 
+      //Notify
+      TreeTwiceInfo(
+        title: 'Notify',
+        btnInfo: [
+          BtnInfo(title: 'success', tag: SmartTag.notifySuccess),
+          BtnInfo(title: 'failure', tag: SmartTag.notifyFailure),
+          BtnInfo(title: 'warning', tag: SmartTag.notifyWarning),
+          BtnInfo(title: 'error', tag: SmartTag.notifyError),
+          BtnInfo(title: 'alter', tag: SmartTag.notifyAlter),
+        ],
+      ),
+
       //Loading
       TreeTwiceInfo(
         title: 'Loading',
@@ -98,6 +110,13 @@ class SmartTag {
   static const String attachBusiness = 'attachBusiness';
   static const String attachGuide = 'attachGuide';
   static const String attachScalePoint = 'attachScalePoint';
+
+  /// notify
+  static const String notifySuccess = 'notifySuccess';
+  static const String notifyFailure = 'notifyFailure';
+  static const String notifyWarning = 'notifyWarning';
+  static const String notifyError = 'notifyError';
+  static const String notifyAlter = 'notifyAlter';
 
   /// loading
   static const String loadingDefault = 'loadingDefault';

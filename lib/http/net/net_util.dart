@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
+import 'package:dio/io.dart';
 
 import 'error_interceptor.dart';
 import 'net_configs.dart';
@@ -36,11 +36,11 @@ class NetUtil {
     // BaseOptions、Options、RequestOptions 都可以配置参数，优先级别依次递增，且可以根据优先级别覆盖参数
     dio.options = BaseOptions(
       // 连接超时
-      connectTimeout: NetConfig.connectTimeout,
+      connectTimeout: const Duration(milliseconds: NetConfig.connectTimeout),
       //发送超时
-      sendTimeout: NetConfig.sendTimeout,
+      sendTimeout: const Duration(milliseconds: NetConfig.sendTimeout),
       // 响应流上前后两次接受到数据的间隔，单位为毫秒。
-      receiveTimeout: NetConfig.receiveTimeout,
+      receiveTimeout: const Duration(milliseconds: NetConfig.receiveTimeout),
       // Http请求头.
       headers: {
         NetConfig.headerContentType: NetConfig.contentTypeForm,
@@ -56,7 +56,7 @@ class NetUtil {
 
     // 在调试模式下需要抓包调试，所以我们使用代理，并禁用HTTPS证书校验
     if (NetConfig.proxyEnable) {
-      (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
+      (dio.httpClientAdapter as IOHttpClientAdapter).onHttpClientCreate =
           (client) {
         client.findProxy = (uri) {
           return "PROXY ${NetConfig.proxyIp}:${NetConfig.proxyPort}";
@@ -91,9 +91,12 @@ class NetUtil {
   }) {
     //初始化默认参数
     dio.options.baseUrl = baseUrl;
-    dio.options.connectTimeout = connectTimeout ?? NetConfig.connectTimeout;
-    dio.options.sendTimeout = connectTimeout ?? NetConfig.sendTimeout;
-    dio.options.receiveTimeout = receiveTimeout ?? NetConfig.receiveTimeout;
+    dio.options.connectTimeout =
+        Duration(milliseconds: connectTimeout ?? NetConfig.connectTimeout);
+    dio.options.sendTimeout =
+        Duration(milliseconds: connectTimeout ?? NetConfig.sendTimeout);
+    dio.options.receiveTimeout =
+        Duration(milliseconds: receiveTimeout ?? NetConfig.receiveTimeout);
 
     //添加拦截器
     if (interceptors != null && interceptors.isNotEmpty) {

@@ -9,7 +9,8 @@ class ErrorInterceptor extends Interceptor {
     AppException appException = AppException.init(err);
     // 错误提示
     debugPrint('DioError===: ${appException.toString()}');
-    err.error = appException;
+
+    err.copyWith(error: {err: appException});
 
     handler.next(err);
   }
@@ -28,13 +29,13 @@ class AppException implements Exception {
     switch (error.type) {
       case DioErrorType.cancel:
         return AppException(-1, "请求取消");
-      case DioErrorType.connectTimeout:
+      case DioErrorType.connectionTimeout:
         return AppException(-1, "连接超时");
       case DioErrorType.sendTimeout:
         return AppException(-1, "请求超时");
       case DioErrorType.receiveTimeout:
         return AppException(-1, "响应超时");
-      case DioErrorType.response:
+      case DioErrorType.badResponse:
         try {
           int errCode = error.response?.statusCode ?? -1;
           switch (errCode) {

@@ -18,7 +18,6 @@ class SmartDialogLogic extends GetxController {
   ///测试功能模块
   void showFun(BuildContext context, String tag) async {
     switch (tag) {
-
       ///dialog
       case SmartTag.dialogEasy:
         _dialogEasy();
@@ -77,6 +76,23 @@ class SmartDialogLogic extends GetxController {
         _attachScalePoint();
         break;
 
+      ///notify
+      case SmartTag.notifySuccess:
+        _notifySuccess();
+        break;
+      case SmartTag.notifyFailure:
+        _notifyFailure();
+        break;
+      case SmartTag.notifyWarning:
+        _notifyWarning();
+        break;
+      case SmartTag.notifyError:
+        _notifyError();
+        break;
+      case SmartTag.notifyAlter:
+        _notifyAlter();
+        break;
+
       ///loading
       case SmartTag.loadingDefault:
         _loadingDefault();
@@ -116,6 +132,26 @@ class SmartDialogLogic extends GetxController {
         _otherHardClose();
         break;
     }
+  }
+
+  void _notifySuccess() {
+    SmartDialog.showNotify(msg: '操作成功.', notifyType: NotifyType.success);
+  }
+
+  void _notifyFailure() {
+    SmartDialog.showNotify(msg: '操作失败..', notifyType: NotifyType.failure);
+  }
+
+  void _notifyWarning() {
+    SmartDialog.showNotify(msg: '警告操作...', notifyType: NotifyType.warning);
+  }
+
+  void _notifyError() {
+    SmartDialog.showNotify(msg: '操作错误....', notifyType: NotifyType.error);
+  }
+
+  void _notifyAlter() {
+    SmartDialog.showNotify(msg: '操作提示.....', notifyType: NotifyType.alert);
   }
 
   void _attachTarget() async {
@@ -1461,17 +1497,17 @@ class SmartDialogLogic extends GetxController {
   }
 
   void _toastType() {
-    var list = ['normal', 'first', 'last', 'firstAndLast'];
+    var list = ['normal', 'last', 'onlyRefresh', 'multi'];
     onItem(String msg) {
       var type = SmartToastType.normal;
       if (list[0] == msg) {
         type = SmartToastType.normal;
       } else if (list[1] == msg) {
-        type = SmartToastType.first;
-      } else if (list[2] == msg) {
         type = SmartToastType.last;
+      } else if (list[2] == msg) {
+        type = SmartToastType.onlyRefresh;
       } else if (list[3] == msg) {
-        type = SmartToastType.firstAndLast;
+        type = SmartToastType.multi;
       }
 
       SmartDialog.showToast('1', displayType: type);
@@ -1532,7 +1568,5 @@ class SmartDialogLogic extends GetxController {
 
   void _toastDefault() async {
     SmartDialog.showToast('test toast');
-    await Future.delayed(const Duration(milliseconds: 200));
-    Get.to(() => const Scaffold(body: Center(child: Text("111111"))));
   }
 }

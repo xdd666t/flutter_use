@@ -5608,7 +5608,8 @@ dio
 
 MIT License
 
-Copyright (c) 2018 wendux
+Copyright (c) 2018 Wen Du (wendux)
+Copyright (c) 2022 The CFUG Team
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -13696,6 +13697,7 @@ logger
 MIT License
 
 Copyright (c) 2019 Simon Leier
+Copyright (c) 2023 Severin Hamader
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
