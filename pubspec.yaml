@@ -61,7 +61,7 @@ dependencies:
 # flutter_lints库：https://pub.dev/packages/flutter_lints
   flutter_lints: ^1.0.4
 # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
-  flutter_smart_dialog: ^4.9.0+1
+  flutter_smart_dialog: ^4.9.0+4
 #  flutter_smart_dialog:
 #    path: ../flutter_smart_dialog
 # 一个命令行工具，针对flutter web加载慢和缓存问题提供了一套解决方案
