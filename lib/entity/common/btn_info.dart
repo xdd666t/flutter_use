@@ -8,6 +8,7 @@ class BtnInfo {
     this.icon,
     this.bg,
     this.selected = false,
+    this.demo,
   });
 
   ///按钮名称
@@ -24,6 +25,9 @@ class BtnInfo {
 
   ///做个控制
   bool selected;
+
+  /// 该按钮功能demo
+  Widget? demo;
 
   /// jsonDecode(jsonStr) 方法中会调用实体类的这个方法。如果实体类中没有这个方法，会报错。
   Map toJson() {

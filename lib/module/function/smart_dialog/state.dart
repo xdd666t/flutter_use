@@ -1,7 +1,44 @@
 import 'package:flutter_use/entity/common/btn_info.dart';
 import 'package:flutter_use/entity/common/tree_info.dart';
+import 'package:flutter_use/widgets/other/other_hard_close.dart';
+import 'package:flutter_use/widgets/other/other_trick.dart';
+import 'package:flutter_use/widgets/show_attach/attach_dialog_business.dart';
+import 'package:flutter_use/widgets/show_attach/attach_dialog_guide.dart';
+import 'package:flutter_use/widgets/show_attach/attach_dialog_point.dart';
+import 'package:flutter_use/widgets/show_attach/attach_dialog_scale_point.dart';
+import 'package:flutter_use/widgets/show_attach/attach_dialog_target.dart';
+import 'package:flutter_use/widgets/show_loading/loading_custom.dart';
+import 'package:flutter_use/widgets/show_loading/loading_default.dart';
+import 'package:flutter_use/widgets/show_loading/loading_param.dart';
+import 'package:flutter_use/widgets/show_notify/notify_dialog_alter.dart';
+import 'package:flutter_use/widgets/show_notify/notify_dialog_error.dart';
+import 'package:flutter_use/widgets/show_notify/notify_dialog_failure.dart';
+import 'package:flutter_use/widgets/show_notify/notify_dialog_success.dart';
+import 'package:flutter_use/widgets/show_notify/notify_dialog_waring.dart';
+import 'package:flutter_use/widgets/show_toast/toast_custom.dart';
+import 'package:flutter_use/widgets/show_toast/toast_interval_time.dart';
+import 'package:flutter_use/widgets/show_toast/toast_smart.dart';
+import 'package:flutter_use/widgets/show_toast/toast_type.dart';
+
+import '../../../widgets/show/custome_dialog_animation.dart';
+import '../../../widgets/show/custome_dialog_bind_page.dart';
+import '../../../widgets/show/custome_dialog_bind_widget.dart';
+import '../../../widgets/show/custome_dialog_carry_result.dart';
+import '../../../widgets/show/custome_dialog_easy.dart';
+import '../../../widgets/show/custome_dialog_location.dart';
+import '../../../widgets/show/custome_dialog_penetrate.dart';
+import '../../../widgets/show/custome_dialog_permanent.dart';
+import '../../../widgets/show/custome_dialog_single.dart';
+import '../../../widgets/show/custome_dialog_stack.dart';
+import '../../../widgets/show/custome_dialog_system.dart';
+import '../../../widgets/show_attach/attach_dialog_imitate.dart';
+import '../../../widgets/show_attach/attach_dialog_location.dart';
+import '../../../widgets/show_loading/loading_least_time.dart';
+import '../../../widgets/show_toast/toast_default.dart';
 
 class SmartDialogState {
+  double codeOpacity = 1;
+
   late List<TreeTwiceInfo> trees;
 
   SmartDialogState() {
@@ -10,20 +47,61 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Dialog',
         btnInfo: [
-          BtnInfo(title: 'easy', tag: SmartTag.dialogEasy),
-          BtnInfo(title: 'location', tag: SmartTag.dialogLocation),
-          BtnInfo(title: 'penetrate', tag: SmartTag.dialogPenetrate),
-          BtnInfo(title: 'keepSingle', tag: SmartTag.dialogKeepSingle),
-          BtnInfo(title: 'dialogStack', tag: SmartTag.dialogStack),
-          BtnInfo(title: 'useSystem', tag: SmartTag.dialogUseSystem),
-          BtnInfo(title: 'bindPage', tag: SmartTag.dialogBindPage),
-          BtnInfo(title: 'carryResult', tag: SmartTag.dialogCarryResult),
-          BtnInfo(title: 'permanent', tag: SmartTag.dialogPermanent),
+          BtnInfo(
+            title: 'easy',
+            tag: SmartTag.dialogEasy,
+            demo: const CustomDialogEasy(),
+          ),
+          BtnInfo(
+            title: 'location',
+            tag: SmartTag.dialogLocation,
+            demo: const CustomDialogLocation(),
+          ),
+          BtnInfo(
+            title: 'penetrate',
+            tag: SmartTag.dialogPenetrate,
+            demo: const CustomDialogPenetrate(),
+          ),
+          BtnInfo(
+            title: 'keepSingle',
+            tag: SmartTag.dialogKeepSingle,
+            demo: const CustomDialogSingle(),
+          ),
+          BtnInfo(
+            title: 'dialogStack',
+            tag: SmartTag.dialogStack,
+            demo: const CustomDialogStack(),
+          ),
+          BtnInfo(
+            title: 'useSystem',
+            tag: SmartTag.dialogUseSystem,
+            demo: const CustomDialogSystem(),
+          ),
+          BtnInfo(
+            title: 'bindPage',
+            tag: SmartTag.dialogBindPage,
+            demo: const CustomDialogBindPage(),
+          ),
+          BtnInfo(
+            title: 'carryResult',
+            tag: SmartTag.dialogCarryResult,
+            demo: const CustomDialogCarryResult(),
+          ),
+          BtnInfo(
+            title: 'permanent',
+            tag: SmartTag.dialogPermanent,
+            demo: const CustomDialogPermanent(),
+          ),
           BtnInfo(
             title: 'animationBuilder',
             tag: SmartTag.dialogAnimationBuilder,
+            demo: const CustomDialogAnimation(),
           ),
-          BtnInfo(title: 'bindWidget', tag: SmartTag.dialogBindWidget),
+          BtnInfo(
+            title: 'bindWidget',
+            tag: SmartTag.dialogBindWidget,
+            demo: const CustomDialogBindWidget(),
+          ),
         ],
       ),
 
@@ -31,13 +109,41 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Attach',
         btnInfo: [
-          BtnInfo(title: 'location', tag: SmartTag.attachLocation),
-          BtnInfo(title: 'point', tag: SmartTag.attachPoint),
-          BtnInfo(title: 'target', tag: SmartTag.attachTarget),
-          BtnInfo(title: 'imitate', tag: SmartTag.attachImitate),
-          BtnInfo(title: 'business', tag: SmartTag.attachBusiness),
-          BtnInfo(title: 'guide', tag: SmartTag.attachGuide),
-          BtnInfo(title: 'scalePointBuilder', tag: SmartTag.attachScalePoint),
+          BtnInfo(
+            title: 'location',
+            tag: SmartTag.attachLocation,
+            demo: const AttachDialogLocation(),
+          ),
+          BtnInfo(
+            title: 'point',
+            tag: SmartTag.attachPoint,
+            demo: const AttachDialogPoint(),
+          ),
+          BtnInfo(
+            title: 'target',
+            tag: SmartTag.attachTarget,
+            demo: const AttachDialogTarget(),
+          ),
+          BtnInfo(
+            title: 'imitate',
+            tag: SmartTag.attachImitate,
+            demo: const AttachDialogImitate(),
+          ),
+          BtnInfo(
+            title: 'business',
+            tag: SmartTag.attachBusiness,
+            demo: const AttachDialogBusiness(),
+          ),
+          BtnInfo(
+            title: 'guide',
+            tag: SmartTag.attachGuide,
+            demo: const AttachDialogGuide(),
+          ),
+          BtnInfo(
+            title: 'scalePointBuilder',
+            tag: SmartTag.attachScalePoint,
+            demo: const AttachDialogScalePoint(),
+          ),
         ],
       ),
 
@@ -45,11 +151,31 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Notify',
         btnInfo: [
-          BtnInfo(title: 'success', tag: SmartTag.notifySuccess),
-          BtnInfo(title: 'failure', tag: SmartTag.notifyFailure),
-          BtnInfo(title: 'warning', tag: SmartTag.notifyWarning),
-          BtnInfo(title: 'error', tag: SmartTag.notifyError),
-          BtnInfo(title: 'alter', tag: SmartTag.notifyAlter),
+          BtnInfo(
+            title: 'success',
+            tag: SmartTag.notifySuccess,
+            demo: const NotifyDialogSuccess(),
+          ),
+          BtnInfo(
+            title: 'failure',
+            tag: SmartTag.notifyFailure,
+            demo: const NotifyDialogFailure(),
+          ),
+          BtnInfo(
+            title: 'warning',
+            tag: SmartTag.notifyWarning,
+            demo: const NotifyDialogWaring(),
+          ),
+          BtnInfo(
+            title: 'error',
+            tag: SmartTag.notifyError,
+            demo: const NotifyDialogError(),
+          ),
+          BtnInfo(
+            title: 'alter',
+            tag: SmartTag.notifyAlter,
+            demo: const NotifyDialogAlter(),
+          ),
         ],
       ),
 
@@ -57,10 +183,26 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Loading',
         btnInfo: [
-          BtnInfo(title: 'default', tag: SmartTag.loadingDefault),
-          BtnInfo(title: 'param', tag: SmartTag.loadingParam),
-          BtnInfo(title: 'custom', tag: SmartTag.loadingCustom),
-          BtnInfo(title: 'leastTime', tag: SmartTag.loadingLeastTime),
+          BtnInfo(
+            title: 'default',
+            tag: SmartTag.loadingDefault,
+            demo: const LoadingDefault(),
+          ),
+          BtnInfo(
+            title: 'param',
+            tag: SmartTag.loadingParam,
+            demo: const LoadingParam(),
+          ),
+          BtnInfo(
+            title: 'custom',
+            tag: SmartTag.loadingCustom,
+            demo: const LoadingCustom(),
+          ),
+          BtnInfo(
+            title: 'leastTime',
+            tag: SmartTag.loadingLeastTime,
+            demo: const LoadingLeastTime(),
+          ),
         ],
       ),
 
@@ -68,11 +210,31 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Toast',
         btnInfo: [
-          BtnInfo(title: 'default', tag: SmartTag.toastDefault),
-          BtnInfo(title: 'custom', tag: SmartTag.toastCustom),
-          BtnInfo(title: 'type', tag: SmartTag.toastType),
-          BtnInfo(title: 'smart', tag: SmartTag.toastSmart),
-          BtnInfo(title: 'intervalTime', tag: SmartTag.toastIntervalTime),
+          BtnInfo(
+            title: 'default',
+            tag: SmartTag.toastDefault,
+            demo: const ToastDefault(),
+          ),
+          BtnInfo(
+            title: 'custom',
+            tag: SmartTag.toastCustom,
+            demo: const ToastCustom(),
+          ),
+          BtnInfo(
+            title: 'type',
+            tag: SmartTag.toastType,
+            demo: const ToastType(),
+          ),
+          BtnInfo(
+            title: 'smart',
+            tag: SmartTag.toastSmart,
+            demo: const ToastSmart(),
+          ),
+          BtnInfo(
+            title: 'intervalTime',
+            tag: SmartTag.toastIntervalTime,
+            demo: const ToastIntervalTime(),
+          ),
         ],
       ),
 
@@ -80,8 +242,16 @@ class SmartDialogState {
       TreeTwiceInfo(
         title: 'Other',
         btnInfo: [
-          BtnInfo(title: 'trick', tag: SmartTag.otherTrick),
-          BtnInfo(title: 'hardClose', tag: SmartTag.otherHardClose),
+          BtnInfo(
+            title: 'trick',
+            tag: SmartTag.otherTrick,
+            demo: const OtherTrick(),
+          ),
+          BtnInfo(
+            title: 'hardClose',
+            tag: SmartTag.otherHardClose,
+            demo: const OtherHardClose(),
+          ),
         ],
       ),
     ];
