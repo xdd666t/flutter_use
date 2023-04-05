@@ -1,12 +1,15 @@
-import 'dart:io';
-
-import 'package:flutter/foundation.dart';
+import 'package:code_preview/code_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_use/module/example/widget/tree_items.dart';
 import 'package:get/get.dart';
 
+import '../../../entity/common/btn_info.dart';
+import '../../../entity/common/tree_info.dart';
 import 'logic.dart';
 import 'state.dart';
+
+part 'widget/side_bar_fold.dart';
+
+part 'widget/code_show.dart';
 
 class SmartDialogPage extends StatelessWidget {
   SmartDialogPage({Key? key}) : super(key: key);
@@ -17,14 +20,27 @@ class SmartDialogPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: kIsWeb || !Platform.isAndroid
-          ? AppBar(title: const Text('SmartDialog'))
-          : null,
+      appBar: AppBar(title: const Text('SmartDialog')),
       backgroundColor: Colors.white,
-      body: TreeItems(
-        data: state.trees,
-        onItem: (String tag) => logic.showFun(context, tag),
+      body: GetBuilder<SmartDialogLogic>(
+        builder: (logic) {
+          return Row(children: [
+            // 侧边栏
+            _SideBarFold(
+              data: state,
+              // 点击具体item
+              onItem: (item, subItem) => logic.onItem(item, subItem),
+            ),
+
+            // 内容
+            _CodeShow(data: state),
+          ]);
+        },
       ),
+      // body: TreeItems(
+      //   data: state.trees,
+      //   onItem: (String tag) => logic.showFun(context, tag),
+      // ),
     );
   }
 }

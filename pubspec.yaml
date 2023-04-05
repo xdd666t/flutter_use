@@ -24,56 +24,60 @@ dependencies:
   flutter:
     sdk: flutter
 
-# 编译web命令
-# flutter build web --web-renderer canvaskit
-# flutter build web --web-renderer html
-# 去掉未使用icons
-# - 命令行代理: export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
-# - flutter build apk
-# - cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets
-# 资源hash: flutter pub run flutter_web_optimizer optimize
+  # 编译web命令
+  # flutter build web --web-renderer canvaskit
+  # flutter build web --web-renderer html
+  # 去掉未使用icons
+  # - 命令行代理: export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+  # - flutter build apk
+  # - cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets
+  # 资源hash: flutter pub run flutter_web_optimizer optimize
 
-# getx 状态管理框架 https://pub.flutter-io.cn/packages/get
+  # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
   get: 4.6.5
-# 状态管理框架 https://pub.dev/packages/flutter_bloc
+  # 状态管理框架 https://pub.dev/packages/flutter_bloc
   flutter_bloc:
-# 状态管理框架 https://pub.dev/packages/provider
+  # 状态管理框架 https://pub.dev/packages/provider
   provider:
-# 网络请求 https://pub.flutter-io.cn/packages/dio
+  # 网络请求 https://pub.flutter-io.cn/packages/dio
   dio: 5.0.1
-# https://pub.flutter-io.cn/packages/logger
+  # https://pub.flutter-io.cn/packages/logger
   logger:
-# 时间滚轮选择器 https://pub.dev/packages/flutter_picker
+  # 时间滚轮选择器 https://pub.dev/packages/flutter_picker
   flutter_picker:
-# 图片选择器 https://pub.dev/packages/wechat_assets_picker
-#  wechat_assets_picker: 7.3.2
-# 预览图片 https://pub.dev/packages/photo_view
+  # 图片选择器 https://pub.dev/packages/wechat_assets_picker
+  #  wechat_assets_picker: 7.3.2
+  # 预览图片 https://pub.dev/packages/photo_view
   photo_view:
-# iOS数字键盘添加收起按钮 https://pub.dev/packages/keyboard_actions
+  # iOS数字键盘添加收起按钮 https://pub.dev/packages/keyboard_actions
   keyboard_actions:
-# 用于处理widget是否可见检测 https://pub.flutter-io.cn/packages/visibility_detector
+  # 用于处理widget是否可见检测 https://pub.flutter-io.cn/packages/visibility_detector
   visibility_detector:
-# 本地缓存 https://pub.flutter-io.cn/packages/shared_preferences
+  # 本地缓存 https://pub.flutter-io.cn/packages/shared_preferences
   shared_preferences:
-# 轮播图: https://pub.dev/packages/card_swiper
+  # 轮播图: https://pub.dev/packages/card_swiper
   card_swiper:
-# 设置桌面端: https://pub.dev/packages/window_manager
+  # 设置桌面端: https://pub.dev/packages/window_manager
   window_manager: 0.3.0
-# flutter_lints库：https://pub.dev/packages/flutter_lints
+  # flutter_lints库：https://pub.dev/packages/flutter_lints
   flutter_lints: ^1.0.4
-# 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
+  # https://pub.dev/packages/code_preview/install
+  code_preview: ^0.0.7
+#  code_preview:
+#    path: ../code_preview
+  # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
   flutter_smart_dialog: ^4.9.0+4
-#  flutter_smart_dialog:
-#    path: ../flutter_smart_dialog
-# 一个命令行工具，针对flutter web加载慢和缓存问题提供了一套解决方案
-# https://pub.flutter-io.cn/packages/flutter_web_optimizer
-#  flutter_web_optimizer: ^1.1.9
-#  flutter_web_optimizer:
-#    path: ../flutter_web_optimizer
-#  flutter_boost:
-#    git:
-#      url: 'https://github.com/alibaba/flutter_boost.git'
-#      ref: '4.2.0'
+  #  flutter_smart_dialog:
+  #    path: ../flutter_smart_dialog
+  # 一个命令行工具，针对flutter web加载慢和缓存问题提供了一套解决方案
+  # https://pub.flutter-io.cn/packages/flutter_web_optimizer
+  #  flutter_web_optimizer: ^1.1.9
+  #  flutter_web_optimizer:
+  #    path: ../flutter_web_optimizer
+  #  flutter_boost:
+  #    git:
+  #      url: 'https://github.com/alibaba/flutter_boost.git'
+  #      ref: '4.2.0'
 
   # windows打包 https://pub.dev/packages/msix
   # flutter build windows
@@ -98,15 +102,18 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-#  assets:
-#    - images/icon.png
+  assets:
+    - assets/
+    - lib/widgets/
+    - assets/fonts/
+    - lib/widgets/show/
+    - lib/widgets/show_attach/
+    - lib/widgets/show_notify/
 
   fonts:
     - family: IconFont
       fonts:
         - asset: assets/fonts/iconfont.ttf
 
-#deferred-components:
-#  - name: xdd666
-#    libraries:
-#      - package:flutter_use/module/main/view.dart
+code_helper:
+  auto_folder: [ "assets/", "lib/widgets/" ]
