@@ -1,6 +1,5 @@
 import 'package:code_preview/code_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_use/toolkit/utils/view_util.dart';
 import 'package:get/get.dart';
 
 import '../../../entity/common/btn_info.dart';
