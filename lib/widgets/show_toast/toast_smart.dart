@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
-import '../../toolkit/view/input/input_text.dart';
-
 class ToastSmart extends StatelessWidget {
   const ToastSmart({Key? key}) : super(key: key);
 
@@ -35,7 +33,7 @@ class ToastSmart extends StatelessWidget {
             color: Colors.black.withOpacity(0.6),
             borderRadius: BorderRadius.circular(100),
           ),
-          child: InputText(textSize: 15, hintSize: 15),
+          child: const TextField(),
         );
       },
     );

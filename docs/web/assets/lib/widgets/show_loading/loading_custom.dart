@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-
-import '../../module/function/smart_dialog/widget/custom_loading.dart';
-import '../../module/function/smart_dialog/widget/multi_handle_widget.dart';
+import 'package:flutter_use/module/function/smart_dialog/widget/custom_loading.dart';
+import 'package:flutter_use/module/function/smart_dialog/widget/multi_handle_widget.dart';
 
 var _list = ['smile', 'icon', 'normal'];
 

@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:flutter_use/app/ui/keep_alive_page.dart';
 
-import '../../app/ui/keep_alive_page.dart';
 
 Color get _randomColor {
   return Color.fromRGBO(
