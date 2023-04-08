@@ -1,6 +1,6 @@
 part of '../view.dart';
 
-class _CodeShow extends StatefulWidget {
+class _CodeShow extends StatelessWidget {
   const _CodeShow({
     Key? key,
     required this.data,
@@ -8,11 +8,6 @@ class _CodeShow extends StatefulWidget {
 
   final SmartDialogState data;
 
-  @override
-  State<_CodeShow> createState() => _CodeShowState();
-}
-
-class _CodeShowState extends State<_CodeShow> {
   @override
   Widget build(BuildContext context) {
     return _buildBg(builder: (BtnInfo item) {
@@ -47,11 +42,12 @@ class _CodeShowState extends State<_CodeShow> {
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         alignment: Alignment.topCenter,
-        child: AnimatedOpacity(
-          duration: const Duration(milliseconds: 200),
-          curve: Curves.easeIn,
-          opacity: widget.data.codeOpacity,
-          child: CodePreview(code: item.demo ?? "暂无"),
+        child: FadeTransition(
+          opacity: CurvedAnimation(
+            parent: data.codeAnimationCtl,
+            curve: Curves.easeIn,
+          ),
+          child: CodePreview(className: item.tag ?? ""),
         ),
       ),
     );
@@ -59,7 +55,7 @@ class _CodeShowState extends State<_CodeShow> {
 
   Widget _buildBg({required List<Widget> Function(BtnInfo item) builder}) {
     BtnInfo? btnInfo;
-    for (var element in widget.data.trees) {
+    for (var element in data.trees) {
       element.selected = false;
       for (var subElement in element.btnInfo) {
         if (subElement.selected) {

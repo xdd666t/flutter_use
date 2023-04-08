@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_use/entity/common/btn_info.dart';
 import 'package:flutter_use/entity/common/tree_info.dart';
 import 'package:flutter_use/widgets/other/other_hard_close.dart';
@@ -37,69 +38,71 @@ import '../../../widgets/show_loading/loading_least_time.dart';
 import '../../../widgets/show_toast/toast_default.dart';
 
 class SmartDialogState {
-  double codeOpacity = 1;
-
   late List<TreeTwiceInfo> trees;
+
+  late AnimationController codeAnimationCtl;
+
+  String urlPrefix = "/#/smartDialog?type=";
 
   SmartDialogState() {
     trees = [
       //Dialog
       TreeTwiceInfo(
-        title: 'Dialog111',
+        title: 'Dialog',
         btnInfo: [
           BtnInfo(
             title: 'easy',
-            tag: SmartTag.dialogEasy,
+            tag: 'CustomDialogEasy',
             demo: const CustomDialogEasy(),
           ),
           BtnInfo(
             title: 'location',
-            tag: SmartTag.dialogLocation,
+            tag: 'CustomDialogLocation',
             demo: const CustomDialogLocation(),
           ),
           BtnInfo(
             title: 'penetrate',
-            tag: SmartTag.dialogPenetrate,
+            tag: 'CustomDialogPenetrate',
             demo: const CustomDialogPenetrate(),
           ),
           BtnInfo(
             title: 'keepSingle',
-            tag: SmartTag.dialogKeepSingle,
+            tag: 'CustomDialogSingle',
             demo: const CustomDialogSingle(),
           ),
           BtnInfo(
             title: 'dialogStack',
-            tag: SmartTag.dialogStack,
+            tag: 'CustomDialogStack',
             demo: const CustomDialogStack(),
           ),
           BtnInfo(
             title: 'useSystem',
-            tag: SmartTag.dialogUseSystem,
+            tag: 'CustomDialogSystem',
             demo: const CustomDialogSystem(),
           ),
           BtnInfo(
             title: 'bindPage',
-            tag: SmartTag.dialogBindPage,
+            tag: 'CustomDialogBindPage',
             demo: const CustomDialogBindPage(),
           ),
           BtnInfo(
             title: 'carryResult',
-            tag: SmartTag.dialogCarryResult,
+            tag: 'CustomDialogCarryResult',
             demo: const CustomDialogCarryResult(),
           ),
           BtnInfo(
             title: 'permanent',
-            tag: SmartTag.dialogPermanent,
+            tag: 'CustomDialogPermanent',
             demo: const CustomDialogPermanent(),
           ),
           BtnInfo(
             title: 'animationBuilder',
-            tag: SmartTag.dialogAnimationBuilder,
+            tag: 'CustomDialogAnimation',
             demo: const CustomDialogAnimation(),
           ),
           BtnInfo(
             title: 'bindWidget',
-            tag: SmartTag.dialogBindWidget,
+            tag: 'CustomDialogBindWidget',
             demo: const CustomDialogBindWidget(),
           ),
         ],
@@ -111,37 +114,37 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'location',
-            tag: SmartTag.attachLocation,
+            tag: 'AttachDialogLocation',
             demo: const AttachDialogLocation(),
           ),
           BtnInfo(
             title: 'point',
-            tag: SmartTag.attachPoint,
+            tag: 'AttachDialogPoint',
             demo: const AttachDialogPoint(),
           ),
           BtnInfo(
             title: 'target',
-            tag: SmartTag.attachTarget,
+            tag: 'AttachDialogTarget',
             demo: const AttachDialogTarget(),
           ),
           BtnInfo(
             title: 'imitate',
-            tag: SmartTag.attachImitate,
+            tag: 'AttachDialogImitate',
             demo: const AttachDialogImitate(),
           ),
           BtnInfo(
             title: 'business',
-            tag: SmartTag.attachBusiness,
+            tag: 'AttachDialogBusiness',
             demo: const AttachDialogBusiness(),
           ),
           BtnInfo(
             title: 'guide',
-            tag: SmartTag.attachGuide,
+            tag: 'AttachDialogGuide',
             demo: const AttachDialogGuide(),
           ),
           BtnInfo(
             title: 'scalePointBuilder',
-            tag: SmartTag.attachScalePoint,
+            tag: 'AttachDialogScalePoint',
             demo: const AttachDialogScalePoint(),
           ),
         ],
@@ -153,27 +156,27 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'success',
-            tag: SmartTag.notifySuccess,
+            tag: 'NotifyDialogSuccess',
             demo: const NotifyDialogSuccess(),
           ),
           BtnInfo(
             title: 'failure',
-            tag: SmartTag.notifyFailure,
+            tag: 'NotifyDialogFailure',
             demo: const NotifyDialogFailure(),
           ),
           BtnInfo(
             title: 'warning',
-            tag: SmartTag.notifyWarning,
+            tag: 'NotifyDialogWaring',
             demo: const NotifyDialogWaring(),
           ),
           BtnInfo(
             title: 'error',
-            tag: SmartTag.notifyError,
+            tag: 'NotifyDialogError',
             demo: const NotifyDialogError(),
           ),
           BtnInfo(
             title: 'alter',
-            tag: SmartTag.notifyAlter,
+            tag: 'NotifyDialogAlter',
             demo: const NotifyDialogAlter(),
           ),
         ],
@@ -185,22 +188,22 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'default',
-            tag: SmartTag.loadingDefault,
+            tag: 'LoadingDefault',
             demo: const LoadingDefault(),
           ),
           BtnInfo(
             title: 'param',
-            tag: SmartTag.loadingParam,
+            tag: 'LoadingParam',
             demo: const LoadingParam(),
           ),
           BtnInfo(
             title: 'custom',
-            tag: SmartTag.loadingCustom,
+            tag: 'LoadingCustom',
             demo: const LoadingCustom(),
           ),
           BtnInfo(
             title: 'leastTime',
-            tag: SmartTag.loadingLeastTime,
+            tag: 'LoadingLeastTime',
             demo: const LoadingLeastTime(),
           ),
         ],
@@ -212,27 +215,27 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'default',
-            tag: SmartTag.toastDefault,
+            tag: 'ToastDefault',
             demo: const ToastDefault(),
           ),
           BtnInfo(
             title: 'custom',
-            tag: SmartTag.toastCustom,
+            tag: 'ToastCustom',
             demo: const ToastCustom(),
           ),
           BtnInfo(
             title: 'type',
-            tag: SmartTag.toastType,
+            tag: 'ToastType',
             demo: const ToastType(),
           ),
           BtnInfo(
             title: 'smart',
-            tag: SmartTag.toastSmart,
+            tag: 'ToastSmart',
             demo: const ToastSmart(),
           ),
           BtnInfo(
             title: 'intervalTime',
-            tag: SmartTag.toastIntervalTime,
+            tag: 'ToastIntervalTime',
             demo: const ToastIntervalTime(),
           ),
         ],
@@ -244,65 +247,16 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'trick',
-            tag: SmartTag.otherTrick,
+            tag: 'OtherTrick',
             demo: const OtherTrick(),
           ),
           BtnInfo(
             title: 'hardClose',
-            tag: SmartTag.otherHardClose,
+            tag: 'OtherHardClose',
             demo: const OtherHardClose(),
           ),
         ],
       ),
     ];
   }
-}
-
-class SmartTag {
-  /// dialog
-  static const String dialogEasy = 'dialogEasy';
-  static const String dialogLocation = 'dialogLocation';
-  static const String dialogPenetrate = 'dialogPenetrate';
-  static const String dialogKeepSingle = 'dialogKeepSingle';
-  static const String dialogStack = 'dialogStack';
-  static const String dialogUseSystem = 'dialogUseSystem';
-  static const String dialogBindPage = 'dialogBindPage';
-  static const String dialogCarryResult = 'dialogCarryResult';
-  static const String dialogPermanent = 'dialogPermanent';
-  static const String dialogAnimationBuilder = 'dialogAnimationBuilder';
-  static const String dialogBindWidget = 'dialogBindWidget';
-
-  /// attach
-  static const String attachLocation = 'attachLocation';
-  static const String attachPoint = 'attachPoint';
-  static const String attachTarget = 'attachTarget';
-  static const String attachImitate = 'attachImitate';
-  static const String attachBusiness = 'attachBusiness';
-  static const String attachGuide = 'attachGuide';
-  static const String attachScalePoint = 'attachScalePoint';
-
-  /// notify
-  static const String notifySuccess = 'notifySuccess';
-  static const String notifyFailure = 'notifyFailure';
-  static const String notifyWarning = 'notifyWarning';
-  static const String notifyError = 'notifyError';
-  static const String notifyAlter = 'notifyAlter';
-
-  /// loading
-  static const String loadingDefault = 'loadingDefault';
-  static const String loadingParam = 'loadingParam';
-  static const String loadingCustom = 'loadingCustom';
-  static const String loadingLeastTime = 'loadingLeastTime';
-
-  /// toast
-  static const String toastDefault = 'toastDefault';
-  static const String toastLocation = 'toastLocation';
-  static const String toastCustom = 'toastCustom';
-  static const String toastType = 'toastType';
-  static const String toastSmart = 'toastSmart';
-  static const String toastIntervalTime = 'toastIntervalTime';
-
-  /// other
-  static const String otherTrick = 'otherTrick';
-  static const String otherHardClose = 'otherHardClose';
 }

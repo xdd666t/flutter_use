@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
-class ViewUtil {
-  ViewUtil._();
+class ViewUtils {
+  ViewUtils._();
 
   ///界面初始化完成
   static Future<void> initFinish() async {
