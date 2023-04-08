@@ -5,16 +5,6 @@ description: A new Flutter application.
 # pub.dev using `pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
 environment:
@@ -74,21 +64,6 @@ dependencies:
   #    git:
   #      url: 'https://github.com/alibaba/flutter_boost.git'
   #      ref: '4.2.0'
-
-  # windows打包 https://pub.dev/packages/msix
-  # flutter build windows
-  # flutter pub run msix:create
-#  msix: 3.7.0
-#msix_config:
-#  display_name: flutter use
-#  publisher_display_name: xdd666
-#  publisher: 小呆呆666
-#  identity_name: xdd666.flutter.use
-#  msix_version: 1.7.0.0
-#  logo_path: images/icon.png
-#  capabilities: "internetClient,location,microphone,webcam"
-#  output_path: build/app_release
-#  output_name: flutter_use(v1.7)
 
 dev_dependencies:
   flutter_test:
