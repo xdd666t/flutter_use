@@ -1,6 +1,6 @@
 self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
 $__dart_deferred_initializers__.current=function(a,b,c,$){var A={
-aUR(){var x,w,v
+aUS(){var x,w,v
 $.aN()
 x=y.b
 w=$.bW
@@ -42,4 +42,4 @@ x(A.ada,B.ba)
 x(A.adb,B.bD)})()
 B.bj(b.typeUniverse,JSON.parse('{"rc":{"w":[],"c":[]}}'))
 var y={b:B.n("kZ")};(function constants(){C.Ta=new B.aA("\u8ba1\u6570\u5668-binding\u4f7f\u7528",null,null,null,null,null,null,null,null)})()}
-$__dart_deferred_initializers__["MZY8CLzzo/5yPe4jlVhTAchz6Gs="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["OrxzpicFUil4W0SrpAEnwwUTcaA="] = $__dart_deferred_initializers__.current

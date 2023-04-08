@@ -13,7 +13,7 @@ _.aP$=e
 _.a=null
 _.b=f
 _.c=null},aw5:function aw5(d){this.a=d},Je:function Je(){},a2J:function a2J(){this.a=$},
-aSz(){var x,w=null,v=$.aN(),u=new B.a2J()
+aSA(){var x,w=null,v=$.aN(),u=new B.a2J()
 u.a=A.b([new E.dY("Custom Animation",A.b([new E.aP("AnimationWidget","animationWidget",w,w,!1,w)],y.f))],y.a)
 x=y.h
 x=new B.zP(u,A.b([],y.y),A.cK(w,w,w,y.q,y.o),new A.bQ(x),new A.bQ(x),!1,!1)
@@ -40,10 +40,10 @@ L=c[65]
 B.zP.prototype={
 Ay(d){var x=0,w=A.E(y.b),v=this
 var $async$Ay=A.F(function(e,f){if(e===1)return A.B(f,w)
-while(true)switch(x){case 0:switch(d){case"animationWidget":v.a0E()
+while(true)switch(x){case 0:switch(d){case"animationWidget":v.a0F()
 break}return A.C(null,w)}})
 return A.D($async$Ay,w)},
-a0E(){var x=null
+a0F(){var x=null
 F.d5(x,x,x,x,x,x,new B.a2H(),x,x,x,x,x,x,x,x,y.b)}}
 B.ui.prototype={
 Y(){return new B.Vf(null,null,C.j)}}
@@ -55,7 +55,7 @@ this.ao()},
 l(){var x=this.d
 x===$&&A.a()
 x.l()
-this.a_p()},
+this.a_q()},
 t(d){var x=null,w=this.d
 w===$&&A.a()
 w=A.c3(C.r,w,x)
@@ -85,7 +85,7 @@ $S:0}
 B.a2I.prototype={
 $1(d){return this.a.c.Ay(d)},
 $S:31};(function aliases(){var x=B.Je.prototype
-x.a_p=x.l})();(function inheritance(){var x=a.mixinHard,w=a.inherit,v=a.inheritMany
+x.a_q=x.l})();(function inheritance(){var x=a.mixinHard,w=a.inherit,v=a.inheritMany
 w(B.zP,A.hL)
 v(A.ba,[B.a2H,B.a2I])
 w(B.ui,A.R)
@@ -97,4 +97,4 @@ w(B.q5,A.w)
 x(B.Je,A.fU)})()
 A.bj(b.typeUniverse,JSON.parse('{"zP":{"dl":[],"a8":[]},"ui":{"R":[],"c":[]},"Vf":{"X":["ui"]},"q5":{"w":[],"c":[]}}'))
 var y={u:A.n("zP"),h:A.n("bQ<~>"),f:A.n("l<aP>"),a:A.n("l<dY>"),l:A.n("l<c>"),y:A.n("l<~()?>"),o:A.n("L<~()>"),b:A.n("@"),q:A.n("x?")};(function constants(){D.SW=new A.aA("AnimationDemo",null,null,null,null,null,null,null,null)})()}
-$__dart_deferred_initializers__["TwVZuOJX6zTm7bVWDbqWc2pJWVw="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["I4Fkah58WrjuGq77CHCIvTyuLn0="] = $__dart_deferred_initializers__.current
