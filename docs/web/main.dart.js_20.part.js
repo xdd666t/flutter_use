@@ -12,7 +12,7 @@ A=a.updateHolder(c[44],A)
 B=c[0]
 C=c[105]
 A.aP.prototype={
-ez(){var x=this,w=new B.fs(y.a)
+ey(){var x=this,w=new B.fu(y.a)
 w.m(0,"title",x.a)
 w.m(0,"tag",x.b)
 w.m(0,"icon",x.c)
@@ -25,6 +25,6 @@ A.dY.prototype={
 gcN(d){return this.a}}
 var z=a.updateTypes([]);(function inheritance(){var x=a.inheritMany
 x(B.x,[A.aP,A.dY])})()
-var y={a:B.n("fs<@,@>")};(function constants(){C.A9=new B.aA(150,1/0,36,1/0)
+var y={a:B.n("fu<@,@>")};(function constants(){C.Aa=new B.ay(150,1/0,36,1/0)
 C.hR=new B.a0(30,30,30,30)})()}
-$__dart_deferred_initializers__["L8pq2Z1UBU1ERCDSBHUcJ4a5P2o="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["by3YafLAqB+d2Y68iXWV8spmQ8c="] = $__dart_deferred_initializers__.current
