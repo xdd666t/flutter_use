@@ -42,8 +42,8 @@ class SmartDialogLogic extends GetxController
   }
 
   void onItem(TreeTwiceInfo item, BtnInfo subItem) async{
-    SmartDialog.showToast(await rootBundle.loadString('lib/widgets/other/other_hard_close.dart'));
-    return;
+    // SmartDialog.showToast(await rootBundle.loadString('lib/widgets/other/other_hard_close.dart'));
+    // return;
     for (var element in state.trees) {
       element.selected = false;
       for (var subElement in element.btnInfo) {
