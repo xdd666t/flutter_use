@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/toolkit/utils/html_utils.dart';
 import 'package:get/get.dart';
 
@@ -39,7 +41,9 @@ class SmartDialogLogic extends GetxController
     }
   }
 
-  void onItem(TreeTwiceInfo item, BtnInfo subItem) {
+  void onItem(TreeTwiceInfo item, BtnInfo subItem) async{
+    SmartDialog.showToast(await rootBundle.loadString('lib/widgets/other/other_hard_close.dart'));
+    return;
     for (var element in state.trees) {
       element.selected = false;
       for (var subElement in element.btnInfo) {
