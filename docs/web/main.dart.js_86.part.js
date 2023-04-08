@@ -1,6 +1,6 @@
 self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
 $__dart_deferred_initializers__.current=function(a,b,c,$){var A={
-aWY(){return new A.ta(null)},
+aWX(){return new A.ta(null)},
 ta:function ta(d){this.a=d},
 akP:function akP(d){this.a=d},
 akQ:function akQ(d){this.a=d}},D,E,F,C,B,G,H,I
@@ -32,4 +32,4 @@ x(A.akP,B.ba)
 x(A.akQ,B.bD)})()
 B.bj(b.typeUniverse,JSON.parse('{"ta":{"w":[],"c":[]}}'))
 var y={e:B.n("lr"),b:B.n("@")};(function constants(){C.Sx=new B.aA("SpanOne\u8303\u4f8b",null,null,null,null,null,null,null,null)})()}
-$__dart_deferred_initializers__["dCbJ9h2Of8kgSMjkPAHIvej8tSQ="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["iEo+G25FcGt3LgQl0pN06DEnsm0="] = $__dart_deferred_initializers__.current

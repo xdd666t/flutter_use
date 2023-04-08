@@ -13,7 +13,7 @@ _.aP$=e
 _.a=null
 _.b=f
 _.c=null},aw3:function aw3(d){this.a=d},Je:function Je(){},a2I:function a2I(){this.a=$},
-aSz(){var x,w=null,v=$.aN(),u=new B.a2I()
+aSy(){var x,w=null,v=$.aN(),u=new B.a2I()
 u.a=A.b([new E.dY("Custom Animation",A.b([new E.aP("AnimationWidget","animationWidget",w,w,!1,w)],y.f))],y.a)
 x=y.h
 x=new B.zP(u,A.b([],y.y),A.cK(w,w,w,y.q,y.o),new A.bQ(x),new A.bQ(x),!1,!1)
@@ -97,4 +97,4 @@ w(B.q5,A.w)
 x(B.Je,A.fU)})()
 A.bj(b.typeUniverse,JSON.parse('{"zP":{"dl":[],"a8":[]},"ui":{"R":[],"c":[]},"Vg":{"X":["ui"]},"q5":{"w":[],"c":[]}}'))
 var y={u:A.n("zP"),h:A.n("bQ<~>"),f:A.n("l<aP>"),a:A.n("l<dY>"),l:A.n("l<c>"),y:A.n("l<~()?>"),o:A.n("L<~()>"),b:A.n("@"),q:A.n("x?")};(function constants(){D.SW=new A.aA("AnimationDemo",null,null,null,null,null,null,null,null)})()}
-$__dart_deferred_initializers__["w2XtOXRw1O5dvub3IzGhgxmInEs="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["bP/5M6fzVohmRJvJvLpTiNwp2b4="] = $__dart_deferred_initializers__.current
