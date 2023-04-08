@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_89.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/provider/custom_builder/view.dart","../../../../../../.pub-cache/hosted/pub.dev/provider-6.0.5/lib/src/provider.dart","../../../lib/module/example/provider/custom_builder/provider.dart","../../../../../SDK/flutter_sdk/packages/flutter/lib/src/foundation/change_notifier.dart"],
+  "names": ["CustomBuilderPage","CustomBuilderPage.build","CustomBuilderPage._buildPage","EasyBuilder.build","CustomBuilderPage.build.<anonymous function>","ChangeNotifier","CustomBuilderPage._buildPage.<anonymous function>","ReadContext|read","","CustomBuilderProvider","_listeners","increment"],
+  "mappings": "A;;;;;AAKMA;4B;;;;;;;;;;;;;;;;;;AAGKC;CADFA,IACLA,aAEWA,gBADDA,gBAGZA,C;GAEOC,IC0nBWA;ADvnBhBA,OAAOA,KACGA,KAAcA,sEAChBA,KAkBJA,SAhBEA,2BAMkBA,KAEbA,MAAWA,YADPA,cAIjBA,C;;CAaOC,IACIA;AACTA,OAAcA,WAChBA,C;;AE9CIC;EFOQA,IAA0BA,gBGiHLC,OHjH4BD,C;;AAC5BA;EAApBA,MAAoBA,oBAAmBA,C;;;EAW5CE;AAAMA,sCACGA,EAASA,mBACTA,gEACRA,C;;;EAIQA,aAAMA;AErBrBA;AFqBqBA,WAAoBA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "8oBAe6BO4B;4FAKdCS;mKAXyBAoB;oBAAAAAEPlCAACwH6BEO,A,A;oRH9FVCO;"
+  }
+}

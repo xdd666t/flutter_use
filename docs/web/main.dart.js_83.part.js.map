@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_83.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../../../../.pub-cache/hosted/pub.dev/provider-6.0.5/lib/src/change_notifier_provider.dart","../../../../../../.pub-cache/hosted/pub.dev/provider-6.0.5/lib/src/inherited_provider.dart","../../../../../../.pub-cache/hosted/pub.dev/provider-6.0.5/lib/src/listenable_provider.dart"],
+  "names": ["ChangeNotifierProvider","InheritedProvider","ChangeNotifierProvider._dispose","","ListenableProvider"],
+  "mappings": "A;;GAuGEA,QAAsBA;AAAtBA,gBCmjBAC,iBC1nBwBD,QFgFPA,QC0iBjBC,sBDnjBAD,aAaOA,C;GAeKE,iBACVA,KACFA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "uMA6GOGAE/EAAADwCaAiB,A,Q;QDuCbAAE/EAAADwCaAsB,A,A;"
+  }
+}

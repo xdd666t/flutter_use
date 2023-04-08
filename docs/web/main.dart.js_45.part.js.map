@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_45.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/bloc/counter_cubit/view.dart","../../../../../SDK/flutter_sdk/packages/flutter/lib/src/widgets/basic.dart","../../../lib/module/example/bloc/counter_cubit/state.dart","../../../../../../.pub-cache/hosted/pub.dev/bloc-8.1.1/lib/src/bloc_overrides.dart","../../../lib/module/example/bloc/counter_cubit/cubit.dart","../../../../../../.pub-cache/hosted/pub.dev/bloc-8.1.1/lib/src/bloc_base.dart","../../../../../../.pub-cache/hosted/pub.dev/bloc-8.1.1/lib/src/cubit.dart"],
+  "names": ["BlCubitCounterPage","BlCubitCounterPage.build","BlCubitCounterPage._buildPage","BlCubitCounterPage.build.<anonymous function>","BlCubitCounterState.init","BlocBase._blocObserver","BlocBase","BlCubitCounterPage._buildPage.<anonymous function>","BlCubitCounterState.clone","BlCubitCounterCubit.increment","","init","BlCubitCounterCubit","count","Cubit","_blocObserver","current","state","increment","clone"],
+  "mappings": "A;;;;;yBAMMA;4B;;;;;;;;;;;;;;;;;;AAGKC;CADFA,IACLA,aC+vOIA,SD7vOsBA,sBADhBA,gBAGZA,C;GAEOC,IACsBA;AAE3BA,OAAOA,KACGA,KAAcA,8CAChBA,KACGA,MACIA,2BAQSA,KAEbA,MAAWA,YADPA,cAIjBA,C;;;EAzBYC,IEVRC;CACKA;ACwCyCC;AH/BZF,OILtCA,UCsDkEG,MLjDPH,C;;AAClBA;EAAbA,IAAaA,oBAAmBA,C;;;EAW3CI,uBAEEA,EK4CAA,EHnEVA;;AFsBCA,OAAOA,6CAEEA,gEAEVA,C;;;EAIQA,GE/BbC,UF+BmBD,MKqCJE,mBHnEVD;;;AEOWD,CFPXE;AF8BcF,cAAiBA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "2lBAWaUS;4RAD2BAAILRCAFDrBDkB,AAAuBGK,A,AECRHAEiBIAADqC8BKAAAtBCO,A,A,A,A;OLjDENUILdAAEiBIAADqC8BKM,A,A,A;6GLnCjCEE;AAAMJgB;sJAORKAIvBECAFAhBTU,A,A;MFuBcQAIvBEDmB,AAAAEAFAeNiB,AAARAK,A,CEAQAI,AAAgBAO,A;"
+  }
+}

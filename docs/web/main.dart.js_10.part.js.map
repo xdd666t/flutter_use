@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_10.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../../../SDK/flutter_sdk/packages/flutter/lib/src/material/app_bar_theme.dart"],
+  "names": ["AppBarTheme"],
+  "mappings": "A;0DA6BQA;0GAoCyCA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": ""
+  }
+}

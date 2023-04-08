@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_47.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../../../../.pub-cache/hosted/pub.dev/flutter_bloc-8.1.2/lib/src/bloc_provider.dart"],
+  "names": ["BlocProvider.of"],
+  "mappings": "A;;EA0FWA,MAGNA;IAEiBA;AAAhBA,QAcJA,UAhBGA;sBAGCA;AACgBA,IAAVA,aAAgBA;AACtBA,UAAMA,gFAQDA,wQADoBA,2BAZ1BA,QAgBHA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": ""
+  }
+}

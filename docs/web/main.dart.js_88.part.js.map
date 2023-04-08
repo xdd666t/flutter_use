@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_88.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/provider/test_notifier/view.dart","../../../lib/module/example/provider/test_notifier/test_notifier_widget.dart","../../../../../SDK/flutter_sdk/packages/flutter/lib/src/widgets/framework.dart","../../../../../SDK/flutter_sdk/packages/flutter/lib/src/foundation/change_notifier.dart"],
+  "names": ["TestNotifierPage","TestNotifierWidget.createState","State","_TestNotifierState.initState","_TestNotifierState.build","_TestNotifierState._change","TestNotifierController.value","TestNotifierPage.build","ChangeNotifier","_TestNotifierState._change.<anonymous function>","TestNotifierPage.build.<anonymous function>","","_TestNotifierState","_debugLifecycleState","widget","value","TestNotifierController","_listeners"],
+  "mappings": "A;;;;;;;;;AAIMA;4B;;;;;;;;;;;;;ACUAC;CAHeA,GAAiBA,iBCo5BmBC,GDp5BCD,C;;EAKnDE,GAEIA,ICs4BOA,EAAOA,ODt4BUA;AACzBA,SACRA,C;CAGOC,IACEA,iBCg4BOA,EAAOA,EDh3BHA;AAhBlBA,oBAESA,gEAEXA,C;GAGKC,GACHA,QAASA,YACXA,C;;EASIC,aACEA,OAAoBA,MAG1BA;IAFEA;AACAA,SACFA,C;;CDxCOC,IC+BHA,2BEqF6BC;CHlH3BD;AAEJA;AACAA;AAEAA,OAAOA,KACGA,KAAcA,8DAChBA,KCZJA,qBDeoBA,KAIbA,MAAWA,YAHPA,gBAMjBA,C;;;ECOWE,GAAKA,C;;;EDbCC,GACEA,IAAXA,yCAA8BA,kBAC/BA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "8iBCWsCWkB;oBAAAAAAGhCAACi5BmDEG,A,A;6BD74BrDCS;+CAOEAI;AAAmBCG;6MDlBFJ2BC8BjBAAEqF6BMS,A,A;4HH1GpBNqB;"
+  }
+}

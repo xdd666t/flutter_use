@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_58.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/test/test_layout/view.dart","../../../lib/module/example/test/test_layout/logic.dart","../../../lib/module/example/test/test_layout/state.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/simple/list_notifier.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_instance/src/lifecycle.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_instance/src/get_instance.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_instance/src/extension_instance.dart","../../../../../SDK/flutter_sdk/packages/flutter/lib/src/widgets/basic.dart","../../../../../SDK/flutter_sdk/packages/flutter/lib/src/material/scaffold.dart","../../../lib/app/ui/show.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/simple/get_controllers.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/rx_flutter/rx_disposable.dart"],
+  "names": ["TestLayoutPage","TestLayoutPage.logic","TestLayoutLogic.state","_GetxController&DisposableInterface&ListenableMixin&ListNotifierMixin","GetLifeCycleBase.onStart","GetLifeCycleBase.onDelete","GetLifeCycle","Inst.find","TestLayoutPage.state","TestLayoutPage.build","TestLayoutPage._buildBg","TestLayoutPage.build.<anonymous function>","showSnackBar","logic","","state","TestLayoutLogic","GetxController","_updaters","_updatersGroupIds","_GetxController&DisposableInterface&ListenableMixin","DisposableInterface","onStart","_GetLifeCycle&Object&GetLifeCycleBase","onDelete","Inst|find","_buildBg","of"],
+  "mappings": "A;;;;;;;;;GAOMA,GAC0BA;ACJ1BC,WCHJC,YCoBoDC,YAGhDA,oBCfJC,YAAAC;AAyFEC;;AJ1FgCN;AAD9BA,GKgBqBO;ALhBrBP,iCKgB4CO,OC6CNC,SN3DgBR,MAFtDA,C;;;;;;;;;;;;;;;;;CAKGS,IAKqBA,kBAExBA,UAISA,aAGSA,yBANDA,sBAWjBA,MAC4BA,IAInBA,mCAHQA;AAhBnBA,OA4BOA,KACGA,KAAcA,gDAChBA,KO4sHVC,UP1sH6BD,MO0sH7BC,sBPjtHAD,C;;;EAtBqBE,IQiImBC,iBRhInBD;CQgIwFC;ACjJ3FD,CDkJHC,MCjJbD,oBACWA,uEACOA,qBTebA,C;;;EAWcA,IQoHmBC,iBRnHnBD;CQmHwFC;ACjJ3FD,CDkJHC,MCjJbD,oBACWA,wEACOA,qBT4BbA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "6RAQoCa4BAAICWCHxBCAAAADY,A,AADVAASKSAAPYuCIY,AAGhDCoB,AOfSLAAAAAACGAAAPqFbAAArEgBQAAAARY,A,AAUCUAAAAVmB,A,A,A,A,A,A,A,AA2DjBAAH7FIAa,A,A,c;GDKsDCAAAxBUAM2DNXI,A,A;iCN3D8BCAAAxBUAM2DNXO,S,M;obNnDnBY+DA+BIZU,MAAAAsB,A;mDA3BLFASjBUeiB,A;WTiBVfASjBUeU,CAAAAM,gH;kCT8BVfAS9BUeiB,A;WT8BVfAS9BUeU,CAAAAM,iH;"
+  }
+}
