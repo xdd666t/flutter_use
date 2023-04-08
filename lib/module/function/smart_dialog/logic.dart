@@ -1,3 +1,4 @@
+import 'package:code_preview/code_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
@@ -14,6 +15,10 @@ class SmartDialogLogic extends GetxController
 
   @override
   void onInit() {
+    CodePreview.config.loadStringBuilder = (String path) {
+      return rootBundle.loadString(path);
+    };
+
     state.codeAnimationCtl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 600),
@@ -41,10 +46,7 @@ class SmartDialogLogic extends GetxController
     }
   }
 
-  void onItem(TreeTwiceInfo item, BtnInfo subItem) async{
-    SmartDialog.showToast(await rootBundle.loadString("AssetManifest.json"));
-    // SmartDialog.showToast(await rootBundle.loadString('lib/widgets/other/other_hard_close.dart'));
-    return;
+  void onItem(TreeTwiceInfo item, BtnInfo subItem) async {
     for (var element in state.trees) {
       element.selected = false;
       for (var subElement in element.btnInfo) {
