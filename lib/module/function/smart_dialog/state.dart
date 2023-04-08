@@ -48,7 +48,7 @@ class SmartDialogState {
     trees = [
       //Dialog
       TreeTwiceInfo(
-        title: 'Dialog666',
+        title: 'Dialog',
         btnInfo: [
           BtnInfo(
             title: 'easy',
