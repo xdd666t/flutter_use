@@ -53,3 +53,5 @@ x(A.akV,B.bD)})()
 B.bj(b.typeUniverse,JSON.parse('{"mU":{"aF":[],"a8":[]},"tb":{"w":[],"c":[]}}'))
 var y={e:B.n("lr"),f:B.n("mU")}}
 $__dart_deferred_initializers__["n5D8uklY7QLxdMGVXmDNLdnCky4="] = $__dart_deferred_initializers__.current
+
+//# sourceMappingURL=main.dart.js_87.part.js.map

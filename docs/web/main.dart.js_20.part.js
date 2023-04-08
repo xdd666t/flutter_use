@@ -28,3 +28,5 @@ x(B.x,[A.aP,A.dY])})()
 var y={a:B.n("fu<@,@>")};(function constants(){C.Aa=new B.ay(150,1/0,36,1/0)
 C.hR=new B.a0(30,30,30,30)})()}
 $__dart_deferred_initializers__["by3YafLAqB+d2Y68iXWV8spmQ8c="] = $__dart_deferred_initializers__.current
+
+//# sourceMappingURL=main.dart.js_20.part.js.map

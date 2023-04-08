@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_76.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/getx/jump_page/jump_two/view.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_instance/src/get_instance.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_instance/src/extension_instance.dart","../../../lib/module/example/getx/jump_page/jump_two/logic.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/simple/list_notifier.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_instance/src/lifecycle.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_navigation/src/extension_navigation.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/simple/get_controllers.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/rx_flutter/rx_disposable.dart"],
+  "names": ["GetJumpTwoPage","Inst.find","GetJumpTwoPage.oneLogic","GetJumpTwoPage.twoLogic","_GetxController&DisposableInterface&ListenableMixin&ListNotifierMixin","GetLifeCycleBase.onStart","GetLifeCycleBase.onDelete","GetLifeCycle","GetJumpTwoLogic.onReady","GetNavigation.arguments","GetJumpTwoPage.build","GetJumpTwoPage.build.<anonymous function>","oneLogic","Inst|find","","twoLogic","GetJumpTwoLogic","GetxController","_updaters","_updatersGroupIds","_GetxController&DisposableInterface&ListenableMixin","DisposableInterface","onStart","_GetLifeCycle&Object&GetLifeCycleBase","onDelete","GetNavigation|get#arguments","GetNavigation|get#routing","increase"],
+  "mappings": "A;;;;;;;;;;GAMMA,GACaA,yBCgBQC;mBAAuBA;AC6CpBC;;AClExBC,WCmBgDC,YAGhDA,oBCfJC,YAAAC;AAyFEC;AL5FEP,kBAEiBA,gBAFjBA,C;;;;;;;;;;;;;;;;;;EGCCQ,GACOA;AACJA,IAANA,SGmtCqBC,MAAgBA,GA1IND;AHxkC/BA;AAEMA,SACRA,C;;CHFOE,IAGKA,kBAAcA,8CACAA,MAKPA,OAJFA;AAJfA,OAAOA,QACmBA,GASlBA,KACGA,KAAiDA,KAEtDA,KACWA,yBAOXA,KACWA,wCAX4BA,aAmB/CA,C;;;EA1BiBC,aACTA;;GACAA;AGANA,OHCKA,C;;;EAOYA,IACPA;OAAOA,qDAAmBA,IAASA,oBACxBA,gEACZA,C;;;EAKQA,IACPA;OAAOA,gDAAcA,IAASA,UACnBA,gEACZA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "8QAOuBYyBAAACAE6DOC2B,sB,A;AF5DPCAAAIDWGNrBAAIOSAAHYuCIY,AAGhDCoB,AGfSLAAAAAACGAAAHqFbAAArEgBQAAAARY,A,AAUCUAAAAVmB,A,A,A,A,A,A,A,AA2DjBAAF/FIAO,A,A,A;kBHMiBCgB;8SGALUAG0kCSCS,U;wWNhkCjBCO;"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_56.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/bloc/custom_builder/view.dart","../../../../../SDK/flutter_sdk/packages/flutter/lib/src/widgets/basic.dart","../../../../../SDK/flutter_sdk/packages/flutter/lib/src/widgets/framework.dart","../../../../../../.pub-cache/hosted/pub.dev/bloc-8.1.1/lib/src/bloc_base.dart","org-dartlang-sdk:///lib/async/broadcast_stream_controller.dart","../../../lib/module/example/bloc/custom_builder/state.dart","../../../../../../.pub-cache/hosted/pub.dev/bloc-8.1.1/lib/src/bloc_overrides.dart","../../../lib/module/example/bloc/custom_builder/cubit.dart","../../../../../../.pub-cache/hosted/pub.dev/bloc-8.1.1/lib/src/cubit.dart"],
+  "names": ["BlCustomBuilderPage","BlCustomBuilderPage.build","BlCustomBuilderPage._buildPage","BlocEasyBuilder.createState","State","_BlocEasyBuilderState.initState","_BroadcastStreamController.stream","BlocBase.stream","_BlocEasyBuilderState.build","_BlocEasyBuilderState.dispose","BlCustomBuilderPage.build.<anonymous function>","BlCustomBuilderState.init","BlocBase._blocObserver","BlocBase","BlCustomBuilderPage._buildPage.<anonymous function>","BlCustomBuilderState.clone","BlCustomBuilderCubit.increment","_BlocEasyBuilderState.initState.<anonymous function>","_BlocEasyBuilderState_initState_closure","_BlocEasyBuilderState.initState.<anonymous function>.<anonymous function>","","_BlocEasyBuilderState","_debugLifecycleState","context","_bloc","_state","state","stream","widget","init","BlCustomBuilderCubit","count","Cubit","_blocObserver","current","increment","clone"],
+  "mappings": "A;;;;;yBAQMA;4B;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAGKC;CADFA,IACLA,aC6vOIA,SD3vOsBA,sBADhBA,gBAGZA,C;GAEOC,IACsBA;AAE3BA,OAAOA,KACGA,KAAcA,kEAChBA,KAoBJA,SAlBWA,2BAQSA,KAEbA,MAAWA,YADPA,cAIjBA,C;;CAasBC,GAGlBA;AAHmCA,iBE62BgBC,GF12BnDD,gBAHmCA,OAGnCA,aAHgEA,C;;EAU/DE,iBE63BIA;CAAQA;AF53BMA,GANhBA,eAMgBA;CALhBA,IGYYA;AAGSA;AChE5BC,CJ0DED,cIwD0BE,OAlH5BD,YJ0DyBD,GAAOA;AAGxBA,MACRA,C;CAGOG,gBEg1BSA;CAAOA;MFh2BhBA;;AAiBLA,OAAcA,WAChBA,C;CAGKC,aACHA;;AACMA,SACRA,C;;;EApEYC,IKZRC;CACKA;ACwCyCC;AN7BZF,OOPtCA,UJsDkEG,MH/CNH,C;;AACnBA;EAAbA,IAAaA,oBAAmBA,C;;;EAW3CI,uBAEEA,EG0CAA,EEnEVA;;ALwBCA,OAAOA,6CAEEA,gEAEVA,C;;;EAIQA,GKjCbC,ULiCmBD,MGmCJE,mBEnEVD;;;AEOWD,CFPXE;ALgCcF,cAAiBA,C;;;EAgCRG,IAC5BA,UAASA,YACVA,C;EAF6BC,+B;;EACnBC,GAAKA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "0wBAaaoBS;iKAUEAS;wFA2B0BAe;iBAAAAAAGnCAAE02BmDEG,A,gB;OF72BhBFa;uCAWVGc;GAA3BCe;KACACI;AAAeCG;AAGCCUGM2BAACkDjBPC,A,A;cJxDVOAGM2BAOCkDjBPY,A,A;2CJhDnBQoB;AAAwBHgB;uIA7DKLAOPPSAFDtBTkB,AAAwBWK,A,AECRXACiBGAALqC8BaAAAtBCO,A,A,A,A;OH/CEdUOPbAACiBGAALqC8BaM,A,A,A;6GHjCjCPE;AAAMKgB;sJAORIAOzBECAFAhBhBU,A,A;MLyBceAOzBETmB,AAAAUAFAgBLiB,AAARAK,A,CEAOAI,AAAgBAO,A;"
+  }
+}

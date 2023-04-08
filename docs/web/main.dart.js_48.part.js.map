@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_48.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../../../../.pub-cache/hosted/pub.dev/provider-6.0.5/lib/src/provider.dart","../../../../../../.pub-cache/hosted/pub.dev/provider-6.0.5/lib/src/inherited_provider.dart","org-dartlang-sdk:///lib/_internal/js_runtime/lib/core_patch.dart"],
+  "names": ["Provider.of","Provider._inheritedElementOf","ProviderNullException","ProviderNullException.toString","ProviderNotFoundException.toString","_isSoundMode","value","runtimeType",""],
+  "mappings": "A;;EA+QWA,QAqBkBA;AAEzBA,KAKEA;WAMIA;KC4ROA;AAAeA,UD7RxBA,YACQA,WACRA,UAAMA,cE9OYA,IF8OqBA;AAEzCA,QAIJA,CADEA,eAAaA,QACfA,C;GAE2CC,MAyBNA,uBADVA;AAGYA,uBACnCA,UAwGJA,SAxGUA,QElRcA,IFkRuBA;AAG7CA,QACFA,C;GA2EAC,0BAAsDA,C;;;;;;;;CAQ/CC,IAEqBA;AAAxBA,wDAQJA,C;;;CAmBOC,IAEeA,oBAA0BA;AAA5CA,wCAoDJA,C;;;;;gBAveSC,iBAAwBA,EAAHA,qBAArBA,A",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "+OA8SoCMoB;+CAIkBCI;oIAoC1CCS;QAA4CDI;"
+  }
+}

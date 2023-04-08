@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_91.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/provider/easy_p/easy_p.dart","../../../lib/module/example/provider/easy_p/build.dart","../../../lib/module/example/provider/easy_p/change_notifier_easy_p.dart"],
+  "names": ["EasyP._getInheritedElement","EasyPBuilder.build","EasyPInheritedElement.value","EasyPNotFoundException.toString","","register","value","EasyP.register","_value"],
+  "mappings": "A;;;;GAoBMA,MAGEA,sBAFmBA;AAIvBA,WACEA,UAQJA,SARUA;AAGRA,QACFA,C;;;;;CClBOC,IDCSA,sBCARA;ADCNA;AEsCKC;ADtCLD,OAAcA,WAChBA,C;ADwBuDE;CAAhDA,IAAcA,6CAAkCA,WAAWA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "6RA0BYIS;2GCbFCsB;IAAAAQDESCAEwCFEgB,A,A;"
+  }
+}

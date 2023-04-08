@@ -1949,3 +1949,5 @@ B.aN9()
 return new B.Fh(1/w.goU(w),1/(0.05*v))})
 x($,"b2M","aPE",()=>B.aP8(0.78)/B.aP8(0.9))})()}
 $__dart_deferred_initializers__["5nY977CzoAskzFEakTh+uBhRmLE="] = $__dart_deferred_initializers__.current
+
+//# sourceMappingURL=main.dart.js_3.part.js.map

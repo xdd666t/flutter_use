@@ -343,3 +343,5 @@ E.o4=new B.a0(8,10,8,10)
 E.ca=new B.i(0,3)
 E.xU=new B.fl(8,null,null,null)})()}
 $__dart_deferred_initializers__["8EvMPGM/9VOxgZCqmQLA+hn8QCw="] = $__dart_deferred_initializers__.current
+
+//# sourceMappingURL=main.dart.js_22.part.js.map

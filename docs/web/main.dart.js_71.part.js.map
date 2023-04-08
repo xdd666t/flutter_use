@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_71.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/getx/counter_rx/view.dart","../../../lib/module/example/getx/counter_rx/logic.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_rx/src/rx_types/rx_core/rx_impl.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/simple/list_notifier.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_instance/src/lifecycle.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/rx_flutter/rx_obx_widget.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_rx/src/rx_types/rx_core/rx_num.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/simple/get_controllers.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/rx_flutter/rx_disposable.dart"],
+  "names": ["GetCounterRxPage","GetCounterRxPage.logic","GetCounterRxLogic.count","_GetxController&DisposableInterface&ListenableMixin&ListNotifierMixin","GetLifeCycleBase.onStart","GetLifeCycleBase.onDelete","GetLifeCycle","GetCounterRxPage.build","GetCounterRxPage.build.<anonymous function>","GetCounterRxLogic.increase","logic","","count","GetCounterRxLogic","IntExtension|get#obs","GetxController","_updaters","_updatersGroupIds","_GetxController&DisposableInterface&ListenableMixin","DisposableInterface","onStart","_GetLifeCycle&Object&GetLifeCycleBase","onDelete","increase","+"],
+  "mappings": "A;;;;;;;;;GAKMA,GACUA;ACJVC,WCuXaC,SCpWmCC,YAGhDA,oBCfJC,YAAAC;AAyFEC;AJ7FEN,gBACcA,gBADdA,C;;;;;;;;;;;;;;;;CAIGO,IACLA;OAAOA,KACGA,MAAoBA,OACtBA,KKsDJA,SLrDWA,0BAOSA,KAEbA,MAAWA,YADPA,iBAIjBA,C;;;EAZiBC,GACFA,iBACEA,IAAMA;AADfA,kCACqBA,6BACZA,gEAEVA,C;;;EAGUA,aAAMA,QCfFA;AKi2BnBC,OAAQA;ANl1BaD,QCfFA,KDekBA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "wQAMoBU0BAAICWCHRCAAAAES,A,AADVHAMOSAAJYuCKY,AAGhDCoB,AIfSNAAAAAACGAAAJqFbAAArEgBSAAAATY,A,AAUCWAAAAXmB,A,A,A,A,A,A,A,AA2DjBAAH/FIAO,A,A,A;gBDIcDgB;mSAOLCS;+TAQUYICfFCkB,A;QDeEDK;"
+  }
+}

@@ -42,3 +42,5 @@ var z=a.updateTypes([]);(function inheritance(){var x=a.inherit
 x(C.arc,B.S2)})()
 var y={b:A.n("~")}}
 $__dart_deferred_initializers__["4DuOyD/IVmsJYKeZw7bpa6ty49E="] = $__dart_deferred_initializers__.current
+
+//# sourceMappingURL=main.dart.js_24.part.js.map

@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_92.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/provider/easy_p_counter_global/view.dart","../../../lib/module/example/provider/easy_p/easy_p.dart","../../../lib/module/example/provider/easy_p/change_notifier_easy_p.dart","../../../lib/module/example/provider/easy_p/build.dart","../../../lib/module/example/provider/easy_p_counter_global/logic.dart"],
+  "names": ["CounterGlobalEasyPPage","CounterGlobalEasyPPage.build","EasyPInheritedElement.value","CounterGlobalEasyPPage.build.<anonymous function>","of","value","EasyP.of","_value","","increment"],
+  "mappings": "A;0DAMMA;4B;;;;;;;;;;;;CAEGC,ICAEA,yBC4CFC;;AFzCLD,OAAOA,KACGA,KAAcA,4GAChBA,KGTJA,SHUwCA,2BAOpBA,KAEbA,MAAWA,YADPA,cAIjBA,C;;;EAZ8CE;AACtCA,OAAOA,+BACEA,EAAMA,mBACNA,gEAEVA,C;;;EAGUA,aAAMA;AIfrBA;AJeqBA,WAAiBA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "qYASwBIyBCDoBCAC+C3BEiB,A,A;kIFzCFCS;4SAQUCO;"
+  }
+}

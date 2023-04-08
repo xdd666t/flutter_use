@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_74.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/getx/jump_page/jump_one/view.dart","../../../lib/module/example/getx/jump_page/jump_one/logic.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/simple/list_notifier.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_instance/src/lifecycle.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/simple/get_controllers.dart","../../../../../../.pub-cache/hosted/pub.dev/get-4.6.5/lib/get_state_manager/src/rx_flutter/rx_disposable.dart"],
+  "names": ["GetJumpOnePage","GetJumpOnePage.logic","_GetxController&DisposableInterface&ListenableMixin&ListNotifierMixin","GetLifeCycleBase.onStart","GetLifeCycleBase.onDelete","GetLifeCycle","GetJumpOneLogic.increase","GetJumpOnePage.build","GetJumpOnePage.build.<anonymous function>","logic","","GetJumpOneLogic","GetxController","_updaters","_updatersGroupIds","_GetxController&DisposableInterface&ListenableMixin","DisposableInterface","onStart","_GetLifeCycle&Object&GetLifeCycleBase","onDelete","toJumpTwo"],
+  "mappings": "A;;;;;;;;;GAIMA,GAEUA;ACFVC,WCiBgDC,YAGhDA,oBCfJC,YAAAC;AAyFEC;AH9FEL,gBAEcA,gBAFdA,C;;;;;;;;;;;;;;;GCSCM;AAEHA,UACFA,C;;CDPOC,IAGKA,kBAAcA,8CACAA,MAEPA,OADFA;AAJfA,OAAOA,QACmBA,GAMlBA,KACGA,KACIA,gCAOjBA,C;;;EAZiBC;ACLXA,KAAJA,0BAA+CA;ADK1BA,WAAiBA,C;;;EAKvBA,IACPA;OAAOA,kDAAyBA,oBACrBA,gEACZA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "sQAMoBS0BAAICWCFlBAAGKSAAFYuCGY,AAGhDCoB,AEfSJAAAAAACGAAAFqFbAAArEgBOAAAAPY,A,AAUCSAAAATmB,A,A,A,A,A,A,A,AA2DjBAAF7FIAO,A,A,A;gBDEcDgB;0eAQKWuI;"
+  }
+}

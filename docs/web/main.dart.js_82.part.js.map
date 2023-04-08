@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_82.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/module/example/provider/counter_easy/view.dart","../../../../../../.pub-cache/hosted/pub.dev/provider-6.0.5/lib/src/provider.dart","../../../lib/module/example/provider/counter_easy/provider.dart","../../../../../SDK/flutter_sdk/packages/flutter/lib/src/foundation/change_notifier.dart"],
+  "names": ["ProEasyCounterPage","ProEasyCounterPage.build","ProEasyCounterPage._buildPage","ProEasyCounterPage.build.<anonymous function>","ChangeNotifier","ProEasyCounterPage._buildPage.<anonymous function>","ReadContext|read","","ProEasyCounterProvider","_listeners","increment"],
+  "mappings": "A;;;;;AAKMA;4B;;;;;;;;;;;;;;;;AAGKC;CADFA,IACLA,aAEWA,gBADDA,gBAGZA,C;GAEOC,IC0nBWA;ADvnBhBA,OAAOA,KACGA,KAAcA,iDAChBA,KACGA,MACIA,sBAQSA,KAEbA,MAAWA,YADPA,cAIjBA,C;;AEhCIC;EFOQA,IAA0BA,gBGiHLC,OHjH6BD,C;;AAC7BA;EAApBA,MAAoBA,oBAAmBA,C;;;EAWnCE,QACPA;OAAOA,4BACWA,mBACTA,gEAEVA,C;;;;;EAIQA,aAAMA;AEvBrBA;AFuBqBA,WAAoBA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "0lBAe6BMgC;wLANWCoB;oBAAAAAEPlCAACwH6BEO,A,A;oSH5FVCO;"
+  }
+}
