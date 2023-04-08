@@ -25,14 +25,8 @@ dependencies:
     sdk: flutter
 
   # 编译web命令
-  # flutter build web --web-renderer canvaskit
-  # flutter build web --web-renderer html
-  # 去掉未使用icons
-  # - 命令行代理: export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
-  # - flutter build apk
-  # - cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets/ && cp -r ./build/web/ ./docs/
-  # -
-  # 资源hash: flutter pub run flutter_web_optimizer optimize
+  # - 代理: export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+  # - bash publish_web.sh
 
   # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
   get: 4.6.5
@@ -64,9 +58,9 @@ dependencies:
   # https://pub.dev/packages/universal_html/install
   universal_html: ^2.2.1
   # https://pub.dev/packages/code_preview/install
-  code_preview: ^0.0.9
-  #  code_preview:
-  #    path: ../code_preview
+#  code_preview: ^0.0.9
+  code_preview:
+    path: ../code_preview
   # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
   flutter_smart_dialog: ^4.9.0+5
   #  flutter_smart_dialog:
