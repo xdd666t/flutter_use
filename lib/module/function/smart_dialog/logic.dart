@@ -1,7 +1,6 @@
 import 'package:code_preview/code_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/toolkit/utils/html_utils.dart';
 import 'package:get/get.dart';
 
@@ -15,10 +14,6 @@ class SmartDialogLogic extends GetxController
 
   @override
   void onInit() {
-    CodePreview.config.loadStringBuilder = (String path) {
-      return rootBundle.loadString(path);
-    };
-
     state.codeAnimationCtl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 600),
