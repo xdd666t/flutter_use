@@ -48,7 +48,7 @@ dependencies:
   # https://pub.dev/packages/universal_html/install
   universal_html: ^2.2.1
   # https://pub.dev/packages/code_preview/install
-  code_preview: ^0.1.0
+  code_preview: ^0.1.1
 #  code_preview:
 #    path: ../code_preview
   # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
@@ -93,3 +93,5 @@ flutter:
 
 code_helper:
   auto_folder: [ "assets/", "lib/widgets/" ]
+
+
