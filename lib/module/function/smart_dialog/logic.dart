@@ -30,7 +30,10 @@ class SmartDialogLogic extends GetxController
 
   void _processLocation() {
     // 处理url定位问题
-    final uri = Uri.parse(HtmlUtils.curUrl.replaceFirst('/#', ''));
+    var url = HtmlUtils.curUrl.replaceFirst('/#/', '/');
+    url = HtmlUtils.curUrl.replaceFirst('#/', '/');
+    url = HtmlUtils.curUrl.replaceFirst('/#', '/');
+    final uri = Uri.parse(url);
     final type = uri.queryParameters['type'];
     for (var element in state.trees) {
       element.selected = false;
