@@ -38,11 +38,13 @@ import '../../../widgets/show_loading/loading_least_time.dart';
 import '../../../widgets/show_toast/toast_default.dart';
 
 class SmartDialogState {
+  static String dialogParam = "dialogType";
+
   late List<TreeTwiceInfo> trees;
 
   late AnimationController codeAnimationCtl;
 
-  String urlParam = "?dialogType=";
+  String urlParam = "?$dialogParam=";
 
   SmartDialogState() {
     trees = [

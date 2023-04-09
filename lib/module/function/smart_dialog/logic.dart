@@ -34,7 +34,7 @@ class SmartDialogLogic extends GetxController
     url = HtmlUtils.curUrl.replaceFirst('#/', '/');
     url = HtmlUtils.curUrl.replaceFirst('/#', '/');
     final uri = Uri.parse(url);
-    final type = uri.queryParameters['type'];
+    final type = uri.queryParameters[SmartDialogState.dialogParam];
     for (var element in state.trees) {
       element.selected = false;
       for (var subElement in element.btnInfo) {
