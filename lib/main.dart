@@ -3,10 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:flutter_use/app/helper/deferred_router.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubit.dart';
 import 'package:flutter_use/module/example/provider/easy_p_counter_global/logic.dart';
-import 'package:get/get.dart' deferred as deferred_get show GetMaterialApp;
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 import 'app/config/init_config.dart';
@@ -42,24 +41,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DeferredRouter(
-      future: deferred_get.loadLibrary(),
-      builder: (_) {
-        return deferred_get.GetMaterialApp(
-          initialRoute: RouteConfig.main,
-          // home: TestPage(),
-          getPages: RouteConfig.getPages,
-          navigatorObservers: [
-            FlutterSmartDialog.observer,
-            GetXRouteObserver()
-          ],
-          builder: FlutterSmartDialog.init(
-            toastBuilder: (String msg) => CustomToastWidget(msg: msg),
-            loadingBuilder: (String msg) => CustomLoadingWidget(msg: msg),
-            builder: _builder,
-          ),
-        );
-      },
+    return GetMaterialApp(
+      initialRoute: RouteConfig.main,
+      getPages: RouteConfig.getPages,
+      navigatorObservers: [FlutterSmartDialog.observer, GetXRouteObserver()],
+      builder: FlutterSmartDialog.init(
+        toastBuilder: (String msg) => CustomToastWidget(msg: msg),
+        loadingBuilder: (String msg) => CustomLoadingWidget(msg: msg),
+        builder: _builder,
+      ),
     );
   }
 }
