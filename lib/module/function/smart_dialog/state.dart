@@ -42,7 +42,7 @@ class SmartDialogState {
 
   late AnimationController codeAnimationCtl;
 
-  String urlPrefix = "/#/smartDialog?type=";
+  String urlParam = "?dialogType=";
 
   SmartDialogState() {
     trees = [

@@ -12,8 +12,8 @@ _.cp$=d
 _.aP$=e
 _.a=null
 _.b=f
-_.c=null},awa:function awa(d){this.a=d},Jg:function Jg(){},a2L:function a2L(){this.a=$},
-aSD(){var x,w=null,v=$.aN(),u=new B.a2L()
+_.c=null},awa:function awa(d){this.a=d},Jh:function Jh(){},a2L:function a2L(){this.a=$},
+aSE(){var x,w=null,v=$.aN(),u=new B.a2L()
 u.a=A.b([new E.dY("Custom Animation",A.b([new E.aP("AnimationWidget","animationWidget",w,w,!1,w)],y.f))],y.a)
 x=y.h
 x=new B.zR(u,A.b([],y.y),A.cK(w,w,w,y.q,y.o),new A.bR(x),new A.bR(x),!1,!1)
@@ -38,11 +38,11 @@ K=c[37]
 E=c[44]
 L=c[65]
 B.zR.prototype={
-AA(d){var x=0,w=A.E(y.b),v=this
-var $async$AA=A.F(function(e,f){if(e===1)return A.B(f,w)
+AC(d){var x=0,w=A.E(y.b),v=this
+var $async$AC=A.F(function(e,f){if(e===1)return A.B(f,w)
 while(true)switch(x){case 0:switch(d){case"animationWidget":v.a0J()
 break}return A.C(null,w)}})
-return A.D($async$AA,w)},
+return A.D($async$AC,w)},
 a0J(){var x=null
 F.d5(x,x,x,x,x,x,new B.a2J(),x,x,x,x,x,x,x,x,y.b)}}
 B.ui.prototype={
@@ -60,7 +60,7 @@ t(d){var x=null,w=this.d
 w===$&&A.a()
 w=A.c3(C.r,w,x)
 return G.cJ(x,A.S(x,A.Rw(new A.dE(0,0),A.bQ(A.b([A.S(x,x,C.e,C.b8,x,x,50,x,x,x,100),A.S(x,x,C.e,C.bk,x,x,50,x,x,x,100)],y.l),C.o,C.p,C.u),w),C.e,C.i,x,x,100,x,x,x,100),C.z,!1,x,x,x,x,x,x,x,x,x,x,x,x,new B.awa(this),x,x,x,x,x,x)}}
-B.Jg.prototype={
+B.Jh.prototype={
 l(){var x=this,w=x.aP$
 if(w!=null)w.I(0,x.gfN())
 x.aP$=null
@@ -70,9 +70,9 @@ this.bK()
 this.fO()}}
 B.a2L.prototype={}
 B.q7.prototype={
-t(d){var x=H.cE(D.SW),w=this.d.a
+t(d){var x=H.cE(D.SX),w=this.d.a
 w===$&&A.a()
-return I.cz(x,C.i,new K.Fn(w,new B.a2K(this),null),null,null)}}
+return I.cz(x,C.i,new K.Fo(w,new B.a2K(this),null),null,null)}}
 var z=a.updateTypes(["ui(p)"])
 B.a2J.prototype={
 $1(d){return new B.ui(null)},
@@ -83,18 +83,18 @@ x===$&&A.a()
 return x.iV(0,0)},
 $S:0}
 B.a2K.prototype={
-$1(d){return this.a.c.AA(d)},
-$S:31};(function aliases(){var x=B.Jg.prototype
+$1(d){return this.a.c.AC(d)},
+$S:31};(function aliases(){var x=B.Jh.prototype
 x.a_u=x.l})();(function inheritance(){var x=a.mixinHard,w=a.inherit,v=a.inheritMany
 w(B.zR,A.hL)
 v(A.ba,[B.a2J,B.a2K])
 w(B.ui,A.R)
-w(B.Jg,A.X)
-w(B.Vi,B.Jg)
+w(B.Jh,A.X)
+w(B.Vi,B.Jh)
 w(B.awa,A.bD)
 w(B.a2L,A.x)
 w(B.q7,A.w)
-x(B.Jg,A.fU)})()
+x(B.Jh,A.fU)})()
 A.bj(b.typeUniverse,JSON.parse('{"zR":{"dl":[],"a8":[]},"ui":{"R":[],"c":[]},"Vi":{"X":["ui"]},"q7":{"w":[],"c":[]}}'))
-var y={u:A.n("zR"),h:A.n("bR<~>"),f:A.n("l<aP>"),a:A.n("l<dY>"),l:A.n("l<c>"),y:A.n("l<~()?>"),o:A.n("L<~()>"),b:A.n("@"),q:A.n("x?")};(function constants(){D.SW=new A.aA("AnimationDemo",null,null,null,null,null,null,null,null)})()}
-$__dart_deferred_initializers__["9hHd5dAJsP+Gvf735rBytyL1zZ0="] = $__dart_deferred_initializers__.current
+var y={u:A.n("zR"),h:A.n("bR<~>"),f:A.n("l<aP>"),a:A.n("l<dY>"),l:A.n("l<c>"),y:A.n("l<~()?>"),o:A.n("L<~()>"),b:A.n("@"),q:A.n("x?")};(function constants(){D.SX=new A.aA("AnimationDemo",null,null,null,null,null,null,null,null)})()}
+$__dart_deferred_initializers__["5luSttF5KyN8Shm3Mr2JBf3nyfM="] = $__dart_deferred_initializers__.current

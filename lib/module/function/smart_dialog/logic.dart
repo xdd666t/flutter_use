@@ -38,7 +38,7 @@ class SmartDialogLogic extends GetxController
         if (subElement.tag == type) {
           element.selected = true;
           subElement.selected = true;
-          HtmlUtils.push('${state.urlPrefix}${subElement.tag}');
+          HtmlUtils.push(state.urlParam, '${subElement.tag}');
           notifyChildrens();
           return;
         }
@@ -57,7 +57,7 @@ class SmartDialogLogic extends GetxController
     item.selected = true;
     subItem.selected = true;
     state.codeAnimationCtl.value = 0;
-    HtmlUtils.push('${state.urlPrefix}${subItem.tag}');
+    HtmlUtils.push(state.urlParam, '${subItem.tag}');
     update();
 
     Future.delayed(const Duration(milliseconds: 10), () {
