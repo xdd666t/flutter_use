@@ -4,7 +4,8 @@
 # 去掉未使用icons
 #  - flutter build apk
 flutter clean && flutter pub get \
-&& flutter build apk && flutter build web --web-renderer canvaskit --pwa-strategy none \
+&& flutter build apk && flutter build web --web-renderer canvaskit \
+--pwa-strategy none  --dart2js-optimization O1 \
 && cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets/ \
 && cp -r ./build/web/ ./docs/web/ \
 && git add . && git commit -m "update web effect" && git push

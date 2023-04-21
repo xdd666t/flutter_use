@@ -47,7 +47,7 @@ class _CodeShow extends StatelessWidget {
             parent: data.codeAnimationCtl,
             curve: Curves.easeIn,
           ),
-          child: CodePreview(className: item.tag ?? ""),
+          child: CodePreview(className: item.className ?? ""),
         ),
       ),
     );

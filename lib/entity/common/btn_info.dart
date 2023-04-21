@@ -5,6 +5,7 @@ class BtnInfo {
   BtnInfo({
     this.title,
     this.tag,
+    this.className,
     this.icon,
     this.bg,
     this.selected = false,
@@ -16,6 +17,9 @@ class BtnInfo {
 
   ///按钮标识
   String? tag;
+
+  ///类名
+  String? className;
 
   ///正常情况图标
   Icon? icon;

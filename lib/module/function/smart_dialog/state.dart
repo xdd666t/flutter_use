@@ -54,57 +54,57 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'easy',
-            tag: 'CustomDialogEasy',
+            className: 'CustomDialogEasy',
             demo: const CustomDialogEasy(),
           ),
           BtnInfo(
             title: 'location',
-            tag: 'CustomDialogLocation',
+            className: 'CustomDialogLocation',
             demo: const CustomDialogLocation(),
           ),
           BtnInfo(
             title: 'penetrate',
-            tag: 'CustomDialogPenetrate',
+            className: 'CustomDialogPenetrate',
             demo: const CustomDialogPenetrate(),
           ),
           BtnInfo(
             title: 'keepSingle',
-            tag: 'CustomDialogSingle',
+            className: 'CustomDialogSingle',
             demo: const CustomDialogSingle(),
           ),
           BtnInfo(
             title: 'dialogStack',
-            tag: 'CustomDialogStack',
+            className: 'CustomDialogStack',
             demo: const CustomDialogStack(),
           ),
           BtnInfo(
             title: 'useSystem',
-            tag: 'CustomDialogSystem',
+            className: 'CustomDialogSystem',
             demo: const CustomDialogSystem(),
           ),
           BtnInfo(
             title: 'bindPage',
-            tag: 'CustomDialogBindPage',
+            className: 'CustomDialogBindPage',
             demo: const CustomDialogBindPage(),
           ),
           BtnInfo(
             title: 'carryResult',
-            tag: 'CustomDialogCarryResult',
+            className: 'CustomDialogCarryResult',
             demo: const CustomDialogCarryResult(),
           ),
           BtnInfo(
             title: 'permanent',
-            tag: 'CustomDialogPermanent',
+            className: 'CustomDialogPermanent',
             demo: const CustomDialogPermanent(),
           ),
           BtnInfo(
             title: 'animationBuilder',
-            tag: 'CustomDialogAnimation',
+            className: 'CustomDialogAnimation',
             demo: const CustomDialogAnimation(),
           ),
           BtnInfo(
             title: 'bindWidget',
-            tag: 'CustomDialogBindWidget',
+            className: 'CustomDialogBindWidget',
             demo: const CustomDialogBindWidget(),
           ),
         ],
@@ -116,37 +116,37 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'location',
-            tag: 'AttachDialogLocation',
+            className: 'AttachDialogLocation',
             demo: const AttachDialogLocation(),
           ),
           BtnInfo(
             title: 'point',
-            tag: 'AttachDialogPoint',
+            className: 'AttachDialogPoint',
             demo: const AttachDialogPoint(),
           ),
           BtnInfo(
             title: 'target',
-            tag: 'AttachDialogTarget',
+            className: 'AttachDialogTarget',
             demo: const AttachDialogTarget(),
           ),
           BtnInfo(
             title: 'imitate',
-            tag: 'AttachDialogImitate',
+            className: 'AttachDialogImitate',
             demo: const AttachDialogImitate(),
           ),
           BtnInfo(
             title: 'business',
-            tag: 'AttachDialogBusiness',
+            className: 'AttachDialogBusiness',
             demo: const AttachDialogBusiness(),
           ),
           BtnInfo(
             title: 'guide',
-            tag: 'AttachDialogGuide',
+            className: 'AttachDialogGuide',
             demo: const AttachDialogGuide(),
           ),
           BtnInfo(
             title: 'scalePointBuilder',
-            tag: 'AttachDialogScalePoint',
+            className: 'AttachDialogScalePoint',
             demo: const AttachDialogScalePoint(),
           ),
         ],
@@ -158,27 +158,27 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'success',
-            tag: 'NotifyDialogSuccess',
+            className: 'NotifyDialogSuccess',
             demo: const NotifyDialogSuccess(),
           ),
           BtnInfo(
             title: 'failure',
-            tag: 'NotifyDialogFailure',
+            className: 'NotifyDialogFailure',
             demo: const NotifyDialogFailure(),
           ),
           BtnInfo(
             title: 'warning',
-            tag: 'NotifyDialogWaring',
+            className: 'NotifyDialogWaring',
             demo: const NotifyDialogWaring(),
           ),
           BtnInfo(
             title: 'error',
-            tag: 'NotifyDialogError',
+            className: 'NotifyDialogError',
             demo: const NotifyDialogError(),
           ),
           BtnInfo(
             title: 'alter',
-            tag: 'NotifyDialogAlter',
+            className: 'NotifyDialogAlter',
             demo: const NotifyDialogAlter(),
           ),
         ],
@@ -190,22 +190,22 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'default',
-            tag: 'LoadingDefault',
+            className: 'LoadingDefault',
             demo: const LoadingDefault(),
           ),
           BtnInfo(
             title: 'param',
-            tag: 'LoadingParam',
+            className: 'LoadingParam',
             demo: const LoadingParam(),
           ),
           BtnInfo(
             title: 'custom',
-            tag: 'LoadingCustom',
+            className: 'LoadingCustom',
             demo: const LoadingCustom(),
           ),
           BtnInfo(
             title: 'leastTime',
-            tag: 'LoadingLeastTime',
+            className: 'LoadingLeastTime',
             demo: const LoadingLeastTime(),
           ),
         ],
@@ -217,27 +217,27 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'default',
-            tag: 'ToastDefault',
+            className: 'ToastDefault',
             demo: const ToastDefault(),
           ),
           BtnInfo(
             title: 'custom',
-            tag: 'ToastCustom',
+            className: 'ToastCustom',
             demo: const ToastCustom(),
           ),
           BtnInfo(
             title: 'type',
-            tag: 'ToastType',
+            className: 'ToastType',
             demo: const ToastType(),
           ),
           BtnInfo(
             title: 'smart',
-            tag: 'ToastSmart',
+            className: 'ToastSmart',
             demo: const ToastSmart(),
           ),
           BtnInfo(
             title: 'intervalTime',
-            tag: 'ToastIntervalTime',
+            className: 'ToastIntervalTime',
             demo: const ToastIntervalTime(),
           ),
         ],
@@ -249,12 +249,12 @@ class SmartDialogState {
         btnInfo: [
           BtnInfo(
             title: 'trick',
-            tag: 'OtherTrick',
+            className: 'OtherTrick',
             demo: const OtherTrick(),
           ),
           BtnInfo(
             title: 'hardClose',
-            tag: 'OtherHardClose',
+            className: 'OtherHardClose',
             demo: const OtherHardClose(),
           ),
         ],

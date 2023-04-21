@@ -90,6 +90,9 @@ flutter:
     - family: IconFont
       fonts:
         - asset: assets/fonts/iconfont.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
 
 code_helper:
   auto_folder: [ "assets/", "lib/widgets/" ]
