@@ -16,7 +16,7 @@
 # 编译出产物移到目标文件位置
 # 代理终端, push到github
 flutter clean && flutter pub get \
-&& flutter build web --web-renderer canvaskit --pwa-strategy none\
+&& flutter build web --web-renderer canvaskit --pwa-strategy none \
 && flutter build apk \
 && cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets/ \
 && cp -r ./build/web/ ./docs/web/ \
