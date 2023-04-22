@@ -35,7 +35,7 @@ class HimalayaState {
       HimalayaItemInfo(title: '推荐', subItemList: [
         HimalayaSubItemInfo(
           title: '发现',
-          icon: CupertinoIcons.compass,
+          icon: Icons.explore,
           tag: HimalayaStatus.find,
           isSelected: true,
         ),

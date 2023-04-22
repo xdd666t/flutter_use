@@ -194,9 +194,9 @@ class _InputTextClearState extends State<InputTextClear>
         child: ScaleTransition(
           scale: _animation,
           child: Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Icon(
-              CupertinoIcons.clear_circled_solid,
+              Icons.clear,
               size: 38,
               color: widget.iconColor,
             ),

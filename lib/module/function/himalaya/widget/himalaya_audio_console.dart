@@ -212,7 +212,7 @@ class HimalayaAudioConsole extends StatelessWidget {
     return GestureDetector(
       onTap: () => onCatalog(),
       child: Icon(
-        CupertinoIcons.text_append,
+        Icons.app_registration_rounded,
         size: 20.dp,
         color: Colors.grey,
       ),
@@ -256,7 +256,7 @@ class HimalayaAudioConsole extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 20.dp),
         child: Icon(
-          CupertinoIcons.textformat,
+          Icons.text_fields,
           size: 20.dp,
           color: Colors.grey,
         ),
@@ -268,7 +268,7 @@ class HimalayaAudioConsole extends StatelessWidget {
     return GestureDetector(
       onTap: () => onVolume(),
       child: Icon(
-        CupertinoIcons.speaker_1,
+        Icons.volume_down,
         size: 20.dp,
         color: Colors.grey,
       ),
@@ -279,7 +279,7 @@ class HimalayaAudioConsole extends StatelessWidget {
     return GestureDetector(
       onTap: () => onPlayModel(),
       child: Icon(
-        CupertinoIcons.arrow_2_squarepath,
+        Icons.repeat,
         size: 20.dp,
         color: Colors.grey,
       ),
@@ -306,7 +306,7 @@ class HimalayaAudioConsole extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 15.dp),
         child: Icon(
-          CupertinoIcons.arrowtriangle_right_circle_fill,
+          Icons.play_circle,
           color: Colors.red,
           size: 50.dp,
         ),
@@ -318,7 +318,7 @@ class HimalayaAudioConsole extends StatelessWidget {
     return GestureDetector(
       onTap: () => onRightArrow(),
       child: Icon(
-        CupertinoIcons.forward_end_fill,
+        Icons.skip_next,
         color: Colors.red,
         size: 17.dp,
       ),
@@ -329,7 +329,7 @@ class HimalayaAudioConsole extends StatelessWidget {
     return GestureDetector(
       onTap: () => onLeftArrow(),
       child: Icon(
-        CupertinoIcons.backward_end_fill,
+        Icons.skip_previous,
         color: Colors.red,
         size: 17.dp,
       ),

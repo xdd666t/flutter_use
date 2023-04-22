@@ -55,8 +55,8 @@ class _FullImageDialogViewState extends State<FullImageDialogView> {
         color: Colors.transparent,
         child: InkResponse(
           child: IconButton(
-            icon: Icon(
-              CupertinoIcons.clear,
+            icon: const Icon(
+              Icons.clear,
               color: Colors.white,
               size: 30,
             ),

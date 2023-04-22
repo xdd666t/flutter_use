@@ -138,7 +138,7 @@ class _SearchBarState extends State<SearchBar>
           child: Container(
             padding: EdgeInsets.all(10.dp),
             child: Icon(
-              CupertinoIcons.clear_circled_solid,
+              Icons.clear,
               size: 38.dp,
               color: widget.iconColor,
             ),

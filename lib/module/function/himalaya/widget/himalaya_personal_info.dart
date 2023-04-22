@@ -104,7 +104,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
       margin: EdgeInsets.only(left: 15.dp),
       child: IconButton(
         icon: const Icon(
-          CupertinoIcons.sparkles,
+          Icons.electric_bolt,
           color: Colors.grey,
           size: 20,
         ),

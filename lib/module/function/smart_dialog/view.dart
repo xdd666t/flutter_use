@@ -2,8 +2,6 @@ import 'package:code_preview/code_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../entity/common/btn_info.dart';
-import '../../../entity/common/tree_info.dart';
 import 'logic.dart';
 import 'state.dart';
 
