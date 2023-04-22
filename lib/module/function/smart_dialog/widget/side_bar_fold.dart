@@ -33,6 +33,7 @@ class _SideBarFold extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
       child: InkWell(
+        borderRadius: BorderRadius.circular(5),
         onTap: () => onItem(item, subItem),
         child: Container(
           padding: const EdgeInsets.only(

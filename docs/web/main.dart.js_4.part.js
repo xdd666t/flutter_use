@@ -1,2143 +1,6299 @@
-self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
-$__dart_deferred_initializers__.current=function(a,b,c,$){var A={
-aKW(d,e){var x=y.S,w=B.cL(x)
-return new A.fP(D.mn,B.K(x,y.o),w,d,e,B.K(x,y.z))},
-aKX(d,e,f){var x=(f-d)/(e-d)
-return!isNaN(x)?B.W(x,0,1):x},
-pF:function pF(d,e){this.a=d
-this.b=e},
-rd:function rd(d){this.a=d},
-fP:function fP(d,e,f,g,h,i){var _=this
-_.ax=_.at=_.as=_.Q=null
-_.cy=_.cx=$
-_.db=d
-_.e=e
-_.f=f
-_.r=null
-_.a=g
-_.b=null
-_.c=h
-_.d=i},
-acx:function acx(d,e){this.a=d
-this.b=e},
-acv:function acv(d){this.a=d},
-acw:function acw(d){this.a=d},
-ahN(d,e,f,g){var x=e==null?C.bg:e,w=y.S,v=B.cL(w),u=y.z,t=f==null?g:B.cM([f],u)
-return new A.fw(x,null,C.c5,B.K(w,y.o),v,d,t,B.K(w,u))},
-mH:function mH(d,e,f){this.a=d
-this.b=e
-this.c=f},
-fw:function fw(d,e,f,g,h,i,j,k){var _=this
-_.go=!1
-_.aT=_.ar=_.b6=_.bq=_.y2=_.y1=_.xr=_.x2=_.x1=_.to=_.ry=_.rx=_.RG=_.R8=_.p4=_.p3=_.p2=_.p1=_.ok=_.k4=_.k3=_.k2=_.k1=_.id=null
-_.Q=d
-_.at=e
-_.ax=f
-_.ch=_.ay=null
-_.CW=!1
-_.cx=null
-_.e=g
-_.f=h
-_.r=null
-_.a=i
-_.b=null
-_.c=j
-_.d=k},
-ahQ:function ahQ(d,e){this.a=d
-this.b=e},
-ahP:function ahP(d,e){this.a=d
-this.b=e},
-ahO:function ahO(d,e){this.a=d
-this.b=e},
-aN9(d,e){var x=y.S,w=B.cL(x)
-return new A.iJ(C.z,B.aIy(),C.cE,B.K(x,y.j),B.b3(x),B.K(x,y.o),w,d,e,B.K(x,y.z))},
-ajT(d,e){var x=y.S,w=B.cL(x)
-return new A.hX(C.z,B.aIy(),C.cE,B.K(x,y.j),B.b3(x),B.K(x,y.o),w,d,e,B.K(x,y.z))},
-iJ:function iJ(d,e,f,g,h,i,j,k,l,m){var _=this
-_.Q=d
-_.cy=_.cx=_.CW=_.ch=_.ay=_.ax=_.at=_.as=null
-_.db=e
-_.dx=f
-_.fr=_.dy=$
-_.go=_.fy=_.fx=null
-_.id=$
-_.k1=g
-_.k2=h
-_.e=i
-_.f=j
-_.r=null
-_.a=k
-_.b=null
-_.c=l
-_.d=m},
-hX:function hX(d,e,f,g,h,i,j,k,l,m){var _=this
-_.Q=d
-_.cy=_.cx=_.CW=_.ch=_.ay=_.ax=_.at=_.as=null
-_.db=e
-_.dx=f
-_.fr=_.dy=$
-_.go=_.fy=_.fx=null
-_.id=$
-_.k1=g
-_.k2=h
-_.e=i
-_.f=j
-_.r=null
-_.a=k
-_.b=null
-_.c=l
-_.d=m},
-UV:function UV(){this.a=!1},
-zi:function zi(d,e,f,g,h){var _=this
-_.b=d
-_.c=e
-_.d=f
-_.e=g
-_.f=h
-_.r=!1},
-iS:function iS(d,e,f,g){var _=this
-_.x=_.w=_.r=_.f=_.e=null
-_.y=d
-_.a=e
-_.b=null
-_.c=f
-_.d=g},
-SG(d,e){var x=y.S,w=B.cL(x)
-return new A.fC(C.aB,18,C.c5,B.K(x,y.o),w,d,e,B.K(x,y.z))},
-fC:function fC(d,e,f,g,h,i,j,k){var _=this
-_.aL=_.aM=_.bB=_.bl=_.bk=_.aT=_.ar=_.b6=_.bq=_.y2=_.y1=null
-_.id=_.go=!1
-_.k2=_.k1=null
-_.Q=d
-_.at=e
-_.ax=f
-_.ch=_.ay=null
-_.CW=!1
-_.cx=null
-_.e=g
-_.f=h
-_.r=null
-_.a=i
-_.b=null
-_.c=j
-_.d=k},
-asl:function asl(d,e){this.a=d
-this.b=e},
-asm:function asm(d,e){this.a=d
-this.b=e},
-asn:function asn(d,e){this.a=d
-this.b=e},
-aso:function aso(d){this.a=d},
-a55(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0){return new A.c7(x,f,j,p,r,v,g,q,n,i,m,k,l,t,s,o,a0,w,e,h,d,u)},
-c7:function c7(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0){var _=this
-_.a=d
-_.b=e
-_.c=f
-_.d=g
-_.e=h
-_.f=i
-_.r=j
-_.w=k
-_.x=l
-_.y=m
-_.z=n
-_.Q=o
-_.as=p
-_.at=q
-_.ax=r
-_.ay=s
-_.ch=t
-_.CW=u
-_.cx=v
-_.cy=w
-_.db=x
-_.dx=a0},
-Uq:function Uq(){},
-oA:function oA(d,e,f,g,h,i,j,k,l,m){var _=this
-_.y=d
-_.z=e
-_.Q=f
-_.as=g
-_.at=h
-_.ax=i
-_.ch=_.ay=$
-_.CW=!0
-_.e=j
-_.a=k
-_.b=l
-_.c=m
-_.d=!1},
-aL8(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0,a1,a2,a3,a4,a5,a6,a7){return new A.wd(g,x,a1,a2,a0,s,w,u,v,r,h,o,a4,e,i,l,p,n,a3,a5,a6,j,!1,t,d,m,f,a7,q)},
-iv(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w){var x=null
-return new A.Oy(g,s,x,x,x,x,r,p,q,n,!0,C.x,x,e,h,j,m,l,t,u,v,i!==!1,!1,o,d,k,f,w,x)},
-Hs:function Hs(d,e,f){this.f=d
-this.b=e
-this.a=f},
-wd:function wd(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0,a1,a2,a3,a4,a5,a6,a7){var _=this
-_.c=d
-_.d=e
-_.e=f
-_.f=g
-_.r=h
-_.w=i
-_.x=j
-_.y=k
-_.z=l
-_.Q=m
-_.as=n
-_.at=o
-_.ax=p
-_.ay=q
-_.ch=r
-_.CW=s
-_.cx=t
-_.cy=u
-_.db=v
-_.dx=w
-_.dy=x
-_.fr=a0
-_.fx=a1
-_.fy=a2
-_.go=a3
-_.id=a4
-_.k1=a5
-_.k2=a6
-_.a=a7},
-GT:function GT(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,b0){var _=this
-_.c=d
-_.d=e
-_.e=f
-_.f=g
-_.r=h
-_.w=i
-_.x=j
-_.y=k
-_.z=l
-_.Q=m
-_.as=n
-_.at=o
-_.ax=p
-_.ay=q
-_.ch=r
-_.CW=s
-_.cx=t
-_.cy=u
-_.db=v
-_.dx=w
-_.dy=x
-_.fr=a0
-_.fx=a1
-_.fy=a2
-_.go=a3
-_.id=a4
-_.k1=a5
-_.k2=a6
-_.k3=a7
-_.k4=a8
-_.ok=a9
-_.a=b0},
-nw:function nw(d,e){this.a=d
-this.b=e},
-GS:function GS(d,e,f,g){var _=this
-_.e=_.d=null
-_.f=!1
-_.r=d
-_.w=$
-_.x=null
-_.y=e
-_.z=!1
-_.e8$=f
-_.a=null
-_.b=g
-_.c=null},
-ay3:function ay3(){},
-ay2:function ay2(){},
-ay4:function ay4(d,e){this.a=d
-this.b=e},
-ay_:function ay_(d,e){this.a=d
-this.b=e},
-ay1:function ay1(d){this.a=d},
-ay0:function ay0(d,e){this.a=d
-this.b=e},
-Oy:function Oy(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0,a1,a2,a3,a4,a5,a6,a7){var _=this
-_.c=d
-_.d=e
-_.e=f
-_.f=g
-_.r=h
-_.w=i
-_.x=j
-_.y=k
-_.z=l
-_.Q=m
-_.as=n
-_.at=o
-_.ax=p
-_.ay=q
-_.ch=r
-_.CW=s
-_.cx=t
-_.cy=u
-_.db=v
-_.dx=w
-_.dy=x
-_.fr=a0
-_.fx=a1
-_.fy=a2
-_.go=a3
-_.id=a4
-_.k1=a5
-_.k2=a6
-_.a=a7},
-Jq:function Jq(){},
-dI(d,e,f){if(f.h("bz<0>").b(d))return d.a2(e)
-return d},
-aLy(d){var x,w=B.b3(y.g)
-if(d!=null)w.U(0,d)
-x=new A.P6(w,$.bo())
-x.vv(w,y.e)
-return x},
-bS:function bS(d,e){this.a=d
-this.b=e},
-wu:function wu(){},
-Gx:function Gx(d,e){this.a=d
-this.c=e},
-fn:function fn(d,e){this.a=d
-this.$ti=e},
-P6:function P6(d,e){var _=this
-_.a=d
-_.aM$=0
-_.aL$=e
-_.B$=_.aR$=0
-_.M$=_.K$=!1},
-E_:function E_(d,e,f,g){var _=this
-_.a=d
-_.b=e
-_.c=f
-_.$ti=g},
-Ey:function Ey(d,e){this.a=d
-this.b=e},
-aYu(d,e,f,g,h){return new A.Fj(f,h,g,e,d,null)},
-aN_(d){var x,w,v,u
-if($.nc.length!==0){x=B.b($.nc.slice(0),B.af($.nc))
-for(w=x.length,v=0;v<x.length;x.length===w||(0,B.a_)(x),++v){u=x[v]
-if(J.f(u,d))continue
-u.a2v()}}},
-Fj:function Fj(d,e,f,g,h,i){var _=this
-_.c=d
-_.w=e
-_.x=f
-_.y=g
-_.z=h
-_.a=i},
-u4:function u4(d,e,f){var _=this
-_.as=_.Q=_.z=_.y=_.x=_.w=_.r=_.f=_.e=_.d=$
-_.ay=_.ax=_.at=null
-_.cy=_.cx=_.CW=_.ch=$
-_.db=!1
-_.fy=_.fx=_.fr=_.dy=_.dx=$
-_.cp$=d
-_.aP$=e
-_.a=null
-_.b=f
-_.c=null},
-atu:function atu(d,e){this.a=d
-this.b=e},
-atr:function atr(d){this.a=d},
-ats:function ats(d){this.a=d},
-att:function att(d){this.a=d},
-atv:function atv(d){this.a=d},
-atw:function atw(d){this.a=d},
-aCp:function aCp(d,e,f){this.b=d
-this.c=e
-this.d=f},
-a01:function a01(d,e,f,g,h,i,j,k,l,m,n,o,p,q){var _=this
-_.c=d
-_.d=e
-_.e=f
-_.f=g
-_.r=h
-_.w=i
-_.x=j
-_.y=k
-_.z=l
-_.Q=m
-_.as=n
-_.at=o
-_.ax=p
-_.a=q},
-IH:function IH(){},
-Fl:function Fl(d,e){this.a=d
-this.b=e},
-hx:function hx(d){this.a=d},
-h8:function h8(d,e,f){this.b=d
-this.c=e
-this.a=f},
-h9:function h9(d,e,f){this.b=d
-this.c=e
-this.a=f},
-xw:function xw(){},
-QJ:function QJ(d,e,f){var _=this
-_.q=d
-_.v$=e
-_.k1=_.id=null
-_.k2=!1
-_.k4=_.k3=null
-_.ok=0
-_.d=!1
-_.f=_.e=null
-_.w=_.r=!1
-_.x=null
-_.y=!1
-_.z=!0
-_.Q=null
-_.as=!1
-_.at=null
-_.ax=!1
-_.ay=$
-_.ch=f
-_.CW=!1
-_.cx=$
-_.cy=!0
-_.db=!1
-_.dx=null
-_.dy=!0
-_.fr=null
-_.a=0
-_.c=_.b=null},
-ap2:function ap2(){},
-atq:function atq(d,e){this.b=d
-this.a=e},
-ahR:function ahR(d){this.a=d},
-asq:function asq(d){this.a=d},
-cn:function cn(d,e,f){var _=this
-_.c=d
-_.a=e
-_.b=null
-_.$ti=f},
-rD:function rD(d){this.a=d},
-Cd:function Cd(d){var _=this
-_.aM$=0
-_.aL$=d
-_.B$=_.aR$=0
-_.M$=_.K$=!1},
-md:function md(){},
-XO:function XO(d){this.a=d},
-aNA(d,e){d.aV(new A.aCA(e))
-e.$1(d)},
-a8Z(d,e){return new A.dk(e,d,null)},
-aWK(d,e){return new B.lq(0,0,0,d,null,null,e,null)},
-a0r:function a0r(d,e,f){var _=this
-_.ar=d
-_.ay=null
-_.ch=!1
-_.d=_.c=_.b=_.a=null
-_.e=$
-_.f=e
-_.r=null
-_.w=f
-_.z=_.y=null
-_.Q=!1
-_.as=!0
-_.ax=_.at=!1},
-aCB:function aCB(d,e){this.a=d
-this.b=e},
-aCA:function aCA(d){this.a=d},
-a0s:function a0s(){},
-dk:function dk(d,e,f){this.w=d
-this.b=e
-this.a=f},
-iQ:function iQ(d,e,f){this.e=d
-this.c=e
-this.a=f},
-oH:function oH(d,e){this.c=d
-this.a=e},
-cJ(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0,a1){return new A.mx(e,v,w,t,u,i,o,a0,a1,x,k,m,n,l,j,p,r,s,q,d,g,f,h)},
-c5:function c5(d,e,f){this.a=d
-this.b=e
-this.$ti=f},
-mx:function mx(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0,a1){var _=this
-_.c=d
-_.d=e
-_.e=f
-_.f=g
-_.r=h
-_.ay=i
-_.cy=j
-_.rx=k
-_.ry=l
-_.to=m
-_.x2=n
-_.xr=o
-_.y1=p
-_.y2=q
-_.bq=r
-_.b6=s
-_.ar=t
-_.aT=u
-_.bk=v
-_.av=w
-_.aB=x
-_.v=a0
-_.a=a1},
-ad_:function ad_(d){this.a=d},
-ad0:function ad0(d,e){this.a=d
-this.b=e},
-ad1:function ad1(d){this.a=d},
-ad5:function ad5(d,e){this.a=d
-this.b=e},
-ad6:function ad6(d){this.a=d},
-ad7:function ad7(d,e){this.a=d
-this.b=e},
-ad8:function ad8(d){this.a=d},
-ad9:function ad9(d,e){this.a=d
-this.b=e},
-ada:function ada(d){this.a=d},
-adb:function adb(d,e){this.a=d
-this.b=e},
-adc:function adc(d){this.a=d},
-ad2:function ad2(d,e){this.a=d
-this.b=e},
-ad3:function ad3(d){this.a=d},
-ad4:function ad4(d,e){this.a=d
-this.b=e},
-w3(d,e,f){return new A.ow(e,d,f)},
-w4(d,e){return new B.cr(new A.agd(null,e,d),null)},
-ow:function ow(d,e,f){this.w=d
-this.b=e
-this.a=f},
-agd:function agd(d,e,f){this.a=d
-this.b=e
-this.c=f},
-Pv:function Pv(d,e){this.a=d
-this.b=e},
-cN:function cN(){},
-cY:function cY(){},
-kv:function kv(){},
-z7:function z7(){},
-aXd(d,e,f){var x,w,v,u,t
-if(e==null)if(d==null)return null
-else{x=1-f
-return new B.I(d.a*x,d.b*x,d.c*x,d.d*x)}else{w=e.a
-v=e.b
-u=e.c
-t=e.d
-if(d==null)return new B.I(w*f,v*f,u*f,t*f)
-else return new B.I(B.m7(d.a,w,f),B.m7(d.b,v,f),B.m7(d.c,u,f),B.m7(d.d,t,f))}},
-mW(d,e){var x=e.a,w=e.b
-return new B.ls(d.a,d.b,d.c,d.d,x,w,x,w,x,w,x,w,x===w)},
-b0W(d,e){var x
-switch(d.a){case 1:return 2
-case 2:case 3:case 5:case 0:case 4:x=e==null?null:e.gamR()
-return x==null?36:x}},
-ac_(d){var x=0,w=B.E(y.H),v
-var $async$ac_=B.F(function(e,f){if(e===1)return B.B(f,w)
-while(true)$async$outer:switch(x){case 0:d.gD().uY(D.yb)
-switch(B.ae(d).r.a){case 0:case 1:v=B.SE(D.OA)
-x=1
-break $async$outer
-case 2:case 3:case 4:case 5:v=B.d9(null,y.H)
-x=1
-break $async$outer}case 1:return B.C(v,w)}})
-return B.D($async$ac_,w)},
-aKO(d){d.gD().uY(D.Kx)
-switch(B.ae(d).r.a){case 0:case 1:return A.aek()
-case 2:case 3:case 4:case 5:return B.d9(null,y.H)}},
-aGO(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r){return new B.Cs(e,n,o,l,h,p,d,q,m,g,j,i,f,k,r)},
-b25(d,e,f,g,h){var x,w,v,u,t,s,r=g.b,q=r+h,p=d.b,o=f.b-10,n=q+p<=o
-p=r-h-p
-x=p>=10
-if(e)w=n||!x
-else w=!(x||!n)
-v=w?Math.min(q,o):Math.max(p,10)
-r=f.a
-q=d.a
-if(r-20<q)u=(r-q)/2
-else{p=r-10
-t=B.W(g.a,10,p)
-o=q/2
-s=10+o
-if(t<s)u=10
-else u=t>r-s?p-q:t-o}return new B.i(u,v)},
-aLB(d){var x,w=new B.bx(new Float64Array(16))
-w.dn()
-x=new B.kq(new Float64Array(4))
-x.v7(0,0,0,d.a)
-w.Av(0,x)
-x=new B.kq(new Float64Array(4))
-x.v7(0,0,0,d.b)
-w.Av(1,x)
-return w},
-RM(d){var x=0,w=B.E(y.H)
-var $async$RM=B.F(function(e,f){if(e===1)return B.B(f,w)
-while(true)switch(x){case 0:x=2
-return B.H(C.mF.qh(0,new A.atq(d,"tooltip").aoA()),$async$RM)
-case 2:return B.C(null,w)}})
-return B.D($async$RM,w)},
-aek(){var x=0,w=B.E(y.H)
-var $async$aek=B.F(function(d,e){if(d===1)return B.B(e,w)
-while(true)switch(x){case 0:x=2
-return B.H(C.bl.lE("HapticFeedback.vibrate",y.H),$async$aek)
-case 2:return B.C(null,w)}})
-return B.D($async$aek,w)},
-Do(d){var x=d.N(y.J)
-return x==null?null:x.f},
-b1a(d){return d.eo$===0},
-aMP(d,e,f){var x=null
-return new B.aA(x,d,e,f,x,x,x,x,x)}},C,D,B,J
-A=a.updateHolder(c[72],A)
-C=c[2]
-D=c[91]
-B=c[0]
-J=c[1]
-A.pF.prototype={
-J(){return"_ForceState."+this.b}}
-A.rd.prototype={}
-A.fP.prototype={
-hT(d){var x=this
-if(d.guf()<=1)x.a2(C.as)
-else{x.vn(d)
-if(x.db===D.mn){x.db=D.fX
-x.cx=new B.j2(d.gev(),d.gbw(d))}}},
-jC(d){var x,w=this
-if(y.A.b(d)||y.Z.b(d)){x=A.aKX(d.gzA(),d.guf(),d.gTt(d))
-w.cx=new B.j2(d.gev(),d.gbw(d))
-w.cy=x
-if(w.db===D.fX)if(x>0.4){w.db=D.fY
-w.a2(C.cn)}else if(d.gt2().gtf()>B.JO(d.gcY(d),w.b))w.a2(C.as)
-if(x>0.4&&w.db===D.z7){w.db=D.fY
-if(w.Q!=null)w.e9("onStart",new A.acx(w,x))}}w.AL(d)},
-hm(d){var x=this,w=x.db
-if(w===D.fX)w=x.db=D.z7
-if(x.Q!=null&&w===D.fY)x.e9("onStart",new A.acv(x))},
-te(d){var x=this,w=x.db,v=w===D.fY||w===D.UZ
-if(w===D.fX){x.a2(C.as)
-return}if(v&&x.ax!=null)if(x.ax!=null)x.e9("onEnd",new A.acw(x))
-x.db=D.mn},
-h7(d){this.hf(d)
-this.te(d)}}
-A.mH.prototype={}
-A.fw.prototype={
-hu(d){var x,w=this
-switch(d.gdW(d)){case 1:if(w.k3==null&&w.ok==null&&w.k4==null&&w.p1==null&&w.p3==null&&!0)return!1
-break
-case 2:x=!0
-if(x)return!1
-break
-case 4:x=!0
-if(x)return!1
-break
-default:return!1}return w.qw(d)},
-Fc(){var x,w=this
-w.a2(C.cn)
-w.go=!0
-x=w.ay
-x.toString
-w.J7(x)
-w.a2f()},
-S6(d){var x,w=this
-if(!d.gqB()){if(y.Z.b(d)){x=new B.jn(d.gcY(d),B.bl(20,null,!1,y.F))
-w.aT=x
-x.ou(d.gj6(d),d.gev())}if(y.A.b(d)){x=w.aT
-x.toString
-x.ou(d.gj6(d),d.gev())}}if(y.E.b(d)){if(w.go)w.a2d(d)
-else w.a2(C.as)
-w.D_()}else if(y.n.b(d)){w.JZ()
-w.D_()}else if(y.Z.b(d)){w.id=new B.j2(d.gev(),d.gbw(d))
-w.k1=d.gdW(d)
-w.a2c(d)}else if(y.A.b(d))if(d.gdW(d)!==w.k1){w.a2(C.as)
-x=w.ay
-x.toString
-w.hf(x)}else if(w.go)w.a2e(d)},
-a2c(d){this.id.toString
-this.d.i(0,d.gc8()).toString
-switch(this.k1){case 1:break
-case 2:break
-case 4:break}},
-JZ(){var x,w=this
-if(w.ax===C.eX)switch(w.k1){case 1:x=w.k3
-if(x!=null)w.e9("onLongPressCancel",x)
-break
-case 2:break
-case 4:break}},
-a2f(){var x,w,v=this
-switch(v.k1){case 1:if(v.ok!=null){x=v.id
-w=x.b
-x=x.a
-v.e9("onLongPressStart",new A.ahQ(v,new B.ld(w,x)))}x=v.k4
-if(x!=null)v.e9("onLongPress",x)
-break
-case 2:break
-case 4:break}},
-a2e(d){var x=this,w=d.gbw(d),v=d.gev(),u=d.gbw(d).a8(0,x.id.b)
-d.gev().a8(0,x.id.a)
-switch(x.k1){case 1:if(x.p1!=null)x.e9("onLongPressMoveUpdate",new A.ahP(x,new A.mH(w,v,u)))
-break
-case 2:break
-case 4:break}},
-a2d(d){var x,w=this,v=w.aT.uP(),u=v==null?C.cD:new B.lM(v.a)
-d.gbw(d)
-x=d.gev()
-w.aT=null
-switch(w.k1){case 1:if(w.p3!=null)w.e9("onLongPressEnd",new A.ahO(w,new B.lc(x,u)))
-break
-case 2:break
-case 4:break}},
-D_(){var x=this
-x.go=!1
-x.aT=x.k1=x.id=null},
-a2(d){var x=this
-if(d===C.as)if(x.go)x.D_()
-else x.JZ()
-x.J5(d)},
-hm(d){}}
-A.iJ.prototype={
-Gc(d,e){var x,w=this.cx
-if(w==null)w=50
-x=this.CW
-if(x==null)x=B.JO(e,this.b)
-return Math.abs(d.a.b)>w&&Math.abs(d.d.b)>x},
-CN(d,e){var x=this.id
-x===$&&B.a()
-return Math.abs(x)>B.JO(d,this.b)},
-qX(d){return new B.i(0,d.b)},
-oc(d){return d.b}}
-A.hX.prototype={
-Gc(d,e){var x,w=this.cx
-if(w==null)w=50
-x=this.CW
-if(x==null)x=B.JO(e,this.b)
-return d.a.gtf()>w*w&&d.d.gtf()>x*x},
-CN(d,e){var x=this.id
-x===$&&B.a()
-return Math.abs(x)>A.b0W(d,this.b)},
-qX(d){return d},
-oc(d){return null}}
-A.UV.prototype={
-aaL(){this.a=!0}}
-A.zi.prototype={
-hf(d){if(this.r){this.r=!1
-$.fQ.ry$.TP(this.b,d)}},
-SP(d,e){return d.gbw(d).a8(0,this.d).gd6()<=e}}
-A.iS.prototype={
-hu(d){if(this.x==null)switch(d.gdW(d)){case 1:if(this.f==null&&!0)return!1
-break
-default:return!1}return this.qw(d)},
-hT(d){var x=this,w=x.x
-if(w!=null)if(!w.SP(d,100))return
-else{w=x.x
-if(!w.f.a||d.gdW(d)!==w.e){x.oj()
-return x.OH(d)}}x.OH(d)},
-OH(d){var x,w,v,u,t,s,r=this
-r.Ok()
-x=$.fQ.to$.ro(0,d.gc8(),r)
-w=d.gc8()
-v=d.gbw(d)
-u=d.gdW(d)
-t=new A.UV()
-B.cb(D.DX,t.gaaK())
-s=new A.zi(w,x,v,u,t)
-r.y.m(0,d.gc8(),s)
-t=d.gc2(d)
-if(!s.r){s.r=!0
-$.fQ.ry$.PJ(w,r.gwo(),t)}},
-a9N(d){var x,w=this,v=w.y,u=v.i(0,d.gc8())
-u.toString
-if(y.E.b(d)){x=w.x
-if(x==null){if(w.w==null)w.w=B.cb(C.b3,w.ga9O())
-x=u.b
-$.fQ.to$.akB(x)
-u.hf(w.gwo())
-v.C(0,x)
-w.K9()
-w.x=u}else{x=x.c
-x.a.om(x.b,x.c,C.cn)
-x=u.c
-x.a.om(x.b,x.c,C.cn)
-u.hf(w.gwo())
-v.C(0,u.b)
-v=w.f
-if(v!=null)w.e9("onDoubleTap",v)
-w.oj()}}else if(y.A.b(d)){if(!u.SP(d,18))w.rd(u)}else if(y.n.b(d))w.rd(u)},
-hm(d){},
-h7(d){var x,w=this,v=w.y.i(0,d)
-if(v==null){x=w.x
-x=x!=null&&x.b===d}else x=!1
-if(x)v=w.x
-if(v!=null)w.rd(v)},
-rd(d){var x,w=this,v=w.y
-v.C(0,d.b)
-x=d.c
-x.a.om(x.b,x.c,C.as)
-d.hf(w.gwo())
-x=w.x
-if(x!=null)if(d===x)w.oj()
-else{w.JX()
-if(v.a===0)w.oj()}},
-l(){this.oj()
-this.IU()},
-oj(){var x,w=this
-w.Ok()
-if(w.x!=null){if(w.y.a!==0)w.JX()
-x=w.x
-x.toString
-w.x=null
-w.rd(x)
-$.fQ.to$.anE(0,x.b)}w.K9()},
-K9(){var x=this.y
-x=x.gb1(x)
-C.b.a3(B.aO(x,!0,B.m(x).h("y.E")),this.gac_())},
-Ok(){var x=this.w
-if(x!=null){x.ac(0)
-this.w=null}},
-JX(){}}
-A.fC.prototype={
-hu(d){var x,w=this
-switch(d.gdW(d)){case 1:if(w.y1==null&&w.bq==null&&w.y2==null&&w.b6==null)return!1
-break
-case 2:if(w.ar==null)if(w.aT==null)x=!0
-else x=!1
-else x=!1
-if(x)return!1
-break
-case 4:return!1
-break
-default:return!1}return w.qw(d)},
-S8(d){var x,w=this,v=d.gbw(d),u=d.gev(),t=w.d.i(0,d.gc8())
-t.toString
-x=new B.fX(v,t,u)
-switch(d.gdW(d)){case 1:if(w.y1!=null)w.e9("onTapDown",new A.asl(w,x))
-break
-case 2:if(w.aT!=null)w.e9("onSecondaryTapDown",new A.asm(w,x))
-break
-case 4:break}},
-S9(d,e){var x=this,w=e.gcY(e),v=e.gbw(e)
-e.gev()
-switch(d.gdW(d)){case 1:if(x.y2!=null)x.e9("onTapUp",new A.asn(x,new B.ji(v,w)))
-w=x.bq
-if(w!=null)x.e9("onTap",w)
-break
-case 2:if(x.ar!=null)x.e9("onSecondaryTap",new A.aso(x))
-break
-case 4:break}},
-yx(d,e,f){var x,w=f===""?f:f+" "
-switch(e.gdW(e)){case 1:x=this.b6
-if(x!=null)this.e9(w+"onTapCancel",x)
-break
-case 2:break
-case 4:break}}}
-A.c7.prototype={
-gE(d){var x=this
-return B.dT([x.glW(),x.gcI(x),x.gfa(),x.ghz(),x.giq(x),x.ghE(),x.gfp(x),x.gdk(x),x.gz1(),x.y,x.gyZ(),x.Q,x.gjH(),x.at,x.gcH(x),x.gz2(),x.gil(),x.gzP(),x.cx,x.cy,x.db,x.gvc()])},
-j(d,e){var x=this
-if(e==null)return!1
-if(x===e)return!0
-if(J.a9(e)!==B.Q(x))return!1
-return e instanceof A.c7&&e.glW()==x.glW()&&J.f(e.gcI(e),x.gcI(x))&&J.f(e.gfa(),x.gfa())&&J.f(e.ghz(),x.ghz())&&e.giq(e)==x.giq(x)&&e.ghE()==x.ghE()&&e.gfp(e)==x.gfp(x)&&e.gdk(e)==x.gdk(x)&&e.gz1()==x.gz1()&&e.y==x.y&&e.gyZ()==x.gyZ()&&e.Q==x.Q&&e.gjH()==x.gjH()&&e.at==x.at&&e.gcH(e)==x.gcH(x)&&e.gz2()==x.gz2()&&J.f(e.gil(),x.gil())&&e.gzP()==x.gzP()&&J.f(e.cx,x.cx)&&e.cy==x.cy&&J.f(e.db,x.db)&&e.gvc()==x.gvc()},
-glW(){return this.a},
-gcI(d){return this.b},
-gfa(){return this.c},
-ghz(){return this.d},
-giq(d){return this.e},
-ghE(){return this.f},
-gfp(d){return this.r},
-gdk(d){return this.w},
-gz1(){return this.x},
-gyZ(){return this.z},
-gjH(){return this.as},
-gcH(d){return this.ax},
-gz2(){return this.ay},
-gil(){return this.ch},
-gzP(){return this.CW},
-gvc(){return this.dx}}
-A.Uq.prototype={}
-A.oA.prototype={
-a5j(d){var x
-if(d===C.D&&!this.CW){x=this.ch
-x===$&&B.a()
-x.l()
-this.kZ()}},
-l(){var x=this.ch
-x===$&&B.a()
-x.l()
-this.kZ()},
-MS(d,e,f){var x,w,v=this
-d.cG(0)
-x=v.as
-if(x!=null)d.xE(0,x.cr(e,v.ax))
-switch(v.y.a){case 1:x=e.gb8()
-w=v.z
-d.fo(x,w==null?35:w,f)
-break
-case 0:x=v.Q
-if(!x.j(0,C.az))d.cT(B.aH1(e,x.c,x.d,x.a,x.b),f)
-else d.df(e,f)
-break}d.bH(0)},
-zu(d,e){var x,w,v,u=this,t=$.as().bf(),s=u.e,r=u.ay
-r===$&&B.a()
-x=r.a
-t.saF(0,B.aD(r.b.a4(0,x.gn(x)),s.gn(s)>>>16&255,s.gn(s)>>>8&255,s.gn(s)&255))
-w=B.aid(e)
-s=u.at
-if(s!=null)v=s.$0()
-else{s=u.b.k3
-v=new B.I(0,0,0+s.a,0+s.b)}if(w==null){d.cG(0)
-d.a4(0,e.a)
-u.MS(d,v,t)
-d.bH(0)}else u.MS(d,v.c3(w),t)}}
-A.Hs.prototype={
-ce(d){return this.f!==d.f}}
-A.wd.prototype={
-UR(d){return null},
-t(d){var x=this,w=d.N(y.D),v=w==null?null:w.f
-return new A.GT(x.c,x.d,x.e,x.f,x.r,x.w,x.x,x.y,x.z,x.Q,x.as,x.at,x.ax,x.ay,x.ch,x.CW,x.cx,x.cy,x.db,x.dx,x.dy,x.fr,!1,x.fy,x.go,x.id,x.k1,v,x.gUQ(),x.gai2(),x.k2,null)},
-ai3(d){return!0}}
-A.GT.prototype={
-Y(){return new A.GS(B.K(y.K,y.P),new B.aG(B.b([],y.d),y.a),null,C.j)}}
-A.nw.prototype={
-J(){return"_HighlightType."+this.b}}
-A.GS.prototype={
-gakt(){var x=this.r
-x=x.gb1(x)
-x=new B.bb(x,new A.ay3(),B.m(x).h("bb<y.E>"))
-return!x.ga6(x)},
-Gp(d,e){var x,w=this.y,v=w.a,u=v.length
-if(e){w.b=!0
-v.push(d)}else w.C(0,d)
-x=v.length!==0
-if(x!==(u!==0)){w=this.a.k2
-if(w!=null)w.Gp(this,x)}},
-Ir(d){var x=this.c
-x.toString
-this.adQ(x)
-this.S7()},
-W3(){return this.Ir(null)},
-FW(){this.a7(new A.ay2())},
-ge5(){var x=this.a.ok
-if(x==null){x=this.x
-x.toString}return x},
-tK(){var x,w,v=this
-if(v.a.ok==null)v.x=A.aLy(null)
-x=v.ge5()
-w=v.a
-w.toString
-x.fC(0,D.X,!v.i6(w))
-v.ge5().S(0,v.gna())},
-a9(){this.a_C()
-this.tK()
-$.M.F$.f.d.G(0,this.gS4())},
-aA(d){var x,w,v,u,t=this
-t.aO(d)
-x=d.ok
-if(t.a.ok!=x){if(x!=null)x.I(0,t.gna())
-if(t.a.ok!=null){x=t.x
-if(x!=null)x.l()
-t.x=null}t.tK()}if(J.f(t.a.ch,d.ch)){x=t.a
-x=x.ax!=d.ax||!J.f(x.ay,d.ay)||t.a.at!==d.at}else x=!0
-if(x){x=t.r
-w=x.i(0,D.eo)
-if(w!=null){v=w.ch
-v===$&&B.a()
-v.l()
-w.kZ()
-t.Hz(D.eo,!1,t.f)}u=x.i(0,D.z9)
-if(u!=null){x=u.ch
-x===$&&B.a()
-x.l()
-u.kZ()}}x=t.a
-x.toString
-if(t.i6(x)!==t.i6(d)){x=t.ge5()
-v=t.a
-v.toString
-x.fC(0,D.X,!t.i6(v))
-x=t.a
-x.toString
-if(!t.i6(x))t.ge5().fC(0,D.aR,!1)
-t.Hz(D.eo,!1,t.f)}t.Hy()},
-l(){var x,w=this
-$.M.F$.f.d.C(0,w.gS4())
-w.ge5().I(0,w.gna())
-x=w.x
-if(x!=null)x.l()
-w.ak()},
-gm0(){if(!this.gakt()){var x=this.d
-x=x!=null&&x.a!==0}else x=!0
-return x},
-UE(d){switch(d.a){case 0:return C.A
-case 1:case 2:return C.dH}},
-Hz(d,e,f){var x,w,v,u,t,s,r,q,p,o,n,m=this,l=null,k=m.r,j=k.i(0,d),i=d.a
-switch(i){case 0:m.ge5().fC(0,D.aR,f)
-break
-case 1:if(e)m.ge5().fC(0,D.aG,f)
-break
-case 2:break}if(d===D.h0){x=m.a.k2
-if(x!=null)x.Gp(m,f)}x=j==null
-if(f===(!x&&j.CW))return
-if(f)if(x){x=m.a.db
-if(x==null)w=l
-else{v=m.ge5().a
-w=x.a.$1(v)}if(w==null){x=m.c
-x.toString
-u=B.ae(x)
-switch(i){case 0:w=m.a.cy
-if(w==null)w=u.cy
-break
-case 2:w=m.a.CW
-if(w==null)w=u.cx
-break
-case 1:w=m.a.cx
-if(w==null)w=u.dx
-break}}x=m.c.gD()
-x.toString
-y.x.a(x)
-v=m.c.ps(y.Y)
-v.toString
-t=m.a
-s=t.at
-r=t.ax
-q=t.ay
-p=t.ch
-t=t.k3.$1(x)
-o=m.c.N(y.I)
-o.toString
-n=m.UE(d)
-if(q==null)q=C.az
-x=new A.oA(s,r,q,p,t,o.w,w,v,x,new A.ay4(m,d))
-n=B.bC(l,n,l,l,v.q)
-n.ba()
-o=n.bc$
-o.b=!0
-o.a.push(v.gdA())
-n.ba()
-o=n.bt$
-o.b=!0
-o.a.push(x.ga5i())
-n.aW(0)
-x.ch=n
-o=x.e
-o=o.gn(o)
-x.ay=new B.aB(y.m.a(n),new B.mD(0,o>>>24&255),y.U.h("aB<aC.T>"))
-v.xc(x)
-k.m(0,d,x)
-m.lX()}else{j.CW=!0
-k=j.ch
-k===$&&B.a()
-k.aW(0)}else{j.CW=!1
-k=j.ch
-k===$&&B.a()
-k.bY(0)}switch(i){case 0:k=m.a.y
-if(k!=null)k.$1(f)
-break
-case 1:if(e){k=m.a.z
-if(k!=null)k.$1(f)}break
-case 2:break}},
-q2(d,e){return this.Hz(d,!0,e)},
-a2K(d){var x,w,v,u,t,s,r,q,p,o,n=this,m={},l=n.c.ps(y.Y)
-l.toString
-x=n.c.gD()
-x.toString
-y.x.a(x)
-w=x.hb(d)
-v=n.a.db
-if(v==null)v=null
-else{u=n.ge5().a
-u=v.a.$1(u)
-v=u}t=v==null?n.a.dx:v
-if(t==null){v=n.c
-v.toString
-t=B.ae(v).k3}v=n.a
-s=v.as?v.k3.$1(x):null
-v=n.a
-r=v.ay
-q=v.ch
-m.a=null
-v=v.dy
-if(v==null){v=n.c
-v.toString
-v=B.ae(v).x}u=n.a
-p=u.as
-u=u.ax
-o=n.c.N(y.I)
-o.toString
-return m.a=v.QM(0,r,t,p,l,q,new A.ay_(m,n),w,u,s,x,o.w)},
-ajE(d){if(this.c==null)return
-this.a7(new A.ay1(this))},
-gadp(){var x,w=this,v=w.c
-v.toString
-v=B.ek(v)
-x=v==null?null:v.ax
-switch((x==null?D.cX:x).a){case 0:v=w.a
-v.toString
-return w.i6(v)&&w.z
-case 1:return w.z}},
-Hy(){var x,w=$.M.F$.f.b
-switch((w==null?B.ra():w).a){case 0:x=!1
-break
-case 1:x=this.gadp()
-break
-default:x=null}this.q2(D.z9,x)},
-ajG(d){var x,w=this
-w.z=d
-w.ge5().fC(0,D.ai,d)
-w.Hy()
-x=w.a.fy
-if(x!=null)x.$1(d)},
-akc(d){if(this.y.a.length!==0)return
-this.adR(d)
-this.a.toString},
-ake(d){this.a.toString},
-Oi(d,e){var x,w,v,u,t=this
-if(d!=null){x=d.gD()
-x.toString
-y.x.a(x)
-w=x.k3
-w=new B.I(0,0,0+w.a,0+w.b).gb8()
-v=B.bE(x.aX(0,null),w)}else v=e.a
-t.ge5().fC(0,D.aR,!0)
-u=t.a2K(v)
-x=t.d;(x==null?t.d=B.cL(y.w):x).G(0,u)
-x=t.e
-if(x!=null)x.ac(0)
-t.e=u
-t.lX()
-t.q2(D.h0,!0)},
-adR(d){return this.Oi(null,d)},
-adQ(d){return this.Oi(d,null)},
-S7(){var x=this,w=x.e
-if(w!=null)w.EM(0)
-x.e=null
-x.q2(D.h0,!1)
-w=x.a
-if(w.d!=null){if(w.fr){w=x.c
-w.toString
-A.ac_(w)}w=x.a.d
-if(w!=null)w.$0()}},
-aka(){var x=this,w=x.e
-if(w!=null)w.ac(0)
-x.e=null
-x.a.toString
-x.q2(D.h0,!1)},
-dM(){var x,w,v,u,t,s,r,q=this,p=q.d
-if(p!=null){q.d=null
-for(x=B.m(p),p=new B.ic(p,p.o1(),x.h("ic<1>")),x=x.c;p.u();){w=p.d;(w==null?x.a(w):w).l()}q.e=null}for(p=q.r,x=B.l9(p,p.r,B.m(p).c);x.u();){w=x.d
-v=p.i(0,w)
-if(v!=null){u=v.ch
-u===$&&B.a()
-u.r.l()
-u.r=null
-t=u.bt$
-t.b=!1
-C.b.V(t.a)
-s=t.c
-if(s===$){r=B.cL(t.$ti.c)
-t.c!==$&&B.bn()
-t.c=r
-s=r}if(s.a>0){s.b=s.c=s.d=s.e=null
-s.a=0}t=u.bc$
-t.b=!1
-C.b.V(t.a)
-s=t.c
-if(s===$){r=B.cL(t.$ti.c)
-t.c!==$&&B.bn()
-t.c=r
-s=r}if(s.a>0){s.b=s.c=s.d=s.e=null
-s.a=0}u.md()
-v.kZ()}p.m(0,w,null)}p=q.a.k2
-if(p!=null)p.Gp(q,!1)
-q.a_B()},
-i6(d){var x
-if(d.d==null)x=!1
-else x=!0
-return x},
-ajR(d){var x,w=this
-w.f=!0
-x=w.a
-x.toString
-if(w.i6(x))w.q2(D.eo,w.f)},
-ajT(d){this.f=!1
-this.q2(D.eo,!1)},
-ga23(){var x,w=this,v=w.c
-v.toString
-v=B.ek(v)
-x=v==null?null:v.ax
-switch((x==null?D.cX:x).a){case 0:v=w.a
-v.toString
-return w.i6(v)&&w.a.k1
-case 1:return!0}},
-t(d){var x,w,v,u,t,s,r,q,p,o,n,m,l,k=this,j=null
-k.qt(d)
-x=new A.ay0(k,d)
-for(w=k.r,v=B.l9(w,w.r,B.m(w).c);v.u();){u=v.d
-t=w.i(0,u)
-if(t!=null)t.saF(0,x.$1(u))}w=k.e
-if(w!=null){v=k.a.db
-if(v==null)v=j
-else{u=k.ge5().a
-u=v.a.$1(u)
-v=u}if(v==null)v=k.a.dx
-w.saF(0,v==null?B.ae(d).k3:v)}w=k.a.Q
-if(w==null)w=D.cG
-s=A.dI(w,k.ge5().a,y.W)
-r=k.w
-if(r===$){w=k.gIq()
-v=y.l
-u=y.c
-q=B.aL([D.mb,new A.cn(w,new B.aG(B.b([],v),u),y.p),D.yO,new A.cn(w,new B.aG(B.b([],v),u),y.L)],y.t,y.V)
-k.w!==$&&B.bn()
-k.w=q
-r=q}w=k.a.id
-v=k.ga23()
-u=k.a
-t=u.go
-p=u.d
-p=p==null?j:k.gIq()
-u=k.i6(u)?k.gakb():j
-o=k.a
-o.toString
-o=k.i6(o)?k.gakd():j
-n=k.a
-n.toString
-n=k.i6(n)?k.gak8():j
-m=k.a
-m.toString
-m=k.i6(m)?k.gak9():j
-l=k.a
-return new A.Hs(k,B.nN(r,B.on(t,v,B.k4(B.ck(j,j,A.cJ(C.aN,l.c,C.z,!0,j,j,j,j,j,j,j,j,j,j,j,j,n,m,u,o,j,j,j),!1,j,j,!1,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,p,j,j,j,j,j,j,j),s,j,k.gajQ(),k.gajS(),j),j,j,j,w,!0,j,k.gajF(),j,j,j,j)),j)},
-$iaHQ:1}
-A.Oy.prototype={}
-A.Jq.prototype={
-a9(){this.ap()
-if(this.gm0())this.mo()},
-dM(){var x=this.e8$
-if(x!=null){x.ae()
-x.dd()
-this.e8$=null}this.kf()}}
-A.bS.prototype={
-J(){return"MaterialState."+this.b}}
-A.wu.prototype={
-rZ(d){return this.a2(B.b3(y.g)).rZ(d)},
-$ibz:1}
-A.Gx.prototype={
-a2(d){if(d.A(0,D.X))return C.cC
-return this.a},
-goS(){return"MaterialStateMouseCursor("+this.c+")"}}
-A.fn.prototype={
-a2(d){return this.a.$1(d)},
-$ibz:1}
-A.P6.prototype={
-fC(d,e,f){var x=this.a
-if(f?J.hF(x,e):J.jC(x,e))this.ae()}}
-A.E_.prototype={}
-A.Ey.prototype={
-J(){return"SnackBarBehavior."+this.b}}
-A.Fj.prototype={
-Y(){return new A.u4(null,null,C.j)}}
-A.u4.prototype={
-gwY(){var x=this.a.c
-return x==null?null.Uc():x},
-a9(){var x,w,v=this
-v.ap()
-v.fx=v.fr=!1
-v.cy=$.p9.b6$.b.a!==0
-x=B.bC(null,C.cQ,C.hP,null,v)
-x.ba()
-w=x.bt$
-w.b=!0
-w.a.push(v.gaeI())
-v.as=x
-$.p9.b6$.S(0,v.gLQ())
-$.fQ.ry$.b.m(0,v.gOF(),null)},
-b_(){this.cs()
-this.c.N(y.O)
-this.fy=!0},
-a4G(){var x=this.c
-x.toString
-switch(B.ae(x).r.a){case 4:case 3:case 5:return 24
-case 0:case 1:case 2:return 32}},
-a4F(){var x=this.c
-x.toString
-switch(B.ae(x).r.a){case 4:case 3:case 5:return D.Ex
-case 0:case 1:case 2:return D.Ek}},
-La(){var x=this.c
-x.toString
-switch(B.ae(x).r.a){case 4:case 3:case 5:return 12
-case 0:case 1:case 2:return 14}},
-a6K(){var x,w,v=this
-if(v.c==null)return
-x=$.p9.b6$.b.a!==0
-w=v.cy
-w===$&&B.a()
-if(x!==w)v.a7(new A.atu(v,x))},
-aeJ(d){var x
-if(d===C.D){x=this.fx
-x===$&&B.a()
-if(!x){x=this.fr
-x===$&&B.a()
-x=!x}else x=!0}else x=!1
-if(x)this.Dm()},
-C6(d){var x,w=this,v=w.ay
-if(v!=null)v.ac(0)
-w.ay=null
-if(d){w.Dm()
-return}w.fx=!0
-if(w.db){if(w.ax==null){v=w.ch
-v===$&&B.a()
-x=w.as
-x===$&&B.a()
-w.ax=B.cb(v,x.gU2(x))}}else if(w.ax==null){v=w.CW
-v===$&&B.a()
-x=w.as
-x===$&&B.a()
-w.ax=B.cb(v,x.gU2(x))}w.db=!1},
-O6(){var x=this,w=x.ax
-if(w!=null)w.ac(0)
-x.ax=null
-if(x.ay==null){w=x.cx
-w===$&&B.a()
-x.ay=B.cb(w,x.gaiR())}},
-a2v(){var x=this,w=x.fr
-w===$&&B.a()
-if(!w){w=x.fx
-w===$&&B.a()}else w=!0
-if(w)return
-x.fr=!0
-w=x.ax
-if(w!=null)w.ac(0)
-x.ax=null
-w=x.ay
-if(w!=null)w.ac(0)
-x.ay=null
-w=x.at
-if(w!=null)w.dm(0)
-w=x.as
-w===$&&B.a()
-w.bY(0)},
-Nv(){var x,w=this,v=w.fr
-v===$&&B.a()
-if(!v)return
-w.fr=!1
-v=w.ax
-if(v!=null)v.ac(0)
-w.ax=null
-v=w.ay
-if(v!=null)v.ac(0)
-w.ay=null
-if(!w.at.d.a){v=w.c
-v.toString
-w.a.toString
-v=v.f9(y.u)
-v.toString
-x=w.at
-x.toString
-v.kA(0,x)}A.RM(w.gwY())
-v=w.as
-v===$&&B.a()
-v.aW(0)},
-Rp(){var x,w=this
-w.fy===$&&B.a()
-x=w.c
-if(x==null)return!1
-x=w.ay
-if(x!=null)x.ac(0)
-w.ay=null
-w.fx=!1
-x=w.fr
-x===$&&B.a()
-if(x){x=w.cy
-x===$&&B.a()
-if(x)A.aN_(w)
-w.Nv()
-return!0}if(w.at!=null){x=w.ax
-if(x!=null)x.ac(0)
-w.ax=null
-x=w.as
-x===$&&B.a()
-x.aW(0)
-return!1}w.a2M()
-x=w.as
-x===$&&B.a()
-x.aW(0)
-return!0},
-LP(d){var x
-if(this.c!=null){x=this.fr
-x===$&&B.a()
-this.C6(x||d)}},
-w1(){return this.LP(!1)},
-a2M(){var x,w,v,u,t,s,r,q,p,o,n,m,l,k,j=this,i=null,h=j.c
-h.toString
-j.a.toString
-h=h.f9(y.u)
-h.toString
-x=j.c.gD()
-x.toString
-y.x.a(x)
-w=x.k3.iF(C.f)
-v=B.bE(x.aX(0,h.c.gD()),w)
-w=j.c.N(y.I)
-w.toString
-x=B.df(i,i,j.a.c)
-u=j.d
-u===$&&B.a()
-t=j.e
-t===$&&B.a()
-s=j.f
-s===$&&B.a()
-r=j.cy
-r===$&&B.a()
-q=r?new A.atr(j):i
-r=r?new A.ats(j):i
-p=j.r
-p===$&&B.a()
-o=j.w
-o===$&&B.a()
-n=j.x
-n===$&&B.a()
-m=j.as
-m===$&&B.a()
-m=B.c3(C.am,m,i)
-l=j.y
-l===$&&B.a()
-k=j.z
-k===$&&B.a()
-w=B.oZ(new A.att(A.a8Z(new A.a01(x,u,t,s,p,o,n,m,v,l,k,q,r,i),w.w)),!1)
-j.at=w
-j.fr=!1
-h.kA(0,w)
-A.RM(j.gwY())
-if(j.cy)A.aN_(j)
-$.nc.push(j)},
-Dm(){var x,w=this
-C.b.C($.nc,w)
-$.aYv.C(0,w)
-x=w.ax
-if(x!=null)x.ac(0)
-w.ax=null
-x=w.ay
-if(x!=null)x.ac(0)
-w.ay=null
-x=w.fr
-x===$&&B.a()
-if(!x){x=w.at
-if(x!=null)x.dm(0)}w.fr=!1
-w.at=null
-x=w.cy
-x===$&&B.a()
-if(x)if($.nc.length!==0)C.b.gad($.nc).Nv()},
-aeH(d){if(this.at==null)return
-if(y.E.b(d)||y.n.b(d))this.w1()
-else if(y.Z.b(d))this.LP(!0)},
-dM(){var x,w=this
-if(w.at!=null)w.C6(!0)
-x=w.ay
-if(x!=null)x.ac(0)
-w.kf()},
-l(){var x,w=this
-$.fQ.ry$.b.C(0,w.gOF())
-$.p9.b6$.I(0,w.gLQ())
-w.Dm()
-x=w.as
-x===$&&B.a()
-x.l()
-w.a_6()},
-LT(){var x,w,v=this
-v.db=!0
-if(v.Rp()){x=v.dy
-x===$&&B.a()}else x=!1
-if(x){x=v.dx
-x===$&&B.a()
-w=v.c
-if(x===D.ma){w.toString
-A.aKO(w)}else{w.toString
-A.ac_(w)}}v.a.toString},
-a8a(){this.LT()
-this.w1()},
-t(d){var x,w,v,u,t,s,r,q=this,p=null
-if(q.gwY().length===0){x=q.a.z
-return x}w=B.ae(d)
-d.N(y.M)
-v=B.ae(d).aw
-x=w.p3.z
-if(w.ax.a===C.a6){x.toString
-u=x.EW(C.n,q.La())
-t=new B.bh(B.aD(C.d.be(229.5),255,255,255),p,p,C.dp,p,p,p,C.x)}else{x.toString
-u=x.EW(C.i,q.La())
-t=new B.bh(B.aD(C.d.be(229.5),97,97,97),p,p,C.dp,p,p,p,C.x)}q.a.toString
-x=v.a
-q.d=x==null?q.a4G():x
-q.a.toString
-x=v.b
-q.e=x==null?q.a4F():x
-x=q.a
-x.toString
-s=v.c
-q.f=s==null?C.ar:s
-s=x.w
-if(s==null)s=v.d
-q.y=s==null?24:s
-s=x.x
-if(s==null)s=v.e
-q.z=s!==!1
-x=x.y
-if(x==null)x=v.f
-x=x===!0
-q.Q=x
-s=v.r
-q.r=s==null?t:s
-s=v.w
-q.w=s==null?u:s
-q.x=C.bc
-q.cx=C.u
-q.ch=D.hN
-q.CW=C.aB
-q.dx=D.ma
-q.dy=!0
-x=x?p:q.gwY()
-r=B.ck(p,p,q.a.z,!1,p,p,!1,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,x,p)
-q.fy===$&&B.a()
-x=q.dx
-s=x===D.ma?q.ga7h():p
-r=A.cJ(C.aN,r,C.z,!0,p,p,p,p,p,p,p,s,p,p,p,p,x===D.Ts?q.ga89():p,p,p,p,p,p,p)
-x=q.cy
-x===$&&B.a()
-if(x)r=B.k4(r,C.c_,p,new A.atv(q),new A.atw(q),p)
-return r}}
-A.aCp.prototype={
-nC(d){return new B.ay(0,d.b,0,d.d)},
-nG(d,e){return A.b25(e,this.d,d,this.b,this.c)},
-kV(d){return!this.b.j(0,d.b)||this.c!==d.c||this.d!==d.d}}
-A.a01.prototype={
-t(d){var x,w=this,v=null,u=B.ae(d).p3.z
-u.toString
-x=new B.it(!0,v,B.et(!1,new B.hI(new B.ay(0,1/0,w.d,1/0),B.mq(B.S(v,B.b4(A.aMP(w.c,w.w,w.x),1,1),C.e,v,v,w.r,v,w.f,w.e,v,v),v,v,C.ce,!0,u,v,v,C.aW),v),w.y),v)
-u=w.at
-if(u!=null||w.ax!=null)x=B.k4(x,C.c_,v,u,w.ax,v)
-u=B.ek(d)
-u=u==null?v:u.e.d
-if(u==null)u=0
-return A.aWK(u,new A.iQ(new A.aCp(w.z,w.Q,w.as),x,v))}}
-A.IH.prototype={
-l(){var x=this,w=x.aP$
-if(w!=null)w.I(0,x.gfN())
-x.aP$=null
-x.ak()},
-b4(){this.bV()
-this.bK()
-this.fO()}}
-A.Fl.prototype={
-J(){return"TooltipTriggerMode."+this.b}}
-A.hx.prototype={
-bn(d,e){return new A.hx(this.a.bn(0,e))},
-di(d,e){var x,w=this
-if(d instanceof A.hx)return new A.hx(B.bc(d.a,w.a,e))
-if(d instanceof B.eE){x=B.bc(d.a,w.a,e)
-return new A.h8(1-e,d.b,x)}if(d instanceof B.dA){x=B.bc(d.a,w.a,e)
-return new A.h9(d.b,1-e,x)}return w.nX(d,e)},
-dj(d,e){var x,w=this
-if(d instanceof A.hx)return new A.hx(B.bc(w.a,d.a,e))
-if(d instanceof B.eE){x=B.bc(w.a,d.a,e)
-return new A.h8(e,d.b,x)}if(d instanceof B.dA){x=B.bc(w.a,d.a,e)
-return new A.h9(d.b,e,x)}return w.nY(d,e)},
-mR(d){return new A.hx(d==null?this.a:d)},
-dJ(d,e){var x=d.geW()/2,w=A.mW(d,new B.bP(x,x)).cW(-this.a.geD())
-x=$.as().c4()
-x.fl(w)
-return x},
-j8(d){return this.dJ(d,null)},
-cr(d,e){var x=d.geW()/2,w=$.as().c4()
-w.fl(A.mW(d,new B.bP(x,x)))
-return w},
-j9(d){return this.cr(d,null)},
-hB(d,e,f,g){var x=e.geW()/2
-d.cT(A.mW(e,new B.bP(x,x)),f)},
-gh5(){return!0},
-hA(d,e,f){var x,w=this.a
-switch(w.c.a){case 0:break
-case 1:x=e.geW()/2
-d.cT(A.mW(e,new B.bP(x,x)).cW(w.b*w.d/2),w.ii())
-break}},
-j(d,e){if(e==null)return!1
-if(J.a9(e)!==B.Q(this))return!1
-return e instanceof A.hx&&e.a.j(0,this.a)},
-gE(d){var x=this.a
-return B.a6(x.a,x.b,x.c,x.d,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a)},
-k(d){return"StadiumBorder("+this.a.k(0)+")"}}
-A.h8.prototype={
-bn(d,e){return new A.h8(e,this.c,this.a.bn(0,e))},
-di(d,e){var x,w,v,u=this
-if(d instanceof A.hx)return new A.h8(u.b*e,u.c,B.bc(d.a,u.a,e))
-if(d instanceof B.eE){x=B.bc(d.a,u.a,e)
-w=u.b
-return new A.h8(w+(1-w)*(1-e),d.b,x)}if(d instanceof A.h8){x=B.bc(d.a,u.a,e)
-w=B.a5(d.b,u.b,e)
-w.toString
-v=B.a5(d.c,u.c,e)
-v.toString
-return new A.h8(w,v,x)}return u.nX(d,e)},
-dj(d,e){var x,w,v,u=this
-if(d instanceof A.hx)return new A.h8(u.b*(1-e),u.c,B.bc(u.a,d.a,e))
-if(d instanceof B.eE){x=B.bc(u.a,d.a,e)
-w=u.b
-return new A.h8(w+(1-w)*e,d.b,x)}if(d instanceof A.h8){x=B.bc(u.a,d.a,e)
-w=B.a5(u.b,d.b,e)
-w.toString
-v=B.a5(u.c,d.c,e)
-v.toString
-return new A.h8(w,v,x)}return u.nY(d,e)},
-wO(d){var x,w,v,u,t,s,r,q,p=this.b
-if(p===0||d.c-d.a===d.d-d.b)return d
-x=d.c
-w=d.a
-v=x-w
-u=d.d
-t=d.b
-s=u-t
-r=1-this.c
-if(v<s){q=p*((s-v)/2)*r
-return new B.I(w,t+q,x,u-q)}else{q=p*((v-s)/2)*r
-return new B.I(w+q,t,x-q,u)}},
-ko(d){var x,w,v,u=B.bJ(d.geW()/2),t=this.c
-if(t!==0){x=d.c-d.a
-w=d.d-d.b
-v=this.b
-t=0.5+t/2
-if(x<w){t=B.nW(u,B.KF(new B.bP(x/2,t*w/2)),v)
-t.toString
-return t}else{t=B.nW(u,B.KF(new B.bP(t*x/2,w/2)),v)
-t.toString
-return t}}return u},
-dJ(d,e){var x=$.as().c4()
-x.fl(this.ko(d).cO(this.wO(d)).cW(-this.a.geD()))
-return x},
-j8(d){return this.dJ(d,null)},
-cr(d,e){var x=$.as().c4()
-x.fl(this.ko(d).cO(this.wO(d)))
-return x},
-j9(d){return this.cr(d,null)},
-hB(d,e,f,g){d.cT(this.ko(e).cO(this.wO(e)),f)},
-gh5(){return!0},
-mR(d){var x=d==null?this.a:d
-return new A.h8(this.b,this.c,x)},
-hA(d,e,f){var x=this.a
-switch(x.c.a){case 0:break
-case 1:d.cT(this.ko(e).cO(this.wO(e)).cW(x.b*x.d/2),x.ii())
-break}},
-j(d,e){if(e==null)return!1
-if(J.a9(e)!==B.Q(this))return!1
-return e instanceof A.h8&&e.a.j(0,this.a)&&e.b===this.b},
-gE(d){return B.a6(this.a,this.b,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a)},
-k(d){var x=this,w=x.c
-if(w!==0)return"StadiumBorder("+x.a.k(0)+", "+C.d.ab(x.b*100,1)+"% of the way to being a CircleBorder that is "+C.d.ab(w*100,1)+"% oval)"
-return"StadiumBorder("+x.a.k(0)+", "+C.d.ab(x.b*100,1)+"% of the way to being a CircleBorder)"}}
-A.h9.prototype={
-bn(d,e){var x=this.a.bn(0,e)
-return new A.h9(this.b.an(0,e),e,x)},
-di(d,e){var x,w,v,u=this
-if(d instanceof A.hx)return new A.h9(u.b,u.c*e,B.bc(d.a,u.a,e))
-if(d instanceof B.dA){x=u.c
-return new A.h9(u.b,x+(1-x)*(1-e),B.bc(d.a,u.a,e))}if(d instanceof A.h9){x=B.bc(d.a,u.a,e)
-w=B.kG(d.b,u.b,e)
-w.toString
-v=B.a5(d.c,u.c,e)
-v.toString
-return new A.h9(w,v,x)}return u.nX(d,e)},
-dj(d,e){var x,w,v,u=this
-if(d instanceof A.hx)return new A.h9(u.b,u.c*(1-e),B.bc(u.a,d.a,e))
-if(d instanceof B.dA){x=u.c
-return new A.h9(u.b,x+(1-x)*e,B.bc(u.a,d.a,e))}if(d instanceof A.h9){x=B.bc(u.a,d.a,e)
-w=B.kG(u.b,d.b,e)
-w.toString
-v=B.a5(u.c,d.c,e)
-v.toString
-return new A.h9(w,v,x)}return u.nY(d,e)},
-ko(d){var x=d.geW()/2
-x=B.kG(this.b,B.KF(new B.bP(x,x)),1-this.c)
-x.toString
-return x},
-dJ(d,e){var x,w=this.ko(d).a2(e).cO(d),v=this.a
-v=B.a5(v.b,0,v.d)
-v.toString
-x=w.cW(-v)
-v=$.as().c4()
-v.fl(x)
-return v},
-j8(d){return this.dJ(d,null)},
-cr(d,e){var x=$.as().c4()
-x.fl(this.ko(d).a2(e).cO(d))
-return x},
-j9(d){return this.cr(d,null)},
-hB(d,e,f,g){var x=this.ko(e)
-if(x.j(0,C.az))d.df(e,f)
-else d.cT(x.a2(g).cO(e),f)},
-gh5(){return!0},
-mR(d){var x=d==null?this.a:d
-return new A.h9(this.b,this.c,x)},
-hA(d,e,f){var x=this.a
-switch(x.c.a){case 0:break
-case 1:d.cT(this.ko(e).a2(f).cO(e).cW(x.b*x.d/2),x.ii())
-break}},
-j(d,e){var x=this
-if(e==null)return!1
-if(J.a9(e)!==B.Q(x))return!1
-return e instanceof A.h9&&e.a.j(0,x.a)&&e.b.j(0,x.b)&&e.c===x.c},
-gE(d){return B.a6(this.a,this.b,this.c,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a)},
-k(d){return"StadiumBorder("+this.a.k(0)+", "+this.b.k(0)+", "+C.d.ab(this.c*100,1)+"% of the way to being a RoundedRectangleBorder)"}}
-A.xw.prototype={
-Ae(d){return new B.U(B.W(1/0,d.a,d.b),B.W(1/0,d.c,d.d))},
-nC(d){return d},
-nG(d,e){return C.f}}
-A.QJ.prototype={
-sF7(d){var x=this,w=x.q
-if(w===d)return
-if(B.Q(d)!==B.Q(w)||d.kV(w))x.a_()
-x.q=d
-x.b!=null},
-aq(d){this.Jn(d)},
-ag(d){this.Jo(0)},
-cc(d){return d.bj(this.q.Ae(d))},
-bm(){var x,w,v,u,t,s,r=this,q=y.k,p=q.a(B.u.prototype.ga0.call(r))
-r.k3=p.bj(r.q.Ae(p))
-if(r.v$!=null){x=r.q.nC(q.a(B.u.prototype.ga0.call(r)))
-q=r.v$
-q.toString
-p=x.a
-w=x.b
-v=p>=w
-q.bE(x,!(v&&x.c>=x.d))
-q=r.v$
-u=q.e
-u.toString
-y.r.a(u)
-t=r.q
-s=r.k3
-s.toString
-if(v&&x.c>=x.d)q=new B.U(B.W(0,p,w),B.W(0,x.c,x.d))
-else{q=q.k3
-q.toString}u.a=t.nG(s,q)}}}
-A.ap2.prototype={
-Ub(d){var x=B.aL(["type",this.a,"data",this.uI()],y.R,y.B)
-if(d!=null)x.m(0,"nodeId",d)
-return x},
-aoA(){return this.Ub(null)},
-k(d){var x,w,v,u=B.b([],y.T),t=this.uI(),s=J.aFU(t.gbR(t))
-C.b.jc(s)
-for(x=s.length,w=0;w<s.length;s.length===x||(0,B.a_)(s),++w){v=s[w]
-u.push(B.k(v)+": "+B.k(t.i(0,v)))}return"SemanticsEvent("+C.b.bD(u,", ")+")"}}
-A.atq.prototype={
-uI(){return B.aL(["message",this.b],y.R,y.B)}}
-A.ahR.prototype={
-uI(){return C.iC}}
-A.asq.prototype={
-uI(){return C.iC}}
-A.cn.prototype={
-cC(d){return this.c.$1(d)}}
-A.rD.prototype={}
-A.Cd.prototype={
-l(){this.ae()
-this.dd()}}
-A.md.prototype={
-mo(){var x=new A.Cd($.bo())
-this.e8$=x
-this.c.ek(new A.rD(x))},
-lX(){var x,w=this
-if(w.gm0()){if(w.e8$==null)w.mo()}else{x=w.e8$
-if(x!=null){x.ae()
-x.dd()
-w.e8$=null}}},
-t(d){if(this.gm0()&&this.e8$==null)this.mo()
-return D.Vw}}
-A.XO.prototype={
-t(d){throw B.e(B.By("Widgets that mix AutomaticKeepAliveClientMixin into their State must call super.build() but must ignore the return value of the superclass."))}}
-A.a0r.prototype={
-Ih(d,e){},
-jN(d){A.aNA(this,new A.aCB(this,d))}}
-A.a0s.prototype={
-c9(d){var x=B.cK(null,null,null,y.h,y.X)
-return new A.a0r(x,this,C.N)}}
-A.dk.prototype={
-ce(d){return this.w!==d.w}}
-A.iQ.prototype={
-aG(d){var x=new A.QJ(this.e,null,B.aj(y.v))
-x.aD()
-x.saS(null)
-return x},
-aI(d,e){e.sF7(this.e)}}
-A.oH.prototype={
-t(d){return this.c}}
-A.c5.prototype={
-EO(){return this.a.$0()},
-Sp(d){return this.b.$1(d)}}
-A.mx.prototype={
-t(d){var x=this,w=B.K(y.t,y.s),v=B.ek(d),u=v==null?null:v.ay
-if(x.d==null)if(x.e==null)if(x.f==null)if(x.r==null)v=!1
-else v=!0
-else v=!0
-else v=!0
-else v=!0
-if(v)w.m(0,C.fU,new A.c5(new A.ad_(x),new A.ad0(x,u),y.G))
-if(x.ay==null)v=!1
-else v=!0
-if(v)w.m(0,D.TQ,new A.c5(new A.ad1(x),new A.ad5(x,u),y.y))
-if(x.cy==null)v=!1
-else v=!0
-if(v)w.m(0,C.fS,new A.c5(new A.ad6(x),new A.ad7(x,u),y.Q))
-if(x.rx!=null||x.ry!=null||x.to!=null||!1)w.m(0,C.mf,new A.c5(new A.ad8(x),new A.ad9(x,u),y.b))
-if(x.x2!=null||x.xr!=null||x.y1!=null||x.y2!=null||x.bq!=null)w.m(0,C.me,new A.c5(new A.ada(x),new A.adb(x,u),y.C))
-if(x.b6!=null||x.ar!=null||x.aT!=null||x.bk!=null||!1)w.m(0,C.dg,new A.c5(new A.adc(x),new A.ad2(x,u),y.i))
-v=!1
-if(v)w.m(0,D.yS,new A.c5(new A.ad3(x),new A.ad4(x,u),y.q))
-return new B.k8(x.c,w,x.av,x.aB,null,null)}}
-A.ow.prototype={
-ce(d){return!this.w.j(0,d.w)},
-uD(d,e,f){return A.w3(f,this.w,null)},
-gb5(d){return this.w}}
-A.Pv.prototype={
-J(){return"NavigationMode."+this.b}}
-A.cN.prototype={
-gpe(d){return!0},
-l(){var x=this,w=x.c
-if(w!=null)w.Ns(x)
-x.dd()
-x.a=!0},
-abY(d,e){this.b=d
-this.c=e},
-ach(){this.c=this.b=null},
-galc(){return this.b!=null}}
-A.cY.prototype={
-sn(d,e){var x=this.y
-if(e==null?x!=null:e!==x){this.y=e
-this.Fh(x)}},
-tL(d){this.y=d}}
-A.kv.prototype={
-rX(){return this.cy},
-Fh(d){this.ae()},
-n7(d){return B.m(this).h("kv.T").a(d)},
-nx(){var x=this.y
-return x==null?B.m(this).h("cY.T").a(x):x}}
-A.z7.prototype={
-n7(d){return this.ZP(d)},
-nx(){var x=this.ZQ()
-x.toString
-return x}}
-var z=a.updateTypes(["~()","~(b8)","~(d1)","~(zi)","I()?(A)","J(p)","~([aE?])","~(jT)","~(J)","~(fX)","~(ji)","~(hZ)","~(i_)","J(oA?)","Y(nw)","J()","fP()","~(fP)","Z(Z,Z,Z)","J(em)"])
-A.acx.prototype={
-$0(){var x=this.a,w=x.Q
-w.toString
-x=x.cx
-x===$&&B.a()
-return w.$1(new A.rd(x.b))},
-$S:0}
-A.acv.prototype={
-$0(){var x=this.a,w=x.Q
-w.toString
-x.cy===$&&B.a()
-x=x.cx
-x===$&&B.a()
-return w.$1(new A.rd(x.b))},
-$S:0}
-A.acw.prototype={
-$0(){var x=this.a,w=x.ax
-w.toString
-x=x.cx
-x===$&&B.a()
-return w.$1(new A.rd(x.b))},
-$S:0}
-A.ahQ.prototype={
-$0(){return this.a.ok.$1(this.b)},
-$S:0}
-A.ahP.prototype={
-$0(){return this.a.p1.$1(this.b)},
-$S:0}
-A.ahO.prototype={
-$0(){return this.a.p3.$1(this.b)},
-$S:0}
-A.asl.prototype={
-$0(){return this.a.y1.$1(this.b)},
-$S:0}
-A.asm.prototype={
-$0(){return this.a.aT.$1(this.b)},
-$S:0}
-A.asn.prototype={
-$0(){return this.a.y2.$1(this.b)},
-$S:0}
-A.aso.prototype={
-$0(){return this.a.ar.$0()},
-$S:0}
-A.ay3.prototype={
-$1(d){return d!=null},
-$S:z+13}
-A.ay2.prototype={
-$0(){},
-$S:0}
-A.ay4.prototype={
-$0(){var x=this.a
-x.r.m(0,this.b,null)
-x.lX()},
-$S:0}
-A.ay_.prototype={
-$0(){var x,w=this.b,v=w.d
-if(v!=null){x=this.a
-v.C(0,x.a)
-if(w.e==x.a)w.e=null
-w.lX()}},
-$S:0}
-A.ay1.prototype={
-$0(){this.a.Hy()},
-$S:0}
-A.ay0.prototype={
-$1(d){var x,w,v=this,u=B.ae(v.b)
-switch(d.a){case 0:x=v.a
-w=x.a.db
-w=w==null?null:w.a.$1(D.No)
-x=w==null?x.a.cy:w
-return x==null?u.cy:x
-case 2:x=v.a
-w=x.a.db
-w=w==null?null:w.a.$1(D.Nm)
-x=w==null?x.a.CW:w
-return x==null?u.cx:x
-case 1:x=v.a
-w=x.a.db
-w=w==null?null:w.a.$1(D.Nl)
-x=w==null?x.a.cx:w
-return x==null?u.dx:x}},
-$S:z+14}
-A.atu.prototype={
-$0(){this.a.cy=this.b},
-$S:0}
-A.atr.prototype={
-$1(d){var x=this.a
-if(x.c!=null)x.O6()
-return null},
-$S:85}
-A.ats.prototype={
-$1(d){return this.a.w1()},
-$S:67}
-A.att.prototype={
-$1(d){return this.a},
-$S:2}
-A.atv.prototype={
-$1(d){var x=this.a
-if(x.c!=null)x.O6()
-return null},
-$S:85}
-A.atw.prototype={
-$1(d){return this.a.w1()},
-$S:67}
-A.aCB.prototype={
-$1(d){var x=d.z
-if(x!=null&&x.A(0,this.a))d.b_()},
-$S:9}
-A.aCA.prototype={
-$1(d){A.aNA(d,this.a)},
-$S:9}
-A.ad_.prototype={
-$0(){return A.SG(this.a,null)},
-$S:87}
-A.ad0.prototype={
-$1(d){var x=this.a
-d.y1=x.d
-d.y2=x.e
-d.bq=x.f
-d.b6=x.r
-d.aL=d.aM=d.bB=d.bl=d.bk=d.aT=d.ar=null
-d.b=this.b},
-$S:88}
-A.ad1.prototype={
-$0(){var x=y.S
-return new A.iS(B.K(x,y._),this.a,null,B.K(x,y.z))},
-$S:427}
-A.ad5.prototype={
-$1(d){d.e=null
-d.f=this.a.ay
-d.r=null
-d.b=this.b},
-$S:428}
-A.ad6.prototype={
-$0(){return A.ahN(this.a,null,null,null)},
-$S:89}
-A.ad7.prototype={
-$1(d){d.k3=d.k2=null
-d.k4=this.a.cy
-d.ar=d.b6=d.bq=d.y2=d.y1=d.xr=d.x2=d.x1=d.to=d.ry=d.rx=d.RG=d.R8=d.p4=d.p3=d.p2=d.p1=d.ok=null
-d.b=this.b},
-$S:90}
-A.ad8.prototype={
-$0(){return A.aN9(this.a,null)},
-$S:147}
-A.ad9.prototype={
-$1(d){var x
-d.as=null
-x=this.a
-d.at=x.rx
-d.ax=x.ry
-d.ay=x.to
-d.ch=null
-d.Q=x.v
-d.b=this.b},
-$S:138}
-A.ada.prototype={
-$0(){return B.Op(this.a,null)},
-$S:133}
-A.adb.prototype={
-$1(d){var x=this.a
-d.as=x.x2
-d.at=x.xr
-d.ax=x.y1
-d.ay=x.y2
-d.ch=x.bq
-d.Q=x.v
-d.b=this.b},
-$S:131}
-A.adc.prototype={
-$0(){return A.ajT(this.a,null)},
-$S:51}
-A.ad2.prototype={
-$1(d){var x=this.a
-d.as=x.b6
-d.at=x.ar
-d.ax=x.aT
-d.ay=x.bk
-d.ch=null
-d.Q=x.v
-d.b=this.b},
-$S:66}
-A.ad3.prototype={
-$0(){return A.aKW(this.a,null)},
-$S:z+16}
-A.ad4.prototype={
-$1(d){d.ax=d.as=d.at=d.Q=null
-d.b=this.b},
-$S:z+17}
-A.agd.prototype={
-$1(d){return A.w3(this.c,B.aL6(d).bz(this.b),this.a)},
-$S:433};(function aliases(){var x=A.fw.prototype
-x.XA=x.hu
-x=A.fC.prototype
-x.Z6=x.hu
-x=A.Jq.prototype
-x.a_C=x.a9
-x.a_B=x.dM
-x=A.IH.prototype
-x.a_6=x.l
-x=A.md.prototype
-x.qt=x.t
-x=A.cN.prototype
-x.Ys=x.l
-x=A.cY.prototype
-x.Yt=x.sn
-x=A.kv.prototype
-x.ZP=x.n7
-x.ZQ=x.nx})();(function installTearOffs(){var x=a.installStaticTearOff,w=a._instance_1u,v=a._instance_0u,u=a.installInstanceTearOff,t=a._static_1
-x(A,"b76",3,null,["$3"],["aKX"],18,0)
-w(A.fP.prototype,"gpw","jC",1)
-v(A.UV.prototype,"gaaK","aaL",0)
-var s
-w(s=A.iS.prototype,"gwo","a9N",1)
-w(s,"gac_","rd",3)
-v(s,"ga9O","oj",0)
-w(A.oA.prototype,"ga5i","a5j",2)
-w(s=A.wd.prototype,"gUQ","UR",4)
-w(s,"gai2","ai3",5)
-u(s=A.GS.prototype,"gIq",0,0,function(){return[null]},["$1","$0"],["Ir","W3"],6,0,0)
-v(s,"gna","FW",0)
-w(s,"gS4","ajE",7)
-w(s,"gajF","ajG",8)
-w(s,"gakb","akc",9)
-w(s,"gakd","ake",10)
-v(s,"gak8","S7",0)
-v(s,"gak9","aka",0)
-w(s,"gajQ","ajR",11)
-w(s,"gajS","ajT",12)
-v(s=A.u4.prototype,"gLQ","a6K",0)
-w(s,"gaeI","aeJ",2)
-v(s,"gaiR","Rp",15)
-w(s,"gOF","aeH",1)
-v(s,"ga7h","LT",0)
-v(s,"ga89","a8a",0)
-v(A.Cd.prototype,"gd5","l",0)
-v(A.cN.prototype,"gd5","l",0)
-t(A,"JT","b1a",19)})();(function inheritance(){var x=a.mixin,w=a.mixinHard,v=a.inheritMany,u=a.inherit
-v(B.ew,[A.pF,A.nw,A.bS,A.Ey,A.Fl,A.Pv])
-v(B.x,[A.rd,A.mH,A.UV,A.zi,A.Uq,A.fn,A.E_,A.xw,A.ap2,A.md])
-u(A.fP,B.cq)
-v(B.bD,[A.acx,A.acv,A.acw,A.ahQ,A.ahP,A.ahO,A.asl,A.asm,A.asn,A.aso,A.ay2,A.ay4,A.ay_,A.ay1,A.atu,A.ad_,A.ad1,A.ad6,A.ad8,A.ada,A.adc,A.ad3])
-u(A.fw,B.t6)
-v(B.vC,[A.iJ,A.hX])
-u(A.iS,B.cs)
-u(A.fC,B.A7)
-u(A.c7,A.Uq)
-u(A.oA,B.mE)
-v(B.aW,[A.Hs,A.a0s])
-v(B.w,[A.wd,A.a01,A.XO,A.oH,A.mx])
-v(B.R,[A.GT,A.Fj])
-v(B.X,[A.Jq,A.IH])
-u(A.GS,A.Jq)
-v(B.ba,[A.ay3,A.ay0,A.atr,A.ats,A.att,A.atv,A.atw,A.aCB,A.aCA,A.ad0,A.ad5,A.ad7,A.ad9,A.adb,A.ad2,A.ad4,A.agd])
-u(A.Oy,A.wd)
-u(A.wu,B.cx)
-u(A.Gx,A.wu)
-u(A.P6,B.h2)
-u(A.u4,A.IH)
-u(A.aCp,A.xw)
-v(B.dU,[A.hx,A.h8,A.h9])
-u(A.QJ,B.k9)
-v(A.ap2,[A.atq,A.ahR,A.asq])
-u(A.cn,B.aI)
-u(A.rD,B.fh)
-v(B.aF,[A.Cd,A.cN])
-u(A.a0r,B.e5)
-u(A.dk,A.a0s)
-u(A.iQ,B.aY)
-u(A.c5,B.ir)
-u(A.ow,B.dm)
-u(A.cY,A.cN)
-u(A.kv,A.cY)
-u(A.z7,A.kv)
-x(A.Uq,B.ax)
-w(A.Jq,A.md)
-w(A.IH,B.fU)})()
-B.bj(b.typeUniverse,JSON.parse('{"fP":{"cq":[],"cs":[],"cU":[]},"pF":{"V":[]},"fw":{"cq":[],"cs":[],"cU":[]},"iJ":{"cq":[],"cs":[],"cU":[]},"hX":{"cq":[],"cs":[],"cU":[]},"iS":{"cs":[],"cU":[]},"fC":{"cq":[],"cs":[],"cU":[]},"oA":{"mE":[],"jY":[]},"Hs":{"aW":[],"aX":[],"c":[]},"GT":{"R":[],"c":[]},"nw":{"V":[]},"wd":{"w":[],"c":[]},"GS":{"X":["GT"],"aHQ":[]},"Oy":{"w":[],"c":[]},"bS":{"V":[]},"wu":{"cx":[],"bz":["cx"]},"Gx":{"cx":[],"bz":["cx"]},"fn":{"bz":["1"]},"P6":{"h2":["bB<bS>"],"aF":[],"a8":[]},"nx":{"aW":[],"aX":[],"c":[]},"mZ":{"X":["pd"]},"Ey":{"V":[]},"Fj":{"R":[],"c":[]},"u4":{"X":["Fj"]},"a01":{"w":[],"c":[]},"aYw":{"dm":[],"aW":[],"aX":[],"c":[]},"Fl":{"V":[]},"hx":{"dU":[],"cl":[]},"h8":{"dU":[],"cl":[]},"h9":{"dU":[],"cl":[]},"QJ":{"A":[],"aS":["A"],"u":[],"T":[],"ai":[]},"kB":{"aE":[]},"kH":{"aE":[]},"cn":{"aI":["1"],"aI.T":"1"},"rD":{"fh":[]},"Cd":{"aF":[],"a8":[]},"XO":{"w":[],"c":[]},"iQ":{"aY":[],"ao":[],"c":[]},"a0r":{"e5":[],"at":[],"p":[]},"a0s":{"aW":[],"aX":[],"c":[]},"dk":{"aW":[],"aX":[],"c":[]},"oH":{"w":[],"c":[]},"mx":{"w":[],"c":[]},"c5":{"ir":["1"]},"ow":{"dm":[],"aW":[],"aX":[],"c":[]},"Pv":{"V":[]},"cN":{"aF":[],"a8":[]},"cY":{"cN":["1"],"aF":[],"a8":[]},"kv":{"cN":["1"],"aF":[],"a8":[]},"z7":{"kv":["1"],"cN":["1"],"aF":[],"a8":[]},"aZz":{"aW":[],"aX":[],"c":[]}}'))
-B.iK(b.typeUniverse,JSON.parse('{"md":1,"cN":1,"cY":1,"z7":1}'))
-var y=(function rtii(){var x=B.n
-return{V:x("aI<aE>"),m:x("bN<Z>"),k:x("ay"),r:x("eD"),p:x("cn<kB>"),L:x("cn<kH>"),v:x("c2"),I:x("dk"),h:x("at"),f:x("cj<bS,b9>"),o:x("mw"),y:x("c5<iS>"),q:x("c5<fP>"),C:x("c5<iV>"),Q:x("c5<fw>"),i:x("c5<hX>"),G:x("c5<fC>"),b:x("c5<iJ>"),s:x("ir<cs>"),U:x("mD"),w:x("mE"),T:x("l<j>"),d:x("l<aHQ>"),l:x("l<~(aI<aE>)>"),g:x("bS"),W:x("cx"),a:x("aG<aHQ>"),c:x("aG<~(aI<aE>)>"),u:x("p_"),n:x("p2"),z:x("f2"),Z:x("fi"),A:x("lo"),E:x("lp"),J:x("t7"),x:x("A"),e:x("bB<bS>"),R:x("j"),M:x("aYw"),t:x("dZ"),j:x("jn"),K:x("nw"),D:x("Hs"),Y:x("uA"),_:x("zi"),O:x("aZz"),N:x("dq<bS>"),B:x("@"),S:x("o"),P:x("oA?"),X:x("x?"),F:x("uz?"),H:x("~")}})();(function constants(){D.hN=new B.aT(15e5)
-D.nU=new B.aT(25e4)
-D.DX=new B.aT(4e4)
-D.Ek=new B.a0(16,4,16,4)
-D.Ex=new B.a0(8,4,8,4)
-D.Kx=new A.ahR("longPress")
-D.aG=new A.bS(0,"hovered")
-D.ai=new A.bS(1,"focused")
-D.aR=new A.bS(2,"pressed")
-D.X=new A.bS(6,"disabled")
-D.cX=new A.Pv(0,"traditional")
-D.KM=new B.cj([D.aG,null],y.f)
-D.Nl=new B.dq(D.KM,y.N)
-D.KN=new B.cj([D.ai,null],y.f)
-D.Nm=new B.dq(D.KN,y.N)
-D.KP=new B.cj([D.aR,null],y.f)
-D.No=new B.dq(D.KP,y.N)
-D.xS=new B.U(1/0,1/0)
-D.a9=new B.f5(0,0,null,null)
-D.Oh=new A.Ey(1,"floating")
-D.Or=new A.hx(C.w)
-D.OA=new B.ER(0,"click")
-D.yb=new A.asq("tap")
-D.ma=new A.Fl(1,"longPress")
-D.Ts=new A.Fl(2,"tap")
-D.mb=B.b_("kB")
-D.yO=B.b_("kH")
-D.TQ=B.b_("iS")
-D.yS=B.b_("fP")
-D.cG=new A.Gx(C.dc,"clickable")
-D.mn=new A.pF(0,"ready")
-D.fX=new A.pF(1,"possible")
-D.z7=new A.pF(2,"accepted")
-D.fY=new A.pF(3,"started")
-D.UZ=new A.pF(4,"peaked")
-D.h0=new A.nw(0,"pressed")
-D.eo=new A.nw(1,"hover")
-D.z9=new A.nw(2,"focus")
-D.zd=new B.pK(1/0,1/0,1/0,1/0,1/0,1/0)
-D.Vw=new A.XO(null)})();(function staticFields(){$.nc=B.b([],B.n("l<u4>"))
-$.aYv=B.b3(B.n("u4"))})()}
-$__dart_deferred_initializers__["BzWkF47fy6lYkrWo6cla1s6HirE="] = $__dart_deferred_initializers__.current
+// Generated by dart2js (NullSafetyMode.sound, csp, deferred-serialization, intern-composite-values), the Dart to JavaScript compiler version: 2.19.6.
+self.$__dart_deferred_initializers__ = self.$__dart_deferred_initializers__ || Object.create(null);
+$__dart_deferred_initializers__.current = function(hunkHelpers, init, holdersList, $) {
+  var A = {
+    _dynamicCompare(a, b) {
+      var t1 = type$.Comparable_dynamic;
+      return J.compareTo$1$ns(t1._as(a), t1._as(b));
+    },
+    _defaultCompare($K) {
+      if ($K._eval$1("int(0,0)")._is(B.core_Comparable_compare$closure()))
+        return B.core_Comparable_compare$closure();
+      return A.collection___dynamicCompare$closure();
+    },
+    SplayTreeMap$($K, $V) {
+      var t1 = A._defaultCompare($K);
+      return new A.SplayTreeMap(t1, new A.SplayTreeMap_closure($K), $K._eval$1("@<0>")._bind$1($V)._eval$1("SplayTreeMap<1,2>"));
+    },
+    SplayTreeSet$(compare, isValidKey, $E) {
+      var t1 = isValidKey == null ? new A.SplayTreeSet_closure($E) : isValidKey;
+      return new A.SplayTreeSet(compare, t1, $E._eval$1("SplayTreeSet<0>"));
+    },
+    IterableMixin: function IterableMixin() {
+    },
+    _SplayTreeNode: function _SplayTreeNode() {
+    },
+    _SplayTreeSetNode: function _SplayTreeSetNode(t0, t1) {
+      var _ = this;
+      _.key = t0;
+      _._collection$_right = _._collection$_left = null;
+      _.$ti = t1;
+    },
+    _SplayTreeMapNode: function _SplayTreeMapNode(t0, t1, t2) {
+      var _ = this;
+      _.value = t0;
+      _.key = t1;
+      _._collection$_right = _._collection$_left = null;
+      _.$ti = t2;
+    },
+    _SplayTree: function _SplayTree() {
+    },
+    SplayTreeMap: function SplayTreeMap(t0, t1, t2) {
+      var _ = this;
+      _._collection$_root = null;
+      _._compare = t0;
+      _._validKey = t1;
+      _._splayCount = _._modificationCount = _._collection$_count = 0;
+      _.$ti = t2;
+    },
+    SplayTreeMap_closure: function SplayTreeMap_closure(t0) {
+      this.K = t0;
+    },
+    _SplayTreeIterator: function _SplayTreeIterator() {
+    },
+    _SplayTreeKeyIterable: function _SplayTreeKeyIterable(t0, t1) {
+      this._tree = t0;
+      this.$ti = t1;
+    },
+    _SplayTreeValueIterable: function _SplayTreeValueIterable(t0, t1) {
+      this._collection$_map = t0;
+      this.$ti = t1;
+    },
+    _SplayTreeMapEntryIterable: function _SplayTreeMapEntryIterable(t0, t1) {
+      this._collection$_map = t0;
+      this.$ti = t1;
+    },
+    _SplayTreeKeyIterator: function _SplayTreeKeyIterator(t0, t1, t2, t3) {
+      var _ = this;
+      _._tree = t0;
+      _._collection$_path = t1;
+      _._modificationCount = null;
+      _._splayCount = t2;
+      _.$ti = t3;
+    },
+    _SplayTreeValueIterator: function _SplayTreeValueIterator(t0, t1, t2, t3) {
+      var _ = this;
+      _._tree = t0;
+      _._collection$_path = t1;
+      _._modificationCount = null;
+      _._splayCount = t2;
+      _.$ti = t3;
+    },
+    _SplayTreeMapEntryIterator: function _SplayTreeMapEntryIterator(t0, t1, t2, t3) {
+      var _ = this;
+      _._tree = t0;
+      _._collection$_path = t1;
+      _._modificationCount = null;
+      _._splayCount = t2;
+      _.$ti = t3;
+    },
+    SplayTreeSet: function SplayTreeSet(t0, t1, t2) {
+      var _ = this;
+      _._collection$_root = null;
+      _._compare = t0;
+      _._validKey = t1;
+      _._splayCount = _._modificationCount = _._collection$_count = 0;
+      _.$ti = t2;
+    },
+    SplayTreeSet_closure: function SplayTreeSet_closure(t0) {
+      this.E = t0;
+    },
+    SplayTreeSet__copyNode_copyChildren: function SplayTreeSet__copyNode_copyChildren(t0, t1) {
+      this.$this = t0;
+      this.Node = t1;
+    },
+    _SplayTreeMap__SplayTree_MapMixin: function _SplayTreeMap__SplayTree_MapMixin() {
+    },
+    _SplayTreeSet__SplayTree_IterableMixin: function _SplayTreeSet__SplayTree_IterableMixin() {
+    },
+    _SplayTreeSet__SplayTree_IterableMixin_SetMixin: function _SplayTreeSet__SplayTree_IterableMixin_SetMixin() {
+    },
+    NetworkImage: function NetworkImage(t0, t1, t2) {
+      this.url = t0;
+      this.scale = t1;
+      this.headers = t2;
+    },
+    NetworkImage__loadAsync_closure: function NetworkImage__loadAsync_closure(t0) {
+      this.chunkEvents = t0;
+    },
+    applyBoxFit(fit, inputSize, outputSize) {
+      var destinationSize, sourceSize, t2, t3, t4, aspectRatio,
+        t1 = inputSize._dy;
+      if (t1 <= 0 || inputSize._dx <= 0 || outputSize._dy <= 0 || outputSize._dx <= 0)
+        return D.FittedSizes_46c;
+      switch (fit.index) {
+        case 0:
+          destinationSize = outputSize;
+          sourceSize = inputSize;
+          break;
+        case 1:
+          t2 = outputSize._dx;
+          t3 = outputSize._dy;
+          t4 = inputSize._dx;
+          destinationSize = t2 / t3 > t4 / t1 ? new B.Size(t4 * t3 / t1, t3) : new B.Size(t2, t1 * t2 / t4);
+          sourceSize = inputSize;
+          break;
+        case 2:
+          t2 = outputSize._dx;
+          t3 = outputSize._dy;
+          t4 = inputSize._dx;
+          sourceSize = t2 / t3 > t4 / t1 ? new B.Size(t4, t4 * t3 / t2) : new B.Size(t1 * t2 / t3, t1);
+          destinationSize = outputSize;
+          break;
+        case 3:
+          t1 = inputSize._dx;
+          t2 = outputSize._dx;
+          t3 = t1 * outputSize._dy / t2;
+          sourceSize = new B.Size(t1, t3);
+          destinationSize = new B.Size(t2, t3 * t2 / t1);
+          break;
+        case 4:
+          t2 = outputSize._dy;
+          t3 = t1 * outputSize._dx / t2;
+          sourceSize = new B.Size(t3, t1);
+          destinationSize = new B.Size(t3 * t2 / t1, t2);
+          break;
+        case 5:
+          sourceSize = new B.Size(Math.min(inputSize._dx, outputSize._dx), Math.min(t1, outputSize._dy));
+          destinationSize = sourceSize;
+          break;
+        case 6:
+          aspectRatio = inputSize._dx / t1;
+          t2 = outputSize._dy;
+          destinationSize = t1 > t2 ? new B.Size(t2 * aspectRatio, t2) : inputSize;
+          t1 = outputSize._dx;
+          if (destinationSize._dx > t1)
+            destinationSize = new B.Size(t1, t1 / aspectRatio);
+          sourceSize = inputSize;
+          break;
+        default:
+          sourceSize = null;
+          destinationSize = null;
+      }
+      return new A.FittedSizes(sourceSize, destinationSize);
+    },
+    BoxFit: function BoxFit(t0, t1) {
+      this.index = t0;
+      this._core$_name = t1;
+    },
+    FittedSizes: function FittedSizes(t0, t1) {
+      this.source = t0;
+      this.destination = t1;
+    },
+    paintImage(alignment, canvas, centerSlice, colorFilter, debugImageLabel, filterQuality, fit, flipHorizontally, image, invertColors, isAntiAlias, opacity, rect, repeat, scale) {
+      var t1, t2, t3, t4, outputSize, t5, t6, fittedSizes, sourceSize, destinationSize, paint, t7, halfWidthDelta, t8, halfHeightDelta, destinationRect, needSave, dx, sourceRect, _i;
+      if (rect.get$isEmpty(rect))
+        return;
+      t1 = rect.left;
+      t2 = rect.right - t1;
+      t3 = rect.top;
+      t4 = rect.bottom - t3;
+      outputSize = new B.Size(t2, t4);
+      t5 = image.get$width(image);
+      t6 = image.get$height(image);
+      if (fit == null)
+        fit = D.BoxFit_6;
+      fittedSizes = A.applyBoxFit(fit, new B.Size(t5, t6).$div(0, scale), outputSize);
+      sourceSize = fittedSizes.source.$mul(0, scale);
+      destinationSize = fittedSizes.destination;
+      if (repeat !== D.ImageRepeat_3 && destinationSize.$eq(0, outputSize))
+        repeat = D.ImageRepeat_3;
+      paint = $.$get$_renderer().createPaint$0();
+      paint.set$isAntiAlias(false);
+      if (colorFilter != null)
+        paint.set$colorFilter(colorFilter);
+      paint.set$color(0, B.Color$fromRGBO(0, 0, 0, opacity));
+      paint.set$filterQuality(filterQuality);
+      paint.set$invertColors(invertColors);
+      t7 = destinationSize._dx;
+      halfWidthDelta = (t2 - t7) / 2;
+      t8 = destinationSize._dy;
+      halfHeightDelta = (t4 - t8) / 2;
+      t4 = alignment.x;
+      t4 = t1 + (halfWidthDelta + (flipHorizontally ? -t4 : t4) * halfWidthDelta);
+      t3 += halfHeightDelta + alignment.y * halfHeightDelta;
+      destinationRect = new B.Rect(t4, t3, t4 + t7, t3 + t8);
+      needSave = repeat !== D.ImageRepeat_3 || flipHorizontally;
+      if (needSave)
+        canvas.save$0(0);
+      t3 = repeat === D.ImageRepeat_3;
+      if (!t3)
+        canvas.clipRect$1(rect);
+      if (flipHorizontally) {
+        dx = -(t1 + t2 / 2);
+        canvas.translate$2(0, -dx, 0);
+        canvas.scale$2(0, -1, 1);
+        canvas.translate$2(0, dx, 0);
+      }
+      sourceRect = alignment.inscribe$2(sourceSize, new B.Rect(0, 0, t5, t6));
+      if (t3)
+        canvas.drawImageRect$4(image, sourceRect, destinationRect, paint);
+      else
+        for (t1 = A._generateImageTileRects(rect, destinationRect, repeat), t2 = t1.length, _i = 0; _i < t1.length; t1.length === t2 || (0, B.throwConcurrentModificationError)(t1), ++_i)
+          canvas.drawImageRect$4(image, sourceRect, t1[_i], paint);
+      if (needSave)
+        canvas.restore$0(0);
+    },
+    _generateImageTileRects(outputRect, fundamentalRect, repeat) {
+      var startX, stopX, startY, stopY, i, j,
+        t1 = fundamentalRect.right,
+        t2 = fundamentalRect.left,
+        strideX = t1 - t2,
+        t3 = fundamentalRect.bottom,
+        t4 = fundamentalRect.top,
+        strideY = t3 - t4,
+        t5 = repeat !== D.ImageRepeat_0;
+      if (!t5 || repeat === D.ImageRepeat_1) {
+        startX = C.JSNumber_methods.floor$0((outputRect.left - t2) / strideX);
+        stopX = C.JSNumber_methods.ceil$0((outputRect.right - t1) / strideX);
+      } else {
+        startX = 0;
+        stopX = 0;
+      }
+      if (!t5 || repeat === D.ImageRepeat_2) {
+        startY = C.JSNumber_methods.floor$0((outputRect.top - t4) / strideY);
+        stopY = C.JSNumber_methods.ceil$0((outputRect.bottom - t3) / strideY);
+      } else {
+        startY = 0;
+        stopY = 0;
+      }
+      t1 = B._setArrayType([], type$.JSArray_Rect);
+      for (i = startX; i <= stopX; ++i)
+        for (t2 = i * strideX, j = startY; j <= stopY; ++j)
+          t1.push(fundamentalRect.shift$1(new B.Offset(t2, j * strideY)));
+      return t1;
+    },
+    ImageRepeat: function ImageRepeat(t0, t1) {
+      this.index = t0;
+      this._core$_name = t1;
+    },
+    ResizeImage_resizeIfNeeded(cacheWidth, cacheHeight, provider) {
+      return provider;
+    },
+    ImageProvider: function ImageProvider() {
+    },
+    ImageProvider_resolve_closure: function ImageProvider_resolve_closure(t0, t1, t2) {
+      this.$this = t0;
+      this.configuration = t1;
+      this.stream = t2;
+    },
+    ImageProvider_resolve_closure0: function ImageProvider_resolve_closure0(t0, t1, t2) {
+      this.$this = t0;
+      this.configuration = t1;
+      this.stream = t2;
+    },
+    ImageProvider__createErrorHandlerAndKey_handleError: function ImageProvider__createErrorHandlerAndKey_handleError(t0, t1) {
+      this._box_0 = t0;
+      this.errorCallback = t1;
+    },
+    ImageProvider__createErrorHandlerAndKey_closure: function ImageProvider__createErrorHandlerAndKey_closure(t0, t1, t2, t3) {
+      var _ = this;
+      _._box_0 = t0;
+      _.$this = t1;
+      _.successCallback = t2;
+      _.handleError = t3;
+    },
+    ImageProvider_resolveStreamForKey_closure: function ImageProvider_resolveStreamForKey_closure(t0) {
+      this.stream = t0;
+    },
+    ImageProvider_resolveStreamForKey_closure0: function ImageProvider_resolveStreamForKey_closure0(t0, t1) {
+      this.$this = t0;
+      this.key = t1;
+    },
+    _ErrorImageCompleter: function _ErrorImageCompleter(t0, t1) {
+      var _ = this;
+      _._image_stream$_listeners = t0;
+      _.debugLabel = _._currentError = _._currentImage = null;
+      _._addingInitialListeners = _._hadAtLeastOneListener = false;
+      _._keepAliveHandles = 0;
+      _._image_stream$_disposed = false;
+      _._onLastListenerRemovedCallbacks = t1;
+    },
+    MultiFrameImageStreamCompleter$(chunkEvents, codec, debugLabel, informationCollector, scale) {
+      var t1 = new A.MultiFrameImageStreamCompleter(scale, informationCollector, B._setArrayType([], type$.JSArray_ImageStreamListener), B._setArrayType([], type$.JSArray_of_void_Function));
+      t1.MultiFrameImageStreamCompleter$5$chunkEvents$codec$debugLabel$informationCollector$scale(chunkEvents, codec, debugLabel, informationCollector, scale);
+      return t1;
+    },
+    ImageInfo: function ImageInfo(t0, t1, t2) {
+      this.image = t0;
+      this.scale = t1;
+      this.debugLabel = t2;
+    },
+    ImageChunkEvent: function ImageChunkEvent(t0, t1) {
+      this.cumulativeBytesLoaded = t0;
+      this.expectedTotalBytes = t1;
+    },
+    ImageStream: function ImageStream() {
+      this._image_stream$_listeners = this._image_stream$_completer = null;
+    },
+    ImageStreamCompleterHandle: function ImageStreamCompleterHandle(t0) {
+      this._image_stream$_completer = t0;
+    },
+    ImageStreamCompleter: function ImageStreamCompleter() {
+    },
+    ImageStreamCompleter_reportError_closure: function ImageStreamCompleter_reportError_closure() {
+    },
+    ImageStreamCompleter_reportImageChunkEvent_closure: function ImageStreamCompleter_reportImageChunkEvent_closure() {
+    },
+    MultiFrameImageStreamCompleter: function MultiFrameImageStreamCompleter(t0, t1, t2, t3) {
+      var _ = this;
+      _._codec = _._chunkSubscription = null;
+      _._image_stream$_scale = t0;
+      _._informationCollector = t1;
+      _._nextFrame = null;
+      _.__MultiFrameImageStreamCompleter__shownTimestamp_A = $;
+      _._frameDuration = null;
+      _._framesEmitted = 0;
+      _._image_stream$_timer = null;
+      _._image_stream$_frameCallbackScheduled = false;
+      _._image_stream$_listeners = t2;
+      _.debugLabel = _._currentError = _._currentImage = null;
+      _._addingInitialListeners = _._hadAtLeastOneListener = false;
+      _._keepAliveHandles = 0;
+      _._image_stream$_disposed = false;
+      _._onLastListenerRemovedCallbacks = t3;
+    },
+    MultiFrameImageStreamCompleter_closure: function MultiFrameImageStreamCompleter_closure(t0, t1) {
+      this.$this = t0;
+      this.informationCollector = t1;
+    },
+    MultiFrameImageStreamCompleter_closure0: function MultiFrameImageStreamCompleter_closure0(t0, t1) {
+      this.$this = t0;
+      this.informationCollector = t1;
+    },
+    MultiFrameImageStreamCompleter__handleAppFrame_closure: function MultiFrameImageStreamCompleter__handleAppFrame_closure(t0) {
+      this.$this = t0;
+    },
+    _ImageChunkEvent_Object_Diagnosticable: function _ImageChunkEvent_Object_Diagnosticable() {
+    },
+    _ImageStream_Object_Diagnosticable: function _ImageStream_Object_Diagnosticable() {
+    },
+    _ImageStreamCompleter_Object_Diagnosticable: function _ImageStreamCompleter_Object_Diagnosticable() {
+    },
+    RenderImage: function RenderImage(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17) {
+      var _ = this;
+      _._flipHorizontally = _._image$_resolvedAlignment = null;
+      _._image = t0;
+      _.debugImageLabel = t1;
+      _._image$_width = t2;
+      _._image$_height = t3;
+      _._scale = t4;
+      _._colorFilter = null;
+      _._image$_color = t5;
+      _._image$_opacity = t6;
+      _._image$_filterQuality = t7;
+      _._colorBlendMode = t8;
+      _._image$_fit = t9;
+      _._image$_alignment = t10;
+      _._repeat = t11;
+      _._centerSlice = t12;
+      _._image$_invertColors = t13;
+      _._matchTextDirection = t14;
+      _._image$_textDirection = t15;
+      _._image$_isAntiAlias = t16;
+      _._cachedDryLayoutSizes = _._cachedIntrinsicDimensions = null;
+      _._computingThisDryLayout = false;
+      _._cachedBaselines = _._size = null;
+      _._debugActivePointers = 0;
+      _._debugDisposed = false;
+      _.debugCreator = _.parentData = null;
+      _._debugDoingThisLayout = _._debugDoingThisResize = false;
+      _._debugCanParentUseSize = null;
+      _._debugMutationsLocked = false;
+      _._needsLayout = true;
+      _._relayoutBoundary = null;
+      _._doingThisLayoutWithCallback = false;
+      _._constraints = null;
+      _._debugDoingThisPaint = false;
+      _.__RenderObject__wasRepaintBoundary_A = $;
+      _._layerHandle = t17;
+      _._needsCompositingBitsUpdate = false;
+      _.__RenderObject__needsCompositing_A = $;
+      _._needsPaint = true;
+      _._needsCompositedLayerUpdate = false;
+      _._cachedSemanticsConfiguration = null;
+      _._needsSemanticsUpdate = true;
+      _._semantics = null;
+      _._depth = 0;
+      _._node$_parent = _._node$_owner = null;
+    },
+    RenderClipRRect: function RenderClipRRect(t0, t1, t2, t3, t4, t5) {
+      var _ = this;
+      _._proxy_box$_borderRadius = t0;
+      _._proxy_box$_textDirection = t1;
+      _._clipper = t2;
+      _._clip = null;
+      _._proxy_box$_clipBehavior = t3;
+      _._debugText = _._debugPaint = null;
+      _.RenderObjectWithChildMixin__child = t4;
+      _._cachedDryLayoutSizes = _._cachedIntrinsicDimensions = null;
+      _._computingThisDryLayout = false;
+      _._cachedBaselines = _._size = null;
+      _._debugActivePointers = 0;
+      _._debugDisposed = false;
+      _.debugCreator = _.parentData = null;
+      _._debugDoingThisLayout = _._debugDoingThisResize = false;
+      _._debugCanParentUseSize = null;
+      _._debugMutationsLocked = false;
+      _._needsLayout = true;
+      _._relayoutBoundary = null;
+      _._doingThisLayoutWithCallback = false;
+      _._constraints = null;
+      _._debugDoingThisPaint = false;
+      _.__RenderObject__wasRepaintBoundary_A = $;
+      _._layerHandle = t5;
+      _._needsCompositingBitsUpdate = false;
+      _.__RenderObject__needsCompositing_A = $;
+      _._needsPaint = true;
+      _._needsCompositedLayerUpdate = false;
+      _._cachedSemanticsConfiguration = null;
+      _._needsSemanticsUpdate = true;
+      _._semantics = null;
+      _._depth = 0;
+      _._node$_parent = _._node$_owner = null;
+    },
+    RenderIndexedSemantics: function RenderIndexedSemantics(t0, t1, t2) {
+      var _ = this;
+      _._proxy_box$_index = t0;
+      _.RenderObjectWithChildMixin__child = t1;
+      _._cachedDryLayoutSizes = _._cachedIntrinsicDimensions = null;
+      _._computingThisDryLayout = false;
+      _._cachedBaselines = _._size = null;
+      _._debugActivePointers = 0;
+      _._debugDisposed = false;
+      _.debugCreator = _.parentData = null;
+      _._debugDoingThisLayout = _._debugDoingThisResize = false;
+      _._debugCanParentUseSize = null;
+      _._debugMutationsLocked = false;
+      _._needsLayout = true;
+      _._relayoutBoundary = null;
+      _._doingThisLayoutWithCallback = false;
+      _._constraints = null;
+      _._debugDoingThisPaint = false;
+      _.__RenderObject__wasRepaintBoundary_A = $;
+      _._layerHandle = t2;
+      _._needsCompositingBitsUpdate = false;
+      _.__RenderObject__needsCompositing_A = $;
+      _._needsPaint = true;
+      _._needsCompositedLayerUpdate = false;
+      _._cachedSemanticsConfiguration = null;
+      _._needsSemanticsUpdate = true;
+      _._semantics = null;
+      _._depth = 0;
+      _._node$_parent = _._node$_owner = null;
+    },
+    applyGrowthDirectionToScrollDirection(scrollDirection, growthDirection) {
+      switch (growthDirection.index) {
+        case 0:
+          return scrollDirection;
+        case 1:
+          return A.flipScrollDirection(scrollDirection);
+      }
+    },
+    SliverGeometry$(cacheExtent, hasVisualOverflow, hitTestExtent, layoutExtent, maxPaintExtent, paintExtent, paintOrigin, scrollExtent, scrollOffsetCorrection) {
+      var t1 = layoutExtent == null ? paintExtent : layoutExtent,
+        t2 = hitTestExtent == null ? paintExtent : hitTestExtent,
+        t3 = cacheExtent == null ? layoutExtent : cacheExtent;
+      if (t3 == null)
+        t3 = paintExtent;
+      return new A.SliverGeometry(scrollExtent, paintOrigin, paintExtent, t1, maxPaintExtent, t2, paintExtent > 0, hasVisualOverflow, scrollOffsetCorrection, t3);
+    },
+    SliverConstraints: function SliverConstraints(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11) {
+      var _ = this;
+      _.axisDirection = t0;
+      _.growthDirection = t1;
+      _.userScrollDirection = t2;
+      _.scrollOffset = t3;
+      _.precedingScrollExtent = t4;
+      _.overlap = t5;
+      _.remainingPaintExtent = t6;
+      _.crossAxisExtent = t7;
+      _.crossAxisDirection = t8;
+      _.viewportMainAxisExtent = t9;
+      _.cacheOrigin = t10;
+      _.remainingCacheExtent = t11;
+    },
+    SliverGeometry: function SliverGeometry(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9) {
+      var _ = this;
+      _.scrollExtent = t0;
+      _.paintOrigin = t1;
+      _.paintExtent = t2;
+      _.layoutExtent = t3;
+      _.maxPaintExtent = t4;
+      _.hitTestExtent = t5;
+      _.visible = t6;
+      _.hasVisualOverflow = t7;
+      _.scrollOffsetCorrection = t8;
+      _.cacheExtent = t9;
+    },
+    SliverHitTestResult: function SliverHitTestResult(t0, t1, t2) {
+      this._path = t0;
+      this._transforms = t1;
+      this._localTransforms = t2;
+    },
+    SliverHitTestEntry: function SliverHitTestEntry(t0, t1, t2) {
+      var _ = this;
+      _.mainAxisPosition = t0;
+      _.crossAxisPosition = t1;
+      _.target = t2;
+      _._transform = null;
+    },
+    SliverLogicalParentData: function SliverLogicalParentData() {
+    },
+    SliverPhysicalParentData: function SliverPhysicalParentData(t0) {
+      this.paintOffset = t0;
+    },
+    SliverPhysicalContainerParentData: function SliverPhysicalContainerParentData(t0, t1, t2) {
+      this.ContainerParentDataMixin_previousSibling = t0;
+      this.ContainerParentDataMixin_nextSibling = t1;
+      this.paintOffset = t2;
+    },
+    RenderSliver: function RenderSliver() {
+    },
+    RenderSliverHelpers: function RenderSliverHelpers() {
+    },
+    RenderSliverHelpers_hitTestBoxChild_closure: function RenderSliverHelpers_hitTestBoxChild_closure(t0, t1) {
+      this._box_0 = t0;
+      this.child = t1;
+    },
+    _SliverGeometry_Object_Diagnosticable: function _SliverGeometry_Object_Diagnosticable() {
+    },
+    _SliverPhysicalContainerParentData_SliverPhysicalParentData_ContainerParentDataMixin: function _SliverPhysicalContainerParentData_SliverPhysicalParentData_ContainerParentDataMixin() {
+    },
+    RenderSliverFillViewport: function RenderSliverFillViewport(t0, t1, t2, t3, t4, t5, t6) {
+      var _ = this;
+      _._sliver_fill0$_viewportFraction = t0;
+      _._childManager = t1;
+      _._keepAliveBucket = t2;
+      _.__RenderSliverMultiBoxAdaptor__debugDanglingKeepAlives_A = $;
+      _._debugChildIntegrityEnabled = true;
+      _.ContainerRenderObjectMixin__childCount = t3;
+      _.ContainerRenderObjectMixin__firstChild = t4;
+      _.ContainerRenderObjectMixin__lastChild = t5;
+      _._geometry = null;
+      _._debugDisposed = false;
+      _.debugCreator = _.parentData = null;
+      _._debugDoingThisLayout = _._debugDoingThisResize = false;
+      _._debugCanParentUseSize = null;
+      _._debugMutationsLocked = false;
+      _._needsLayout = true;
+      _._relayoutBoundary = null;
+      _._doingThisLayoutWithCallback = false;
+      _._constraints = null;
+      _._debugDoingThisPaint = false;
+      _.__RenderObject__wasRepaintBoundary_A = $;
+      _._layerHandle = t6;
+      _._needsCompositingBitsUpdate = false;
+      _.__RenderObject__needsCompositing_A = $;
+      _._needsPaint = true;
+      _._needsCompositedLayerUpdate = false;
+      _._cachedSemanticsConfiguration = null;
+      _._needsSemanticsUpdate = true;
+      _._semantics = null;
+      _._depth = 0;
+      _._node$_parent = _._node$_owner = null;
+    },
+    RenderSliverFixedExtentBoxAdaptor: function RenderSliverFixedExtentBoxAdaptor() {
+    },
+    KeepAliveParentDataMixin: function KeepAliveParentDataMixin() {
+    },
+    RenderSliverWithKeepAliveMixin: function RenderSliverWithKeepAliveMixin() {
+    },
+    SliverMultiBoxAdaptorParentData: function SliverMultiBoxAdaptorParentData(t0, t1, t2) {
+      var _ = this;
+      _.index = null;
+      _._keptAlive = false;
+      _.KeepAliveParentDataMixin_keepAlive = t0;
+      _.ContainerParentDataMixin_previousSibling = t1;
+      _.ContainerParentDataMixin_nextSibling = t2;
+      _.layoutOffset = null;
+    },
+    RenderSliverMultiBoxAdaptor: function RenderSliverMultiBoxAdaptor() {
+    },
+    RenderSliverMultiBoxAdaptor__createOrObtainChild_closure: function RenderSliverMultiBoxAdaptor__createOrObtainChild_closure(t0, t1, t2) {
+      this.$this = t0;
+      this.index = t1;
+      this.after = t2;
+    },
+    RenderSliverMultiBoxAdaptor_collectGarbage_closure: function RenderSliverMultiBoxAdaptor_collectGarbage_closure(t0, t1) {
+      this._box_0 = t0;
+      this.$this = t1;
+    },
+    RenderSliverMultiBoxAdaptor_collectGarbage__closure: function RenderSliverMultiBoxAdaptor_collectGarbage__closure() {
+    },
+    _RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin: function _RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin() {
+    },
+    _RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers: function _RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers() {
+    },
+    _RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers_RenderSliverWithKeepAliveMixin: function _RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers_RenderSliverWithKeepAliveMixin() {
+    },
+    _SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin: function _SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin() {
+    },
+    _SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin_KeepAliveParentDataMixin: function _SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin_KeepAliveParentDataMixin() {
+    },
+    RenderSliverEdgeInsetsPadding: function RenderSliverEdgeInsetsPadding() {
+    },
+    _RenderSliverEdgeInsetsPadding_RenderSliver_RenderObjectWithChildMixin: function _RenderSliverEdgeInsetsPadding_RenderSliver_RenderObjectWithChildMixin() {
+    },
+    CacheExtentStyle: function CacheExtentStyle(t0, t1) {
+      this.index = t0;
+      this._core$_name = t1;
+    },
+    RenderViewportBase: function RenderViewportBase() {
+    },
+    RenderViewportBase_visitChildrenForSemantics_closure: function RenderViewportBase_visitChildrenForSemantics_closure() {
+    },
+    RenderViewportBase_hitTestChildren_closure: function RenderViewportBase_hitTestChildren_closure(t0, t1, t2, t3) {
+      var _ = this;
+      _._box_0 = t0;
+      _.$this = t1;
+      _.child = t2;
+      _.sliverResult = t3;
+    },
+    RenderViewport: function RenderViewport(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11) {
+      var _ = this;
+      _._viewport$_anchor = t0;
+      _._center = null;
+      _.__RenderViewport__maxScrollExtent_A = _.__RenderViewport__minScrollExtent_A = $;
+      _._viewport$_hasVisualOverflow = false;
+      _._viewport$_axisDirection = t1;
+      _._crossAxisDirection = t2;
+      _._viewport$_offset = t3;
+      _._cacheExtent = t4;
+      _._calculatedCacheExtent = null;
+      _._cacheExtentStyle = t5;
+      _._viewport$_clipBehavior = t6;
+      _._viewport$_clipRectLayer = t7;
+      _.ContainerRenderObjectMixin__childCount = t8;
+      _.ContainerRenderObjectMixin__firstChild = t9;
+      _.ContainerRenderObjectMixin__lastChild = t10;
+      _._cachedDryLayoutSizes = _._cachedIntrinsicDimensions = null;
+      _._computingThisDryLayout = false;
+      _._cachedBaselines = _._size = null;
+      _._debugActivePointers = 0;
+      _._debugDisposed = false;
+      _.debugCreator = _.parentData = null;
+      _._debugDoingThisLayout = _._debugDoingThisResize = false;
+      _._debugCanParentUseSize = null;
+      _._debugMutationsLocked = false;
+      _._needsLayout = true;
+      _._relayoutBoundary = null;
+      _._doingThisLayoutWithCallback = false;
+      _._constraints = null;
+      _._debugDoingThisPaint = false;
+      _.__RenderObject__wasRepaintBoundary_A = $;
+      _._layerHandle = t11;
+      _._needsCompositingBitsUpdate = false;
+      _.__RenderObject__needsCompositing_A = $;
+      _._needsPaint = true;
+      _._needsCompositedLayerUpdate = false;
+      _._cachedSemanticsConfiguration = null;
+      _._needsSemanticsUpdate = true;
+      _._semantics = null;
+      _._depth = 0;
+      _._node$_parent = _._node$_owner = null;
+    },
+    _RenderViewportBase_RenderBox_ContainerRenderObjectMixin: function _RenderViewportBase_RenderBox_ContainerRenderObjectMixin() {
+    },
+    AutomaticKeepAlive: function AutomaticKeepAlive(t0, t1) {
+      this.child = t0;
+      this.key = t1;
+    },
+    _AutomaticKeepAliveState: function _AutomaticKeepAliveState(t0) {
+      var _ = this;
+      _._automatic_keep_alive$_handles = null;
+      _.___AutomaticKeepAliveState__child_A = $;
+      _._keepingAlive = false;
+      _._widget = null;
+      _._debugLifecycleState = t0;
+      _._framework$_element = null;
+    },
+    _AutomaticKeepAliveState__addClient_closure: function _AutomaticKeepAliveState__addClient_closure(t0) {
+      this.$this = t0;
+    },
+    _AutomaticKeepAliveState__getChildElement_closure: function _AutomaticKeepAliveState__getChildElement_closure(t0) {
+      this._box_0 = t0;
+    },
+    _AutomaticKeepAliveState__createCallback_closure: function _AutomaticKeepAliveState__createCallback_closure(t0, t1) {
+      this.$this = t0;
+      this.handle = t1;
+    },
+    _AutomaticKeepAliveState__createCallback__closure: function _AutomaticKeepAliveState__createCallback__closure(t0) {
+      this.$this = t0;
+    },
+    _AutomaticKeepAliveState__createCallback__closure0: function _AutomaticKeepAliveState__createCallback__closure0(t0) {
+      this.$this = t0;
+    },
+    _AutomaticKeepAliveState__createCallback___closure: function _AutomaticKeepAliveState__createCallback___closure(t0) {
+      this.$this = t0;
+    },
+    ClipRRect$(borderRadius, child, clipBehavior) {
+      return new A.ClipRRect(borderRadius, clipBehavior, child, null);
+    },
+    ClipRRect: function ClipRRect(t0, t1, t2, t3) {
+      var _ = this;
+      _.borderRadius = t0;
+      _.clipBehavior = t1;
+      _.child = t2;
+      _.key = t3;
+    },
+    RawImage: function RawImage(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16) {
+      var _ = this;
+      _.image = t0;
+      _.debugImageLabel = t1;
+      _.width = t2;
+      _.height = t3;
+      _.scale = t4;
+      _.color = t5;
+      _.opacity = t6;
+      _.filterQuality = t7;
+      _.colorBlendMode = t8;
+      _.fit = t9;
+      _.alignment = t10;
+      _.repeat = t11;
+      _.centerSlice = t12;
+      _.matchTextDirection = t13;
+      _.invertColors = t14;
+      _.isAntiAlias = t15;
+      _.key = t16;
+    },
+    IndexedSemantics: function IndexedSemantics(t0, t1, t2) {
+      this.index = t0;
+      this.child = t1;
+      this.key = t2;
+    },
+    DisposableBuildContext: function DisposableBuildContext(t0, t1) {
+      this._disposable_build_context$_state = t0;
+      this.$ti = t1;
+    },
+    Image$network(src, fit, height, width) {
+      var _null = null;
+      return new A.Image(A.ResizeImage_resizeIfNeeded(_null, _null, new A.NetworkImage(src, 1, _null)), width, height, fit, _null);
+    },
+    Image: function Image(t0, t1, t2, t3, t4) {
+      var _ = this;
+      _.image = t0;
+      _.width = t1;
+      _.height = t2;
+      _.fit = t3;
+      _.key = t4;
+    },
+    _ImageState: function _ImageState(t0) {
+      var _ = this;
+      _._loadingProgress = _._imageInfo = _._imageStream = null;
+      _._isListeningToStream = false;
+      _.___ImageState__invertColors_A = $;
+      _._frameNumber = null;
+      _._wasSynchronouslyLoaded = false;
+      _.___ImageState__scrollAwareContext_A = $;
+      _._widget = _._imageStreamListener = _._completerHandle = _._lastStack = _._lastException = null;
+      _._debugLifecycleState = t0;
+      _._framework$_element = null;
+    },
+    _ImageState_didChangeAccessibilityFeatures_closure: function _ImageState_didChangeAccessibilityFeatures_closure(t0) {
+      this.$this = t0;
+    },
+    _ImageState__handleImageFrame_closure: function _ImageState__handleImageFrame_closure(t0, t1, t2) {
+      this.$this = t0;
+      this.imageInfo = t1;
+      this.synchronousCall = t2;
+    },
+    _ImageState__replaceImage_closure: function _ImageState__replaceImage_closure(t0) {
+      this.oldImageInfo = t0;
+    },
+    _ImageState__updateSourceStream_closure: function _ImageState__updateSourceStream_closure(t0) {
+      this.$this = t0;
+    },
+    _ImageState__updateSourceStream_closure0: function _ImageState__updateSourceStream_closure0(t0) {
+      this.$this = t0;
+    },
+    __ImageState_State_WidgetsBindingObserver: function __ImageState_State_WidgetsBindingObserver() {
+    },
+    PageController$(initialPage, keepPage, viewportFraction) {
+      return new A.PageController(initialPage, true, viewportFraction, 0, B._setArrayType([], type$.JSArray_ScrollPosition), $.$get$ChangeNotifier__emptyListeners());
+    },
+    PageController: function PageController(t0, t1, t2, t3, t4, t5) {
+      var _ = this;
+      _.initialPage = t0;
+      _.keepPage = t1;
+      _.viewportFraction = t2;
+      _._initialScrollOffset = t3;
+      _._positions = t4;
+      _.ChangeNotifier__count = 0;
+      _.ChangeNotifier__listeners = t5;
+      _.ChangeNotifier__reentrantlyRemovedListeners = _.ChangeNotifier__notificationCallStackDepth = 0;
+      _.ChangeNotifier__creationDispatched = _.ChangeNotifier__debugDisposed = false;
+    },
+    PageMetrics: function PageMetrics(t0, t1, t2, t3, t4, t5) {
+      var _ = this;
+      _.viewportFraction = t0;
+      _._scroll_metrics$_minScrollExtent = t1;
+      _._scroll_metrics$_maxScrollExtent = t2;
+      _._scroll_metrics$_pixels = t3;
+      _._scroll_metrics$_viewportDimension = t4;
+      _.axisDirection = t5;
+    },
+    _PagePosition: function _PagePosition(t0, t1, t2, t3, t4, t5, t6, t7, t8) {
+      var _ = this;
+      _._pageToUseOnStartup = t0;
+      _._cachedPage = null;
+      _._viewportFraction = t1;
+      _._heldPreviousVelocity = 0;
+      _._userScrollDirection = t2;
+      _._currentDrag = null;
+      _.physics = t3;
+      _.context = t4;
+      _.keepScrollOffset = t5;
+      _.debugLabel = t6;
+      _._maxScrollExtent = _._minScrollExtent = null;
+      _._impliedVelocity = 0;
+      _._viewportDimension = _._pixels = null;
+      _._haveDimensions = false;
+      _._didChangeViewportDimensionOrReceiveCorrection = true;
+      _._pendingDimensions = false;
+      _._scroll_position$_lastMetrics = null;
+      _._haveScheduledUpdateNotification = false;
+      _._semanticActions = _._lastAxis = null;
+      _.isScrollingNotifier = t7;
+      _._activity = null;
+      _.ChangeNotifier__count = 0;
+      _.ChangeNotifier__listeners = t8;
+      _.ChangeNotifier__reentrantlyRemovedListeners = _.ChangeNotifier__notificationCallStackDepth = 0;
+      _.ChangeNotifier__creationDispatched = _.ChangeNotifier__debugDisposed = false;
+    },
+    _ForceImplicitScrollPhysics: function _ForceImplicitScrollPhysics(t0, t1) {
+      this.allowImplicitScrolling = t0;
+      this.parent = t1;
+    },
+    PageScrollPhysics: function PageScrollPhysics(t0) {
+      this.parent = t0;
+    },
+    PageView: function PageView(t0, t1, t2, t3, t4, t5, t6, t7, t8) {
+      var _ = this;
+      _.allowImplicitScrolling = t0;
+      _.scrollDirection = t1;
+      _.reverse = t2;
+      _.controller = t3;
+      _.physics = t4;
+      _.pageSnapping = t5;
+      _.onPageChanged = t6;
+      _.childrenDelegate = t7;
+      _.key = t8;
+    },
+    _PageViewState: function _PageViewState(t0) {
+      var _ = this;
+      _._lastReportedPage = 0;
+      _._widget = null;
+      _._debugLifecycleState = t0;
+      _._framework$_element = null;
+    },
+    _PageViewState_build_closure: function _PageViewState_build_closure(t0) {
+      this.$this = t0;
+    },
+    _PageViewState_build_closure0: function _PageViewState_build_closure0(t0, t1) {
+      this.$this = t0;
+      this.axisDirection = t1;
+    },
+    ScrollAwareImageProvider: function ScrollAwareImageProvider(t0, t1, t2) {
+      this.context = t0;
+      this.imageProvider = t1;
+      this.$ti = t2;
+    },
+    ScrollAwareImageProvider_resolveStreamForKey_closure: function ScrollAwareImageProvider_resolveStreamForKey_closure(t0, t1, t2, t3, t4) {
+      var _ = this;
+      _.$this = t0;
+      _.configuration = t1;
+      _.stream = t2;
+      _.key = t3;
+      _.handleError = t4;
+    },
+    ScrollAwareImageProvider_resolveStreamForKey__closure: function ScrollAwareImageProvider_resolveStreamForKey__closure(t0, t1, t2, t3, t4) {
+      var _ = this;
+      _.$this = t0;
+      _.configuration = t1;
+      _.stream = t2;
+      _.key = t3;
+      _.handleError = t4;
+    },
+    _kDefaultSemanticIndexCallback(_, localIndex) {
+      return localIndex;
+    },
+    SliverMultiBoxAdaptorElement$(widget, replaceMovedChildren) {
+      var t1 = A.SplayTreeMap$(type$.int, type$.nullable_Element);
+      return new A.SliverMultiBoxAdaptorElement(replaceMovedChildren, t1, widget, C._ElementLifecycle_0);
+    },
+    SliverMultiBoxAdaptorElement__extrapolateMaxScrollOffset(firstIndex, lastIndex, leadingScrollOffset, trailingScrollOffset, childCount) {
+      if (lastIndex === childCount - 1)
+        return trailingScrollOffset;
+      return trailingScrollOffset + (trailingScrollOffset - leadingScrollOffset) / (lastIndex - firstIndex + 1) * (childCount - lastIndex - 1);
+    },
+    KeepAlive$(child, keepAlive) {
+      return new A.KeepAlive(keepAlive, child, null);
+    },
+    SliverChildDelegate: function SliverChildDelegate() {
+    },
+    _SaltedValueKey: function _SaltedValueKey(t0) {
+      this.value = t0;
+    },
+    _SelectionKeepAlive: function _SelectionKeepAlive(t0, t1) {
+      this.child = t0;
+      this.key = t1;
+    },
+    _SelectionKeepAliveState: function _SelectionKeepAliveState(t0, t1) {
+      var _ = this;
+      _._sliver$_registrar = _._selectableAttachments = _._selectablesWithSelections = null;
+      _._wantKeepAlive = false;
+      _.AutomaticKeepAliveClientMixin__keepAliveHandle = t0;
+      _._widget = null;
+      _._debugLifecycleState = t1;
+      _._framework$_element = null;
+    },
+    _SelectionKeepAliveState_listensTo_closure: function _SelectionKeepAliveState_listensTo_closure(t0, t1) {
+      this.$this = t0;
+      this.selectable = t1;
+    },
+    SliverWithKeepAliveWidget: function SliverWithKeepAliveWidget() {
+    },
+    SliverMultiBoxAdaptorWidget: function SliverMultiBoxAdaptorWidget() {
+    },
+    SliverMultiBoxAdaptorElement: function SliverMultiBoxAdaptorElement(t0, t1, t2, t3) {
+      var _ = this;
+      _._replaceMovedChildren = t0;
+      _._childElements = t1;
+      _._currentlyUpdatingChildIndex = _._currentBeforeChild = null;
+      _._didUnderflow = false;
+      _._renderObject = null;
+      _._debugDoingBuild = false;
+      _._slot = _._notificationTree = _._debugReassembleConfig = _._framework$_parent = _._ancestorRenderObjectElement = null;
+      _.__Element__depth_A = $;
+      _._widget = t2;
+      _._owner = null;
+      _._lifecycleState = t3;
+      _._dependencies = _._inheritedWidgets = null;
+      _._hadUnsatisfiedDependencies = false;
+      _._dirty = true;
+      _._debugBuiltOnce = _._inDirtyList = false;
+    },
+    SliverMultiBoxAdaptorElement_performRebuild_processElement: function SliverMultiBoxAdaptorElement_performRebuild_processElement(t0, t1, t2, t3, t4) {
+      var _ = this;
+      _._box_0 = t0;
+      _.$this = t1;
+      _.newChildren = t2;
+      _.adaptorWidget = t3;
+      _.indexToLayoutOffset = t4;
+    },
+    SliverMultiBoxAdaptorElement_performRebuild_closure: function SliverMultiBoxAdaptorElement_performRebuild_closure() {
+    },
+    SliverMultiBoxAdaptorElement_performRebuild_closure0: function SliverMultiBoxAdaptorElement_performRebuild_closure0(t0, t1) {
+      this.$this = t0;
+      this.index = t1;
+    },
+    SliverMultiBoxAdaptorElement_createChild_closure: function SliverMultiBoxAdaptorElement_createChild_closure(t0, t1, t2) {
+      this.$this = t0;
+      this.after = t1;
+      this.index = t2;
+    },
+    SliverMultiBoxAdaptorElement_removeChild_closure: function SliverMultiBoxAdaptorElement_removeChild_closure(t0, t1) {
+      this.$this = t0;
+      this.index = t1;
+    },
+    KeepAlive: function KeepAlive(t0, t1, t2) {
+      this.keepAlive = t0;
+      this.child = t1;
+      this.key = t2;
+    },
+    __SelectionKeepAliveState_State_AutomaticKeepAliveClientMixin: function __SelectionKeepAliveState_State_AutomaticKeepAliveClientMixin() {
+    },
+    SliverFillViewport: function SliverFillViewport(t0, t1, t2, t3) {
+      var _ = this;
+      _.viewportFraction = t0;
+      _.padEnds = t1;
+      _.delegate = t2;
+      _.key = t3;
+    },
+    _SliverFillViewportRenderObjectWidget: function _SliverFillViewportRenderObjectWidget(t0, t1, t2) {
+      this.viewportFraction = t0;
+      this.delegate = t1;
+      this.key = t2;
+    },
+    _SliverFractionalPadding: function _SliverFractionalPadding(t0, t1, t2) {
+      this.viewportFraction = t0;
+      this.child = t1;
+      this.key = t2;
+    },
+    _RenderSliverFractionalPadding: function _RenderSliverFractionalPadding(t0, t1, t2) {
+      var _ = this;
+      _._lastResolvedConstraints = null;
+      _._sliver_fill$_viewportFraction = t0;
+      _._sliver_fill$_resolvedPadding = null;
+      _.RenderObjectWithChildMixin__child = t1;
+      _._geometry = null;
+      _._debugDisposed = false;
+      _.debugCreator = _.parentData = null;
+      _._debugDoingThisLayout = _._debugDoingThisResize = false;
+      _._debugCanParentUseSize = null;
+      _._debugMutationsLocked = false;
+      _._needsLayout = true;
+      _._relayoutBoundary = null;
+      _._doingThisLayoutWithCallback = false;
+      _._constraints = null;
+      _._debugDoingThisPaint = false;
+      _.__RenderObject__wasRepaintBoundary_A = $;
+      _._layerHandle = t2;
+      _._needsCompositingBitsUpdate = false;
+      _.__RenderObject__needsCompositing_A = $;
+      _._needsPaint = true;
+      _._needsCompositedLayerUpdate = false;
+      _._cachedSemanticsConfiguration = null;
+      _._needsSemanticsUpdate = true;
+      _._semantics = null;
+      _._depth = 0;
+      _._node$_parent = _._node$_owner = null;
+    },
+    Viewport$(anchor, axisDirection, cacheExtent, cacheExtentStyle, center, clipBehavior, offset, slivers) {
+      return new A.Viewport(axisDirection, anchor, offset, center, cacheExtent, cacheExtentStyle, clipBehavior, slivers, null);
+    },
+    Viewport_getDefaultCrossAxisDirection(context, axisDirection) {
+      var t1;
+      switch (axisDirection.index) {
+        case 0:
+          t1 = context.dependOnInheritedWidgetOfExactType$1$0(type$.Directionality);
+          t1.toString;
+          return E.textDirectionToAxisDirection(t1.textDirection);
+        case 1:
+          return C.AxisDirection_2;
+        case 2:
+          t1 = context.dependOnInheritedWidgetOfExactType$1$0(type$.Directionality);
+          t1.toString;
+          return E.textDirectionToAxisDirection(t1.textDirection);
+        case 3:
+          return C.AxisDirection_2;
+      }
+    },
+    Viewport: function Viewport(t0, t1, t2, t3, t4, t5, t6, t7, t8) {
+      var _ = this;
+      _.axisDirection = t0;
+      _.anchor = t1;
+      _.offset = t2;
+      _.center = t3;
+      _.cacheExtent = t4;
+      _.cacheExtentStyle = t5;
+      _.clipBehavior = t6;
+      _.children = t7;
+      _.key = t8;
+    },
+    _ViewportElement: function _ViewportElement(t0, t1, t2) {
+      var _ = this;
+      _._doingMountOrUpdate = false;
+      _._centerSlotIndex = null;
+      _.__MultiChildRenderObjectElement__children_A = $;
+      _._forgottenChildren = t0;
+      _._renderObject = null;
+      _._debugDoingBuild = false;
+      _._slot = _._notificationTree = _._debugReassembleConfig = _._framework$_parent = _._ancestorRenderObjectElement = null;
+      _.__Element__depth_A = $;
+      _._widget = t1;
+      _._owner = null;
+      _._lifecycleState = t2;
+      _._dependencies = _._inheritedWidgets = null;
+      _._hadUnsatisfiedDependencies = false;
+      _._dirty = true;
+      _._debugBuiltOnce = _._inDirtyList = false;
+    },
+    __ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin: function __ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin() {
+    },
+    __ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin_ViewportElementMixin: function __ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin_ViewportElementMixin() {
+    },
+    SmartDialog_showLoading(animationType, builder, maskColor, maskWidget, msg, usePenetrate, $T) {
+      var t2, t3, t4, t5,
+        t1 = $.DialogProxy__instance;
+      if (t1 == null)
+        t1 = $.DialogProxy__instance = B.DialogProxy$_internal();
+      t2 = B.DialogScope$(new A.SmartDialog_showLoading_closure(builder, msg), null);
+      $.$get$SmartDialog_config().toString;
+      t3 = animationType == null ? C.SmartAnimationType_0 : animationType;
+      t4 = maskColor == null ? C.Color_1962934272 : maskColor;
+      t5 = maskWidget == null ? null : maskWidget;
+      type$.nullable_Widget_Function_AnimationController_Widget_AnimationParam._as(null);
+      type$.List_SmartNonAnimationType._as(C.List_SmartNonAnimationType_2);
+      type$.nullable_void_Function._as(null);
+      t1 = t1.__DialogProxy__loading_A;
+      t1 === $ && B.throwLateFieldNI("_loading");
+      return t1.showLoading$1$15$alignment$animationBuilder$animationTime$animationType$backDismiss$clickMaskDismiss$displayTime$maskColor$maskWidget$nonAnimationTypes$onDismiss$onMask$useAnimation$usePenetrate$widget(C.Alignment_0_0, null, C.Duration_200000, t3, true, false, null, t4, t5, C.List_SmartNonAnimationType_2, null, null, true, usePenetrate === true, t2, $T);
+    },
+    SmartDialog_showToast(msg, builder, displayTime, displayType) {
+      var $async$goto = 0,
+        $async$completer = B._makeAsyncAwaitCompleter(type$.void),
+        $async$returnValue, t2, t3, t4, t1;
+      var $async$SmartDialog_showToast = B._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1)
+          return B._asyncRethrow($async$result, $async$completer);
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              t1 = $.DialogProxy__instance;
+              if (t1 == null)
+                t1 = $.DialogProxy__instance = B.DialogProxy$_internal();
+              t2 = B.DialogScope$(new A.SmartDialog_showToast_closure(builder, msg), null);
+              if (displayTime == null) {
+                $.$get$SmartDialog_config().toString;
+                t3 = C.Duration_2000000;
+              } else
+                t3 = displayTime;
+              $.$get$SmartDialog_config().toString;
+              t4 = displayType == null ? C.SmartToastType_0 : displayType;
+              $async$returnValue = t1.showToast$14$alignment$animationBuilder$animationTime$animationType$clickMaskDismiss$consumeEvent$debounce$displayTime$displayType$maskColor$maskWidget$useAnimation$usePenetrate$widget(C.Alignment_0_1, null, C.Duration_200000, C.SmartAnimationType_0, false, false, false, t3, t4, C.Color_1962934272, null, true, true, t2);
+              // goto return
+              $async$goto = 1;
+              break;
+            case 1:
+              // return
+              return B._asyncReturn($async$returnValue, $async$completer);
+          }
+      });
+      return B._asyncStartSync($async$SmartDialog_showToast, $async$completer);
+    },
+    SmartDialog_dismiss(force, result, $status, tag, $T) {
+      var $async$goto = 0,
+        $async$completer = B._makeAsyncAwaitCompleter(type$.void),
+        $async$returnValue, t1;
+      var $async$SmartDialog_dismiss = B._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1)
+          return B._asyncRethrow($async$result, $async$completer);
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              t1 = $.DialogProxy__instance;
+              $async$returnValue = (t1 == null ? $.DialogProxy__instance = B.DialogProxy$_internal() : t1).dismiss$1$4$force$result$status$tag(force, result, $status, tag, $T);
+              // goto return
+              $async$goto = 1;
+              break;
+            case 1:
+              // return
+              return B._asyncReturn($async$returnValue, $async$completer);
+          }
+      });
+      return B._asyncStartSync($async$SmartDialog_dismiss, $async$completer);
+    },
+    SmartDialog_showLoading_closure: function SmartDialog_showLoading_closure(t0, t1) {
+      this.builder = t0;
+      this.msg = t1;
+    },
+    SmartDialog_showToast_closure: function SmartDialog_showToast_closure(t0, t1) {
+      this.builder = t0;
+      this.msg = t1;
+    },
+    Primitives_currentUri() {
+      if (!!self.location)
+        return self.location.href;
+      return null;
+    },
+    Uri_base() {
+      var uri = A.Primitives_currentUri();
+      if (uri != null)
+        return B.Uri_parse(uri, 0, null);
+      throw B.wrapException(B.UnsupportedError$("'Uri.base' is not supported"));
+    },
+    flipScrollDirection(direction) {
+      switch (direction.index) {
+        case 0:
+          return C.ScrollDirection_0;
+        case 1:
+          return C.ScrollDirection_2;
+        case 2:
+          return C.ScrollDirection_1;
+      }
+    },
+    DomEventTargetExtension_addEventListener0(_this, type, listener) {
+      var t1 = B._setArrayType([type, listener], type$.JSArray_Object);
+      B.callMethod(_this, "addEventListener", t1, type$.dynamic);
+    },
+    Scrollable_recommendDeferredLoadingForContext(context) {
+      var t1 = context.getElementForInheritedWidgetOfExactType$1$0(type$._ScrollableScope);
+      t1 = t1 == null ? null : t1.get$widget();
+      type$.nullable__ScrollableScope._as(t1);
+      if (t1 == null)
+        return false;
+      t1 = t1.position;
+      return t1.physics.recommendDeferredLoading$3(t1._activity.get$velocity() + t1._impliedVelocity, t1.copyWith$0(), context);
+    }
+  },
+  B, J, C, G, F, E, D;
+  A = hunkHelpers.updateHolder(holdersList[43], A);
+  B = holdersList[0];
+  J = holdersList[1];
+  C = holdersList[2];
+  G = holdersList[83];
+  F = holdersList[53];
+  E = holdersList[49];
+  D = holdersList[77];
+  A.IterableMixin.prototype = {
+    map$1$1(_, toElement, $T) {
+      var t1 = this.$ti;
+      return B.MappedIterable_MappedIterable(this, t1._bind$1($T)._eval$1("1(2)")._as(toElement), t1._precomputed1, $T);
+    },
+    contains$1(_, element) {
+      var t1;
+      for (t1 = this.$ti, t1 = new A._SplayTreeKeyIterator(this, B._setArrayType([], t1._eval$1("JSArray<_SplayTreeSetNode<1>>")), this._splayCount, t1._eval$1("@<1>")._bind$1(t1._eval$1("_SplayTreeSetNode<1>"))._eval$1("_SplayTreeKeyIterator<1,2>")); t1.moveNext$0();)
+        if (J.$eq$(t1.get$current(t1), element))
+          return true;
+      return false;
+    },
+    toList$1$growable(_, growable) {
+      return B.List_List$from(this, true, this.$ti._precomputed1);
+    },
+    toList$0($receiver) {
+      return this.toList$1$growable($receiver, true);
+    },
+    toSet$0(_) {
+      return B.LinkedHashSet_LinkedHashSet$from(this, this.$ti._precomputed1);
+    },
+    get$length(_) {
+      var count,
+        t1 = this.$ti,
+        it = new A._SplayTreeKeyIterator(this, B._setArrayType([], t1._eval$1("JSArray<_SplayTreeSetNode<1>>")), this._splayCount, t1._eval$1("@<1>")._bind$1(t1._eval$1("_SplayTreeSetNode<1>"))._eval$1("_SplayTreeKeyIterator<1,2>"));
+      for (count = 0; it.moveNext$0();)
+        ++count;
+      return count;
+    },
+    get$isEmpty(_) {
+      var t1 = this.$ti;
+      return !new A._SplayTreeKeyIterator(this, B._setArrayType([], t1._eval$1("JSArray<_SplayTreeSetNode<1>>")), this._splayCount, t1._eval$1("@<1>")._bind$1(t1._eval$1("_SplayTreeSetNode<1>"))._eval$1("_SplayTreeKeyIterator<1,2>")).moveNext$0();
+    },
+    get$isNotEmpty(_) {
+      return this._collection$_root != null;
+    },
+    skip$1(_, count) {
+      return B.SkipIterable_SkipIterable(this, count, this.$ti._precomputed1);
+    },
+    get$first(_) {
+      var t1 = this.$ti,
+        it = new A._SplayTreeKeyIterator(this, B._setArrayType([], t1._eval$1("JSArray<_SplayTreeSetNode<1>>")), this._splayCount, t1._eval$1("@<1>")._bind$1(t1._eval$1("_SplayTreeSetNode<1>"))._eval$1("_SplayTreeKeyIterator<1,2>"));
+      if (!it.moveNext$0())
+        throw B.wrapException(B.IterableElementError_noElement());
+      return it.get$current(it);
+    },
+    get$last(_) {
+      var result,
+        t1 = this.$ti,
+        it = new A._SplayTreeKeyIterator(this, B._setArrayType([], t1._eval$1("JSArray<_SplayTreeSetNode<1>>")), this._splayCount, t1._eval$1("@<1>")._bind$1(t1._eval$1("_SplayTreeSetNode<1>"))._eval$1("_SplayTreeKeyIterator<1,2>"));
+      if (!it.moveNext$0())
+        throw B.wrapException(B.IterableElementError_noElement());
+      do
+        result = it.get$current(it);
+      while (it.moveNext$0());
+      return result;
+    },
+    elementAt$1(_, index) {
+      var t1, elementIndex, element, _this = this, _s5_ = "index";
+      B.checkNotNullable(index, _s5_, type$.int);
+      B.RangeError_checkNotNegative(index, _s5_);
+      for (t1 = _this.$ti, t1 = new A._SplayTreeKeyIterator(_this, B._setArrayType([], t1._eval$1("JSArray<_SplayTreeSetNode<1>>")), _this._splayCount, t1._eval$1("@<1>")._bind$1(t1._eval$1("_SplayTreeSetNode<1>"))._eval$1("_SplayTreeKeyIterator<1,2>")), elementIndex = 0; t1.moveNext$0();) {
+        element = t1.get$current(t1);
+        if (index === elementIndex)
+          return element;
+        ++elementIndex;
+      }
+      throw B.wrapException(B.IndexError$withLength(index, elementIndex, _this, null, _s5_));
+    },
+    toString$0(_) {
+      return B.IterableBase_iterableToShortString(this, "(", ")");
+    }
+  };
+  A._SplayTreeNode.prototype = {
+    set$_collection$_left(_, _left) {
+      this._collection$_left = B._instanceType(this)._eval$1("_SplayTreeNode.1?")._as(_left);
+    },
+    set$_collection$_right(_, _right) {
+      this._collection$_right = B._instanceType(this)._eval$1("_SplayTreeNode.1?")._as(_right);
+    },
+    get$key(receiver) {
+      return this.key;
+    }
+  };
+  A._SplayTreeSetNode.prototype = {};
+  A._SplayTreeMapNode.prototype = {
+    _replaceValue$1(value) {
+      var _this = this,
+        t1 = _this.$ti,
+        t2 = t1._rest[1];
+      t2 = new A._SplayTreeMapNode(t2._as(value), _this.key, t1._eval$1("@<1>")._bind$1(t2)._eval$1("_SplayTreeMapNode<1,2>"));
+      t2.set$_collection$_left(0, _this._collection$_left);
+      t2.set$_collection$_right(0, _this._collection$_right);
+      return t2;
+    },
+    toString$0(_) {
+      return "MapEntry(" + B.S(this.key) + ": " + B.S(this.value) + ")";
+    },
+    $isMapEntry: 1,
+    get$value(receiver) {
+      return this.value;
+    }
+  };
+  A._SplayTree.prototype = {
+    _splay$1(key) {
+      var root, compare, comp, current, newTreeLeft, left, newTreeRight, right, currentLeft, currentLeft0, currentRight, currentRight0, _this = this, _null = null;
+      B._instanceType(_this)._eval$1("_SplayTree.K")._as(key);
+      root = _this.get$_collection$_root();
+      if (root == null) {
+        _this._compare$2(key, key);
+        return -1;
+      }
+      compare = _this.get$_compare();
+      for (comp = _null, current = root, newTreeLeft = comp, left = newTreeLeft, newTreeRight = left, right = newTreeRight; true;) {
+        comp = compare.call$2(current.key, key);
+        if (comp > 0) {
+          currentLeft = current._collection$_left;
+          if (currentLeft == null)
+            break;
+          comp = compare.call$2(currentLeft.key, key);
+          if (comp > 0) {
+            current.set$_collection$_left(0, currentLeft._collection$_right);
+            currentLeft.set$_collection$_right(0, current);
+            currentLeft0 = currentLeft._collection$_left;
+            if (currentLeft0 == null) {
+              current = currentLeft;
+              break;
+            }
+            current = currentLeft;
+            currentLeft = currentLeft0;
+          }
+          if (right == null)
+            newTreeRight = current;
+          else
+            right.set$_collection$_left(0, current);
+          right = current;
+          current = currentLeft;
+        } else {
+          if (comp < 0) {
+            currentRight = current._collection$_right;
+            if (currentRight == null)
+              break;
+            comp = compare.call$2(currentRight.key, key);
+            if (comp < 0) {
+              current.set$_collection$_right(0, currentRight._collection$_left);
+              currentRight.set$_collection$_left(0, current);
+              currentRight0 = currentRight._collection$_right;
+              if (currentRight0 == null) {
+                current = currentRight;
+                break;
+              }
+              current = currentRight;
+              currentRight = currentRight0;
+            }
+            if (left == null)
+              newTreeLeft = current;
+            else
+              left.set$_collection$_right(0, current);
+          } else
+            break;
+          left = current;
+          current = currentRight;
+        }
+      }
+      if (left != null) {
+        left.set$_collection$_right(0, current._collection$_left);
+        current.set$_collection$_left(0, newTreeLeft);
+      }
+      if (right != null) {
+        right.set$_collection$_left(0, current._collection$_right);
+        current.set$_collection$_right(0, newTreeRight);
+      }
+      if (_this.get$_collection$_root() !== current) {
+        _this.set$_collection$_root(current);
+        ++_this._splayCount;
+      }
+      return comp;
+    },
+    _splayMin$1(node) {
+      var nextLeft, current, nextLeft0;
+      B._instanceType(this)._eval$1("_SplayTree.1")._as(node);
+      nextLeft = node._collection$_left;
+      for (current = node; nextLeft != null; current = nextLeft, nextLeft = nextLeft0) {
+        current.set$_collection$_left(0, nextLeft._collection$_right);
+        nextLeft.set$_collection$_right(0, current);
+        nextLeft0 = nextLeft._collection$_left;
+      }
+      return current;
+    },
+    _splayMax$1(node) {
+      var nextRight, current, nextRight0;
+      B._instanceType(this)._eval$1("_SplayTree.1")._as(node);
+      nextRight = node._collection$_right;
+      for (current = node; nextRight != null; current = nextRight, nextRight = nextRight0) {
+        current.set$_collection$_right(0, nextRight._collection$_left);
+        nextRight.set$_collection$_left(0, current);
+        nextRight0 = nextRight._collection$_right;
+      }
+      return current;
+    },
+    _remove$1(_, key) {
+      var root, left, t1, root0, _this = this;
+      B._instanceType(_this)._eval$1("_SplayTree.K")._as(key);
+      if (_this.get$_collection$_root() == null)
+        return null;
+      if (_this._splay$1(key) !== 0)
+        return null;
+      root = _this.get$_collection$_root();
+      left = root._collection$_left;
+      --_this._collection$_count;
+      t1 = root._collection$_right;
+      if (left == null)
+        _this.set$_collection$_root(t1);
+      else {
+        root0 = _this._splayMax$1(left);
+        root0.set$_collection$_right(0, t1);
+        _this.set$_collection$_root(root0);
+      }
+      ++_this._modificationCount;
+      return root;
+    },
+    _addNewRoot$2(node, comp) {
+      var root, _this = this;
+      B._instanceType(_this)._eval$1("_SplayTree.1")._as(node);
+      ++_this._collection$_count;
+      ++_this._modificationCount;
+      root = _this.get$_collection$_root();
+      if (root == null) {
+        _this.set$_collection$_root(node);
+        return;
+      }
+      if (comp < 0) {
+        node.set$_collection$_left(0, root);
+        node.set$_collection$_right(0, root._collection$_right);
+        root.set$_collection$_right(0, null);
+      } else {
+        node.set$_collection$_right(0, root);
+        node.set$_collection$_left(0, root._collection$_left);
+        root.set$_collection$_left(0, null);
+      }
+      _this.set$_collection$_root(node);
+    },
+    get$_collection$_first() {
+      var _this = this,
+        root = _this.get$_collection$_root();
+      if (root == null)
+        return null;
+      _this.set$_collection$_root(_this._splayMin$1(root));
+      return _this.get$_collection$_root();
+    },
+    get$_collection$_last() {
+      var _this = this,
+        root = _this.get$_collection$_root();
+      if (root == null)
+        return null;
+      _this.set$_collection$_root(_this._splayMax$1(root));
+      return _this.get$_collection$_root();
+    },
+    _clear$0(_) {
+      this.set$_collection$_root(null);
+      this._collection$_count = 0;
+      ++this._modificationCount;
+    },
+    _containsKey$1(key) {
+      return B.boolConversionCheck(this._validKey$1(key)) && this._splay$1(B._instanceType(this)._eval$1("_SplayTree.K")._as(key)) === 0;
+    },
+    _compare$2(arg0, arg1) {
+      return this.get$_compare().call$2(arg0, arg1);
+    },
+    _validKey$1(arg0) {
+      return this.get$_validKey().call$1(arg0);
+    }
+  };
+  A.SplayTreeMap.prototype = {
+    $index(_, key) {
+      var _this = this;
+      if (!B.boolConversionCheck(_this._validKey.call$1(key)))
+        return null;
+      if (_this._collection$_root != null)
+        if (_this._splay$1(_this.$ti._precomputed1._as(key)) === 0)
+          return _this._collection$_root.value;
+      return null;
+    },
+    remove$1(_, key) {
+      var mapRoot;
+      if (!B.boolConversionCheck(this._validKey.call$1(key)))
+        return null;
+      mapRoot = this._remove$1(0, this.$ti._precomputed1._as(key));
+      if (mapRoot != null)
+        return mapRoot.value;
+      return null;
+    },
+    $indexSet(_, key, value) {
+      var t2, comp, _this = this,
+        t1 = _this.$ti;
+      t1._precomputed1._as(key);
+      t2 = t1._rest[1];
+      t2._as(value);
+      comp = _this._splay$1(key);
+      if (comp === 0) {
+        _this.set$_collection$_root(_this._collection$_root._replaceValue$1(value));
+        ++_this._splayCount;
+        return;
+      }
+      _this._addNewRoot$2(new A._SplayTreeMapNode(value, key, t1._eval$1("@<1>")._bind$1(t2)._eval$1("_SplayTreeMapNode<1,2>")), comp);
+    },
+    putIfAbsent$2(_, key, ifAbsent) {
+      var comp, modificationCount, splayCount, value, _this = this,
+        t1 = _this.$ti;
+      t1._precomputed1._as(key);
+      t1._eval$1("2()")._as(ifAbsent);
+      comp = _this._splay$1(key);
+      if (comp === 0)
+        return _this._collection$_root.value;
+      modificationCount = _this._modificationCount;
+      splayCount = _this._splayCount;
+      value = ifAbsent.call$0();
+      if (modificationCount !== _this._modificationCount)
+        throw B.wrapException(B.ConcurrentModificationError$(_this));
+      if (splayCount !== _this._splayCount)
+        comp = _this._splay$1(key);
+      _this._addNewRoot$2(new A._SplayTreeMapNode(value, key, t1._eval$1("@<1>")._bind$1(t1._rest[1])._eval$1("_SplayTreeMapNode<1,2>")), comp);
+      return value;
+    },
+    get$isEmpty(_) {
+      return this._collection$_root == null;
+    },
+    get$isNotEmpty(_) {
+      return this._collection$_root != null;
+    },
+    forEach$1(_, f) {
+      var nodes, node,
+        t1 = this.$ti;
+      t1._eval$1("~(1,2)")._as(f);
+      t1 = t1._eval$1("@<1>")._bind$1(t1._rest[1]);
+      nodes = new A._SplayTreeMapEntryIterator(this, B._setArrayType([], t1._eval$1("JSArray<_SplayTreeMapNode<1,2>>")), this._splayCount, t1._eval$1("_SplayTreeMapEntryIterator<1,2>"));
+      for (; nodes.moveNext$0();) {
+        node = nodes.get$current(nodes);
+        f.call$2(node.get$key(node), node.get$value(node));
+      }
+    },
+    get$length(_) {
+      return this._collection$_count;
+    },
+    containsKey$1(_, key) {
+      return this._containsKey$1(key);
+    },
+    get$keys(_) {
+      var t1 = this.$ti;
+      return new A._SplayTreeKeyIterable(this, t1._eval$1("@<1>")._bind$1(t1._eval$1("_SplayTreeMapNode<1,2>"))._eval$1("_SplayTreeKeyIterable<1,2>"));
+    },
+    get$values(_) {
+      var t1 = this.$ti;
+      return new A._SplayTreeValueIterable(this, t1._eval$1("@<1>")._bind$1(t1._rest[1])._eval$1("_SplayTreeValueIterable<1,2>"));
+    },
+    get$entries(_) {
+      var t1 = this.$ti;
+      return new A._SplayTreeMapEntryIterable(this, t1._eval$1("@<1>")._bind$1(t1._rest[1])._eval$1("_SplayTreeMapEntryIterable<1,2>"));
+    },
+    firstKey$0() {
+      if (this._collection$_root == null)
+        return null;
+      return this.get$_collection$_first().key;
+    },
+    lastKey$0() {
+      if (this._collection$_root == null)
+        return null;
+      return this.get$_collection$_last().key;
+    },
+    set$_collection$_root(_root) {
+      this._collection$_root = this.$ti._eval$1("_SplayTreeMapNode<1,2>?")._as(_root);
+    },
+    $isMap: 1,
+    _compare$2(arg0, arg1) {
+      return this._compare.call$2(arg0, arg1);
+    },
+    _validKey$1(arg0) {
+      return this._validKey.call$1(arg0);
+    },
+    get$_collection$_root() {
+      return this._collection$_root;
+    },
+    get$_compare() {
+      return this._compare;
+    }
+  };
+  A._SplayTreeIterator.prototype = {
+    get$current(_) {
+      var t1 = this._collection$_path;
+      if (t1.length === 0) {
+        B._instanceType(this)._eval$1("_SplayTreeIterator.T")._as(null);
+        return null;
+      }
+      return this._getValue$1(C.JSArray_methods.get$last(t1));
+    },
+    moveNext$0() {
+      var node, next, _this = this,
+        t1 = _this._modificationCount,
+        t2 = _this._tree,
+        t3 = t2._modificationCount;
+      if (t1 !== t3) {
+        if (t1 == null) {
+          _this._modificationCount = t3;
+          node = t2.get$_collection$_root();
+          for (t1 = _this._collection$_path; node != null;) {
+            C.JSArray_methods.add$1(t1, node);
+            node = node._collection$_left;
+          }
+          return t1.length !== 0;
+        }
+        throw B.wrapException(B.ConcurrentModificationError$(t2));
+      }
+      t1 = _this._collection$_path;
+      if (t1.length === 0)
+        return false;
+      if (_this._splayCount !== t2._splayCount) {
+        t3 = B._instanceType(_this)._eval$1("_SplayTreeIterator.K")._as(C.JSArray_methods.get$last(t1).key);
+        C.JSArray_methods.clear$0(t1);
+        t2._splay$1(t3);
+        t3 = t2.get$_collection$_root();
+        t3.toString;
+        C.JSArray_methods.add$1(t1, t3);
+        _this._splayCount = t2._splayCount;
+      }
+      node = C.JSArray_methods.get$last(t1);
+      next = node._collection$_right;
+      if (next != null) {
+        for (; next != null;) {
+          C.JSArray_methods.add$1(t1, next);
+          next = next._collection$_left;
+        }
+        return true;
+      }
+      if (0 >= t1.length)
+        return B.ioore(t1, -1);
+      t1.pop();
+      while (true) {
+        if (!(t1.length !== 0 && C.JSArray_methods.get$last(t1)._collection$_right === node))
+          break;
+        if (0 >= t1.length)
+          return B.ioore(t1, -1);
+        node = t1.pop();
+      }
+      return t1.length !== 0;
+    },
+    $isIterator: 1
+  };
+  A._SplayTreeKeyIterable.prototype = {
+    get$length(_) {
+      return this._tree._collection$_count;
+    },
+    get$isEmpty(_) {
+      return this._tree._collection$_count === 0;
+    },
+    get$iterator(_) {
+      var t1 = this._tree,
+        t2 = this.$ti;
+      return new A._SplayTreeKeyIterator(t1, B._setArrayType([], t2._eval$1("JSArray<2>")), t1._splayCount, t2._eval$1("@<1>")._bind$1(t2._rest[1])._eval$1("_SplayTreeKeyIterator<1,2>"));
+    },
+    contains$1(_, o) {
+      return this._tree._containsKey$1(o);
+    },
+    toSet$0(_) {
+      var t1 = this._tree,
+        t2 = this.$ti,
+        set = A.SplayTreeSet$(t2._eval$1("int(1,1)")._as(t1._compare), t1._validKey, t2._precomputed1);
+      set._collection$_count = t1._collection$_count;
+      set.set$_collection$_root(set._copyNode$1$1(t1._collection$_root, t2._rest[1]));
+      return set;
+    }
+  };
+  A._SplayTreeValueIterable.prototype = {
+    get$length(_) {
+      return this._collection$_map._collection$_count;
+    },
+    get$isEmpty(_) {
+      return this._collection$_map._collection$_count === 0;
+    },
+    get$iterator(_) {
+      var t1 = this._collection$_map,
+        t2 = this.$ti;
+      t2 = t2._eval$1("@<1>")._bind$1(t2._rest[1]);
+      return new A._SplayTreeValueIterator(t1, B._setArrayType([], t2._eval$1("JSArray<_SplayTreeMapNode<1,2>>")), t1._splayCount, t2._eval$1("_SplayTreeValueIterator<1,2>"));
+    }
+  };
+  A._SplayTreeMapEntryIterable.prototype = {
+    get$length(_) {
+      return this._collection$_map._collection$_count;
+    },
+    get$isEmpty(_) {
+      return this._collection$_map._collection$_count === 0;
+    },
+    get$iterator(_) {
+      var t1 = this._collection$_map,
+        t2 = this.$ti;
+      t2 = t2._eval$1("@<1>")._bind$1(t2._rest[1]);
+      return new A._SplayTreeMapEntryIterator(t1, B._setArrayType([], t2._eval$1("JSArray<_SplayTreeMapNode<1,2>>")), t1._splayCount, t2._eval$1("_SplayTreeMapEntryIterator<1,2>"));
+    }
+  };
+  A._SplayTreeKeyIterator.prototype = {
+    _getValue$1(node) {
+      return this.$ti._rest[1]._as(node).key;
+    }
+  };
+  A._SplayTreeValueIterator.prototype = {
+    _getValue$1(node) {
+      return this.$ti._eval$1("_SplayTreeMapNode<1,2>")._as(node).value;
+    }
+  };
+  A._SplayTreeMapEntryIterator.prototype = {
+    _getValue$1(node) {
+      return this.$ti._eval$1("_SplayTreeMapNode<1,2>")._as(node);
+    }
+  };
+  A.SplayTreeSet.prototype = {
+    get$iterator(_) {
+      var t1 = this.$ti;
+      return new A._SplayTreeKeyIterator(this, B._setArrayType([], t1._eval$1("JSArray<_SplayTreeSetNode<1>>")), this._splayCount, t1._eval$1("@<1>")._bind$1(t1._eval$1("_SplayTreeSetNode<1>"))._eval$1("_SplayTreeKeyIterator<1,2>"));
+    },
+    get$length(_) {
+      return this._collection$_count;
+    },
+    get$isEmpty(_) {
+      return this._collection$_root == null;
+    },
+    get$isNotEmpty(_) {
+      return this._collection$_root != null;
+    },
+    get$first(_) {
+      if (this._collection$_count === 0)
+        throw B.wrapException(B.IterableElementError_noElement());
+      return this.get$_collection$_first().key;
+    },
+    get$last(_) {
+      if (this._collection$_count === 0)
+        throw B.wrapException(B.IterableElementError_noElement());
+      return this.get$_collection$_last().key;
+    },
+    contains$1(_, element) {
+      return B.boolConversionCheck(this._validKey.call$1(element)) && this._splay$1(this.$ti._precomputed1._as(element)) === 0;
+    },
+    add$1(_, element) {
+      return this._add$1(0, this.$ti._precomputed1._as(element));
+    },
+    _add$1(_, element) {
+      var compare,
+        t1 = this.$ti;
+      t1._precomputed1._as(element);
+      compare = this._splay$1(element);
+      if (compare === 0)
+        return false;
+      this._addNewRoot$2(new A._SplayTreeSetNode(element, t1._eval$1("_SplayTreeSetNode<1>")), compare);
+      return true;
+    },
+    remove$1(_, object) {
+      if (!B.boolConversionCheck(this._validKey.call$1(object)))
+        return false;
+      return this._remove$1(0, this.$ti._precomputed1._as(object)) != null;
+    },
+    addAll$1(_, elements) {
+      var t1, t2;
+      this.$ti._eval$1("Iterable<1>")._as(elements);
+      for (t1 = J.get$iterator$ax(elements.get$_source()), t2 = B._instanceType(elements), t2 = t2._eval$1("@<1>")._bind$1(t2._rest[1])._rest[1]; t1.moveNext$0();)
+        this._add$1(0, t2._as(t1.get$current(t1)));
+    },
+    removeAll$1(elements) {
+      var t1, t2, _i, element;
+      for (t1 = elements.length, t2 = this.$ti._precomputed1, _i = 0; _i < elements.length; elements.length === t1 || (0, B.throwConcurrentModificationError)(elements), ++_i) {
+        element = elements[_i];
+        if (B.boolConversionCheck(this._validKey.call$1(element)))
+          this._remove$1(0, t2._as(element));
+      }
+    },
+    intersection$1(_, other) {
+      var t2, element, _this = this,
+        t1 = _this.$ti,
+        result = A.SplayTreeSet$(_this._compare, _this._validKey, t1._precomputed1);
+      for (t1 = new A._SplayTreeKeyIterator(_this, B._setArrayType([], t1._eval$1("JSArray<_SplayTreeSetNode<1>>")), _this._splayCount, t1._eval$1("@<1>")._bind$1(t1._eval$1("_SplayTreeSetNode<1>"))._eval$1("_SplayTreeKeyIterator<1,2>")), t2 = result.$ti._precomputed1; t1.moveNext$0();) {
+        element = t1.get$current(t1);
+        if (other.contains$1(0, element))
+          result._add$1(0, t2._as(element));
+      }
+      return result;
+    },
+    _copyNode$1$1(node, $Node) {
+      var result,
+        t1 = this.$ti;
+      B.checkTypeBound($Node, t1._bind$1($Node)._eval$1("_SplayTreeNode<2,1>"), "Node", "_copyNode");
+      $Node._eval$1("0?")._as(node);
+      if (node == null)
+        return null;
+      result = new A._SplayTreeSetNode(node.key, t1._eval$1("_SplayTreeSetNode<1>"));
+      new A.SplayTreeSet__copyNode_copyChildren(this, $Node).call$2(node, result);
+      return result;
+    },
+    clear$0(_) {
+      this._clear$0(0);
+    },
+    toSet$0(_) {
+      var _this = this,
+        t1 = _this.$ti,
+        set = A.SplayTreeSet$(_this._compare, _this._validKey, t1._precomputed1);
+      set._collection$_count = _this._collection$_count;
+      set.set$_collection$_root(_this._copyNode$1$1(_this._collection$_root, t1._eval$1("_SplayTreeSetNode<1>")));
+      return set;
+    },
+    toString$0(_) {
+      return B.IterableBase_iterableToFullString(this, "{", "}");
+    },
+    set$_collection$_root(_root) {
+      this._collection$_root = this.$ti._eval$1("_SplayTreeSetNode<1>?")._as(_root);
+    },
+    $isEfficientLengthIterable: 1,
+    $isIterable: 1,
+    $isSet: 1,
+    _compare$2(arg0, arg1) {
+      return this._compare.call$2(arg0, arg1);
+    },
+    _validKey$1(arg0) {
+      return this._validKey.call$1(arg0);
+    },
+    get$_collection$_root() {
+      return this._collection$_root;
+    },
+    get$_compare() {
+      return this._compare;
+    }
+  };
+  A._SplayTreeMap__SplayTree_MapMixin.prototype = {};
+  A._SplayTreeSet__SplayTree_IterableMixin.prototype = {};
+  A._SplayTreeSet__SplayTree_IterableMixin_SetMixin.prototype = {};
+  A.NetworkImage.prototype = {
+    obtainKey$1(configuration) {
+      return new B.SynchronousFuture(this, type$.SynchronousFuture_NetworkImage);
+    },
+    load$2(_, key, decode) {
+      var chunkEvents;
+      type$.NetworkImage._as(key);
+      type$.Future_Codec_Function_Uint8List_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int._as(decode);
+      chunkEvents = B.StreamController_StreamController(null, type$.ImageChunkEvent);
+      return A.MultiFrameImageStreamCompleter$(new B._ControllerStream(chunkEvents, B._instanceType(chunkEvents)._eval$1("_ControllerStream<1>")), this._loadAsync$4(key, null, decode, chunkEvents), key.url, null, key.scale);
+    },
+    loadBuffer$2(key, decode) {
+      var chunkEvents;
+      type$.NetworkImage._as(key);
+      type$.Future_Codec_Function_ImmutableBuffer_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int._as(decode);
+      chunkEvents = B.StreamController_StreamController(null, type$.ImageChunkEvent);
+      return A.MultiFrameImageStreamCompleter$(new B._ControllerStream(chunkEvents, B._instanceType(chunkEvents)._eval$1("_ControllerStream<1>")), this._loadAsync$4(key, decode, null, chunkEvents), key.url, null, key.scale);
+    },
+    _loadAsync$4(key, decode, decodeDepreacted, chunkEvents) {
+      return this._loadAsync$body$NetworkImage(key, type$.nullable_Future_Codec_Function_ImmutableBuffer_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int._as(decode), type$.nullable_Future_Codec_Function_Uint8List_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int._as(decodeDepreacted), type$.StreamController_ImageChunkEvent._as(chunkEvents));
+    },
+    _loadAsync$body$NetworkImage(key, decode, decodeDepreacted, chunkEvents) {
+      var $async$goto = 0,
+        $async$completer = B._makeAsyncAwaitCompleter(type$.Codec),
+        $async$returnValue, resolved, t1;
+      var $async$_loadAsync$4 = B._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1)
+          return B._asyncRethrow($async$result, $async$completer);
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              resolved = A.Uri_base().resolve$1(key.url);
+              t1 = $.$get$_renderer();
+              $async$returnValue = t1.instantiateImageCodecFromUrl$2$chunkCallback(resolved, new A.NetworkImage__loadAsync_closure(chunkEvents));
+              // goto return
+              $async$goto = 1;
+              break;
+            case 1:
+              // return
+              return B._asyncReturn($async$returnValue, $async$completer);
+          }
+      });
+      return B._asyncStartSync($async$_loadAsync$4, $async$completer);
+    },
+    $eq(_, other) {
+      if (other == null)
+        return false;
+      if (J.get$runtimeType$(other) !== B.getRuntimeType(this))
+        return false;
+      return other instanceof A.NetworkImage && other.url === this.url && other.scale === this.scale;
+    },
+    get$hashCode(_) {
+      return B.Object_hash(this.url, this.scale, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue);
+    },
+    toString$0(_) {
+      return 'NetworkImage("' + this.url + '", scale: ' + this.scale + ")";
+    },
+    $isNetworkImage0: 1
+  };
+  A.BoxFit.prototype = {
+    _enumToString$0() {
+      return "BoxFit." + this._core$_name;
+    }
+  };
+  A.FittedSizes.prototype = {};
+  A.ImageRepeat.prototype = {
+    _enumToString$0() {
+      return "ImageRepeat." + this._core$_name;
+    }
+  };
+  A.ImageProvider.prototype = {
+    resolve$1(configuration) {
+      var stream = new A.ImageStream();
+      this._createErrorHandlerAndKey$3(configuration, new A.ImageProvider_resolve_closure(this, configuration, stream), new A.ImageProvider_resolve_closure0(this, configuration, stream));
+      return stream;
+    },
+    _createErrorHandlerAndKey$3(configuration, successCallback, errorCallback) {
+      var handleError, key, error, stackTrace, exception, t1 = {},
+        t2 = B._instanceType(this);
+      t2._eval$1("~(ImageProvider.T,~(Object,StackTrace?))")._as(successCallback);
+      t2._eval$1("Future<~>(ImageProvider.T?,Object,StackTrace?)")._as(errorCallback);
+      t1.obtainedKey = null;
+      t1.didError = false;
+      handleError = new A.ImageProvider__createErrorHandlerAndKey_handleError(t1, errorCallback);
+      key = null;
+      try {
+        key = this.obtainKey$1(configuration);
+      } catch (exception) {
+        error = B.unwrapException(exception);
+        stackTrace = B.getTraceFromException(exception);
+        handleError.call$2(error, stackTrace);
+        return;
+      }
+      key.then$1$1(new A.ImageProvider__createErrorHandlerAndKey_closure(t1, this, successCallback, handleError), type$.void).catchError$1(handleError);
+    },
+    resolveStreamForKey$4(configuration, stream, key, handleError) {
+      var t1, completer,
+        _s11_ = "_imageCache";
+      B._instanceType(this)._eval$1("ImageProvider.T")._as(key);
+      type$.void_Function_2_Object_and_nullable_StackTrace._as(handleError);
+      if (stream._image_stream$_completer != null) {
+        t1 = $.PaintingBinding__instance.PaintingBinding___PaintingBinding__imageCache_A;
+        t1 === $ && B.throwLateFieldNI(_s11_);
+        t1.putIfAbsent$3$onError(0, key, new A.ImageProvider_resolveStreamForKey_closure(stream), handleError);
+        return;
+      }
+      t1 = $.PaintingBinding__instance.PaintingBinding___PaintingBinding__imageCache_A;
+      t1 === $ && B.throwLateFieldNI(_s11_);
+      completer = t1.putIfAbsent$3$onError(0, key, new A.ImageProvider_resolveStreamForKey_closure0(this, key), handleError);
+      if (completer != null)
+        stream.setCompleter$1(completer);
+    },
+    load$2(_, key, decode) {
+      B._instanceType(this)._eval$1("ImageProvider.T")._as(key);
+      type$.Future_Codec_Function_Uint8List_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int._as(decode);
+      throw B.wrapException(B.UnsupportedError$("Implement loadBuffer for faster image loading"));
+    },
+    loadBuffer$2(key, decode) {
+      B._instanceType(this)._eval$1("ImageProvider.T")._as(key);
+      type$.Future_Codec_Function_ImmutableBuffer_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int._as(decode);
+      return this.load$2(0, key, $.PaintingBinding__instance.get$instantiateImageCodec());
+    },
+    toString$0(_) {
+      return "ImageConfiguration()";
+    }
+  };
+  A._ErrorImageCompleter.prototype = {};
+  A.ImageInfo.prototype = {
+    clone$0(_) {
+      return new A.ImageInfo(this.image.clone$0(0), this.scale, this.debugLabel);
+    },
+    get$sizeBytes() {
+      var t1 = this.image;
+      return t1.get$height(t1) * t1.get$width(t1) * 4;
+    },
+    dispose$0() {
+      this.image.dispose$0();
+    },
+    toString$0(_) {
+      var t1 = this.debugLabel;
+      t1 = t1 != null ? t1 + " " : "";
+      return t1 + this.image.toString$0(0) + " @ " + B.debugFormatDouble(this.scale) + "x";
+    },
+    get$hashCode(_) {
+      return B.Object_hash(this.image, this.scale, this.debugLabel, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue);
+    },
+    $eq(_, other) {
+      var _this = this;
+      if (other == null)
+        return false;
+      if (J.get$runtimeType$(other) !== B.getRuntimeType(_this))
+        return false;
+      return other instanceof A.ImageInfo && other.image === _this.image && other.scale === _this.scale && other.debugLabel == _this.debugLabel;
+    }
+  };
+  A.ImageChunkEvent.prototype = {};
+  A.ImageStream.prototype = {
+    setCompleter$1(value) {
+      var t1, t2, _this = this;
+      _this._image_stream$_completer = value;
+      t1 = _this._image_stream$_listeners;
+      if (t1 != null) {
+        _this.set$_image_stream$_listeners(null);
+        t2 = _this._image_stream$_completer;
+        t2._addingInitialListeners = true;
+        C.JSArray_methods.forEach$1(t1, t2.get$addListener(t2));
+        _this._image_stream$_completer._addingInitialListeners = false;
+      }
+    },
+    addListener$1(_, listener) {
+      var _this = this,
+        t1 = _this._image_stream$_completer;
+      if (t1 != null)
+        return t1.addListener$1(0, listener);
+      if (_this._image_stream$_listeners == null)
+        _this.set$_image_stream$_listeners(B._setArrayType([], type$.JSArray_ImageStreamListener));
+      t1 = _this._image_stream$_listeners;
+      t1.toString;
+      C.JSArray_methods.add$1(t1, listener);
+    },
+    removeListener$1(_, listener) {
+      var i,
+        t1 = this._image_stream$_completer;
+      if (t1 != null)
+        return t1.removeListener$1(0, listener);
+      for (i = 0; t1 = this._image_stream$_listeners, i < t1.length; ++i)
+        if (J.$eq$(t1[i], listener)) {
+          t1 = this._image_stream$_listeners;
+          t1.toString;
+          C.JSArray_methods.removeAt$1(t1, i);
+          break;
+        }
+    },
+    set$_image_stream$_listeners(_listeners) {
+      this._image_stream$_listeners = type$.nullable_List_ImageStreamListener._as(_listeners);
+    }
+  };
+  A.ImageStreamCompleterHandle.prototype = {
+    ImageStreamCompleterHandle$_$1(_completer) {
+      ++this._image_stream$_completer._keepAliveHandles;
+    },
+    dispose$0() {
+      var t1 = this._image_stream$_completer;
+      --t1._keepAliveHandles;
+      t1._maybeDispose$0();
+      this._image_stream$_completer = null;
+    }
+  };
+  A.ImageStreamCompleter.prototype = {
+    addListener$1(_, listener) {
+      var exception, stack, newException, newStack, t1, exception0, t2, _this = this;
+      type$.ImageStreamListener._as(listener);
+      if (_this._image_stream$_disposed)
+        B.throwExpression(B.StateError$(string$.Stream));
+      _this._hadAtLeastOneListener = true;
+      C.JSArray_methods.add$1(_this._image_stream$_listeners, listener);
+      t1 = _this._currentImage;
+      if (t1 != null)
+        try {
+          listener.onImage.call$2(t1.clone$0(0), !_this._addingInitialListeners);
+        } catch (exception0) {
+          exception = B.unwrapException(exception0);
+          stack = B.getTraceFromException(exception0);
+          _this.reportError$3$context$exception$stack(B.ErrorDescription$("by a synchronously-called image listener"), exception, stack);
+        }
+      t1 = _this._currentError;
+      if (t1 != null && listener.onError != null)
+        try {
+          t2 = listener.onError;
+          t2.toString;
+          t2.call$2(t1.exception, t1.stack);
+        } catch (exception) {
+          newException = B.unwrapException(exception);
+          newStack = B.getTraceFromException(exception);
+          if (!J.$eq$(newException, _this._currentError.exception))
+            B.FlutterError_reportError(new B.FlutterErrorDetails(newException, newStack, "image resource service", B.ErrorDescription$("by a synchronously-called image error listener"), null, false));
+        }
+    },
+    keepAlive$0() {
+      if (this._image_stream$_disposed)
+        B.throwExpression(B.StateError$(string$.Stream));
+      ++this._keepAliveHandles;
+      return new A.ImageStreamCompleterHandle(this);
+    },
+    removeListener$1(_, listener) {
+      var t1, i, callbacks, t2, _i, _this = this;
+      if (_this._image_stream$_disposed)
+        B.throwExpression(B.StateError$(string$.Stream));
+      for (t1 = _this._image_stream$_listeners, i = 0; i < t1.length; ++i)
+        if (J.$eq$(t1[i], listener)) {
+          C.JSArray_methods.removeAt$1(t1, i);
+          break;
+        }
+      if (t1.length === 0) {
+        t1 = _this._onLastListenerRemovedCallbacks;
+        callbacks = B._setArrayType(t1.slice(0), B._arrayInstanceType(t1));
+        for (t2 = callbacks.length, _i = 0; _i < callbacks.length; callbacks.length === t2 || (0, B.throwConcurrentModificationError)(callbacks), ++_i)
+          callbacks[_i].call$0();
+        C.JSArray_methods.clear$0(t1);
+        _this._maybeDispose$0();
+      }
+    },
+    _maybeDispose$0() {
+      var t1, _this = this;
+      if (!_this._hadAtLeastOneListener || _this._image_stream$_disposed || _this._image_stream$_listeners.length !== 0 || _this._keepAliveHandles !== 0)
+        return;
+      t1 = _this._currentImage;
+      if (t1 != null)
+        t1.image.dispose$0();
+      _this._currentImage = null;
+      _this._image_stream$_disposed = true;
+    },
+    addOnLastListenerRemovedCallback$1(callback) {
+      type$.void_Function._as(callback);
+      if (this._image_stream$_disposed)
+        B.throwExpression(B.StateError$(string$.Stream));
+      C.JSArray_methods.add$1(this._onLastListenerRemovedCallbacks, callback);
+    },
+    removeOnLastListenerRemovedCallback$1(callback) {
+      type$.void_Function._as(callback);
+      if (this._image_stream$_disposed)
+        B.throwExpression(B.StateError$(string$.Stream));
+      C.JSArray_methods.remove$1(this._onLastListenerRemovedCallbacks, callback);
+    },
+    setImage$1(image) {
+      var listener, exception, stack, t1, localListeners, t2, t3, t4, _i, exception0, _this = this;
+      if (_this._image_stream$_disposed)
+        B.throwExpression(B.StateError$(string$.Stream));
+      t1 = _this._currentImage;
+      if (t1 != null)
+        t1.image.dispose$0();
+      _this._currentImage = image;
+      t1 = _this._image_stream$_listeners;
+      if (t1.length === 0)
+        return;
+      localListeners = B.List_List$of(t1, true, type$.ImageStreamListener);
+      for (t1 = localListeners.length, t2 = image.image, t3 = image.scale, t4 = image.debugLabel, _i = 0; _i < t1; ++_i) {
+        listener = localListeners[_i];
+        try {
+          listener.onImage$2(new A.ImageInfo(t2.clone$0(0), t3, t4), false);
+        } catch (exception0) {
+          exception = B.unwrapException(exception0);
+          stack = B.getTraceFromException(exception0);
+          _this.reportError$3$context$exception$stack(B.ErrorDescription$("by an image listener"), exception, stack);
+        }
+      }
+    },
+    reportError$5$context$exception$informationCollector$silent$stack(context, exception, informationCollector, silent, stack) {
+      var handled, errorListener, newException, newStack, t1, t2, t3, localErrorListeners, _i, exception0,
+        _s22_ = "image resource service";
+      type$.nullable_StackTrace._as(stack);
+      this._currentError = new B.FlutterErrorDetails(exception, stack, _s22_, context, type$.nullable_Iterable_DiagnosticsNode_Function._as(informationCollector), silent);
+      t1 = this._image_stream$_listeners;
+      t2 = B._arrayInstanceType(t1);
+      t3 = type$.WhereTypeIterable_of_void_Function_2_Object_and_nullable_StackTrace;
+      localErrorListeners = B.List_List$of(new B.WhereTypeIterable(new B.MappedListIterable(t1, t2._eval$1("~(Object,StackTrace?)?(1)")._as(new A.ImageStreamCompleter_reportError_closure()), t2._eval$1("MappedListIterable<1,~(Object,StackTrace?)?>")), t3), true, t3._eval$1("Iterable.E"));
+      handled = false;
+      for (t1 = localErrorListeners.length, _i = 0; _i < t1; ++_i) {
+        errorListener = localErrorListeners[_i];
+        try {
+          errorListener.call$2(exception, stack);
+          handled = true;
+        } catch (exception0) {
+          newException = B.unwrapException(exception0);
+          newStack = B.getTraceFromException(exception0);
+          if (!J.$eq$(newException, exception)) {
+            t2 = B.ErrorDescription$("when reporting an error to an image listener");
+            t3 = $.$get$FlutterError_onError();
+            if (t3 != null)
+              t3.call$1(new B.FlutterErrorDetails(newException, newStack, _s22_, t2, null, false));
+          }
+        }
+      }
+      if (!B.boolConversionCheck(handled)) {
+        t1 = this._currentError;
+        t1.toString;
+        B.FlutterError_reportError(t1);
+      }
+    },
+    reportError$3$context$exception$stack(context, exception, stack) {
+      return this.reportError$5$context$exception$informationCollector$silent$stack(context, exception, null, false, stack);
+    },
+    reportImageChunkEvent$1($event) {
+      var t1, t2, t3, localListeners, _i;
+      type$.ImageChunkEvent._as($event);
+      if (this._image_stream$_disposed)
+        B.throwExpression(B.StateError$(string$.Stream));
+      t1 = this._image_stream$_listeners;
+      if (t1.length !== 0) {
+        t2 = B._arrayInstanceType(t1);
+        t3 = type$.WhereTypeIterable_of_void_Function_ImageChunkEvent;
+        localListeners = B.List_List$of(new B.WhereTypeIterable(new B.MappedListIterable(t1, t2._eval$1("~(ImageChunkEvent)?(1)")._as(new A.ImageStreamCompleter_reportImageChunkEvent_closure()), t2._eval$1("MappedListIterable<1,~(ImageChunkEvent)?>")), t3), true, t3._eval$1("Iterable.E"));
+        for (t1 = localListeners.length, _i = 0; _i < t1; ++_i)
+          localListeners[_i].call$1($event);
+      }
+    }
+  };
+  A.MultiFrameImageStreamCompleter.prototype = {
+    MultiFrameImageStreamCompleter$5$chunkEvents$codec$debugLabel$informationCollector$scale(chunkEvents, codec, debugLabel, informationCollector, scale) {
+      var _this = this;
+      _this.debugLabel = debugLabel;
+      codec.then$1$2$onError(_this.get$_handleCodecReady(), new A.MultiFrameImageStreamCompleter_closure(_this, informationCollector), type$.void);
+      _this.set$_chunkSubscription(chunkEvents.listen$2$onError(_this.get$reportImageChunkEvent(), new A.MultiFrameImageStreamCompleter_closure0(_this, informationCollector)));
+    },
+    _handleCodecReady$1(codec) {
+      this._codec = type$.Codec._as(codec);
+      if (this._image_stream$_listeners.length !== 0)
+        this._decodeNextFrameAndSchedule$0();
+    },
+    _handleAppFrame$1(timestamp) {
+      var t1, t2, completedCycles, _this = this,
+        _s15_ = "_shownTimestamp";
+      _this._image_stream$_frameCallbackScheduled = false;
+      if (_this._image_stream$_listeners.length === 0)
+        return;
+      t1 = _this._frameDuration;
+      if (t1 != null) {
+        t2 = _this.__MultiFrameImageStreamCompleter__shownTimestamp_A;
+        t2 === $ && B.throwLateFieldNI(_s15_);
+        t2 = timestamp._duration - t2._duration >= t1._duration;
+      } else
+        t2 = true;
+      if (t2) {
+        t1 = _this._nextFrame;
+        _this._emitFrame$1(new A.ImageInfo(t1.get$image(t1).clone$0(0), _this._image_stream$_scale, _this.debugLabel));
+        _this.__MultiFrameImageStreamCompleter__shownTimestamp_A = timestamp;
+        t1 = _this._nextFrame;
+        _this._frameDuration = t1.get$duration(t1);
+        t1 = _this._nextFrame;
+        t1.get$image(t1).dispose$0();
+        _this._nextFrame = null;
+        completedCycles = C.JSInt_methods.$tdiv(_this._framesEmitted, _this._codec.get$frameCount());
+        if (_this._codec.get$repetitionCount() === -1 || completedCycles <= _this._codec.get$repetitionCount())
+          _this._decodeNextFrameAndSchedule$0();
+        return;
+      }
+      t1.toString;
+      t2 = _this.__MultiFrameImageStreamCompleter__shownTimestamp_A;
+      t2 === $ && B.throwLateFieldNI(_s15_);
+      _this._image_stream$_timer = B.Timer_Timer(new B.Duration(C.JSNumber_methods.round$0((t1._duration - (timestamp._duration - t2._duration)) * $._timeDilation)), new A.MultiFrameImageStreamCompleter__handleAppFrame_closure(_this));
+    },
+    _decodeNextFrameAndSchedule$0() {
+      var $async$goto = 0,
+        $async$completer = B._makeAsyncAwaitCompleter(type$.void),
+        $async$returnValue, $async$handler = 2, $async$currentError, $async$self = this, exception, stack, exception0, t1, $async$exception0;
+      var $async$_decodeNextFrameAndSchedule$0 = B._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1) {
+          $async$currentError = $async$result;
+          $async$goto = $async$handler;
+        }
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              t1 = $async$self._nextFrame;
+              if (t1 != null)
+                t1.get$image(t1).dispose$0();
+              $async$self._nextFrame = null;
+              $async$handler = 4;
+              $async$goto = 7;
+              return B._asyncAwait($async$self._codec.getNextFrame$0(), $async$_decodeNextFrameAndSchedule$0);
+            case 7:
+              // returning from await.
+              $async$self.set$_nextFrame($async$result);
+              $async$handler = 2;
+              // goto after finally
+              $async$goto = 6;
+              break;
+            case 4:
+              // catch
+              $async$handler = 3;
+              $async$exception0 = $async$currentError;
+              exception = B.unwrapException($async$exception0);
+              stack = B.getTraceFromException($async$exception0);
+              $async$self.reportError$5$context$exception$informationCollector$silent$stack(B.ErrorDescription$("resolving an image frame"), exception, $async$self._informationCollector, true, stack);
+              // goto return
+              $async$goto = 1;
+              break;
+              // goto after finally
+              $async$goto = 6;
+              break;
+            case 3:
+              // uncaught
+              // goto rethrow
+              $async$goto = 2;
+              break;
+            case 6:
+              // after finally
+              if ($async$self._codec.get$frameCount() === 1) {
+                if ($async$self._image_stream$_listeners.length === 0) {
+                  // goto return
+                  $async$goto = 1;
+                  break;
+                }
+                t1 = $async$self._nextFrame;
+                $async$self._emitFrame$1(new A.ImageInfo(t1.get$image(t1).clone$0(0), $async$self._image_stream$_scale, $async$self.debugLabel));
+                t1 = $async$self._nextFrame;
+                t1.get$image(t1).dispose$0();
+                $async$self._nextFrame = null;
+                // goto return
+                $async$goto = 1;
+                break;
+              }
+              $async$self._scheduleAppFrame$0();
+            case 1:
+              // return
+              return B._asyncReturn($async$returnValue, $async$completer);
+            case 2:
+              // rethrow
+              return B._asyncRethrow($async$currentError, $async$completer);
+          }
+      });
+      return B._asyncStartSync($async$_decodeNextFrameAndSchedule$0, $async$completer);
+    },
+    _scheduleAppFrame$0() {
+      if (this._image_stream$_frameCallbackScheduled)
+        return;
+      this._image_stream$_frameCallbackScheduled = true;
+      $.SchedulerBinding__instance.scheduleFrameCallback$1(this.get$_handleAppFrame());
+    },
+    _emitFrame$1(imageInfo) {
+      this.setImage$1(imageInfo);
+      ++this._framesEmitted;
+    },
+    addListener$1(_, listener) {
+      var t1, _this = this;
+      type$.ImageStreamListener._as(listener);
+      if (_this._image_stream$_listeners.length === 0) {
+        t1 = _this._codec;
+        if (t1 != null)
+          t1 = _this._currentImage == null || t1.get$frameCount() > 1;
+        else
+          t1 = false;
+      } else
+        t1 = false;
+      if (t1)
+        _this._decodeNextFrameAndSchedule$0();
+      _this.super$ImageStreamCompleter$addListener(0, listener);
+    },
+    removeListener$1(_, listener) {
+      var t1, _this = this;
+      _this.super$ImageStreamCompleter$removeListener(0, listener);
+      if (_this._image_stream$_listeners.length === 0) {
+        t1 = _this._image_stream$_timer;
+        if (t1 != null)
+          t1.cancel$0(0);
+        _this._image_stream$_timer = null;
+      }
+    },
+    _maybeDispose$0() {
+      var t1, _this = this;
+      _this.super$ImageStreamCompleter$_maybeDispose();
+      if (_this._image_stream$_disposed) {
+        t1 = _this._chunkSubscription;
+        if (t1 != null)
+          t1.onData$1(null);
+        t1 = _this._chunkSubscription;
+        if (t1 != null)
+          t1.cancel$0(0);
+        _this.set$_chunkSubscription(null);
+      }
+    },
+    set$_chunkSubscription(_chunkSubscription) {
+      this._chunkSubscription = type$.nullable_StreamSubscription_ImageChunkEvent._as(_chunkSubscription);
+    },
+    set$_nextFrame(_nextFrame) {
+      this._nextFrame = type$.nullable_FrameInfo._as(_nextFrame);
+    }
+  };
+  A._ImageChunkEvent_Object_Diagnosticable.prototype = {};
+  A._ImageStream_Object_Diagnosticable.prototype = {};
+  A._ImageStreamCompleter_Object_Diagnosticable.prototype = {};
+  A.RenderImage.prototype = {
+    _image$_resolve$0() {
+      var _this = this;
+      if (_this._image$_resolvedAlignment != null)
+        return;
+      _this._image$_resolvedAlignment = _this._image$_alignment;
+      _this._flipHorizontally = false;
+    },
+    _markNeedResolution$0() {
+      this._flipHorizontally = this._image$_resolvedAlignment = null;
+      this.markNeedsPaint$0();
+    },
+    set$image(_, value) {
+      var _this = this,
+        t1 = _this._image;
+      if (value == t1)
+        return;
+      if (value != null && t1 != null && value.isCloneOf$1(t1)) {
+        value.dispose$0();
+        return;
+      }
+      t1 = _this._image;
+      if (t1 != null)
+        t1.dispose$0();
+      _this._image = value;
+      _this.markNeedsPaint$0();
+      if (_this._image$_width == null || _this._image$_height == null)
+        _this.markNeedsLayout$0();
+    },
+    set$width(_, value) {
+      if (value == this._image$_width)
+        return;
+      this._image$_width = value;
+      this.markNeedsLayout$0();
+    },
+    set$height(_, value) {
+      if (value == this._image$_height)
+        return;
+      this._image$_height = value;
+      this.markNeedsLayout$0();
+    },
+    set$scale(_, value) {
+      if (value === this._scale)
+        return;
+      this._scale = value;
+      this.markNeedsLayout$0();
+    },
+    _updateColorFilter$0() {
+      this._colorFilter = null;
+    },
+    set$color(_, value) {
+      return;
+    },
+    set$opacity(_, value) {
+      type$.nullable_Animation_double._as(value);
+      return;
+    },
+    set$filterQuality(value) {
+      if (value === this._image$_filterQuality)
+        return;
+      this._image$_filterQuality = value;
+      this.markNeedsPaint$0();
+    },
+    set$colorBlendMode(value) {
+      return;
+    },
+    set$fit(value) {
+      if (value == this._image$_fit)
+        return;
+      this._image$_fit = value;
+      this.markNeedsPaint$0();
+    },
+    set$alignment(value) {
+      if (value.$eq(0, this._image$_alignment))
+        return;
+      this._image$_alignment = value;
+      this._markNeedResolution$0();
+    },
+    set$repeat(_, value) {
+      if (value === this._repeat)
+        return;
+      this._repeat = value;
+      this.markNeedsPaint$0();
+    },
+    set$centerSlice(value) {
+      return;
+    },
+    set$invertColors(value) {
+      if (value === this._image$_invertColors)
+        return;
+      this._image$_invertColors = value;
+      this.markNeedsPaint$0();
+    },
+    set$matchTextDirection(value) {
+      return;
+    },
+    set$textDirection(value) {
+      if (this._image$_textDirection == value)
+        return;
+      this._image$_textDirection = value;
+      this._markNeedResolution$0();
+    },
+    set$isAntiAlias(value) {
+      return;
+    },
+    _sizeForConstraints$1(constraints) {
+      var t2, t3, _this = this,
+        t1 = _this._image$_width;
+      constraints = B.BoxConstraints$tightFor(_this._image$_height, t1).enforce$1(constraints);
+      t1 = _this._image;
+      if (t1 == null)
+        return new B.Size(B.clampDouble(0, constraints.minWidth, constraints.maxWidth), B.clampDouble(0, constraints.minHeight, constraints.maxHeight));
+      t1 = t1.get$width(t1);
+      t2 = _this._scale;
+      t3 = _this._image;
+      return constraints.constrainSizeAndAttemptToPreserveAspectRatio$1(new B.Size(t1 / t2, t3.get$height(t3) / _this._scale));
+    },
+    hitTestSelf$1(position) {
+      return true;
+    },
+    computeDryLayout$1(constraints) {
+      return this._sizeForConstraints$1(constraints);
+    },
+    performLayout$0() {
+      this._size = this._sizeForConstraints$1(type$.BoxConstraints._as(B.RenderObject.prototype.get$constraints.call(this)));
+    },
+    attach$1(owner) {
+      this.super$RenderObject$attach(type$.PipelineOwner._as(owner));
+    },
+    detach$0(_) {
+      this.super$AbstractNode$detach(0);
+    },
+    paint$2(context, offset) {
+      var t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, _this = this;
+      if (_this._image == null)
+        return;
+      _this._image$_resolve$0();
+      t1 = context.get$canvas(context);
+      t2 = _this._size;
+      t3 = offset._dx;
+      t4 = offset._dy;
+      t5 = t2._dx;
+      t2 = t2._dy;
+      t6 = _this._image;
+      t6.toString;
+      t7 = _this.debugImageLabel;
+      t8 = _this._scale;
+      t9 = _this._colorFilter;
+      t10 = _this._image$_fit;
+      t11 = _this._image$_resolvedAlignment;
+      t11.toString;
+      t12 = _this._centerSlice;
+      t13 = _this._repeat;
+      t14 = _this._flipHorizontally;
+      t14.toString;
+      t15 = _this._image$_invertColors;
+      A.paintImage(t11, t1, t12, t9, t7, _this._image$_filterQuality, t10, t14, t6, t15, false, 1, new B.Rect(t3, t4, t3 + t5, t4 + t2), t13, t8);
+    },
+    dispose$0() {
+      var t1 = this._image;
+      if (t1 != null)
+        t1.dispose$0();
+      this._image = null;
+      this.super$RenderObject$dispose();
+    }
+  };
+  A.RenderClipRRect.prototype = {
+    set$borderRadius(_, value) {
+      if (this._proxy_box$_borderRadius.$eq(0, value))
+        return;
+      this._proxy_box$_borderRadius = value;
+      this._markNeedsClip$0();
+    },
+    set$textDirection(value) {
+      if (this._proxy_box$_textDirection == value)
+        return;
+      this._proxy_box$_textDirection = value;
+      this._markNeedsClip$0();
+    },
+    get$_defaultClip() {
+      var t1 = this._proxy_box$_borderRadius,
+        t2 = this._size;
+      return t1.toRRect$1(new B.Rect(0, 0, 0 + t2._dx, 0 + t2._dy));
+    },
+    hitTest$2$position(result, position) {
+      var _this = this;
+      if (_this._clipper != null) {
+        _this._updateClip$0();
+        if (!_this._clip.contains$1(0, position))
+          return false;
+      }
+      return _this.super$RenderBox$hitTest(result, position);
+    },
+    paint$2(context, offset) {
+      var t2, t3, _this = this,
+        t1 = _this.RenderObjectWithChildMixin__child;
+      if (t1 != null) {
+        t2 = _this._layerHandle;
+        if (_this._proxy_box$_clipBehavior !== C.Clip_0) {
+          _this._updateClip$0();
+          t1 = _this.__RenderObject__needsCompositing_A;
+          t1 === $ && B.throwLateFieldNI("_needsCompositing");
+          t3 = _this._clip;
+          t2.set$layer(0, context.pushClipRRect$7$clipBehavior$oldLayer(t1, offset, new B.Rect(t3.left, t3.top, t3.right, t3.bottom), t3, B.RenderProxyBoxMixin.prototype.get$paint.call(_this), _this._proxy_box$_clipBehavior, type$.nullable_ClipRRectLayer._as(t2._layer)));
+        } else {
+          context.paintChild$2(t1, offset);
+          t2.set$layer(0, null);
+        }
+      } else
+        _this._layerHandle.set$layer(0, null);
+    }
+  };
+  A.RenderIndexedSemantics.prototype = {
+    set$index(_, value) {
+      if (value === this._proxy_box$_index)
+        return;
+      this._proxy_box$_index = value;
+      this.markNeedsSemanticsUpdate$0();
+    },
+    describeSemanticsConfiguration$1(config) {
+      this.super$RenderObject$describeSemanticsConfiguration(config);
+      config._indexInParent = this._proxy_box$_index;
+      config._hasBeenAnnotated = true;
+    }
+  };
+  A.SliverConstraints.prototype = {
+    get$isTight() {
+      return false;
+    },
+    asBoxConstraints$3$crossAxisExtent$maxExtent$minExtent(crossAxisExtent, maxExtent, minExtent) {
+      if (crossAxisExtent == null)
+        crossAxisExtent = this.crossAxisExtent;
+      switch (B.axisDirectionToAxis(this.axisDirection).index) {
+        case 0:
+          return new B.BoxConstraints(minExtent, maxExtent, crossAxisExtent, crossAxisExtent);
+        case 1:
+          return new B.BoxConstraints(crossAxisExtent, crossAxisExtent, minExtent, maxExtent);
+      }
+    },
+    asBoxConstraints$0() {
+      return this.asBoxConstraints$3$crossAxisExtent$maxExtent$minExtent(null, 1 / 0, 0);
+    },
+    asBoxConstraints$2$maxExtent$minExtent(maxExtent, minExtent) {
+      return this.asBoxConstraints$3$crossAxisExtent$maxExtent$minExtent(null, maxExtent, minExtent);
+    },
+    $eq(_, other) {
+      var _this = this;
+      if (other == null)
+        return false;
+      if (_this === other)
+        return true;
+      if (!(other instanceof A.SliverConstraints))
+        return false;
+      return other.axisDirection === _this.axisDirection && other.growthDirection === _this.growthDirection && other.scrollOffset === _this.scrollOffset && other.overlap === _this.overlap && other.remainingPaintExtent === _this.remainingPaintExtent && other.crossAxisExtent === _this.crossAxisExtent && other.crossAxisDirection === _this.crossAxisDirection && other.viewportMainAxisExtent === _this.viewportMainAxisExtent && other.remainingCacheExtent === _this.remainingCacheExtent && other.cacheOrigin === _this.cacheOrigin;
+    },
+    get$hashCode(_) {
+      var _this = this;
+      return B.Object_hash(_this.axisDirection, _this.growthDirection, _this.scrollOffset, _this.overlap, _this.remainingPaintExtent, _this.crossAxisExtent, _this.crossAxisDirection, _this.viewportMainAxisExtent, _this.remainingCacheExtent, _this.cacheOrigin, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue, C.C_SentinelValue);
+    },
+    toString$0(_) {
+      var _this = this,
+        t1 = B._setArrayType([_this.axisDirection.toString$0(0), _this.growthDirection.toString$0(0), _this.userScrollDirection.toString$0(0), "scrollOffset: " + C.JSNumber_methods.toStringAsFixed$1(_this.scrollOffset, 1), "remainingPaintExtent: " + C.JSNumber_methods.toStringAsFixed$1(_this.remainingPaintExtent, 1)], type$.JSArray_String),
+        t2 = _this.overlap;
+      if (t2 !== 0)
+        t1.push("overlap: " + C.JSNumber_methods.toStringAsFixed$1(t2, 1));
+      t1.push("crossAxisExtent: " + C.JSNumber_methods.toStringAsFixed$1(_this.crossAxisExtent, 1));
+      t1.push("crossAxisDirection: " + _this.crossAxisDirection.toString$0(0));
+      t1.push("viewportMainAxisExtent: " + C.JSNumber_methods.toStringAsFixed$1(_this.viewportMainAxisExtent, 1));
+      t1.push("remainingCacheExtent: " + C.JSNumber_methods.toStringAsFixed$1(_this.remainingCacheExtent, 1));
+      t1.push("cacheOrigin: " + C.JSNumber_methods.toStringAsFixed$1(_this.cacheOrigin, 1));
+      return "SliverConstraints(" + C.JSArray_methods.join$1(t1, ", ") + ")";
+    }
+  };
+  A.SliverGeometry.prototype = {
+    toStringShort$0() {
+      return "SliverGeometry";
+    }
+  };
+  A.SliverHitTestResult.prototype = {};
+  A.SliverHitTestEntry.prototype = {
+    toString$0(_) {
+      return B.getRuntimeType(this.target).toString$0(0) + "@(mainAxis: " + B.S(this.mainAxisPosition) + ", crossAxis: " + B.S(this.crossAxisPosition) + ")";
+    }
+  };
+  A.SliverLogicalParentData.prototype = {
+    toString$0(_) {
+      var t1 = this.layoutOffset;
+      return "layoutOffset=" + (t1 == null ? "None" : C.JSNumber_methods.toStringAsFixed$1(t1, 1));
+    },
+    set$layoutOffset(layoutOffset) {
+      this.layoutOffset = B._asDoubleQ(layoutOffset);
+    }
+  };
+  A.SliverPhysicalParentData.prototype = {
+    toString$0(_) {
+      return "paintOffset=" + B.S(this.paintOffset);
+    },
+    set$paintOffset(paintOffset) {
+      this.paintOffset = type$.Offset._as(paintOffset);
+    }
+  };
+  A.SliverPhysicalContainerParentData.prototype = {};
+  A.RenderSliver.prototype = {
+    get$constraints() {
+      return type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(this));
+    },
+    get$semanticBounds() {
+      return this.get$paintBounds();
+    },
+    get$paintBounds() {
+      var _this = this,
+        t1 = type$.SliverConstraints;
+      switch (B.axisDirectionToAxis(t1._as(B.RenderObject.prototype.get$constraints.call(_this)).axisDirection).index) {
+        case 0:
+          return new B.Rect(0, 0, 0 + _this._geometry.paintExtent, 0 + t1._as(B.RenderObject.prototype.get$constraints.call(_this)).crossAxisExtent);
+        case 1:
+          return new B.Rect(0, 0, 0 + t1._as(B.RenderObject.prototype.get$constraints.call(_this)).crossAxisExtent, 0 + _this._geometry.paintExtent);
+      }
+    },
+    performResize$0() {
+    },
+    hitTest$3$crossAxisPosition$mainAxisPosition(result, crossAxisPosition, mainAxisPosition) {
+      var _this = this;
+      B._asDouble(mainAxisPosition);
+      if (mainAxisPosition >= 0 && mainAxisPosition < _this._geometry.hitTestExtent && crossAxisPosition >= 0 && crossAxisPosition < type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(_this)).crossAxisExtent)
+        if (_this.hitTestChildren$3$crossAxisPosition$mainAxisPosition(result, crossAxisPosition, mainAxisPosition) || false) {
+          result.add$1(0, new A.SliverHitTestEntry(mainAxisPosition, crossAxisPosition, _this));
+          return true;
+        }
+      return false;
+    },
+    hitTestChildren$3$crossAxisPosition$mainAxisPosition(result, crossAxisPosition, mainAxisPosition) {
+      return false;
+    },
+    calculatePaintOffset$3$from$to(constraints, from, to) {
+      var a = constraints.scrollOffset,
+        t1 = constraints.remainingPaintExtent,
+        b = a + t1;
+      return B.clampDouble(B.clampDouble(B._asDouble(to), a, b) - B.clampDouble(from, a, b), 0, t1);
+    },
+    calculateCacheOffset$3$from$to(constraints, from, to) {
+      var t1 = constraints.scrollOffset,
+        a = t1 + constraints.cacheOrigin,
+        t2 = constraints.remainingCacheExtent,
+        b = t1 + t2;
+      return B.clampDouble(B.clampDouble(to, a, b) - B.clampDouble(from, a, b), 0, t2);
+    },
+    childCrossAxisPosition$1(child) {
+      return 0;
+    },
+    childScrollOffset$1(child) {
+      return 0;
+    },
+    applyPaintTransform$2(child, transform) {
+    },
+    handleEvent$2($event, entry) {
+      type$.SliverHitTestEntry._as(entry);
+    }
+  };
+  A.RenderSliverHelpers.prototype = {
+    _getRightWayUp$1(constraints) {
+      var rightWayUp;
+      switch (constraints.axisDirection.index) {
+        case 0:
+        case 3:
+          rightWayUp = false;
+          break;
+        case 2:
+        case 1:
+          rightWayUp = true;
+          break;
+        default:
+          rightWayUp = null;
+      }
+      switch (constraints.growthDirection.index) {
+        case 0:
+          break;
+        case 1:
+          rightWayUp = !B.boolConversionCheck(rightWayUp);
+          break;
+      }
+      return rightWayUp;
+    },
+    hitTestBoxChild$4$crossAxisPosition$mainAxisPosition(result, child, crossAxisPosition, mainAxisPosition) {
+      var delta, crossAxisDelta, absolutePosition, absoluteCrossAxisPosition, paintOffset, _this = this, _box_0 = {},
+        t1 = type$.SliverConstraints,
+        rightWayUp = _this._getRightWayUp$1(t1._as(B.RenderObject.prototype.get$constraints.call(_this))),
+        t2 = child.parentData;
+      t2.toString;
+      t2 = type$.SliverMultiBoxAdaptorParentData._as(t2).layoutOffset;
+      t2.toString;
+      delta = t2 - t1._as(B.RenderObject.prototype.get$constraints.call(_this)).scrollOffset;
+      crossAxisDelta = _this.childCrossAxisPosition$1(child);
+      absolutePosition = mainAxisPosition - delta;
+      absoluteCrossAxisPosition = crossAxisPosition - crossAxisDelta;
+      paintOffset = _box_0.transformedPosition = null;
+      switch (B.axisDirectionToAxis(t1._as(B.RenderObject.prototype.get$constraints.call(_this)).axisDirection).index) {
+        case 0:
+          if (!rightWayUp) {
+            t1 = child._size._dx;
+            absolutePosition = t1 - absolutePosition;
+            delta = _this._geometry.paintExtent - t1 - delta;
+          }
+          paintOffset = new B.Offset(delta, crossAxisDelta);
+          _box_0.transformedPosition = new B.Offset(absolutePosition, absoluteCrossAxisPosition);
+          break;
+        case 1:
+          if (!rightWayUp) {
+            t1 = child._size._dy;
+            absolutePosition = t1 - absolutePosition;
+            delta = _this._geometry.paintExtent - t1 - delta;
+          }
+          paintOffset = new B.Offset(crossAxisDelta, delta);
+          _box_0.transformedPosition = new B.Offset(absoluteCrossAxisPosition, absolutePosition);
+          break;
+      }
+      return result.addWithOutOfBandPosition$2$hitTest$paintOffset(new A.RenderSliverHelpers_hitTestBoxChild_closure(_box_0, child), paintOffset);
+    }
+  };
+  A._SliverGeometry_Object_Diagnosticable.prototype = {};
+  A._SliverPhysicalContainerParentData_SliverPhysicalParentData_ContainerParentDataMixin.prototype = {
+    detach$0(_) {
+      this.super$ParentData$detach(0);
+    }
+  };
+  A.RenderSliverFillViewport.prototype = {
+    get$itemExtent() {
+      return type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(this)).viewportMainAxisExtent * this._sliver_fill0$_viewportFraction;
+    },
+    set$viewportFraction(value) {
+      if (this._sliver_fill0$_viewportFraction === value)
+        return;
+      this._sliver_fill0$_viewportFraction = value;
+      this.markNeedsLayout$0();
+    }
+  };
+  A.RenderSliverFixedExtentBoxAdaptor.prototype = {
+    getMinChildIndexForScrollOffset$2(scrollOffset, itemExtent) {
+      var actual, round;
+      if (itemExtent > 0) {
+        actual = scrollOffset / itemExtent;
+        round = C.JSNumber_methods.round$0(actual);
+        if (Math.abs(actual * itemExtent - round * itemExtent) < 1e-10)
+          return round;
+        return C.JSNumber_methods.floor$0(actual);
+      }
+      return 0;
+    },
+    getMaxChildIndexForScrollOffset$2(scrollOffset, itemExtent) {
+      var actual, round;
+      if (itemExtent > 0) {
+        actual = scrollOffset / itemExtent - 1;
+        round = C.JSNumber_methods.round$0(actual);
+        if (Math.abs(actual * itemExtent - round * itemExtent) < 1e-10)
+          return Math.max(0, round);
+        return Math.max(0, C.JSNumber_methods.ceil$0(actual));
+      }
+      return 0;
+    },
+    _calculateLeadingGarbage$1(firstIndex) {
+      var t3, leadingGarbage, t4,
+        walker = this.ContainerRenderObjectMixin__firstChild,
+        t1 = B._instanceType(this),
+        t2 = t1._eval$1("ContainerRenderObjectMixin.0");
+      t1 = t1._eval$1("ContainerRenderObjectMixin.1");
+      t3 = type$.SliverMultiBoxAdaptorParentData;
+      leadingGarbage = 0;
+      while (true) {
+        if (walker != null) {
+          t4 = walker.parentData;
+          t4.toString;
+          t4 = t3._as(t4).index;
+          t4.toString;
+          t4 = t4 < firstIndex;
+        } else
+          t4 = false;
+        if (!t4)
+          break;
+        ++leadingGarbage;
+        t4 = t2._as(walker).parentData;
+        t4.toString;
+        walker = t1._as(t4).ContainerParentDataMixin_nextSibling;
+      }
+      return leadingGarbage;
+    },
+    _calculateTrailingGarbage$1(targetLastIndex) {
+      var t3, trailingGarbage, t4,
+        walker = this.ContainerRenderObjectMixin__lastChild,
+        t1 = B._instanceType(this),
+        t2 = t1._eval$1("ContainerRenderObjectMixin.0");
+      t1 = t1._eval$1("ContainerRenderObjectMixin.1");
+      t3 = type$.SliverMultiBoxAdaptorParentData;
+      trailingGarbage = 0;
+      while (true) {
+        if (walker != null) {
+          t4 = walker.parentData;
+          t4.toString;
+          t4 = t3._as(t4).index;
+          t4.toString;
+          t4 = t4 > targetLastIndex;
+        } else
+          t4 = false;
+        if (!t4)
+          break;
+        ++trailingGarbage;
+        t4 = t2._as(walker).parentData;
+        t4.toString;
+        walker = t1._as(t4).ContainerParentDataMixin_previousSibling;
+      }
+      return trailingGarbage;
+    },
+    performLayout$0() {
+      var itemExtent, t2, scrollOffset, targetEndScrollOffset, childConstraints, firstIndex, targetLastIndex, leadingGarbage, max, t3, t4, t5, index, trailingChildWithLayout, child, t6, t7, estimatedMaxScrollOffset, t8, t9, leadingScrollOffset, trailingScrollOffset, paintExtent, cacheExtent, targetEndScrollOffsetForPaint, targetLastIndexForPaint, _this = this, _null = null,
+        constraints = type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(_this)),
+        t1 = _this._childManager;
+      t1._didUnderflow = false;
+      itemExtent = _this.get$itemExtent();
+      t2 = constraints.scrollOffset;
+      scrollOffset = t2 + constraints.cacheOrigin;
+      targetEndScrollOffset = scrollOffset + constraints.remainingCacheExtent;
+      childConstraints = constraints.asBoxConstraints$2$maxExtent$minExtent(itemExtent, itemExtent);
+      firstIndex = _this.getMinChildIndexForScrollOffset$2(scrollOffset, itemExtent);
+      targetLastIndex = isFinite(targetEndScrollOffset) ? _this.getMaxChildIndexForScrollOffset$2(targetEndScrollOffset, itemExtent) : _null;
+      if (_this.ContainerRenderObjectMixin__firstChild != null) {
+        leadingGarbage = _this._calculateLeadingGarbage$1(firstIndex);
+        _this.collectGarbage$2(leadingGarbage, targetLastIndex != null ? _this._calculateTrailingGarbage$1(targetLastIndex) : 0);
+      } else
+        _this.collectGarbage$2(0, 0);
+      if (_this.ContainerRenderObjectMixin__firstChild == null)
+        if (!_this.addInitialChild$2$index$layoutOffset(firstIndex, itemExtent * firstIndex)) {
+          max = firstIndex <= 0 ? 0 : t1.get$childCount() * itemExtent;
+          _this._geometry = A.SliverGeometry$(_null, false, _null, _null, max, 0, 0, max, _null);
+          t1.didFinishLayout$0();
+          return;
+        }
+      t3 = _this.ContainerRenderObjectMixin__firstChild;
+      t3.toString;
+      t4 = type$.RenderBox;
+      t3 = t4._as(t3).parentData;
+      t3.toString;
+      t5 = type$.SliverMultiBoxAdaptorParentData;
+      t3 = t5._as(t3).index;
+      t3.toString;
+      index = t3 - 1;
+      trailingChildWithLayout = _null;
+      for (; index >= firstIndex; --index) {
+        child = _this.insertAndLayoutLeadingChild$1(childConstraints);
+        if (child == null) {
+          _this._geometry = A.SliverGeometry$(_null, false, _null, _null, 0, 0, 0, 0, index * itemExtent);
+          return;
+        }
+        t3 = child.parentData;
+        t3.toString;
+        t5._as(t3).layoutOffset = itemExtent * index;
+        if (trailingChildWithLayout == null)
+          trailingChildWithLayout = child;
+      }
+      if (trailingChildWithLayout == null) {
+        _this.ContainerRenderObjectMixin__firstChild.layout$1(childConstraints);
+        trailingChildWithLayout = _this.ContainerRenderObjectMixin__firstChild;
+        t3 = trailingChildWithLayout.parentData;
+        t3.toString;
+        t5._as(t3).layoutOffset = itemExtent * firstIndex;
+      }
+      t3 = trailingChildWithLayout.parentData;
+      t3.toString;
+      t3 = t5._as(t3).index;
+      t3.toString;
+      index = t3 + 1;
+      t3 = B._instanceType(_this);
+      t6 = t3._eval$1("ContainerRenderObjectMixin.0");
+      t3 = t3._eval$1("ContainerRenderObjectMixin.1");
+      t7 = targetLastIndex != null;
+      while (true) {
+        if (!(!t7 || index <= targetLastIndex)) {
+          estimatedMaxScrollOffset = 1 / 0;
+          break;
+        }
+        t8 = t6._as(trailingChildWithLayout).parentData;
+        t8.toString;
+        child = t3._as(t8).ContainerParentDataMixin_nextSibling;
+        if (child != null) {
+          t8 = child.parentData;
+          t8.toString;
+          t8 = t5._as(t8).index;
+          t8.toString;
+          t8 = t8 !== index;
+        } else
+          t8 = true;
+        if (t8) {
+          child = _this.insertAndLayoutChild$2$after(childConstraints, trailingChildWithLayout);
+          if (child == null) {
+            estimatedMaxScrollOffset = index * itemExtent;
+            break;
+          }
+        } else
+          child.layout$1(childConstraints);
+        t8 = child.parentData;
+        t8.toString;
+        t5._as(t8);
+        t9 = t8.index;
+        t9.toString;
+        t8.layoutOffset = itemExtent * t9;
+        ++index;
+        trailingChildWithLayout = child;
+      }
+      t3 = _this.ContainerRenderObjectMixin__lastChild;
+      t3.toString;
+      t3 = t4._as(t3).parentData;
+      t3.toString;
+      t3 = t5._as(t3).index;
+      t3.toString;
+      leadingScrollOffset = itemExtent * firstIndex;
+      trailingScrollOffset = itemExtent * (t3 + 1);
+      estimatedMaxScrollOffset = Math.min(estimatedMaxScrollOffset, t1.estimateMaxScrollOffset$5$firstIndex$lastIndex$leadingScrollOffset$trailingScrollOffset(constraints, firstIndex, t3, leadingScrollOffset, trailingScrollOffset));
+      paintExtent = _this.calculatePaintOffset$3$from$to(constraints, leadingScrollOffset, trailingScrollOffset);
+      cacheExtent = _this.calculateCacheOffset$3$from$to(constraints, leadingScrollOffset, trailingScrollOffset);
+      targetEndScrollOffsetForPaint = t2 + constraints.remainingPaintExtent;
+      targetLastIndexForPaint = isFinite(targetEndScrollOffsetForPaint) ? _this.getMaxChildIndexForScrollOffset$2(targetEndScrollOffsetForPaint, itemExtent) : _null;
+      _this._geometry = A.SliverGeometry$(cacheExtent, targetLastIndexForPaint != null && t3 >= targetLastIndexForPaint || t2 > 0, _null, _null, estimatedMaxScrollOffset, paintExtent, 0, estimatedMaxScrollOffset, _null);
+      if (estimatedMaxScrollOffset === trailingScrollOffset)
+        t1._didUnderflow = true;
+      t1.didFinishLayout$0();
+    }
+  };
+  A.KeepAliveParentDataMixin.prototype = {$isParentData: 1};
+  A.RenderSliverWithKeepAliveMixin.prototype = {
+    setupParentData$1(child) {
+    }
+  };
+  A.SliverMultiBoxAdaptorParentData.prototype = {
+    toString$0(_) {
+      var t1 = this.index,
+        t2 = this.KeepAliveParentDataMixin_keepAlive ? "keepAlive; " : "";
+      return "index=" + B.S(t1) + "; " + t2 + this.super$SliverLogicalParentData$toString(0);
+    }
+  };
+  A.RenderSliverMultiBoxAdaptor.prototype = {
+    setupParentData$1(child) {
+      if (!(child.parentData instanceof A.SliverMultiBoxAdaptorParentData))
+        child.parentData = new A.SliverMultiBoxAdaptorParentData(false, null, null);
+    },
+    adoptChild$1(child) {
+      var t1;
+      this.super$RenderObject$adoptChild(child);
+      t1 = child.parentData;
+      t1.toString;
+      if (!type$.SliverMultiBoxAdaptorParentData._as(t1)._keptAlive)
+        this._childManager.didAdoptChild$1(type$.RenderBox._as(child));
+    },
+    insert$2$after(_, child, after) {
+      this.super$ContainerRenderObjectMixin$insert(0, type$.RenderBox._as(child), type$.nullable_RenderBox._as(after));
+    },
+    move$2$after(child, after) {
+      var t1, t2, _this = this;
+      type$.RenderBox._as(child);
+      type$.nullable_RenderBox._as(after);
+      t1 = child.parentData;
+      t1.toString;
+      type$.SliverMultiBoxAdaptorParentData._as(t1);
+      if (!t1._keptAlive) {
+        _this.super$ContainerRenderObjectMixin$move(child, after);
+        _this._childManager.didAdoptChild$1(child);
+        _this.markNeedsLayout$0();
+      } else {
+        t2 = _this._keepAliveBucket;
+        if (t2.$index(0, t1.index) === child)
+          t2.remove$1(0, t1.index);
+        _this._childManager.didAdoptChild$1(child);
+        t1 = t1.index;
+        t1.toString;
+        t2.$indexSet(0, t1, child);
+      }
+    },
+    remove$1(_, child) {
+      var t1;
+      type$.RenderBox._as(child);
+      t1 = child.parentData;
+      t1.toString;
+      type$.SliverMultiBoxAdaptorParentData._as(t1);
+      if (!t1._keptAlive) {
+        this.super$ContainerRenderObjectMixin$remove(0, child);
+        return;
+      }
+      this._keepAliveBucket.remove$1(0, t1.index);
+      this.dropChild$1(child);
+    },
+    _createOrObtainChild$2$after(index, after) {
+      this.invokeLayoutCallback$1$1(new A.RenderSliverMultiBoxAdaptor__createOrObtainChild_closure(this, index, after), type$.SliverConstraints);
+    },
+    _destroyOrCacheChild$1(child) {
+      var t2, _this = this,
+        t1 = child.parentData;
+      t1.toString;
+      type$.SliverMultiBoxAdaptorParentData._as(t1);
+      if (t1.KeepAliveParentDataMixin_keepAlive) {
+        _this.remove$1(0, child);
+        t2 = t1.index;
+        t2.toString;
+        _this._keepAliveBucket.$indexSet(0, t2, child);
+        child.parentData = t1;
+        _this.super$RenderObject$adoptChild(child);
+        t1._keptAlive = true;
+      } else
+        _this._childManager.removeChild$1(child);
+    },
+    attach$1(owner) {
+      var t1, t2, t3;
+      type$.PipelineOwner._as(owner);
+      this.super$_RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin$attach(owner);
+      for (t1 = this._keepAliveBucket, t1 = t1.get$values(t1), t2 = B._instanceType(t1), t2 = t2._eval$1("@<1>")._bind$1(t2._rest[1]), t1 = new B.MappedIterator(J.get$iterator$ax(t1.__internal$_iterable), t1._f, t2._eval$1("MappedIterator<1,2>")), t2 = t2._rest[1]; t1.moveNext$0();) {
+        t3 = t1.__internal$_current;
+        (t3 == null ? t2._as(t3) : t3).attach$1(owner);
+      }
+    },
+    detach$0(_) {
+      var t1, t2, t3;
+      this.super$_RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin$detach(0);
+      for (t1 = this._keepAliveBucket, t1 = t1.get$values(t1), t2 = B._instanceType(t1), t2 = t2._eval$1("@<1>")._bind$1(t2._rest[1]), t1 = new B.MappedIterator(J.get$iterator$ax(t1.__internal$_iterable), t1._f, t2._eval$1("MappedIterator<1,2>")), t2 = t2._rest[1]; t1.moveNext$0();) {
+        t3 = t1.__internal$_current;
+        (t3 == null ? t2._as(t3) : t3).detach$0(0);
+      }
+    },
+    redepthChildren$0() {
+      this.super$ContainerRenderObjectMixin$redepthChildren();
+      var t1 = this._keepAliveBucket;
+      t1.get$values(t1).forEach$1(0, this.get$redepthChild());
+    },
+    visitChildren$1(visitor) {
+      var t1;
+      type$.void_Function_RenderObject._as(visitor);
+      this.super$ContainerRenderObjectMixin$visitChildren(visitor);
+      t1 = this._keepAliveBucket;
+      t1.get$values(t1).forEach$1(0, visitor);
+    },
+    visitChildrenForSemantics$1(visitor) {
+      this.super$ContainerRenderObjectMixin$visitChildren(type$.void_Function_RenderObject._as(visitor));
+    },
+    addInitialChild$2$index$layoutOffset(index, layoutOffset) {
+      var t1;
+      this._createOrObtainChild$2$after(index, null);
+      t1 = this.ContainerRenderObjectMixin__firstChild;
+      if (t1 != null) {
+        t1 = t1.parentData;
+        t1.toString;
+        type$.SliverMultiBoxAdaptorParentData._as(t1).layoutOffset = layoutOffset;
+        return true;
+      }
+      this._childManager._didUnderflow = true;
+      return false;
+    },
+    addInitialChild$0() {
+      return this.addInitialChild$2$index$layoutOffset(0, 0);
+    },
+    insertAndLayoutLeadingChild$2$parentUsesSize(childConstraints, parentUsesSize) {
+      var t1, t2, t3, index, _this = this;
+      type$.BoxConstraints._as(childConstraints);
+      t1 = _this.ContainerRenderObjectMixin__firstChild;
+      t1.toString;
+      t2 = type$.RenderBox;
+      t1 = t2._as(t1).parentData;
+      t1.toString;
+      t3 = type$.SliverMultiBoxAdaptorParentData;
+      t1 = t3._as(t1).index;
+      t1.toString;
+      index = t1 - 1;
+      _this._createOrObtainChild$2$after(index, null);
+      t1 = _this.ContainerRenderObjectMixin__firstChild;
+      t1.toString;
+      t2._as(t1);
+      t2 = t1.parentData;
+      t2.toString;
+      t2 = t3._as(t2).index;
+      t2.toString;
+      if (t2 === index) {
+        t1.layout$2$parentUsesSize(childConstraints, parentUsesSize);
+        return _this.ContainerRenderObjectMixin__firstChild;
+      }
+      _this._childManager._didUnderflow = true;
+      return null;
+    },
+    insertAndLayoutLeadingChild$1(childConstraints) {
+      return this.insertAndLayoutLeadingChild$2$parentUsesSize(childConstraints, false);
+    },
+    insertAndLayoutChild$3$after$parentUsesSize(childConstraints, after, parentUsesSize) {
+      var t2, index, t3, child,
+        t1 = after.parentData;
+      t1.toString;
+      t2 = type$.SliverMultiBoxAdaptorParentData;
+      t1 = t2._as(t1).index;
+      t1.toString;
+      index = t1 + 1;
+      this._createOrObtainChild$2$after(index, after);
+      t1 = B._instanceType(this);
+      t3 = t1._eval$1("ContainerRenderObjectMixin.0")._as(after).parentData;
+      t3.toString;
+      child = t1._eval$1("ContainerRenderObjectMixin.1")._as(t3).ContainerParentDataMixin_nextSibling;
+      if (child != null) {
+        t1 = child.parentData;
+        t1.toString;
+        t1 = t2._as(t1).index;
+        t1.toString;
+        t1 = t1 === index;
+      } else
+        t1 = false;
+      if (t1) {
+        child.layout$2$parentUsesSize(childConstraints, parentUsesSize);
+        return child;
+      }
+      this._childManager._didUnderflow = true;
+      return null;
+    },
+    insertAndLayoutChild$2$after(childConstraints, after) {
+      return this.insertAndLayoutChild$3$after$parentUsesSize(childConstraints, after, false);
+    },
+    collectGarbage$2(leadingGarbage, trailingGarbage) {
+      var t1 = {};
+      t1.leadingGarbage = leadingGarbage;
+      t1.trailingGarbage = trailingGarbage;
+      this.invokeLayoutCallback$1$1(new A.RenderSliverMultiBoxAdaptor_collectGarbage_closure(t1, this), type$.SliverConstraints);
+    },
+    paintExtentOf$1(child) {
+      type$.RenderBox._as(child);
+      switch (B.axisDirectionToAxis(type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(this)).axisDirection).index) {
+        case 0:
+          return child._size._dx;
+        case 1:
+          return child._size._dy;
+      }
+    },
+    hitTestChildren$3$crossAxisPosition$mainAxisPosition(result, crossAxisPosition, mainAxisPosition) {
+      var t1, t2, t3,
+        child = this.ContainerRenderObjectMixin__lastChild,
+        boxResult = B.BoxHitTestResult$wrap(result);
+      for (t1 = B._instanceType(this), t2 = t1._eval$1("ContainerRenderObjectMixin.0"), t1 = t1._eval$1("ContainerRenderObjectMixin.1"); child != null;) {
+        if (this.hitTestBoxChild$4$crossAxisPosition$mainAxisPosition(boxResult, child, crossAxisPosition, mainAxisPosition))
+          return true;
+        t3 = t2._as(child).parentData;
+        t3.toString;
+        child = t1._as(t3).ContainerParentDataMixin_previousSibling;
+      }
+      return false;
+    },
+    childScrollOffset$1(child) {
+      var t1 = type$.RenderObject._as(child).parentData;
+      t1.toString;
+      return type$.SliverMultiBoxAdaptorParentData._as(t1).layoutOffset;
+    },
+    paintsChild$1(child) {
+      var childParentData = type$.nullable_SliverMultiBoxAdaptorParentData._as(type$.RenderBox._as(child).parentData);
+      return (childParentData == null ? null : childParentData.index) != null && !this._keepAliveBucket.containsKey$1(0, childParentData.index);
+    },
+    applyPaintTransform$2(child, transform) {
+      var t1, rightWayUp, t2, delta, crossAxisDelta, _this = this;
+      type$.RenderBox._as(child);
+      if (!_this.paintsChild$1(child))
+        transform.setZero$0();
+      else {
+        t1 = type$.SliverConstraints;
+        rightWayUp = _this._getRightWayUp$1(t1._as(B.RenderObject.prototype.get$constraints.call(_this)));
+        t2 = child.parentData;
+        t2.toString;
+        t2 = type$.SliverMultiBoxAdaptorParentData._as(t2).layoutOffset;
+        t2.toString;
+        delta = t2 - t1._as(B.RenderObject.prototype.get$constraints.call(_this)).scrollOffset;
+        crossAxisDelta = _this.childCrossAxisPosition$1(child);
+        switch (B.axisDirectionToAxis(t1._as(B.RenderObject.prototype.get$constraints.call(_this)).axisDirection).index) {
+          case 0:
+            transform.translate$2(0, !rightWayUp ? _this._geometry.paintExtent - child._size._dx - delta : delta, crossAxisDelta);
+            break;
+          case 1:
+            transform.translate$2(0, crossAxisDelta, !rightWayUp ? _this._geometry.paintExtent - child._size._dy - delta : delta);
+            break;
+        }
+      }
+    },
+    paint$2(context, offset) {
+      var t1, originOffset, mainAxisUnit, crossAxisUnit, addExtent, child, t2, t3, t4, t5, mainAxisDelta, crossAxisDelta, t6, t7, t8, childOffset, t9, _this = this, _null = null;
+      if (_this.ContainerRenderObjectMixin__firstChild == null)
+        return;
+      t1 = type$.SliverConstraints;
+      switch (B.applyGrowthDirectionToAxisDirection(t1._as(B.RenderObject.prototype.get$constraints.call(_this)).axisDirection, t1._as(B.RenderObject.prototype.get$constraints.call(_this)).growthDirection)) {
+        case C.AxisDirection_0:
+          originOffset = offset.$add(0, new B.Offset(0, _this._geometry.paintExtent));
+          mainAxisUnit = C.Offset_0_m1;
+          crossAxisUnit = C.Offset_1_0;
+          addExtent = true;
+          break;
+        case C.AxisDirection_1:
+          originOffset = offset;
+          mainAxisUnit = C.Offset_1_0;
+          crossAxisUnit = C.Offset_0_1;
+          addExtent = false;
+          break;
+        case C.AxisDirection_2:
+          originOffset = offset;
+          mainAxisUnit = C.Offset_0_1;
+          crossAxisUnit = C.Offset_1_0;
+          addExtent = false;
+          break;
+        case C.AxisDirection_3:
+          originOffset = offset.$add(0, new B.Offset(_this._geometry.paintExtent, 0));
+          mainAxisUnit = C.Offset_m1_0;
+          crossAxisUnit = C.Offset_0_1;
+          addExtent = true;
+          break;
+        default:
+          addExtent = _null;
+          originOffset = addExtent;
+          crossAxisUnit = originOffset;
+          mainAxisUnit = crossAxisUnit;
+      }
+      child = _this.ContainerRenderObjectMixin__firstChild;
+      for (t2 = B._instanceType(_this), t3 = t2._eval$1("ContainerRenderObjectMixin.0"), t2 = t2._eval$1("ContainerRenderObjectMixin.1"), t4 = type$.SliverMultiBoxAdaptorParentData; child != null;) {
+        t5 = child.parentData;
+        t5.toString;
+        t5 = t4._as(t5).layoutOffset;
+        t5.toString;
+        mainAxisDelta = t5 - t1._as(B.RenderObject.prototype.get$constraints.call(_this)).scrollOffset;
+        crossAxisDelta = _this.childCrossAxisPosition$1(child);
+        t5 = originOffset._dx;
+        t6 = mainAxisUnit._dx;
+        t5 = t5 + t6 * mainAxisDelta + crossAxisUnit._dx * crossAxisDelta;
+        t7 = originOffset._dy;
+        t8 = mainAxisUnit._dy;
+        t7 = t7 + t8 * mainAxisDelta + crossAxisUnit._dy * crossAxisDelta;
+        childOffset = new B.Offset(t5, t7);
+        if (B.boolConversionCheck(addExtent)) {
+          t9 = B._asDouble(_this.paintExtentOf$1(child));
+          childOffset = new B.Offset(t5 + t6 * t9, t7 + t8 * t9);
+        }
+        if (mainAxisDelta < t1._as(B.RenderObject.prototype.get$constraints.call(_this)).remainingPaintExtent) {
+          t5 = _this.paintExtentOf$1(child);
+          if (typeof t5 !== "number")
+            return B.iae(t5);
+          t5 = mainAxisDelta + t5 > 0;
+        } else
+          t5 = false;
+        if (t5)
+          context.paintChild$2(child, childOffset);
+        t5 = t3._as(child).parentData;
+        t5.toString;
+        child = t2._as(t5).ContainerParentDataMixin_nextSibling;
+      }
+    }
+  };
+  A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin.prototype = {
+    attach$1(owner) {
+      var child, t1, t2;
+      type$.PipelineOwner._as(owner);
+      this.super$RenderObject$attach(owner);
+      child = this.ContainerRenderObjectMixin__firstChild;
+      for (t1 = type$.SliverMultiBoxAdaptorParentData; child != null;) {
+        child.attach$1(owner);
+        t2 = child.parentData;
+        t2.toString;
+        child = t1._as(t2).ContainerParentDataMixin_nextSibling;
+      }
+    },
+    detach$0(_) {
+      var child, t1, t2;
+      this.super$AbstractNode$detach(0);
+      child = this.ContainerRenderObjectMixin__firstChild;
+      for (t1 = type$.SliverMultiBoxAdaptorParentData; child != null;) {
+        child.detach$0(0);
+        t2 = child.parentData;
+        t2.toString;
+        child = t1._as(t2).ContainerParentDataMixin_nextSibling;
+      }
+    }
+  };
+  A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers.prototype = {};
+  A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers_RenderSliverWithKeepAliveMixin.prototype = {};
+  A._SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin.prototype = {
+    detach$0(_) {
+      this.super$ParentData$detach(0);
+    }
+  };
+  A._SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin_KeepAliveParentDataMixin.prototype = {};
+  A.RenderSliverEdgeInsetsPadding.prototype = {
+    get$beforePadding() {
+      var _this = this,
+        t1 = type$.SliverConstraints;
+      switch (B.applyGrowthDirectionToAxisDirection(t1._as(B.RenderObject.prototype.get$constraints.call(_this)).axisDirection, t1._as(B.RenderObject.prototype.get$constraints.call(_this)).growthDirection)) {
+        case C.AxisDirection_0:
+          return _this.get$resolvedPadding().bottom;
+        case C.AxisDirection_1:
+          return _this.get$resolvedPadding().left;
+        case C.AxisDirection_2:
+          return _this.get$resolvedPadding().top;
+        case C.AxisDirection_3:
+          return _this.get$resolvedPadding().right;
+      }
+    },
+    get$afterPadding() {
+      var _this = this,
+        t1 = type$.SliverConstraints;
+      switch (B.applyGrowthDirectionToAxisDirection(t1._as(B.RenderObject.prototype.get$constraints.call(_this)).axisDirection, t1._as(B.RenderObject.prototype.get$constraints.call(_this)).growthDirection)) {
+        case C.AxisDirection_0:
+          return _this.get$resolvedPadding().top;
+        case C.AxisDirection_1:
+          return _this.get$resolvedPadding().right;
+        case C.AxisDirection_2:
+          return _this.get$resolvedPadding().bottom;
+        case C.AxisDirection_3:
+          return _this.get$resolvedPadding().left;
+      }
+    },
+    get$crossAxisPadding() {
+      switch (B.axisDirectionToAxis(type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(this)).axisDirection).index) {
+        case 0:
+          var t1 = this.get$resolvedPadding();
+          return t1.get$_top(t1) + t1.get$_bottom(t1);
+        case 1:
+          return this.get$resolvedPadding().get$horizontal();
+      }
+    },
+    setupParentData$1(child) {
+      if (!(child.parentData instanceof A.SliverPhysicalParentData))
+        child.parentData = new A.SliverPhysicalParentData(C.Offset_0_0);
+    },
+    performLayout$0() {
+      var t2, crossAxisPadding, paintExtent, beforePaddingPaintExtent, overlap, t3, t4, t5, t6, t7, t8, t9, t10, t11, childLayoutGeometry, afterPaddingPaintExtent, mainAxisPaddingPaintExtent, beforePaddingCacheExtent, afterPaddingCacheExtent, _this = this, _null = null,
+        t1 = type$.SliverConstraints,
+        constraints = t1._as(B.RenderObject.prototype.get$constraints.call(_this)),
+        beforePadding = _this.get$beforePadding();
+      _this.get$afterPadding();
+      t2 = _this.get$resolvedPadding();
+      t2.toString;
+      t1 = t2.along$1(B.axisDirectionToAxis(t1._as(B.RenderObject.prototype.get$constraints.call(_this)).axisDirection));
+      crossAxisPadding = _this.get$crossAxisPadding();
+      if (_this.RenderObjectWithChildMixin__child == null) {
+        paintExtent = _this.calculatePaintOffset$3$from$to(constraints, 0, t1);
+        _this._geometry = A.SliverGeometry$(_this.calculateCacheOffset$3$from$to(constraints, 0, t1), false, _null, _null, t1, Math.min(paintExtent, constraints.remainingPaintExtent), 0, t1, _null);
+        return;
+      }
+      beforePaddingPaintExtent = _this.calculatePaintOffset$3$from$to(constraints, 0, beforePadding);
+      overlap = constraints.overlap;
+      if (overlap > 0)
+        overlap = Math.max(0, overlap - beforePaddingPaintExtent);
+      t2 = _this.RenderObjectWithChildMixin__child;
+      t2.toString;
+      t3 = Math.max(0, constraints.scrollOffset - beforePadding);
+      t4 = Math.min(0, constraints.cacheOrigin + beforePadding);
+      t5 = constraints.remainingPaintExtent;
+      t6 = _this.calculatePaintOffset$3$from$to(constraints, 0, beforePadding);
+      t7 = constraints.remainingCacheExtent;
+      t8 = _this.calculateCacheOffset$3$from$to(constraints, 0, beforePadding);
+      t9 = Math.max(0, constraints.crossAxisExtent - crossAxisPadding);
+      t10 = constraints.axisDirection;
+      t11 = constraints.growthDirection;
+      t2.layout$2$parentUsesSize(new A.SliverConstraints(t10, t11, constraints.userScrollDirection, t3, beforePadding + constraints.precedingScrollExtent, overlap, t5 - t6, t9, constraints.crossAxisDirection, constraints.viewportMainAxisExtent, t4, t7 - t8), true);
+      childLayoutGeometry = _this.RenderObjectWithChildMixin__child._geometry;
+      t2 = childLayoutGeometry.scrollOffsetCorrection;
+      if (t2 != null) {
+        _this._geometry = A.SliverGeometry$(_null, false, _null, _null, 0, 0, 0, 0, t2);
+        return;
+      }
+      t2 = childLayoutGeometry.scrollExtent;
+      t3 = beforePadding + t2;
+      t4 = t1 + t2;
+      afterPaddingPaintExtent = _this.calculatePaintOffset$3$from$to(constraints, t3, t4);
+      mainAxisPaddingPaintExtent = beforePaddingPaintExtent + afterPaddingPaintExtent;
+      beforePaddingCacheExtent = _this.calculateCacheOffset$3$from$to(constraints, 0, beforePadding);
+      afterPaddingCacheExtent = _this.calculateCacheOffset$3$from$to(constraints, t3, t4);
+      t3 = childLayoutGeometry.paintExtent;
+      t6 = childLayoutGeometry.layoutExtent;
+      paintExtent = Math.min(beforePaddingPaintExtent + Math.max(t3, t6 + afterPaddingPaintExtent), t5);
+      t5 = childLayoutGeometry.paintOrigin;
+      t6 = Math.min(mainAxisPaddingPaintExtent + t6, paintExtent);
+      t7 = Math.min(afterPaddingCacheExtent + beforePaddingCacheExtent + childLayoutGeometry.cacheExtent, t7);
+      t8 = childLayoutGeometry.maxPaintExtent;
+      t3 = Math.max(mainAxisPaddingPaintExtent + t3, beforePaddingPaintExtent + childLayoutGeometry.hitTestExtent);
+      _this._geometry = A.SliverGeometry$(t7, childLayoutGeometry.hasVisualOverflow, t3, t6, t1 + t8, paintExtent, t5, t4, _null);
+      t4 = _this.RenderObjectWithChildMixin__child.parentData;
+      t4.toString;
+      type$.SliverPhysicalParentData._as(t4);
+      switch (B.applyGrowthDirectionToAxisDirection(t10, t11)) {
+        case C.AxisDirection_0:
+          t4.paintOffset = new B.Offset(_this.get$resolvedPadding().left, _this.calculatePaintOffset$3$from$to(constraints, _this.get$resolvedPadding().bottom + t2, _this.get$resolvedPadding().bottom + t2 + _this.get$resolvedPadding().top));
+          break;
+        case C.AxisDirection_1:
+          t4.paintOffset = new B.Offset(_this.calculatePaintOffset$3$from$to(constraints, 0, _this.get$resolvedPadding().left), _this.get$resolvedPadding().top);
+          break;
+        case C.AxisDirection_2:
+          t4.paintOffset = new B.Offset(_this.get$resolvedPadding().left, _this.calculatePaintOffset$3$from$to(constraints, 0, _this.get$resolvedPadding().top));
+          break;
+        case C.AxisDirection_3:
+          t4.paintOffset = new B.Offset(_this.calculatePaintOffset$3$from$to(constraints, _this.get$resolvedPadding().right + t2, _this.get$resolvedPadding().right + t2 + _this.get$resolvedPadding().left), _this.get$resolvedPadding().top);
+          break;
+      }
+    },
+    hitTestChildren$3$crossAxisPosition$mainAxisPosition(result, crossAxisPosition, mainAxisPosition) {
+      var t2, t3, t4, t5, _this = this,
+        t1 = _this.RenderObjectWithChildMixin__child;
+      if (t1 != null && t1._geometry.hitTestExtent > 0) {
+        t2 = t1.parentData;
+        t2.toString;
+        type$.SliverPhysicalParentData._as(t2);
+        type$.RenderSliver._as(t1);
+        t1 = _this.calculatePaintOffset$3$from$to(type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(_this)), 0, _this.get$beforePadding());
+        t3 = _this.RenderObjectWithChildMixin__child;
+        t3.toString;
+        t3 = _this.childCrossAxisPosition$1(t3);
+        t2 = t2.paintOffset;
+        t4 = _this.RenderObjectWithChildMixin__child.get$hitTest();
+        B._asDouble(t3);
+        type$.bool_Function_SliverHitTestResult_$named_$req_crossAxisPosition_double_and_$req_mainAxisPosition_double._as(t4);
+        t5 = t2 != null;
+        if (t5)
+          C.JSArray_methods.add$1(result._localTransforms, new B._OffsetTransformPart(new B.Offset(-t2._dx, -t2._dy)));
+        t4.call$3$crossAxisPosition$mainAxisPosition(result, crossAxisPosition - t3, mainAxisPosition - t1);
+        if (t5)
+          result.popTransform$0();
+      }
+      return false;
+    },
+    childCrossAxisPosition$1(child) {
+      var _this = this,
+        t1 = type$.SliverConstraints;
+      switch (B.applyGrowthDirectionToAxisDirection(t1._as(B.RenderObject.prototype.get$constraints.call(_this)).axisDirection, t1._as(B.RenderObject.prototype.get$constraints.call(_this)).growthDirection)) {
+        case C.AxisDirection_0:
+        case C.AxisDirection_2:
+          return _this.get$resolvedPadding().left;
+        case C.AxisDirection_3:
+        case C.AxisDirection_1:
+          return _this.get$resolvedPadding().top;
+      }
+    },
+    childScrollOffset$1(child) {
+      return this.get$beforePadding();
+    },
+    applyPaintTransform$2(child, transform) {
+      var t1 = child.parentData;
+      t1.toString;
+      t1 = type$.SliverPhysicalParentData._as(t1).paintOffset;
+      transform.translate$2(0, t1._dx, t1._dy);
+    },
+    paint$2(context, offset) {
+      var t2,
+        t1 = this.RenderObjectWithChildMixin__child;
+      if (t1 != null && t1._geometry.visible) {
+        t2 = t1.parentData;
+        t2.toString;
+        context.paintChild$2(t1, offset.$add(0, type$.SliverPhysicalParentData._as(t2).paintOffset));
+      }
+    }
+  };
+  A._RenderSliverEdgeInsetsPadding_RenderSliver_RenderObjectWithChildMixin.prototype = {
+    attach$1(owner) {
+      var t1;
+      type$.PipelineOwner._as(owner);
+      this.super$RenderObject$attach(owner);
+      t1 = this.RenderObjectWithChildMixin__child;
+      if (t1 != null)
+        t1.attach$1(owner);
+    },
+    detach$0(_) {
+      var t1;
+      this.super$AbstractNode$detach(0);
+      t1 = this.RenderObjectWithChildMixin__child;
+      if (t1 != null)
+        t1.detach$0(0);
+    }
+  };
+  A.CacheExtentStyle.prototype = {
+    _enumToString$0() {
+      return "CacheExtentStyle." + this._core$_name;
+    }
+  };
+  A.RenderViewportBase.prototype = {
+    describeSemanticsConfiguration$1(config) {
+      this.super$RenderObject$describeSemanticsConfiguration(config);
+      config.addTagForChildren$1(G.SemanticsTag_FIw);
+    },
+    visitChildrenForSemantics$1(visitor) {
+      var t1, t2;
+      type$.void_Function_RenderObject._as(visitor);
+      t1 = this.get$childrenInPaintOrder();
+      t2 = B.instanceType(t1);
+      new B.WhereIterable(t1, t2._eval$1("bool(1)")._as(new A.RenderViewportBase_visitChildrenForSemantics_closure()), t2._eval$1("WhereIterable<1>")).forEach$1(0, visitor);
+    },
+    set$axisDirection(value) {
+      if (value === this._viewport$_axisDirection)
+        return;
+      this._viewport$_axisDirection = value;
+      this.markNeedsLayout$0();
+    },
+    set$crossAxisDirection(value) {
+      type$.AxisDirection._as(value);
+      if (value === this._crossAxisDirection)
+        return;
+      this._crossAxisDirection = value;
+      this.markNeedsLayout$0();
+    },
+    set$offset(_, value) {
+      var _this = this,
+        t1 = _this._viewport$_offset;
+      if (value === t1)
+        return;
+      if (_this._node$_owner != null)
+        t1.removeListener$1(0, _this.get$markNeedsLayout());
+      _this._viewport$_offset = value;
+      if (_this._node$_owner != null)
+        value.addListener$1(0, _this.get$markNeedsLayout());
+      _this.markNeedsLayout$0();
+    },
+    set$cacheExtent(value) {
+      if (value == null)
+        value = 250;
+      if (value === this._cacheExtent)
+        return;
+      this._cacheExtent = value;
+      this.markNeedsLayout$0();
+    },
+    set$cacheExtentStyle(value) {
+      if (value === this._cacheExtentStyle)
+        return;
+      this._cacheExtentStyle = value;
+      this.markNeedsLayout$0();
+    },
+    set$clipBehavior(value) {
+      var _this = this;
+      if (value !== _this._viewport$_clipBehavior) {
+        _this._viewport$_clipBehavior = value;
+        _this.markNeedsPaint$0();
+        _this.markNeedsSemanticsUpdate$0();
+      }
+    },
+    attach$1(owner) {
+      this.super$_RenderViewportBase_RenderBox_ContainerRenderObjectMixin$attach(type$.PipelineOwner._as(owner));
+      this._viewport$_offset.addListener$1(0, this.get$markNeedsLayout());
+    },
+    detach$0(_) {
+      this._viewport$_offset.removeListener$1(0, this.get$markNeedsLayout());
+      this.super$_RenderViewportBase_RenderBox_ContainerRenderObjectMixin$detach(0);
+    },
+    get$isRepaintBoundary() {
+      return true;
+    },
+    layoutChildSequence$11$advance$cacheOrigin$child$crossAxisExtent$growthDirection$layoutOffset$mainAxisExtent$overlap$remainingCacheExtent$remainingPaintExtent$scrollOffset(advance, cacheOrigin, child, crossAxisExtent, growthDirection, layoutOffset, mainAxisExtent, overlap, remainingCacheExtent, remainingPaintExtent, scrollOffset) {
+      var adjustedUserScrollDirection, maxPaintOffset, layoutOffset0, precedingScrollExtent, sliverScrollOffset, correctedCacheOrigin, cacheExtentCorrection, childLayoutGeometry, t1, effectiveLayoutOffset, _this = this;
+      type$.nullable_RenderSliver._as(child);
+      type$.nullable_RenderSliver_Function_RenderSliver._as(advance);
+      adjustedUserScrollDirection = A.applyGrowthDirectionToScrollDirection(_this._viewport$_offset._userScrollDirection, growthDirection);
+      maxPaintOffset = layoutOffset + overlap;
+      for (layoutOffset0 = layoutOffset, precedingScrollExtent = 0; child != null;) {
+        sliverScrollOffset = scrollOffset <= 0 ? 0 : scrollOffset;
+        correctedCacheOrigin = Math.max(cacheOrigin, -sliverScrollOffset);
+        cacheExtentCorrection = cacheOrigin - correctedCacheOrigin;
+        child.layout$2$parentUsesSize(new A.SliverConstraints(_this._viewport$_axisDirection, growthDirection, adjustedUserScrollDirection, sliverScrollOffset, precedingScrollExtent, maxPaintOffset - layoutOffset0, Math.max(0, remainingPaintExtent - layoutOffset0 + layoutOffset), crossAxisExtent, _this._crossAxisDirection, mainAxisExtent, correctedCacheOrigin, Math.max(0, remainingCacheExtent + cacheExtentCorrection)), true);
+        childLayoutGeometry = child._geometry;
+        t1 = childLayoutGeometry.scrollOffsetCorrection;
+        if (t1 != null)
+          return t1;
+        effectiveLayoutOffset = layoutOffset0 + childLayoutGeometry.paintOrigin;
+        if (childLayoutGeometry.visible || scrollOffset > 0)
+          _this.updateChildLayoutOffset$3(child, effectiveLayoutOffset, growthDirection);
+        else
+          _this.updateChildLayoutOffset$3(child, -scrollOffset + layoutOffset, growthDirection);
+        maxPaintOffset = Math.max(effectiveLayoutOffset + childLayoutGeometry.paintExtent, maxPaintOffset);
+        t1 = childLayoutGeometry.scrollExtent;
+        scrollOffset -= t1;
+        precedingScrollExtent += t1;
+        layoutOffset0 += childLayoutGeometry.layoutExtent;
+        t1 = childLayoutGeometry.cacheExtent;
+        if (t1 !== 0) {
+          remainingCacheExtent -= t1 - cacheExtentCorrection;
+          cacheOrigin = Math.min(correctedCacheOrigin + t1, 0);
+        }
+        _this.updateOutOfBandData$2(growthDirection, childLayoutGeometry);
+        child = advance.call$1(child);
+      }
+      return 0;
+    },
+    describeApproximatePaintClip$1(child) {
+      var t1, right, bottom, overlapCorrection, $top, left;
+      type$.RenderSliver._as(child);
+      switch (this._viewport$_clipBehavior.index) {
+        case 0:
+          return null;
+        case 1:
+        case 2:
+        case 3:
+          break;
+      }
+      t1 = this._size;
+      right = 0 + t1._dx;
+      bottom = 0 + t1._dy;
+      t1 = type$.SliverConstraints;
+      if (t1._as(B.RenderObject.prototype.get$constraints.call(child)).overlap === 0 || !isFinite(t1._as(B.RenderObject.prototype.get$constraints.call(child)).viewportMainAxisExtent))
+        return new B.Rect(0, 0, right, bottom);
+      overlapCorrection = t1._as(B.RenderObject.prototype.get$constraints.call(child)).viewportMainAxisExtent - t1._as(B.RenderObject.prototype.get$constraints.call(child)).remainingPaintExtent + t1._as(B.RenderObject.prototype.get$constraints.call(child)).overlap;
+      switch (B.applyGrowthDirectionToAxisDirection(this._viewport$_axisDirection, t1._as(B.RenderObject.prototype.get$constraints.call(child)).growthDirection)) {
+        case C.AxisDirection_2:
+          $top = 0 + overlapCorrection;
+          left = 0;
+          break;
+        case C.AxisDirection_0:
+          bottom -= overlapCorrection;
+          left = 0;
+          $top = 0;
+          break;
+        case C.AxisDirection_1:
+          left = 0 + overlapCorrection;
+          $top = 0;
+          break;
+        case C.AxisDirection_3:
+          right -= overlapCorrection;
+          left = 0;
+          $top = 0;
+          break;
+        default:
+          left = 0;
+          $top = 0;
+      }
+      return new B.Rect(left, $top, right, bottom);
+    },
+    describeSemanticsClip$1(child) {
+      var t1, t2, _this = this;
+      type$.nullable_RenderSliver._as(child);
+      t1 = _this._calculatedCacheExtent;
+      if (t1 == null) {
+        t1 = _this._size;
+        return new B.Rect(0, 0, 0 + t1._dx, 0 + t1._dy);
+      }
+      switch (B.axisDirectionToAxis(_this._viewport$_axisDirection).index) {
+        case 1:
+          t2 = _this._size;
+          return new B.Rect(0, 0 - t1, 0 + t2._dx, 0 + t2._dy + t1);
+        case 0:
+          t2 = _this._size;
+          return new B.Rect(0 - t1, 0, 0 + t2._dx + t1, 0 + t2._dy);
+      }
+    },
+    paint$2(context, offset) {
+      var t1, t2, t3, _this = this;
+      if (_this.ContainerRenderObjectMixin__firstChild == null)
+        return;
+      t1 = _this.get$hasVisualOverflow() && _this._viewport$_clipBehavior !== C.Clip_0;
+      t2 = _this._viewport$_clipRectLayer;
+      if (t1) {
+        t1 = _this.__RenderObject__needsCompositing_A;
+        t1 === $ && B.throwLateFieldNI("_needsCompositing");
+        t3 = _this._size;
+        t2.set$layer(0, context.pushClipRect$6$clipBehavior$oldLayer(t1, offset, new B.Rect(0, 0, 0 + t3._dx, 0 + t3._dy), _this.get$_paintContents(), _this._viewport$_clipBehavior, t2._layer));
+      } else {
+        t2.set$layer(0, null);
+        _this._paintContents$2(context, offset);
+      }
+    },
+    dispose$0() {
+      this._viewport$_clipRectLayer.set$layer(0, null);
+      this.super$RenderObject$dispose();
+    },
+    _paintContents$2(context, offset) {
+      var t1, t2, t3, t4, t5, _i, child, t6;
+      for (t1 = this.get$childrenInPaintOrder(), t2 = t1.length, t3 = type$.Offset, t4 = offset._dx, t5 = offset._dy, _i = 0; _i < t1.length; t1.length === t2 || (0, B.throwConcurrentModificationError)(t1), ++_i) {
+        child = t1[_i];
+        if (child._geometry.visible) {
+          t6 = t3._as(this.paintOffsetOf$1(child));
+          context.paintChild$2(child, new B.Offset(t4 + t6._dx, t5 + t6._dy));
+        }
+      }
+    },
+    hitTestChildren$2$position(result, position) {
+      var sliverResult, t1, t2, _i, child, transform, _this = this, _box_0 = {};
+      _box_0.crossAxisPosition = _box_0.mainAxisPosition = null;
+      switch (B.axisDirectionToAxis(_this._viewport$_axisDirection).index) {
+        case 1:
+          _box_0.mainAxisPosition = position._dy;
+          _box_0.crossAxisPosition = position._dx;
+          break;
+        case 0:
+          _box_0.mainAxisPosition = position._dx;
+          _box_0.crossAxisPosition = position._dy;
+          break;
+      }
+      sliverResult = new A.SliverHitTestResult(result._path, result._transforms, result._localTransforms);
+      for (t1 = _this.get$childrenInHitTestOrder(), t2 = t1.length, _i = 0; _i < t1.length; t1.length === t2 || (0, B.throwConcurrentModificationError)(t1), ++_i) {
+        child = t1[_i];
+        if (!child._geometry.visible)
+          continue;
+        transform = new B.Matrix4(new Float64Array(16));
+        transform.setIdentity$0();
+        _this.applyPaintTransform$2(child, transform);
+        if (result.addWithOutOfBandPosition$2$hitTest$paintTransform(new A.RenderViewportBase_hitTestChildren_closure(_box_0, _this, child, sliverResult), transform))
+          return true;
+      }
+      return false;
+    },
+    getOffsetToReveal$3$rect(target, alignment, rect) {
+      var t1, pivot, child, leadingScrollOffset, t2, t3, growthDirection, pivotExtent, rectLocal, targetMainAxisExtent, targetRect, extentOfPinnedSlivers, mainAxisExtent, targetOffset, offsetDifference, _this = this, _null = null,
+        onlySlivers = target instanceof A.RenderSliver;
+      for (t1 = type$.RenderObject, pivot = _null, child = target, leadingScrollOffset = 0; child.get$parent(child) !== _this; child = t2) {
+        t2 = child.get$parent(child);
+        t2.toString;
+        t1._as(t2);
+        if (child instanceof B.RenderBox)
+          pivot = child;
+        if (t2 instanceof A.RenderSliver) {
+          t3 = t2.childScrollOffset$1(child);
+          t3.toString;
+          leadingScrollOffset += t3;
+        } else {
+          leadingScrollOffset = 0;
+          onlySlivers = false;
+        }
+      }
+      if (pivot != null) {
+        t1 = pivot.get$parent(pivot);
+        t1.toString;
+        type$.RenderSliver._as(t1);
+        growthDirection = type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(t1)).growthDirection;
+        switch (B.axisDirectionToAxis(_this._viewport$_axisDirection).index) {
+          case 0:
+            pivotExtent = pivot._size._dx;
+            break;
+          case 1:
+            pivotExtent = pivot._size._dy;
+            break;
+          default:
+            pivotExtent = _null;
+        }
+        if (rect == null)
+          rect = target.get$paintBounds();
+        rectLocal = B.MatrixUtils_transformRect(target.getTransformTo$1(0, pivot), rect);
+      } else {
+        if (onlySlivers) {
+          type$.RenderSliver._as(target);
+          t1 = type$.SliverConstraints;
+          growthDirection = t1._as(B.RenderObject.prototype.get$constraints.call(target)).growthDirection;
+          pivotExtent = target._geometry.scrollExtent;
+          if (rect == null)
+            switch (B.axisDirectionToAxis(_this._viewport$_axisDirection).index) {
+              case 0:
+                rect = new B.Rect(0, 0, 0 + pivotExtent, 0 + t1._as(B.RenderObject.prototype.get$constraints.call(target)).crossAxisExtent);
+                break;
+              case 1:
+                rect = new B.Rect(0, 0, 0 + t1._as(B.RenderObject.prototype.get$constraints.call(target)).crossAxisExtent, 0 + target._geometry.scrollExtent);
+                break;
+            }
+        } else {
+          t1 = _this._viewport$_offset._pixels;
+          t1.toString;
+          rect.toString;
+          return new F.RevealedOffset(t1, rect);
+        }
+        rectLocal = rect;
+      }
+      type$.RenderSliver._as(child);
+      switch (B.applyGrowthDirectionToAxisDirection(_this._viewport$_axisDirection, growthDirection)) {
+        case C.AxisDirection_0:
+          t1 = rectLocal.bottom;
+          if (typeof pivotExtent !== "number")
+            return pivotExtent.$sub();
+          leadingScrollOffset += pivotExtent - t1;
+          targetMainAxisExtent = t1 - rectLocal.top;
+          break;
+        case C.AxisDirection_1:
+          t1 = rectLocal.left;
+          leadingScrollOffset += t1;
+          targetMainAxisExtent = rectLocal.right - t1;
+          break;
+        case C.AxisDirection_2:
+          t1 = rectLocal.top;
+          leadingScrollOffset += t1;
+          targetMainAxisExtent = rectLocal.bottom - t1;
+          break;
+        case C.AxisDirection_3:
+          t1 = rectLocal.right;
+          if (typeof pivotExtent !== "number")
+            return pivotExtent.$sub();
+          leadingScrollOffset += pivotExtent - t1;
+          targetMainAxisExtent = t1 - rectLocal.left;
+          break;
+        default:
+          targetMainAxisExtent = _null;
+      }
+      child._geometry.toString;
+      leadingScrollOffset = _this.scrollOffsetOf$2(child, leadingScrollOffset);
+      targetRect = B.MatrixUtils_transformRect(target.getTransformTo$1(0, _this), rect);
+      extentOfPinnedSlivers = _this.maxScrollObstructionExtentBefore$1(child);
+      switch (type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(child)).growthDirection.index) {
+        case 0:
+          leadingScrollOffset -= extentOfPinnedSlivers;
+          break;
+        case 1:
+          switch (B.axisDirectionToAxis(_this._viewport$_axisDirection).index) {
+            case 1:
+              leadingScrollOffset -= targetRect.bottom - targetRect.top;
+              break;
+            case 0:
+              leadingScrollOffset -= targetRect.right - targetRect.left;
+              break;
+          }
+          break;
+      }
+      t1 = _this._viewport$_axisDirection;
+      switch (B.axisDirectionToAxis(t1).index) {
+        case 0:
+          mainAxisExtent = _this._size._dx - extentOfPinnedSlivers;
+          break;
+        case 1:
+          mainAxisExtent = _this._size._dy - extentOfPinnedSlivers;
+          break;
+        default:
+          mainAxisExtent = _null;
+      }
+      if (typeof mainAxisExtent !== "number")
+        return mainAxisExtent.$sub();
+      if (typeof targetMainAxisExtent !== "number")
+        return B.iae(targetMainAxisExtent);
+      targetOffset = leadingScrollOffset - (mainAxisExtent - targetMainAxisExtent) * alignment;
+      t2 = _this._viewport$_offset._pixels;
+      t2.toString;
+      offsetDifference = t2 - targetOffset;
+      switch (t1.index) {
+        case 2:
+          targetRect = targetRect.translate$2(0, 0, offsetDifference);
+          break;
+        case 1:
+          targetRect = targetRect.translate$2(0, offsetDifference, 0);
+          break;
+        case 0:
+          targetRect = targetRect.translate$2(0, 0, -offsetDifference);
+          break;
+        case 3:
+          targetRect = targetRect.translate$2(0, -offsetDifference, 0);
+          break;
+      }
+      return new F.RevealedOffset(targetOffset, targetRect);
+    },
+    computeAbsolutePaintOffset$3(child, layoutOffset, growthDirection) {
+      switch (B.applyGrowthDirectionToAxisDirection(this._viewport$_axisDirection, growthDirection)) {
+        case C.AxisDirection_0:
+          return new B.Offset(0, this._size._dy - (layoutOffset + child._geometry.paintExtent));
+        case C.AxisDirection_1:
+          return new B.Offset(layoutOffset, 0);
+        case C.AxisDirection_2:
+          return new B.Offset(0, layoutOffset);
+        case C.AxisDirection_3:
+          return new B.Offset(this._size._dx - (layoutOffset + child._geometry.paintExtent), 0);
+      }
+    },
+    showOnScreen$4$curve$descendant$duration$rect(curve, descendant, duration, rect) {
+      var _this = this;
+      if (!_this._viewport$_offset.physics.get$allowImplicitScrolling())
+        return _this.super$RenderObject$showOnScreen(curve, descendant, duration, rect);
+      _this.super$RenderObject$showOnScreen(curve, null, duration, E.RenderViewportBase_showInViewport(curve, descendant, duration, _this._viewport$_offset, rect, _this));
+    },
+    showOnScreen$0() {
+      return this.showOnScreen$4$curve$descendant$duration$rect(C.Cubic_JUR0, null, C.Duration_0, null);
+    },
+    showOnScreen$1$rect(rect) {
+      return this.showOnScreen$4$curve$descendant$duration$rect(C.Cubic_JUR0, null, C.Duration_0, rect);
+    },
+    showOnScreen$3$curve$duration$rect(curve, duration, rect) {
+      return this.showOnScreen$4$curve$descendant$duration$rect(curve, null, duration, rect);
+    },
+    showOnScreen$2$descendant$rect(descendant, rect) {
+      return this.showOnScreen$4$curve$descendant$duration$rect(C.Cubic_JUR0, descendant, C.Duration_0, rect);
+    },
+    $isRenderAbstractViewport: 1
+  };
+  A.RenderViewport.prototype = {
+    setupParentData$1(child) {
+      if (!(child.parentData instanceof A.SliverPhysicalContainerParentData))
+        child.parentData = new A.SliverPhysicalContainerParentData(null, null, C.Offset_0_0);
+    },
+    set$anchor(value) {
+      if (value === this._viewport$_anchor)
+        return;
+      this._viewport$_anchor = value;
+      this.markNeedsLayout$0();
+    },
+    set$center(value) {
+      if (value == this._center)
+        return;
+      this._center = value;
+      this.markNeedsLayout$0();
+    },
+    get$sizedByParent() {
+      return true;
+    },
+    computeDryLayout$1(constraints) {
+      return new B.Size(B.clampDouble(1 / 0, constraints.minWidth, constraints.maxWidth), B.clampDouble(1 / 0, constraints.minHeight, constraints.maxHeight));
+    },
+    performLayout$0() {
+      var t1, mainAxisExtent, crossAxisExtent, t2, correction, t3, t4, t5, count, _this = this;
+      switch (B.axisDirectionToAxis(_this._viewport$_axisDirection).index) {
+        case 1:
+          _this._viewport$_offset.applyViewportDimension$1(_this._size._dy);
+          break;
+        case 0:
+          _this._viewport$_offset.applyViewportDimension$1(_this._size._dx);
+          break;
+      }
+      if (_this._center == null) {
+        _this.__RenderViewport__maxScrollExtent_A = _this.__RenderViewport__minScrollExtent_A = 0;
+        _this._viewport$_hasVisualOverflow = false;
+        _this._viewport$_offset.applyContentDimensions$2(0, 0);
+        return;
+      }
+      switch (B.axisDirectionToAxis(_this._viewport$_axisDirection).index) {
+        case 1:
+          t1 = _this._size;
+          mainAxisExtent = t1._dy;
+          crossAxisExtent = t1._dx;
+          break;
+        case 0:
+          t1 = _this._size;
+          mainAxisExtent = t1._dx;
+          crossAxisExtent = t1._dy;
+          break;
+        default:
+          mainAxisExtent = null;
+          crossAxisExtent = null;
+      }
+      t1 = 0;
+      do {
+        t2 = _this._viewport$_offset._pixels;
+        t2.toString;
+        correction = _this._attemptLayout$3(mainAxisExtent, crossAxisExtent, t2 + 0);
+        if (correction !== 0)
+          _this._viewport$_offset.correctBy$1(correction);
+        else {
+          t2 = _this._viewport$_offset;
+          t3 = _this.__RenderViewport__minScrollExtent_A;
+          t3 === $ && B.throwLateFieldNI("_minScrollExtent");
+          t4 = _this._viewport$_anchor;
+          if (typeof mainAxisExtent !== "number")
+            return mainAxisExtent.$mul();
+          t3 = Math.min(0, t3 + mainAxisExtent * t4);
+          t5 = _this.__RenderViewport__maxScrollExtent_A;
+          t5 === $ && B.throwLateFieldNI("_maxScrollExtent");
+          if (t2.applyContentDimensions$2(t3, Math.max(0, t5 - mainAxisExtent * (1 - t4))))
+            break;
+        }
+        count = t1 + 1;
+        if (count < 10) {
+          t1 = count;
+          continue;
+        } else
+          break;
+      } while (true);
+    },
+    _attemptLayout$3(mainAxisExtent, crossAxisExtent, correctedOffset) {
+      var centerOffset, reverseDirectionRemainingPaintExtent, t1, forwardDirectionRemainingPaintExtent, t2, fullCacheExtent, centerCacheOffset, reverseDirectionRemainingCacheExtent, forwardDirectionRemainingCacheExtent, t3, t4, leadingNegativeChild, result, t5, _this = this;
+      _this.__RenderViewport__maxScrollExtent_A = _this.__RenderViewport__minScrollExtent_A = 0;
+      _this._viewport$_hasVisualOverflow = false;
+      centerOffset = mainAxisExtent * _this._viewport$_anchor - correctedOffset;
+      reverseDirectionRemainingPaintExtent = B.clampDouble(centerOffset, 0, mainAxisExtent);
+      t1 = mainAxisExtent - centerOffset;
+      forwardDirectionRemainingPaintExtent = B.clampDouble(t1, 0, mainAxisExtent);
+      switch (_this._cacheExtentStyle.index) {
+        case 0:
+          _this._calculatedCacheExtent = _this._cacheExtent;
+          break;
+        case 1:
+          _this._calculatedCacheExtent = mainAxisExtent * _this._cacheExtent;
+          break;
+      }
+      t2 = _this._calculatedCacheExtent;
+      t2.toString;
+      fullCacheExtent = mainAxisExtent + 2 * t2;
+      centerCacheOffset = centerOffset + t2;
+      reverseDirectionRemainingCacheExtent = B.clampDouble(centerCacheOffset, 0, fullCacheExtent);
+      forwardDirectionRemainingCacheExtent = B.clampDouble(fullCacheExtent - centerCacheOffset, 0, fullCacheExtent);
+      t3 = _this._center;
+      t3.toString;
+      t4 = B._instanceType(_this);
+      t3 = t4._eval$1("ContainerRenderObjectMixin.0")._as(t3).parentData;
+      t3.toString;
+      leadingNegativeChild = t4._eval$1("ContainerRenderObjectMixin.1")._as(t3).ContainerParentDataMixin_previousSibling;
+      t3 = leadingNegativeChild == null;
+      if (!t3) {
+        t4 = Math.max(mainAxisExtent, centerOffset);
+        result = _this.layoutChildSequence$11$advance$cacheOrigin$child$crossAxisExtent$growthDirection$layoutOffset$mainAxisExtent$overlap$remainingCacheExtent$remainingPaintExtent$scrollOffset(_this.get$childBefore(), B.clampDouble(t1, -t2, 0), leadingNegativeChild, crossAxisExtent, C.GrowthDirection_1, forwardDirectionRemainingPaintExtent, mainAxisExtent, 0, reverseDirectionRemainingCacheExtent, reverseDirectionRemainingPaintExtent, t4 - mainAxisExtent);
+        if (result !== 0)
+          return -result;
+      }
+      t1 = _this._center;
+      t2 = -centerOffset;
+      t4 = Math.max(0, t2);
+      t2 = t3 ? Math.min(0, t2) : 0;
+      t3 = centerOffset >= mainAxisExtent ? centerOffset : reverseDirectionRemainingPaintExtent;
+      t5 = _this._calculatedCacheExtent;
+      t5.toString;
+      return _this.layoutChildSequence$11$advance$cacheOrigin$child$crossAxisExtent$growthDirection$layoutOffset$mainAxisExtent$overlap$remainingCacheExtent$remainingPaintExtent$scrollOffset(_this.get$childAfter(), B.clampDouble(centerOffset, -t5, 0), t1, crossAxisExtent, C.GrowthDirection_0, t3, mainAxisExtent, t2, forwardDirectionRemainingCacheExtent, forwardDirectionRemainingPaintExtent, t4);
+    },
+    get$hasVisualOverflow() {
+      return this._viewport$_hasVisualOverflow;
+    },
+    updateOutOfBandData$2(growthDirection, childLayoutGeometry) {
+      var t1, _this = this;
+      switch (growthDirection.index) {
+        case 0:
+          t1 = _this.__RenderViewport__maxScrollExtent_A;
+          t1 === $ && B.throwLateFieldNI("_maxScrollExtent");
+          _this.__RenderViewport__maxScrollExtent_A = t1 + childLayoutGeometry.scrollExtent;
+          break;
+        case 1:
+          t1 = _this.__RenderViewport__minScrollExtent_A;
+          t1 === $ && B.throwLateFieldNI("_minScrollExtent");
+          _this.__RenderViewport__minScrollExtent_A = t1 - childLayoutGeometry.scrollExtent;
+          break;
+      }
+      if (childLayoutGeometry.hasVisualOverflow)
+        _this._viewport$_hasVisualOverflow = true;
+    },
+    updateChildLayoutOffset$3(child, layoutOffset, growthDirection) {
+      var t1 = child.parentData;
+      t1.toString;
+      type$.SliverPhysicalParentData._as(t1).set$paintOffset(this.computeAbsolutePaintOffset$3(child, layoutOffset, growthDirection));
+    },
+    paintOffsetOf$1(child) {
+      var t1 = child.parentData;
+      t1.toString;
+      return type$.SliverPhysicalParentData._as(t1).paintOffset;
+    },
+    scrollOffsetOf$2(child, scrollOffsetWithinChild) {
+      var current, t1, t2, scrollOffsetToChild, t3, _this = this;
+      switch (type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(child)).growthDirection.index) {
+        case 0:
+          current = _this._center;
+          for (t1 = B._instanceType(_this), t2 = t1._eval$1("ContainerRenderObjectMixin.0"), t1 = t1._eval$1("ContainerRenderObjectMixin.1"), scrollOffsetToChild = 0; current !== child;) {
+            scrollOffsetToChild += current._geometry.scrollExtent;
+            t3 = t2._as(current).parentData;
+            t3.toString;
+            current = t1._as(t3).ContainerParentDataMixin_nextSibling;
+          }
+          return scrollOffsetToChild + scrollOffsetWithinChild;
+        case 1:
+          t1 = _this._center;
+          t1.toString;
+          t2 = B._instanceType(_this);
+          t3 = t2._eval$1("ContainerRenderObjectMixin.0");
+          t1 = t3._as(t1).parentData;
+          t1.toString;
+          t2 = t2._eval$1("ContainerRenderObjectMixin.1");
+          current = t2._as(t1).ContainerParentDataMixin_previousSibling;
+          for (scrollOffsetToChild = 0; current !== child;) {
+            scrollOffsetToChild -= current._geometry.scrollExtent;
+            t1 = t3._as(current).parentData;
+            t1.toString;
+            current = t2._as(t1).ContainerParentDataMixin_previousSibling;
+          }
+          return scrollOffsetToChild - scrollOffsetWithinChild;
+      }
+    },
+    maxScrollObstructionExtentBefore$1(child) {
+      var current, t1, t2, t3, _this = this;
+      switch (type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(child)).growthDirection.index) {
+        case 0:
+          current = _this._center;
+          for (t1 = B._instanceType(_this), t2 = t1._eval$1("ContainerRenderObjectMixin.0"), t1 = t1._eval$1("ContainerRenderObjectMixin.1"); current !== child;) {
+            current._geometry.toString;
+            t3 = t2._as(current).parentData;
+            t3.toString;
+            current = t1._as(t3).ContainerParentDataMixin_nextSibling;
+          }
+          return 0;
+        case 1:
+          t1 = _this._center;
+          t1.toString;
+          t2 = B._instanceType(_this);
+          t3 = t2._eval$1("ContainerRenderObjectMixin.0");
+          t1 = t3._as(t1).parentData;
+          t1.toString;
+          t2 = t2._eval$1("ContainerRenderObjectMixin.1");
+          current = t2._as(t1).ContainerParentDataMixin_previousSibling;
+          for (; current !== child;) {
+            current._geometry.toString;
+            t1 = t3._as(current).parentData;
+            t1.toString;
+            current = t2._as(t1).ContainerParentDataMixin_previousSibling;
+          }
+          return 0;
+      }
+    },
+    applyPaintTransform$2(child, transform) {
+      var t1 = child.parentData;
+      t1.toString;
+      t1 = type$.SliverPhysicalParentData._as(t1).paintOffset;
+      transform.translate$2(0, t1._dx, t1._dy);
+    },
+    computeChildMainAxisPosition$2(child, parentMainAxisPosition) {
+      var t2,
+        t1 = child.parentData;
+      t1.toString;
+      type$.SliverPhysicalParentData._as(t1);
+      t2 = type$.SliverConstraints;
+      switch (B.applyGrowthDirectionToAxisDirection(t2._as(B.RenderObject.prototype.get$constraints.call(child)).axisDirection, t2._as(B.RenderObject.prototype.get$constraints.call(child)).growthDirection)) {
+        case C.AxisDirection_2:
+          return parentMainAxisPosition - t1.paintOffset._dy;
+        case C.AxisDirection_1:
+          return parentMainAxisPosition - t1.paintOffset._dx;
+        case C.AxisDirection_0:
+          return child._geometry.paintExtent - (parentMainAxisPosition - t1.paintOffset._dy);
+        case C.AxisDirection_3:
+          return child._geometry.paintExtent - (parentMainAxisPosition - t1.paintOffset._dx);
+      }
+    },
+    get$childrenInPaintOrder() {
+      var t1, t2, t3, _this = this,
+        children = B._setArrayType([], type$.JSArray_RenderSliver),
+        child = _this.ContainerRenderObjectMixin__firstChild;
+      if (child == null)
+        return children;
+      for (t1 = B._instanceType(_this), t2 = t1._eval$1("ContainerRenderObjectMixin.0"), t1 = t1._eval$1("ContainerRenderObjectMixin.1"); child != _this._center;) {
+        child.toString;
+        C.JSArray_methods.add$1(children, child);
+        t3 = t2._as(child).parentData;
+        t3.toString;
+        child = t1._as(t3).ContainerParentDataMixin_nextSibling;
+      }
+      child = _this.ContainerRenderObjectMixin__lastChild;
+      for (; true;) {
+        child.toString;
+        C.JSArray_methods.add$1(children, child);
+        if (child === _this._center)
+          return children;
+        t3 = t2._as(child).parentData;
+        t3.toString;
+        child = t1._as(t3).ContainerParentDataMixin_previousSibling;
+      }
+    },
+    get$childrenInHitTestOrder() {
+      var child, t1, t2, t3, _this = this,
+        children = B._setArrayType([], type$.JSArray_RenderSliver);
+      if (_this.ContainerRenderObjectMixin__firstChild == null)
+        return children;
+      child = _this._center;
+      for (t1 = B._instanceType(_this), t2 = t1._eval$1("ContainerRenderObjectMixin.0"), t1 = t1._eval$1("ContainerRenderObjectMixin.1"); child != null;) {
+        C.JSArray_methods.add$1(children, child);
+        t3 = t2._as(child).parentData;
+        t3.toString;
+        child = t1._as(t3).ContainerParentDataMixin_nextSibling;
+      }
+      t3 = _this._center;
+      t3.toString;
+      t3 = t2._as(t3).parentData;
+      t3.toString;
+      child = t1._as(t3).ContainerParentDataMixin_previousSibling;
+      for (; child != null;) {
+        C.JSArray_methods.add$1(children, child);
+        t3 = t2._as(child).parentData;
+        t3.toString;
+        child = t1._as(t3).ContainerParentDataMixin_previousSibling;
+      }
+      return children;
+    },
+    set$_center(_center) {
+      this._center = type$.nullable_RenderSliver._as(_center);
+    }
+  };
+  A._RenderViewportBase_RenderBox_ContainerRenderObjectMixin.prototype = {
+    attach$1(owner) {
+      var child, t1, t2;
+      type$.PipelineOwner._as(owner);
+      this.super$RenderObject$attach(owner);
+      child = this.ContainerRenderObjectMixin__firstChild;
+      for (t1 = B._instanceType(this)._eval$1("_RenderViewportBase_RenderBox_ContainerRenderObjectMixin.0"); child != null;) {
+        child.attach$1(owner);
+        t2 = child.parentData;
+        t2.toString;
+        child = t1._as(t2).ContainerParentDataMixin_nextSibling;
+      }
+    },
+    detach$0(_) {
+      var child, t1, t2;
+      this.super$AbstractNode$detach(0);
+      child = this.ContainerRenderObjectMixin__firstChild;
+      for (t1 = B._instanceType(this)._eval$1("_RenderViewportBase_RenderBox_ContainerRenderObjectMixin.0"); child != null;) {
+        child.detach$0(0);
+        t2 = child.parentData;
+        t2.toString;
+        child = t1._as(t2).ContainerParentDataMixin_nextSibling;
+      }
+    }
+  };
+  A.AutomaticKeepAlive.prototype = {
+    createState$0() {
+      return new A._AutomaticKeepAliveState(C._StateLifecycle_0);
+    }
+  };
+  A._AutomaticKeepAliveState.prototype = {
+    initState$0() {
+      this.super$State$initState();
+      this._automatic_keep_alive$_updateChild$0();
+    },
+    didUpdateWidget$1(oldWidget) {
+      this.super$State$didUpdateWidget(type$.AutomaticKeepAlive._as(oldWidget));
+      this._automatic_keep_alive$_updateChild$0();
+    },
+    _automatic_keep_alive$_updateChild$0() {
+      this.___AutomaticKeepAliveState__child_A = new B.NotificationListener(this.get$_addClient(), this._widget.child, null, type$.NotificationListener_KeepAliveNotification);
+    },
+    dispose$0() {
+      var t2, t3,
+        t1 = this._automatic_keep_alive$_handles;
+      if (t1 != null)
+        for (t1 = B.LinkedHashMapKeyIterator$(t1, t1._modifications, B._instanceType(t1)._precomputed1); t1.moveNext$0();) {
+          t2 = t1.__js_helper$_current;
+          t3 = this._automatic_keep_alive$_handles.$index(0, t2);
+          t3.toString;
+          t2.removeListener$1(0, t3);
+        }
+      this.super$State$dispose();
+    },
+    _addClient$1(notification) {
+      var t1, childElement, _this = this,
+        handle = type$.KeepAliveNotification._as(notification).handle;
+      if (_this._automatic_keep_alive$_handles == null)
+        _this.set$_automatic_keep_alive$_handles(B.LinkedHashMap_LinkedHashMap$_empty(type$.Listenable, type$.void_Function));
+      t1 = _this._automatic_keep_alive$_handles;
+      t1.toString;
+      t1.$indexSet(0, handle, _this._createCallback$1(handle));
+      t1 = _this._automatic_keep_alive$_handles.$index(0, handle);
+      t1.toString;
+      handle.addListener$1(0, t1);
+      if (!_this._keepingAlive) {
+        _this._keepingAlive = true;
+        childElement = _this._getChildElement$0();
+        if (childElement != null)
+          _this._updateParentDataOfChild$1(childElement);
+        else {
+          t1 = $.SchedulerBinding__instance;
+          t1.toString;
+          C.JSArray_methods.add$1(t1.SchedulerBinding__postFrameCallbacks, type$.void_Function_Duration._as(new A._AutomaticKeepAliveState__addClient_closure(_this)));
+        }
+      }
+      return false;
+    },
+    _getChildElement$0() {
+      var t1 = {},
+        t2 = this._framework$_element;
+      t2.toString;
+      t1.childElement = null;
+      t2.visitChildren$1(new A._AutomaticKeepAliveState__getChildElement_closure(t1));
+      return type$.nullable_ParentDataElement_KeepAliveParentDataMixin._as(t1.childElement);
+    },
+    _updateParentDataOfChild$1(childElement) {
+      var t1, t2;
+      type$.ParentDataElement_KeepAliveParentDataMixin._as(childElement);
+      this._framework$_element.toString;
+      t1 = this._keepingAlive;
+      t2 = this.___AutomaticKeepAliveState__child_A;
+      t2 === $ && B.throwLateFieldNI("_child");
+      childElement._applyParentData$1(childElement.$ti._eval$1("ParentDataWidget<1>")._as(type$.ParentDataWidget_KeepAliveParentDataMixin._as(A.KeepAlive$(t2, t1))));
+    },
+    _createCallback$1(handle) {
+      return new A._AutomaticKeepAliveState__createCallback_closure(this, handle);
+    },
+    build$1(context) {
+      var t1 = this._keepingAlive,
+        t2 = this.___AutomaticKeepAliveState__child_A;
+      t2 === $ && B.throwLateFieldNI("_child");
+      return new A.KeepAlive(t1, t2, null);
+    },
+    set$_automatic_keep_alive$_handles(_handles) {
+      this._automatic_keep_alive$_handles = type$.nullable_Map_of_Listenable_and_void_Function._as(_handles);
+    }
+  };
+  A.ClipRRect.prototype = {
+    createRenderObject$1(context) {
+      var t1 = new A.RenderClipRRect(this.borderRadius, B.Directionality_maybeOf(context), null, this.clipBehavior, null, B.LayerHandle$(type$.ContainerLayer));
+      t1.RenderObject$0();
+      t1.set$child(null);
+      return t1;
+    },
+    updateRenderObject$2(context, renderObject) {
+      type$.RenderClipRRect._as(renderObject);
+      renderObject.set$borderRadius(0, this.borderRadius);
+      renderObject.set$clipBehavior(this.clipBehavior);
+      renderObject.set$clipper(null);
+      renderObject.set$textDirection(B.Directionality_maybeOf(context));
+    }
+  };
+  A.RawImage.prototype = {
+    createRenderObject$1(context) {
+      var _this = this,
+        t1 = _this.image;
+      t1 = t1 == null ? null : t1.clone$0(0);
+      t1 = new A.RenderImage(t1, _this.debugImageLabel, _this.width, _this.height, _this.scale, _this.color, _this.opacity, _this.filterQuality, _this.colorBlendMode, _this.fit, _this.alignment, _this.repeat, _this.centerSlice, _this.invertColors, false, null, false, B.LayerHandle$(type$.ContainerLayer));
+      t1.RenderObject$0();
+      t1._updateColorFilter$0();
+      return t1;
+    },
+    updateRenderObject$2(context, renderObject) {
+      var t1, _this = this;
+      type$.RenderImage._as(renderObject);
+      t1 = _this.image;
+      renderObject.set$image(0, t1 == null ? null : t1.clone$0(0));
+      renderObject.debugImageLabel = _this.debugImageLabel;
+      renderObject.set$width(0, _this.width);
+      renderObject.set$height(0, _this.height);
+      renderObject.set$scale(0, _this.scale);
+      renderObject.set$color(0, _this.color);
+      renderObject.set$opacity(0, _this.opacity);
+      renderObject.set$colorBlendMode(_this.colorBlendMode);
+      renderObject.set$fit(_this.fit);
+      renderObject.set$alignment(_this.alignment);
+      renderObject.set$repeat(0, _this.repeat);
+      renderObject.set$centerSlice(_this.centerSlice);
+      renderObject.set$matchTextDirection(false);
+      renderObject.set$textDirection(null);
+      renderObject.set$invertColors(_this.invertColors);
+      renderObject.set$isAntiAlias(false);
+      renderObject.set$filterQuality(_this.filterQuality);
+    },
+    didUnmountRenderObject$1(renderObject) {
+      type$.RenderImage._as(renderObject).set$image(0, null);
+    }
+  };
+  A.IndexedSemantics.prototype = {
+    createRenderObject$1(context) {
+      var t1 = new A.RenderIndexedSemantics(this.index, null, B.LayerHandle$(type$.ContainerLayer));
+      t1.RenderObject$0();
+      t1.set$child(null);
+      return t1;
+    },
+    updateRenderObject$2(context, renderObject) {
+      type$.RenderIndexedSemantics._as(renderObject).set$index(0, this.index);
+    }
+  };
+  A.DisposableBuildContext.prototype = {
+    get$context(_) {
+      var t1 = this._disposable_build_context$_state;
+      if (t1 == null)
+        return null;
+      t1 = t1._framework$_element;
+      t1.toString;
+      return t1;
+    },
+    set$_disposable_build_context$_state(_state) {
+      this._disposable_build_context$_state = this.$ti._eval$1("1?")._as(_state);
+    }
+  };
+  A.Image.prototype = {
+    createState$0() {
+      return new A._ImageState(C._StateLifecycle_0);
+    }
+  };
+  A._ImageState.prototype = {
+    initState$0() {
+      var t1, _this = this;
+      _this.super$State$initState();
+      C.JSArray_methods.add$1($.WidgetsBinding__instance.WidgetsBinding__observers, _this);
+      t1 = type$.DisposableBuildContext_State_Image;
+      _this.set$___ImageState__scrollAwareContext_A(t1._as(new A.DisposableBuildContext(_this, t1)));
+    },
+    dispose$0() {
+      var t1, _this = this;
+      C.JSArray_methods.remove$1($.WidgetsBinding__instance.WidgetsBinding__observers, _this);
+      _this._stopListeningToStream$0();
+      t1 = _this._completerHandle;
+      if (t1 != null)
+        t1.dispose$0();
+      t1 = _this.___ImageState__scrollAwareContext_A;
+      t1 === $ && B.throwLateFieldNI("_scrollAwareContext");
+      t1.set$_disposable_build_context$_state(null);
+      _this._replaceImage$1$info(null);
+      _this.super$State$dispose();
+    },
+    didChangeDependencies$0() {
+      var t1, _this = this;
+      _this._updateInvertColors$0();
+      _this._resolveImage$0();
+      t1 = _this._framework$_element;
+      t1.toString;
+      if (B.TickerMode_of(t1))
+        _this._listenToStream$0();
+      else
+        _this._stopListeningToStream$1$keepStreamAlive(true);
+      _this.super$State$didChangeDependencies();
+    },
+    didUpdateWidget$1(oldWidget) {
+      var _this = this;
+      type$.Image._as(oldWidget);
+      _this.super$State$didUpdateWidget(oldWidget);
+      if (_this._isListeningToStream)
+        _this._widget.toString;
+      if (!_this._widget.image.$eq(0, oldWidget.image))
+        _this._resolveImage$0();
+    },
+    didChangeAccessibilityFeatures$0() {
+      this.super$WidgetsBindingObserver$didChangeAccessibilityFeatures();
+      this.setState$1(new A._ImageState_didChangeAccessibilityFeatures_closure(this));
+    },
+    reassemble$0() {
+      this._resolveImage$0();
+      this.super$State$reassemble();
+    },
+    _updateInvertColors$0() {
+      var t1 = this._framework$_element;
+      t1.toString;
+      t1 = B.MediaQuery_maybeOf(t1);
+      t1 = t1 == null ? null : t1.invertColors;
+      if (t1 == null) {
+        t1 = $.SemanticsBinding__instance.SemanticsBinding___SemanticsBinding__accessibilityFeatures_A;
+        t1 === $ && B.throwLateFieldNI("_accessibilityFeatures");
+        t1 = (t1.__engine$_index & 2) !== 0;
+      }
+      this.___ImageState__invertColors_A = t1;
+    },
+    _resolveImage$0() {
+      var t2, t3, t4, t5, _this = this,
+        t1 = _this.___ImageState__scrollAwareContext_A;
+      t1 === $ && B.throwLateFieldNI("_scrollAwareContext");
+      t2 = _this._widget;
+      t3 = t2.image;
+      t4 = _this._framework$_element;
+      t4.toString;
+      t5 = t2.width;
+      if (t5 != null && t2.height != null) {
+        t5.toString;
+        t2 = t2.height;
+        t2.toString;
+        t2 = new B.Size(t5, t2);
+      } else
+        t2 = null;
+      _this._updateSourceStream$1(new A.ScrollAwareImageProvider(t1, t3, type$.ScrollAwareImageProvider_Object).resolve$1(B.createLocalImageConfiguration(t4, t2)));
+    },
+    _getListener$1$recreateListener(recreateListener) {
+      var _this = this,
+        t1 = _this._imageStreamListener;
+      if (t1 == null || recreateListener) {
+        _this._lastStack = _this._lastException = null;
+        _this._widget.toString;
+        t1 = _this._imageStreamListener = new B.ImageStreamListener(_this.get$_handleImageFrame(), null, null);
+      }
+      t1.toString;
+      return t1;
+    },
+    _getListener$0() {
+      return this._getListener$1$recreateListener(false);
+    },
+    _handleImageFrame$2(imageInfo, synchronousCall) {
+      this.setState$1(new A._ImageState__handleImageFrame_closure(this, type$.ImageInfo._as(imageInfo), B._asBool(synchronousCall)));
+    },
+    _replaceImage$1$info(info) {
+      var oldImageInfo = this._imageInfo,
+        t1 = $.SchedulerBinding__instance;
+      t1.toString;
+      C.JSArray_methods.add$1(t1.SchedulerBinding__postFrameCallbacks, type$.void_Function_Duration._as(new A._ImageState__replaceImage_closure(oldImageInfo)));
+      this._imageInfo = info;
+    },
+    _updateSourceStream$1(newStream) {
+      var t2, t3, _this = this,
+        t1 = _this._imageStream;
+      if (t1 == null)
+        t2 = null;
+      else {
+        t2 = t1._image_stream$_completer;
+        if (t2 == null)
+          t2 = t1;
+      }
+      t3 = newStream._image_stream$_completer;
+      if (t2 === (t3 == null ? newStream : t3))
+        return;
+      if (_this._isListeningToStream) {
+        t1.toString;
+        t1.removeListener$1(0, _this._getListener$0());
+      }
+      _this._widget.toString;
+      _this.setState$1(new A._ImageState__updateSourceStream_closure(_this));
+      _this.setState$1(new A._ImageState__updateSourceStream_closure0(_this));
+      _this._imageStream = newStream;
+      if (_this._isListeningToStream)
+        newStream.addListener$1(0, _this._getListener$0());
+    },
+    _listenToStream$0() {
+      var t1, _this = this;
+      if (_this._isListeningToStream)
+        return;
+      t1 = _this._imageStream;
+      t1.toString;
+      t1.addListener$1(0, _this._getListener$0());
+      t1 = _this._completerHandle;
+      if (t1 != null)
+        t1.dispose$0();
+      _this._completerHandle = null;
+      _this._isListeningToStream = true;
+    },
+    _stopListeningToStream$1$keepStreamAlive(keepStreamAlive) {
+      var t1, t2, _this = this;
+      if (!_this._isListeningToStream)
+        return;
+      if (keepStreamAlive)
+        if (_this._completerHandle == null) {
+          t1 = _this._imageStream;
+          t1 = (t1 == null ? null : t1._image_stream$_completer) != null;
+        } else
+          t1 = false;
+      else
+        t1 = false;
+      if (t1) {
+        t1 = _this._imageStream._image_stream$_completer;
+        if (t1._image_stream$_disposed)
+          B.throwExpression(B.StateError$(string$.Stream));
+        t2 = new A.ImageStreamCompleterHandle(t1);
+        t2.ImageStreamCompleterHandle$_$1(t1);
+        _this._completerHandle = t2;
+      }
+      t1 = _this._imageStream;
+      t1.toString;
+      t1.removeListener$1(0, _this._getListener$0());
+      _this._isListeningToStream = false;
+    },
+    _stopListeningToStream$0() {
+      return this._stopListeningToStream$1$keepStreamAlive(false);
+    },
+    build$1(context) {
+      var t1, t2, t3, t4, t5, t6, t7, result, _this = this, _null = null;
+      if (_this._lastException != null)
+        _this._widget.toString;
+      t1 = _this._imageInfo;
+      t2 = t1 == null;
+      t3 = t2 ? _null : t1.image;
+      t4 = t2 ? _null : t1.debugLabel;
+      t5 = _this._widget;
+      t6 = t5.width;
+      t7 = t5.height;
+      t1 = t2 ? _null : t1.scale;
+      if (t1 == null)
+        t1 = 1;
+      t5 = t5.fit;
+      t2 = _this.___ImageState__invertColors_A;
+      t2 === $ && B.throwLateFieldNI("_invertColors");
+      result = new A.RawImage(t3, t4, t6, t7, t1, _null, _null, C.FilterQuality_1, _null, t5, C.Alignment_0_0, D.ImageRepeat_3, _null, false, t2, false, _null);
+      result = B.Semantics$(_null, _null, result, false, _null, _null, false, _null, _null, _null, true, _null, "", _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
+      return result;
+    },
+    set$___ImageState__scrollAwareContext_A(___ImageState__scrollAwareContext_A) {
+      this.___ImageState__scrollAwareContext_A = type$.DisposableBuildContext_State_Image._as(___ImageState__scrollAwareContext_A);
+    }
+  };
+  A.__ImageState_State_WidgetsBindingObserver.prototype = {};
+  A.PageController.prototype = {
+    get$page(_) {
+      var position = type$._PagePosition._as(C.JSArray_methods.get$single(this._positions));
+      return position.get$page(position);
+    },
+    animateToPage$3$curve$duration(page, curve, duration) {
+      var position = type$._PagePosition._as(C.JSArray_methods.get$single(this._positions));
+      if (position._cachedPage != null) {
+        position._cachedPage = page;
+        return B.Future_Future$value(null, type$.void);
+      }
+      return position.animateTo$3$curve$duration(position.getPixelsFromPage$1(page), curve, duration);
+    },
+    jumpToPage$1(page) {
+      var position = type$._PagePosition._as(C.JSArray_methods.get$single(this._positions));
+      if (position._cachedPage != null) {
+        position._cachedPage = page;
+        return;
+      }
+      position.jumpTo$1(position.getPixelsFromPage$1(page));
+    },
+    createScrollPosition$3(physics, context, oldPosition) {
+      var _null = null,
+        t1 = new A._PagePosition(this.initialPage, this.viewportFraction, C.ScrollDirection_0, physics, context, true, _null, B.ValueNotifier$(false, type$.bool), $.$get$ChangeNotifier__emptyListeners());
+      t1.ScrollPosition$5$context$debugLabel$keepScrollOffset$oldPosition$physics(context, _null, true, oldPosition, physics);
+      t1.ScrollPositionWithSingleContext$6$context$debugLabel$initialPixels$keepScrollOffset$oldPosition$physics(context, _null, _null, true, oldPosition, physics);
+      return t1;
+    },
+    attach$1(position) {
+      type$.ScrollPosition._as(position);
+      this.super$ScrollController$attach(position);
+      type$._PagePosition._as(position).set$viewportFraction(this.viewportFraction);
+    }
+  };
+  A.PageMetrics.prototype = {};
+  A._PagePosition.prototype = {
+    ensureVisible$6$alignment$alignmentPolicy$curve$duration$targetRenderObject(object, alignment, alignmentPolicy, curve, duration, targetRenderObject) {
+      return this.super$ScrollPosition$ensureVisible(object, alignment, alignmentPolicy, curve, duration, null);
+    },
+    set$viewportFraction(value) {
+      var oldPage, _this = this;
+      if (_this._viewportFraction === value)
+        return;
+      oldPage = _this.get$page(_this);
+      _this._viewportFraction = value;
+      if (oldPage != null)
+        _this.forcePixels$1(_this.getPixelsFromPage$1(oldPage));
+    },
+    get$_initialPageOffset() {
+      var t1 = this._viewportDimension;
+      t1.toString;
+      return Math.max(0, t1 * (this._viewportFraction - 1) / 2);
+    },
+    getPageFromPixels$2(pixels, viewportDimension) {
+      var actual = Math.max(0, pixels - this.get$_initialPageOffset()) / (viewportDimension * this._viewportFraction),
+        round = C.JSNumber_methods.roundToDouble$0(actual);
+      if (Math.abs(actual - round) < 1e-10)
+        return round;
+      return actual;
+    },
+    getPixelsFromPage$1(page) {
+      var t1 = this._viewportDimension;
+      t1.toString;
+      return page * t1 * this._viewportFraction + this.get$_initialPageOffset();
+    },
+    get$page(_) {
+      var t2, t3, _this = this,
+        t1 = _this._pixels;
+      if (t1 != null)
+        t2 = !(_this._minScrollExtent != null && _this._maxScrollExtent != null);
+      else
+        t2 = true;
+      if (t2)
+        t1 = null;
+      else {
+        t2 = _this._cachedPage;
+        if (t2 == null) {
+          t1.toString;
+          t2 = _this._minScrollExtent;
+          t2.toString;
+          t3 = _this._maxScrollExtent;
+          t3.toString;
+          t3 = B.clampDouble(t1, t2, t3);
+          t2 = _this._viewportDimension;
+          t2.toString;
+          t2 = _this.getPageFromPixels$2(t3, t2);
+          t1 = t2;
+        } else
+          t1 = t2;
+      }
+      return t1;
+    },
+    saveScrollOffset$0() {
+      var t3, t4, _this = this,
+        t1 = _this.context,
+        t2 = t1._framework$_element;
+      t2.toString;
+      t2 = B.PageStorage_maybeOf(t2);
+      if (t2 != null) {
+        t1 = t1._framework$_element;
+        t1.toString;
+        t3 = _this._cachedPage;
+        if (t3 == null) {
+          t3 = _this._pixels;
+          t3.toString;
+          t4 = _this._viewportDimension;
+          t4.toString;
+          t4 = _this.getPageFromPixels$2(t3, t4);
+          t3 = t4;
+        }
+        t2.writeState$2(t1, t3);
+      }
+    },
+    restoreScrollOffset$0() {
+      var t1, t2;
+      if (this._pixels == null) {
+        t1 = this.context;
+        t2 = t1._framework$_element;
+        t2.toString;
+        t2 = B.PageStorage_maybeOf(t2);
+        if (t2 == null)
+          t1 = null;
+        else {
+          t1 = t1._framework$_element;
+          t1.toString;
+          t1 = t2.readState$1(t1);
+        }
+        B._asDoubleQ(t1);
+        if (t1 != null)
+          this._pageToUseOnStartup = t1;
+      }
+    },
+    saveOffset$0() {
+      var t2, _this = this,
+        t1 = _this._cachedPage;
+      if (t1 == null) {
+        t1 = _this._pixels;
+        t1.toString;
+        t2 = _this._viewportDimension;
+        t2.toString;
+        t2 = _this.getPageFromPixels$2(t1, t2);
+        t1 = t2;
+      }
+      _this.context._persistedScrollOffset.set$value(0, t1);
+      t1 = $.ServicesBinding__instance.ServicesBinding___ServicesBinding__restorationManager_A;
+      t1 === $ && B.throwLateFieldNI("_restorationManager");
+      t1.flushData$0();
+    },
+    restoreOffset$2$initialRestore(offset, initialRestore) {
+      if (initialRestore)
+        this._pageToUseOnStartup = offset;
+      else
+        this.jumpTo$1(this.getPixelsFromPage$1(offset));
+    },
+    applyViewportDimension$1(viewportDimension) {
+      var oldViewportDimensions, oldPixels, page, t1, newPixels, _this = this;
+      B._asDouble(viewportDimension);
+      oldViewportDimensions = _this._viewportDimension;
+      oldViewportDimensions = oldViewportDimensions != null ? oldViewportDimensions : null;
+      if (viewportDimension === oldViewportDimensions)
+        return true;
+      _this.super$ScrollPosition$applyViewportDimension(viewportDimension);
+      oldPixels = _this._pixels;
+      oldPixels = oldPixels != null ? oldPixels : null;
+      if (oldPixels == null)
+        page = _this._pageToUseOnStartup;
+      else if (oldViewportDimensions === 0) {
+        t1 = _this._cachedPage;
+        t1.toString;
+        page = t1;
+      } else {
+        oldViewportDimensions.toString;
+        page = _this.getPageFromPixels$2(oldPixels, oldViewportDimensions);
+      }
+      newPixels = _this.getPixelsFromPage$1(page);
+      _this._cachedPage = viewportDimension === 0 ? page : null;
+      if (newPixels !== oldPixels) {
+        _this._pixels = newPixels;
+        return false;
+      }
+      return true;
+    },
+    absorb$1(other) {
+      var t1;
+      this.super$ScrollPositionWithSingleContext$absorb(other);
+      if (!(other instanceof A._PagePosition))
+        return;
+      t1 = other._cachedPage;
+      if (t1 != null)
+        this._cachedPage = t1;
+    },
+    applyContentDimensions$2(minScrollExtent, maxScrollExtent) {
+      var newMinScrollExtent;
+      B._asDouble(maxScrollExtent);
+      newMinScrollExtent = minScrollExtent + this.get$_initialPageOffset();
+      return this.super$ScrollPosition$applyContentDimensions(newMinScrollExtent, Math.max(newMinScrollExtent, maxScrollExtent - this.get$_initialPageOffset()));
+    },
+    copyWith$0() {
+      var t2, t3, t4, t5, t6, _this = this, _null = null,
+        t1 = _this._minScrollExtent;
+      if (t1 != null && _this._maxScrollExtent != null)
+        t1.toString;
+      else
+        t1 = _null;
+      if (_this._minScrollExtent != null && _this._maxScrollExtent != null) {
+        t2 = _this._maxScrollExtent;
+        t2.toString;
+      } else
+        t2 = _null;
+      t3 = _this._pixels;
+      t3 = t3 != null ? t3 : _null;
+      t4 = _this._viewportDimension;
+      t4 = t4 != null ? t4 : _null;
+      t5 = _this.context._widget.axisDirection;
+      t6 = _this._viewportFraction;
+      return new A.PageMetrics(t6, t1, t2, t3, t4, t5);
+    },
+    $isPageMetrics: 1
+  };
+  A._ForceImplicitScrollPhysics.prototype = {
+    applyTo$1(ancestor) {
+      return new A._ForceImplicitScrollPhysics(false, this.buildParent$1(ancestor));
+    },
+    get$allowImplicitScrolling() {
+      return this.allowImplicitScrolling;
+    }
+  };
+  A.PageScrollPhysics.prototype = {
+    applyTo$1(ancestor) {
+      return new A.PageScrollPhysics(this.buildParent$1(ancestor));
+    },
+    _getPage$1(position) {
+      var t1, t2;
+      if (position instanceof A._PagePosition) {
+        t1 = position.get$page(position);
+        t1.toString;
+        return t1;
+      }
+      t1 = position._pixels;
+      t1.toString;
+      t2 = position._viewportDimension;
+      t2.toString;
+      return t1 / t2;
+    },
+    _getPixels$2(position, page) {
+      var t1;
+      if (position instanceof A._PagePosition)
+        return position.getPixelsFromPage$1(page);
+      t1 = position._viewportDimension;
+      t1.toString;
+      return page * t1;
+    },
+    createBallisticSimulation$2(position, velocity) {
+      var t1, t2, tolerance, page, target, _this = this;
+      if (velocity <= 0) {
+        t1 = position._pixels;
+        t1.toString;
+        t2 = position._minScrollExtent;
+        t2.toString;
+        t2 = t1 <= t2;
+        t1 = t2;
+      } else
+        t1 = false;
+      if (!t1)
+        if (velocity >= 0) {
+          t1 = position._pixels;
+          t1.toString;
+          t2 = position._maxScrollExtent;
+          t2.toString;
+          t2 = t1 >= t2;
+          t1 = t2;
+        } else
+          t1 = false;
+      else
+        t1 = true;
+      if (t1)
+        return _this.super$ScrollPhysics$createBallisticSimulation(position, velocity);
+      tolerance = _this.get$tolerance();
+      page = _this._getPage$1(position);
+      t1 = tolerance.velocity;
+      if (velocity < -t1)
+        page -= 0.5;
+      else if (velocity > t1)
+        page += 0.5;
+      target = _this._getPixels$2(position, C.JSNumber_methods.roundToDouble$0(page));
+      t1 = position._pixels;
+      t1.toString;
+      if (target !== t1) {
+        t1 = _this.get$spring();
+        t2 = position._pixels;
+        t2.toString;
+        return new B.ScrollSpringSimulation(target, B._SpringSolution__SpringSolution(t1, t2 - target, velocity), tolerance);
+      }
+      return null;
+    }
+  };
+  A.PageView.prototype = {
+    createState$0() {
+      return new A._PageViewState(C._StateLifecycle_0);
+    }
+  };
+  A._PageViewState.prototype = {
+    initState$0() {
+      this.super$State$initState();
+      this._lastReportedPage = this._widget.controller.initialPage;
+    },
+    _getDirection$1(context) {
+      var t1, axisDirection;
+      switch (this._widget.scrollDirection.index) {
+        case 0:
+          t1 = context.dependOnInheritedWidgetOfExactType$1$0(type$.Directionality);
+          t1.toString;
+          axisDirection = E.textDirectionToAxisDirection(t1.textDirection);
+          this._widget.toString;
+          return axisDirection;
+        case 1:
+          return C.AxisDirection_2;
+      }
+    },
+    build$1(context) {
+      var t2, t3, _this = this, _null = null,
+        axisDirection = _this._getDirection$1(context),
+        t1 = _this._widget.physics;
+      if (t1 == null)
+        t1 = _null;
+      t1 = new A.PageScrollPhysics(D.PageScrollPhysics_null.buildParent$1(t1));
+      t1 = new A._ForceImplicitScrollPhysics(false, _null).buildParent$1(t1);
+      t2 = _this._widget.controller;
+      t3 = B.ScrollConfiguration_of(context).copyWith$1$scrollbars(false);
+      return new B.NotificationListener(new A._PageViewState_build_closure(_this), F.Scrollable$(axisDirection, C.Clip_1, t2, C.DragStartBehavior_1, false, _null, new A._ForceImplicitScrollPhysics(false, t1), _null, t3, _null, new A._PageViewState_build_closure0(_this, axisDirection)), _null, type$.NotificationListener_ScrollNotification);
+    }
+  };
+  A.ScrollAwareImageProvider.prototype = {
+    resolveStreamForKey$4(configuration, stream, key, handleError) {
+      var t1, _this = this;
+      _this.$ti._precomputed1._as(key);
+      type$.void_Function_2_Object_and_nullable_StackTrace._as(handleError);
+      if (stream._image_stream$_completer == null) {
+        t1 = $.PaintingBinding__instance.PaintingBinding___PaintingBinding__imageCache_A;
+        t1 === $ && B.throwLateFieldNI("_imageCache");
+        t1 = t1._pendingImages.$index(0, key) != null || t1._image_cache$_cache.$index(0, key) != null;
+      } else
+        t1 = true;
+      if (t1) {
+        _this.imageProvider.resolveStreamForKey$4(configuration, stream, key, handleError);
+        return;
+      }
+      t1 = _this.context;
+      if (t1.get$context(t1) == null)
+        return;
+      t1 = t1.get$context(t1);
+      t1.toString;
+      if (A.Scrollable_recommendDeferredLoadingForContext(t1)) {
+        $.SchedulerBinding__instance.scheduleFrameCallback$1(new A.ScrollAwareImageProvider_resolveStreamForKey_closure(_this, configuration, stream, key, handleError));
+        return;
+      }
+      _this.imageProvider.resolveStreamForKey$4(configuration, stream, key, handleError);
+    },
+    load$2(_, key, decode) {
+      return this.imageProvider.load$2(0, this.$ti._precomputed1._as(key), type$.Future_Codec_Function_Uint8List_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int._as(decode));
+    },
+    loadBuffer$2(key, decode) {
+      return this.imageProvider.loadBuffer$2(this.$ti._precomputed1._as(key), type$.Future_Codec_Function_ImmutableBuffer_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int._as(decode));
+    },
+    obtainKey$1(configuration) {
+      return this.imageProvider.obtainKey$1(configuration);
+    }
+  };
+  A.SliverChildDelegate.prototype = {
+    get$estimatedChildCount() {
+      return null;
+    },
+    toString$0(_) {
+      var description = B._setArrayType([], type$.JSArray_String);
+      this.debugFillDescription$1(description);
+      return "<optimized out>#" + B.shortHash(this) + "(" + C.JSArray_methods.join$1(description, ", ") + ")";
+    },
+    debugFillDescription$1(description) {
+      var children, e, exception;
+      type$.List_String._as(description);
+      try {
+        children = this.get$estimatedChildCount();
+        if (children != null)
+          C.JSArray_methods.add$1(description, "estimated child count: " + B.S(children));
+      } catch (exception) {
+        e = B.unwrapException(exception);
+        C.JSArray_methods.add$1(description, "estimated child count: EXCEPTION (" + J.get$runtimeType$(e).toString$0(0) + ")");
+      }
+    }
+  };
+  A._SaltedValueKey.prototype = {};
+  A._SelectionKeepAlive.prototype = {
+    createState$0() {
+      return new A._SelectionKeepAliveState(null, C._StateLifecycle_0);
+    }
+  };
+  A._SelectionKeepAliveState.prototype = {
+    get$wantKeepAlive() {
+      return this._wantKeepAlive;
+    },
+    listensTo$1(selectable) {
+      return new A._SelectionKeepAliveState_listensTo_closure(this, selectable);
+    },
+    _updateSelectablesWithSelections$2$add(selectable, add) {
+      var t1, _this = this;
+      if (add) {
+        if (_this._selectablesWithSelections == null)
+          _this.set$_selectablesWithSelections(B.LinkedHashSet_LinkedHashSet$_empty(type$.Selectable));
+        _this._selectablesWithSelections.add$1(0, selectable);
+      } else {
+        t1 = _this._selectablesWithSelections;
+        if (t1 != null)
+          t1.remove$1(0, selectable);
+      }
+      t1 = _this._selectablesWithSelections;
+      t1 = t1 == null ? null : t1._collection$_length !== 0;
+      t1 = t1 === true;
+      if (_this._wantKeepAlive !== t1) {
+        _this._wantKeepAlive = t1;
+        _this.updateKeepAlive$0();
+      }
+    },
+    didChangeDependencies$0() {
+      var t1, newRegistrar, t2, _this = this;
+      _this.super$State$didChangeDependencies();
+      t1 = _this._framework$_element;
+      t1.toString;
+      newRegistrar = B.SelectionContainer_maybeOf(t1);
+      t1 = _this._sliver$_registrar;
+      if (t1 != newRegistrar) {
+        if (t1 != null) {
+          t2 = _this._selectableAttachments;
+          if (t2 != null)
+            new B.LinkedHashMapKeyIterable(t2, B._instanceType(t2)._eval$1("LinkedHashMapKeyIterable<1>")).forEach$1(0, t1.get$remove(t1));
+        }
+        _this._sliver$_registrar = newRegistrar;
+        if (newRegistrar != null) {
+          t1 = _this._selectableAttachments;
+          if (t1 != null)
+            new B.LinkedHashMapKeyIterable(t1, B._instanceType(t1)._eval$1("LinkedHashMapKeyIterable<1>")).forEach$1(0, newRegistrar.get$add(newRegistrar));
+        }
+      }
+    },
+    add$1(_, selectable) {
+      var attachment, _this = this,
+        t1 = type$.Selectable;
+      t1._as(selectable);
+      attachment = _this.listensTo$1(selectable);
+      selectable.addListener$1(0, attachment);
+      if (_this._selectableAttachments == null)
+        _this.set$_selectableAttachments(B.LinkedHashMap_LinkedHashMap$_empty(t1, type$.void_Function));
+      _this._selectableAttachments.$indexSet(0, selectable, attachment);
+      _this._sliver$_registrar.add$1(0, selectable);
+      if (selectable.get$value(selectable).status !== C.SelectionStatus_2)
+        _this._updateSelectablesWithSelections$2$add(selectable, true);
+    },
+    remove$1(_, selectable) {
+      var t1;
+      type$.Selectable._as(selectable);
+      t1 = this._selectableAttachments;
+      if (t1 == null)
+        return;
+      t1 = t1.remove$1(0, selectable);
+      t1.toString;
+      selectable.removeListener$1(0, t1);
+      this._sliver$_registrar.remove$1(0, selectable);
+      this._updateSelectablesWithSelections$2$add(selectable, false);
+    },
+    dispose$0() {
+      var t2, t3, _this = this,
+        t1 = _this._selectableAttachments;
+      if (t1 != null) {
+        for (t1 = B.LinkedHashMapKeyIterator$(t1, t1._modifications, B._instanceType(t1)._precomputed1); t1.moveNext$0();) {
+          t2 = t1.__js_helper$_current;
+          _this._sliver$_registrar.remove$1(0, t2);
+          t3 = _this._selectableAttachments.$index(0, t2);
+          t3.toString;
+          t2.removeListener$1(0, t3);
+        }
+        _this.set$_selectableAttachments(null);
+      }
+      _this.set$_selectablesWithSelections(null);
+      _this.super$State$dispose();
+    },
+    build$1(context) {
+      var _this = this;
+      _this.super$AutomaticKeepAliveClientMixin$build(context);
+      if (_this._sliver$_registrar == null)
+        return _this._widget.child;
+      return F.SelectionRegistrarScope$(_this._widget.child, _this);
+    },
+    set$_selectablesWithSelections(_selectablesWithSelections) {
+      this._selectablesWithSelections = type$.nullable_Set_Selectable._as(_selectablesWithSelections);
+    },
+    set$_selectableAttachments(_selectableAttachments) {
+      this._selectableAttachments = type$.nullable_Map_of_Selectable_and_void_Function._as(_selectableAttachments);
+    },
+    $isSelectionRegistrar: 1
+  };
+  A.SliverWithKeepAliveWidget.prototype = {};
+  A.SliverMultiBoxAdaptorWidget.prototype = {
+    createElement$0(_) {
+      return A.SliverMultiBoxAdaptorElement$(this, false);
+    },
+    estimateMaxScrollOffset$5(constraints, firstIndex, lastIndex, leadingScrollOffset, trailingScrollOffset) {
+      return null;
+    }
+  };
+  A.SliverMultiBoxAdaptorElement.prototype = {
+    get$renderObject() {
+      return type$.RenderSliverMultiBoxAdaptor._as(B.RenderObjectElement.prototype.get$renderObject.call(this));
+    },
+    update$1(_, newWidget) {
+      var t2, newDelegate, oldDelegate,
+        t1 = type$.SliverMultiBoxAdaptorWidget;
+      t1._as(newWidget);
+      t2 = this._widget;
+      t2.toString;
+      t1._as(t2);
+      this.super$RenderObjectElement$update(0, newWidget);
+      newDelegate = newWidget.delegate;
+      oldDelegate = t2.delegate;
+      if (newDelegate !== oldDelegate)
+        t1 = B.getRuntimeType(newDelegate) !== B.getRuntimeType(oldDelegate) || newDelegate.shouldRebuild$1(oldDelegate);
+      else
+        t1 = false;
+      if (t1)
+        this.performRebuild$0();
+    },
+    performRebuild$0() {
+      var newChildren, indexToLayoutOffset, adaptorWidget, processElement, index, key, newIndex, childParentData, lastKey, rightBoundary, t1, t2, t3, t4, t5, _i, t6, lastKey0, _this = this, _null = null, _box_0 = {};
+      _this.super$RenderObjectElement$performRebuild();
+      _this._currentBeforeChild = null;
+      _box_0.childrenUpdated = false;
+      try {
+        t1 = type$.int;
+        newChildren = A.SplayTreeMap$(t1, type$.nullable_Element);
+        indexToLayoutOffset = B.HashMap_HashMap(_null, _null, _null, t1, type$.double);
+        t1 = _this._widget;
+        t1.toString;
+        adaptorWidget = type$.SliverMultiBoxAdaptorWidget._as(t1);
+        processElement = new A.SliverMultiBoxAdaptorElement_performRebuild_processElement(_box_0, _this, newChildren, adaptorWidget, indexToLayoutOffset);
+        for (t1 = _this._childElements, t2 = t1.$ti, t2 = t2._eval$1("@<1>")._bind$1(t2._eval$1("_SplayTreeMapNode<1,2>"))._eval$1("_SplayTreeKeyIterable<1,2>"), t2 = B.List_List$of(new A._SplayTreeKeyIterable(t1, t2), true, t2._eval$1("Iterable.E")), t3 = t2.length, t4 = type$.nullable_SliverMultiBoxAdaptorParentData, t5 = _this._replaceMovedChildren, _i = 0; _i < t3; ++_i) {
+          index = t2[_i];
+          key = t1.$index(0, index).get$widget().key;
+          newIndex = key == null ? _null : adaptorWidget.delegate.findIndexByKey$1(key);
+          t6 = t1.$index(0, index).get$renderObject();
+          childParentData = t4._as(t6 == null ? _null : t6.parentData);
+          if (childParentData != null && childParentData.layoutOffset != null) {
+            t6 = childParentData.layoutOffset;
+            t6.toString;
+            J.$indexSet$ax(indexToLayoutOffset, index, t6);
+          }
+          if (newIndex != null && !J.$eq$(newIndex, index)) {
+            if (childParentData != null)
+              childParentData.layoutOffset = null;
+            J.$indexSet$ax(newChildren, newIndex, t1.$index(0, index));
+            if (t5)
+              J.putIfAbsent$2$x(newChildren, index, new A.SliverMultiBoxAdaptorElement_performRebuild_closure());
+            t1.remove$1(0, index);
+          } else
+            J.putIfAbsent$2$x(newChildren, index, new A.SliverMultiBoxAdaptorElement_performRebuild_closure0(_this, index));
+        }
+        _this.get$renderObject();
+        t2 = newChildren;
+        t3 = B.instanceType(t2);
+        new A._SplayTreeKeyIterable(t2, t3._eval$1("@<1>")._bind$1(t3._eval$1("_SplayTreeMapNode<1,2>"))._eval$1("_SplayTreeKeyIterable<1,2>")).forEach$1(0, processElement);
+        if (!_box_0.childrenUpdated && _this._didUnderflow) {
+          lastKey0 = t1.lastKey$0();
+          lastKey = lastKey0 == null ? -1 : lastKey0;
+          t2 = lastKey;
+          if (typeof t2 !== "number")
+            return t2.$add();
+          rightBoundary = t2 + 1;
+          J.$indexSet$ax(newChildren, rightBoundary, t1.$index(0, rightBoundary));
+          processElement.call$1(rightBoundary);
+        }
+      } finally {
+        _this._currentlyUpdatingChildIndex = null;
+        _this.get$renderObject();
+      }
+    },
+    createChild$2$after(index, after) {
+      this._owner.buildScope$2(this, new A.SliverMultiBoxAdaptorElement_createChild_closure(this, after, index));
+    },
+    updateChild$3(child, newWidget, newSlot) {
+      var t1, t2, newChild, t3, _null = null;
+      if (child == null)
+        t1 = _null;
+      else {
+        t1 = child.get$renderObject();
+        t1 = t1 == null ? _null : t1.parentData;
+      }
+      t2 = type$.nullable_SliverMultiBoxAdaptorParentData;
+      t2._as(t1);
+      newChild = this.super$Element$updateChild(child, newWidget, newSlot);
+      if (newChild == null)
+        t3 = _null;
+      else {
+        t3 = newChild.get$renderObject();
+        t3 = t3 == null ? _null : t3.parentData;
+      }
+      t2._as(t3);
+      if (t1 != t3 && t1 != null && t3 != null)
+        t3.layoutOffset = t1.layoutOffset;
+      return newChild;
+    },
+    forgetChild$1(child) {
+      this._childElements.remove$1(0, child._slot);
+      this.super$Element$forgetChild(child);
+    },
+    removeChild$1(child) {
+      var t1, _this = this;
+      type$.RenderBox._as(child);
+      _this.get$renderObject();
+      t1 = child.parentData;
+      t1.toString;
+      t1 = type$.SliverMultiBoxAdaptorParentData._as(t1).index;
+      t1.toString;
+      _this._owner.buildScope$2(_this, new A.SliverMultiBoxAdaptorElement_removeChild_closure(_this, t1));
+    },
+    estimateMaxScrollOffset$5$firstIndex$lastIndex$leadingScrollOffset$trailingScrollOffset(constraints, firstIndex, lastIndex, leadingScrollOffset, trailingScrollOffset) {
+      var t2, childCount,
+        t1 = this._widget;
+      t1.toString;
+      t2 = type$.SliverMultiBoxAdaptorWidget;
+      childCount = t2._as(t1).delegate.get$estimatedChildCount();
+      t1 = this._widget;
+      t1.toString;
+      t2._as(t1);
+      leadingScrollOffset.toString;
+      t1 = t1.estimateMaxScrollOffset$5(constraints, firstIndex, lastIndex, leadingScrollOffset, trailingScrollOffset);
+      return t1 == null ? A.SliverMultiBoxAdaptorElement__extrapolateMaxScrollOffset(firstIndex, lastIndex, leadingScrollOffset, trailingScrollOffset, childCount) : t1;
+    },
+    get$childCount() {
+      var result,
+        t1 = this._widget;
+      t1.toString;
+      result = type$.SliverMultiBoxAdaptorWidget._as(t1).delegate.get$estimatedChildCount();
+      return result;
+    },
+    didFinishLayout$0() {
+      var t1 = this._childElements;
+      t1.firstKey$0();
+      t1.lastKey$0();
+      t1 = this._widget;
+      t1.toString;
+      type$.SliverMultiBoxAdaptorWidget._as(t1);
+    },
+    didAdoptChild$1(child) {
+      var t1 = child.parentData;
+      t1.toString;
+      type$.SliverMultiBoxAdaptorParentData._as(t1).index = this._currentlyUpdatingChildIndex;
+    },
+    insertRenderObjectChild$2(child, slot) {
+      B._asInt(slot);
+      this.get$renderObject().super$ContainerRenderObjectMixin$insert(0, type$.RenderBox._as(child), this._currentBeforeChild);
+    },
+    moveRenderObjectChild$3(child, oldSlot, newSlot) {
+      B._asInt(oldSlot);
+      B._asInt(newSlot);
+      this.get$renderObject().move$2$after(type$.RenderBox._as(child), this._currentBeforeChild);
+    },
+    removeRenderObjectChild$2(child, slot) {
+      B._asInt(slot);
+      this.get$renderObject().remove$1(0, type$.RenderBox._as(child));
+    },
+    visitChildren$1(visitor) {
+      var t1, t2;
+      type$.void_Function_Element._as(visitor);
+      t1 = this._childElements;
+      t2 = t1.$ti;
+      t2 = t2._eval$1("@<1>")._bind$1(t2._rest[1])._eval$1("_SplayTreeValueIterable<1,2>");
+      t2 = B.CastIterable_CastIterable(new A._SplayTreeValueIterable(t1, t2), t2._eval$1("Iterable.E"), type$.Element);
+      C.JSArray_methods.forEach$1(B.List_List$of(t2, true, B._instanceType(t2)._eval$1("Iterable.E")), visitor);
+    },
+    $isRenderSliverBoxChildManager: 1
+  };
+  A.KeepAlive.prototype = {
+    applyParentData$1(renderObject) {
+      var t2, targetParent,
+        t1 = renderObject.parentData;
+      t1.toString;
+      type$.KeepAliveParentDataMixin._as(t1);
+      t2 = this.keepAlive;
+      if (t1.KeepAliveParentDataMixin_keepAlive !== t2) {
+        t1.KeepAliveParentDataMixin_keepAlive = t2;
+        targetParent = renderObject.get$parent(renderObject);
+        if (targetParent instanceof B.RenderObject && !t2)
+          targetParent.markNeedsLayout$0();
+      }
+    }
+  };
+  A.__SelectionKeepAliveState_State_AutomaticKeepAliveClientMixin.prototype = {
+    initState$0() {
+      this.super$State$initState();
+      if (this._wantKeepAlive)
+        this._ensureKeepAlive$0();
+    },
+    deactivate$0() {
+      var t1 = this.AutomaticKeepAliveClientMixin__keepAliveHandle;
+      if (t1 != null) {
+        t1.notifyListeners$0();
+        t1.super$ChangeNotifier$dispose();
+        this.AutomaticKeepAliveClientMixin__keepAliveHandle = null;
+      }
+      this.super$State$deactivate();
+    }
+  };
+  A.SliverFillViewport.prototype = {
+    build$1(context) {
+      var t1 = this.viewportFraction,
+        t2 = B.clampDouble(1 - t1, 0, 1);
+      return new A._SliverFractionalPadding(t2 / 2, new A._SliverFillViewportRenderObjectWidget(t1, this.delegate, null), null);
+    }
+  };
+  A._SliverFillViewportRenderObjectWidget.prototype = {
+    createRenderObject$1(context) {
+      var t1 = new A.RenderSliverFillViewport(this.viewportFraction, type$.SliverMultiBoxAdaptorElement._as(context), B.LinkedHashMap_LinkedHashMap$_empty(type$.int, type$.RenderBox), 0, null, null, B.LayerHandle$(type$.ContainerLayer));
+      t1.RenderObject$0();
+      return t1;
+    },
+    updateRenderObject$2(context, renderObject) {
+      type$.RenderSliverFillViewport._as(renderObject).set$viewportFraction(this.viewportFraction);
+    }
+  };
+  A._SliverFractionalPadding.prototype = {
+    createRenderObject$1(context) {
+      var t1 = new A._RenderSliverFractionalPadding(this.viewportFraction, null, B.LayerHandle$(type$.ContainerLayer));
+      t1.RenderObject$0();
+      return t1;
+    },
+    updateRenderObject$2(context, renderObject) {
+      type$._RenderSliverFractionalPadding._as(renderObject).set$viewportFraction(this.viewportFraction);
+    }
+  };
+  A._RenderSliverFractionalPadding.prototype = {
+    set$viewportFraction(newValue) {
+      var _this = this;
+      if (_this._sliver_fill$_viewportFraction === newValue)
+        return;
+      _this._sliver_fill$_viewportFraction = newValue;
+      _this._sliver_fill$_resolvedPadding = null;
+      _this.markNeedsLayout$0();
+    },
+    get$resolvedPadding() {
+      return this._sliver_fill$_resolvedPadding;
+    },
+    _sliver_fill$_resolve$0() {
+      var t1, paddingValue, _this = this;
+      if (_this._sliver_fill$_resolvedPadding != null && J.$eq$(_this._lastResolvedConstraints, type$.SliverConstraints._as(B.RenderObject.prototype.get$constraints.call(_this))))
+        return;
+      t1 = type$.SliverConstraints;
+      paddingValue = t1._as(B.RenderObject.prototype.get$constraints.call(_this)).viewportMainAxisExtent * _this._sliver_fill$_viewportFraction;
+      _this._lastResolvedConstraints = t1._as(B.RenderObject.prototype.get$constraints.call(_this));
+      switch (B.axisDirectionToAxis(t1._as(B.RenderObject.prototype.get$constraints.call(_this)).axisDirection).index) {
+        case 0:
+          _this._sliver_fill$_resolvedPadding = new B.EdgeInsets(paddingValue, 0, paddingValue, 0);
+          break;
+        case 1:
+          _this._sliver_fill$_resolvedPadding = new B.EdgeInsets(0, paddingValue, 0, paddingValue);
+          break;
+      }
+      return;
+    },
+    performLayout$0() {
+      this._sliver_fill$_resolve$0();
+      this.super$RenderSliverEdgeInsetsPadding$performLayout();
+    }
+  };
+  A.Viewport.prototype = {
+    createRenderObject$1(context) {
+      var _this = this,
+        t1 = _this.axisDirection,
+        t2 = A.Viewport_getDefaultCrossAxisDirection(context, t1),
+        t3 = _this.cacheExtent,
+        t4 = B.LayerHandle$(type$.ClipRectLayer);
+      if (t3 == null)
+        t3 = 250;
+      t4 = new A.RenderViewport(_this.anchor, t1, t2, _this.offset, t3, _this.cacheExtentStyle, _this.clipBehavior, t4, 0, null, null, B.LayerHandle$(type$.ContainerLayer));
+      t4.RenderObject$0();
+      t4.addAll$1(0, null);
+      t1 = t4.ContainerRenderObjectMixin__firstChild;
+      if (t1 != null)
+        t4.set$_center(t1);
+      return t4;
+    },
+    updateRenderObject$2(context, renderObject) {
+      var t1, _this = this;
+      type$.RenderViewport._as(renderObject);
+      t1 = _this.axisDirection;
+      renderObject.set$axisDirection(t1);
+      t1 = A.Viewport_getDefaultCrossAxisDirection(context, t1);
+      renderObject.set$crossAxisDirection(t1);
+      renderObject.set$anchor(_this.anchor);
+      renderObject.set$offset(0, _this.offset);
+      renderObject.set$cacheExtent(_this.cacheExtent);
+      renderObject.set$cacheExtentStyle(_this.cacheExtentStyle);
+      renderObject.set$clipBehavior(_this.clipBehavior);
+    },
+    createElement$0(_) {
+      var t1 = B.HashSet_HashSet(type$.Element);
+      return new A._ViewportElement(t1, this, C._ElementLifecycle_0);
+    }
+  };
+  A._ViewportElement.prototype = {
+    get$renderObject() {
+      return type$.RenderViewport._as(B.MultiChildRenderObjectElement.prototype.get$renderObject.call(this));
+    },
+    mount$2($parent, newSlot) {
+      var _this = this;
+      _this._doingMountOrUpdate = true;
+      _this.super$MultiChildRenderObjectElement$mount($parent, newSlot);
+      _this._updateCenter$0();
+      _this._doingMountOrUpdate = false;
+    },
+    update$1(_, newWidget) {
+      var _this = this;
+      type$.MultiChildRenderObjectWidget._as(newWidget);
+      _this._doingMountOrUpdate = true;
+      _this.super$MultiChildRenderObjectElement$update(0, newWidget);
+      _this._updateCenter$0();
+      _this._doingMountOrUpdate = false;
+    },
+    _updateCenter$0() {
+      var t2, _this = this,
+        t1 = _this._widget;
+      t1.toString;
+      type$.Viewport._as(t1);
+      t1 = _this.get$children(_this);
+      t2 = type$.RenderViewport;
+      if (!t1.get$isEmpty(t1)) {
+        t1 = t2._as(B.MultiChildRenderObjectElement.prototype.get$renderObject.call(_this));
+        t2 = _this.get$children(_this);
+        t1.set$center(type$.nullable_RenderSliver._as(t2.get$first(t2).get$renderObject()));
+        _this._centerSlotIndex = 0;
+      } else {
+        t2._as(B.MultiChildRenderObjectElement.prototype.get$renderObject.call(_this)).set$center(null);
+        _this._centerSlotIndex = null;
+      }
+    },
+    insertRenderObjectChild$2(child, slot) {
+      var _this = this;
+      type$.IndexedSlot_nullable_Element._as(slot);
+      _this.super$MultiChildRenderObjectElement$insertRenderObjectChild(child, slot);
+      if (!_this._doingMountOrUpdate && slot.index === _this._centerSlotIndex)
+        type$.RenderViewport._as(B.MultiChildRenderObjectElement.prototype.get$renderObject.call(_this)).set$center(type$.nullable_RenderSliver._as(child));
+    },
+    moveRenderObjectChild$3(child, oldSlot, newSlot) {
+      var t1 = type$.IndexedSlot_nullable_Element;
+      this.super$MultiChildRenderObjectElement$moveRenderObjectChild(child, t1._as(oldSlot), t1._as(newSlot));
+    },
+    removeRenderObjectChild$2(child, slot) {
+      var _this = this;
+      _this.super$MultiChildRenderObjectElement$removeRenderObjectChild(child, slot);
+      if (!_this._doingMountOrUpdate && type$.RenderViewport._as(B.MultiChildRenderObjectElement.prototype.get$renderObject.call(_this))._center === child)
+        type$.RenderViewport._as(B.MultiChildRenderObjectElement.prototype.get$renderObject.call(_this)).set$center(null);
+    }
+  };
+  A.__ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin.prototype = {};
+  A.__ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin_ViewportElementMixin.prototype = {};
+  var typesOffset = hunkHelpers.updateTypes(["bool(Object?)", "~(ImageStreamListener)", "~(SliverConstraints)", "~(Selectable)", "~(ImageChunkEvent)", "~(Codec0)", "~(Duration)", "bool(SliverHitTestResult{crossAxisPosition!double,mainAxisPosition!double})", "~(PaintingContext,Offset)", "~({curve:Curve,descendant:RenderObject?,duration:Duration,rect:Rect?})", "bool(KeepAliveNotification)", "~(ImageInfo,bool)", "Viewport(BuildContext,ViewportOffset)", "~(RenderBox)", "int(@,@)", "int(Widget,int)"]);
+  A.SplayTreeMap_closure.prototype = {
+    call$1(a) {
+      return this.K._is(a);
+    },
+    $signature: 68
+  };
+  A.SplayTreeSet_closure.prototype = {
+    call$1(v) {
+      return this.E._is(v);
+    },
+    $signature: 68
+  };
+  A.SplayTreeSet__copyNode_copyChildren.prototype = {
+    call$2(node, dest) {
+      var t1, left, right, newLeft, t2, newRight;
+      this.Node._as(node);
+      t1 = this.$this.$ti._eval$1("_SplayTreeSetNode<1>");
+      t1._as(dest);
+      do {
+        left = node._collection$_left;
+        right = node._collection$_right;
+        if (left != null) {
+          newLeft = new A._SplayTreeSetNode(left.key, t1);
+          dest.set$_collection$_left(0, newLeft);
+          this.call$2(left, newLeft);
+        }
+        t2 = right != null;
+        if (t2) {
+          newRight = new A._SplayTreeSetNode(right.key, t1);
+          dest.set$_collection$_right(0, newRight);
+          dest = newRight;
+          node = right;
+        }
+      } while (t2);
+    },
+    $signature() {
+      return this.$this.$ti._bind$1(this.Node)._eval$1("~(1,_SplayTreeSetNode<2>)");
+    }
+  };
+  A.NetworkImage__loadAsync_closure.prototype = {
+    call$2(bytes, total) {
+      this.chunkEvents.add$1(0, new A.ImageChunkEvent(bytes, total));
+    },
+    $signature: 424
+  };
+  A.ImageProvider_resolve_closure.prototype = {
+    call$2(key, errorHandler) {
+      var t1 = this.$this;
+      t1.resolveStreamForKey$4(this.configuration, this.stream, B._instanceType(t1)._eval$1("ImageProvider.T")._as(key), type$.void_Function_2_Object_and_nullable_StackTrace._as(errorHandler));
+    },
+    $signature() {
+      return B._instanceType(this.$this)._eval$1("~(ImageProvider.T,~(Object,StackTrace?))");
+    }
+  };
+  A.ImageProvider_resolve_closure0.prototype = {
+    call$3(key, exception, stack) {
+      return this.$call$body$ImageProvider_resolve_closure(B._instanceType(this.$this)._eval$1("ImageProvider.T?")._as(key), exception, stack);
+    },
+    $call$body$ImageProvider_resolve_closure(key, exception, stack) {
+      var $async$goto = 0,
+        $async$completer = B._makeAsyncAwaitCompleter(type$.void),
+        $async$self = this, t1;
+      var $async$call$3 = B._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1)
+          return B._asyncRethrow($async$result, $async$completer);
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              $async$goto = 2;
+              return B._asyncAwait(null, $async$call$3);
+            case 2:
+              // returning from await.
+              t1 = $async$self.stream;
+              if (t1._image_stream$_completer == null)
+                t1.setCompleter$1(new A._ErrorImageCompleter(B._setArrayType([], type$.JSArray_ImageStreamListener), B._setArrayType([], type$.JSArray_of_void_Function)));
+              t1 = t1._image_stream$_completer;
+              t1.toString;
+              t1.reportError$5$context$exception$informationCollector$silent$stack(B.ErrorDescription$("while resolving an image"), exception, null, true, stack);
+              // implicit return
+              return B._asyncReturn(null, $async$completer);
+          }
+      });
+      return B._asyncStartSync($async$call$3, $async$completer);
+    },
+    $signature() {
+      return B._instanceType(this.$this)._eval$1("Future<~>(ImageProvider.T?,Object,StackTrace?)");
+    }
+  };
+  A.ImageProvider__createErrorHandlerAndKey_handleError.prototype = {
+    $call$body$ImageProvider__createErrorHandlerAndKey_handleError(exception, stack) {
+      var $async$goto = 0,
+        $async$completer = B._makeAsyncAwaitCompleter(type$.void),
+        $async$returnValue, $async$self = this, t1;
+      var $async$call$2 = B._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1)
+          return B._asyncRethrow($async$result, $async$completer);
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              t1 = $async$self._box_0;
+              if (t1.didError) {
+                // goto return
+                $async$goto = 1;
+                break;
+              }
+              $async$self.errorCallback.call$3(t1.obtainedKey, exception, stack);
+              t1.didError = true;
+            case 1:
+              // return
+              return B._asyncReturn($async$returnValue, $async$completer);
+          }
+      });
+      return B._asyncStartSync($async$call$2, $async$completer);
+    },
+    call$2(exception, stack) {
+      return this.$call$body$ImageProvider__createErrorHandlerAndKey_handleError(type$.Object._as(exception), type$.nullable_StackTrace._as(stack));
+    },
+    $signature: 425
+  };
+  A.ImageProvider__createErrorHandlerAndKey_closure.prototype = {
+    call$1(key) {
+      var error, stackTrace, exception, _this = this;
+      B._instanceType(_this.$this)._eval$1("ImageProvider.T")._as(key);
+      _this._box_0.obtainedKey = key;
+      try {
+        _this.successCallback.call$2(key, _this.handleError);
+      } catch (exception) {
+        error = B.unwrapException(exception);
+        stackTrace = B.getTraceFromException(exception);
+        _this.handleError.call$2(error, stackTrace);
+      }
+    },
+    $signature() {
+      return B._instanceType(this.$this)._eval$1("Null(ImageProvider.T)");
+    }
+  };
+  A.ImageProvider_resolveStreamForKey_closure.prototype = {
+    call$0() {
+      var t1 = this.stream._image_stream$_completer;
+      t1.toString;
+      return t1;
+    },
+    $signature: 156
+  };
+  A.ImageProvider_resolveStreamForKey_closure0.prototype = {
+    call$0() {
+      return this.$this.loadBuffer$2(this.key, $.PaintingBinding__instance.get$instantiateImageCodecFromBuffer());
+    },
+    $signature: 156
+  };
+  A.ImageStreamCompleter_reportError_closure.prototype = {
+    call$1(listener) {
+      return type$.ImageStreamListener._as(listener).onError;
+    },
+    $signature: 427
+  };
+  A.ImageStreamCompleter_reportImageChunkEvent_closure.prototype = {
+    call$1(listener) {
+      return type$.ImageStreamListener._as(listener).onChunk;
+    },
+    $signature: 428
+  };
+  A.MultiFrameImageStreamCompleter_closure.prototype = {
+    call$2(error, stack) {
+      type$.Object._as(error);
+      type$.StackTrace._as(stack);
+      this.$this.reportError$5$context$exception$informationCollector$silent$stack(B.ErrorDescription$("resolving an image codec"), error, this.informationCollector, true, stack);
+    },
+    $signature: 41
+  };
+  A.MultiFrameImageStreamCompleter_closure0.prototype = {
+    call$2(error, stack) {
+      type$.Object._as(error);
+      type$.StackTrace._as(stack);
+      this.$this.reportError$5$context$exception$informationCollector$silent$stack(B.ErrorDescription$("loading an image"), error, this.informationCollector, true, stack);
+    },
+    $signature: 41
+  };
+  A.MultiFrameImageStreamCompleter__handleAppFrame_closure.prototype = {
+    call$0() {
+      this.$this._scheduleAppFrame$0();
+    },
+    $signature: 0
+  };
+  A.RenderSliverHelpers_hitTestBoxChild_closure.prototype = {
+    call$1(result) {
+      return this.child.hitTest$2$position(result, this._box_0.transformedPosition);
+    },
+    $signature: 157
+  };
+  A.RenderSliverMultiBoxAdaptor__createOrObtainChild_closure.prototype = {
+    call$1(constraints) {
+      var t1, t2, t3, t4;
+      type$.SliverConstraints._as(constraints);
+      t1 = this.$this;
+      t2 = t1._keepAliveBucket;
+      t3 = this.index;
+      t4 = this.after;
+      if (t2.containsKey$1(0, t3)) {
+        t2 = t2.remove$1(0, t3);
+        t2.toString;
+        t3 = t2.parentData;
+        t3.toString;
+        type$.SliverMultiBoxAdaptorParentData._as(t3);
+        t1.dropChild$1(t2);
+        t2.parentData = t3;
+        t1.super$ContainerRenderObjectMixin$insert(0, t2, t4);
+        t3._keptAlive = false;
+      } else
+        t1._childManager.createChild$2$after(t3, t4);
+    },
+    $signature: typesOffset + 2
+  };
+  A.RenderSliverMultiBoxAdaptor_collectGarbage_closure.prototype = {
+    call$1(constraints) {
+      var t1, t2, t3, t4;
+      type$.SliverConstraints._as(constraints);
+      for (t1 = this._box_0, t2 = this.$this; t1.leadingGarbage > 0;) {
+        t3 = t2.ContainerRenderObjectMixin__firstChild;
+        t3.toString;
+        t2._destroyOrCacheChild$1(t3);
+        --t1.leadingGarbage;
+      }
+      for (; t1.trailingGarbage > 0;) {
+        t3 = t2.ContainerRenderObjectMixin__lastChild;
+        t3.toString;
+        t2._destroyOrCacheChild$1(t3);
+        --t1.trailingGarbage;
+      }
+      t1 = t2._keepAliveBucket;
+      t1 = t1.get$values(t1);
+      t3 = B._instanceType(t1);
+      t4 = t3._eval$1("WhereIterable<Iterable.E>");
+      C.JSArray_methods.forEach$1(B.List_List$of(new B.WhereIterable(t1, t3._eval$1("bool(Iterable.E)")._as(new A.RenderSliverMultiBoxAdaptor_collectGarbage__closure()), t4), true, t4._eval$1("Iterable.E")), t2._childManager.get$removeChild());
+    },
+    $signature: typesOffset + 2
+  };
+  A.RenderSliverMultiBoxAdaptor_collectGarbage__closure.prototype = {
+    call$1(child) {
+      var t1 = type$.RenderBox._as(child).parentData;
+      t1.toString;
+      return !type$.SliverMultiBoxAdaptorParentData._as(t1).KeepAliveParentDataMixin_keepAlive;
+    },
+    $signature: 430
+  };
+  A.RenderViewportBase_visitChildrenForSemantics_closure.prototype = {
+    call$1(sliver) {
+      var t1 = type$.RenderSliver._as(sliver)._geometry;
+      return t1.visible || t1.cacheExtent > 0;
+    },
+    $signature: 431
+  };
+  A.RenderViewportBase_hitTestChildren_closure.prototype = {
+    call$1(result) {
+      var _this = this,
+        t1 = _this.child,
+        t2 = _this._box_0,
+        t3 = _this.$this.computeChildMainAxisPosition$2(t1, t2.mainAxisPosition);
+      return t1.hitTest$3$crossAxisPosition$mainAxisPosition(_this.sliverResult, t2.crossAxisPosition, t3);
+    },
+    $signature: 157
+  };
+  A._AutomaticKeepAliveState__addClient_closure.prototype = {
+    call$1(timeStamp) {
+      var t1, childElement;
+      type$.Duration._as(timeStamp);
+      t1 = this.$this;
+      if (t1._framework$_element == null)
+        return;
+      childElement = t1._getChildElement$0();
+      childElement.toString;
+      t1._updateParentDataOfChild$1(childElement);
+    },
+    $signature: 3
+  };
+  A._AutomaticKeepAliveState__getChildElement_closure.prototype = {
+    call$1(child) {
+      this._box_0.childElement = child;
+    },
+    $signature: 10
+  };
+  A._AutomaticKeepAliveState__createCallback_closure.prototype = {
+    call$0() {
+      var t1 = this.$this;
+      t1._automatic_keep_alive$_handles.remove$1(0, this.handle);
+      if (t1._automatic_keep_alive$_handles._length === 0)
+        if ($.SchedulerBinding__instance.SchedulerBinding__schedulerPhase.index < 3)
+          t1.setState$1(new A._AutomaticKeepAliveState__createCallback__closure(t1));
+        else {
+          t1._keepingAlive = false;
+          B.scheduleMicrotask(new A._AutomaticKeepAliveState__createCallback__closure0(t1));
+        }
+    },
+    $signature: 0
+  };
+  A._AutomaticKeepAliveState__createCallback__closure.prototype = {
+    call$0() {
+      this.$this._keepingAlive = false;
+    },
+    $signature: 0
+  };
+  A._AutomaticKeepAliveState__createCallback__closure0.prototype = {
+    call$0() {
+      var t1 = this.$this;
+      if (t1._framework$_element != null && t1._automatic_keep_alive$_handles._length === 0)
+        t1.setState$1(new A._AutomaticKeepAliveState__createCallback___closure(t1));
+    },
+    $signature: 0
+  };
+  A._AutomaticKeepAliveState__createCallback___closure.prototype = {
+    call$0() {
+    },
+    $signature: 0
+  };
+  A._ImageState_didChangeAccessibilityFeatures_closure.prototype = {
+    call$0() {
+      this.$this._updateInvertColors$0();
+    },
+    $signature: 0
+  };
+  A._ImageState__handleImageFrame_closure.prototype = {
+    call$0() {
+      var t2,
+        t1 = this.$this;
+      t1._replaceImage$1$info(this.imageInfo);
+      t1._lastStack = t1._lastException = t1._loadingProgress = null;
+      t2 = t1._frameNumber;
+      t1._frameNumber = t2 == null ? 0 : t2 + 1;
+      t1._wasSynchronouslyLoaded = C.JSBool_methods.$or(t1._wasSynchronouslyLoaded, this.synchronousCall);
+    },
+    $signature: 0
+  };
+  A._ImageState__replaceImage_closure.prototype = {
+    call$1(_) {
+      var t1;
+      type$.Duration._as(_);
+      t1 = this.oldImageInfo;
+      if (t1 != null)
+        t1.image.dispose$0();
+      return null;
+    },
+    $signature: 3
+  };
+  A._ImageState__updateSourceStream_closure.prototype = {
+    call$0() {
+      this.$this._replaceImage$1$info(null);
+    },
+    $signature: 0
+  };
+  A._ImageState__updateSourceStream_closure0.prototype = {
+    call$0() {
+      var t1 = this.$this;
+      t1._frameNumber = t1._loadingProgress = null;
+      t1._wasSynchronouslyLoaded = false;
+    },
+    $signature: 0
+  };
+  A._PageViewState_build_closure.prototype = {
+    call$1(notification) {
+      var metrics, t1, t2, t3, currentPage;
+      type$.ScrollNotification._as(notification);
+      if (notification.ViewportNotificationMixin__depth === 0 && this.$this._widget.onPageChanged != null && notification instanceof B.ScrollUpdateNotification) {
+        metrics = type$.PageMetrics._as(notification.metrics);
+        t1 = metrics._scroll_metrics$_pixels;
+        t1.toString;
+        t2 = metrics._scroll_metrics$_minScrollExtent;
+        t2.toString;
+        t3 = metrics._scroll_metrics$_maxScrollExtent;
+        t3.toString;
+        t3 = Math.max(0, B.clampDouble(t1, t2, t3));
+        t2 = metrics._scroll_metrics$_viewportDimension;
+        t2.toString;
+        currentPage = C.JSNumber_methods.round$0(t3 / Math.max(1, t2 * metrics.viewportFraction));
+        t1 = this.$this;
+        if (currentPage !== t1._lastReportedPage) {
+          t1._lastReportedPage = currentPage;
+          t1._widget.onPageChanged.call$1(currentPage);
+        }
+      }
+      return false;
+    },
+    $signature: 43
+  };
+  A._PageViewState_build_closure0.prototype = {
+    call$2(context, position) {
+      var t1;
+      type$.BuildContext._as(context);
+      type$.ViewportOffset._as(position);
+      t1 = this.$this._widget;
+      return A.Viewport$(0, this.axisDirection, 0, D.CacheExtentStyle_1, null, C.Clip_1, position, B._setArrayType([new A.SliverFillViewport(t1.controller.viewportFraction, true, t1.childrenDelegate, null)], type$.JSArray_Widget));
+    },
+    $signature: typesOffset + 12
+  };
+  A.ScrollAwareImageProvider_resolveStreamForKey_closure.prototype = {
+    call$1(_) {
+      var _this = this;
+      B.scheduleMicrotask(new A.ScrollAwareImageProvider_resolveStreamForKey__closure(_this.$this, _this.configuration, _this.stream, _this.key, _this.handleError));
+    },
+    $signature: 3
+  };
+  A.ScrollAwareImageProvider_resolveStreamForKey__closure.prototype = {
+    call$0() {
+      var _this = this;
+      return _this.$this.resolveStreamForKey$4(_this.configuration, _this.stream, _this.key, _this.handleError);
+    },
+    $signature: 0
+  };
+  A._SelectionKeepAliveState_listensTo_closure.prototype = {
+    call$0() {
+      var t1 = this.selectable,
+        t2 = this.$this;
+      if (t1.get$value(t1).status !== C.SelectionStatus_2)
+        t2._updateSelectablesWithSelections$2$add(t1, true);
+      else
+        t2._updateSelectablesWithSelections$2$add(t1, false);
+    },
+    $signature: 0
+  };
+  A.SliverMultiBoxAdaptorElement_performRebuild_processElement.prototype = {
+    call$1(index) {
+      var newChild, parentData, t1, t2, t3, _this = this;
+      B._asInt(index);
+      t1 = _this.$this;
+      t1._currentlyUpdatingChildIndex = index;
+      t2 = t1._childElements;
+      if (t2.$index(0, index) != null && !J.$eq$(t2.$index(0, index), _this.newChildren.$index(0, index))) {
+        t2.$indexSet(0, index, t1.updateChild$3(t2.$index(0, index), null, index));
+        _this._box_0.childrenUpdated = true;
+      }
+      newChild = t1.updateChild$3(_this.newChildren.$index(0, index), _this.adaptorWidget.delegate.build$2(t1, index), index);
+      if (newChild != null) {
+        t3 = _this._box_0;
+        t3.childrenUpdated = t3.childrenUpdated || !J.$eq$(t2.$index(0, index), newChild);
+        t2.$indexSet(0, index, newChild);
+        t2 = newChild.get$renderObject().parentData;
+        t2.toString;
+        parentData = type$.SliverMultiBoxAdaptorParentData._as(t2);
+        if (index === 0)
+          parentData.layoutOffset = 0;
+        else {
+          t2 = _this.indexToLayoutOffset;
+          if (t2.containsKey$1(0, index))
+            parentData.set$layoutOffset(t2.$index(0, index));
+        }
+        if (!parentData._keptAlive)
+          t1._currentBeforeChild = type$.nullable_RenderBox._as(newChild.get$renderObject());
+      } else {
+        _this._box_0.childrenUpdated = true;
+        t2.remove$1(0, index);
+      }
+    },
+    $signature: 29
+  };
+  A.SliverMultiBoxAdaptorElement_performRebuild_closure.prototype = {
+    call$0() {
+      return null;
+    },
+    $signature: 4
+  };
+  A.SliverMultiBoxAdaptorElement_performRebuild_closure0.prototype = {
+    call$0() {
+      return this.$this._childElements.$index(0, this.index);
+    },
+    $signature: 432
+  };
+  A.SliverMultiBoxAdaptorElement_createChild_closure.prototype = {
+    call$0() {
+      var newChild, adaptorWidget, t2, t3, _this = this,
+        t1 = _this.$this;
+      t1._currentBeforeChild = _this.after == null ? null : type$.nullable_RenderBox._as(t1._childElements.$index(0, _this.index - 1).get$renderObject());
+      newChild = null;
+      try {
+        t2 = t1._widget;
+        t2.toString;
+        t3 = type$.SliverMultiBoxAdaptorWidget;
+        adaptorWidget = t3._as(t2);
+        t2 = t1._currentlyUpdatingChildIndex = _this.index;
+        newChild = t1.updateChild$3(t1._childElements.$index(0, t2), t3._as(adaptorWidget).delegate.build$2(t1, t2), t2);
+      } finally {
+        t1._currentlyUpdatingChildIndex = null;
+      }
+      t2 = _this.index;
+      t1 = t1._childElements;
+      if (newChild != null)
+        t1.$indexSet(0, t2, newChild);
+      else
+        t1.remove$1(0, t2);
+    },
+    $signature: 0
+  };
+  A.SliverMultiBoxAdaptorElement_removeChild_closure.prototype = {
+    call$0() {
+      var result, t1, t2, _this = this;
+      try {
+        t1 = _this.$this;
+        t2 = t1._currentlyUpdatingChildIndex = _this.index;
+        result = t1.updateChild$3(t1._childElements.$index(0, t2), null, t2);
+      } finally {
+        _this.$this._currentlyUpdatingChildIndex = null;
+      }
+      _this.$this._childElements.remove$1(0, _this.index);
+    },
+    $signature: 0
+  };
+  A.SmartDialog_showLoading_closure.prototype = {
+    call$1(context) {
+      var t1;
+      type$.BuildContext._as(context);
+      t1 = this.builder;
+      if (t1 != null)
+        t1 = t1.call$1(context);
+      else {
+        t1 = $.DialogProxy__instance;
+        if (t1 == null)
+          t1 = $.DialogProxy__instance = B.DialogProxy$_internal();
+        t1 = t1.loadingBuilder$1(this.msg);
+      }
+      return t1;
+    },
+    $signature: 2
+  };
+  A.SmartDialog_showToast_closure.prototype = {
+    call$1(context) {
+      var t1;
+      type$.BuildContext._as(context);
+      t1 = this.builder;
+      if (t1 != null)
+        t1 = t1.call$1(context);
+      else {
+        t1 = $.DialogProxy__instance;
+        if (t1 == null)
+          t1 = $.DialogProxy__instance = B.DialogProxy$_internal();
+        t1 = t1.toastBuilder$1(this.msg);
+      }
+      return t1;
+    },
+    $signature: 2
+  };
+  (function aliases() {
+    var _ = A.ImageStreamCompleter.prototype;
+    _.super$ImageStreamCompleter$addListener = _.addListener$1;
+    _.super$ImageStreamCompleter$removeListener = _.removeListener$1;
+    _.super$ImageStreamCompleter$_maybeDispose = _._maybeDispose$0;
+    _ = A.SliverLogicalParentData.prototype;
+    _.super$SliverLogicalParentData$toString = _.toString$0;
+    _ = A.SliverMultiBoxAdaptorParentData.prototype;
+    _.super$SliverMultiBoxAdaptorParentData$toString = _.toString$0;
+    _ = A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin.prototype;
+    _.super$_RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin$attach = _.attach$1;
+    _.super$_RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin$detach = _.detach$0;
+    _ = A.RenderSliverEdgeInsetsPadding.prototype;
+    _.super$RenderSliverEdgeInsetsPadding$performLayout = _.performLayout$0;
+    _ = A._RenderViewportBase_RenderBox_ContainerRenderObjectMixin.prototype;
+    _.super$_RenderViewportBase_RenderBox_ContainerRenderObjectMixin$attach = _.attach$1;
+    _.super$_RenderViewportBase_RenderBox_ContainerRenderObjectMixin$detach = _.detach$0;
+    _ = A.SliverMultiBoxAdaptorWidget.prototype;
+    _.super$SliverMultiBoxAdaptorWidget$estimateMaxScrollOffset = _.estimateMaxScrollOffset$5;
+  })();
+  (function installTearOffs() {
+    var _static_2 = hunkHelpers._static_2,
+      _instance_1_i = hunkHelpers._instance_1i,
+      _instance_1_u = hunkHelpers._instance_1u,
+      _instance = hunkHelpers.installInstanceTearOff,
+      _instance_2_u = hunkHelpers._instance_2u;
+    _static_2(A, "collection___dynamicCompare$closure", "_dynamicCompare", 14);
+    _instance_1_i(A.IterableMixin.prototype, "get$contains", "contains$1", 0);
+    _instance_1_i(A.SplayTreeSet.prototype, "get$contains", "contains$1", 0);
+    var _;
+    _instance_1_i(_ = A.ImageStreamCompleter.prototype, "get$addListener", "addListener$1", 1);
+    _instance_1_u(_, "get$reportImageChunkEvent", "reportImageChunkEvent$1", 4);
+    _instance_1_u(_ = A.MultiFrameImageStreamCompleter.prototype, "get$_handleCodecReady", "_handleCodecReady$1", 5);
+    _instance_1_u(_, "get$_handleAppFrame", "_handleAppFrame$1", 6);
+    _instance_1_i(_, "get$addListener", "addListener$1", 1);
+    _instance(A.RenderSliver.prototype, "get$hitTest", 0, 1, null, ["call$3$crossAxisPosition$mainAxisPosition"], ["hitTest$3$crossAxisPosition$mainAxisPosition"], 7, 0, 0);
+    _instance_2_u(_ = A.RenderViewportBase.prototype, "get$_paintContents", "_paintContents$2", 8);
+    _instance(_, "get$showOnScreen", 0, 0, null, ["call$4$curve$descendant$duration$rect", "call$0", "call$1$rect", "call$3$curve$duration$rect", "call$2$descendant$rect"], ["showOnScreen$4$curve$descendant$duration$rect", "showOnScreen$0", "showOnScreen$1$rect", "showOnScreen$3$curve$duration$rect", "showOnScreen$2$descendant$rect"], 9, 0, 0);
+    _instance_1_u(A._AutomaticKeepAliveState.prototype, "get$_addClient", "_addClient$1", 10);
+    _instance_2_u(A._ImageState.prototype, "get$_handleImageFrame", "_handleImageFrame$2", 11);
+    _static_2(A, "sliver___kDefaultSemanticIndexCallback$closure", "_kDefaultSemanticIndexCallback", 15);
+    _instance_1_i(_ = A._SelectionKeepAliveState.prototype, "get$add", "add$1", 3);
+    _instance_1_i(_, "get$remove", "remove$1", 3);
+    _instance_1_u(A.SliverMultiBoxAdaptorElement.prototype, "get$removeChild", "removeChild$1", 13);
+  })();
+  (function inheritance() {
+    var _mixin = hunkHelpers.mixin,
+      _mixinHard = hunkHelpers.mixinHard,
+      _inheritMany = hunkHelpers.inheritMany,
+      _inherit = hunkHelpers.inherit;
+    _inheritMany(B.Object, [A.IterableMixin, A._SplayTreeNode, A._SplayTree, A._SplayTreeIterator, A.ImageProvider, A.FittedSizes, A._ImageStreamCompleter_Object_Diagnosticable, A.ImageInfo, A._ImageChunkEvent_Object_Diagnosticable, A._ImageStream_Object_Diagnosticable, A.ImageStreamCompleterHandle, A._SliverGeometry_Object_Diagnosticable, A.RenderSliverHelpers, A.KeepAliveParentDataMixin, A.RenderSliverWithKeepAliveMixin, A.DisposableBuildContext, A.SliverChildDelegate]);
+    _inheritMany(A._SplayTreeNode, [A._SplayTreeSetNode, A._SplayTreeMapNode]);
+    _inheritMany(A._SplayTree, [A._SplayTreeMap__SplayTree_MapMixin, A._SplayTreeSet__SplayTree_IterableMixin]);
+    _inherit(A.SplayTreeMap, A._SplayTreeMap__SplayTree_MapMixin);
+    _inheritMany(B.Closure, [A.SplayTreeMap_closure, A.SplayTreeSet_closure, A.ImageProvider_resolve_closure0, A.ImageProvider__createErrorHandlerAndKey_closure, A.ImageStreamCompleter_reportError_closure, A.ImageStreamCompleter_reportImageChunkEvent_closure, A.RenderSliverHelpers_hitTestBoxChild_closure, A.RenderSliverMultiBoxAdaptor__createOrObtainChild_closure, A.RenderSliverMultiBoxAdaptor_collectGarbage_closure, A.RenderSliverMultiBoxAdaptor_collectGarbage__closure, A.RenderViewportBase_visitChildrenForSemantics_closure, A.RenderViewportBase_hitTestChildren_closure, A._AutomaticKeepAliveState__addClient_closure, A._AutomaticKeepAliveState__getChildElement_closure, A._ImageState__replaceImage_closure, A._PageViewState_build_closure, A.ScrollAwareImageProvider_resolveStreamForKey_closure, A.SliverMultiBoxAdaptorElement_performRebuild_processElement, A.SmartDialog_showLoading_closure, A.SmartDialog_showToast_closure]);
+    _inheritMany(B.EfficientLengthIterable, [A._SplayTreeKeyIterable, A._SplayTreeValueIterable, A._SplayTreeMapEntryIterable]);
+    _inheritMany(A._SplayTreeIterator, [A._SplayTreeKeyIterator, A._SplayTreeValueIterator, A._SplayTreeMapEntryIterator]);
+    _inherit(A._SplayTreeSet__SplayTree_IterableMixin_SetMixin, A._SplayTreeSet__SplayTree_IterableMixin);
+    _inherit(A.SplayTreeSet, A._SplayTreeSet__SplayTree_IterableMixin_SetMixin);
+    _inheritMany(B.Closure2Args, [A.SplayTreeSet__copyNode_copyChildren, A.NetworkImage__loadAsync_closure, A.ImageProvider_resolve_closure, A.ImageProvider__createErrorHandlerAndKey_handleError, A.MultiFrameImageStreamCompleter_closure, A.MultiFrameImageStreamCompleter_closure0, A._PageViewState_build_closure0]);
+    _inheritMany(A.ImageProvider, [A.NetworkImage, A.ScrollAwareImageProvider]);
+    _inheritMany(B._Enum, [A.BoxFit, A.ImageRepeat, A.CacheExtentStyle]);
+    _inheritMany(B.Closure0Args, [A.ImageProvider_resolveStreamForKey_closure, A.ImageProvider_resolveStreamForKey_closure0, A.MultiFrameImageStreamCompleter__handleAppFrame_closure, A._AutomaticKeepAliveState__createCallback_closure, A._AutomaticKeepAliveState__createCallback__closure, A._AutomaticKeepAliveState__createCallback__closure0, A._AutomaticKeepAliveState__createCallback___closure, A._ImageState_didChangeAccessibilityFeatures_closure, A._ImageState__handleImageFrame_closure, A._ImageState__updateSourceStream_closure, A._ImageState__updateSourceStream_closure0, A.ScrollAwareImageProvider_resolveStreamForKey__closure, A._SelectionKeepAliveState_listensTo_closure, A.SliverMultiBoxAdaptorElement_performRebuild_closure, A.SliverMultiBoxAdaptorElement_performRebuild_closure0, A.SliverMultiBoxAdaptorElement_createChild_closure, A.SliverMultiBoxAdaptorElement_removeChild_closure]);
+    _inherit(A.ImageStreamCompleter, A._ImageStreamCompleter_Object_Diagnosticable);
+    _inheritMany(A.ImageStreamCompleter, [A._ErrorImageCompleter, A.MultiFrameImageStreamCompleter]);
+    _inherit(A.ImageChunkEvent, A._ImageChunkEvent_Object_Diagnosticable);
+    _inherit(A.ImageStream, A._ImageStream_Object_Diagnosticable);
+    _inheritMany(B.RenderBox, [A.RenderImage, A._RenderViewportBase_RenderBox_ContainerRenderObjectMixin]);
+    _inherit(A.RenderClipRRect, B._RenderCustomClip);
+    _inherit(A.RenderIndexedSemantics, B.RenderProxyBox);
+    _inherit(A.SliverConstraints, B.Constraints);
+    _inherit(A.SliverGeometry, A._SliverGeometry_Object_Diagnosticable);
+    _inherit(A.SliverHitTestResult, B.HitTestResult);
+    _inherit(A.SliverHitTestEntry, B.HitTestEntry);
+    _inheritMany(B.ParentData, [A.SliverLogicalParentData, A.SliverPhysicalParentData]);
+    _inherit(A._SliverPhysicalContainerParentData_SliverPhysicalParentData_ContainerParentDataMixin, A.SliverPhysicalParentData);
+    _inherit(A.SliverPhysicalContainerParentData, A._SliverPhysicalContainerParentData_SliverPhysicalParentData_ContainerParentDataMixin);
+    _inherit(A.RenderSliver, B.RenderObject);
+    _inheritMany(A.RenderSliver, [A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin, A._RenderSliverEdgeInsetsPadding_RenderSliver_RenderObjectWithChildMixin]);
+    _inherit(A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers, A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin);
+    _inherit(A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers_RenderSliverWithKeepAliveMixin, A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers);
+    _inherit(A.RenderSliverMultiBoxAdaptor, A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers_RenderSliverWithKeepAliveMixin);
+    _inherit(A.RenderSliverFixedExtentBoxAdaptor, A.RenderSliverMultiBoxAdaptor);
+    _inherit(A.RenderSliverFillViewport, A.RenderSliverFixedExtentBoxAdaptor);
+    _inherit(A._SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin, A.SliverLogicalParentData);
+    _inherit(A._SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin_KeepAliveParentDataMixin, A._SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin);
+    _inherit(A.SliverMultiBoxAdaptorParentData, A._SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin_KeepAliveParentDataMixin);
+    _inherit(A.RenderSliverEdgeInsetsPadding, A._RenderSliverEdgeInsetsPadding_RenderSliver_RenderObjectWithChildMixin);
+    _inherit(A.RenderViewportBase, A._RenderViewportBase_RenderBox_ContainerRenderObjectMixin);
+    _inherit(A.RenderViewport, A.RenderViewportBase);
+    _inheritMany(B.StatefulWidget, [A.AutomaticKeepAlive, A.Image, A.PageView, A._SelectionKeepAlive]);
+    _inheritMany(B.State, [A._AutomaticKeepAliveState, A.__ImageState_State_WidgetsBindingObserver, A._PageViewState, A.__SelectionKeepAliveState_State_AutomaticKeepAliveClientMixin]);
+    _inheritMany(B.SingleChildRenderObjectWidget, [A.ClipRRect, A.IndexedSemantics, A._SliverFractionalPadding]);
+    _inherit(A.RawImage, B.LeafRenderObjectWidget);
+    _inherit(A._ImageState, A.__ImageState_State_WidgetsBindingObserver);
+    _inherit(A.PageController, B.ScrollController);
+    _inherit(A.PageMetrics, B.FixedScrollMetrics);
+    _inherit(A._PagePosition, B.ScrollPositionWithSingleContext);
+    _inheritMany(B.ScrollPhysics, [A._ForceImplicitScrollPhysics, A.PageScrollPhysics]);
+    _inherit(A._SaltedValueKey, B.ValueKey);
+    _inherit(A._SelectionKeepAliveState, A.__SelectionKeepAliveState_State_AutomaticKeepAliveClientMixin);
+    _inherit(A.SliverWithKeepAliveWidget, B.RenderObjectWidget);
+    _inherit(A.SliverMultiBoxAdaptorWidget, A.SliverWithKeepAliveWidget);
+    _inherit(A.SliverMultiBoxAdaptorElement, B.RenderObjectElement);
+    _inherit(A.KeepAlive, B.ParentDataWidget);
+    _inherit(A.SliverFillViewport, B.StatelessWidget);
+    _inherit(A._SliverFillViewportRenderObjectWidget, A.SliverMultiBoxAdaptorWidget);
+    _inherit(A._RenderSliverFractionalPadding, A.RenderSliverEdgeInsetsPadding);
+    _inherit(A.Viewport, B.MultiChildRenderObjectWidget);
+    _inherit(A.__ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin, B.MultiChildRenderObjectElement);
+    _inherit(A.__ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin_ViewportElementMixin, A.__ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin);
+    _inherit(A._ViewportElement, A.__ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin_ViewportElementMixin);
+    _mixin(A._SplayTreeMap__SplayTree_MapMixin, B.MapMixin);
+    _mixin(A._SplayTreeSet__SplayTree_IterableMixin, A.IterableMixin);
+    _mixin(A._SplayTreeSet__SplayTree_IterableMixin_SetMixin, B.SetMixin);
+    _mixin(A._ImageChunkEvent_Object_Diagnosticable, B.Diagnosticable);
+    _mixin(A._ImageStream_Object_Diagnosticable, B.Diagnosticable);
+    _mixin(A._ImageStreamCompleter_Object_Diagnosticable, B.Diagnosticable);
+    _mixin(A._SliverGeometry_Object_Diagnosticable, B.Diagnosticable);
+    _mixinHard(A._SliverPhysicalContainerParentData_SliverPhysicalParentData_ContainerParentDataMixin, B.ContainerParentDataMixin);
+    _mixinHard(A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin, B.ContainerRenderObjectMixin);
+    _mixin(A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers, A.RenderSliverHelpers);
+    _mixin(A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin_RenderSliverHelpers_RenderSliverWithKeepAliveMixin, A.RenderSliverWithKeepAliveMixin);
+    _mixinHard(A._SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin, B.ContainerParentDataMixin);
+    _mixin(A._SliverMultiBoxAdaptorParentData_SliverLogicalParentData_ContainerParentDataMixin_KeepAliveParentDataMixin, A.KeepAliveParentDataMixin);
+    _mixinHard(A._RenderSliverEdgeInsetsPadding_RenderSliver_RenderObjectWithChildMixin, B.RenderObjectWithChildMixin);
+    _mixinHard(A._RenderViewportBase_RenderBox_ContainerRenderObjectMixin, B.ContainerRenderObjectMixin);
+    _mixin(A.__ImageState_State_WidgetsBindingObserver, B.WidgetsBindingObserver);
+    _mixinHard(A.__SelectionKeepAliveState_State_AutomaticKeepAliveClientMixin, B.AutomaticKeepAliveClientMixin);
+    _mixin(A.__ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin, B.NotifiableElementMixin);
+    _mixin(A.__ViewportElement_MultiChildRenderObjectElement_NotifiableElementMixin_ViewportElementMixin, E.ViewportElementMixin);
+  })();
+  B._Universe_addRules(init.typeUniverse, JSON.parse('{"_SplayTreeSetNode":{"_SplayTreeNode":["1","_SplayTreeSetNode<1>"],"_SplayTreeNode.1":"_SplayTreeSetNode<1>","_SplayTreeNode.K":"1"},"_SplayTreeMapNode":{"_SplayTreeNode":["1","_SplayTreeMapNode<1,2>"],"MapEntry":["1","2"],"_SplayTreeNode.1":"_SplayTreeMapNode<1,2>","_SplayTreeNode.K":"1"},"SplayTreeMap":{"MapMixin":["1","2"],"_SplayTree":["1","_SplayTreeMapNode<1,2>"],"Map":["1","2"],"MapMixin.K":"1","MapMixin.V":"2","_SplayTree.K":"1","_SplayTree.1":"_SplayTreeMapNode<1,2>"},"_SplayTreeIterator":{"Iterator":["3"]},"_SplayTreeKeyIterable":{"EfficientLengthIterable":["1"],"Iterable":["1"],"Iterable.E":"1"},"_SplayTreeValueIterable":{"EfficientLengthIterable":["2"],"Iterable":["2"],"Iterable.E":"2"},"_SplayTreeMapEntryIterable":{"EfficientLengthIterable":["MapEntry<1,2>"],"Iterable":["MapEntry<1,2>"],"Iterable.E":"MapEntry<1,2>"},"_SplayTreeKeyIterator":{"_SplayTreeIterator":["1","2","1"],"Iterator":["1"],"_SplayTreeIterator.K":"1","_SplayTreeIterator.T":"1","_SplayTreeIterator.1":"2"},"_SplayTreeValueIterator":{"_SplayTreeIterator":["1","_SplayTreeMapNode<1,2>","2"],"Iterator":["2"],"_SplayTreeIterator.K":"1","_SplayTreeIterator.T":"2","_SplayTreeIterator.1":"_SplayTreeMapNode<1,2>"},"_SplayTreeMapEntryIterator":{"_SplayTreeIterator":["1","_SplayTreeMapNode<1,2>","MapEntry<1,2>"],"Iterator":["MapEntry<1,2>"],"_SplayTreeIterator.K":"1","_SplayTreeIterator.T":"MapEntry<1,2>","_SplayTreeIterator.1":"_SplayTreeMapNode<1,2>"},"SplayTreeSet":{"SetMixin":["1"],"Set":["1"],"IterableMixin":["1"],"EfficientLengthIterable":["1"],"_SplayTree":["1","_SplayTreeSetNode<1>"],"Iterable":["1"],"_SplayTree.K":"1","_SplayTree.1":"_SplayTreeSetNode<1>"},"NetworkImage":{"NetworkImage0":[],"ImageProvider":["NetworkImage0"],"ImageProvider.T":"NetworkImage0"},"BoxFit":{"Enum":[]},"ImageRepeat":{"Enum":[]},"NetworkImage0":{"ImageProvider":["NetworkImage0"]},"_ErrorImageCompleter":{"ImageStreamCompleter":[]},"MultiFrameImageStreamCompleter":{"ImageStreamCompleter":[]},"RenderImage":{"RenderBox":[],"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[]},"RenderClipRRect":{"_RenderCustomClip":["RRect"],"RenderBox":[],"RenderObjectWithChildMixin":["RenderBox"],"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[],"RenderObjectWithChildMixin.0":"RenderBox","_RenderCustomClip.T":"RRect"},"RenderIndexedSemantics":{"RenderBox":[],"RenderObjectWithChildMixin":["RenderBox"],"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[],"RenderObjectWithChildMixin.0":"RenderBox"},"SliverConstraints":{"Constraints":[]},"SliverHitTestResult":{"HitTestResult":[]},"SliverPhysicalContainerParentData":{"SliverPhysicalParentData":[],"ContainerParentDataMixin":["RenderSliver"],"ParentData":[],"ContainerParentDataMixin.0":"RenderSliver"},"SliverHitTestEntry":{"HitTestEntry":["RenderSliver"],"HitTestEntry.T":"RenderSliver"},"SliverLogicalParentData":{"ParentData":[]},"SliverPhysicalParentData":{"ParentData":[]},"RenderSliver":{"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[]},"RenderSliverFillViewport":{"RenderSliverMultiBoxAdaptor":[],"RenderSliver":[],"ContainerRenderObjectMixin":["RenderBox","SliverMultiBoxAdaptorParentData"],"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[],"ContainerRenderObjectMixin.1":"SliverMultiBoxAdaptorParentData","ContainerRenderObjectMixin.0":"RenderBox"},"RenderSliverFixedExtentBoxAdaptor":{"RenderSliverMultiBoxAdaptor":[],"RenderSliver":[],"ContainerRenderObjectMixin":["RenderBox","SliverMultiBoxAdaptorParentData"],"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[]},"KeepAliveParentDataMixin":{"ParentData":[]},"SliverMultiBoxAdaptorParentData":{"SliverLogicalParentData":[],"ContainerParentDataMixin":["RenderBox"],"KeepAliveParentDataMixin":[],"ParentData":[],"ContainerParentDataMixin.0":"RenderBox"},"RenderSliverMultiBoxAdaptor":{"RenderSliver":[],"ContainerRenderObjectMixin":["RenderBox","SliverMultiBoxAdaptorParentData"],"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[]},"RenderSliverEdgeInsetsPadding":{"RenderSliver":[],"RenderObjectWithChildMixin":["RenderSliver"],"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[]},"CacheExtentStyle":{"Enum":[]},"RenderViewportBase":{"_RenderViewportBase_RenderBox_ContainerRenderObjectMixin":["1"],"RenderBox":[],"ContainerRenderObjectMixin":["RenderSliver","1"],"RenderAbstractViewport":[],"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[]},"RenderViewport":{"_RenderViewportBase_RenderBox_ContainerRenderObjectMixin":["SliverPhysicalContainerParentData"],"RenderBox":[],"ContainerRenderObjectMixin":["RenderSliver","SliverPhysicalContainerParentData"],"RenderAbstractViewport":[],"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[],"ContainerRenderObjectMixin.1":"SliverPhysicalContainerParentData","ContainerRenderObjectMixin.0":"RenderSliver","_RenderViewportBase_RenderBox_ContainerRenderObjectMixin.0":"SliverPhysicalContainerParentData"},"AutomaticKeepAlive":{"StatefulWidget":[],"Widget":[],"DiagnosticableTree":[]},"_AutomaticKeepAliveState":{"State":["AutomaticKeepAlive"],"State.T":"AutomaticKeepAlive"},"ClipRRect":{"SingleChildRenderObjectWidget":[],"RenderObjectWidget":[],"Widget":[],"DiagnosticableTree":[]},"RawImage":{"RenderObjectWidget":[],"Widget":[],"DiagnosticableTree":[]},"IndexedSemantics":{"SingleChildRenderObjectWidget":[],"RenderObjectWidget":[],"Widget":[],"DiagnosticableTree":[]},"Image":{"StatefulWidget":[],"Widget":[],"DiagnosticableTree":[]},"_ImageState":{"State":["Image"],"WidgetsBindingObserver":[],"State.T":"Image"},"PageView":{"StatefulWidget":[],"Widget":[],"DiagnosticableTree":[]},"PageController":{"ScrollController":[],"ChangeNotifier":[],"Listenable":[]},"PageMetrics":{"ScrollMetrics":[]},"_PagePosition":{"ScrollPosition":[],"PageMetrics":[],"ViewportOffset":[],"ChangeNotifier":[],"Listenable":[],"ScrollMetrics":[],"ScrollActivityDelegate":[]},"_ForceImplicitScrollPhysics":{"ScrollPhysics":[]},"PageScrollPhysics":{"ScrollPhysics":[]},"_PageViewState":{"State":["PageView"],"State.T":"PageView"},"ScrollAwareImageProvider":{"ImageProvider":["1"],"ImageProvider.T":"1"},"_SelectionKeepAlive":{"StatefulWidget":[],"Widget":[],"DiagnosticableTree":[]},"_SaltedValueKey":{"ValueKey":["Key"],"LocalKey":[],"Key":[],"ValueKey.T":"Key"},"_SelectionKeepAliveState":{"State":["_SelectionKeepAlive"],"SelectionRegistrar":[],"State.T":"_SelectionKeepAlive"},"SliverWithKeepAliveWidget":{"RenderObjectWidget":[],"Widget":[],"DiagnosticableTree":[]},"SliverMultiBoxAdaptorWidget":{"RenderObjectWidget":[],"Widget":[],"DiagnosticableTree":[]},"SliverMultiBoxAdaptorElement":{"RenderObjectElement":[],"Element":[],"DiagnosticableTree":[],"BuildContext":[],"RenderSliverBoxChildManager":[]},"KeepAlive":{"ParentDataWidget":["KeepAliveParentDataMixin"],"ProxyWidget":[],"Widget":[],"DiagnosticableTree":[],"ParentDataWidget.T":"KeepAliveParentDataMixin"},"SliverFillViewport":{"StatelessWidget":[],"Widget":[],"DiagnosticableTree":[]},"_SliverFillViewportRenderObjectWidget":{"SliverMultiBoxAdaptorWidget":[],"RenderObjectWidget":[],"Widget":[],"DiagnosticableTree":[]},"_SliverFractionalPadding":{"SingleChildRenderObjectWidget":[],"RenderObjectWidget":[],"Widget":[],"DiagnosticableTree":[]},"_RenderSliverFractionalPadding":{"RenderSliver":[],"RenderObjectWithChildMixin":["RenderSliver"],"RenderObject":[],"DiagnosticableTree":[],"AbstractNode":[],"HitTestTarget":[],"RenderObjectWithChildMixin.0":"RenderSliver"},"Viewport":{"MultiChildRenderObjectWidget":[],"RenderObjectWidget":[],"Widget":[],"DiagnosticableTree":[]},"_ViewportElement":{"RenderObjectElement":[],"NotifiableElementMixin":[],"Element":[],"DiagnosticableTree":[],"BuildContext":[]}}'));
+  B._Universe_addErasedTypes(init.typeUniverse, JSON.parse('{"_SplayTreeMap__SplayTree_MapMixin":2,"_SplayTreeSet__SplayTree_IterableMixin":1,"_SplayTreeSet__SplayTree_IterableMixin_SetMixin":1,"RenderViewportBase":1}'));
+  var string$ = {
+    Stream: "Stream has been disposed.\nAn ImageStream is considered disposed once at least one listener has been added and subsequently all listeners have been removed and no handles are outstanding from the keepAlive method.\nTo resolve this error, maintain at least one listener on the stream, or create an ImageStreamCompleterHandle from the keepAlive method, or create a new stream for the image."
+  };
+  var type$ = (function rtii() {
+    var findType = B.findType;
+    return {
+      AutomaticKeepAlive: findType("AutomaticKeepAlive"),
+      AxisDirection: findType("AxisDirection"),
+      BoxConstraints: findType("BoxConstraints"),
+      BuildContext: findType("BuildContext"),
+      ClipRectLayer: findType("ClipRectLayer"),
+      Codec: findType("Codec0"),
+      Comparable_dynamic: findType("Comparable<@>"),
+      ContainerLayer: findType("ContainerLayer"),
+      Directionality: findType("Directionality"),
+      DisposableBuildContext_State_Image: findType("DisposableBuildContext<State<Image>>"),
+      Duration: findType("Duration"),
+      Element: findType("Element"),
+      Future_Codec_Function_ImmutableBuffer_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int: findType("Future<Codec0>(ImmutableBuffer{allowUpscaling:bool,cacheHeight:int?,cacheWidth:int?})"),
+      Future_Codec_Function_Uint8List_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int: findType("Future<Codec0>(Uint8List{allowUpscaling:bool,cacheHeight:int?,cacheWidth:int?})"),
+      Image: findType("Image"),
+      ImageChunkEvent: findType("ImageChunkEvent"),
+      ImageInfo: findType("ImageInfo"),
+      ImageStreamListener: findType("ImageStreamListener"),
+      IndexedSlot_nullable_Element: findType("IndexedSlot<Element?>"),
+      JSArray_ImageStreamListener: findType("JSArray<ImageStreamListener>"),
+      JSArray_Object: findType("JSArray<Object>"),
+      JSArray_Rect: findType("JSArray<Rect>"),
+      JSArray_RenderSliver: findType("JSArray<RenderSliver>"),
+      JSArray_ScrollPosition: findType("JSArray<ScrollPosition>"),
+      JSArray_String: findType("JSArray<String>"),
+      JSArray_Widget: findType("JSArray<Widget>"),
+      JSArray_of_void_Function: findType("JSArray<~()>"),
+      KeepAliveNotification: findType("KeepAliveNotification"),
+      KeepAliveParentDataMixin: findType("KeepAliveParentDataMixin"),
+      List_SmartNonAnimationType: findType("List<SmartNonAnimationType>"),
+      List_String: findType("List<String>"),
+      Listenable: findType("Listenable"),
+      MultiChildRenderObjectWidget: findType("MultiChildRenderObjectWidget"),
+      NetworkImage: findType("NetworkImage0"),
+      NotificationListener_KeepAliveNotification: findType("NotificationListener<KeepAliveNotification>"),
+      NotificationListener_ScrollNotification: findType("NotificationListener<ScrollNotification>"),
+      Object: findType("Object"),
+      Offset: findType("Offset"),
+      PageMetrics: findType("PageMetrics"),
+      ParentDataElement_KeepAliveParentDataMixin: findType("ParentDataElement<KeepAliveParentDataMixin>"),
+      ParentDataWidget_KeepAliveParentDataMixin: findType("ParentDataWidget<KeepAliveParentDataMixin>"),
+      PipelineOwner: findType("PipelineOwner"),
+      RenderBox: findType("RenderBox"),
+      RenderClipRRect: findType("RenderClipRRect"),
+      RenderImage: findType("RenderImage"),
+      RenderIndexedSemantics: findType("RenderIndexedSemantics"),
+      RenderObject: findType("RenderObject"),
+      RenderSliver: findType("RenderSliver"),
+      RenderSliverFillViewport: findType("RenderSliverFillViewport"),
+      RenderSliverMultiBoxAdaptor: findType("RenderSliverMultiBoxAdaptor"),
+      RenderViewport: findType("RenderViewport"),
+      ScrollAwareImageProvider_Object: findType("ScrollAwareImageProvider<Object>"),
+      ScrollNotification: findType("ScrollNotification"),
+      ScrollPosition: findType("ScrollPosition"),
+      Selectable: findType("Selectable"),
+      SliverConstraints: findType("SliverConstraints"),
+      SliverHitTestEntry: findType("SliverHitTestEntry"),
+      SliverMultiBoxAdaptorElement: findType("SliverMultiBoxAdaptorElement"),
+      SliverMultiBoxAdaptorParentData: findType("SliverMultiBoxAdaptorParentData"),
+      SliverMultiBoxAdaptorWidget: findType("SliverMultiBoxAdaptorWidget"),
+      SliverPhysicalParentData: findType("SliverPhysicalParentData"),
+      StackTrace: findType("StackTrace"),
+      StreamController_ImageChunkEvent: findType("StreamController<ImageChunkEvent>"),
+      SynchronousFuture_NetworkImage: findType("SynchronousFuture<NetworkImage>"),
+      Viewport: findType("Viewport"),
+      ViewportOffset: findType("ViewportOffset"),
+      WhereTypeIterable_of_void_Function_2_Object_and_nullable_StackTrace: findType("WhereTypeIterable<~(Object,StackTrace?)>"),
+      WhereTypeIterable_of_void_Function_ImageChunkEvent: findType("WhereTypeIterable<~(ImageChunkEvent)>"),
+      _PagePosition: findType("_PagePosition"),
+      _RenderSliverFractionalPadding: findType("_RenderSliverFractionalPadding"),
+      _ScrollableScope: findType("_ScrollableScope"),
+      bool: findType("bool"),
+      bool_Function_SliverHitTestResult_$named_$req_crossAxisPosition_double_and_$req_mainAxisPosition_double: findType("bool(SliverHitTestResult{crossAxisPosition!double,mainAxisPosition!double})"),
+      double: findType("double"),
+      dynamic: findType("@"),
+      int: findType("int"),
+      nullable_Animation_double: findType("Animation<double>?"),
+      nullable_ClipRRectLayer: findType("ClipRRectLayer?"),
+      nullable_Element: findType("Element?"),
+      nullable_FrameInfo: findType("FrameInfo?"),
+      nullable_Future_Codec_Function_ImmutableBuffer_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int: findType("Future<Codec0>(ImmutableBuffer{allowUpscaling:bool,cacheHeight:int?,cacheWidth:int?})?"),
+      nullable_Future_Codec_Function_Uint8List_$named_allowUpscaling_bool_and_cacheHeight_nullable_int_and_cacheWidth_nullable_int: findType("Future<Codec0>(Uint8List{allowUpscaling:bool,cacheHeight:int?,cacheWidth:int?})?"),
+      nullable_Iterable_DiagnosticsNode_Function: findType("Iterable<DiagnosticsNode>()?"),
+      nullable_List_ImageStreamListener: findType("List<ImageStreamListener>?"),
+      nullable_Map_of_Listenable_and_void_Function: findType("Map<Listenable,~()>?"),
+      nullable_Map_of_Selectable_and_void_Function: findType("Map<Selectable,~()>?"),
+      nullable_ParentDataElement_KeepAliveParentDataMixin: findType("ParentDataElement<KeepAliveParentDataMixin>?"),
+      nullable_RenderBox: findType("RenderBox?"),
+      nullable_RenderSliver: findType("RenderSliver?"),
+      nullable_RenderSliver_Function_RenderSliver: findType("RenderSliver?(RenderSliver)"),
+      nullable_Set_Selectable: findType("Set<Selectable>?"),
+      nullable_SliverMultiBoxAdaptorParentData: findType("SliverMultiBoxAdaptorParentData?"),
+      nullable_StackTrace: findType("StackTrace?"),
+      nullable_StreamSubscription_ImageChunkEvent: findType("StreamSubscription<ImageChunkEvent>?"),
+      nullable_Widget_Function_AnimationController_Widget_AnimationParam: findType("Widget(AnimationController,Widget,AnimationParam)?"),
+      nullable__ScrollableScope: findType("_ScrollableScope?"),
+      nullable_void_Function: findType("~()?"),
+      void: findType("~"),
+      void_Function: findType("~()"),
+      void_Function_2_Object_and_nullable_StackTrace: findType("~(Object,StackTrace?)"),
+      void_Function_Duration: findType("~(Duration)"),
+      void_Function_Element: findType("~(Element)"),
+      void_Function_RenderObject: findType("~(RenderObject)")
+    };
+  })();
+  (function constants() {
+    D.BoxFit_0 = new A.BoxFit(0, "fill");
+    D.BoxFit_2 = new A.BoxFit(2, "cover");
+    D.BoxFit_3 = new A.BoxFit(3, "fitWidth");
+    D.BoxFit_6 = new A.BoxFit(6, "scaleDown");
+    D.ImageRepeat_3 = new A.ImageRepeat(3, "noRepeat");
+    D.CacheExtentStyle_0 = new A.CacheExtentStyle(0, "pixel");
+    D.CacheExtentStyle_1 = new A.CacheExtentStyle(1, "viewport");
+    D.FittedSizes_46c = new A.FittedSizes(C.Size_0_0, C.Size_0_0);
+    D.ImageRepeat_0 = new A.ImageRepeat(0, "repeat");
+    D.ImageRepeat_1 = new A.ImageRepeat(1, "repeatX");
+    D.ImageRepeat_2 = new A.ImageRepeat(2, "repeatY");
+    D.PageScrollPhysics_null = new A.PageScrollPhysics(null);
+  })();
+};
+
+$__dart_deferred_initializers__["ELMEdhooueHNNql1hF+AZ4QxtjA="] = $__dart_deferred_initializers__.current

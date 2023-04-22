@@ -1,227 +1,595 @@
-self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
-$__dart_deferred_initializers__.current=function(a,b,c,$){var A={l0:function l0(d,e){this.e=d
-this.f=!1
-this.$ti=e},rF:function rF(d,e,f,g,h){var _=this
-_.a=d
-_.b=e
-_.c=f
-_.d=g
-_.w=_.f=null
-_.x=!1
-_.$ti=h},
-aXs(d){return new A.lv(new A.l0(B.b([],d.h("l<rF<0>>")),d.h("l0<0>")),B.K(y.j,y.i),d.h("lv<0>"))},
-aMq(d){var x=new A.Rm($,!0,!1,new A.l0(B.b([],y.o),y.v),B.K(y.j,y.i))
-x.tr$=d
-return x},
-lw:function lw(){},
-lv:function lv(d,e,f){this.po$=d
-this.yd$=e
-this.$ti=f},
-lh:function lh(){},
-ajr:function ajr(d){this.a=d},
-ajs:function ajs(){},
-HM:function HM(){},
-tv:function tv(){},
-Rn:function Rn(){},
-Rm:function Rm(d,e,f,g,h){var _=this
-_.tr$=d
-_.Rz$=e
-_.RA$=f
-_.po$=g
-_.yd$=h},
-Jw:function Jw(){},
-D5:function D5(){},
-Ho:function Ho(d,e){var _=this
-_.d=d
-_.e=$
-_.a=null
-_.b=e
-_.c=null},
-azp:function azp(){},
-wG:function wG(d,e){this.d=d
-this.a=e}},B,C,J
-A=a.updateHolder(c[32],A)
-B=c[0]
-C=c[2]
-J=c[1]
-A.l0.prototype={
-zN(d){return this.anN(d)},
-anN(d){var x=0,w=B.E(y.h),v,u=this,t
-var $async$zN=B.F(function(e,f){if(e===1)return B.B(f,w)
-while(true)switch(x){case 0:t=u.f
-t.toString
-x=!t?3:5
-break
-case 3:t=u.e
-t.toString
-v=C.b.C(t,d)
-x=1
-break
-x=4
-break
-case 5:x=6
-return B.H(B.du(C.u,null,y.b),$async$zN)
-case 6:t=u.e
-v=t==null?null:C.b.C(t,d)
-x=1
-break
-case 4:case 1:return B.C(v,w)}})
-return B.D($async$zN,w)},
-xf(d){return this.ag3(d)},
-ag3(d){var x=0,w=B.E(y.b),v,u=this,t
-var $async$xf=B.F(function(e,f){if(e===1)return B.B(f,w)
-while(true)switch(x){case 0:t=u.f
-t.toString
-x=!t?3:5
-break
-case 3:v=u.e.push(d)
-x=1
-break
-x=4
-break
-case 5:x=6
-return B.H(B.du(C.u,null,y.b),$async$xf)
-case 6:v=u.e.push(d)
-x=1
-break
-case 4:case 1:return B.C(v,w)}})
-return B.D($async$xf,w)},
-gp(d){var x=this.e
-return x==null?null:x.length},
-MH(d){var x,w,v,u,t
-this.f=!0
-for(x=this.e,w=x.length,v=0;v<x.length;x.length===w||(0,B.a_)(x),++v){u=x[v]
-if(!u.x){t=u.f
-if(t!=null)t.$1(d)}}this.f=!1},
-a9Z(){var x,w,v,u,t
-this.f=!0
-for(x=this.e,w=x.length,v=0;v<x.length;x.length===w||(0,B.a_)(x),++v){u=x[v]
-if(!u.x){t=u.w
-if(t!=null)t.$0()}}this.f=!1},
-cm(d,e,f,g){var x=new A.rF(this.ganM(),null,null,null,this.$ti.h("rF<1>"))
-x.f=d
-x.w=f
-this.xf(x)
-return x},
-hv(d){return this.cm(d,null,null,null)}}
-A.rF.prototype={
-ac(d){this.a.$1(this)
-return B.d9(null,y.q)},
-lL(d){return this.f=d},
-pJ(d,e){return e},
-nm(d){return this.w=d},
-jQ(d,e){this.x=!0},
-nt(d){return this.jQ(d,null)},
-kO(d){this.x=!1}}
-A.lw.prototype={
-$1(d){if(d!=null)this.sn(0,d)
-return this.gn(this)},
-$0(){return this.$1(null)},
-k(d){return J.dN(this.gn(this))},
-ey(){return this.gn(this)},
-j(d,e){var x,w=this
-if(e==null)return!1
-x=B.m(w)
-if(x.h("lw.T").b(e))return J.f(w.gn(w),e)
-if(x.h("lw<lw.T>").b(e))return J.f(w.gn(w),e.gn(e))
-return!1},
-gE(d){var x=this.tr$
-x===$&&B.a()
-return J.G(x)},
-sn(d,e){var x,w=this,v=w.po$
-if(v.e==null)return
-w.RA$=!1
-x=w.tr$
-x===$&&B.a()
-if(J.f(x,e)&&!w.Rz$)return
-w.Rz$=!1
-w.tr$=e
-w.RA$=!0
-v.MH(e)},
-gn(d){var x=$.Ro
-if(x!=null)x.S(0,this.po$)
-x=this.tr$
-x===$&&B.a()
-return x}}
-A.lv.prototype={}
-A.lh.prototype={
-S(d,e){var x,w,v=this.yd$
-if(!v.af(0,e)){x=e.hv(new A.ajr(this))
-w=v.i(0,e)
-if(w==null){w=B.b([],y.p)
-v.m(0,e,w)}w.push(x)}},
-bW(d){var x=this.yd$
-x.a3(0,new A.ajs())
-x.V(0)
-x=this.po$
-x.a9Z()
-x.f=x.e=null}}
-A.HM.prototype={}
-A.tv.prototype={
-ey(){var x,w
-try{x=this.gn(this).ey()
-return x}catch(w){if(y.g.b(B.ap(w)))throw B.e(B.aU(B.m(this).h("tv.T")).k(0)+" has not method [toJson]")
-else throw w}}}
-A.Rn.prototype={}
-A.Rm.prototype={
-W(d,e){var x=this
-x.sn(0,x.gn(x)+e)
-return x},
-a8(d,e){var x=this
-x.sn(0,x.gn(x)-e)
-return x}}
-A.Jw.prototype={}
-A.D5.prototype={
-Y(){return new A.Ho(A.aXs(y.b),C.j)}}
-A.Ho.prototype={
-a9(){var x=this
-x.ap()
-x.e=x.d.po$.cm(x.gafk(),!1,null,null)},
-afl(d){if(this.c!=null)this.a7(new A.azp())},
-l(){var x=this.e
-x===$&&B.a()
-x.ac(0)
-this.d.bW(0)
-this.ak()},
-t(d){var x,w=this.d,v=this.a.gQ2(),u=$.Ro
-$.Ro=w
-x=v.$0()
-if(w.yd$.a===0){$.Ro=u
-B.a7("      [Get] the improper use of a GetX has been detected. \n      You should only use GetX or Obx for the specific widget that will be updated.\n      If you are seeing this error, you probably did not insert any observable variables into GetX/Obx \n      or insert them outside the scope that GetX considers suitable for an update \n      (example: GetX => HeavyWidget => variableObservable).\n      If you need to update a parent widget and a child widget, wrap each one in an Obx/GetX.\n      ")}$.Ro=u
-return x}}
-A.wG.prototype={
-de(){return this.d.$0()}}
-var z=a.updateTypes(["J?/(x?)","~(l0<@>,L<dV<@>>)","~(@)","c()"])
-A.ajr.prototype={
-$1(d){var x=this.a.po$
-if(x.e!=null)x.MH(d)},
-$S(){return B.m(this.a).h("~(lh.T)")}}
-A.ajs.prototype={
-$2(d,e){var x
-for(x=J.aH(e);x.u();)x.gL(x).ac(0)},
-$S:z+1}
-A.azp.prototype={
-$0(){},
-$S:0};(function installTearOffs(){var x=a._instance_1u,w=a._instance_0u
-x(A.l0.prototype,"ganM","zN",0)
-x(A.Ho.prototype,"gafk","afl",2)
-w(A.wG.prototype,"gQ2","de",3)})();(function inheritance(){var x=a.mixin,w=a.inheritMany,v=a.inherit
-w(B.x,[A.l0,A.lw,A.Rn,A.lh])
-v(A.rF,B.dV)
-v(A.lv,A.Rn)
-v(A.ajr,B.ba)
-v(A.ajs,B.cS)
-v(A.Jw,A.lv)
-v(A.HM,A.Jw)
-v(A.tv,A.HM)
-v(A.Rm,A.tv)
-v(A.D5,B.R)
-v(A.Ho,B.X)
-v(A.azp,B.bD)
-v(A.wG,A.D5)
-x(A.lv,A.lh)
-x(A.Jw,A.lw)})()
-B.bj(b.typeUniverse,JSON.parse('{"rF":{"dV":["1"]},"lv":{"lh":["1"],"lh.T":"1"},"HM":{"lv":["1"],"lw":["1"],"lh":["1"]},"tv":{"lv":["1"],"lw":["1"],"lh":["1"]},"Rm":{"tv":["o"],"lv":["o"],"lw":["o"],"lh":["o"],"lh.T":"o","lw.T":"o","tv.T":"o"},"D5":{"R":[],"c":[]},"Ho":{"X":["D5"]},"wG":{"R":[],"c":[]}}'))
-B.iK(b.typeUniverse,JSON.parse('{"HM":1,"Rn":1,"Jw":1}'))
-var y={g:B.n("c8"),j:B.n("l0<@>"),v:B.n("l0<o>"),o:B.n("l<rF<o>>"),p:B.n("l<dV<@>>"),i:B.n("L<dV<@>>"),b:B.n("@"),h:B.n("J?"),q:B.n("~")};(function staticFields(){$.Ro=null})()}
-$__dart_deferred_initializers__["EAYp9+mywbj4/D2ZbhmIL+bDlnI="] = $__dart_deferred_initializers__.current
+// Generated by dart2js (NullSafetyMode.sound, csp, deferred-serialization, intern-composite-values), the Dart to JavaScript compiler version: 2.19.6.
+self.$__dart_deferred_initializers__ = self.$__dart_deferred_initializers__ || Object.create(null);
+$__dart_deferred_initializers__.current = function(hunkHelpers, init, holdersList, $) {
+  var A = {Bloc: function Bloc() {
+    }, Bloc_transformer_closure: function Bloc_transformer_closure() {
+    }, Bloc_on_closure: function Bloc_on_closure(t0, t1) {
+      this.$this = t0;
+      this.E = t1;
+    }, Bloc_on_closure0: function Bloc_on_closure0(t0, t1, t2) {
+      this.$this = t0;
+      this.E = t1;
+      this.handler = t2;
+    }, Bloc_on_closure_onEmit: function Bloc_on_closure_onEmit(t0, t1, t2) {
+      this.$this = t0;
+      this.event = t1;
+      this.E = t2;
+    }, Bloc_on_closure_handleEvent: function Bloc_on_closure_handleEvent(t0, t1, t2, t3, t4, t5) {
+      var _ = this;
+      _.$this = t0;
+      _.emitter = t1;
+      _.controller = t2;
+      _.handler = t3;
+      _.event = t4;
+      _.E = t5;
+    }, Bloc_on_closure_handleEvent_onDone: function Bloc_on_closure_handleEvent_onDone(t0, t1, t2) {
+      this.$this = t0;
+      this.emitter = t1;
+      this.controller = t2;
+    }, Bloc_close_closure: function Bloc_close_closure() {
+    }, Bloc_close_closure0: function Bloc_close_closure0() {
+    }, _FlatMapStreamTransformer: function _FlatMapStreamTransformer(t0) {
+      this.$ti = t0;
+    }, _FlatMapStreamTransformer_bind_closure: function _FlatMapStreamTransformer_bind_closure(t0, t1, t2) {
+      this.$this = t0;
+      this.stream = t1;
+      this.controller = t2;
+    }, _FlatMapStreamTransformer_bind__closure: function _FlatMapStreamTransformer_bind__closure(t0, t1, t2) {
+      this.$this = t0;
+      this.controller = t1;
+      this.subscriptions = t2;
+    }, _FlatMapStreamTransformer_bind___closure0: function _FlatMapStreamTransformer_bind___closure0(t0, t1, t2) {
+      this.subscriptions = t0;
+      this.subscription = t1;
+      this.controller = t2;
+    }, _FlatMapStreamTransformer_bind__closure0: function _FlatMapStreamTransformer_bind__closure0(t0, t1, t2) {
+      this.subscriptions = t0;
+      this.outerSubscription = t1;
+      this.controller = t2;
+    }, _FlatMapStreamTransformer_bind__closure1: function _FlatMapStreamTransformer_bind__closure1(t0) {
+      this.subscriptions = t0;
+    }, _FlatMapStreamTransformer_bind___closure: function _FlatMapStreamTransformer_bind___closure() {
+    }, _Emitter: function _Emitter(t0, t1, t2, t3) {
+      var _ = this;
+      _._emit = t0;
+      _._bloc$_completer = t1;
+      _._disposables = t2;
+      _._isCompleted = _._isCanceled = false;
+      _.$ti = t3;
+    }, Transition: function Transition(t0, t1, t2, t3) {
+      var _ = this;
+      _.event = t0;
+      _.currentState = t1;
+      _.nextState = t2;
+      _.$ti = t3;
+    }, BlBlocCounterBloc: function BlBlocCounterBloc(t0, t1, t2, t3, t4, t5, t6) {
+      var _ = this;
+      _._eventController = t0;
+      _._subscriptions = t1;
+      _._handlers = t2;
+      _._emitters = t3;
+      _._eventTransformer = t4;
+      _._blocObserver = t5;
+      _.__BlocBase__stateController_FI = $;
+      _._bloc$_state = t6;
+      _._emitted = false;
+    }, BlBlocCounterEvent: function BlBlocCounterEvent() {
+    }, InitEvent: function InitEvent() {
+    }, CounterIncrementEvent: function CounterIncrementEvent() {
+    }, BlBlocCounterState: function BlBlocCounterState() {
+      this.__BlBlocCounterState_count_A = $;
+    },
+    BlBlocCounterPage$() {
+      return new A.BlBlocCounterPage(null);
+    },
+    BlBlocCounterPage: function BlBlocCounterPage(t0) {
+      this.key = t0;
+    },
+    BlBlocCounterPage_build_closure0: function BlBlocCounterPage_build_closure0() {
+    },
+    BlBlocCounterPage_build_closure: function BlBlocCounterPage_build_closure(t0) {
+      this.$this = t0;
+    },
+    BlBlocCounterPage__buildPage_closure: function BlBlocCounterPage__buildPage_closure(t0) {
+      this.bloc = t0;
+    },
+    BlBlocCounterPage__buildPage_closure0: function BlBlocCounterPage__buildPage_closure0(t0) {
+      this.bloc = t0;
+    }
+  },
+  B, C, J, E, F, G, H, I, K, D;
+  A = hunkHelpers.updateHolder(holdersList[5], A);
+  B = holdersList[0];
+  C = holdersList[2];
+  J = holdersList[1];
+  E = holdersList[44];
+  F = holdersList[50];
+  G = holdersList[58];
+  H = holdersList[57];
+  I = holdersList[45];
+  K = holdersList[59];
+  D = holdersList[60];
+  A.Bloc.prototype = {
+    add$1(_, $event) {
+      var error, stackTrace, exception;
+      B._instanceType(this)._eval$1("Bloc.0")._as($event);
+      try {
+        this._eventController.add$1(0, $event);
+      } catch (exception) {
+        error = B.unwrapException(exception);
+        stackTrace = B.getTraceFromException(exception);
+        type$.Object._as(error);
+        type$.StackTrace._as(stackTrace);
+        throw exception;
+      }
+    },
+    on$1$1(_, handler, $E) {
+      var t2, t3, _this = this,
+        t1 = B._instanceType(_this);
+      B.checkTypeBound($E, t1._eval$1("Bloc.0"), "E", "on");
+      t1._bind$1($E)._eval$1("~(1,Emitter<Bloc.1>)")._as(handler);
+      t1 = _this._eventController;
+      t2 = B._instanceType(t1)._eval$1("_BroadcastStream<1>");
+      t3 = t2._eval$1("_WhereStream<Stream.T>");
+      C.JSArray_methods.add$1(_this._subscriptions, _this._eventTransformer.call$2(new B.CastStream(new B._WhereStream(t2._eval$1("bool(Stream.T)")._as(new A.Bloc_on_closure(_this, $E)), new B._BroadcastStream(t1, t2), t3), t3._eval$1("@<Stream.T>")._bind$1($E)._eval$1("CastStream<1,2>")), new A.Bloc_on_closure0(_this, $E, handler)).listen$1(null));
+    },
+    close$0(_) {
+      var $async$goto = 0,
+        $async$completer = B._makeAsyncAwaitCompleter(type$.void),
+        $async$returnValue, $async$self = this, t1, t2, _i, t3;
+      var $async$close$0 = B._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1)
+          return B._asyncRethrow($async$result, $async$completer);
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              $async$goto = 3;
+              return B._asyncAwait($async$self._eventController.close$0(0), $async$close$0);
+            case 3:
+              // returning from await.
+              for (t1 = $async$self._emitters, t2 = t1.length, _i = 0; _i < t1.length; t1.length === t2 || (0, B.throwConcurrentModificationError)(t1), ++_i)
+                t1[_i].cancel$0(0);
+              t2 = B._arrayInstanceType(t1);
+              t3 = type$.void;
+              $async$goto = 4;
+              return B._asyncAwait(B.Future_wait(new B.MappedListIterable(t1, t2._eval$1("Future<~>(1)")._as(new A.Bloc_close_closure()), t2._eval$1("MappedListIterable<1,Future<~>>")), t3), $async$close$0);
+            case 4:
+              // returning from await.
+              t2 = $async$self._subscriptions;
+              t1 = B._arrayInstanceType(t2);
+              $async$goto = 5;
+              return B._asyncAwait(B.Future_wait(new B.MappedListIterable(t2, t1._eval$1("Future<~>(1)")._as(new A.Bloc_close_closure0()), t1._eval$1("MappedListIterable<1,Future<~>>")), t3), $async$close$0);
+            case 5:
+              // returning from await.
+              $async$returnValue = $async$self.super$BlocBase$close(0);
+              // goto return
+              $async$goto = 1;
+              break;
+            case 1:
+              // return
+              return B._asyncReturn($async$returnValue, $async$completer);
+          }
+      });
+      return B._asyncStartSync($async$close$0, $async$completer);
+    }
+  };
+  A._FlatMapStreamTransformer.prototype = {
+    bind$1(stream) {
+      var controller,
+        t1 = this.$ti;
+      t1._eval$1("Stream<Stream<1>>")._as(stream);
+      controller = B.StreamController_StreamController$broadcast(null, true, t1._precomputed1);
+      controller.set$onListen(new A._FlatMapStreamTransformer_bind_closure(this, stream, controller));
+      return new B._BroadcastStream(controller, B._instanceType(controller)._eval$1("_BroadcastStream<1>"));
+    }
+  };
+  A._Emitter.prototype = {
+    call$1(state) {
+      this.$ti._precomputed1._as(state);
+      if (!this._isCanceled)
+        this._emit.call$1(state);
+    },
+    cancel$0(_) {
+      var _this = this;
+      if (_this._isCanceled || _this._isCompleted)
+        return;
+      _this._isCanceled = true;
+      _this._bloc$_close$0();
+    },
+    complete$0(_) {
+      var _this = this;
+      if (_this._isCanceled || _this._isCompleted)
+        return;
+      _this._isCompleted = true;
+      _this._bloc$_close$0();
+    },
+    _bloc$_close$0() {
+      var t1, t2, _i;
+      for (t1 = this._disposables, t2 = t1.length, _i = 0; _i < t1.length; t1.length === t2 || (0, B.throwConcurrentModificationError)(t1), ++_i)
+        t1[_i].call$0();
+      C.JSArray_methods.clear$0(t1);
+      t1 = this._bloc$_completer;
+      if ((t1.future._state & 30) === 0)
+        t1.complete$0(0);
+    },
+    $isEmitter: 1
+  };
+  A.Transition.prototype = {
+    $eq(_, other) {
+      var t1, _this = this;
+      if (other == null)
+        return false;
+      if (_this !== other)
+        t1 = _this.$ti._is(other) && B.getRuntimeType(_this) === B.getRuntimeType(other) && J.$eq$(_this.currentState, other.currentState) && J.$eq$(_this.event, other.event) && J.$eq$(_this.nextState, other.nextState);
+      else
+        t1 = true;
+      return t1;
+    },
+    get$hashCode(_) {
+      return (J.get$hashCode$(this.currentState) ^ J.get$hashCode$(this.event) ^ J.get$hashCode$(this.nextState)) >>> 0;
+    },
+    toString$0(_) {
+      return "Transition { currentState: " + B.S(this.currentState) + ", event: " + B.S(this.event) + ", nextState: " + B.S(this.nextState) + " }";
+    }
+  };
+  A.BlBlocCounterBloc.prototype = {
+    _bloc0$_init$2($event, emit) {
+      return this._init$body$BlBlocCounterBloc(type$.InitEvent._as($event), type$.Emitter_BlBlocCounterState._as(emit));
+    },
+    _init$body$BlBlocCounterBloc($event, emit) {
+      var $async$goto = 0,
+        $async$completer = B._makeAsyncAwaitCompleter(type$.dynamic),
+        $async$self = this, t1;
+      var $async$_bloc0$_init$2 = B._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1)
+          return B._asyncRethrow($async$result, $async$completer);
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              t1 = emit.$ti._precomputed1._as(J.clone$0$z($async$self._bloc$_state));
+              if (!emit._isCanceled)
+                emit._emit.call$1(t1);
+              // implicit return
+              return B._asyncReturn(null, $async$completer);
+          }
+      });
+      return B._asyncStartSync($async$_bloc0$_init$2, $async$completer);
+    },
+    _increment$2($event, emit) {
+      var t1, t2;
+      type$.CounterIncrementEvent._as($event);
+      type$.Emitter_BlBlocCounterState._as(emit);
+      t1 = this._bloc$_state;
+      t2 = t1.__BlBlocCounterState_count_A;
+      t2 === $ && B.throwLateFieldNI("count");
+      t1.__BlBlocCounterState_count_A = t2 + 1;
+      t1 = emit.$ti._precomputed1._as(J.clone$0$z(t1));
+      if (!emit._isCanceled)
+        emit._emit.call$1(t1);
+    }
+  };
+  A.BlBlocCounterEvent.prototype = {};
+  A.InitEvent.prototype = {};
+  A.CounterIncrementEvent.prototype = {};
+  A.BlBlocCounterState.prototype = {
+    clone$0(_) {
+      var t1 = new A.BlBlocCounterState(),
+        t2 = this.__BlBlocCounterState_count_A;
+      t2 === $ && B.throwLateFieldNI("count");
+      t1.__BlBlocCounterState_count_A = t2;
+      return t1;
+    }
+  };
+  A.BlBlocCounterPage.prototype = {
+    build$1(context) {
+      return E.BlocProvider$(new B.Builder(new A.BlBlocCounterPage_build_closure(this), null), new A.BlBlocCounterPage_build_closure0(), type$.BlBlocCounterBloc);
+    },
+    _view6$_buildPage$1(context) {
+      var _null = null,
+        t1 = type$.BlBlocCounterBloc,
+        bloc = F.BlocProvider_of(context, t1);
+      return G.Scaffold$(H.AppBar$(B.Text$("Bloc-Bloc\u8303\u4f8b", _null, _null, _null, _null, _null, _null)), _null, B.Center$(I.BlocBuilder$(new A.BlBlocCounterPage__buildPage_closure(bloc), t1, type$.BlBlocCounterState), _null, _null), _null, B.FloatingActionButton$(B.Icon$(K.IconData_57415_MaterialIcons_null_false, _null, _null), false, new A.BlBlocCounterPage__buildPage_closure0(bloc)));
+    }
+  };
+  var typesOffset = hunkHelpers.updateTypes(["Future<~>(_Emitter<@>)", "~()", "~(InitEvent,Emitter<BlBlocCounterState>)", "~(CounterIncrementEvent,Emitter<BlBlocCounterState>)", "BlBlocCounterBloc(BuildContext)", "Text(BuildContext,BlBlocCounterState)"]);
+  A.Bloc_transformer_closure.prototype = {
+    call$2(events, mapper) {
+      var t1 = events.$ti;
+      mapper = t1._eval$1("Stream<@>(Stream.T)")._as(type$.Stream_dynamic_Function_dynamic._as(mapper));
+      t1 = t1._eval$1("_MapStream<Stream.T,Stream<@>>");
+      return t1._eval$1("StreamTransformer<Stream.T,@>")._as(D.C__FlatMapStreamTransformer).bind$1(new B._MapStream(mapper, events, t1));
+    },
+    $signature: 483
+  };
+  A.Bloc_on_closure.prototype = {
+    call$1($event) {
+      return this.E._is(B._instanceType(this.$this)._eval$1("Bloc.0")._as($event));
+    },
+    $signature() {
+      return B._instanceType(this.$this)._eval$1("bool(Bloc.0)");
+    }
+  };
+  A.Bloc_on_closure0.prototype = {
+    call$1($event) {
+      var t1 = this.$this,
+        t2 = this.E,
+        emitter = new A._Emitter(new A.Bloc_on_closure_onEmit(t1, $event, t2), new B._AsyncCompleter(new B._Future($.Zone__current, type$._Future_void), type$._AsyncCompleter_void), B._setArrayType([], type$.JSArray_of_void_Function), B._instanceType(t1)._eval$1("_Emitter<Bloc.1>")),
+        controller = B.StreamController_StreamController$broadcast(emitter.get$cancel(emitter), true, t2);
+      new A.Bloc_on_closure_handleEvent(t1, emitter, controller, this.handler, $event, t2).call$0();
+      return new B._BroadcastStream(controller, B._instanceType(controller)._eval$1("_BroadcastStream<1>"));
+    },
+    $signature() {
+      return this.E._eval$1("Stream<0>(@)");
+    }
+  };
+  A.Bloc_on_closure_onEmit.prototype = {
+    call$1(state) {
+      var t4,
+        t1 = this.$this,
+        t2 = B._instanceType(t1),
+        t3 = t2._eval$1("Bloc.1");
+      t3._as(state);
+      if ((t1.get$_stateController()._state & 4) !== 0)
+        return;
+      if (J.$eq$(t1._bloc$_state, state) && t1._emitted)
+        return;
+      t4 = t1._bloc$_state;
+      t2._eval$1("Transition<Bloc.0,Bloc.1>")._as(new A.Transition(this.E._as(this.event), t4, state, t2._eval$1("@<Bloc.0>")._bind$1(t3)._eval$1("Transition<1,2>")));
+      t1.super$BlocBase$emit(state);
+    },
+    $signature() {
+      return B._instanceType(this.$this)._eval$1("~(Bloc.1)");
+    }
+  };
+  A.Bloc_on_closure_handleEvent.prototype = {
+    call$0() {
+      var $async$goto = 0,
+        $async$completer = B._makeAsyncAwaitCompleter(type$.dynamic),
+        $async$handler = 1, $async$currentError, $async$next = [], $async$self = this, error, stackTrace, exception, t1, t2, onDone, $async$exception;
+      var $async$call$0 = B._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1) {
+          $async$currentError = $async$result;
+          $async$goto = $async$handler;
+        }
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              t1 = $async$self.$this;
+              t2 = $async$self.emitter;
+              onDone = new A.Bloc_on_closure_handleEvent_onDone(t1, t2, $async$self.controller);
+              $async$handler = 3;
+              C.JSArray_methods.add$1(t1._emitters, t2);
+              $async$goto = 6;
+              return B._asyncAwait($async$self.handler.call$2($async$self.E._as($async$self.event), t2), $async$call$0);
+            case 6:
+              // returning from await.
+              $async$next.push(5);
+              // goto finally
+              $async$goto = 4;
+              break;
+            case 3:
+              // catch
+              $async$handler = 2;
+              $async$exception = $async$currentError;
+              error = B.unwrapException($async$exception);
+              stackTrace = B.getTraceFromException($async$exception);
+              type$.Object._as(error);
+              type$.StackTrace._as(stackTrace);
+              throw $async$exception;
+              $async$next.push(5);
+              // goto finally
+              $async$goto = 4;
+              break;
+            case 2:
+              // uncaught
+              $async$next = [1];
+            case 4:
+              // finally
+              $async$handler = 1;
+              onDone.call$0();
+              // goto the next finally handler
+              $async$goto = $async$next.pop();
+              break;
+            case 5:
+              // after finally
+              // implicit return
+              return B._asyncReturn(null, $async$completer);
+            case 1:
+              // rethrow
+              return B._asyncRethrow($async$currentError, $async$completer);
+          }
+      });
+      return B._asyncStartSync($async$call$0, $async$completer);
+    },
+    $signature: 0
+  };
+  A.Bloc_on_closure_handleEvent_onDone.prototype = {
+    call$0() {
+      var t1 = this.emitter;
+      t1.complete$0(0);
+      C.JSArray_methods.remove$1(this.$this._emitters, t1);
+      t1 = this.controller;
+      if ((t1._state & 4) === 0)
+        t1.close$0(0);
+    },
+    $signature: 0
+  };
+  A.Bloc_close_closure.prototype = {
+    call$1(e) {
+      return type$._Emitter_dynamic._as(e)._bloc$_completer.future;
+    },
+    $signature: typesOffset + 0
+  };
+  A.Bloc_close_closure0.prototype = {
+    call$1(s) {
+      return type$.StreamSubscription_dynamic._as(s).cancel$0(0);
+    },
+    $signature: 484
+  };
+  A._FlatMapStreamTransformer_bind_closure.prototype = {
+    call$0() {
+      var subscriptions = B._setArrayType([], type$.JSArray_StreamSubscription_dynamic),
+        t1 = this.controller,
+        outerSubscription = this.stream.listen$2$onError(new A._FlatMapStreamTransformer_bind__closure(this.$this, t1, subscriptions), t1.get$addError());
+      outerSubscription.onDone$1(new A._FlatMapStreamTransformer_bind__closure0(subscriptions, outerSubscription, t1));
+      C.JSArray_methods.add$1(subscriptions, outerSubscription);
+      t1.set$onCancel(0, new A._FlatMapStreamTransformer_bind__closure1(subscriptions));
+    },
+    $signature: 0
+  };
+  A._FlatMapStreamTransformer_bind__closure.prototype = {
+    call$1(inner) {
+      var t1 = this.$this.$ti,
+        t2 = this.controller,
+        subscription = t1._eval$1("Stream<1>")._as(inner).listen$2$onError(t1._eval$1("~(1)")._as(t2.get$add(t2)), t2.get$addError());
+      t1 = this.subscriptions;
+      subscription.onDone$1(new A._FlatMapStreamTransformer_bind___closure0(t1, subscription, t2));
+      C.JSArray_methods.add$1(t1, subscription);
+    },
+    $signature() {
+      return this.$this.$ti._eval$1("~(Stream<1>)");
+    }
+  };
+  A._FlatMapStreamTransformer_bind___closure0.prototype = {
+    call$0() {
+      var t1 = this.subscriptions;
+      C.JSArray_methods.remove$1(t1, this.subscription);
+      if (t1.length === 0)
+        this.controller.close$0(0);
+    },
+    $signature: 0
+  };
+  A._FlatMapStreamTransformer_bind__closure0.prototype = {
+    call$0() {
+      var t1 = this.subscriptions;
+      C.JSArray_methods.remove$1(t1, this.outerSubscription);
+      if (t1.length === 0)
+        this.controller.close$0(0);
+    },
+    $signature: 0
+  };
+  A._FlatMapStreamTransformer_bind__closure1.prototype = {
+    call$0() {
+      var t2, t3, _i,
+        t1 = this.subscriptions;
+      if (t1.length === 0)
+        return null;
+      t2 = B._setArrayType([], type$.JSArray_Future_void);
+      for (t3 = t1.length, _i = 0; _i < t1.length; t1.length === t3 || (0, B.throwConcurrentModificationError)(t1), ++_i)
+        t2.push(t1[_i].cancel$0(0));
+      t1 = type$.void;
+      return B.Future_wait(t2, t1).then$1$1(new A._FlatMapStreamTransformer_bind___closure(), t1);
+    },
+    $signature: 485
+  };
+  A._FlatMapStreamTransformer_bind___closure.prototype = {
+    call$1(_) {
+      type$.List_void._as(_);
+    },
+    $signature: 486
+  };
+  A.BlBlocCounterPage_build_closure0.prototype = {
+    call$1(context) {
+      var t2, t3, t4, t5, t6,
+        t1 = new A.BlBlocCounterState();
+      t1.__BlBlocCounterState_count_A = 0;
+      t2 = B.StreamController_StreamController$broadcast(null, false, type$.BlBlocCounterEvent);
+      t3 = B._setArrayType([], type$.JSArray_StreamSubscription_dynamic);
+      t4 = B._setArrayType([], type$.JSArray__Handler);
+      t5 = B._setArrayType([], type$.JSArray__Emitter_dynamic);
+      $.$get$BlocOverrides__token();
+      t6 = $.$get$Bloc_transformer();
+      t1 = new A.BlBlocCounterBloc(t2, t3, t4, t5, t6, C.C__DefaultBlocObserver, t1);
+      t1.on$1$1(0, t1.get$_bloc0$_init(), type$.InitEvent);
+      t1.on$1$1(0, t1.get$_increment(), type$.CounterIncrementEvent);
+      t1.add$1(0, new A.InitEvent());
+      return t1;
+    },
+    $signature: typesOffset + 4
+  };
+  A.BlBlocCounterPage_build_closure.prototype = {
+    call$1(context) {
+      return this.$this._view6$_buildPage$1(type$.BuildContext._as(context));
+    },
+    $signature: 2
+  };
+  A.BlBlocCounterPage__buildPage_closure.prototype = {
+    call$2(context, state) {
+      var t1, _null = null;
+      type$.BuildContext._as(context);
+      type$.BlBlocCounterState._as(state);
+      t1 = this.bloc._bloc$_state.__BlBlocCounterState_count_A;
+      t1 === $ && B.throwLateFieldNI("count");
+      return B.Text$("\u70b9\u51fb\u4e86 " + t1 + " \u6b21", _null, _null, _null, B.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 30, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null);
+    },
+    $signature: typesOffset + 5
+  };
+  A.BlBlocCounterPage__buildPage_closure0.prototype = {
+    call$0() {
+      return this.bloc.add$1(0, new A.CounterIncrementEvent());
+    },
+    $signature: 0
+  };
+  (function installTearOffs() {
+    var _instance_0_i = hunkHelpers._instance_0i,
+      _instance_2_u = hunkHelpers._instance_2u;
+    _instance_0_i(A._Emitter.prototype, "get$cancel", "cancel$0", 1);
+    var _;
+    _instance_2_u(_ = A.BlBlocCounterBloc.prototype, "get$_bloc0$_init", "_bloc0$_init$2", 2);
+    _instance_2_u(_, "get$_increment", "_increment$2", 3);
+  })();
+  (function inheritance() {
+    var _inherit = hunkHelpers.inherit,
+      _inheritMany = hunkHelpers.inheritMany;
+    _inherit(A.Bloc, B.BlocBase);
+    _inheritMany(B.Closure2Args, [A.Bloc_transformer_closure, A.BlBlocCounterPage__buildPage_closure]);
+    _inheritMany(B.Closure, [A.Bloc_on_closure, A.Bloc_on_closure0, A.Bloc_on_closure_onEmit, A.Bloc_close_closure, A.Bloc_close_closure0, A._FlatMapStreamTransformer_bind__closure, A._FlatMapStreamTransformer_bind___closure, A.BlBlocCounterPage_build_closure0, A.BlBlocCounterPage_build_closure]);
+    _inheritMany(B.Closure0Args, [A.Bloc_on_closure_handleEvent, A.Bloc_on_closure_handleEvent_onDone, A._FlatMapStreamTransformer_bind_closure, A._FlatMapStreamTransformer_bind___closure0, A._FlatMapStreamTransformer_bind__closure0, A._FlatMapStreamTransformer_bind__closure1, A.BlBlocCounterPage__buildPage_closure0]);
+    _inherit(A._FlatMapStreamTransformer, B.StreamTransformerBase);
+    _inheritMany(B.Object, [A._Emitter, A.BlBlocCounterEvent, A.BlBlocCounterState]);
+    _inherit(A.Transition, B.Change);
+    _inherit(A.BlBlocCounterBloc, A.Bloc);
+    _inheritMany(A.BlBlocCounterEvent, [A.InitEvent, A.CounterIncrementEvent]);
+    _inherit(A.BlBlocCounterPage, B.StatelessWidget);
+  })();
+  B._Universe_addRules(init.typeUniverse, JSON.parse('{"_Emitter":{"Emitter":["1"]},"Bloc":{"BlocBase":["2"],"StateStreamableSource":["2"],"StateStreamable":["2"]},"_FlatMapStreamTransformer":{"StreamTransformer":["Stream<1>","1"]},"Transition":{"Change":["2"],"Change.0":"2"},"BlBlocCounterBloc":{"Bloc":["BlBlocCounterEvent","BlBlocCounterState"],"BlocBase":["BlBlocCounterState"],"StateStreamableSource":["BlBlocCounterState"],"StateStreamable":["BlBlocCounterState"],"BlocBase.0":"BlBlocCounterState","Bloc.0":"BlBlocCounterEvent","Bloc.1":"BlBlocCounterState"},"InitEvent":{"BlBlocCounterEvent":[]},"CounterIncrementEvent":{"BlBlocCounterEvent":[]},"BlBlocCounterPage":{"StatelessWidget":[],"Widget":[],"DiagnosticableTree":[]}}'));
+  var type$ = (function rtii() {
+    var findType = B.findType;
+    return {
+      BlBlocCounterBloc: findType("BlBlocCounterBloc"),
+      BlBlocCounterEvent: findType("BlBlocCounterEvent"),
+      BlBlocCounterState: findType("BlBlocCounterState"),
+      BuildContext: findType("BuildContext"),
+      CounterIncrementEvent: findType("CounterIncrementEvent"),
+      Emitter_BlBlocCounterState: findType("Emitter<BlBlocCounterState>"),
+      InitEvent: findType("InitEvent"),
+      JSArray_Future_void: findType("JSArray<Future<~>>"),
+      JSArray_StreamSubscription_dynamic: findType("JSArray<StreamSubscription<@>>"),
+      JSArray__Emitter_dynamic: findType("JSArray<_Emitter<@>>"),
+      JSArray__Handler: findType("JSArray<_Handler>"),
+      JSArray_of_void_Function: findType("JSArray<~()>"),
+      List_void: findType("List<~>"),
+      Object: findType("Object"),
+      StackTrace: findType("StackTrace"),
+      StreamSubscription_dynamic: findType("StreamSubscription<@>"),
+      Stream_dynamic_Function_dynamic: findType("Stream<@>(@)"),
+      _AsyncCompleter_void: findType("_AsyncCompleter<~>"),
+      _Emitter_dynamic: findType("_Emitter<@>"),
+      _Future_void: findType("_Future<~>"),
+      dynamic: findType("@"),
+      void: findType("~")
+    };
+  })();
+  (function constants() {
+    D.C__FlatMapStreamTransformer = new A._FlatMapStreamTransformer(B.findType("_FlatMapStreamTransformer<@>"));
+  })();
+  (function lazyInitializers() {
+    var _lazy = hunkHelpers.lazy;
+    _lazy($, "Bloc_transformer", "$get$Bloc_transformer", () => new A.Bloc_transformer_closure());
+  })();
+};
+
+$__dart_deferred_initializers__["XBHFXAiLpHNMoLscHBf4QgWOtPw="] = $__dart_deferred_initializers__.current
