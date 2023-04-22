@@ -19,7 +19,7 @@ flutter clean && flutter pub get \
 && flutter build web --web-renderer canvaskit --pwa-strategy none \
 && flutter build apk \
 && cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets/ \
-&& cp -r ./build/web/ ./docs/web/ \
+&& rm -rf ./docs/web/ && cp -r ./build/web/ ./docs/web/ \
 && export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890 \
 && git add . && git commit -m "update web effect" && git push
 
