@@ -9,16 +9,16 @@ class _SideBarFold extends StatelessWidget {
 
   final SmartDialogState data;
 
-  final Function(TreeTwiceInfo item, BtnInfo subItem) onItem;
+  final Function(DialogFoldInfo item, DialogItemInfo subItem) onItem;
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(builder: (TreeTwiceInfo item) {
+    return _buildBg(builder: (DialogFoldInfo item) {
       return [
         _buildItemBg(
           context: context,
           item: item,
-          subBuilder: (BtnInfo subItem) => _buildItem(item, subItem),
+          subBuilder: (DialogItemInfo subItem) => _buildItem(item, subItem),
         ),
 
         // 分割线
@@ -27,7 +27,7 @@ class _SideBarFold extends StatelessWidget {
     });
   }
 
-  Widget _buildItem(TreeTwiceInfo item, BtnInfo subItem) {
+  Widget _buildItem(DialogFoldInfo item, DialogItemInfo subItem) {
     var activeColor = Colors.blue;
     var normalColor = Colors.black;
     return Container(
@@ -61,8 +61,8 @@ class _SideBarFold extends StatelessWidget {
 
   Widget _buildItemBg({
     required BuildContext context,
-    required TreeTwiceInfo item,
-    required Widget Function(BtnInfo subItem) subBuilder,
+    required DialogFoldInfo item,
+    required Widget Function(DialogItemInfo subItem) subBuilder,
   }) {
     return Theme(
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
@@ -76,8 +76,8 @@ class _SideBarFold extends StatelessWidget {
             child: Text(item.title),
           ),
           initiallyExpanded: item.selected,
-          children: List.generate(item.btnInfo.length, (subIndex) {
-            var subItem = item.btnInfo[subIndex];
+          children: List.generate(item.itemInfo.length, (subIndex) {
+            var subItem = item.itemInfo[subIndex];
             return subBuilder(subItem);
           }),
         ),
@@ -86,7 +86,7 @@ class _SideBarFold extends StatelessWidget {
   }
 
   Widget _buildBg({
-    required List<Widget> Function(TreeTwiceInfo item) builder,
+    required List<Widget> Function(DialogFoldInfo item) builder,
   }) {
     return Container(
       width: 150,

@@ -10,7 +10,7 @@ class _CodeShow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(builder: (BtnInfo item) {
+    return _buildBg(builder: (DialogItemInfo item) {
       return [
         // 代码show
         _buildCodeShow(item),
@@ -21,7 +21,7 @@ class _CodeShow extends StatelessWidget {
     });
   }
 
-  Expanded _buildCodeDemo(BtnInfo item) {
+  Expanded _buildCodeDemo(DialogItemInfo item) {
     return Expanded(
       flex: 1,
       child: Container(
@@ -36,7 +36,7 @@ class _CodeShow extends StatelessWidget {
     );
   }
 
-  Expanded _buildCodeShow(BtnInfo item) {
+  Expanded _buildCodeShow(DialogItemInfo item) {
     return Expanded(
       flex: 3,
       child: Container(
@@ -53,21 +53,21 @@ class _CodeShow extends StatelessWidget {
     );
   }
 
-  Widget _buildBg({required List<Widget> Function(BtnInfo item) builder}) {
-    BtnInfo? btnInfo;
+  Widget _buildBg({
+    required List<Widget> Function(DialogItemInfo item) builder,
+  }) {
+    DialogItemInfo? itemInfo;
     for (var element in data.trees) {
       element.selected = false;
-      for (var subElement in element.btnInfo) {
+      for (var subElement in element.itemInfo) {
         if (subElement.selected) {
-          btnInfo = subElement;
+          itemInfo = subElement;
           break;
         }
       }
     }
     return Expanded(
-      child: Container(
-        child: btnInfo != null ? Row(children: builder(btnInfo)) : Container(),
-      ),
+      child: itemInfo != null ? Row(children: builder(itemInfo)) : Container(),
     );
   }
 }

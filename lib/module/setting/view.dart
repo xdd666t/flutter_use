@@ -18,8 +18,8 @@ class SettingPage extends StatelessWidget {
       onVisibilityChanged: (info) => Log.d(info.visibleFraction),
       child: Container(
         alignment: Alignment.center,
-        child: Text("${const SettingPage().runtimeType}"),
-        // child: const Text("设置页面"),
+        child: const Text("设置页面"),
+        // child: Text("${const SettingPage().runtimeType}"),
       ),
     );
   }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use/entity/common/btn_info.dart';
-import 'package:flutter_use/entity/common/tree_info.dart';
 import 'package:flutter_use/widgets/other/other_hard_close.dart';
 import 'package:flutter_use/widgets/other/other_trick.dart';
 import 'package:flutter_use/widgets/show_attach/attach_dialog_business.dart';
@@ -40,7 +38,7 @@ import '../../../widgets/show_toast/toast_default.dart';
 class SmartDialogState {
   static String dialogParam = "dialogType";
 
-  late List<TreeTwiceInfo> trees;
+  late List<DialogFoldInfo> trees;
 
   late AnimationController codeAnimationCtl;
 
@@ -49,60 +47,60 @@ class SmartDialogState {
   SmartDialogState() {
     trees = [
       //Dialog
-      TreeTwiceInfo(
+      DialogFoldInfo(
         title: 'Dialog',
-        btnInfo: [
-          BtnInfo(
+        itemInfo: [
+          DialogItemInfo(
             title: 'easy',
             className: 'CustomDialogEasy',
             demo: const CustomDialogEasy(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'location',
             className: 'CustomDialogLocation',
             demo: const CustomDialogLocation(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'penetrate',
             className: 'CustomDialogPenetrate',
             demo: const CustomDialogPenetrate(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'keepSingle',
             className: 'CustomDialogSingle',
             demo: const CustomDialogSingle(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'dialogStack',
             className: 'CustomDialogStack',
             demo: const CustomDialogStack(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'useSystem',
             className: 'CustomDialogSystem',
             demo: const CustomDialogSystem(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'bindPage',
             className: 'CustomDialogBindPage',
             demo: const CustomDialogBindPage(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'carryResult',
             className: 'CustomDialogCarryResult',
             demo: const CustomDialogCarryResult(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'permanent',
             className: 'CustomDialogPermanent',
             demo: const CustomDialogPermanent(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'animationBuilder',
             className: 'CustomDialogAnimation',
             demo: const CustomDialogAnimation(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'bindWidget',
             className: 'CustomDialogBindWidget',
             demo: const CustomDialogBindWidget(),
@@ -111,40 +109,40 @@ class SmartDialogState {
       ),
 
       //Attach
-      TreeTwiceInfo(
+      DialogFoldInfo(
         title: 'Attach',
-        btnInfo: [
-          BtnInfo(
+        itemInfo: [
+          DialogItemInfo(
             title: 'location',
             className: 'AttachDialogLocation',
             demo: const AttachDialogLocation(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'point',
             className: 'AttachDialogPoint',
             demo: const AttachDialogPoint(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'target',
             className: 'AttachDialogTarget',
             demo: const AttachDialogTarget(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'imitate',
             className: 'AttachDialogImitate',
             demo: const AttachDialogImitate(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'business',
             className: 'AttachDialogBusiness',
             demo: const AttachDialogBusiness(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'guide',
             className: 'AttachDialogGuide',
             demo: const AttachDialogGuide(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'scalePointBuilder',
             className: 'AttachDialogScalePoint',
             demo: const AttachDialogScalePoint(),
@@ -153,30 +151,30 @@ class SmartDialogState {
       ),
 
       //Notify
-      TreeTwiceInfo(
+      DialogFoldInfo(
         title: 'Notify',
-        btnInfo: [
-          BtnInfo(
+        itemInfo: [
+          DialogItemInfo(
             title: 'success',
             className: 'NotifyDialogSuccess',
             demo: const NotifyDialogSuccess(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'failure',
             className: 'NotifyDialogFailure',
             demo: const NotifyDialogFailure(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'warning',
             className: 'NotifyDialogWaring',
             demo: const NotifyDialogWaring(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'error',
             className: 'NotifyDialogError',
             demo: const NotifyDialogError(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'alter',
             className: 'NotifyDialogAlter',
             demo: const NotifyDialogAlter(),
@@ -185,25 +183,25 @@ class SmartDialogState {
       ),
 
       //Loading
-      TreeTwiceInfo(
+      DialogFoldInfo(
         title: 'Loading',
-        btnInfo: [
-          BtnInfo(
+        itemInfo: [
+          DialogItemInfo(
             title: 'default',
             className: 'LoadingDefault',
             demo: const LoadingDefault(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'param',
             className: 'LoadingParam',
             demo: const LoadingParam(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'custom',
             className: 'LoadingCustom',
             demo: const LoadingCustom(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'leastTime',
             className: 'LoadingLeastTime',
             demo: const LoadingLeastTime(),
@@ -212,30 +210,30 @@ class SmartDialogState {
       ),
 
       //Toast
-      TreeTwiceInfo(
+      DialogFoldInfo(
         title: 'Toast',
-        btnInfo: [
-          BtnInfo(
+        itemInfo: [
+          DialogItemInfo(
             title: 'default',
             className: 'ToastDefault',
             demo: const ToastDefault(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'custom',
             className: 'ToastCustom',
             demo: const ToastCustom(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'type',
             className: 'ToastType',
             demo: const ToastType(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'smart',
             className: 'ToastSmart',
             demo: const ToastSmart(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'intervalTime',
             className: 'ToastIntervalTime',
             demo: const ToastIntervalTime(),
@@ -244,15 +242,15 @@ class SmartDialogState {
       ),
 
       //Other
-      TreeTwiceInfo(
+      DialogFoldInfo(
         title: 'Other',
-        btnInfo: [
-          BtnInfo(
+        itemInfo: [
+          DialogItemInfo(
             title: 'trick',
             className: 'OtherTrick',
             demo: const OtherTrick(),
           ),
-          BtnInfo(
+          DialogItemInfo(
             title: 'hardClose',
             className: 'OtherHardClose',
             demo: const OtherHardClose(),
@@ -261,4 +259,43 @@ class SmartDialogState {
       ),
     ];
   }
+}
+
+class DialogItemInfo {
+  DialogItemInfo({
+    this.title,
+    this.className,
+    this.demo,
+    this.selected = false,
+  });
+
+  ///按钮名称
+  String? title;
+
+  ///类名
+  String? className;
+
+  /// 该按钮功能demo
+  Widget? demo;
+
+  ///做个控制
+  bool selected;
+}
+
+///树形信息
+class DialogFoldInfo {
+  DialogFoldInfo({
+    required this.title,
+    required this.itemInfo,
+    this.selected = false,
+  });
+
+  ///一级大标题
+  String title;
+
+  ///二级内容
+  List<DialogItemInfo> itemInfo;
+
+  ///做个控制
+  bool selected;
 }

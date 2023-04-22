@@ -1,11 +1,7 @@
-import 'package:code_preview/code_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_use/toolkit/utils/html_utils.dart';
 import 'package:get/get.dart';
 
-import '../../../entity/common/btn_info.dart';
-import '../../../entity/common/tree_info.dart';
 import 'state.dart';
 
 class SmartDialogLogic extends GetxController
@@ -25,7 +21,7 @@ class SmartDialogLogic extends GetxController
 
   void _processLocation() {
     // 处理url定位问题
-    var url = HtmlUtils.curUrl.replaceFirst('/#/', '/');
+    var url = HtmlUtils.curUrl;
     url = url.replaceFirst('/#/', '/');
     url = url.replaceFirst('#/', '/');
     url = url.replaceFirst('/#', '/');
@@ -33,11 +29,11 @@ class SmartDialogLogic extends GetxController
     final type = uri.queryParameters[SmartDialogState.dialogParam];
     for (var element in state.trees) {
       element.selected = false;
-      for (var subElement in element.btnInfo) {
-        if (subElement.tag == type) {
+      for (var subElement in element.itemInfo) {
+        if (subElement.className == type) {
           element.selected = true;
           subElement.selected = true;
-          HtmlUtils.push(state.urlParam, '${subElement.tag}');
+          HtmlUtils.push(state.urlParam, '${subElement.className}');
           notifyChildrens();
           return;
         }
@@ -45,10 +41,10 @@ class SmartDialogLogic extends GetxController
     }
   }
 
-  void onItem(TreeTwiceInfo item, BtnInfo subItem) async {
+  void onItem(DialogFoldInfo item, DialogItemInfo subItem) async {
     for (var element in state.trees) {
       element.selected = false;
-      for (var subElement in element.btnInfo) {
+      for (var subElement in element.itemInfo) {
         subElement.selected = false;
       }
     }
@@ -56,7 +52,7 @@ class SmartDialogLogic extends GetxController
     item.selected = true;
     subItem.selected = true;
     state.codeAnimationCtl.value = 0;
-    HtmlUtils.push(state.urlParam, '${subItem.tag}');
+    HtmlUtils.push(state.urlParam, '${subItem.className}');
     update();
 
     Future.delayed(const Duration(milliseconds: 10), () {
