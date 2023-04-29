@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:code_preview/code_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
@@ -34,6 +35,8 @@ void main() {
   } else {
     appReady();
   }
+  // 相关初始化
+  CodePreview.config = CodePreviewConfig(codeTheme: CodeTheme.light);
 }
 
 class MyApp extends StatelessWidget {
