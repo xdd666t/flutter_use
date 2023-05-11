@@ -10,16 +10,9 @@
 #   注意：省略类型检查可能会导致您的应用程序因类型错误而崩溃
 #  -O4: 在-O3优化基础上,启用更积极的优化
 #   注意：-O4优化容易受到输入数据变化的影响,在依赖-O4之前,需测试用户输入中的边缘情况
-# 去掉未使用icons
-#  - flutter build apk
-#  - 使用apk资源产物, 替换web资源产物
-# 编译出产物移到目标文件位置
 # 代理终端, push到github
 flutter clean && flutter pub get \
 && flutter build web --web-renderer canvaskit --pwa-strategy none \
-&& flutter build apk \
-&& cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/assets/ \
-&& rm -rf ./docs/web/ && cp -r ./build/web/ ./docs/web/ \
 && export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890 \
 && git add . && git commit -m "update web effect" && git push
 
