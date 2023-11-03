@@ -20,7 +20,9 @@ class ToastIntervalTime extends StatelessWidget {
     );
     for (var i = 0; i < 3; i++) {
       SmartDialog.showToast("toast $i").then((value) {
-        if (!SmartDialog.config.isExistToast) {
+        if (!SmartDialog.config.checkExist(dialogTypes: {
+          SmartAllDialogType.toast,
+        })) {
           SmartDialog.config.toast = SmartConfigToast();
         }
       });

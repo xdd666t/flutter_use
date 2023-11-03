@@ -177,8 +177,9 @@ class LoadingInterceptor extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) async {
     //关闭弹窗
-    if (isLoading && SmartDialog.config.isExistLoading)
+    if (isLoading && SmartDialog.config.checkExist()) {
       await SmartDialog.dismiss(status: SmartStatus.loading);
+    }
 
     handler.next(response);
   }
@@ -186,8 +187,9 @@ class LoadingInterceptor extends Interceptor {
   @override
   void onError(DioError err, ErrorInterceptorHandler handler) async {
     //关闭弹窗
-    if (isLoading && SmartDialog.config.isExistLoading)
+    if (isLoading && SmartDialog.config.checkExist()) {
       await SmartDialog.dismiss(status: SmartStatus.loading);
+    }
 
     handler.next(err);
   }

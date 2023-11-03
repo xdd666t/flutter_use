@@ -19,7 +19,7 @@ class ToastSmart extends StatelessWidget {
       "I'm a smart toast",
       displayTime: const Duration(seconds: 6),
     );
-    if (SmartDialog.config.isExistDialog) return;
+    if (SmartDialog.config.checkExist()) return;
 
     SmartDialog.show(
       usePenetrate: true,
