@@ -39,7 +39,7 @@ class CustomDialogLocation extends StatelessWidget {
   }
 
   Future _locationDialog({
-    required AlignmentGeometry alignment,
+    required Alignment alignment,
     double width = double.infinity,
     double height = double.infinity,
   }) async {
