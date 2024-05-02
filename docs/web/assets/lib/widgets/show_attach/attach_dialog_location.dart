@@ -143,7 +143,7 @@ class AttachDialogLocation extends StatelessWidget {
   }
 
   Future _attachDialog(
-      BuildContext context, AlignmentGeometry alignment) async {
+      BuildContext context, Alignment alignment) async {
     SmartDialog.showAttach(
       targetContext: context,
       usePenetrate: true,

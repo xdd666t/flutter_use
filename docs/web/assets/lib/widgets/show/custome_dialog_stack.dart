@@ -69,7 +69,7 @@ class CustomDialogStack extends StatelessWidget {
   }
 
   Future _stackDialog({
-    required AlignmentGeometry alignment,
+    required Alignment alignment,
     required String tag,
     double width = double.infinity,
     double height = double.infinity,
