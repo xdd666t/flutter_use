@@ -2,13 +2,13 @@
 a[b][c]=a[b][c]||[]
 a[b][c].push({p:"main.dart.js_50",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
 $__dart_deferred_initializers__.current=function(a,b,c,$){var B,C,E,F,D,G,A={
-aVQ(){return new A.ol(null)},
-ol:function ol(d){this.a=d},
-a0P:function a0P(d){this.a=null
+b_z(){return new A.oS(null)},
+oS:function oS(d){this.a=d},
+a34:function a34(d){this.a=null
 this.b=d
 this.c=null},
-aC9:function aC9(d){this.a=d},
-aCa:function aCa(){}},H
+aFA:function aFA(d){this.a=d},
+aFB:function aFB(){}},H
 B=c[0]
 C=c[2]
 E=c[59]
@@ -17,34 +17,34 @@ D=c[51]
 G=c[46]
 A=a.updateHolder(c[11],A)
 H=c[62]
-A.ol.prototype={
-a0(){return new A.a0P(C.k)}}
-A.a0P.prototype={
-ab(){var x,w=this.c
+A.oS.prototype={
+a1(){return new A.a34(C.k)}}
+A.a34.prototype={
+ac(){var x,w=this.c
 w.toString
-w=D.qF(w,y.d)
-x=new B.jV()
+w=D.rf(w,y.d)
+x=new B.ki()
 x.a=0
-w.l2(x)
-this.aq()},
-A(d){var x=null,w=F.cU(B.as("\u8de8\u9875\u9762-One",x,x,x,x,x,x)),v=B.dU(H.nm,!1,new A.aC9(d))
-return E.cJ(w,C.i,B.b0(G.a6E(new A.aCa(),y.d,y.h),x,x),x,v)}}
+w.lH(x)
+this.au()},
+A(d){var x=null,w=F.d0(B.at("\u8de8\u9875\u9762-One",x,x,x,x,x,x)),v=B.e4(H.ox,!1,new A.aFA(d))
+return E.cP(w,C.i,B.b0(G.a8Z(new A.aFB(),y.d,y.h),x,x),x,v)}}
 var z=a.updateTypes([])
-A.aC9.prototype={
-$0(){D.qF(this.a,y.d)
-B.dB($.aL(),"/cubitSpanOne/cubitSpanTwo",null,y.b)
+A.aFA.prototype={
+$0(){D.rf(this.a,y.d)
+B.dJ($.aM(),"/cubitSpanOne/cubitSpanTwo",null,y.b)
 return null},
 $S:0}
-A.aCa.prototype={
+A.aFB.prototype={
 $2(d,e){var x=null,w=e.a
 w===$&&B.a()
-return B.as("SpanTwoPage\u70b9\u51fb\u4e86 "+w+" \u6b21",x,x,x,B.bj(x,x,x,x,x,x,x,x,x,x,x,30,x,x,x,x,x,!0,x,x,x,x,x,x,x,x),x,x)},
-$S:537};(function inheritance(){var x=a.inherit
-x(A.ol,B.W)
-x(A.a0P,B.Z)
-x(A.aC9,B.c6)
-x(A.aCa,B.dp)})()
-B.bM(b.typeUniverse,JSON.parse('{"ol":{"W":[],"c":[]},"a0P":{"Z":["ol"]}}'))
-var y={d:B.D("qG"),h:B.D("jV"),b:B.D("@")}};
+return B.at("SpanTwoPage\u70b9\u51fb\u4e86 "+w+" \u6b21",x,x,x,B.bl(x,x,x,x,x,x,x,x,x,x,x,30,x,x,x,x,x,!0,x,x,x,x,x,x,x,x),x,x)},
+$S:548};(function inheritance(){var x=a.inherit
+x(A.oS,B.X)
+x(A.a34,B.a0)
+x(A.aFA,B.ca)
+x(A.aFB,B.dx)})()
+B.bO(b.typeUniverse,JSON.parse('{"oS":{"X":[],"c":[]},"a34":{"a0":["oS"]}}'))
+var y={d:B.E("rg"),h:B.E("ki"),b:B.E("@")}};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_50",e:"endPart",h:b})})($__dart_deferred_initializers__,"nrYWKkOZPDbHP/1hO54u3OMMb48=");
+a.eventLog.push({p:"main.dart.js_50",e:"endPart",h:b})})($__dart_deferred_initializers__,"Vq8EyV4CpwdOJJWYfig2uJVlvYQ=");
