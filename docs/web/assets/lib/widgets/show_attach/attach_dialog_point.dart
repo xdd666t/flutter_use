@@ -26,30 +26,36 @@ class AttachDialogPoint extends StatelessWidget {
   }
 
   void _show() async {
-    SmartDialog.show(builder: (_) {
-      return Container(
-        width: 600,
-        height: 400,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-        ),
-        child: GestureDetector(
-          onTapDown: (detail) => _targetDialog(detail.globalPosition),
-          child: Container(
-            width: 500,
-            height: 300,
-            color: Colors.grey,
-            alignment: Alignment.center,
-            child: const Text(
-              'click me',
-              style: TextStyle(color: Colors.white),
+    SmartDialog.show(
+      clickMaskDismiss: false,
+      onMask: () => SmartDialog.dismiss(),
+      builder: (_) {
+        return Container(
+          width: 600,
+          height: 400,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.white,
+          ),
+          child: GestureDetector(
+            onTapDown: (detail) async {
+              _targetDialog(detail.globalPosition);
+            },
+            child: Container(
+              width: 500,
+              height: 300,
+              color: Colors.grey,
+              alignment: Alignment.center,
+              child: const Text(
+                'click me',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
-        ),
-      );
-    });
+        );
+      },
+    );
   }
 
   void _targetDialog(Offset offset) {
