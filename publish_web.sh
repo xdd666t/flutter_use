@@ -18,3 +18,5 @@ flutter clean && flutter pub get \
 
 # macos执行该命令: bash publish_web.sh
 
+flutter build web --release --base-href="/flutter_use/web/"
+
