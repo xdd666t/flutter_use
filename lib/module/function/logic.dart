@@ -1,5 +1,5 @@
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/app/config/route_config.dart';
-import 'package:flutter_use/app/ui/show.dart';
 import 'package:flutter_use/module/function/state.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +19,7 @@ class FunctionLogic extends GetxController {
         Get.toNamed(RouteConfig.animation);
         break;
       default:
-        showSnackBar(context, '暂无');
+        SmartDialog.showToast('${FunctionLogic().runtimeType}');
         break;
     }
   }

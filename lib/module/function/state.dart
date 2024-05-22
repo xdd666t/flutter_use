@@ -25,12 +25,12 @@ class FunctionState {
       ),
       BtnInfo(
         title: '测试',
-        tag: FunctionStatus.animation,
+        tag: FunctionStatus.testOne,
         bg: ImageFunctionStatus.functionBgFour,
       ),
       BtnInfo(
         title: '测试',
-        tag: FunctionStatus.test,
+        tag: FunctionStatus.testTwo,
         bg: ImageFunctionStatus.functionBgFive,
       ),
     ];
@@ -48,5 +48,6 @@ class FunctionStatus {
   static const String animation = 'animation';
 
   ///测试
-  static const String test = 'test';
+  static const String testOne = 'testOne';
+  static const String testTwo = 'testTwo';
 }
