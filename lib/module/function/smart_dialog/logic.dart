@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/toolkit/utils/html_utils.dart';
+import 'package:flutter_use/toolkit/utils/view_utils.dart';
 import 'package:get/get.dart';
 import 'package:tolyui_navigation/tolyui_navigation.dart';
 
@@ -20,7 +21,8 @@ class SmartDialogLogic extends GetxController
     super.onInit();
   }
 
-  void _processLocation() {
+  void _processLocation() async {
+    // await ViewUtils.initFinish();
     // 处理url定位问题
     var url = HtmlUtils.curUrl;
     url = url.replaceFirst('/#/', '/');
@@ -32,11 +34,15 @@ class SmartDialogLogic extends GetxController
       for (var subNode in node.children) {
         var ext = subNode.data.ext;
         if (ext is DialogItemInfo && ext.className == type) {
-          state.activeMenu = node;
-          state.menuTreeMeta =
-              state.menuTreeMeta.select(node, singleExpand: true);
-          HtmlUtils.push(state.urlParam, '${ext.className}');
-          notifyChildrens();
+          state.menuTreeMeta = MenuTreeMeta(
+            expandMenus: [node.data.router],
+            activeMenu: null,
+            root: MenuNode(
+              children: state.trees,
+              data: const MenuMeta(router: '', label: ''),
+            ),
+          );
+          onItem(subNode);
           return;
         }
       }
