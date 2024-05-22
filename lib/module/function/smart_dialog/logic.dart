@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/toolkit/utils/html_utils.dart';
 import 'package:get/get.dart';
+import 'package:tolyui_navigation/tolyui_navigation.dart';
 
 import 'state.dart';
 
@@ -27,13 +28,14 @@ class SmartDialogLogic extends GetxController
     url = url.replaceFirst('/#', '/');
     final uri = Uri.parse(url);
     final type = uri.queryParameters[SmartDialogState.dialogParam];
-    for (var element in state.trees) {
-      element.selected = false;
-      for (var subElement in element.itemInfo) {
-        if (subElement.className == type) {
-          element.selected = true;
-          subElement.selected = true;
-          HtmlUtils.push(state.urlParam, '${subElement.className}');
+    for (var node in state.trees) {
+      for (var subNode in node.children) {
+        var ext = subNode.data.ext;
+        if (ext is DialogItemInfo && ext.className == type) {
+          state.activeMenu = node;
+          state.menuTreeMeta =
+              state.menuTreeMeta.select(node, singleExpand: true);
+          HtmlUtils.push(state.urlParam, '${ext.className}');
           notifyChildrens();
           return;
         }
@@ -41,18 +43,14 @@ class SmartDialogLogic extends GetxController
     }
   }
 
-  void onItem(DialogFoldInfo item, DialogItemInfo subItem) async {
-    for (var element in state.trees) {
-      element.selected = false;
-      for (var subElement in element.itemInfo) {
-        subElement.selected = false;
-      }
-    }
-
-    item.selected = true;
-    subItem.selected = true;
+  void onItem(MenuNode node) async {
+    state.activeMenu = node;
+    state.menuTreeMeta = state.menuTreeMeta.select(node, singleExpand: true);
     state.codeAnimationCtl.value = 0;
-    HtmlUtils.push(state.urlParam, '${subItem.className}');
+    var ext = node.data.ext;
+    if (ext is DialogItemInfo) {
+      HtmlUtils.push(state.urlParam, '${ext.className}');
+    }
     update();
 
     Future.delayed(const Duration(milliseconds: 10), () {

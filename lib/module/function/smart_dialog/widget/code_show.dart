@@ -57,15 +57,19 @@ class _CodeShow extends StatelessWidget {
     required List<Widget> Function(DialogItemInfo item) builder,
   }) {
     DialogItemInfo? itemInfo;
-    for (var element in data.trees) {
-      element.selected = false;
-      for (var subElement in element.itemInfo) {
-        if (subElement.selected) {
-          itemInfo = subElement;
+    for (var node in data.trees) {
+      for (var subNode in node.children) {
+        if (subNode.data.router == data.activeMenu?.data.router) {
+          var ext = subNode.data.ext;
+          if (ext is! DialogItemInfo) {
+            return Container();
+          }
+          itemInfo = ext as DialogItemInfo?;
           break;
         }
       }
     }
+
     return Expanded(
       child: itemInfo != null ? Row(children: builder(itemInfo)) : Container(),
     );

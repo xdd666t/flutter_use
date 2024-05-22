@@ -1,12 +1,12 @@
 import 'package:code_preview/code_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tolyui_navigation/tolyui_navigation.dart';
 
 import 'logic.dart';
 import 'state.dart';
 
 part 'widget/code_show.dart';
-part 'widget/side_bar_fold.dart';
 
 class SmartDialogPage extends StatelessWidget {
   SmartDialogPage({Key? key}) : super(key: key);
@@ -23,10 +23,10 @@ class SmartDialogPage extends StatelessWidget {
         builder: (logic) {
           return Row(children: [
             // 侧边栏
-            _SideBarFold(
-              data: state,
-              // 点击具体item
-              onItem: (item, subItem) => logic.onItem(item, subItem),
+            TolyRailMenuTree(
+              enableWidthChange: true,
+              meta: state.menuTreeMeta,
+              onSelect: (MenuNode node) => logic.onItem(node),
             ),
 
             // 内容
