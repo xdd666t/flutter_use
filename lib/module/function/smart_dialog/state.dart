@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_use/widgets/other/other_trick.dart';
 import 'package:flutter_use/widgets/show_attach/attach_dialog_business.dart';
 import 'package:flutter_use/widgets/show_attach/attach_dialog_guide.dart';
