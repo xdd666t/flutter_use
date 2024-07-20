@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_use/app/helper/deferred_router.dart';
 import 'package:flutter_use/module/example/bloc/counter_bloc/view.dart'
     deferred as deferred_bl_counter_bloc;
@@ -57,6 +58,8 @@ import 'package:flutter_use/module/function/smart_dialog/view.dart'
 import 'package:flutter_use/module/main/view.dart' deferred as deferred_main;
 import 'package:get/get.dart';
 
+import '../../module/main/view.dart';
+
 class RouteConfig {
   ///主页面
   static const String main = "/";
@@ -102,10 +105,16 @@ class RouteConfig {
   static final List<GetPage> getPages = [
     GetPage(
       name: main,
-      page: () => DeferredRouter(
-        future: deferred_main.loadLibrary(),
-        builder: (_) => deferred_main.MainPage(),
-      ),
+      page: () {
+        if (kIsWeb) {
+          return DeferredRouter(
+            future: deferred_main.loadLibrary(),
+            builder: (_) => deferred_main.MainPage(),
+          );
+        }
+
+        return MainPage();
+      },
     ),
     GetPage(
       name: blCubitCounterPage,
