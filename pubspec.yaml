@@ -21,7 +21,7 @@ dependencies:
 
   # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
   # import 'dart:html' as html; to import 'package:web/web.dart' as html;
-  get: 4.6.6
+  get: ^5.0.0-release-candidate-9
   # 状态管理框架 https://pub.dev/packages/flutter_bloc
   flutter_bloc:
   # 状态管理框架 https://pub.dev/packages/provider

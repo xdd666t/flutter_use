@@ -70,7 +70,7 @@ class _GetBindWidgetState extends State<GetBindWidget> {
     }
 
     var key = widget.bind.runtimeType.toString() + (widget.tag ?? '');
-    GetInstance().delete(key: key);
+    Get.delete(key: key);
   }
 
   ///Batch close GetxController bound to the current page
@@ -83,10 +83,10 @@ class _GetBindWidgetState extends State<GetBindWidget> {
       var type = widget.binds![i].runtimeType.toString();
 
       if (widget.tags == null) {
-        GetInstance().delete(key: type);
+        Get.delete(key: type);
       } else {
         var key = type + (widget.tags?[i] ?? '');
-        GetInstance().delete(key: key);
+        Get.delete(key: key);
       }
     }
   }
