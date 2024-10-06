@@ -11,7 +11,6 @@ import 'package:provider/provider.dart';
 
 import 'app/config/init_config.dart';
 import 'app/config/route_config.dart';
-import 'app/helper/getx_route_observer.dart';
 import 'module/example/provider/easy_p/change_notifier_easy_p.dart';
 import 'module/example/provider/span_page/span_one/provider.dart';
 import 'toolkit/view/custom/custom_loading_widget.dart';
@@ -47,7 +46,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
-      navigatorObservers: [FlutterSmartDialog.observer, GetXRouteObserver()],
+      navigatorObservers: [FlutterSmartDialog.observer],
       builder: FlutterSmartDialog.init(
         toastBuilder: (String msg) => CustomToastWidget(msg: msg),
         loadingBuilder: (String msg) => CustomLoadingWidget(msg: msg),

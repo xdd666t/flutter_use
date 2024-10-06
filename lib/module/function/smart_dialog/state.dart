@@ -30,6 +30,7 @@ import '../../../widgets/show/custome_dialog_permanent.dart';
 import '../../../widgets/show/custome_dialog_single.dart';
 import '../../../widgets/show/custome_dialog_stack.dart';
 import '../../../widgets/show/custome_dialog_system.dart';
+import '../../../widgets/show_attach/attach_dialog_adjust.dart';
 import '../../../widgets/show_attach/attach_dialog_imitate.dart';
 import '../../../widgets/show_attach/attach_dialog_location.dart';
 import '../../../widgets/show_loading/loading_least_time.dart';
@@ -281,6 +282,18 @@ class SmartDialogState {
               ext: DialogItemInfo(
                 className: 'AttachDialogScalePoint',
                 demo: const AttachDialogScalePoint(),
+              ),
+            ),
+            children: [],
+          ),
+          MenuNode(
+            depth: 1,
+            data: MenuMeta(
+              router: "attach/attachAdjustBuilder",
+              label: "attachAdjustBuilder",
+              ext: DialogItemInfo(
+                className: 'AttachDialogAdjust',
+                demo: const AttachDialogAdjust(),
               ),
             ),
             children: [],
