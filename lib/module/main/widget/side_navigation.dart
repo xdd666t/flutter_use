@@ -25,11 +25,17 @@ class _SideNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _buildBg(children: [
-      // 头像
-      _buildHeadImage(),
+      Expanded(
+        child: SingleChildScrollView(
+          child: Column(children: [
+            // 头像
+            _buildHeadImage(),
 
-      // 侧边栏选项
-      _buildItems(),
+            // 侧边栏选项
+            _buildItems(),
+          ]),
+        ),
+      ),
 
       // 缩放
       _buildScale(),
@@ -48,51 +54,49 @@ class _SideNavigation extends StatelessWidget {
   Widget _buildItems() {
     var activeColor = Colors.blue;
     var normalColor = Colors.black;
-    return Expanded(
-      child: Column(
-        children: List.generate(data.sideItems.length, (index) {
-          var item = data.sideItems[index];
-          return GetBuilder<MainLogic>(builder: (logic) {
-            return Container(
-              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-              child: InkWell(
-                borderRadius: BorderRadius.circular(5),
-                onTap: () => onItem(index),
-                child: Container(
-                  height: 35,
-                  padding: const EdgeInsets.only(left: 12),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
+    return Column(
+      children: List.generate(data.sideItems.length, (index) {
+        var item = data.sideItems[index];
+        return GetBuilder<MainLogic>(builder: (logic) {
+          return Container(
+            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(5),
+              onTap: () => onItem(index),
+              child: Container(
+                height: 35,
+                padding: const EdgeInsets.only(left: 12),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: data.selectedIndex == index
+                      ? activeColor.withOpacity(0.1)
+                      : null,
+                ),
+                alignment: Alignment.center,
+                child: Row(children: [
+                  Icon(
+                    item.icon?.icon,
                     color: data.selectedIndex == index
-                        ? activeColor.withOpacity(0.1)
-                        : null,
+                        ? activeColor
+                        : normalColor,
+                    size: 15,
                   ),
-                  alignment: Alignment.center,
-                  child: Row(children: [
-                    Icon(
-                      item.icon?.icon,
+                  const SizedBox(width: 8),
+                  Text(
+                    item.title ?? "",
+                    style: TextStyle(
+                      fontSize: 13,
                       color: data.selectedIndex == index
                           ? activeColor
                           : normalColor,
-                      size: 15,
                     ),
-                    const SizedBox(width: 8),
-                    Text(
-                      item.title ?? "",
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: data.selectedIndex == index
-                            ? activeColor
-                            : normalColor,
-                      ),
-                    ),
-                  ]),
-                ),
+                  ),
+                ]),
               ),
-            );
-          });
-        }),
-      ),
+            ),
+          );
+        });
+      }),
     );
   }
 
@@ -144,4 +148,3 @@ class _SideNavigation extends StatelessWidget {
     );
   }
 }
-
