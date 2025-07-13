@@ -59,7 +59,7 @@ class _CodeShow extends StatelessWidget {
     DialogItemInfo? itemInfo;
     for (var node in data.trees) {
       for (var subNode in node.children) {
-        if (subNode.data.router == data.activeMenu?.data.router) {
+        if (subNode.data.route == data.activeMenu?.data.route) {
           var ext = subNode.data.ext;
           if (ext is! DialogItemInfo) {
             return Container();

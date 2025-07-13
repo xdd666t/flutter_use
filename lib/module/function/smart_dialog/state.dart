@@ -52,16 +52,17 @@ class SmartDialogState {
       //Dialog
       MenuNode(
         depth: 0,
-        data: const MenuMeta(
-          router: "/dialog",
+        data: const IconMenu(
+          CupertinoIcons.app_badge,
+          route: "/dialog",
           label: "Dialog",
-          icon: CupertinoIcons.app_badge,
+          enable: false,
         ),
         children: [
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/easy",
+              route: "/dialog/easy",
               label: "easy",
               ext: DialogItemInfo(
                 className: 'CustomDialogEasy',
@@ -73,7 +74,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/location",
+              route: "/dialog/location",
               label: "location",
               ext: DialogItemInfo(
                 className: 'CustomDialogLocation',
@@ -85,7 +86,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/penetrate",
+              route: "/dialog/penetrate",
               label: "penetrate",
               ext: DialogItemInfo(
                 className: 'CustomDialogPenetrate',
@@ -97,7 +98,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/keepSingle",
+              route: "/dialog/keepSingle",
               label: "keepSingle",
               ext: DialogItemInfo(
                 className: 'CustomDialogSingle',
@@ -109,7 +110,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/dialogStack",
+              route: "/dialog/dialogStack",
               label: "dialogStack",
               ext: DialogItemInfo(
                 className: 'CustomDialogStack',
@@ -121,7 +122,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/useSystem",
+              route: "/dialog/useSystem",
               label: "useSystem",
               ext: DialogItemInfo(
                 className: 'CustomDialogSystem',
@@ -133,7 +134,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/bindPage",
+              route: "/dialog/bindPage",
               label: "bindPage",
               ext: DialogItemInfo(
                 className: 'CustomDialogBindPage',
@@ -145,7 +146,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/carryResult",
+              route: "/dialog/carryResult",
               label: "carryResult",
               ext: DialogItemInfo(
                 className: 'CustomDialogCarryResult',
@@ -157,7 +158,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/permanent",
+              route: "/dialog/permanent",
               label: "permanent",
               ext: DialogItemInfo(
                 className: 'CustomDialogPermanent',
@@ -169,7 +170,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/animationBuilder",
+              route: "/dialog/animationBuilder",
               label: "animationBuilder",
               ext: DialogItemInfo(
                 className: 'CustomDialogAnimation',
@@ -181,7 +182,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "dialog/bindWidget",
+              route: "/dialog/bindWidget",
               label: "bindWidget",
               ext: DialogItemInfo(
                 className: 'CustomDialogBindWidget',
@@ -196,16 +197,16 @@ class SmartDialogState {
       //Attach
       MenuNode(
         depth: 0,
-        data: const MenuMeta(
-          router: "/attach",
+        data: const IconMenu(
+          CupertinoIcons.collections,
+          route: "/attach",
           label: "Attach",
-          icon: CupertinoIcons.collections,
         ),
         children: [
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "attach/location",
+              route: "/attach/location",
               label: "location",
               ext: DialogItemInfo(
                 className: 'AttachDialogLocation',
@@ -217,7 +218,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "attach/point",
+              route: "/attach/point",
               label: "point",
               ext: DialogItemInfo(
                 className: 'AttachDialogPoint',
@@ -229,7 +230,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "attach/target",
+              route: "/attach/target",
               label: "target",
               ext: DialogItemInfo(
                 className: 'AttachDialogTarget',
@@ -241,7 +242,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "attach/imitate",
+              route: "/attach/imitate",
               label: "imitate",
               ext: DialogItemInfo(
                 className: 'AttachDialogImitate',
@@ -253,7 +254,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "attach/business",
+              route: "/attach/business",
               label: "business",
               ext: DialogItemInfo(
                 className: 'AttachDialogBusiness',
@@ -265,7 +266,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "attach/guide",
+              route: "/attach/guide",
               label: "guide",
               ext: DialogItemInfo(
                 className: 'AttachDialogGuide',
@@ -277,7 +278,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "attach/scalePointBuilder",
+              route: "/attach/scalePointBuilder",
               label: "scalePointBuilder",
               ext: DialogItemInfo(
                 className: 'AttachDialogScalePoint',
@@ -289,7 +290,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "attach/attachAdjustBuilder",
+              route: "/attach/attachAdjustBuilder",
               label: "attachAdjustBuilder",
               ext: DialogItemInfo(
                 className: 'AttachDialogAdjust',
@@ -304,16 +305,16 @@ class SmartDialogState {
       //Notify
       MenuNode(
         depth: 0,
-        data: const MenuMeta(
-          router: "/notify",
+        data: const IconMenu(
+          CupertinoIcons.captions_bubble,
+          route: "/notify",
           label: "Notify",
-          icon: CupertinoIcons.captions_bubble,
         ),
         children: [
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "notify/success",
+              route: "/notify/success",
               label: "success",
               ext: DialogItemInfo(
                 className: 'NotifyDialogSuccess',
@@ -325,7 +326,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "notify/failure",
+              route: "/notify/failure",
               label: "failure",
               ext: DialogItemInfo(
                 className: 'NotifyDialogFailure',
@@ -337,7 +338,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "notify/warning",
+              route: "/notify/warning",
               label: "warning",
               ext: DialogItemInfo(
                 className: 'NotifyDialogWaring',
@@ -349,7 +350,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "notify/error",
+              route: "/notify/error",
               label: "error",
               ext: DialogItemInfo(
                 className: 'NotifyDialogError',
@@ -361,7 +362,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "notify/alter",
+              route: "/notify/alter",
               label: "alter",
               ext: DialogItemInfo(
                 className: 'NotifyDialogAlter',
@@ -376,59 +377,59 @@ class SmartDialogState {
       //Loading
       MenuNode(
         depth: 0,
-        data: const MenuMeta(
-          router: "/loading",
+        data: const IconMenu(
+          CupertinoIcons.arrow_2_circlepath,
+          route: "/loading",
           label: "Loading",
-          icon: CupertinoIcons.arrow_2_circlepath,
         ),
         children: [
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "loading/default",
+              route: "/loading/default",
               label: "default",
               ext: DialogItemInfo(
                 className: 'LoadingDefault',
                 demo: const LoadingDefault(),
               ),
             ),
-            children: [],
+            children: const [],
           ),
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "loading/param",
+              route: "/loading/param",
               label: "param",
               ext: DialogItemInfo(
                 className: 'LoadingParam',
                 demo: const LoadingParam(),
               ),
             ),
-            children: [],
+            children: const [],
           ),
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "loading/custom",
+              route: "/loading/custom",
               label: "custom",
               ext: DialogItemInfo(
                 className: 'LoadingCustom',
                 demo: const LoadingCustom(),
               ),
             ),
-            children: [],
+            children: const [],
           ),
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "loading/leastTime",
+              route: "/loading/leastTime",
               label: "leastTime",
               ext: DialogItemInfo(
                 className: 'LoadingLeastTime',
                 demo: const LoadingLeastTime(),
               ),
             ),
-            children: [],
+            children: const [],
           ),
         ],
       ),
@@ -436,16 +437,16 @@ class SmartDialogState {
       //Toast
       MenuNode(
         depth: 0,
-        data: const MenuMeta(
-          router: "/toast",
+        data: const IconMenu(
+          CupertinoIcons.tickets,
+          route: "/toast",
           label: "Toast",
-          icon: CupertinoIcons.tickets,
         ),
         children: [
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "toast/default",
+              route: "/toast/default",
               label: "default",
               ext: DialogItemInfo(
                 className: 'ToastDefault',
@@ -457,7 +458,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "toast/custom",
+              route: "/toast/custom",
               label: "custom",
               ext: DialogItemInfo(
                 className: 'ToastCustom',
@@ -469,7 +470,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "toast/type",
+              route: "/toast/type",
               label: "type",
               ext: DialogItemInfo(
                 className: 'ToastType',
@@ -481,7 +482,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "toast/smart",
+              route: "/toast/smart",
               label: "smart",
               ext: DialogItemInfo(
                 className: 'ToastSmart',
@@ -493,7 +494,7 @@ class SmartDialogState {
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "toast/intervalTime",
+              route: "/toast/intervalTime",
               label: "intervalTime",
               ext: DialogItemInfo(
                 className: 'ToastIntervalTime',
@@ -508,16 +509,16 @@ class SmartDialogState {
       //Other
       MenuNode(
         depth: 0,
-        data: const MenuMeta(
-          router: "/other",
+        data: const IconMenu(
+          CupertinoIcons.plus_app,
+          route: "/other",
           label: "Other",
-          icon: CupertinoIcons.plus_app,
         ),
         children: [
           MenuNode(
             depth: 1,
             data: MenuMeta(
-              router: "other/trick",
+              route: "/other/trick",
               label: "trick",
               ext: DialogItemInfo(
                 className: 'OtherTrick',
@@ -535,13 +536,13 @@ class SmartDialogState {
       activeMenu: null,
       root: MenuNode(
         children: trees,
-        data: const MenuMeta(router: '', label: ''),
+        data: const MenuMeta(route: '', label: ''),
       ),
     );
   }
 }
 
-class DialogItemInfo extends MenuMateExt {
+class DialogItemInfo extends Extra {
   DialogItemInfo({
     this.title,
     this.className,

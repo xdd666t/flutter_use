@@ -35,11 +35,11 @@ class SmartDialogLogic extends GetxController
         var ext = subNode.data.ext;
         if (ext is DialogItemInfo && ext.className == type) {
           state.menuTreeMeta = MenuTreeMeta(
-            expandMenus: [node.data.router],
+            expandMenus: [node.data.route],
             activeMenu: null,
             root: MenuNode(
               children: state.trees,
-              data: const MenuMeta(router: '', label: ''),
+              data: const MenuMeta(route: '', label: ''),
             ),
           );
           onItem(subNode);
@@ -50,15 +50,18 @@ class SmartDialogLogic extends GetxController
   }
 
   void onItem(MenuNode node) async {
-    state.activeMenu = node;
-    state.menuTreeMeta = state.menuTreeMeta.select(node, singleExpand: true);
-    state.codeAnimationCtl.value = 0;
+    state.menuTreeMeta = state.menuTreeMeta.select(node);
     var ext = node.data.ext;
     if (ext is DialogItemInfo) {
       HtmlUtils.push(state.urlParam, '${ext.className}');
     }
     update();
 
+    if (node.children.isNotEmpty) {
+      return;
+    }
+    state.activeMenu = node;
+    state.codeAnimationCtl.value = 0;
     Future.delayed(const Duration(milliseconds: 10), () {
       state.codeAnimationCtl.forward();
       update();
