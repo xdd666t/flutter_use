@@ -25,7 +25,7 @@ class CustomDialogSingle extends StatelessWidget {
     );
   }
 
-  void _show() async {
+  Future<void> _show() async {
     await _singleDialog(false, Alignment.bottomCenter);
     await _singleDialog(true, Alignment.centerRight);
     await _singleDialog(true, Alignment.centerRight);
@@ -35,7 +35,7 @@ class CustomDialogSingle extends StatelessWidget {
     await _singleDialog(true, Alignment.centerRight);
   }
 
-  Future _singleDialog(bool keepSingle, Alignment alignment) async {
+  Future<void> _singleDialog(bool keepSingle, Alignment alignment) async {
     SmartDialog.show(
       alignment: alignment,
       keepSingle: keepSingle,

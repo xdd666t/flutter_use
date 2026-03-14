@@ -29,7 +29,7 @@ class CustomDialogBindPage extends StatelessWidget {
     );
   }
 
-  void _show() async {
+  void _show() {
     _showDialog = () {
       SmartDialog.show(builder: (_) {
         return Container(
@@ -41,7 +41,7 @@ class CustomDialogBindPage extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: ElevatedButton(
-            onPressed: () => _toNewPage(false),
+            onPressed: _toNewPage,
             child: Text('test bindPage $_index'),
           ),
         );
@@ -51,7 +51,7 @@ class CustomDialogBindPage extends StatelessWidget {
     _showDialog?.call();
   }
 
-  Future _toNewPage(bool useSystem) async {
+  Future<void> _toNewPage() async {
     Get.to(
       () {
         return Scaffold(

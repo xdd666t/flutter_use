@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/toolkit/utils/html_utils.dart';
-import 'package:flutter_use/toolkit/utils/view_utils.dart';
 import 'package:get/get.dart';
 import 'package:tolyui_navigation/tolyui_navigation.dart';
 
@@ -21,7 +20,7 @@ class SmartDialogLogic extends GetxController
     super.onInit();
   }
 
-  void _processLocation() async {
+  void _processLocation() {
     // await ViewUtils.initFinish();
     // 处理url定位问题
     var url = HtmlUtils.curUrl;
@@ -49,7 +48,7 @@ class SmartDialogLogic extends GetxController
     }
   }
 
-  void onItem(MenuNode node) async {
+  void onItem(MenuNode node) {
     state.menuTreeMeta = state.menuTreeMeta.select(node);
     var ext = node.data.ext;
     if (ext is DialogItemInfo) {

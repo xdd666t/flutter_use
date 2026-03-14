@@ -17,8 +17,10 @@ class MultiHandleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var items = [];
-    list.forEach((msg) => items.add(BtnInfo(title: msg, tag: msg)));
+    final items = <BtnInfo>[];
+    for (final msg in list) {
+      items.add(BtnInfo(title: msg, tag: msg));
+    }
 
     return Container(
       height: double.infinity,
@@ -29,8 +31,8 @@ class MultiHandleWidget extends StatelessWidget {
       child: FunctionItems(
         items: items,
         onItem: onItem,
-        padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-        constraints: BoxConstraints(minWidth: 80, minHeight: 36.0),
+        padding: EdgeInsets.zero,
+        constraints: const BoxConstraints(minWidth: 80, minHeight: 36),
       ),
     );
   }

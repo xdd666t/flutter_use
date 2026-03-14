@@ -25,7 +25,7 @@ class CustomDialogStack extends StatelessWidget {
     );
   }
 
-  void _show() async {
+  Future<void> _show() async {
     //left
     await _stackDialog(tag: 'A', width: 70, alignment: Alignment.centerLeft);
     //top
@@ -68,7 +68,7 @@ class CustomDialogStack extends StatelessWidget {
     );
   }
 
-  Future _stackDialog({
+  Future<void> _stackDialog({
     required Alignment alignment,
     required String tag,
     double width = double.infinity,

@@ -25,7 +25,7 @@ class CustomDialogLocation extends StatelessWidget {
     );
   }
 
-  void _show() async {
+  Future<void> _show() async {
     //left
     await _locationDialog(width: 70, alignment: Alignment.centerLeft);
     //top
@@ -38,7 +38,7 @@ class CustomDialogLocation extends StatelessWidget {
     await _locationDialog(height: 100, width: 100, alignment: Alignment.center);
   }
 
-  Future _locationDialog({
+  Future<void> _locationDialog({
     required Alignment alignment,
     double width = double.infinity,
     double height = double.infinity,

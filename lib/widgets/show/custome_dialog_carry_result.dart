@@ -14,7 +14,7 @@ class CustomDialogCarryResult extends StatelessWidget {
     );
   }
 
-  void _show() async {
+  Future<void> _show() async {
     var result = await SmartDialog.show(builder: (_) {
       var message = '';
       return Container(

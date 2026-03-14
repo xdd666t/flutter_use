@@ -6,7 +6,7 @@ class CustomLoading extends StatefulWidget {
   final int type;
 
   @override
-  _CustomLoadingState createState() => _CustomLoadingState();
+  State<CustomLoading> createState() => _CustomLoadingState();
 }
 
 class _CustomLoadingState extends State<CustomLoading>
@@ -102,8 +102,8 @@ class _CustomLoadingState extends State<CustomLoading>
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 20),
-            child: Text('loading...'),
+            margin: const EdgeInsets.only(top: 20),
+            child: const Text('loading...'),
           ),
         ]),
       ),

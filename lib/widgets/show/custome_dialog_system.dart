@@ -12,6 +12,7 @@ Color get _randomColor {
     1,
   );
 }
+
 class CustomDialogSystem extends StatelessWidget {
   const CustomDialogSystem({Key? key}) : super(key: key);
 
@@ -25,7 +26,7 @@ class CustomDialogSystem extends StatelessWidget {
     );
   }
 
-  void _show() async {
+  void _show() {
     SmartDialog.show(
       useSystem: true,
       builder: (_) {
@@ -66,7 +67,7 @@ class CustomDialogSystem extends StatelessWidget {
     );
   }
 
-  Future _toNewPage(bool useSystem) async {
+  Future<void> _toNewPage(bool useSystem) async {
     SmartDialog.show(
       useSystem: useSystem,
       bindPage: false,

@@ -14,7 +14,7 @@ class CustomDialogAnimation extends StatelessWidget {
     );
   }
 
-  void _show() async {
+  void _show() {
     SmartDialog.show(
       animationTime: const Duration(milliseconds: 3000),
       animationBuilder: (

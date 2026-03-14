@@ -29,9 +29,9 @@ class _CodeShow extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Colors.grey.withOpacity(0.12),
+          color: Colors.grey.withValues(alpha: 0.12),
         ),
-        child: item.demo ?? Container(),
+        child: item.demo ?? const SizedBox.shrink(),
       ),
     );
   }
@@ -56,22 +56,25 @@ class _CodeShow extends StatelessWidget {
   Widget _buildBg({
     required List<Widget> Function(DialogItemInfo item) builder,
   }) {
+    final activeRoute = data.activeMenu?.data.route;
     DialogItemInfo? itemInfo;
     for (var node in data.trees) {
       for (var subNode in node.children) {
-        if (subNode.data.route == data.activeMenu?.data.route) {
+        if (subNode.data.route == activeRoute) {
           var ext = subNode.data.ext;
           if (ext is! DialogItemInfo) {
-            return Container();
+            return const SizedBox.shrink();
           }
-          itemInfo = ext as DialogItemInfo?;
+          itemInfo = ext;
           break;
         }
       }
     }
 
     return Expanded(
-      child: itemInfo != null ? Row(children: builder(itemInfo)) : Container(),
+      child: itemInfo != null
+          ? Row(children: builder(itemInfo))
+          : const SizedBox.shrink(),
     );
   }
 }

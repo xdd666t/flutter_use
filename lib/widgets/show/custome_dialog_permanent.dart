@@ -1,20 +1,9 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:get/get.dart';
-
-Color get _randomColor {
-  return Color.fromRGBO(
-    Random().nextInt(256),
-    Random().nextInt(256),
-    Random().nextInt(256),
-    1,
-  );
-}
 
 class CustomDialogPermanent extends StatelessWidget {
   const CustomDialogPermanent({Key? key}) : super(key: key);
+  static const String _permanentTag = 'permanentDialog';
 
   @override
   Widget build(BuildContext context) {
@@ -26,76 +15,74 @@ class CustomDialogPermanent extends StatelessWidget {
     );
   }
 
-  void _show() async {
+  void _show() {
     SmartDialog.show(
-      useSystem: true,
       builder: (_) {
         return Container(
-          width: 500,
-          height: 300,
+          width: 320,
+          height: 180,
+          alignment: Alignment.center,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
           ),
-          child: Column(children: [
-            Container(
-              margin: const EdgeInsets.only(top: 50),
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              child: const Text(
-                '使用useSystem参数，可解决在弹窗上跳转新页面问题 \n\n'
-                'Use the useSystem param to solve the problem of jumping to a new page on the dialog',
-                textAlign: TextAlign.center,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Padding(
+                padding: EdgeInsets.fromLTRB(20, 25, 20, 20),
+                child: Text(
+                  'permanent 示例：\nmask 点击、返回事件都不会关闭侧边弹窗',
+                  textAlign: TextAlign.center,
+                ),
               ),
-            ),
-            Expanded(
-              child: Center(
-                child: Wrap(spacing: 50, children: [
+              Wrap(
+                spacing: 20,
+                children: [
                   ElevatedButton(
-                    onPressed: () => _toNewPage(false),
-                    child: const Text('not useSystem'),
+                    onPressed: _openPermanentDialog,
+                    child: const Text('open'),
                   ),
                   ElevatedButton(
-                    onPressed: () => _toNewPage(true),
-                    child: const Text('useSystem'),
+                    onPressed: () =>
+                        SmartDialog.dismiss(tag: _permanentTag, force: true),
+                    child: const Text('force close'),
                   ),
-                ]),
+                ],
               ),
-            )
-          ]),
+            ],
+          ),
         );
       },
     );
   }
 
-  Future _toNewPage(bool useSystem) async {
+  void _openPermanentDialog() {
     SmartDialog.show(
-      useSystem: useSystem,
-      bindPage: false,
+      tag: _permanentTag,
+      keepSingle: true,
+      permanent: true,
+      alignment: Alignment.centerRight,
+      usePenetrate: true,
+      clickMaskDismiss: false,
       builder: (_) {
         return Container(
-          color: Colors.white,
-          padding: const EdgeInsets.all(30),
-          child: Text(
-            '跳转页面前测试弹窗(Test dialog before jumping to the page)\n\nuseSystem：$useSystem\nbindPage：false',
-            textAlign: TextAlign.center,
+          width: 170,
+          height: double.infinity,
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(15),
+              bottomLeft: Radius.circular(15),
+            ),
+            boxShadow: [
+              BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2),
+            ],
           ),
+          child: const Text('permanent dialog'),
         );
       },
-    );
-    await Future.delayed(const Duration(milliseconds: 800));
-    Get.to(
-      () => Scaffold(
-        appBar: AppBar(title: const Text('New Page')),
-        body: Container(
-          color: _randomColor,
-          alignment: Alignment.center,
-          child: const Text(
-            'New Page',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-      ),
-      preventDuplicates: false,
     );
   }
 }

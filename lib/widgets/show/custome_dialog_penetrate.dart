@@ -3,6 +3,7 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class CustomDialogPenetrate extends StatelessWidget {
   const CustomDialogPenetrate({Key? key}) : super(key: key);
+  static const String _penetrateTag = 'penetrateDialog';
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +27,11 @@ class CustomDialogPenetrate extends StatelessWidget {
         ),
         child: Wrap(spacing: 20, children: [
           ElevatedButton(
-            onPressed: () => _openPermanentDialog(),
+            onPressed: _openPenetrateDialog,
             child: const Text('open'),
           ),
           ElevatedButton(
-            onPressed: () => SmartDialog.dismiss(force: true),
+            onPressed: () => SmartDialog.dismiss(tag: _penetrateTag),
             child: const Text('close'),
           )
         ]),
@@ -38,9 +39,10 @@ class CustomDialogPenetrate extends StatelessWidget {
     });
   }
 
-  void _openPermanentDialog() {
+  void _openPenetrateDialog() {
     SmartDialog.show(
-      permanent: true,
+      tag: _penetrateTag,
+      keepSingle: true,
       alignment: Alignment.centerRight,
       usePenetrate: true,
       clickMaskDismiss: false,
@@ -59,7 +61,7 @@ class CustomDialogPenetrate extends StatelessWidget {
               BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2)
             ],
           ),
-          child: const Text('permanent dialog'),
+          child: const Text('penetrate dialog'),
         );
       },
     );
