@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class ProEasyCounterPage extends StatelessWidget {
+  const ProEasyCounterPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(

@@ -5,6 +5,8 @@ import 'package:flutter_use/module/example/provider/easy_p/easy_p.dart';
 import 'logic.dart';
 
 class CounterGlobalEasyPPage extends StatelessWidget {
+  const CounterGlobalEasyPPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final easyP = EasyP.of<CounterGlobalEasyP>(context);
@@ -13,10 +15,7 @@ class CounterGlobalEasyPPage extends StatelessWidget {
       appBar: AppBar(title: Text('自定义状态管理框架-EasyP全局范例')),
       body: Center(
         child: EasyPBuilder<CounterGlobalEasyP>(() {
-          return Text(
-            '点击了 ${easyP.count} 次',
-            style: TextStyle(fontSize: 30.0),
-          );
+          return Text('点击了 ${easyP.count} 次', style: TextStyle(fontSize: 30.0));
         }),
       ),
       floatingActionButton: FloatingActionButton(

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TestNotifierWidget extends StatefulWidget {
-  const TestNotifierWidget({
-    Key? key,
-    this.controller,
-  }) : super(key: key);
+  const TestNotifierWidget({super.key, this.controller});
 
   final TestNotifierController? controller;
 

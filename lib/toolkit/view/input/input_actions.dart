@@ -1,74 +1,38 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_use/toolkit/typedef/function.dart';
 import 'package:flutter_use/toolkit/view/input/focus_widget.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
+/// Adds a platform-aware keyboard toolbar around an input field.
 class InputActions extends StatelessWidget {
-  InputActions({
+  const InputActions({
+    super.key,
     required this.context,
     required this.focusNode,
     required this.child,
   });
 
+  // Kept as part of the public API for callers that already pass their build
+  // context. The keyboard_actions package resolves platform details from the
+  // current widget context, so the value is intentionally not used directly.
   final BuildContext context;
 
-  ///切记,一个界面存在多个输入控件, 焦点节点对象不能使用同一个
-  ///每一个不同的TextField控件,都应该对应不同的FocusNode对象
+  /// Each input field must own a distinct focus node.
   final FocusNode focusNode;
 
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
-    return KeyboardActions(
-      config: buildIOSKeyBoardNumberConfig(context, focusNode),
-      disableScroll: true,
-      child: FocusWidget(
-        child: child,
+    return KeyboardActions.done(
+      enabled: defaultTargetPlatform == TargetPlatform.iOS,
+      doneText: '完成',
+      child: KeyboardField(
         focusNode: focusNode,
+        showArrows: false,
+        onDone: focusNode.unfocus,
+        child: FocusWidget(focusNode: focusNode, child: child),
       ),
-    );
-  }
-
-  /// 配置iOS数字输入框
-  static KeyboardActionsConfig buildIOSKeyBoardNumberConfig(
-    BuildContext context,
-    FocusNode focusNode, {
-    ParamVoidCallback? doneCallBack,
-  }) {
-    return KeyboardActionsConfig(
-      keyboardActionsPlatform: KeyboardActionsPlatform.IOS,
-      keyboardBarColor: Colors.grey[200],
-      nextFocus: false,
-      actions: [
-        KeyboardActionsItem(
-          focusNode: focusNode,
-          displayDoneButton: true,
-          onTapAction: () {
-            doneCallBack?.call();
-
-            focusNode.unfocus();
-          },
-          toolbarButtons: [
-            (node) {
-              return GestureDetector(
-                onTap: () {
-                  doneCallBack?.call();
-                  node.unfocus();
-                },
-                child: Container(
-                  color: Colors.white,
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    "完成",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                ),
-              );
-            },
-          ],
-        ),
-      ],
     );
   }
 }

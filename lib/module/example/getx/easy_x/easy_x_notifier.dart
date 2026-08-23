@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 ///自定义个监听触发类
 class EasyXNotifier {
-  List<VoidCallback> _listeners = [];
+  final List<VoidCallback> _listeners = [];
 
   void addListener(VoidCallback listener) => _listeners.add(listener);
 

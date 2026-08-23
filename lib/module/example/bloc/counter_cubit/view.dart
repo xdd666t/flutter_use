@@ -5,6 +5,8 @@ import 'cubit.dart';
 import 'state.dart';
 
 class BlCubitCounterPage extends StatelessWidget {
+  const BlCubitCounterPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

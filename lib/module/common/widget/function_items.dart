@@ -5,13 +5,13 @@ import 'package:flutter_use/toolkit/typedef/function.dart';
 import 'package:flutter_use/toolkit/view/custom/custom_single_child_scroll_view.dart';
 
 class FunctionItems extends StatelessWidget {
-  FunctionItems({
-    Key? key,
+  const FunctionItems({
+    super.key,
     required this.items,
     required this.onItem,
     this.constraints = const BoxConstraints(minWidth: 150, minHeight: 36.0),
     this.padding = const EdgeInsets.all(30),
-  }) : super(key: key);
+  });
 
   ///数据源
   final List<BtnInfo> items;
@@ -29,11 +29,7 @@ class FunctionItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return _buildBg(
       children: items.map((e) {
-        return btnFunction(
-          data: e,
-          onItem: onItem,
-          constraints: constraints,
-        );
+        return btnFunction(data: e, onItem: onItem, constraints: constraints);
       }).toList(),
     );
   }
@@ -62,9 +58,7 @@ Widget btnFunction({
     padding: EdgeInsets.all(15.dp),
     child: RawMaterialButton(
       fillColor: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.dp),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.dp)),
       constraints: constraints,
       elevation: 5,
       onPressed: () => onItem(data.tag),

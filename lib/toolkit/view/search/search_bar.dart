@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_use/app/ui/auto_ui.dart';
@@ -11,7 +10,8 @@ typedef SearchParamSingleCallback<D> = dynamic Function(D data);
 typedef SearchParamVoidCallback = dynamic Function();
 
 class SearchBar extends StatefulWidget {
-  SearchBar({
+  const SearchBar({
+    super.key,
     this.inputFormatters,
     this.hintText = '请输入',
     this.hintColor = const Color(0xFFCCCCCC),
@@ -68,6 +68,7 @@ class _SearchBarState extends State<SearchBar>
     with SingleTickerProviderStateMixin {
   late FocusNode focusNode;
   late TextEditingController controller;
+  late bool _ownsController;
 
   ///动画
   late AnimationController animationController;
@@ -78,41 +79,63 @@ class _SearchBarState extends State<SearchBar>
     super.initState();
 
     focusNode = FocusNode();
+    _ownsController = widget.controller == null;
     controller = widget.controller ?? TextEditingController();
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
     );
-    animation = Tween(begin: 0.0, end: 1.0)
-        .chain(CurveTween(curve: Curves.easeIn))
-        .animate(animationController);
+    animation = Tween<double>(
+      begin: 0,
+      end: 1,
+    ).chain(CurveTween(curve: Curves.easeIn)).animate(animationController);
 
     //监听输入框数值变化
-    controller.addListener(() {
-      //处理下删除图标的显示
-      String msg = controller.text;
-      if (msg.length != 0) {
-        animationController.forward();
-      } else {
-        animationController.reverse();
-      }
-    });
+    controller.addListener(_handleControllerChanged);
+    _updateClearButton();
+  }
+
+  void _handleControllerChanged() {
+    _updateClearButton();
+  }
+
+  void _updateClearButton() {
+    if (controller.text.isNotEmpty) {
+      animationController.forward();
+    } else {
+      animationController.reverse();
+    }
+  }
+
+  @override
+  void didUpdateWidget(covariant SearchBar oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.controller == widget.controller) return;
+
+    controller.removeListener(_handleControllerChanged);
+    if (_ownsController) {
+      controller.dispose();
+    }
+    _ownsController = widget.controller == null;
+    controller = widget.controller ?? TextEditingController();
+    controller.addListener(_handleControllerChanged);
+    _updateClearButton();
   }
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      //搜索icon
-      _buildSearchIcon(),
+    return _buildBg(
+      children: [
+        //搜索icon
+        _buildSearchIcon(),
 
-      //输入框
-      buildSearchInput(),
+        //输入框
+        buildSearchInput(),
 
-      //删除图标
-      Expanded(
-        child: buildSearchDelete(),
-      )
-    ]);
+        //删除图标
+        Expanded(child: buildSearchDelete()),
+      ],
+    );
   }
 
   Widget buildSearchDelete() {
@@ -137,11 +160,7 @@ class _SearchBarState extends State<SearchBar>
           scale: animation,
           child: Container(
             padding: EdgeInsets.all(10.dp),
-            child: Icon(
-              Icons.clear,
-              size: 38.dp,
-              color: widget.iconColor,
-            ),
+            child: Icon(Icons.clear, size: 38.dp, color: widget.iconColor),
           ),
         ),
       ),
@@ -161,20 +180,14 @@ class _SearchBarState extends State<SearchBar>
           keyboardType: widget.keyboardType,
           autofocus: widget.autofocus ?? false,
           textAlign: TextAlign.start,
-          style: TextStyle(
-            color: widget.textColor,
-            fontSize: 28.sp,
-          ),
+          style: TextStyle(color: widget.textColor, fontSize: 28.sp),
           inputFormatters: widget.inputFormatters,
           textInputAction: TextInputAction.search,
           decoration: InputDecoration(
             ///较小空间时，使组件正常渲染，包括文本垂直居中
             isDense: true,
             hintText: widget.hintText,
-            hintStyle: TextStyle(
-              color: widget.hintColor,
-              fontSize: 24.sp,
-            ),
+            hintStyle: TextStyle(color: widget.hintColor, fontSize: 24.sp),
             border: InputBorder.none,
             contentPadding: EdgeInsets.all(0.0),
           ),
@@ -189,7 +202,7 @@ class _SearchBarState extends State<SearchBar>
               widget.onComplete!(controller.text);
             }
 
-            FocusScope.of(context).requestFocus(FocusNode());
+            FocusScope.of(context).unfocus();
           },
         ),
       ),
@@ -218,8 +231,12 @@ class _SearchBarState extends State<SearchBar>
 
   @override
   void dispose() {
-    super.dispose();
+    controller.removeListener(_handleControllerChanged);
     animationController.dispose();
-    controller.dispose();
+    if (_ownsController) {
+      controller.dispose();
+    }
+    focusNode.dispose();
+    super.dispose();
   }
 }

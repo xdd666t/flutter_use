@@ -1,1 +1,1 @@
-library flutter_toolkit;
+library;

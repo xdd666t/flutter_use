@@ -18,10 +18,10 @@ class EasyP {
 
   /// 获取距离当前Element最近继承InheritedElement<T>的组件
   static EasyPInheritedElement<T>
-      _getInheritedElement<T extends ChangeNotifier>(BuildContext context) {
-    var inheritedElement = context
-            .getElementForInheritedWidgetOfExactType<EasyPInherited<T>>()
-        as EasyPInheritedElement<T>?;
+  _getInheritedElement<T extends ChangeNotifier>(BuildContext context) {
+    var inheritedElement =
+        context.getElementForInheritedWidgetOfExactType<EasyPInherited<T>>()
+            as EasyPInheritedElement<T>?;
 
     if (inheritedElement == null) {
       throw EasyPNotFoundException(T);

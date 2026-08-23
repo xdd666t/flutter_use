@@ -14,7 +14,7 @@ Color get _randomColor {
 }
 
 class CustomDialogSystem extends StatelessWidget {
-  const CustomDialogSystem({Key? key}) : super(key: key);
+  const CustomDialogSystem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,31 +37,36 @@ class CustomDialogSystem extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
           ),
-          child: Column(children: [
-            Container(
-              margin: const EdgeInsets.only(top: 50),
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              child: const Text(
-                '使用useSystem参数，可解决在弹窗上跳转新页面问题 \n\n'
-                'Use the useSystem param to solve the problem of jumping to a new page on the dialog',
-                textAlign: TextAlign.center,
+          child: Column(
+            children: [
+              Container(
+                margin: const EdgeInsets.only(top: 50),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: const Text(
+                  '使用useSystem参数，可解决在弹窗上跳转新页面问题 \n\n'
+                  'Use the useSystem param to solve the problem of jumping to a new page on the dialog',
+                  textAlign: TextAlign.center,
+                ),
               ),
-            ),
-            Expanded(
-              child: Center(
-                child: Wrap(spacing: 50, children: [
-                  ElevatedButton(
-                    onPressed: () => _toNewPage(false),
-                    child: const Text('not useSystem'),
+              Expanded(
+                child: Center(
+                  child: Wrap(
+                    spacing: 50,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () => _toNewPage(false),
+                        child: const Text('not useSystem'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () => _toNewPage(true),
+                        child: const Text('useSystem'),
+                      ),
+                    ],
                   ),
-                  ElevatedButton(
-                    onPressed: () => _toNewPage(true),
-                    child: const Text('useSystem'),
-                  ),
-                ]),
+                ),
               ),
-            )
-          ]),
+            ],
+          ),
         );
       },
     );
@@ -89,10 +94,7 @@ class CustomDialogSystem extends StatelessWidget {
         body: Container(
           color: _randomColor,
           alignment: Alignment.center,
-          child: const Text(
-            'New Page',
-            style: TextStyle(color: Colors.white),
-          ),
+          child: const Text('New Page', style: TextStyle(color: Colors.white)),
         ),
       ),
       preventDuplicates: false,

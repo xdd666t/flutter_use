@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/config/image_config.dart';
 import 'package:flutter_use/app/ui/auto_ui.dart';
@@ -7,14 +6,14 @@ import 'package:flutter_use/toolkit/typedef/function.dart';
 ///搜索框 个人信息 设置等按钮
 class HimalayaPersonalInfo extends StatelessWidget {
   const HimalayaPersonalInfo({
-    Key? key,
+    super.key,
     required this.onRefresh,
     required this.onLeftArrow,
     required this.onRightArrow,
     required this.onSetting,
     required this.onSkin,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   ///左右箭头回调
   final ParamVoidCallback onLeftArrow;
@@ -34,28 +33,30 @@ class HimalayaPersonalInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      //左图标
-      _buildLeftArrow(),
+    return _buildBg(
+      children: [
+        //左图标
+        _buildLeftArrow(),
 
-      //右图标
-      _buildRightArrow(),
+        //右图标
+        _buildRightArrow(),
 
-      //刷新图标
-      _buildRefresh(),
+        //刷新图标
+        _buildRefresh(),
 
-      //搜索框
-      _buildSearch(),
+        //搜索框
+        _buildSearch(),
 
-      //头像
-      _buildHeadImg(),
+        //头像
+        _buildHeadImg(),
 
-      //皮肤
-      _buildSkin(),
+        //皮肤
+        _buildSkin(),
 
-      //设置
-      _buildSetting(),
-    ]);
+        //设置
+        _buildSetting(),
+      ],
+    );
   }
 
   Widget _buildRefresh() {
@@ -89,11 +90,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 15.dp),
       child: IconButton(
-        icon: const Icon(
-          Icons.settings,
-          color: Colors.grey,
-          size: 20,
-        ),
+        icon: const Icon(Icons.settings, color: Colors.grey, size: 20),
         onPressed: onSetting,
       ),
     );
@@ -103,11 +100,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 15.dp),
       child: IconButton(
-        icon: const Icon(
-          Icons.electric_bolt,
-          color: Colors.grey,
-          size: 20,
-        ),
+        icon: const Icon(Icons.electric_bolt, color: Colors.grey, size: 20),
         onPressed: onSkin,
       ),
     );
@@ -132,34 +125,36 @@ class HimalayaPersonalInfo extends StatelessWidget {
       width: 300.dp,
       margin: EdgeInsets.symmetric(horizontal: 15.dp),
       decoration: BoxDecoration(
-        color: Colors.grey.withOpacity(0.1),
+        color: Colors.grey.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(36),
       ),
-      child: Row(children: [
-        //搜索图标
-        Container(
-          margin: EdgeInsets.only(left: 10.dp),
-          child: const Icon(Icons.search, color: Colors.grey, size: 18),
-        ),
-
-        //输入框
-        Container(
-          width: 250.dp,
-          padding: EdgeInsets.only(left: 12.dp),
-          child: TextField(
-            autofocus: false,
-            textAlign: TextAlign.start,
-            textInputAction: TextInputAction.search,
-            decoration: const InputDecoration(
-              ///较小空间时，使组件正常渲染，包括文本垂直居中
-              isDense: true,
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.all(0.0),
-            ),
-            onChanged: onChanged,
+      child: Row(
+        children: [
+          //搜索图标
+          Container(
+            margin: EdgeInsets.only(left: 10.dp),
+            child: const Icon(Icons.search, color: Colors.grey, size: 18),
           ),
-        ),
-      ]),
+
+          //输入框
+          Container(
+            width: 250.dp,
+            padding: EdgeInsets.only(left: 12.dp),
+            child: TextField(
+              autofocus: false,
+              textAlign: TextAlign.start,
+              textInputAction: TextInputAction.search,
+              decoration: const InputDecoration(
+                ///较小空间时，使组件正常渲染，包括文本垂直居中
+                isDense: true,
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.all(0.0),
+              ),
+              onChanged: onChanged,
+            ),
+          ),
+        ],
+      ),
     );
   }
 

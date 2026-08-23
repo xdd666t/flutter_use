@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class DeferredRouter extends StatelessWidget {
   const DeferredRouter({
-    Key? key,
+    super.key,
     required this.future,
     required this.builder,
-  }) : super(key: key);
+  });
 
   final Future future;
 

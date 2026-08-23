@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 
 class CustomLoadingWidget extends StatelessWidget {
-  CustomLoadingWidget({Key? key, required this.msg}) : super(key: key);
+  const CustomLoadingWidget({super.key, required this.msg});
 
   final String msg;
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      CircularProgressIndicator(
-        strokeWidth: 3,
-        valueColor: AlwaysStoppedAnimation(Colors.white),
-      ),
-      Container(
-        margin: EdgeInsets.only(top: 20),
-        child: Text(msg, style: TextStyle(color: Colors.white)),
-      ),
-    ]);
+    return _buildBg(
+      children: [
+        CircularProgressIndicator(
+          strokeWidth: 3,
+          valueColor: AlwaysStoppedAnimation(Colors.white),
+        ),
+        Container(
+          margin: EdgeInsets.only(top: 20),
+          child: Text(msg, style: TextStyle(color: Colors.white)),
+        ),
+      ],
+    );
   }
 
   Widget _buildBg({required List<Widget> children}) {

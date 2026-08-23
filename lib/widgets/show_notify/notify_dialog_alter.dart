@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class NotifyDialogAlter extends StatelessWidget {
-  const NotifyDialogAlter({Key? key}) : super(key: key);
+  const NotifyDialogAlter({super.key});
 
   @override
   Widget build(BuildContext context) {

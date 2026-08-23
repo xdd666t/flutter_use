@@ -17,10 +17,13 @@ class ExampleState {
           BtnInfo(title: 'GetX实例-自动释放', tag: ExampleStatus.getAutoDispose),
           BtnInfo(title: '计数器-binding', tag: ExampleStatus.getCounterBinding),
           BtnInfo(
-              title: 'EasyX-自定义EasyBuilder刷新机制',
-              tag: ExampleStatus.counterEasyXBuilder),
+            title: 'EasyX-自定义EasyBuilder刷新机制',
+            tag: ExampleStatus.counterEasyXBuilder,
+          ),
           BtnInfo(
-              title: 'EasyX-自定义ebx刷新机制', tag: ExampleStatus.counterEasyXEbx),
+            title: 'EasyX-自定义ebx刷新机制',
+            tag: ExampleStatus.counterEasyXEbx,
+          ),
         ],
       ),
 
@@ -48,8 +51,9 @@ class ExampleState {
           BtnInfo(title: '自定义Builder', tag: ExampleStatus.customBuilder),
           BtnInfo(title: '自定义状态管理框架-EasyP', tag: ExampleStatus.counterEasyP),
           BtnInfo(
-              title: '自定义状态管理框架-EasyP全局',
-              tag: ExampleStatus.counterGlobalEasyP),
+            title: '自定义状态管理框架-EasyP全局',
+            tag: ExampleStatus.counterGlobalEasyP,
+          ),
         ],
       ),
 

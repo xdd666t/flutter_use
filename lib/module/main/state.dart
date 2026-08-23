@@ -9,28 +9,22 @@ import '../../app/icon/x_icons.dart';
 
 class MainState {
   ///选择index
-  late int selectedIndex;
+  int selectedIndex = 0;
 
   ///控制是否展开
-  late bool isUnfold;
+  bool isUnfold = false;
 
   ///是否缩放
-  late bool isScale;
+  bool isScale = false;
 
   ///Navigation的item信息
-  late List<BtnInfo> sideItems;
+  late final List<BtnInfo> sideItems;
 
   ///PageView页面
-  late List<Widget> pageList;
-  late PageController pageController;
+  late final List<Widget> pageList;
+  late final PageController pageController;
 
   MainState() {
-    //初始化index
-    selectedIndex = 0;
-    //默认不展开
-    isUnfold = false;
-    //默认不缩放
-    isScale = false;
     //PageView页面
     pageList = [
       const KeepAlivePage(child: FunctionPage()),
@@ -40,20 +34,15 @@ class MainState {
 
     //item栏目
     sideItems = [
-      BtnInfo(
-        title: "功能",
-        icon: const Icon(XIcons.iterate),
-      ),
-      BtnInfo(
-        title: "范例",
-        icon: const Icon(XIcons.product),
-      ),
-      BtnInfo(
-        title: "设置",
-        icon: const Icon(XIcons.settings),
-      ),
+      BtnInfo(title: "功能", icon: const Icon(XIcons.iterate)),
+      BtnInfo(title: "范例", icon: const Icon(XIcons.product)),
+      BtnInfo(title: "设置", icon: const Icon(XIcons.settings)),
     ];
     //页面控制器
     pageController = PageController();
+  }
+
+  void dispose() {
+    pageController.dispose();
   }
 }

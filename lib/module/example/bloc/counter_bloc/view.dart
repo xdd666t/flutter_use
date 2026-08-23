@@ -6,6 +6,8 @@ import 'event.dart';
 import 'state.dart';
 
 class BlBlocCounterPage extends StatelessWidget {
+  const BlBlocCounterPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

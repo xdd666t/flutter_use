@@ -6,10 +6,9 @@ class HtmlUtils {
   }
 
   static void push(String prefix, String path) {
-    var list = curUrl.split(prefix);
-    var origin = html.window.location.origin;
-    // 必须判空, 不然除web平台外, 汇编会报错
-    var curPath = curUrl.replaceFirst(origin ?? '', '');
+    final list = curUrl.split(prefix);
+    final String? origin = html.window.location.origin;
+    final curPath = curUrl.replaceFirst(origin ?? '', '');
     if (list.length == 2) {
       html.window.history.pushState(null, '', '${list[0]}$prefix$path');
     } else {

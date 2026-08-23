@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class OtherHardClose extends StatelessWidget {
-  const OtherHardClose({Key? key}) : super(key: key);
+  const OtherHardClose({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class OtherHardClose extends StatelessWidget {
 
   void _show() async {
     SmartDialog.show(
-      backDismiss: false,
+      backType: SmartBackType.block,
       clickMaskDismiss: false,
       builder: (_) {
         return Container(
@@ -53,7 +53,7 @@ class OtherHardClose extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () => SmartDialog.dismiss(),
                   child: const Text('再会！'),
-                )
+                ),
               ],
             ),
           ),

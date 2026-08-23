@@ -6,6 +6,8 @@ import 'logic.dart';
 import 'state.dart';
 
 class CounterEasyCPage extends StatelessWidget {
+  const CounterEasyCPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return EasyCProvider(

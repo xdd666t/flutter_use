@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 /// 错误处理拦截器
 class ErrorInterceptor extends Interceptor {
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) {
     // error统一处理
-    AppException appException = AppException.init(err);
+    final appException = AppException.init(err);
     // 错误提示
     debugPrint('DioError===: ${appException.toString()}');
 
-    err.copyWith(error: {err: appException});
+    final normalizedError = err.copyWith(error: appException);
 
-    handler.next(err);
+    handler.next(normalizedError);
   }
 }
 
@@ -23,19 +23,20 @@ class AppException implements Exception {
 
   AppException(this.code, this.message);
 
-  String toString() => "$code$message";
+  @override
+  String toString() => '$code$message';
 
-  factory AppException.init(DioError error) {
+  factory AppException.init(DioException error) {
     switch (error.type) {
-      case DioErrorType.cancel:
+      case DioExceptionType.cancel:
         return AppException(-1, "请求取消");
-      case DioErrorType.connectionTimeout:
+      case DioExceptionType.connectionTimeout:
         return AppException(-1, "连接超时");
-      case DioErrorType.sendTimeout:
+      case DioExceptionType.sendTimeout:
         return AppException(-1, "请求超时");
-      case DioErrorType.receiveTimeout:
+      case DioExceptionType.receiveTimeout:
         return AppException(-1, "响应超时");
-      case DioErrorType.badResponse:
+      case DioExceptionType.badResponse:
         try {
           int errCode = error.response?.statusCode ?? -1;
           switch (errCode) {
@@ -59,12 +60,19 @@ class AppException implements Exception {
               return AppException(errCode, "不支持HTTP协议请求");
             default:
               return AppException(
-                  errCode, error.response?.statusMessage ?? '未知错误');
+                errCode,
+                error.response?.statusMessage ?? '未知错误',
+              );
           }
         } catch (e) {
           return AppException(-1, "未知错误：${e.toString()}");
         }
-      default:
+      case DioExceptionType.badCertificate:
+        return AppException(-1, "证书校验失败");
+      case DioExceptionType.connectionError:
+        return AppException(-1, "网络连接失败");
+      case DioExceptionType.transformTimeout:
+      case DioExceptionType.unknown:
         return AppException(-1, error.message);
     }
   }

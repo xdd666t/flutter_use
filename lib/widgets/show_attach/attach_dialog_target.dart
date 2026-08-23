@@ -3,7 +3,7 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 
 class AttachDialogTarget extends StatelessWidget {
-  const AttachDialogTarget({Key? key}) : super(key: key);
+  const AttachDialogTarget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class AttachDialogTarget extends StatelessWidget {
   }) async {
     SmartDialog.showAttach(
       targetContext: null,
-      targetBuilder: (_, __) => target,
+      targetBuilder: (_, _) => target,
       usePenetrate: true,
       alignment: left ? Alignment.centerRight : Alignment.centerLeft,
       builder: (_) {
@@ -80,7 +80,7 @@ class AttachDialogTarget extends StatelessWidget {
               bottomRight: Radius.circular(left ? 20 : 0),
             ),
             boxShadow: const [
-              BoxShadow(color: Colors.blue, blurRadius: 8, spreadRadius: 0.2)
+              BoxShadow(color: Colors.blue, blurRadius: 8, spreadRadius: 0.2),
             ],
           ),
           child: Image.network(url),

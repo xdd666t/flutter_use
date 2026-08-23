@@ -3,12 +3,11 @@ part of "../view.dart";
 ///NavigationRail组件为侧边栏
 class _SideNavigation extends StatelessWidget {
   const _SideNavigation({
-    Key? key,
     required this.data,
     required this.onItem,
     required this.onUnfold,
     required this.onScale,
-  }) : super(key: key);
+  });
 
   /// 数据源
   final MainState data;
@@ -24,29 +23,33 @@ class _SideNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      Expanded(
-        child: SingleChildScrollView(
-          child: Column(children: [
-            // 头像
-            _buildHeadImage(),
+    return _buildBg(
+      children: [
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                // 头像
+                _buildHeadImage(),
 
-            // 侧边栏选项
-            _buildItems(),
-          ]),
+                // 侧边栏选项
+                _buildItems(),
+              ],
+            ),
+          ),
         ),
-      ),
 
-      // 缩放
-      _buildScale(),
-    ]);
+        // 缩放
+        _buildScale(),
+      ],
+    );
   }
 
   Widget _buildBg({required List<Widget> children}) {
     return Container(
       width: 120,
       padding: const EdgeInsets.only(top: 20),
-      color: Colors.grey.withOpacity(0.12),
+      color: Colors.grey.withValues(alpha: 0.12),
       child: Column(children: children),
     );
   }
@@ -57,45 +60,49 @@ class _SideNavigation extends StatelessWidget {
     return Column(
       children: List.generate(data.sideItems.length, (index) {
         var item = data.sideItems[index];
-        return GetBuilder<MainLogic>(builder: (logic) {
-          return Container(
-            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-            child: InkWell(
-              borderRadius: BorderRadius.circular(5),
-              onTap: () => onItem(index),
-              child: Container(
-                height: 35,
-                padding: const EdgeInsets.only(left: 12),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: data.selectedIndex == index
-                      ? activeColor.withOpacity(0.1)
-                      : null,
-                ),
-                alignment: Alignment.center,
-                child: Row(children: [
-                  Icon(
-                    item.icon?.icon,
+        return GetBuilder<MainLogic>(
+          builder: (logic) {
+            return Container(
+              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(5),
+                onTap: () => onItem(index),
+                child: Container(
+                  height: 35,
+                  padding: const EdgeInsets.only(left: 12),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
                     color: data.selectedIndex == index
-                        ? activeColor
-                        : normalColor,
-                    size: 15,
+                        ? activeColor.withValues(alpha: 0.1)
+                        : null,
                   ),
-                  const SizedBox(width: 8),
-                  Text(
-                    item.title ?? "",
-                    style: TextStyle(
-                      fontSize: 13,
-                      color: data.selectedIndex == index
-                          ? activeColor
-                          : normalColor,
-                    ),
+                  alignment: Alignment.center,
+                  child: Row(
+                    children: [
+                      Icon(
+                        item.icon?.icon,
+                        color: data.selectedIndex == index
+                            ? activeColor
+                            : normalColor,
+                        size: 15,
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        item.title ?? "",
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: data.selectedIndex == index
+                              ? activeColor
+                              : normalColor,
+                        ),
+                      ),
+                    ],
                   ),
-                ]),
+                ),
               ),
-            ),
-          );
-        });
+            );
+          },
+        );
       }),
     );
   }
@@ -104,20 +111,26 @@ class _SideNavigation extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 40),
       alignment: Alignment.center,
-      child: Wrap(direction: Axis.vertical, spacing: 15, children: [
-        const Text('开启缩放'),
+      child: Wrap(
+        direction: Axis.vertical,
+        spacing: 15,
+        children: [
+          const Text('开启缩放'),
 
-        //缩放按钮
-        GetBuilder<MainLogic>(builder: (logic) {
-          return CupertinoSwitch(
-            activeColor: Colors.blue,
-            trackColor: Colors.white,
-            thumbColor: Colors.white,
-            value: data.isScale,
-            onChanged: onScale,
-          );
-        }),
-      ]),
+          //缩放按钮
+          GetBuilder<MainLogic>(
+            builder: (logic) {
+              return CupertinoSwitch(
+                activeTrackColor: Colors.blue,
+                inactiveTrackColor: Colors.white,
+                thumbColor: Colors.white,
+                value: data.isScale,
+                onChanged: onScale,
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 
@@ -132,16 +145,19 @@ class _SideNavigation extends StatelessWidget {
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-              color: Colors.blue.withOpacity(0.5),
+              color: Colors.blue.withValues(alpha: 0.5),
               blurRadius: 8,
               spreadRadius: 0.2,
-            )
-          ],
-          image: const DecorationImage(
-            image: NetworkImage(
-              "https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220103124847.jpg",
             ),
+          ],
+        ),
+        child: ClipOval(
+          child: Image.network(
+            "https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220103124847.jpg",
             fit: BoxFit.cover,
+            cacheWidth: 75,
+            errorBuilder: (context, error, stackTrace) =>
+                const Icon(Icons.person_outline, color: Colors.blue, size: 42),
           ),
         ),
       ),

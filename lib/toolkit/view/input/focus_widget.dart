@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 
-typedef FocusNodeBuilder = Widget Function(
-    BuildContext context, FocusNode focusNode);
+typedef FocusNodeBuilder =
+    Widget Function(BuildContext context, FocusNode focusNode);
 typedef OnLostFocus = void Function(Widget widget, FocusNode focusNode);
 
 class FocusWidget extends StatefulWidget {
@@ -12,32 +12,29 @@ class FocusWidget extends StatefulWidget {
   final bool showFocusArea;
 
   const FocusWidget({
-    Key? key,
+    super.key,
     required this.child,
     required this.focusNode,
     this.showFocusArea = false,
     this.onLostFocus,
-  }) : super(key: key);
+  });
 
   @override
   FocusWidgetState createState() => FocusWidgetState();
 
   static FocusWidget builder(
-      BuildContext context, {
-        required FocusNodeBuilder builder,
-        showFocusArea = false,
-        OnLostFocus? onLostFocus,
-      }) {
+    BuildContext context, {
+    required FocusNodeBuilder builder,
+    showFocusArea = false,
+    OnLostFocus? onLostFocus,
+  }) {
     // print('builder area $showFocusArea');
     final focusNode = FocusNode();
     return FocusWidget(
       focusNode: focusNode,
       showFocusArea: showFocusArea,
       onLostFocus: onLostFocus,
-      child: builder(
-        context,
-        focusNode,
-      ),
+      child: builder(context, focusNode),
     );
   }
 }
@@ -97,8 +94,9 @@ class FocusWidgetState extends State<FocusWidget> {
               // print('超出');
               final scope = FocusScope.of(context);
               scope.unfocus();
-              if (widget.onLostFocus != null)
+              if (widget.onLostFocus != null) {
                 widget.onLostFocus?.call(widget.child, widget.focusNode);
+              }
               _removeOverlay();
             }
           },
@@ -106,22 +104,19 @@ class FocusWidgetState extends State<FocusWidget> {
       ];
       if (widget.showFocusArea) {
         children.insert(
-            0,
-            Positioned.fromRect(
-              rect: rect,
-              child: Container(
-                color: Color(0x60ff0000),
-              ),
-            ));
+          0,
+          Positioned.fromRect(
+            rect: rect,
+            child: Container(color: Color(0x60ff0000)),
+          ),
+        );
       }
-      _overlayEntry = new OverlayEntry(
+      _overlayEntry = OverlayEntry(
         builder: (context) {
-          return Stack(
-            children: children,
-          );
+          return Stack(children: children);
         },
       );
-      Overlay.of(context)?.insert(_overlayEntry!);
+      Overlay.of(context).insert(_overlayEntry!);
     }
   }
 

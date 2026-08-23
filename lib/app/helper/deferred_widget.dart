@@ -11,12 +11,11 @@ typedef DeferredWidgetBuilder = Widget Function();
 /// 这里在 initState 加载，或者当 DeferredWidgetBuilder 改变时重新加载
 class DeferredWidget extends StatefulWidget {
   const DeferredWidget({
-    Key? key,
+    super.key,
     required this.loadLibrary,
     required this.builder,
     Widget? placeholder,
-  })  : placeholder = placeholder ?? const DeferredLoading(),
-        super(key: key);
+  }) : placeholder = placeholder ?? const DeferredLoading();
 
   final LoadLibraryBuilder loadLibrary;
   final DeferredWidgetBuilder builder;
@@ -27,12 +26,10 @@ class DeferredWidget extends StatefulWidget {
 
   /// 预加载
   static Future<dynamic> preload(LoadLibraryBuilder loadLibrary) {
-    if (!_moduleLoaders.containsKey(loadLibrary)) {
-      _moduleLoaders[loadLibrary] = loadLibrary().then((_) {
-        _loadedModules.add(loadLibrary);
-      });
-    }
-    return _moduleLoaders[loadLibrary]!;
+    return _moduleLoaders.putIfAbsent(
+      loadLibrary,
+      () => loadLibrary().then((_) => _loadedModules.add(loadLibrary)),
+    );
   }
 
   @override
@@ -46,19 +43,27 @@ class _DeferredWidgetState extends State<DeferredWidget> {
   @override
   void initState() {
     super.initState();
-    if (DeferredWidget._moduleLoaders.containsKey(widget.loadLibrary)) {
-      _onLibraryLoaded();
-    } else {
-      DeferredWidget.preload(widget.loadLibrary)
-          .then((_) => _onLibraryLoaded());
-    }
+    _loadLibrary(widget.loadLibrary);
   }
 
-  void _onLibraryLoaded() {
-    setState(() {
-      _loadBuilder = widget.builder;
-      _loadChild = _loadBuilder?.call();
+  void _loadLibrary(LoadLibraryBuilder loadLibrary) {
+    DeferredWidget.preload(loadLibrary).then((_) {
+      if (!mounted || widget.loadLibrary != loadLibrary) return;
+      setState(() {
+        _loadBuilder = widget.builder;
+        _loadChild = _loadBuilder?.call();
+      });
     });
+  }
+
+  @override
+  void didUpdateWidget(covariant DeferredWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.loadLibrary != widget.loadLibrary) {
+      _loadBuilder = null;
+      _loadChild = null;
+      _loadLibrary(widget.loadLibrary);
+    }
   }
 
   @override
@@ -73,7 +78,7 @@ class _DeferredWidgetState extends State<DeferredWidget> {
 
 /// 延迟加载Loading
 class DeferredLoading extends StatelessWidget {
-  const DeferredLoading({Key? key}) : super(key: key);
+  const DeferredLoading({super.key});
 
   @override
   Widget build(BuildContext context) {

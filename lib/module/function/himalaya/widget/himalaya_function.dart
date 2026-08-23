@@ -22,9 +22,7 @@ Widget himalayaBuildTopBg({required List<Widget> children}) {
 
 ///顶部右侧信息流外层布局设置
 Widget himalayaBuildInfoListBg({required List<Widget> children}) {
-  return Expanded(
-    child: Column(children: children),
-  );
+  return Expanded(child: Column(children: children));
 }
 
 ///顶部右侧信息流外层布局设置 - 可滑动部分

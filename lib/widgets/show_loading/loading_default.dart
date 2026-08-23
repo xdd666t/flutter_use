@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class LoadingDefault extends StatelessWidget {
-  const LoadingDefault({Key? key}) : super(key: key);
+  const LoadingDefault({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class LoadingDefault extends StatelessWidget {
     );
   }
 
-  void _show() async{
+  void _show() async {
     SmartDialog.showLoading();
     await Future.delayed(const Duration(seconds: 2));
     SmartDialog.dismiss();

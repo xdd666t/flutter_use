@@ -1,24 +1,23 @@
 part of '../view.dart';
 
 class _CodeShow extends StatelessWidget {
-  const _CodeShow({
-    Key? key,
-    required this.data,
-  }) : super(key: key);
+  const _CodeShow({required this.data});
 
   final SmartDialogState data;
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(builder: (DialogItemInfo item) {
-      return [
-        // 代码show
-        _buildCodeShow(item),
+    return _buildBg(
+      builder: (DialogItemInfo item) {
+        return [
+          // 代码show
+          _buildCodeShow(item),
 
-        // 演示
-        _buildCodeDemo(item),
-      ];
-    });
+          // 演示
+          _buildCodeDemo(item),
+        ];
+      },
+    );
   }
 
   Expanded _buildCodeDemo(DialogItemInfo item) {

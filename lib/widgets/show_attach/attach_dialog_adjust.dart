@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class AttachDialogAdjust extends StatelessWidget {
-  const AttachDialogAdjust({Key? key}) : super(key: key);
+  const AttachDialogAdjust({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,12 +48,14 @@ class AttachDialogAdjust extends StatelessWidget {
             color: Colors.white,
           ),
           alignment: Alignment.center,
-          child: Builder(builder: (context) {
-            return ElevatedButton(
-              onPressed: () => attachDialog(context),
-              child: const Text('target widget'),
-            );
-          }),
+          child: Builder(
+            builder: (context) {
+              return ElevatedButton(
+                onPressed: () => attachDialog(context),
+                child: const Text('target widget'),
+              );
+            },
+          ),
         );
       },
     );

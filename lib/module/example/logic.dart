@@ -13,7 +13,6 @@ class ExampleLogic extends GetxController {
   ///跳转到功能模块
   void toFun(context, tag) async {
     switch (tag) {
-
       ///GetX页面跳转
       case ExampleStatus.getCounterRx:
         Get.toNamed(RouteConfig.getCounterRx);

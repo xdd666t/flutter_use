@@ -6,6 +6,8 @@ import 'package:flutter_use/module/example/provider/easy_p/easy_p.dart';
 import 'logic.dart';
 
 class CounterEasyPPage extends StatelessWidget {
+  const CounterEasyPPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierEasyP(
@@ -21,10 +23,7 @@ class CounterEasyPPage extends StatelessWidget {
       appBar: AppBar(title: Text('自定义状态管理框架-EasyP范例')),
       body: Center(
         child: EasyPBuilder<CounterEasyP>(() {
-          return Text(
-            '点击了 ${easyP.count} 次',
-            style: TextStyle(fontSize: 30.0),
-          );
+          return Text('点击了 ${easyP.count} 次', style: TextStyle(fontSize: 30.0));
         }),
       ),
       floatingActionButton: FloatingActionButton(

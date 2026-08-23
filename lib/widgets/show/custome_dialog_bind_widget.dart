@@ -14,7 +14,7 @@ Color get _randomColor {
 }
 
 class CustomDialogBindWidget extends StatelessWidget {
-  const CustomDialogBindWidget({Key? key}) : super(key: key);
+  const CustomDialogBindWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,59 +27,80 @@ class CustomDialogBindWidget extends StatelessWidget {
   }
 
   void _show() {
-    SmartDialog.show(builder: (_) {
-      var currentIndex = 0;
-      var controller = PageController();
-      return StatefulBuilder(builder: (context, setState) {
-        return SizedBox(
-          width: 700,
-          height: 500,
-          child: Scaffold(
-            appBar: AppBar(title: const Text("bindWidget")),
-            body: PageView(
-              controller: controller,
-              children: [_childPage(), _childPage(), _childPage()],
-            ),
-            bottomNavigationBar: BottomNavigationBar(
-              currentIndex: currentIndex,
-              items: const [
-                BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
-                BottomNavigationBarItem(icon: Icon(Icons.adb), label: "adb"),
-                BottomNavigationBarItem(icon: Icon(Icons.face), label: "face"),
-              ],
-              onTap: (index) {
-                currentIndex = index;
-                controller.jumpToPage(currentIndex);
-                setState(() {});
-              },
-            ),
-          ),
+    SmartDialog.show(
+      builder: (_) {
+        var currentIndex = 0;
+        var controller = PageController();
+        return StatefulBuilder(
+          builder: (context, setState) {
+            return SizedBox(
+              width: 700,
+              height: 500,
+              child: Scaffold(
+                appBar: AppBar(title: const Text("bindWidget")),
+                body: PageView(
+                  controller: controller,
+                  children: [_childPage(), _childPage(), _childPage()],
+                ),
+                bottomNavigationBar: BottomNavigationBar(
+                  currentIndex: currentIndex,
+                  items: const [
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.home),
+                      label: "home",
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.adb),
+                      label: "adb",
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.face),
+                      label: "face",
+                    ),
+                  ],
+                  onTap: (index) {
+                    currentIndex = index;
+                    controller.jumpToPage(currentIndex);
+                    setState(() {});
+                  },
+                ),
+              ),
+            );
+          },
         );
-      });
-    });
+      },
+    );
   }
 
   Widget _childPage() {
-    return Builder(builder: (context) {
-      var tag = context.hashCode.toString();
-      return KeepAlivePage(
-        child: Center(
-          child: Column(mainAxisSize: MainAxisSize.min, children: [
-            ElevatedButton(
-              onPressed: () => _openDialog(context),
-              child: Text('open dialog tag: $tag'),
+    return Builder(
+      builder: (context) {
+        var tag = context.hashCode.toString();
+        return KeepAlivePage(
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ElevatedButton(
+                  onPressed: () => _openDialog(context),
+                  child: Text('open dialog tag: $tag'),
+                ),
+                const SizedBox(height: 30),
+                ElevatedButton(
+                  onPressed: () {
+                    SmartDialog.dismiss(
+                      status: SmartStatus.allDialog,
+                      tag: tag,
+                    );
+                  },
+                  child: Text('close all dialog tag: $tag'),
+                ),
+              ],
             ),
-            const SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                SmartDialog.dismiss(status: SmartStatus.allDialog, tag: tag);
-              },
-              child: Text('close all dialog tag: $tag'),
-            ),
-          ]),
-        ),
-      );
-    });
+          ),
+        );
+      },
+    );
   }
 
   void _openDialog(BuildContext context) {
@@ -104,11 +125,7 @@ class CustomDialogBindWidget extends StatelessWidget {
           decoration: BoxDecoration(
             color: _randomColor,
             boxShadow: [
-              BoxShadow(
-                color: _randomColor,
-                blurRadius: 8,
-                spreadRadius: 0.2,
-              )
+              BoxShadow(color: _randomColor, blurRadius: 8, spreadRadius: 0.2),
             ],
           ),
         );

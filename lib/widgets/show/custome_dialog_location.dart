@@ -13,7 +13,7 @@ Color get _randomColor {
 }
 
 class CustomDialogLocation extends StatelessWidget {
-  const CustomDialogLocation({Key? key}) : super(key: key);
+  const CustomDialogLocation({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,11 +45,8 @@ class CustomDialogLocation extends StatelessWidget {
   }) async {
     SmartDialog.show(
       alignment: alignment,
-      builder: (_) => Container(
-        width: width,
-        height: height,
-        color: _randomColor,
-      ),
+      builder: (_) =>
+          Container(width: width, height: height, color: _randomColor),
     );
     await Future.delayed(const Duration(milliseconds: 500));
   }

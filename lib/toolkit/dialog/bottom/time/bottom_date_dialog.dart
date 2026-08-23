@@ -3,36 +3,36 @@ import 'package:flutter_picker/flutter_picker.dart';
 import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
-showBottomDateDialog(
-    BuildContext context, {
-      int type = PickerDateTimeType.kYMD,
-      bool isNumberMonth = true,
-      int yearBegin = 1900,
-      int yearEnd = 2100,
-      required DateTime minValue,
-      required DateTime maxValue,
-      required ParamTwiceCallback<String, List<int>> callback,
-      String title = '选择日期',
-      String cancelText = '取消',
-      String confirmText = '确定',
-    }) {
+void showBottomDateDialog(
+  BuildContext context, {
+  int type = PickerDateTimeType.kYMD,
+  bool isNumberMonth = true,
+  int yearBegin = 1900,
+  int yearEnd = 2100,
+  required DateTime minValue,
+  required DateTime maxValue,
+  required ParamTwiceCallback<String, List<int>> callback,
+  String title = '选择日期',
+  String cancelText = '取消',
+  String confirmText = '确定',
+}) {
   var picker = Picker(
     cancelText: cancelText,
     cancelTextStyle: TextStyle(color: Color(0xFF999999), fontSize: 33.sp),
     confirmText: confirmText,
     confirmTextStyle: TextStyle(color: Color(0xFF0299FF), fontSize: 35.sp),
-    title: Text(title,
-        style: TextStyle(color: Color(0xFF333333), fontSize: 33.sp)),
+    title: Text(
+      title,
+      style: TextStyle(color: Color(0xFF333333), fontSize: 33.sp),
+    ),
     textStyle: TextStyle(color: Color(0xFF333333), fontSize: 30.sp),
     backgroundColor: Colors.transparent,
     height: 400.dp,
     itemExtent: 75.dp,
     headerDecoration: BoxDecoration(
-      border: Border(
-        bottom: BorderSide(color: Colors.black12, width: 0.5),
-      ),
+      border: Border(bottom: BorderSide(color: Colors.black12, width: 0.5)),
     ),
-    adapter: new DateTimePickerAdapter(
+    adapter: DateTimePickerAdapter(
       type: type,
       isNumberMonth: isNumberMonth,
       yearSuffix: "年",
@@ -59,8 +59,8 @@ showBottomDateDialog(
           child: Container(
             width: 12.0,
             alignment: Alignment.center,
-            child: Text(':', style: TextStyle(fontWeight: FontWeight.bold)),
             color: Colors.white,
+            child: Text(':', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
         ),
       ),
@@ -72,8 +72,8 @@ showBottomDateDialog(
           child: Container(
             width: 12.0,
             alignment: Alignment.center,
-            child: Text(':', style: TextStyle(fontWeight: FontWeight.bold)),
             color: Colors.white,
+            child: Text(':', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
         ),
       ),
@@ -85,7 +85,7 @@ showBottomDateDialog(
       if (type == PickerDateTimeType.kY) {
         date = deal.split("-")[0];
       } else if (type == PickerDateTimeType.kYM) {
-        date = deal.split("-")[0] + "-" + deal.split("-")[1];
+        date = "${deal.split("-")[0]}-${deal.split("-")[1]}";
       } else if (type == PickerDateTimeType.kYMD) {
         date = deal.split(" ")[0];
       } else if (type == PickerDateTimeType.kYMDHM) {

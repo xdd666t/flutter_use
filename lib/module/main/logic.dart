@@ -28,8 +28,14 @@ class MainLogic extends GetxController {
 
   ///是否缩放
   void onScale(bool isScale) {
-    state.isScale = !state.isScale;
+    state.isScale = isScale;
     update();
     initWindow(scale: isScale ? 1.25 : 1.0);
+  }
+
+  @override
+  void onClose() {
+    state.dispose();
+    super.onClose();
   }
 }

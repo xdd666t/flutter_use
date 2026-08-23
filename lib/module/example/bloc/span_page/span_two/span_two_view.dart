@@ -4,6 +4,8 @@ import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubi
 import 'package:flutter_use/module/example/bloc/span_page/span_two/span_two_cubit.dart';
 
 class CubitSpanTwoPage extends StatelessWidget {
+  const CubitSpanTwoPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -31,8 +33,10 @@ class CubitSpanTwoPage extends StatelessWidget {
       body: Center(
         child: BlocBuilder<BlocSpanTwoCubit, BlocSpanTwoState>(
           builder: (context, state) {
-            return Text('当前点击了 ${state.count} 次',
-                style: TextStyle(fontSize: 30.0));
+            return Text(
+              '当前点击了 ${state.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
           },
         ),
       ),

@@ -6,6 +6,8 @@ import 'logic.dart';
 class GetCounterRxPage extends StatelessWidget {
   final logic = Get.put(GetCounterRxLogic());
 
+  GetCounterRxPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

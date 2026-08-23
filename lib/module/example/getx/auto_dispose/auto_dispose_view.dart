@@ -7,6 +7,8 @@ import 'auto_dispose_logic.dart';
 class AutoDisposePage extends StatelessWidget {
   final logic = Get.put(AutoDisposeLogic());
 
+  AutoDisposePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

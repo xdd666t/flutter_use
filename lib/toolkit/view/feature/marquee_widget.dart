@@ -1,33 +1,30 @@
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
 ///跑马灯控件
 class MarqueeWidget extends StatefulWidget {
   const MarqueeWidget.vertical({
-    Key? key,
+    super.key,
     required this.children,
     this.animationRate = 20,
     this.delayedDuration = const Duration(milliseconds: 5000),
     this.curve = Curves.linearToEaseOut,
     this.spacing = 0,
-  })  : assert(animationRate > 0),
-        _scrollDirection = Axis.vertical,
-        super(key: key);
+  }) : assert(animationRate > 0),
+       _scrollDirection = Axis.vertical;
 
   const MarqueeWidget.horizontal({
-    Key? key,
+    super.key,
     required this.children,
     this.animationRate = 10,
     this.delayedDuration = const Duration(milliseconds: 0),
     this.curve = Curves.linear,
     this.spacing = 10,
-  })  : assert(animationRate > 0),
-        assert(spacing >= 0),
-        _scrollDirection = Axis.horizontal,
-        super(key: key);
+  }) : assert(animationRate > 0),
+       assert(spacing >= 0),
+       _scrollDirection = Axis.horizontal;
 
   ///children
   final List<Widget> children;
@@ -57,15 +54,16 @@ class _MarqueeWidgetState extends State<MarqueeWidget> {
   int _selectedIndex = 0;
   Timer? _timer;
 
-  _initElements() {
+  void _initElements() {
     _childCount = widget.children.length;
     if (_childCount > 0 && widget._scrollDirection == Axis.vertical) {
       _childCount++;
     }
   }
 
-  _initScroll() {
-    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+  void _initScroll() {
+    _timer?.cancel();
+    SchedulerBinding.instance.addPostFrameCallback((_) {
       if (!mounted || _childCount == 0) return;
 
       //deal different condition
@@ -77,13 +75,20 @@ class _MarqueeWidgetState extends State<MarqueeWidget> {
     });
   }
 
-  _animateVertical() {
-    var renderBox = context.findRenderObject() as RenderBox;
-    var height = renderBox.size.height;
+  void _animateVertical() {
+    if (!mounted || !_controller.hasClients) return;
+
+    final renderObject = context.findRenderObject();
+    if (renderObject is! RenderBox) return;
+    final height = renderObject.size.height;
 
     _selectedIndex = 0;
     _timer?.cancel();
     _timer = Timer.periodic(widget.delayedDuration, (timer) {
+      if (!mounted || !_controller.hasClients) {
+        timer.cancel();
+        return;
+      }
       //reach the tail node，need to relocation to the head node
       if (_selectedIndex == (_childCount - 1)) {
         _controller.jumpTo(0);
@@ -98,25 +103,27 @@ class _MarqueeWidgetState extends State<MarqueeWidget> {
     });
   }
 
-  _animateHorizontal() async {
+  void _animateHorizontal() {
+    if (!mounted || !_controller.hasClients) return;
+
     _controller.position.moveTo(0);
-    var extent = _controller.position.maxScrollExtent;
+    final extent = _controller.position.maxScrollExtent;
 
     _timer?.cancel();
     _timer = Timer(widget.delayedDuration, () async {
+      if (!mounted || !_controller.hasClients) return;
       await _controller.animateTo(
         extent,
         duration: _animationDuration(extent),
         curve: widget.curve,
       );
-      _animateHorizontal();
+      if (mounted) _animateHorizontal();
     });
   }
 
   Duration _animationDuration(double extent) {
-    return Duration(
-      milliseconds: (extent * 1000 / widget.animationRate).floor(),
-    );
+    final milliseconds = (extent * 1000 / widget.animationRate).floor();
+    return Duration(milliseconds: milliseconds < 1 ? 1 : milliseconds);
   }
 
   @override
@@ -129,24 +136,26 @@ class _MarqueeWidgetState extends State<MarqueeWidget> {
 
   @override
   void didUpdateWidget(MarqueeWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
     var childrenChanged = widget.children.length != oldWidget.children.length;
     if (widget._scrollDirection != oldWidget._scrollDirection ||
         childrenChanged) {
       _initElements();
       _initScroll();
     }
-    super.didUpdateWidget(oldWidget);
   }
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
+        if (widget.children.isEmpty) return const SizedBox.shrink();
+
         return ConstrainedBox(
           constraints: constraints,
           child: ListView.separated(
             itemCount: _childCount,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             controller: _controller,
             scrollDirection: widget._scrollDirection,
             padding: EdgeInsets.zero,
@@ -158,7 +167,14 @@ class _MarqueeWidgetState extends State<MarqueeWidget> {
               );
             },
             separatorBuilder: (context, index) {
-              return SizedBox(width: widget.spacing);
+              return SizedBox(
+                width: widget._scrollDirection == Axis.horizontal
+                    ? widget.spacing
+                    : 0,
+                height: widget._scrollDirection == Axis.vertical
+                    ? widget.spacing
+                    : 0,
+              );
             },
           ),
         );

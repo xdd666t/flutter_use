@@ -6,12 +6,11 @@ import 'package:visibility_detector/visibility_detector.dart';
 import 'logic.dart';
 
 class SettingPage extends StatelessWidget {
-  const SettingPage({Key? key}) : super(key: key);
+  const SettingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final logic = Get.put(SettingLogic());
-    final state = Get.find<SettingLogic>().state;
+    Get.put<SettingLogic>(SettingLogic());
 
     return VisibilityDetector(
       key: const Key('Setting'),

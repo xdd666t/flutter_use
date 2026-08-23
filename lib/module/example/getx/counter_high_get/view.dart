@@ -7,6 +7,8 @@ class GetCounterHighPage extends StatelessWidget {
   final logic = Get.put(GetCounterHighLogic());
   final state = Get.find<GetCounterHighLogic>().state;
 
+  GetCounterHighPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -3,7 +3,7 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_use/module/function/smart_dialog/widget/custom_toast.dart';
 
 class ToastCustom extends StatelessWidget {
-  const ToastCustom({Key? key}) : super(key: key);
+  const ToastCustom({super.key});
 
   @override
   Widget build(BuildContext context) {

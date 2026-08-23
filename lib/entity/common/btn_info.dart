@@ -35,12 +35,12 @@ class BtnInfo {
 
   /// jsonDecode(jsonStr) 方法中会调用实体类的这个方法。如果实体类中没有这个方法，会报错。
   Map toJson() {
-    Map map = Map();
-    map["title"] = this.title;
-    map["tag"] = this.tag;
-    map["icon"] = this.icon;
-    map["bg"] = this.bg;
-    map["selected"] = this.selected;
+    Map map = {};
+    map["title"] = title;
+    map["tag"] = tag;
+    map["icon"] = icon;
+    map["bg"] = bg;
+    map["selected"] = selected;
     return map;
   }
 }

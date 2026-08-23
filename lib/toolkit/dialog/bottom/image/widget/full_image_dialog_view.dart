@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 
 class FullImageDialogView extends StatefulWidget {
-  FullImageDialogView({
+  const FullImageDialogView({
+    super.key,
     required this.imageWidgets,
     required this.currentIndex,
   });
@@ -29,24 +29,18 @@ class _FullImageDialogViewState extends State<FullImageDialogView> {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      //图片预览
-      _previewImage(),
+    return _buildBg(
+      children: [
+        //图片预览
+        _previewImage(),
 
-      //退出按钮
-      Positioned(
-        top: 80.dp,
-        right: 30.dp,
-        child: _buildExit(),
-      ),
+        //退出按钮
+        Positioned(top: 80.dp, right: 30.dp, child: _buildExit()),
 
-      //预览图片位置标识
-      Positioned(
-        bottom: 30.dp,
-        right: 30.dp,
-        child: _buildImageTag(),
-      ),
-    ]);
+        //预览图片位置标识
+        Positioned(bottom: 30.dp, right: 30.dp, child: _buildImageTag()),
+      ],
+    );
   }
 
   Widget _buildExit() {
@@ -55,11 +49,7 @@ class _FullImageDialogViewState extends State<FullImageDialogView> {
         color: Colors.transparent,
         child: InkResponse(
           child: IconButton(
-            icon: const Icon(
-              Icons.clear,
-              color: Colors.white,
-              size: 30,
-            ),
+            icon: const Icon(Icons.clear, color: Colors.white, size: 30),
             onPressed: () => Navigator.pop(context),
           ),
         ),
@@ -74,7 +64,6 @@ class _FullImageDialogViewState extends State<FullImageDialogView> {
     );
   }
 
-
   Widget _previewImage() {
     return PhotoViewGallery.builder(
       scrollPhysics: const BouncingScrollPhysics(),
@@ -87,7 +76,7 @@ class _FullImageDialogViewState extends State<FullImageDialogView> {
       },
       itemCount: widget.imageWidgets.length,
       loadingBuilder: (context, event) => Center(
-        child: Container(
+        child: SizedBox(
           width: 20.0,
           height: 20.0,
           child: CircularProgressIndicator(
@@ -109,9 +98,7 @@ class _FullImageDialogViewState extends State<FullImageDialogView> {
   Widget _buildBg({required List<Widget> children}) {
     return Container(
       color: Colors.black,
-      child: Stack(
-        children: children,
-      ),
+      child: Stack(children: children),
     );
   }
 }

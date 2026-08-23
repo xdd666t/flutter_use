@@ -5,11 +5,7 @@ import 'package:flutter_use/toolkit/typedef/function.dart';
 
 ///热门主播
 class HimalayaAnchor extends StatelessWidget {
-  const HimalayaAnchor({
-    Key? key,
-    required this.data,
-    required this.onAnchor,
-  }) : super(key: key);
+  const HimalayaAnchor({super.key, required this.data, required this.onAnchor});
 
   ///数据源
   final List<HimalayaSubItemInfo> data;
@@ -19,24 +15,28 @@ class HimalayaAnchor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      //标题
-      _buildTitle(),
+    return _buildBg(
+      children: [
+        //标题
+        _buildTitle(),
 
-      //卡片
-      _buildCardBg(builder: (HimalayaSubItemInfo itemInfo) {
-        return [
-          //排名信息
-          _buildRank(itemInfo),
+        //卡片
+        _buildCardBg(
+          builder: (HimalayaSubItemInfo itemInfo) {
+            return [
+              //排名信息
+              _buildRank(itemInfo),
 
-          //头像
-          _buildHeadPic(itemInfo),
+              //头像
+              _buildHeadPic(itemInfo),
 
-          //主播名称
-          _buildAnchorName(itemInfo),
-        ];
-      })
-    ]);
+              //主播名称
+              _buildAnchorName(itemInfo),
+            ];
+          },
+        ),
+      ],
+    );
   }
 
   Widget _buildAnchorName(HimalayaSubItemInfo itemInfo) {
@@ -47,12 +47,7 @@ class HimalayaAnchor extends StatelessWidget {
         width: 130.dp,
         margin: EdgeInsets.only(top: 120.dp),
         alignment: Alignment.bottomCenter,
-        child: Text(
-          itemInfo.subTitle ?? '',
-          style: TextStyle(
-            fontSize: 18.sp,
-          ),
-        ),
+        child: Text(itemInfo.subTitle ?? '', style: TextStyle(fontSize: 18.sp)),
       ),
     );
   }
@@ -66,10 +61,7 @@ class HimalayaAnchor extends StatelessWidget {
           child: SizedBox(
             height: 130.dp,
             width: 130.dp,
-            child: Image.network(
-              itemInfo.tag ?? '',
-              fit: BoxFit.cover,
-            ),
+            child: Image.network(itemInfo.tag ?? '', fit: BoxFit.cover),
           ),
         ),
       ),
@@ -84,7 +76,7 @@ class HimalayaAnchor extends StatelessWidget {
         itemInfo.title,
         style: TextStyle(
           fontSize: 55.sp,
-          color: Colors.grey.withOpacity(0.3),
+          color: Colors.grey.withValues(alpha: 0.3),
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -94,10 +86,7 @@ class HimalayaAnchor extends StatelessWidget {
   Widget _buildTitle() {
     return Text(
       '热门主播',
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 21.sp,
-      ),
+      style: TextStyle(color: Colors.black, fontSize: 21.sp),
     );
   }
 

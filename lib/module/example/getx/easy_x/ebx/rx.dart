@@ -20,7 +20,7 @@ extension BoolExtension on bool {
 
 ///封装各类型
 class RxInt extends Rx<int> {
-  RxInt(int initial) : super(initial);
+  RxInt(super.initial);
 
   RxInt operator +(int other) {
     value = value + other;
@@ -34,7 +34,7 @@ class RxInt extends Rx<int> {
 }
 
 class RxDouble extends Rx<double> {
-  RxDouble(double initial) : super(initial);
+  RxDouble(super.initial);
 
   RxDouble operator +(double other) {
     value = value + other;
@@ -48,11 +48,11 @@ class RxDouble extends Rx<double> {
 }
 
 class RxString extends Rx<String> {
-  RxString(String initial) : super(initial);
+  RxString(super.initial);
 }
 
 class RxBool extends Rx<bool> {
-  RxBool(bool initial) : super(initial);
+  RxBool(super.initial);
 }
 
 ///主体逻辑

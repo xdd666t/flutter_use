@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ChangeNotifierEasyP<T extends ChangeNotifier> extends StatelessWidget {
-  ChangeNotifierEasyP({
-    Key? key,
+  const ChangeNotifierEasyP({
+    super.key,
     required this.create,
     this.builder,
     this.child,
-  }) : super(key: key);
+  });
 
   final T Function(BuildContext context) create;
 
@@ -30,11 +30,7 @@ class ChangeNotifierEasyP<T extends ChangeNotifier> extends StatelessWidget {
 }
 
 class EasyPInherited<T extends ChangeNotifier> extends InheritedWidget {
-  EasyPInherited({
-    Key? key,
-    required Widget child,
-    required this.create,
-  }) : super(key: key, child: child);
+  const EasyPInherited({super.key, required super.child, required this.create});
 
   final T Function(BuildContext context) create;
 
@@ -46,7 +42,7 @@ class EasyPInherited<T extends ChangeNotifier> extends InheritedWidget {
 }
 
 class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
-  EasyPInheritedElement(EasyPInherited<T> widget) : super(widget);
+  EasyPInheritedElement(EasyPInherited<T> super.widget);
 
   bool _firstBuild = true;
   bool _shouldNotify = false;
@@ -61,12 +57,14 @@ class EasyPInheritedElement<T extends ChangeNotifier> extends InheritedElement {
       _firstBuild = false;
       _value = (widget as EasyPInherited<T>).create(this);
 
-      _value.addListener(_callBack = () {
-        // 处理刷新逻辑，此处无法直接调用notifyClients
-        // 会导致owner!._debugCurrentBuildTarget为null，触发断言条件，无法向后执行
-        _shouldNotify = true;
-        markNeedsBuild();
-      });
+      _value.addListener(
+        _callBack = () {
+          // 处理刷新逻辑，此处无法直接调用notifyClients
+          // 会导致owner!._debugCurrentBuildTarget为null，触发断言条件，无法向后执行
+          _shouldNotify = true;
+          markNeedsBuild();
+        },
+      );
     }
 
     super.performRebuild();

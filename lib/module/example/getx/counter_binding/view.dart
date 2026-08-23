@@ -7,6 +7,8 @@ class GetCounterBindingPage extends StatelessWidget {
   final logic = Get.find<GetCounterBindingLogic>();
   final state = Get.find<GetCounterBindingLogic>().state;
 
+  GetCounterBindingPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -5,7 +5,7 @@ import 'package:flutter_use/module/function/smart_dialog/widget/multi_handle_wid
 var _list = ['normal', 'last', 'onlyRefresh', 'multi'];
 
 class ToastType extends StatelessWidget {
-  const ToastType({Key? key}) : super(key: key);
+  const ToastType({super.key});
 
   @override
   Widget build(BuildContext context) {

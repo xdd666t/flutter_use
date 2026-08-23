@@ -7,6 +7,8 @@ import 'cubit.dart';
 import 'state.dart';
 
 class BlCustomBuilderPage extends StatelessWidget {
+  const BlCustomBuilderPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -40,10 +42,7 @@ class BlCustomBuilderPage extends StatelessWidget {
 
 ///自定义Builder
 class BlocEasyBuilder<T extends BlocBase<V>, V> extends StatefulWidget {
-  const BlocEasyBuilder({
-    Key? key,
-    required this.builder,
-  }) : super(key: key);
+  const BlocEasyBuilder({super.key, required this.builder});
 
   final Function(BuildContext context, V state) builder;
 
@@ -64,7 +63,8 @@ class _BlocEasyBuilderState<T extends BlocBase<V>, V>
 
     //数据改变刷新Widget
     _listen = _bloc.stream.listen((event) {
-      setState(() {});
+      if (!mounted) return;
+      setState(() => _state = event);
     });
     super.initState();
   }

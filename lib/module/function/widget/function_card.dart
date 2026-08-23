@@ -6,11 +6,7 @@ import 'package:flutter_use/entity/common/btn_info.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
 class FunctionCard extends StatelessWidget {
-  const FunctionCard({
-    Key? key,
-    required this.data,
-    required this.onItem,
-  }) : super(key: key);
+  const FunctionCard({super.key, required this.data, required this.onItem});
 
   ///数据源
   final List<BtnInfo> data;
@@ -20,58 +16,63 @@ class FunctionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(builder: (index) {
-      var item = data[index];
-      return _buildItem(children: [
-        //背景
-        SizedBox(
-          width: 400,
-          height: 200,
-          child: Image.network(item.bg ?? '', fit: BoxFit.fitWidth),
-        ),
-
-        //毛玻璃背景
-        !item.selected
-            ? ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: SizedBox(
-                  height: 50,
-                  width: 150,
-                  child: _blurryBg(),
+    return _buildBg(
+      builder: (index) {
+        var item = data[index];
+        return _buildItem(
+          children: [
+            //背景
+            SizedBox(
+              width: 400,
+              height: 200,
+              child: Image.network(
+                item.bg ?? '',
+                fit: BoxFit.fitWidth,
+                cacheWidth: 400,
+                errorBuilder: (context, error, stackTrace) => const ColoredBox(
+                  color: Color(0xFFE8EEF7),
+                  child: Icon(Icons.image_not_supported_outlined),
                 ),
-              )
-            : Container(),
+              ),
+            ),
 
-        //文字
-        !item.selected
-            ? Center(
-                child: Text(
-                  item.title ?? '',
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              )
-            : Container(),
+            //毛玻璃背景
+            !item.selected
+                ? ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: SizedBox(height: 50, width: 150, child: _blurryBg()),
+                  )
+                : Container(),
 
-        //点击效果
-        Material(
-          color: Colors.transparent,
-          child: InkWell(onTap: () => onItem(item.tag ?? '')),
-        )
-      ]);
-    });
+            //文字
+            !item.selected
+                ? Center(
+                    child: Text(
+                      item.title ?? '',
+                      style: const TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+                : Container(),
+
+            //点击效果
+            Material(
+              color: Colors.transparent,
+              child: InkWell(onTap: () => onItem(item.tag ?? '')),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   Widget _buildItem({required List<Widget> children}) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20.dp),
-      child: Stack(
-        alignment: Alignment.center,
-        children: children,
-      ),
+      child: Stack(alignment: Alignment.center, children: children),
     );
   }
 
@@ -81,7 +82,7 @@ class FunctionCard extends StatelessWidget {
       child: BackdropFilter(
         //设置图片模糊度 配套ClipRect使用，不然会造成全局模糊：BackdropFilter-毛玻璃效果
         filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
-        child: Container(color: Colors.black.withOpacity(0.1)),
+        child: Container(color: Colors.black.withValues(alpha: 0.1)),
       ),
     );
   }

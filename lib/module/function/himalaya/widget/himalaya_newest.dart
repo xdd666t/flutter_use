@@ -7,11 +7,11 @@ import 'package:get/get.dart';
 
 class HimalayaNewest extends StatelessWidget {
   const HimalayaNewest({
-    Key? key,
+    super.key,
     required this.data,
     required this.onSortTitle,
     required this.onNewest,
-  }) : super(key: key);
+  });
 
   ///数据源
   final HimalayaState data;
@@ -24,30 +24,36 @@ class HimalayaNewest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      //标题 + 子栏目细分
-      Row(children: [
-        //标题
-        _buildTitle(),
+    return _buildBg(
+      children: [
+        //标题 + 子栏目细分
+        Row(
+          children: [
+            //标题
+            _buildTitle(),
 
-        //分类标题
-        _buildSortTitle(),
-      ]),
+            //分类标题
+            _buildSortTitle(),
+          ],
+        ),
 
-      //精选具体card
-      _buildCardBg(builder: (item) {
-        return [
-          //图片卡片
-          _buildPicCard(item),
+        //精选具体card
+        _buildCardBg(
+          builder: (item) {
+            return [
+              //图片卡片
+              _buildPicCard(item),
 
-          //文字描述
-          Text(item.title, style: TextStyle(fontSize: 15.sp)),
+              //文字描述
+              Text(item.title, style: TextStyle(fontSize: 15.sp)),
 
-          //子标题
-          _buildSubTitle(item),
-        ];
-      }),
-    ]);
+              //子标题
+              _buildSubTitle(item),
+            ];
+          },
+        ),
+      ],
+    );
   }
 
   Widget _buildSubTitle(HimalayaSubItemInfo item) {
@@ -117,10 +123,7 @@ class HimalayaNewest extends StatelessWidget {
       margin: EdgeInsets.only(right: 20.dp),
       child: Text(
         '最新精选',
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 21.sp,
-        ),
+        style: TextStyle(color: Colors.black, fontSize: 21.sp),
       ),
     );
   }

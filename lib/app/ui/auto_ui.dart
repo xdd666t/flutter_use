@@ -6,15 +6,15 @@ extension NumExtend on num {
   ///自动适配移动界面
   double get dp {
     //如果没初始化,需要初始化,防止web端直接导航页面报错
-    AutoUi().init();
+    AutoUi().init(Get.context);
     return UiUtil().setWidth(this);
   }
 
   ///配置文字,文字适配请用sp单位
   double get sp {
     //如果没初始化,需要初始化,防止web端直接导航页面报错
-    AutoUi().init();
-    return UiUtil().setWidth(this);
+    AutoUi().init(Get.context);
+    return UiUtil().setSp(this);
   }
 }
 
@@ -27,16 +27,19 @@ class AutoUi {
 
   static AutoUi _getInstance() => _instance ??= AutoUi._();
 
-  ///是否第一次初始化
-  bool first = true;
+  Size? _lastScreenSize;
 
-  void init() {
-    if (Get.context == null || !first) return;
-    first = false;
+  void init([BuildContext? context]) {
+    final currentContext = context ?? Get.context;
+    if (currentContext == null) return;
+
+    final screenSize = MediaQuery.sizeOf(currentContext);
+    if (_lastScreenSize == screenSize) return;
+    _lastScreenSize = screenSize;
 
     UiUtil.init(
       // 通过context获取设备像素大小
-      context: Get.context!,
+      context: currentContext,
       // 设计尺寸(前期是先写布局，后做pc/web尺寸适配，故此处统一处理下)
       designSize: const Size(1920 / 1.72, 1080 / 1.72),
     );

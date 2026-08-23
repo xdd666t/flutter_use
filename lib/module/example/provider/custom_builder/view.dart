@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class CustomBuilderPage extends StatelessWidget {
+  const CustomBuilderPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -19,10 +21,8 @@ class CustomBuilderPage extends StatelessWidget {
       appBar: AppBar(title: Text('Provider-自定义Builder范例')),
       body: Center(
         child: EasyBuilder<CustomBuilderProvider>(
-          () => Text(
-            '点击了 ${provider.count} 次',
-            style: TextStyle(fontSize: 30.0),
-          ),
+          () =>
+              Text('点击了 ${provider.count} 次', style: TextStyle(fontSize: 30.0)),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -35,10 +35,7 @@ class CustomBuilderPage extends StatelessWidget {
 
 ///自定义Builder
 class EasyBuilder<T> extends StatelessWidget {
-  const EasyBuilder(
-    this.builder, {
-    Key? key,
-  }) : super(key: key);
+  const EasyBuilder(this.builder, {super.key});
 
   final Widget Function() builder;
 

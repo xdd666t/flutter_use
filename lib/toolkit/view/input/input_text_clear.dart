@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -9,7 +8,8 @@ typedef InputClearParamVoidCallback = dynamic Function();
 
 ///输入框,带删除图标
 class InputTextClear extends StatefulWidget {
-  InputTextClear({
+  const InputTextClear({
+    super.key,
     this.inputFormatters,
     this.hintText = '请输入',
     this.hintColor = const Color(0xFFCCCCCC),
@@ -84,6 +84,7 @@ class _InputTextClearState extends State<InputTextClear>
     with SingleTickerProviderStateMixin {
   late FocusNode _focusNode;
   late TextEditingController _textController;
+  late bool _ownsTextController;
 
   ///动画
   late AnimationController _animationController;
@@ -95,37 +96,60 @@ class _InputTextClearState extends State<InputTextClear>
 
     ///处理输入框
     _focusNode = FocusNode();
+    _ownsTextController = widget.controller == null;
     _textController = widget.controller ?? TextEditingController();
-    //监听输入框数值变化
-    _textController.addListener(() async {
-      //处理下删除图标的显示
-      String msg = _textController.text;
-      if (msg.length != 0) {
-        _animationController.forward();
-      } else {
-        _animationController.reverse();
-      }
-    });
 
     ///处理动画
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
     );
-    _animation = Tween<double>(begin: 0.0, end: 1.0)
-        .chain(CurveTween(curve: Curves.ease))
-        .animate(_animationController);
+    _animation = Tween<double>(
+      begin: 0,
+      end: 1,
+    ).chain(CurveTween(curve: Curves.ease)).animate(_animationController);
+    _textController.addListener(_handleControllerChanged);
+    _updateClearButton();
+  }
+
+  void _handleControllerChanged() {
+    _updateClearButton();
+  }
+
+  void _updateClearButton() {
+    if (_textController.text.isNotEmpty) {
+      _animationController.forward();
+    } else {
+      _animationController.reverse();
+    }
+  }
+
+  @override
+  void didUpdateWidget(covariant InputTextClear oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.controller == widget.controller) return;
+
+    _textController.removeListener(_handleControllerChanged);
+    if (_ownsTextController) {
+      _textController.dispose();
+    }
+    _ownsTextController = widget.controller == null;
+    _textController = widget.controller ?? TextEditingController();
+    _textController.addListener(_handleControllerChanged);
+    _updateClearButton();
   }
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      //输入框
-      _buildInput(),
+    return _buildBg(
+      children: [
+        //输入框
+        _buildInput(),
 
-      //删除图标
-      Expanded(child: _buildDelete()),
-    ]);
+        //删除图标
+        Expanded(child: _buildDelete()),
+      ],
+    );
   }
 
   Widget _buildInput() {
@@ -136,11 +160,8 @@ class _InputTextClearState extends State<InputTextClear>
         controller: _textController,
         keyboardType: widget.keyboardType,
         autofocus: widget.autofocus ?? false,
-        textAlign: TextAlign.start,
-        style: TextStyle(
-          color: widget.textColor,
-          fontSize: 28,
-        ),
+        textAlign: widget.textAlign,
+        style: TextStyle(color: widget.textColor, fontSize: 28),
         inputFormatters: widget.inputFormatters,
         textInputAction: TextInputAction.search,
         enabled: widget.enabled,
@@ -148,10 +169,7 @@ class _InputTextClearState extends State<InputTextClear>
           //较小空间时，使组件正常渲染，包括文本垂直居中
           isDense: true,
           hintText: widget.hintText,
-          hintStyle: TextStyle(
-            color: widget.hintColor,
-            fontSize: 24,
-          ),
+          hintStyle: TextStyle(color: widget.hintColor, fontSize: 24),
           border: InputBorder.none,
           contentPadding: EdgeInsets.all(0.0),
         ),
@@ -167,7 +185,7 @@ class _InputTextClearState extends State<InputTextClear>
             widget.onComplete!();
           }
 
-          FocusScope.of(context).requestFocus(FocusNode());
+          FocusScope.of(context).unfocus();
         },
       ),
     );
@@ -195,11 +213,7 @@ class _InputTextClearState extends State<InputTextClear>
           scale: _animation,
           child: Container(
             padding: const EdgeInsets.all(10),
-            child: Icon(
-              Icons.clear,
-              size: 38,
-              color: widget.iconColor,
-            ),
+            child: Icon(Icons.clear, size: 38, color: widget.iconColor),
           ),
         ),
       ),
@@ -207,9 +221,7 @@ class _InputTextClearState extends State<InputTextClear>
   }
 
   Widget _buildBg({required List<Widget> children}) {
-    return Row(
-      children: children,
-    );
+    return Row(children: children);
   }
 
   Widget _buildInputBg({required BuildContext context, required Widget child}) {
@@ -227,8 +239,12 @@ class _InputTextClearState extends State<InputTextClear>
 
   @override
   void dispose() {
+    _textController.removeListener(_handleControllerChanged);
     _animationController.dispose();
-    _textController.dispose();
+    if (_ownsTextController) {
+      _textController.dispose();
+    }
+    _focusNode.dispose();
 
     super.dispose();
   }

@@ -6,10 +6,7 @@ import 'package:flutter_use/module/example/bloc/easy_c/easy_c_provider.dart';
 import 'easy_c.dart';
 
 class EasyCBuilder<T extends EasyC<V>, V> extends StatefulWidget {
-  const EasyCBuilder({
-    Key? key,
-    required this.builder,
-  }) : super(key: key);
+  const EasyCBuilder({super.key, required this.builder});
 
   final Function(BuildContext context, V state) builder;
 

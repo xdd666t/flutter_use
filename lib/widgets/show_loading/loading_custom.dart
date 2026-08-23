@@ -6,7 +6,7 @@ import 'package:flutter_use/module/function/smart_dialog/widget/multi_handle_wid
 var _list = ['smile', 'icon', 'normal'];
 
 class LoadingCustom extends StatelessWidget {
-  const LoadingCustom({Key? key}) : super(key: key);
+  const LoadingCustom({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -17,7 +17,7 @@ var _index = 0;
 Function()? _showDialog;
 
 class CustomDialogBindPage extends StatelessWidget {
-  const CustomDialogBindPage({Key? key}) : super(key: key);
+  const CustomDialogBindPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,42 +31,41 @@ class CustomDialogBindPage extends StatelessWidget {
 
   void _show() {
     _showDialog = () {
-      SmartDialog.show(builder: (_) {
-        return Container(
-          width: 300,
-          height: 170,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: ElevatedButton(
-            onPressed: _toNewPage,
-            child: Text('test bindPage $_index'),
-          ),
-        );
-      });
+      SmartDialog.show(
+        builder: (_) {
+          return Container(
+            width: 300,
+            height: 170,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: ElevatedButton(
+              onPressed: _toNewPage,
+              child: Text('test bindPage $_index'),
+            ),
+          );
+        },
+      );
     };
 
     _showDialog?.call();
   }
 
   Future<void> _toNewPage() async {
-    Get.to(
-      () {
-        return Scaffold(
-          appBar: AppBar(title: Text('New Page ${++_index}')),
-          body: Container(
-            color: _randomColor,
-            alignment: Alignment.center,
-            child: ElevatedButton(
-              onPressed: () => _showDialog?.call(),
-              child: Text('test bindPage $_index'),
-            ),
+    Get.to(() {
+      return Scaffold(
+        appBar: AppBar(title: Text('New Page ${++_index}')),
+        body: Container(
+          color: _randomColor,
+          alignment: Alignment.center,
+          child: ElevatedButton(
+            onPressed: () => _showDialog?.call(),
+            child: Text('test bindPage $_index'),
           ),
-        );
-      },
-      preventDuplicates: false,
-    );
+        ),
+      );
+    }, preventDuplicates: false);
   }
 }

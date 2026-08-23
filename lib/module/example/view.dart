@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'widget/tree_items.dart';
 
 class ExamplePage extends StatelessWidget {
-  const ExamplePage({Key? key}) : super(key: key);
+  const ExamplePage({super.key});
 
   @override
   Widget build(BuildContext context) {

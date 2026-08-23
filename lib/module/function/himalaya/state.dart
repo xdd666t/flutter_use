@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/config/image_config.dart';
 
@@ -32,73 +31,82 @@ class HimalayaState {
 
     //侧边导航栏目初始数据
     leftItemList = [
-      HimalayaItemInfo(title: '推荐', subItemList: [
-        HimalayaSubItemInfo(
-          title: '发现',
-          icon: Icons.explore,
-          tag: HimalayaStatus.find,
-          isSelected: true,
-        ),
-        HimalayaSubItemInfo(
-          title: '广播电台',
-          icon: Icons.web,
-          tag: HimalayaStatus.broadcast,
-        ),
-        HimalayaSubItemInfo(
-          title: '私人FM',
-          icon: Icons.wb_auto_outlined,
-          tag: HimalayaStatus.fm,
-        ),
-        HimalayaSubItemInfo(
-          title: '排行榜',
-          icon: Icons.assessment_outlined,
-          tag: HimalayaStatus.rank,
-        ),
-        HimalayaSubItemInfo(
-          title: '全部分类',
-          icon: Icons.widgets_outlined,
-          tag: HimalayaStatus.sort,
-        ),
-      ]),
-      HimalayaItemInfo(title: '我听', subItemList: [
-        HimalayaSubItemInfo(
-          title: '我的订阅',
-          icon: Icons.star_border,
-          tag: HimalayaStatus.subscription,
-        ),
-        HimalayaSubItemInfo(
-          title: '全部更新',
-          icon: Icons.autorenew_outlined,
-          tag: HimalayaStatus.update,
-        ),
-        HimalayaSubItemInfo(
-          title: '下载中心',
-          icon: Icons.system_update_alt,
-          tag: HimalayaStatus.download,
-        ),
-        HimalayaSubItemInfo(
-          title: '收听历史',
-          icon: Icons.history,
-          tag: HimalayaStatus.history,
-        ),
-        HimalayaSubItemInfo(
-          title: '我的已购',
-          icon: Icons.shopping_cart_outlined,
-          tag: HimalayaStatus.shop,
-        ),
-      ]),
-      HimalayaItemInfo(title: '我创建的听单', subItemList: [
-        HimalayaSubItemInfo(
-          title: '我喜欢的声音',
-          icon: Icons.favorite_border,
-          tag: HimalayaStatus.sound,
-        ),
-        HimalayaSubItemInfo(
-          title: '我喜欢的音乐',
-          icon: Icons.mood_outlined,
-          tag: HimalayaStatus.music,
-        ),
-      ]),
+      HimalayaItemInfo(
+        title: '推荐',
+        subItemList: [
+          HimalayaSubItemInfo(
+            title: '发现',
+            icon: Icons.explore,
+            tag: HimalayaStatus.find,
+            isSelected: true,
+          ),
+          HimalayaSubItemInfo(
+            title: '广播电台',
+            icon: Icons.web,
+            tag: HimalayaStatus.broadcast,
+          ),
+          HimalayaSubItemInfo(
+            title: '私人FM',
+            icon: Icons.wb_auto_outlined,
+            tag: HimalayaStatus.fm,
+          ),
+          HimalayaSubItemInfo(
+            title: '排行榜',
+            icon: Icons.assessment_outlined,
+            tag: HimalayaStatus.rank,
+          ),
+          HimalayaSubItemInfo(
+            title: '全部分类',
+            icon: Icons.widgets_outlined,
+            tag: HimalayaStatus.sort,
+          ),
+        ],
+      ),
+      HimalayaItemInfo(
+        title: '我听',
+        subItemList: [
+          HimalayaSubItemInfo(
+            title: '我的订阅',
+            icon: Icons.star_border,
+            tag: HimalayaStatus.subscription,
+          ),
+          HimalayaSubItemInfo(
+            title: '全部更新',
+            icon: Icons.autorenew_outlined,
+            tag: HimalayaStatus.update,
+          ),
+          HimalayaSubItemInfo(
+            title: '下载中心',
+            icon: Icons.system_update_alt,
+            tag: HimalayaStatus.download,
+          ),
+          HimalayaSubItemInfo(
+            title: '收听历史',
+            icon: Icons.history,
+            tag: HimalayaStatus.history,
+          ),
+          HimalayaSubItemInfo(
+            title: '我的已购',
+            icon: Icons.shopping_cart_outlined,
+            tag: HimalayaStatus.shop,
+          ),
+        ],
+      ),
+      HimalayaItemInfo(
+        title: '我创建的听单',
+        subItemList: [
+          HimalayaSubItemInfo(
+            title: '我喜欢的声音',
+            icon: Icons.favorite_border,
+            tag: HimalayaStatus.sound,
+          ),
+          HimalayaSubItemInfo(
+            title: '我喜欢的音乐',
+            icon: Icons.mood_outlined,
+            tag: HimalayaStatus.music,
+          ),
+        ],
+      ),
     ];
 
     //banner图片数据源
@@ -238,87 +246,96 @@ class HimalayaState {
 
     //各类榜单源数据
     rankList = [
-      HimalayaItemInfo(title: '经典免费榜', subItemList: [
-        HimalayaSubItemInfo(
-          title: '辽沈先声',
-          subTitle: '辽沈晚报',
-          tag: ImageHimalayaConfig.listClassicOne,
-        ),
-        HimalayaSubItemInfo(
-          title: '郭德纲21年相声精选',
-          subTitle: '德云社郭德纲相声VIP',
-          tag: ImageHimalayaConfig.listClassicTwo,
-        ),
-        HimalayaSubItemInfo(
-          title: '南都快讯',
-          subTitle: '南方都市报',
-          tag: ImageHimalayaConfig.listClassicThree,
-        ),
-        HimalayaSubItemInfo(
-          title: '鲜快报',
-          subTitle: '封面新闻',
-          tag: ImageHimalayaConfig.listClassicFour,
-        ),
-        HimalayaSubItemInfo(
-          title: '摸金天师（紫襟演播）',
-          subTitle: '有声的紫襟',
-          tag: ImageHimalayaConfig.listClassicFive,
-        ),
-      ]),
-      HimalayaItemInfo(title: '有声书免费榜', subItemList: [
-        HimalayaSubItemInfo(
-          title: '摸金天师（紫襟演播）',
-          subTitle: '有声的紫襟',
-          tag: ImageHimalayaConfig.listSoundOne,
-        ),
-        HimalayaSubItemInfo(
-          title: '猎罪者',
-          subTitle: '有声的紫襟',
-          tag: ImageHimalayaConfig.listSoundTwo,
-        ),
-        HimalayaSubItemInfo(
-          title: '王的女人谁敢动',
-          subTitle: '一刀苏苏',
-          tag: ImageHimalayaConfig.listSoundThree,
-        ),
-        HimalayaSubItemInfo(
-          title: '绝世高手',
-          subTitle: '头陀渊讲故事',
-          tag: ImageHimalayaConfig.listSoundFour,
-        ),
-        HimalayaSubItemInfo(
-          title: '中国民间故事',
-          subTitle: '霄旭讲故事',
-          tag: ImageHimalayaConfig.listSoundFive,
-        ),
-      ]),
-      HimalayaItemInfo(title: '相声评书免费榜', subItemList: [
-        HimalayaSubItemInfo(
-          title: '郭德纲21年相声精选',
-          subTitle: '德云社郭德纲相声VIP',
-          tag: ImageHimalayaConfig.listCrosstalkOne,
-        ),
-        HimalayaSubItemInfo(
-          title: '郭德纲相声经典',
-          subTitle: '德云社郭德纲相声VIP',
-          tag: ImageHimalayaConfig.listCrosstalkTwo,
-        ),
-        HimalayaSubItemInfo(
-          title: '岳云鹏孙越爆笑相声',
-          subTitle: '岳云鹏相声',
-          tag: ImageHimalayaConfig.listCrosstalkThree,
-        ),
-        HimalayaSubItemInfo(
-          title: '岳云鹏孙越相声集',
-          subTitle: '岳云鹏相声',
-          tag: ImageHimalayaConfig.listCrosstalkFour,
-        ),
-        HimalayaSubItemInfo(
-          title: '乱世枭雄 | 单田芳经典',
-          subTitle: '单田芳评书',
-          tag: ImageHimalayaConfig.listCrosstalkFive,
-        ),
-      ]),
+      HimalayaItemInfo(
+        title: '经典免费榜',
+        subItemList: [
+          HimalayaSubItemInfo(
+            title: '辽沈先声',
+            subTitle: '辽沈晚报',
+            tag: ImageHimalayaConfig.listClassicOne,
+          ),
+          HimalayaSubItemInfo(
+            title: '郭德纲21年相声精选',
+            subTitle: '德云社郭德纲相声VIP',
+            tag: ImageHimalayaConfig.listClassicTwo,
+          ),
+          HimalayaSubItemInfo(
+            title: '南都快讯',
+            subTitle: '南方都市报',
+            tag: ImageHimalayaConfig.listClassicThree,
+          ),
+          HimalayaSubItemInfo(
+            title: '鲜快报',
+            subTitle: '封面新闻',
+            tag: ImageHimalayaConfig.listClassicFour,
+          ),
+          HimalayaSubItemInfo(
+            title: '摸金天师（紫襟演播）',
+            subTitle: '有声的紫襟',
+            tag: ImageHimalayaConfig.listClassicFive,
+          ),
+        ],
+      ),
+      HimalayaItemInfo(
+        title: '有声书免费榜',
+        subItemList: [
+          HimalayaSubItemInfo(
+            title: '摸金天师（紫襟演播）',
+            subTitle: '有声的紫襟',
+            tag: ImageHimalayaConfig.listSoundOne,
+          ),
+          HimalayaSubItemInfo(
+            title: '猎罪者',
+            subTitle: '有声的紫襟',
+            tag: ImageHimalayaConfig.listSoundTwo,
+          ),
+          HimalayaSubItemInfo(
+            title: '王的女人谁敢动',
+            subTitle: '一刀苏苏',
+            tag: ImageHimalayaConfig.listSoundThree,
+          ),
+          HimalayaSubItemInfo(
+            title: '绝世高手',
+            subTitle: '头陀渊讲故事',
+            tag: ImageHimalayaConfig.listSoundFour,
+          ),
+          HimalayaSubItemInfo(
+            title: '中国民间故事',
+            subTitle: '霄旭讲故事',
+            tag: ImageHimalayaConfig.listSoundFive,
+          ),
+        ],
+      ),
+      HimalayaItemInfo(
+        title: '相声评书免费榜',
+        subItemList: [
+          HimalayaSubItemInfo(
+            title: '郭德纲21年相声精选',
+            subTitle: '德云社郭德纲相声VIP',
+            tag: ImageHimalayaConfig.listCrosstalkOne,
+          ),
+          HimalayaSubItemInfo(
+            title: '郭德纲相声经典',
+            subTitle: '德云社郭德纲相声VIP',
+            tag: ImageHimalayaConfig.listCrosstalkTwo,
+          ),
+          HimalayaSubItemInfo(
+            title: '岳云鹏孙越爆笑相声',
+            subTitle: '岳云鹏相声',
+            tag: ImageHimalayaConfig.listCrosstalkThree,
+          ),
+          HimalayaSubItemInfo(
+            title: '岳云鹏孙越相声集',
+            subTitle: '岳云鹏相声',
+            tag: ImageHimalayaConfig.listCrosstalkFour,
+          ),
+          HimalayaSubItemInfo(
+            title: '乱世枭雄 | 单田芳经典',
+            subTitle: '单田芳评书',
+            tag: ImageHimalayaConfig.listCrosstalkFive,
+          ),
+        ],
+      ),
     ];
 
     //音频播放数据源
@@ -352,10 +369,7 @@ class HimalayaStatus {
 
 ///侧边栏数据
 class HimalayaItemInfo {
-  HimalayaItemInfo({
-    required this.title,
-    required this.subItemList,
-  });
+  HimalayaItemInfo({required this.title, required this.subItemList});
 
   ///item名称
   String title;

@@ -3,7 +3,7 @@ import 'package:flutter_use/module/example/bloc/stream/state.dart';
 import 'package:flutter_use/module/example/bloc/stream/stream.dart';
 
 class StreamPage extends StatefulWidget {
-  const StreamPage({Key? key}) : super(key: key);
+  const StreamPage({super.key});
 
   @override
   _StreamPageState createState() => _StreamPageState();

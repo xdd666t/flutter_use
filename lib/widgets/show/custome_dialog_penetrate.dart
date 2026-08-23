@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class CustomDialogPenetrate extends StatelessWidget {
-  const CustomDialogPenetrate({Key? key}) : super(key: key);
+  const CustomDialogPenetrate({super.key});
   static const String _penetrateTag = 'penetrateDialog';
 
   @override
@@ -16,27 +16,32 @@ class CustomDialogPenetrate extends StatelessWidget {
   }
 
   void _show() {
-    SmartDialog.show(builder: (_) {
-      return Container(
-        width: 300,
-        height: 170,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Wrap(spacing: 20, children: [
-          ElevatedButton(
-            onPressed: _openPenetrateDialog,
-            child: const Text('open'),
+    SmartDialog.show(
+      builder: (_) {
+        return Container(
+          width: 300,
+          height: 170,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
           ),
-          ElevatedButton(
-            onPressed: () => SmartDialog.dismiss(tag: _penetrateTag),
-            child: const Text('close'),
-          )
-        ]),
-      );
-    });
+          child: Wrap(
+            spacing: 20,
+            children: [
+              ElevatedButton(
+                onPressed: _openPenetrateDialog,
+                child: const Text('open'),
+              ),
+              ElevatedButton(
+                onPressed: () => SmartDialog.dismiss(tag: _penetrateTag),
+                child: const Text('close'),
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 
   void _openPenetrateDialog() {
@@ -58,7 +63,7 @@ class CustomDialogPenetrate extends StatelessWidget {
               bottomLeft: Radius.circular(15),
             ),
             boxShadow: [
-              BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2)
+              BoxShadow(color: Colors.grey, blurRadius: 8, spreadRadius: 0.2),
             ],
           ),
           child: const Text('penetrate dialog'),

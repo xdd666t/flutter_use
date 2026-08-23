@@ -10,10 +10,10 @@ import '../logic.dart';
 
 class HimalayaLeftNavigation extends StatelessWidget {
   const HimalayaLeftNavigation({
-    Key? key,
+    super.key,
     required this.data,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   final HimalayaState data;
 
@@ -21,34 +21,41 @@ class HimalayaLeftNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      //喜马拉雅logo图标
-      _buildLogo(),
+    return _buildBg(
+      children: [
+        //喜马拉雅logo图标
+        _buildLogo(),
 
-      //遍历俩层循环：不同item栏目 - 可点击,可滑动
-      //第一层：标题 + 子item列表
-      //第二层：子item详细布局
-      _buildItemListBg(itemBuilder: (item) {
-        return [
-          //最外层item - 大标题
-          _buildTitle(item.title),
-
-          //子栏目 - 列表
-          _buildSubItemListBg(item, subBuilder: (subItem) {
+        //遍历俩层循环：不同item栏目 - 可点击,可滑动
+        //第一层：标题 + 子item列表
+        //第二层：子item详细布局
+        _buildItemListBg(
+          itemBuilder: (item) {
             return [
-              //选中红色长方形条块
-              _buildRedTag(subItem),
+              //最外层item - 大标题
+              _buildTitle(item.title),
 
-              //图标
-              _buildItemIcon(subItem),
+              //子栏目 - 列表
+              _buildSubItemListBg(
+                item,
+                subBuilder: (subItem) {
+                  return [
+                    //选中红色长方形条块
+                    _buildRedTag(subItem),
 
-              //描述
-              _buildItemDesc(subItem),
+                    //图标
+                    _buildItemIcon(subItem),
+
+                    //描述
+                    _buildItemDesc(subItem),
+                  ];
+                },
+              ),
             ];
-          })
-        ];
-      }),
-    ]);
+          },
+        ),
+      ],
+    );
   }
 
   Widget _buildItemDesc(HimalayaSubItemInfo subItem) {
@@ -134,10 +141,7 @@ class HimalayaLeftNavigation extends StatelessWidget {
       margin: EdgeInsets.only(left: 23.dp, top: 20.dp, bottom: 5.dp),
       child: Text(
         title,
-        style: TextStyle(
-          fontSize: 14.sp,
-          color: Colors.grey,
-        ),
+        style: TextStyle(fontSize: 14.sp, color: Colors.grey),
       ),
     );
   }
@@ -145,16 +149,13 @@ class HimalayaLeftNavigation extends StatelessWidget {
   Widget _buildLogo() {
     return Container(
       margin: EdgeInsets.only(left: 23.dp),
-      child: Image.network(
-        ImageHimalayaConfig.logo,
-        width: 100.dp,
-      ),
+      child: Image.network(ImageHimalayaConfig.logo, width: 100.dp),
     );
   }
 
   Widget _buildBg({required List<Widget> children}) {
     return Container(
-      color: Colors.grey.withOpacity(0.06),
+      color: Colors.grey.withValues(alpha: 0.06),
       padding: EdgeInsets.only(top: 18.dp),
       width: 200.dp,
       child: Column(

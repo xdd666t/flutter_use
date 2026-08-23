@@ -57,17 +57,19 @@ class BottomDialog {
     required DateTime minValue,
     required DateTime maxValue,
   }) {
-    showBottomDateDialog(context,
-        type: type,
-        isNumberMonth: isNumberMonth,
-        yearBegin: yearBegin,
-        yearEnd: yearEnd,
-        minValue: minValue,
-        maxValue: maxValue,
-        callback: callback,
-        title: title,
-        cancelText: cancelText,
-        confirmText: confirmText);
+    showBottomDateDialog(
+      context,
+      type: type,
+      isNumberMonth: isNumberMonth,
+      yearBegin: yearBegin,
+      yearEnd: yearEnd,
+      minValue: minValue,
+      maxValue: maxValue,
+      callback: callback,
+      title: title,
+      cancelText: cancelText,
+      confirmText: confirmText,
+    );
   }
 
   ///预览图片的弹窗

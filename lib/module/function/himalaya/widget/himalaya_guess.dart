@@ -6,11 +6,11 @@ import 'package:flutter_use/toolkit/typedef/function.dart';
 ///猜你喜欢
 class HimalayaGuess extends StatelessWidget {
   const HimalayaGuess({
-    Key? key,
+    super.key,
     required this.data,
     required this.onChange,
     required this.onGuess,
-  }) : super(key: key);
+  });
 
   ///数据源
   final List<HimalayaSubItemInfo> data;
@@ -23,30 +23,37 @@ class HimalayaGuess extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      //标题 + 换一批
-      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        //标题
-        _buildTitle(),
+    return _buildBg(
+      children: [
+        //标题 + 换一批
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            //标题
+            _buildTitle(),
 
-        //换一批
-        _buildGuessChange()
-      ]),
+            //换一批
+            _buildGuessChange(),
+          ],
+        ),
 
-      //显示具体信息流
-      _buildItemBg(itemBuilder: (item) {
-        return [
-          //图片卡片
-          _buildPicCard(item),
+        //显示具体信息流
+        _buildItemBg(
+          itemBuilder: (item) {
+            return [
+              //图片卡片
+              _buildPicCard(item),
 
-          //文字描述
-          Text(item.title, style: TextStyle(fontSize: 15.sp)),
+              //文字描述
+              Text(item.title, style: TextStyle(fontSize: 15.sp)),
 
-          //子标题
-          _buildSubTitle(item),
-        ];
-      })
-    ]);
+              //子标题
+              _buildSubTitle(item),
+            ];
+          },
+        ),
+      ],
+    );
   }
 
   Widget _buildSubTitle(HimalayaSubItemInfo item) {
@@ -92,18 +99,20 @@ class HimalayaGuess extends StatelessWidget {
       borderRadius: BorderRadius.circular(100),
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 5.dp, horizontal: 15.dp),
-        child: Row(children: [
-          //图标
-          const Icon(Icons.autorenew, size: 15),
+        child: Row(
+          children: [
+            //图标
+            const Icon(Icons.autorenew, size: 15),
 
-          Container(width: 12.dp),
+            Container(width: 12.dp),
 
-          //文字
-          Text(
-            '换一批',
-            style: TextStyle(color: Colors.black, fontSize: 15.sp),
-          ),
-        ]),
+            //文字
+            Text(
+              '换一批',
+              style: TextStyle(color: Colors.black, fontSize: 15.sp),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -111,10 +120,7 @@ class HimalayaGuess extends StatelessWidget {
   Widget _buildTitle() {
     return Text(
       '猜你喜欢',
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 21.sp,
-      ),
+      style: TextStyle(color: Colors.black, fontSize: 21.sp),
     );
   }
 

@@ -13,7 +13,7 @@ Color get _randomColor {
 }
 
 class CustomDialogSingle extends StatelessWidget {
-  const CustomDialogSingle({Key? key}) : super(key: key);
+  const CustomDialogSingle({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,11 +41,13 @@ class CustomDialogSingle extends StatelessWidget {
       keepSingle: keepSingle,
       builder: (_) {
         return Container(
-          width: alignment == Alignment.bottomCenter ||
+          width:
+              alignment == Alignment.bottomCenter ||
                   alignment == Alignment.topCenter
               ? double.infinity
               : 100,
-          height: alignment == Alignment.bottomCenter ||
+          height:
+              alignment == Alignment.bottomCenter ||
                   alignment == Alignment.topCenter
               ? 100
               : double.infinity,

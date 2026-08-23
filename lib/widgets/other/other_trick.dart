@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class OtherTrick extends StatelessWidget {
-  const OtherTrick({Key? key}) : super(key: key);
+  const OtherTrick({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class OtherTrick extends StatelessWidget {
 /// --------------------------------分隔符-----------------------------------
 
 class InsideWidget extends StatefulWidget {
-  const InsideWidget({Key? key, this.onUpdate}) : super(key: key);
+  const InsideWidget({super.key, this.onUpdate});
 
   final Function(VoidCallback onInvoke)? onUpdate;
 
@@ -81,8 +81,10 @@ class _InsideWidgetState extends State<InsideWidget> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
         ),
-        child:
-            Text('Counter： $_count ', style: const TextStyle(fontSize: 30.0)),
+        child: Text(
+          'Counter： $_count ',
+          style: const TextStyle(fontSize: 30.0),
+        ),
       ),
     );
   }

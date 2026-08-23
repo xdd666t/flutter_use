@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'dart:async';
 
 import 'package:code_preview/code_preview.dart';
 import 'package:flutter/material.dart';
@@ -17,29 +17,14 @@ import 'toolkit/view/custom/custom_loading_widget.dart';
 import 'toolkit/view/custom/custom_toast_widget.dart';
 
 void main() {
-  // 解决启动白屏问题 或 Flutter2.5+首屏页面复杂，导致的加载异常问题
-  // main()方法并不是在Flutter给physicalSize赋值后才运行的，
-  // 这就导致部分机型性能比较好，还没赋值屏幕大小就可能启动渲染界面了。
-  // 如果size为有数值，监听测量回调，在回调中runApp
-  appReady() {
-    if (!window.physicalSize.isEmpty) {
-      window.onMetricsChanged = null;
-      runApp(const MyApp());
-      initWindow();
-    }
-  }
-
-  if (window.physicalSize.isEmpty) {
-    window.onMetricsChanged = appReady;
-  } else {
-    appReady();
-  }
-  // 相关初始化
+  WidgetsFlutterBinding.ensureInitialized();
   CodePreview.config = CodePreviewConfig(codeTheme: CodeTheme.light);
+  runApp(const MyApp());
+  unawaited(initWindow());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,14 +46,12 @@ Widget _builder(BuildContext context, Widget? child) {
   return MultiBlocProvider(
     providers: [
       //此处通过MultiBlocProvider创建的Bloc或者Cubit是全局的
-      BlocProvider.value(value: BlocSpanOneCubit()),
+      BlocProvider(create: (_) => BlocSpanOneCubit()),
     ],
     child: MultiProvider(
       providers: [
         //此处通过MultiProvider创建的Provider是全局的
-        ChangeNotifierProvider.value(value: ProSpanOneProvider()),
-
-        // ChangeNotifierProvider(create: (context) => ProSpanOneProvider()),
+        ChangeNotifierProvider(create: (_) => ProSpanOneProvider()),
       ],
       child: _customGlobalWidget(child),
     ),

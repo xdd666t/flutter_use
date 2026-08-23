@@ -6,10 +6,10 @@ import 'package:flutter_use/toolkit/utils/ui_util.dart';
 
 class MultiHandleWidget extends StatelessWidget {
   const MultiHandleWidget({
-    Key? key,
+    super.key,
     required this.list,
     required this.onItem,
-  }) : super(key: key);
+  });
 
   final List<String> list;
 

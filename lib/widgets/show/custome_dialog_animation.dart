@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class CustomDialogAnimation extends StatelessWidget {
-  const CustomDialogAnimation({Key? key}) : super(key: key);
+  const CustomDialogAnimation({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,16 +17,20 @@ class CustomDialogAnimation extends StatelessWidget {
   void _show() {
     SmartDialog.show(
       animationTime: const Duration(milliseconds: 3000),
-      animationBuilder: (
-        AnimationController controller,
-        Widget child,
-        AnimationParam animationParam,
-      ) {
-        return RotationTransition(
-          turns: CurvedAnimation(parent: controller, curve: Curves.elasticIn),
-          child: child,
-        );
-      },
+      animationBuilder:
+          (
+            AnimationController controller,
+            Widget child,
+            AnimationParam animationParam,
+          ) {
+            return RotationTransition(
+              turns: CurvedAnimation(
+                parent: controller,
+                curve: Curves.elasticIn,
+              ),
+              child: child,
+            );
+          },
       builder: (_) {
         return Container(
           color: Colors.white,

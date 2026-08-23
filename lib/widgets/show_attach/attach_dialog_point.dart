@@ -13,7 +13,7 @@ Color get _randomColor {
 }
 
 class AttachDialogPoint extends StatelessWidget {
-  const AttachDialogPoint({Key? key}) : super(key: key);
+  const AttachDialogPoint({super.key});
 
   @override
   Widget build(BuildContext context) {

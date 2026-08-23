@@ -9,7 +9,7 @@ import 'state.dart';
 part 'widget/code_show.dart';
 
 class SmartDialogPage extends StatelessWidget {
-  SmartDialogPage({Key? key}) : super(key: key);
+  SmartDialogPage({super.key});
 
   final SmartDialogLogic logic = Get.put(SmartDialogLogic());
   final SmartDialogState state = Get.find<SmartDialogLogic>().state;
@@ -21,17 +21,19 @@ class SmartDialogPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: GetBuilder<SmartDialogLogic>(
         builder: (logic) {
-          return Row(children: [
-            // 侧边栏
-            TolyRailMenuTree(
-              enableWidthChange: true,
-              meta: state.menuTreeMeta,
-              onSelect: (MenuNode node) => logic.onItem(node),
-            ),
+          return Row(
+            children: [
+              // 侧边栏
+              TolyRailMenuTree(
+                enableWidthChange: true,
+                meta: state.menuTreeMeta,
+                onSelect: (MenuNode node) => logic.onItem(node),
+              ),
 
-            // 内容
-            _CodeShow(data: state),
-          ]);
+              // 内容
+              _CodeShow(data: state),
+            ],
+          );
         },
       ),
     );

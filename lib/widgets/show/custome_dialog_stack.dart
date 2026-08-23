@@ -13,7 +13,7 @@ Color get _randomColor {
 }
 
 class CustomDialogStack extends StatelessWidget {
-  const CustomDialogStack({Key? key}) : super(key: key);
+  const CustomDialogStack({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,24 +45,27 @@ class CustomDialogStack extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          child: Wrap(spacing: 20, children: [
-            ElevatedButton(
-              child: const Text('close dialog A'),
-              onPressed: () => SmartDialog.dismiss(tag: 'A'),
-            ),
-            ElevatedButton(
-              child: const Text('close dialog B'),
-              onPressed: () => SmartDialog.dismiss(tag: 'B'),
-            ),
-            ElevatedButton(
-              child: const Text('close dialog C'),
-              onPressed: () => SmartDialog.dismiss(tag: 'C'),
-            ),
-            ElevatedButton(
-              child: const Text('close dialog D'),
-              onPressed: () => SmartDialog.dismiss(tag: 'D'),
-            ),
-          ]),
+          child: Wrap(
+            spacing: 20,
+            children: [
+              ElevatedButton(
+                child: const Text('close dialog A'),
+                onPressed: () => SmartDialog.dismiss(tag: 'A'),
+              ),
+              ElevatedButton(
+                child: const Text('close dialog B'),
+                onPressed: () => SmartDialog.dismiss(tag: 'B'),
+              ),
+              ElevatedButton(
+                child: const Text('close dialog C'),
+                onPressed: () => SmartDialog.dismiss(tag: 'C'),
+              ),
+              ElevatedButton(
+                child: const Text('close dialog D'),
+                onPressed: () => SmartDialog.dismiss(tag: 'D'),
+              ),
+            ],
+          ),
         );
       },
     );

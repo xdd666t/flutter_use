@@ -13,4 +13,3 @@ class BlocSpanOneState {
     return BlocSpanOneState()..count = count;
   }
 }
-

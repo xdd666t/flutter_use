@@ -8,7 +8,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.2
 
 environment:
-  sdk: ">=2.12.0 <4.0.0"
+  sdk: ">=3.8.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -17,46 +17,47 @@ dependencies:
   # 编译web命令
   # - 代理: export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
   # - bash publish_web.sh
-  cupertino_icons: ^1.0.6
+  cupertino_icons: ^1.0.9
 
   # getx 状态管理框架 https://pub.flutter-io.cn/packages/get
   # import 'dart:html' as html; to import 'package:web/web.dart' as html;
-  get: 5.0.0-release-candidate-9.2.1
+  get: ^5.0.0-release-candidate-9.3.3
+  bloc: ^9.2.1
   # 状态管理框架 https://pub.dev/packages/flutter_bloc
-  flutter_bloc:
+  flutter_bloc: ^9.1.1
   # 状态管理框架 https://pub.dev/packages/provider
-  provider:
+  provider: ^6.1.5+1
   # 网络请求 https://pub.flutter-io.cn/packages/dio
-  dio: 5.0.1
+  dio: ^5.11.0
   # https://pub.flutter-io.cn/packages/logger
-  logger:
+  logger: ^2.7.0
   # 时间滚轮选择器 https://pub.dev/packages/flutter_picker
-  flutter_picker:
+  flutter_picker: ^2.1.0
   # 图片选择器 https://pub.dev/packages/wechat_assets_picker
   #  wechat_assets_picker: 7.3.2
   # 预览图片 https://pub.dev/packages/photo_view
-  photo_view:
+  photo_view: ^0.15.0
   # iOS数字键盘添加收起按钮 https://pub.dev/packages/keyboard_actions
-  keyboard_actions:
+  keyboard_actions: ^5.0.2
   # 用于处理widget是否可见检测 https://pub.flutter-io.cn/packages/visibility_detector
-  visibility_detector:
+  visibility_detector: ^0.4.0+2
   # 本地缓存 https://pub.flutter-io.cn/packages/shared_preferences
 #  shared_preferences:
   # 轮播图: https://pub.dev/packages/card_swiper
-  card_swiper:
+  card_swiper: ^3.0.1
   # 设置桌面端: https://pub.dev/packages/window_manager
-  window_manager: 0.3.0
+  window_manager: ^0.5.2
   # https://pub.dev/packages/tolyui_navigation
-  tolyui_navigation: 0.2.0+5
+  tolyui_navigation: ^0.2.1
 
   # https://pub.dev/packages/universal_html/install
-  universal_html: ^2.2.1
+  universal_html: ^2.3.0
   # https://pub.dev/packages/code_preview/install
-  code_preview: ^0.1.2
+  code_preview: ^0.1.5
 #  code_preview:
 #    path: ../code_preview
   # 弹窗控件 https://github.com/CNAD666/flutter_smart_dialog
-  flutter_smart_dialog: ^5.1.0
+  flutter_smart_dialog: ^5.3.0
   #  flutter_smart_dialog:
   #    path: ../flutter_smart_dialog
   # 一个命令行工具，针对flutter web加载慢和缓存问题提供了一套解决方案
@@ -73,7 +74,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   # flutter_lints库：https://pub.dev/packages/flutter_lints
-  flutter_lints: ^1.0.4
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true

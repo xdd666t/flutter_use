@@ -9,7 +9,6 @@ import 'package:flutter_use/entity/test/net_object_bean.dart';
 JsonConvert jsonConvert = JsonConvert();
 
 class JsonConvert {
-
   T? convert<T>(dynamic value) {
     if (value == null) {
       return null;
@@ -40,11 +39,12 @@ class JsonConvert {
       return <T>[];
     }
   }
+
   T? asT<T extends Object?>(dynamic value) {
     if (value is T) {
       return value;
     }
-		final String type = T.toString();
+    final String type = T.toString();
     try {
       final String valueS = value.toString();
       if (type == "String") {
@@ -55,11 +55,12 @@ class JsonConvert {
           return double.tryParse(valueS)?.toInt() as T?;
         } else {
           return intValue as T;
-        }      } else if (type == "double") {
+        }
+      } else if (type == "double") {
         return double.parse(valueS) as T;
-      } else if (type ==  "DateTime") {
+      } else if (type == "DateTime") {
         return DateTime.parse(valueS) as T;
-      } else if (type ==  "bool") {
+      } else if (type == "bool") {
         if (valueS == '0' || valueS == '1') {
           return (valueS == '1') as T;
         }
@@ -71,50 +72,56 @@ class JsonConvert {
       print('asT<$T> $e $stackTrace');
       return null;
     }
-  } 
-	//Go back to a single instance by type
-	static M? _fromJsonSingle<M>(Map<String, dynamic> json) {
-		final String type = M.toString();
-		if(type == (NetListBean).toString()){
-			return NetListBean.fromJson(json) as M;
-		}
-		if(type == (NetObjectBean).toString()){
-			return NetObjectBean.fromJson(json) as M;
-		}
-		if(type == (NetObjectDatas).toString()){
-			return NetObjectDatas.fromJson(json) as M;
-		}
+  }
 
-		print("$type not found");
-	
-		return null;
-}
+  //Go back to a single instance by type
+  static M? _fromJsonSingle<M>(Map<String, dynamic> json) {
+    final String type = M.toString();
+    if (type == (NetListBean).toString()) {
+      return NetListBean.fromJson(json) as M;
+    }
+    if (type == (NetObjectBean).toString()) {
+      return NetObjectBean.fromJson(json) as M;
+    }
+    if (type == (NetObjectDatas).toString()) {
+      return NetObjectDatas.fromJson(json) as M;
+    }
+
+    print("$type not found");
+
+    return null;
+  }
 
   //list is returned by type
-	static M? _getListChildType<M>(List<dynamic> data) {
-		if(<NetListBean>[] is M){
-			return data.map<NetListBean>((e) => NetListBean.fromJson(e)).toList() as M;
-		}
-		if(<NetObjectBean>[] is M){
-			return data.map<NetObjectBean>((e) => NetObjectBean.fromJson(e)).toList() as M;
-		}
-		if(<NetObjectDatas>[] is M){
-			return data.map<NetObjectDatas>((e) => NetObjectDatas.fromJson(e)).toList() as M;
-		}
+  static M? _getListChildType<M>(List<dynamic> data) {
+    if (<NetListBean>[] is M) {
+      return data.map<NetListBean>((e) => NetListBean.fromJson(e)).toList()
+          as M;
+    }
+    if (<NetObjectBean>[] is M) {
+      return data.map<NetObjectBean>((e) => NetObjectBean.fromJson(e)).toList()
+          as M;
+    }
+    if (<NetObjectDatas>[] is M) {
+      return data
+              .map<NetObjectDatas>((e) => NetObjectDatas.fromJson(e))
+              .toList()
+          as M;
+    }
 
-		print("${M.toString()} not found");
-	
-		return null;
-}
+    print("${M.toString()} not found");
+
+    return null;
+  }
 
   static M? fromJsonAsT<M>(dynamic json) {
-		if(json == null){
-			return null;
-		}
-		if (json is List) {
-			return _getListChildType<M>(json);
-		} else {
-			return _fromJsonSingle<M>(json as Map<String, dynamic>);
-		}
-	}
+    if (json == null) {
+      return null;
+    }
+    if (json is List) {
+      return _getListChildType<M>(json);
+    } else {
+      return _fromJsonSingle<M>(json as Map<String, dynamic>);
+    }
+  }
 }

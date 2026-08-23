@@ -3,11 +3,7 @@ class BaseResponse {
   int? errorCode;
   String? errorMsg;
 
-  BaseResponse._({
-    this.data,
-    this.errorCode,
-    this.errorMsg,
-  });
+  BaseResponse._({this.data, this.errorCode, this.errorMsg});
 
   static BaseResponse fromJson(Map<String, dynamic> map) {
     return BaseResponse._(

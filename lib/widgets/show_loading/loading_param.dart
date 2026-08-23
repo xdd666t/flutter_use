@@ -21,7 +21,7 @@ var _list = [
 ];
 
 class LoadingParam extends StatelessWidget {
-  const LoadingParam({Key? key}) : super(key: key);
+  const LoadingParam({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +55,7 @@ class LoadingParam extends StatelessWidget {
       );
       SmartDialog.showLoading(maskWidget: maskWidget);
     } else if (_list[1] == msg) {
-      SmartDialog.showLoading(maskColor: _randomColor.withOpacity(0.3));
+      SmartDialog.showLoading(maskColor: _randomColor.withValues(alpha: 0.3));
     } else if (_list[2] == msg) {
       SmartDialog.showLoading(animationType: SmartAnimationType.scale);
     } else if (_list[3] == msg) {

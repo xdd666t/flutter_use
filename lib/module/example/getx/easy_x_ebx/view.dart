@@ -8,6 +8,8 @@ import 'logic.dart';
 class EasyXEbxCounterPage extends StatelessWidget {
   final EasyXEbxCounterLogic logic = Easy.put(EasyXEbxCounterLogic());
 
+  EasyXEbxCounterPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return EasyBindWidget(

@@ -12,9 +12,4 @@ class SettingLogic extends GetxController {
     VisibilityDetectorController.instance.updateInterval = Duration.zero;
     super.onInit();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
 }

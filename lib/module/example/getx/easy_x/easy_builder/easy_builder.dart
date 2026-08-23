@@ -10,17 +10,18 @@ class EasyBuilder<T extends EasyXController> extends StatefulWidget {
   final bool autoRemove;
 
   const EasyBuilder({
-    Key? key,
+    super.key,
     required this.builder,
     this.autoRemove = true,
     this.tag,
-  }) : super(key: key);
+  });
 
   @override
   _EasyBuilderState<T> createState() => _EasyBuilderState<T>();
 }
 
-class _EasyBuilderState<T extends EasyXController> extends State<EasyBuilder<T>> {
+class _EasyBuilderState<T extends EasyXController>
+    extends State<EasyBuilder<T>> {
   late T controller;
 
   @override

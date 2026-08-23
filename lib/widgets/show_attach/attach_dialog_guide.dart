@@ -8,7 +8,7 @@ late BuildContext _aContext;
 late BuildContext _bContext;
 
 class AttachDialogGuide extends StatelessWidget {
-  const AttachDialogGuide({Key? key}) : super(key: key);
+  const AttachDialogGuide({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +21,21 @@ class AttachDialogGuide extends StatelessWidget {
   }
 
   void _show() async {
-    SmartDialog.show(builder: (_) {
-      return Container(
-        width: double.infinity,
-        height: double.infinity,
-        alignment: Alignment.center,
-        margin: const EdgeInsets.symmetric(vertical: 100, horizontal: 80),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-        ),
-        child: Stack(children: [_pointA(), _pointB()]),
-      );
-    });
+    SmartDialog.show(
+      builder: (_) {
+        return Container(
+          width: double.infinity,
+          height: double.infinity,
+          alignment: Alignment.center,
+          margin: const EdgeInsets.symmetric(vertical: 100, horizontal: 80),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.white,
+          ),
+          child: Stack(children: [_pointA(), _pointB()]),
+        );
+      },
+    );
     await Future.delayed(const Duration(milliseconds: 500));
     _guideA(_aContext);
   }
@@ -42,14 +44,16 @@ class AttachDialogGuide extends StatelessWidget {
     return Positioned(
       left: 100,
       top: 100,
-      child: Builder(builder: (context) {
-        _aContext = context;
-        return _point(
-          onTap: () => _guideA(context),
-          url:
-              'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220103124847.jpg',
-        );
-      }),
+      child: Builder(
+        builder: (context) {
+          _aContext = context;
+          return _point(
+            onTap: () => _guideA(context),
+            url:
+                'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220103124847.jpg',
+          );
+        },
+      ),
     );
   }
 
@@ -57,14 +61,16 @@ class AttachDialogGuide extends StatelessWidget {
     return Positioned(
       right: 100,
       bottom: 100,
-      child: Builder(builder: (context) {
-        _bContext = context;
-        return _point(
-          onTap: () => _guideB(context),
-          url:
-              'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220103124847.jpg',
-        );
-      }),
+      child: Builder(
+        builder: (context) {
+          _bContext = context;
+          return _point(
+            onTap: () => _guideB(context),
+            url:
+                'https://raw.githubusercontent.com/xdd666t/MyData/master/pic/flutter/blog/20220103124847.jpg',
+          );
+        },
+      ),
     );
   }
 
@@ -91,10 +97,12 @@ class AttachDialogGuide extends StatelessWidget {
       clickMaskDismiss: false,
       keepSingle: true,
       builder: (_) {
-        return _guide(onTap: () {
-          SmartDialog.showToast('over');
-          SmartDialog.dismiss();
-        });
+        return _guide(
+          onTap: () {
+            SmartDialog.showToast('over');
+            SmartDialog.dismiss();
+          },
+        );
       },
     );
   }
@@ -104,7 +112,7 @@ class AttachDialogGuide extends StatelessWidget {
     SmartDialog.showAttach(
       targetContext: context,
       alignment: Alignment.bottomCenter,
-      highlightBuilder: (_, __) {
+      highlightBuilder: (_, _) {
         return Positioned(
           left: 170,
           top: 190,
@@ -122,10 +130,12 @@ class AttachDialogGuide extends StatelessWidget {
       clickMaskDismiss: false,
       keepSingle: true,
       builder: (_) {
-        return _guide(onTap: () async {
-          if (Random().nextBool()) await SmartDialog.dismiss();
-          _guideB(_bContext);
-        });
+        return _guide(
+          onTap: () async {
+            if (Random().nextBool()) await SmartDialog.dismiss();
+            _guideB(_bContext);
+          },
+        );
       },
     );
   }
@@ -137,7 +147,7 @@ class AttachDialogGuide extends StatelessWidget {
       child: Container(
         decoration: const BoxDecoration(
           boxShadow: [
-            BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2)
+            BoxShadow(color: Colors.black12, blurRadius: 8, spreadRadius: 0.2),
           ],
         ),
         child: ClipRRect(
@@ -156,16 +166,18 @@ class AttachDialogGuide extends StatelessWidget {
         color: Colors.blue,
       ),
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      child: Column(children: [
-        const Text(
-          'xdd666',
-          style: TextStyle(color: Colors.white, fontSize: 20),
-        ),
-        ElevatedButton(
-          onPressed: () => onTap?.call(),
-          child: const Text('next'),
-        )
-      ]),
+      child: Column(
+        children: [
+          const Text(
+            'xdd666',
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+          ElevatedButton(
+            onPressed: () => onTap?.call(),
+            child: const Text('next'),
+          ),
+        ],
+      ),
     );
   }
 }

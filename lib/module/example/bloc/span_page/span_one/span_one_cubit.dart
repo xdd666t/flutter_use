@@ -18,7 +18,7 @@ class BlocSpanOneCubit extends Cubit<BlocSpanOneState> {
 
   ///自增
   void increase() {
-    state..count = ++state.count;
+    state.count++;
     emit(state.clone());
   }
 }

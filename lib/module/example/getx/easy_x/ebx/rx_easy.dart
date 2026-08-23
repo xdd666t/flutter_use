@@ -1,10 +1,9 @@
-
 import '../easy_x_notifier.dart';
 
 class RxEasy {
   EasyXNotifier easyXNotifier = EasyXNotifier();
 
-  Map<EasyXNotifier, String> _listenerMap = {};
+  final Map<EasyXNotifier, String> _listenerMap = {};
 
   bool get canUpdate => _listenerMap.isNotEmpty;
 

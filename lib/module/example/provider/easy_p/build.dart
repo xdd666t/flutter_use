@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_use/module/example/provider/easy_p/easy_p.dart';
 
 class EasyPBuilder<T extends ChangeNotifier> extends StatelessWidget {
-  const EasyPBuilder(
-    this.builder, {
-    Key? key,
-  }) : super(key: key);
+  const EasyPBuilder(this.builder, {super.key});
 
   final Widget Function() builder;
 
@@ -17,10 +14,7 @@ class EasyPBuilder<T extends ChangeNotifier> extends StatelessWidget {
 }
 
 class EasyPBuilderAll<T extends ChangeNotifier> extends StatelessWidget {
-  const EasyPBuilderAll(
-    this.builder, {
-    Key? key,
-  }) : super(key: key);
+  const EasyPBuilderAll(this.builder, {super.key});
 
   final Widget Function(BuildContext context, T easyP) builder;
 

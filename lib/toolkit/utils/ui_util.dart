@@ -43,13 +43,13 @@ class UiUtil {
   double? _screenHeight;
 
   UiUtil._internal() {
-    var window = WidgetsBinding.instance.window;
-    _pixelRatio = window.devicePixelRatio;
-    _statusBarHeight = window.padding.top;
-    _bottomBarHeight = window.padding.bottom;
-    _textScaleFactor = window.textScaleFactor;
+    _pixelRatio = 1;
+    _statusBarHeight = 0;
+    _bottomBarHeight = 0;
+    _textScaleFactor = 1;
     _allowFontScaling = false;
     _uiSize = _defaultSize;
+    _orientation = Orientation.portrait;
   }
 
   static void init({
@@ -72,16 +72,22 @@ class UiUtil {
     Orientation orientation = Orientation.portrait,
     bool allowFontScaling = false,
   }) {
-    this._uiSize = designSize;
-    this._allowFontScaling = allowFontScaling;
-    this._orientation = orientation;
+    _uiSize = designSize;
+    _allowFontScaling = allowFontScaling;
+    _orientation = orientation;
+
+    final view = View.of(context);
+    _pixelRatio = view.devicePixelRatio;
+    _statusBarHeight = view.padding.top;
+    _bottomBarHeight = view.padding.bottom;
+    _textScaleFactor = MediaQuery.textScalerOf(context).scale(1);
 
     if (orientation == Orientation.portrait) {
-      this._screenWidth = MediaQuery.of(context).size.width;
-      this._screenHeight = MediaQuery.of(context).size.height;
+      _screenWidth = MediaQuery.of(context).size.width;
+      _screenHeight = MediaQuery.of(context).size.height;
     } else {
-      this._screenWidth = MediaQuery.of(context).size.height;
-      this._screenHeight = MediaQuery.of(context).size.width;
+      _screenWidth = MediaQuery.of(context).size.height;
+      _screenHeight = MediaQuery.of(context).size.width;
     }
   }
 
@@ -109,7 +115,7 @@ class UiUtil {
   /// 实际尺寸与UI设计的比例
   double get scaleWidth => (_screenWidth ?? _uiSize.width) / _uiSize.width;
 
-  double get scaleHeight => (_screenWidth ?? _uiSize.height) / _uiSize.height;
+  double get scaleHeight => (_screenHeight ?? _uiSize.height) / _uiSize.height;
 
   double get scaleText => min(scaleWidth, scaleHeight);
 
@@ -126,10 +132,10 @@ class UiUtil {
   ///字体大小适配方法
   double setSp(num fontSize, {bool? allowFontScalingSelf}) =>
       allowFontScalingSelf == null
-          ? (_allowFontScaling
-          ? (fontSize * scaleText) * _textScaleFactor
-          : (fontSize * scaleText))
-          : (allowFontScalingSelf
-          ? (fontSize * scaleText) * _textScaleFactor
-          : (fontSize * scaleText));
+      ? (_allowFontScaling
+            ? (fontSize * scaleText) * _textScaleFactor
+            : (fontSize * scaleText))
+      : (allowFontScalingSelf
+            ? (fontSize * scaleText) * _textScaleFactor
+            : (fontSize * scaleText));
 }

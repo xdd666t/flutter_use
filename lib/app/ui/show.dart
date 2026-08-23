@@ -3,10 +3,7 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 void showSnackBar(BuildContext context, String msg) {
   ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-      content: Text(msg),
-      duration: const Duration(seconds: 1),
-    ),
+    SnackBar(content: Text(msg), duration: const Duration(seconds: 1)),
   );
 }
 

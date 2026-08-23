@@ -5,7 +5,7 @@ import '../../example/widget/tree_items.dart';
 import 'logic.dart';
 
 class AnimationPage extends StatelessWidget {
-  AnimationPage({Key? key}) : super(key: key);
+  AnimationPage({super.key});
 
   final logic = Get.put(AnimationLogic());
   final state = Get.find<AnimationLogic>().state;

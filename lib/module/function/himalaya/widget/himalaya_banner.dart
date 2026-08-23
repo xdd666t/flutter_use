@@ -4,11 +4,7 @@ import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
 class HimalayaBanner extends StatelessWidget {
-  const HimalayaBanner({
-    Key? key,
-    required this.data,
-    required this.onTap,
-  }) : super(key: key);
+  const HimalayaBanner({super.key, required this.data, required this.onTap});
 
   ///数据源
   final List<String> data;

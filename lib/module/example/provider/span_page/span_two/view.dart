@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class ProSpanTwoPage extends StatelessWidget {
+  const ProSpanTwoPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -30,12 +32,14 @@ class ProSpanTwoPage extends StatelessWidget {
         child: Icon(Icons.add),
       ),
       body: Center(
-        child: Consumer<ProSpanTwoProvider>(builder: (_, __, ___) {
-          return Text(
-            '当前点击了 ${provider.count} 次',
-            style: TextStyle(fontSize: 30.0),
-          );
-        }),
+        child: Consumer<ProSpanTwoProvider>(
+          builder: (_, _, _) {
+            return Text(
+              '当前点击了 ${provider.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
+          },
+        ),
       ),
     );
   }

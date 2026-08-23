@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 import 'easy_c.dart';
 
 class EasyCProvider<T extends EasyC> extends InheritedWidget {
-  EasyCProvider({
-    Key? key,
-    Widget? child,
-    required this.create,
-  }) : super(key: key, child: child ?? Container());
+  EasyCProvider({super.key, Widget? child, required this.create})
+    : super(child: child ?? Container());
 
   final T Function(BuildContext context) create;
 
@@ -31,7 +28,7 @@ class EasyCProvider<T extends EasyC> extends InheritedWidget {
 }
 
 class EasyCInheritedElement<T extends EasyC> extends InheritedElement {
-  EasyCInheritedElement(EasyCProvider<T> widget) : super(widget);
+  EasyCInheritedElement(EasyCProvider<T> super.widget);
 
   bool _firstBuild = true;
 

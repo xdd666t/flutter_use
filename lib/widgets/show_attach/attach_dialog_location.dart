@@ -15,7 +15,7 @@ Color get _randomColor {
 List<BuildContext> _contextList = [];
 
 class AttachDialogLocation extends StatelessWidget {
-  const AttachDialogLocation({Key? key}) : super(key: key);
+  const AttachDialogLocation({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,31 +54,34 @@ class AttachDialogLocation extends StatelessWidget {
             color: Colors.white,
           ),
           child: SingleChildScrollView(
-            child: Wrap(alignment: WrapAlignment.spaceEvenly, children: [
-              _btn(title: 'topLeft', onTap: (context) => funList[0]()),
-              _btn(title: 'topCenter', onTap: (context) => funList[1]()),
-              _btn(title: 'topRight', onTap: (context) => funList[2]()),
-              _btn(title: 'centerLeft', onTap: (context) => funList[3]()),
-              _btn(title: 'center', onTap: (context) => funList[4]()),
-              _btn(title: 'centerRight', onTap: (context) => funList[5]()),
-              _btn(title: 'bottomLeft', onTap: (context) => funList[6]()),
-              _btn(title: 'bottomCenter', onTap: (context) => funList[7]()),
-              _btn(title: 'bottomRight', onTap: (context) => funList[8]()),
-              _radio(),
-              _btn(
-                title: 'allOpen',
-                onTap: (_) async {
-                  for (var item in funList) {
-                    await item();
-                  }
-                },
-              ),
-              _btn(
-                title: 'allClose',
-                onTap: (_) =>
-                    SmartDialog.dismiss(status: SmartStatus.allAttach),
-              ),
-            ]),
+            child: Wrap(
+              alignment: WrapAlignment.spaceEvenly,
+              children: [
+                _btn(title: 'topLeft', onTap: (context) => funList[0]()),
+                _btn(title: 'topCenter', onTap: (context) => funList[1]()),
+                _btn(title: 'topRight', onTap: (context) => funList[2]()),
+                _btn(title: 'centerLeft', onTap: (context) => funList[3]()),
+                _btn(title: 'center', onTap: (context) => funList[4]()),
+                _btn(title: 'centerRight', onTap: (context) => funList[5]()),
+                _btn(title: 'bottomLeft', onTap: (context) => funList[6]()),
+                _btn(title: 'bottomCenter', onTap: (context) => funList[7]()),
+                _btn(title: 'bottomRight', onTap: (context) => funList[8]()),
+                _radio(),
+                _btn(
+                  title: 'allOpen',
+                  onTap: (_) async {
+                    for (var item in funList) {
+                      await item();
+                    }
+                  },
+                ),
+                _btn(
+                  title: 'allClose',
+                  onTap: (_) =>
+                      SmartDialog.dismiss(status: SmartStatus.allAttach),
+                ),
+              ],
+            ),
           ),
         );
       },
@@ -90,33 +93,41 @@ class AttachDialogLocation extends StatelessWidget {
     var list = [
       SmartAttachAlignmentType.inside,
       SmartAttachAlignmentType.center,
-      SmartAttachAlignmentType.outside
+      SmartAttachAlignmentType.outside,
     ];
     return StatefulBuilder(
-        builder: (BuildContext context, StateSetter setState) {
-      return Row(
-        mainAxisSize: MainAxisSize.min,
-        children: List.generate(list.length, (index) {
-          return Row(children: [
-            if (index == 0) const Text("SmartAttachAlignmentType(  "),
-            Text("${list[index].toString()}: "
-                .replaceAll("SmartAttachAlignmentType.", "")),
-            Radio(
-              value: index,
-              groupValue: curIndex,
-              onChanged: (value) {
-                curIndex = value as int;
-                SmartDialog.config.attach =
-                    SmartConfigAttach(attachAlignmentType: list[index]);
-                setState(() {});
-              },
-            ),
-            if (index == list.length - 1) const Text(" )"),
-            const SizedBox(width: 10),
-          ]);
-        }),
-      );
-    });
+      builder: (BuildContext context, StateSetter setState) {
+        return Row(
+          mainAxisSize: MainAxisSize.min,
+          children: List.generate(list.length, (index) {
+            return Row(
+              children: [
+                if (index == 0) const Text("SmartAttachAlignmentType(  "),
+                Text(
+                  "${list[index].toString()}: ".replaceAll(
+                    "SmartAttachAlignmentType.",
+                    "",
+                  ),
+                ),
+                Radio(
+                  value: index,
+                  groupValue: curIndex,
+                  onChanged: (value) {
+                    curIndex = value as int;
+                    SmartDialog.config.attach = SmartConfigAttach(
+                      attachAlignmentType: list[index],
+                    );
+                    setState(() {});
+                  },
+                ),
+                if (index == list.length - 1) const Text(" )"),
+                const SizedBox(width: 10),
+              ],
+            );
+          }),
+        );
+      },
+    );
   }
 
   Widget _btn({
@@ -125,25 +136,26 @@ class AttachDialogLocation extends StatelessWidget {
   }) {
     return Container(
       margin: const EdgeInsets.all(25),
-      child: Builder(builder: (context) {
-        Color? color = title.contains('all') ? _randomColor : null;
-        _contextList.add(context);
-        return SizedBox(
-          width: 130,
-          child: ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor: ButtonStyleButton.allOrNull<Color>(color),
+      child: Builder(
+        builder: (context) {
+          Color? color = title.contains('all') ? _randomColor : null;
+          _contextList.add(context);
+          return SizedBox(
+            width: 130,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: ButtonStyleButton.allOrNull<Color>(color),
+              ),
+              onPressed: () => onTap(context),
+              child: Text(title),
             ),
-            onPressed: () => onTap(context),
-            child: Text(title),
-          ),
-        );
-      }),
+          );
+        },
+      ),
     );
   }
 
-  Future _attachDialog(
-      BuildContext context, Alignment alignment) async {
+  Future _attachDialog(BuildContext context, Alignment alignment) async {
     SmartDialog.showAttach(
       targetContext: context,
       usePenetrate: true,

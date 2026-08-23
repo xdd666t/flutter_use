@@ -3,13 +3,13 @@ import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
 class SideListDialogView extends StatelessWidget {
-  SideListDialogView({
-    Key? key,
+  const SideListDialogView({
+    super.key,
     required this.title,
     this.imageUrl,
     required this.data,
     required this.onItem,
-  }) : super(key: key);
+  });
 
   ///标题
   final String title;
@@ -60,10 +60,7 @@ class SideListDialogView extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     data[index],
-                    style: TextStyle(
-                      color: Color(0xFF333333),
-                      fontSize: 28.sp,
-                    ),
+                    style: TextStyle(color: Color(0xFF333333), fontSize: 28.sp),
                   ),
                 ),
 
@@ -71,7 +68,7 @@ class SideListDialogView extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(left: 40.dp),
                   height: 1.dp,
-                  color: Colors.black.withOpacity(0.3),
+                  color: Colors.black.withValues(alpha: 0.3),
                 ),
               ],
             ),
@@ -88,10 +85,7 @@ class SideListDialogView extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 40.dp, vertical: 20.dp),
       child: Text(
         title,
-        style: TextStyle(
-          color: Color(0xFF333333),
-          fontSize: 28.sp,
-        ),
+        style: TextStyle(color: Color(0xFF333333), fontSize: 28.sp),
       ),
     );
   }
@@ -105,11 +99,7 @@ class SideListDialogView extends StatelessWidget {
           imageUrl != null && imageUrl != ''
               ? Container(
                   margin: EdgeInsets.only(right: 20.dp),
-                  child: Image.network(
-                    imageUrl!,
-                    height: 50.dp,
-                    width: 50.dp,
-                  ),
+                  child: Image.network(imageUrl!, height: 50.dp, width: 50.dp),
                 )
               : Container(),
 
@@ -121,7 +111,7 @@ class SideListDialogView extends StatelessWidget {
               fontSize: 32.sp,
               fontWeight: FontWeight.bold,
             ),
-          )
+          ),
         ],
       ),
     );

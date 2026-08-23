@@ -1,5 +1,5 @@
 class TestLayoutState {
-  TestLayoutState(){
+  TestLayoutState() {
     ///init some data
   }
 }

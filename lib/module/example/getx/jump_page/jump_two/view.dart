@@ -8,6 +8,8 @@ class GetJumpTwoPage extends StatelessWidget {
   final oneLogic = Get.find<GetJumpOneLogic>();
   final twoLogic = Get.put(GetJumpTwoLogic());
 
+  GetJumpTwoPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,23 +23,30 @@ class GetJumpTwoPage extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       body: Center(
-        child: Column(mainAxisSize: MainAxisSize.min, children: [
-          //计数显示
-          GetBuilder<GetJumpTwoLogic>(
-            builder: (logic) {
-              return Text('跨页面-Two点击了 ${twoLogic.count} 次',
-                  style: TextStyle(fontSize: 30.0));
-            },
-          ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            //计数显示
+            GetBuilder<GetJumpTwoLogic>(
+              builder: (logic) {
+                return Text(
+                  '跨页面-Two点击了 ${twoLogic.count} 次',
+                  style: TextStyle(fontSize: 30.0),
+                );
+              },
+            ),
 
-          //传递数据
-          GetBuilder<GetJumpTwoLogic>(
-            builder: (logic) {
-              return Text('传递的数据：${twoLogic.msg}',
-                  style: TextStyle(fontSize: 30.0));
-            },
-          ),
-        ]),
+            //传递数据
+            GetBuilder<GetJumpTwoLogic>(
+              builder: (logic) {
+                return Text(
+                  '传递的数据：${twoLogic.msg}',
+                  style: TextStyle(fontSize: 30.0),
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -8,7 +8,8 @@ typedef InputParamSingleCallback<D> = dynamic Function(D data);
 typedef InputParamVoidCallback = dynamic Function();
 
 class InputText extends StatefulWidget {
-  InputText({
+  const InputText({
+    super.key,
     this.inputFormatters,
     this.hintText = '请输入',
     this.hintColor = const Color(0xFFCCCCCC),
@@ -95,10 +96,11 @@ class InputText extends StatefulWidget {
 }
 
 class _InputTextState extends State<InputText> {
-  late FocusNode focusNode;
+  late final FocusNode focusNode;
 
   @override
   void initState() {
+    super.initState();
     focusNode = FocusNode();
     //监听焦点获得和失去
     focusNode.addListener(() {
@@ -108,8 +110,6 @@ class _InputTextState extends State<InputText> {
         widget.onLoseFocus?.call();
       }
     });
-
-    super.initState();
   }
 
   @override
@@ -132,16 +132,15 @@ class _InputTextState extends State<InputText> {
         keyboardType: widget.keyboardType,
         autofocus: widget.autofocus ?? false,
         textAlign: widget.textAlign,
-        style: widget.style ??
-            TextStyle(
-              color: widget.textColor,
-              fontSize: widget.textSize ?? 28,
-            ),
+        style:
+            widget.style ??
+            TextStyle(color: widget.textColor, fontSize: widget.textSize ?? 28),
         inputFormatters: widget.inputFormatters,
         maxLines: widget.maxLines,
         minLines: widget.minLines,
         maxLength: widget.maxLength,
-        decoration: widget.decoration ??
+        decoration:
+            widget.decoration ??
             InputDecoration(
               ///较小空间时，使组件正常渲染，包括文本垂直居中
               isDense: true,

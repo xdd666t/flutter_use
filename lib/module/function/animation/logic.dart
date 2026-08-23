@@ -12,7 +12,6 @@ class AnimationLogic extends GetxController {
   ///测试功能模块
   void showFun(tag) async {
     switch (tag) {
-
       ///AnimationWidget
       case AnimationTag.animationWidget:
         _animationWidget();
@@ -21,8 +20,10 @@ class AnimationLogic extends GetxController {
   }
 
   void _animationWidget() {
-    SmartDialog.show(builder: (_) {
-      return _CustomScaleTransition();
-    });
+    SmartDialog.show(
+      builder: (_) {
+        return _CustomScaleTransition();
+      },
+    );
   }
 }

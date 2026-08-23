@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomToastWidget extends StatelessWidget {
-  CustomToastWidget({Key? key, required this.msg}) : super(key: key);
+  const CustomToastWidget({super.key, required this.msg});
 
   final String msg;
 
@@ -16,7 +16,7 @@ class CustomToastWidget extends StatelessWidget {
           color: Colors.black,
           borderRadius: BorderRadius.circular(20),
         ),
-        child: Text('$msg', style: TextStyle(color: Colors.white)),
+        child: Text(msg, style: TextStyle(color: Colors.white)),
       ),
     );
   }

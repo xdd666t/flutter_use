@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class ToastSmart extends StatelessWidget {
-  const ToastSmart({Key? key}) : super(key: key);
+  const ToastSmart({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class ToastSmart extends StatelessWidget {
       "I'm a smart toast",
       displayTime: const Duration(seconds: 6),
     );
-    if (SmartDialog.config.checkExist()) return;
+    if (SmartDialog.checkExist()) return;
 
     SmartDialog.show(
       usePenetrate: true,
@@ -30,7 +30,7 @@ class ToastSmart extends StatelessWidget {
           width: 100,
           padding: const EdgeInsets.only(left: 20),
           decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.6),
+            color: Colors.black.withValues(alpha: 0.6),
             borderRadius: BorderRadius.circular(100),
           ),
           child: const TextField(),

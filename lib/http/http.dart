@@ -9,7 +9,7 @@ import 'package:flutter_use/toolkit/utils/log_util.dart';
 import 'net/net_util.dart';
 
 ///dio封装 使用举例
-testHttp() async {
+Future<void> testHttp() async {
   //处理一些初始化设置
   Http.init();
   Log.d('测试Http');
@@ -41,7 +41,7 @@ testHttp() async {
 }
 
 class Http {
-  static LoadingInterceptor loadingInterceptor = LoadingInterceptor();
+  static final LoadingInterceptor loadingInterceptor = LoadingInterceptor();
 
   static void init({
     String baseUrl = '',
@@ -65,14 +65,14 @@ class Http {
   }
 
   ///Get请求
-  static Future get(
+  static Future<T> get<T>(
     String path, {
     Map<String, dynamic>? queryParameters,
     Options? options,
     CancelToken? cancelToken,
     bool isLoading = true,
   }) async {
-    var response = await request(
+    final response = await request<T>(
       path,
       method: HttpMethod.get,
       queryParameters: queryParameters,
@@ -84,7 +84,7 @@ class Http {
   }
 
   ///Post请求
-  static Future post(
+  static Future<T> post<T>(
     String path, {
     data,
     Map<String, dynamic>? queryParameters,
@@ -92,7 +92,7 @@ class Http {
     CancelToken? cancelToken,
     bool isLoading = true,
   }) async {
-    var response = await request(
+    final response = await request<T>(
       path,
       method: HttpMethod.post,
       data: data,
@@ -108,7 +108,7 @@ class Http {
   /// Put、Delete请求之类都请使用Request请求
   ///
   /// 所有类型请求,都是调用此请求
-  static Future request(
+  static Future<T> request<T>(
     String path, {
     HttpMethod method = HttpMethod.get,
     data,
@@ -119,14 +119,19 @@ class Http {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    loadingInterceptor.isLoading = isLoading;
+    final requestOptions = (options ?? Options()).copyWith(
+      extra: <String, Object?>{
+        ...?options?.extra,
+        LoadingInterceptor.showLoadingKey: isLoading,
+      },
+    );
 
-    var response = await NetUtil.instance.request(
+    final response = await NetUtil.instance.request<T>(
       path,
       method: method,
       data: data,
       queryParameters: queryParameters,
-      options: options,
+      options: requestOptions,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -150,7 +155,13 @@ class ResponseInterceptor extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     //处理最外层数据结构
-    BaseResponse bean = BaseResponse.fromJson(response.data);
+    final data = response.data;
+    if (data is! Map) {
+      handler.next(response);
+      return;
+    }
+
+    final bean = BaseResponse.fromJson(Map<String, dynamic>.from(data));
 
     //可以在此处处理一些通用的错误信息
     // if(bean.errorCode == 1) {
@@ -164,12 +175,22 @@ class ResponseInterceptor extends Interceptor {
 
 ///此处定义一个弹窗加载拦截器
 class LoadingInterceptor extends Interceptor {
-  bool isLoading = true;
+  static const String showLoadingKey = 'flutter_use.showLoading';
+
+  int _activeRequests = 0;
+
+  bool _shouldShowLoading(RequestOptions options) =>
+      options.extra[showLoadingKey] == true;
 
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     //打开加载弹窗
-    if (isLoading) SmartDialog.showLoading();
+    if (_shouldShowLoading(options)) {
+      _activeRequests++;
+      if (_activeRequests == 1) {
+        SmartDialog.showLoading();
+      }
+    }
 
     handler.next(options);
   }
@@ -177,20 +198,26 @@ class LoadingInterceptor extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) async {
     //关闭弹窗
-    if (isLoading && SmartDialog.config.checkExist()) {
-      await SmartDialog.dismiss(status: SmartStatus.loading);
-    }
+    await _finishLoading(response.requestOptions);
 
     handler.next(response);
   }
 
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) async {
+  void onError(DioException err, ErrorInterceptorHandler handler) async {
     //关闭弹窗
-    if (isLoading && SmartDialog.config.checkExist()) {
-      await SmartDialog.dismiss(status: SmartStatus.loading);
-    }
+    await _finishLoading(err.requestOptions);
 
     handler.next(err);
+  }
+
+  Future<void> _finishLoading(RequestOptions options) async {
+    if (!_shouldShowLoading(options)) return;
+
+    _activeRequests = (_activeRequests - 1).clamp(0, double.infinity).toInt();
+    if (_activeRequests == 0 &&
+        SmartDialog.checkExist(dialogTypes: {SmartAllDialogType.loading})) {
+      await SmartDialog.dismiss(status: SmartStatus.loading);
+    }
   }
 }

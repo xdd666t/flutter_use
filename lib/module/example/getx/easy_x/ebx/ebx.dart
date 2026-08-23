@@ -5,7 +5,7 @@ import 'rx_easy.dart';
 typedef WidgetCallback = Widget Function();
 
 class Ebx extends StatefulWidget {
-  const Ebx(this.builder, {Key? key}) : super(key: key);
+  const Ebx(this.builder, {super.key});
 
   final WidgetCallback builder;
 
@@ -14,7 +14,7 @@ class Ebx extends StatefulWidget {
 }
 
 class _EbxState extends State<Ebx> {
-  RxEasy _rxEasy = RxEasy();
+  final RxEasy _rxEasy = RxEasy();
 
   @override
   void initState() {

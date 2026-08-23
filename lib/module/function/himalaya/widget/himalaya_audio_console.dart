@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/module/function/himalaya/logic.dart';
@@ -8,7 +7,7 @@ import 'package:get/get.dart';
 
 class HimalayaAudioConsole extends StatelessWidget {
   const HimalayaAudioConsole({
-    Key? key,
+    super.key,
     required this.data,
     required this.onRightArrow,
     required this.onLeftArrow,
@@ -22,7 +21,7 @@ class HimalayaAudioConsole extends StatelessWidget {
     required this.onVolume,
     required this.onLove,
     required this.onPlayModel,
-  }) : super(key: key);
+  });
 
   ///数据源
   final HimalayaSubItemInfo data;
@@ -65,126 +64,145 @@ class HimalayaAudioConsole extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      //左边播放按钮等控件
-      Row(children: [
-        //左切换
-        _buildLeftSwitch(),
+    return _buildBg(
+      children: [
+        //左边播放按钮等控件
+        Row(
+          children: [
+            //左切换
+            _buildLeftSwitch(),
 
-        //播放
-        _buildPlay(),
+            //播放
+            _buildPlay(),
 
-        //右切换
-        _buildRightSwitch(),
+            //右切换
+            _buildRightSwitch(),
 
-        //喜欢
-        _buildLove(),
+            //喜欢
+            _buildLove(),
 
-        //播放模式
-        _buildPlayMode(),
-      ]),
+            //播放模式
+            _buildPlayMode(),
+          ],
+        ),
 
-      //播放进度、信息
-      Expanded(
-        child: Row(children: [
-          //作品封面
-          _buildCover(),
+        //播放进度、信息
+        Expanded(
+          child: Row(
+            children: [
+              //作品封面
+              _buildCover(),
 
-          //播放进度和作品信息
-          _buildPlayInfo(),
-        ]),
-      ),
+              //播放进度和作品信息
+              _buildPlayInfo(),
+            ],
+          ),
+        ),
 
-      //播放设置
-      Row(children: [
-        //声音调节
-        _buildVolume(),
+        //播放设置
+        Row(
+          children: [
+            //声音调节
+            _buildVolume(),
 
-        //字幕
-        _buildSubtitle(),
+            //字幕
+            _buildSubtitle(),
 
-        //倍速
-        _buildSpeed(),
+            //倍速
+            _buildSpeed(),
 
-        //定时
-        _buildTiming(),
+            //定时
+            _buildTiming(),
 
-        //目录
-        _buildCatalog(),
-      ]),
-    ]);
+            //目录
+            _buildCatalog(),
+          ],
+        ),
+      ],
+    );
   }
 
   Widget _buildPlayInfo() {
     return Expanded(
       child: Container(
         margin: EdgeInsets.only(right: 30.dp),
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          //标题和事件
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Row(children: [
-              //标题信息
-              GetBuilder<HimalayaLogic>(
-                builder: (logic) {
-                  return Text(
-                    data.title,
-                    style: TextStyle(fontSize: 15.sp),
-                  );
-                },
-              ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            //标题和事件
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    //标题信息
+                    GetBuilder<HimalayaLogic>(
+                      builder: (logic) {
+                        return Text(
+                          data.title,
+                          style: TextStyle(fontSize: 15.sp),
+                        );
+                      },
+                    ),
 
-              Container(width: 15.dp),
+                    Container(width: 15.dp),
 
-              //副标题信息
-              GetBuilder<HimalayaLogic>(
-                builder: (logic) {
-                  return Text(
-                    data.subTitle ?? '',
-                    style: TextStyle(fontSize: 15.sp),
-                  );
-                },
-              ),
-            ]),
+                    //副标题信息
+                    GetBuilder<HimalayaLogic>(
+                      builder: (logic) {
+                        return Text(
+                          data.subTitle ?? '',
+                          style: TextStyle(fontSize: 15.sp),
+                        );
+                      },
+                    ),
+                  ],
+                ),
+
+                //进度
+                Text('01:30 / 03:42', style: TextStyle(fontSize: 16.sp)),
+              ],
+            ),
 
             //进度
-            Text('01:30 / 03:42', style: TextStyle(fontSize: 16.sp)),
-          ]),
+            GestureDetector(
+              onTap: () => onProgress(),
+              child: Container(
+                height: 10.dp,
+                margin: EdgeInsets.only(top: 7.dp),
+                child: Stack(
+                  alignment: Alignment.centerLeft,
+                  children: [
+                    //总进度条
+                    Container(
+                      height: 3.dp,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.dp),
+                        color: Colors.grey,
+                      ),
+                    ),
 
-          //进度
-          GestureDetector(
-            onTap: () => onProgress(),
-            child: Container(
-              height: 10.dp,
-              margin: EdgeInsets.only(top: 7.dp),
-              child: Stack(alignment: Alignment.centerLeft, children: [
-                //总进度条
-                Container(
-                  height: 3.dp,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.dp),
-                    color: Colors.grey,
-                  ),
-                ),
+                    //播放进度条
+                    Container(
+                      width: 210.dp,
+                      height: 3.dp,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.dp),
+                        color: Colors.red,
+                      ),
+                    ),
 
-                //播放进度条
-                Container(
-                  width: 210.dp,
-                  height: 3.dp,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.dp),
-                    color: Colors.red,
-                  ),
+                    //锚点
+                    Positioned(
+                      left: 200.dp,
+                      child: Icon(Icons.circle, size: 10.dp, color: Colors.red),
+                    ),
+                  ],
                 ),
-
-                //锚点
-                Positioned(
-                  left: 200.dp,
-                  child: Icon(Icons.circle, size: 10.dp, color: Colors.red),
-                ),
-              ]),
+              ),
             ),
-          ),
-        ]),
+          ],
+        ),
       ),
     );
   }
@@ -229,7 +247,7 @@ class HimalayaAudioConsole extends StatelessWidget {
           style: TextStyle(
             fontSize: 16.sp,
             fontWeight: FontWeight.bold,
-            color: Colors.grey.withOpacity(0.8),
+            color: Colors.grey.withValues(alpha: 0.8),
           ),
         ),
       ),
@@ -244,7 +262,7 @@ class HimalayaAudioConsole extends StatelessWidget {
         style: TextStyle(
           fontSize: 16.sp,
           fontWeight: FontWeight.bold,
-          color: Colors.grey.withOpacity(0.8),
+          color: Colors.grey.withValues(alpha: 0.8),
         ),
       ),
     );
@@ -255,11 +273,7 @@ class HimalayaAudioConsole extends StatelessWidget {
       onTap: () => onSubtitle(),
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 20.dp),
-        child: Icon(
-          Icons.text_fields,
-          size: 20.dp,
-          color: Colors.grey,
-        ),
+        child: Icon(Icons.text_fields, size: 20.dp, color: Colors.grey),
       ),
     );
   }
@@ -267,22 +281,14 @@ class HimalayaAudioConsole extends StatelessWidget {
   Widget _buildVolume() {
     return GestureDetector(
       onTap: () => onVolume(),
-      child: Icon(
-        Icons.volume_down,
-        size: 20.dp,
-        color: Colors.grey,
-      ),
+      child: Icon(Icons.volume_down, size: 20.dp, color: Colors.grey),
     );
   }
 
   Widget _buildPlayMode() {
     return GestureDetector(
       onTap: () => onPlayModel(),
-      child: Icon(
-        Icons.repeat,
-        size: 20.dp,
-        color: Colors.grey,
-      ),
+      child: Icon(Icons.repeat, size: 20.dp, color: Colors.grey),
     );
   }
 
@@ -291,11 +297,7 @@ class HimalayaAudioConsole extends StatelessWidget {
       onTap: () => onLove(),
       child: Container(
         margin: EdgeInsets.only(left: 30.dp, right: 20.dp),
-        child: Icon(
-          Icons.favorite_border,
-          size: 20.dp,
-          color: Colors.grey,
-        ),
+        child: Icon(Icons.favorite_border, size: 20.dp, color: Colors.grey),
       ),
     );
   }
@@ -305,11 +307,7 @@ class HimalayaAudioConsole extends StatelessWidget {
       onTap: () => onPlay(),
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 15.dp),
-        child: Icon(
-          Icons.play_circle,
-          color: Colors.red,
-          size: 50.dp,
-        ),
+        child: Icon(Icons.play_circle, color: Colors.red, size: 50.dp),
       ),
     );
   }
@@ -317,22 +315,14 @@ class HimalayaAudioConsole extends StatelessWidget {
   Widget _buildRightSwitch() {
     return GestureDetector(
       onTap: () => onRightArrow(),
-      child: Icon(
-        Icons.skip_next,
-        color: Colors.red,
-        size: 17.dp,
-      ),
+      child: Icon(Icons.skip_next, color: Colors.red, size: 17.dp),
     );
   }
 
   Widget _buildLeftSwitch() {
     return GestureDetector(
       onTap: () => onLeftArrow(),
-      child: Icon(
-        Icons.skip_previous,
-        color: Colors.red,
-        size: 17.dp,
-      ),
+      child: Icon(Icons.skip_previous, color: Colors.red, size: 17.dp),
     );
   }
 
@@ -343,7 +333,7 @@ class HimalayaAudioConsole extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
-          BoxShadow(color: Colors.black12, blurRadius: 10, spreadRadius: 2)
+          BoxShadow(color: Colors.black12, blurRadius: 10, spreadRadius: 2),
         ],
       ),
       child: Row(

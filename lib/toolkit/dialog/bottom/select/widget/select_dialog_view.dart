@@ -4,12 +4,12 @@ import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
 class SelectDialogView extends StatelessWidget {
-  SelectDialogView({
-    Key? key,
+  const SelectDialogView({
+    super.key,
     required this.data,
     required this.onSelect,
     this.title = '请选择',
-  }) : super(key: key);
+  });
 
   ///数据源
   final List<String> data;
@@ -22,16 +22,18 @@ class SelectDialogView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      ///标题
-      _buildTitle(),
+    return _buildBg(
+      children: [
+        ///标题
+        _buildTitle(),
 
-      ///选择内容项目
-      _buildSelectItem(),
+        ///选择内容项目
+        _buildSelectItem(),
 
-      ///取消
-      _buildCancel(),
-    ]);
+        ///取消
+        _buildCancel(),
+      ],
+    );
   }
 
   Widget _buildCancel() {
@@ -86,10 +88,7 @@ class SelectDialogView extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 data[index],
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 30.sp,
-                ),
+                style: TextStyle(color: Color(0xFF333333), fontSize: 30.sp),
               ),
             ),
           ),
@@ -138,10 +137,7 @@ class SelectDialogView extends StatelessWidget {
       margin: EdgeInsets.all(10.dp),
       child: Material(
         color: Colors.transparent,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: children,
-        ),
+        child: Column(mainAxisSize: MainAxisSize.min, children: children),
       ),
     );
   }

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'widget/function_card.dart';
 
 class FunctionPage extends StatelessWidget {
-  const FunctionPage({Key? key}) : super(key: key);
+  const FunctionPage({super.key});
 
   @override
   Widget build(BuildContext context) {

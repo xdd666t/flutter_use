@@ -8,10 +8,7 @@ import 'package:flutter_use/toolkit/view/custom/custom_single_child_scroll_view.
 
 ///树形item控件
 class TreeItems extends StatelessWidget {
-  TreeItems({
-    required this.data,
-    required this.onItem,
-  });
+  const TreeItems({super.key, required this.data, required this.onItem});
 
   ///树形数据源
   final List<TreeTwiceInfo> data;
@@ -21,26 +18,28 @@ class TreeItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBg(builder: (item) {
-      return [
-        //标题
-        Container(
-          margin: EdgeInsets.only(top: 50.dp, bottom: 10.dp),
-          width: double.infinity,
-          child: Text(
-            item.title,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+    return _buildBg(
+      builder: (item) {
+        return [
+          //标题
+          Container(
+            margin: EdgeInsets.only(top: 50.dp, bottom: 10.dp),
+            width: double.infinity,
+            child: Text(
+              item.title,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
           ),
-        ),
 
-        //按钮入口
-        FunctionItems(
-          items: item.btnInfo,
-          onItem: onItem,
-          padding: EdgeInsets.zero,
-        )
-      ];
-    });
+          //按钮入口
+          FunctionItems(
+            items: item.btnInfo,
+            onItem: onItem,
+            padding: EdgeInsets.zero,
+          ),
+        ];
+      },
+    );
   }
 
   Widget _buildBg({

@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_use/module/example/bloc/span_page/span_one/span_one_cubit.dart';
 
 class CubitSpanOnePage extends StatefulWidget {
+  const CubitSpanOnePage({super.key});
+
   @override
   _SpanOnePageState createState() => _SpanOnePageState();
 }

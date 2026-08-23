@@ -6,6 +6,8 @@ class GetJumpOnePage extends StatelessWidget {
   /// 使用Get.put()实例化你的类，使其对当下的所有子路由可用。
   final logic = Get.put(GetJumpOneLogic());
 
+  GetJumpOnePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,8 +20,10 @@ class GetJumpOnePage extends StatelessWidget {
       body: Center(
         child: GetBuilder<GetJumpOneLogic>(
           builder: (logic) {
-            return Text('跨页面-Two点击了 ${logic.count} 次',
-                style: TextStyle(fontSize: 30.0));
+            return Text(
+              '跨页面-Two点击了 ${logic.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
           },
         ),
       ),

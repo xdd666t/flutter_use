@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class CustomDialogPermanent extends StatelessWidget {
-  const CustomDialogPermanent({Key? key}) : super(key: key);
+  const CustomDialogPermanent({super.key});
   static const String _permanentTag = 'permanentDialog';
 
   @override

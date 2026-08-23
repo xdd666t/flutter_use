@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class ProHighCounterPage extends StatelessWidget {
+  const ProHighCounterPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -22,7 +24,7 @@ class ProHighCounterPage extends StatelessWidget {
         child: Selector<ProHighCounterProvider, int>(
           selector: (context, provider) => state.count,
           builder: (context, value, child) {
-            return Text('点击了 ${value} 次', style: TextStyle(fontSize: 30.0));
+            return Text('点击了 $value 次', style: TextStyle(fontSize: 30.0));
           },
         ),
       ),

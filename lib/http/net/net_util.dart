@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
@@ -29,7 +28,7 @@ class NetUtil {
 
   static NetUtil get instance => _instance ??= NetUtil._internal();
 
-  Dio dio = Dio();
+  final Dio dio = Dio();
   CancelToken _cancelToken = CancelToken();
 
   NetUtil._internal() {
@@ -42,9 +41,7 @@ class NetUtil {
       // 响应流上前后两次接受到数据的间隔，单位为毫秒。
       receiveTimeout: const Duration(milliseconds: NetConfig.receiveTimeout),
       // Http请求头.
-      headers: {
-        NetConfig.headerContentType: NetConfig.contentTypeForm,
-      },
+      headers: {NetConfig.headerContentType: NetConfig.contentTypeForm},
       // 设置内容类型为“multipart/form-data”
       // contentType: NetConfig.contentTypeForm,
     );
@@ -56,15 +53,15 @@ class NetUtil {
 
     // 在调试模式下需要抓包调试，所以我们使用代理，并禁用HTTPS证书校验
     if (NetConfig.proxyEnable) {
-      (dio.httpClientAdapter as IOHttpClientAdapter).onHttpClientCreate =
-          (client) {
+      (dio.httpClientAdapter as IOHttpClientAdapter).createHttpClient = () {
+        final client = HttpClient();
         client.findProxy = (uri) {
-          return "PROXY ${NetConfig.proxyIp}:${NetConfig.proxyPort}";
+          return 'PROXY ${NetConfig.proxyIp}:${NetConfig.proxyPort}';
         };
         //代理工具会提供一个抓包的自签名证书，会通不过证书校验，所以我们禁用证书校验
         client.badCertificateCallback =
             (X509Certificate cert, String host, int port) => true;
-        return null;
+        return client;
       };
     }
   }
@@ -91,12 +88,15 @@ class NetUtil {
   }) {
     //初始化默认参数
     dio.options.baseUrl = baseUrl;
-    dio.options.connectTimeout =
-        Duration(milliseconds: connectTimeout ?? NetConfig.connectTimeout);
-    dio.options.sendTimeout =
-        Duration(milliseconds: connectTimeout ?? NetConfig.sendTimeout);
-    dio.options.receiveTimeout =
-        Duration(milliseconds: receiveTimeout ?? NetConfig.receiveTimeout);
+    dio.options.connectTimeout = Duration(
+      milliseconds: connectTimeout ?? NetConfig.connectTimeout,
+    );
+    dio.options.sendTimeout = Duration(
+      milliseconds: sendTimeout ?? NetConfig.sendTimeout,
+    );
+    dio.options.receiveTimeout = Duration(
+      milliseconds: receiveTimeout ?? NetConfig.receiveTimeout,
+    );
 
     //添加拦截器
     if (interceptors != null && interceptors.isNotEmpty) {
@@ -194,39 +194,20 @@ class NetUtil {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    //处理网络类型
-    if (method == HttpMethod.get) {
-      dio.options.method = 'GET';
-    } else if (method == HttpMethod.post) {
-      dio.options.method = 'POST';
-    } else if (method == HttpMethod.delete) {
-      dio.options.method = 'DELETE';
-    } else if (method == HttpMethod.put) {
-      dio.options.method = 'PUT';
-    }
-    //处理请求设置
-    options = options ?? Options();
-    Completer<T> completer = Completer();
-    dio
-        .request<T>(
-          path,
-          data: data,
-          queryParameters: queryParameters,
-          options: options,
-          cancelToken: cancelToken ?? _cancelToken,
-          onSendProgress: onSendProgress,
-          onReceiveProgress: onReceiveProgress,
-        )
-        .then((value) => {
-              completer.complete(value.data),
-            })
-        .catchError((error) => {
-              completer.complete(null),
-              completer.completeError(error),
-            })
-        .whenComplete(() => null);
+    final requestOptions = (options ?? Options()).copyWith(
+      method: method.name.toUpperCase(),
+    );
+    final response = await dio.request<T>(
+      path,
+      data: data,
+      queryParameters: queryParameters,
+      options: requestOptions,
+      cancelToken: cancelToken ?? _cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
 
-    return completer.future;
+    return response.data as T;
   }
 
   /// 添加拦截器
@@ -246,6 +227,11 @@ class NetUtil {
     dio.interceptors.remove(interceptor);
   }
 
+  /// Remove an interceptor by its instance.
+  void removeInterceptor(Interceptor interceptor) {
+    removeIntercept(interceptor);
+  }
+
   /// 设置headers
   void setHeaders(Map<String, dynamic> map) {
     dio.options.headers.addAll(map);
@@ -261,6 +247,10 @@ class NetUtil {
   /// 同一个cancel token 可以用于多个请求，当一个cancel token取消时，所有使用该cancel token的请求都会被取消。
   /// 所以参数可选
   void cancelRequests({CancelToken? token}) {
-    token ?? _cancelToken.cancel("cancelled");
+    final requestToken = token ?? _cancelToken;
+    requestToken.cancel('cancelled');
+    if (token == null) {
+      _cancelToken = CancelToken();
+    }
   }
 }

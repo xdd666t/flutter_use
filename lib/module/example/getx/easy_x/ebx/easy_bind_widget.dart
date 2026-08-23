@@ -3,18 +3,17 @@ import 'package:flutter_use/module/example/getx/easy_x/easy.dart';
 
 class EasyBindWidget extends StatefulWidget {
   const EasyBindWidget({
-    Key? key,
+    super.key,
     this.bind,
     this.tag,
     this.binds,
     this.tags,
     required this.child,
-  })  : assert(
-          binds == null || tags == null || binds.length == tags.length,
-          'The binds and tags arrays length should be equal\n'
-          'and the elements in the two arrays correspond one-to-one',
-        ),
-        super(key: key);
+  }) : assert(
+         binds == null || tags == null || binds.length == tags.length,
+         'The binds and tags arrays length should be equal\n'
+         'and the elements in the two arrays correspond one-to-one',
+       );
 
   final Object? bind;
   final String? tag;

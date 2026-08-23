@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class ToastIntervalTime extends StatelessWidget {
-  const ToastIntervalTime({Key? key}) : super(key: key);
+  const ToastIntervalTime({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +20,7 @@ class ToastIntervalTime extends StatelessWidget {
     );
     for (var i = 0; i < 3; i++) {
       SmartDialog.showToast("toast $i").then((value) {
-        if (!SmartDialog.config.checkExist(dialogTypes: {
-          SmartAllDialogType.toast,
-        })) {
+        if (!SmartDialog.checkExist(dialogTypes: {SmartAllDialogType.toast})) {
           SmartDialog.config.toast = SmartConfigToast();
         }
       });

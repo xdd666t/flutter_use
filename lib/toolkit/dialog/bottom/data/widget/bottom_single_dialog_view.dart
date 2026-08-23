@@ -4,8 +4,8 @@ import 'package:flutter_use/app/ui/auto_ui.dart';
 import 'package:flutter_use/toolkit/typedef/function.dart';
 
 class BottomSingleDialogView extends StatefulWidget {
-  BottomSingleDialogView({
-    Key? key,
+  const BottomSingleDialogView({
+    super.key,
     required this.onCancel,
     required this.onConfirm,
     required this.data,
@@ -16,7 +16,7 @@ class BottomSingleDialogView extends StatefulWidget {
     this.cancelTextStyle,
     this.confirmTextStyle,
     this.itemTextStyle,
-  }) : super(key: key);
+  });
 
   ///数据源
   final List<String> data;
@@ -63,7 +63,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
         _buildTitle(),
 
         //分割线
-        Container(height: 1.dp, color: Colors.black.withOpacity(0.2)),
+        Container(height: 1.dp, color: Colors.black.withValues(alpha: 0.2)),
 
         //内容列表
         Expanded(child: _buildContent()),
@@ -101,7 +101,8 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
           alignment: Alignment.center,
           child: Text(
             widget.data[index],
-            style: widget.itemTextStyle ??
+            style:
+                widget.itemTextStyle ??
                 TextStyle(color: Color(0xFF333333), fontSize: 28.sp),
           ),
         );
@@ -113,7 +114,8 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
     return _buildBtn(
       title: widget.confirm,
       alignment: Alignment.centerRight,
-      style: widget.confirmTextStyle ??
+      style:
+          widget.confirmTextStyle ??
           TextStyle(color: Color(0xFF0299FF), fontSize: 33.sp),
       onPressed: () => widget.onConfirm(_selectedIndex),
     );
@@ -124,7 +126,8 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
       alignment: Alignment.center,
       child: Text(
         widget.title,
-        style: widget.titleTextStyle ??
+        style:
+            widget.titleTextStyle ??
             TextStyle(color: Color(0xFF333333), fontSize: 33.sp),
       ),
     );
@@ -134,7 +137,8 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
     return _buildBtn(
       title: widget.cancel,
       alignment: Alignment.centerLeft,
-      style: widget.cancelTextStyle ??
+      style:
+          widget.cancelTextStyle ??
           TextStyle(color: Color(0xFF999999), fontSize: 33.sp),
       onPressed: () {
         widget.onCancel();
@@ -170,9 +174,7 @@ class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {
           topRight: Radius.circular(10),
         ),
       ),
-      child: Column(
-        children: children,
-      ),
+      child: Column(children: children),
     );
   }
 }

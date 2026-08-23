@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 class LoadingLeastTime extends StatelessWidget {
-  const LoadingLeastTime({Key? key}) : super(key: key);
+  const LoadingLeastTime({super.key});
 
   @override
   Widget build(BuildContext context) {
