@@ -6,7 +6,7 @@ class StreamPage extends StatefulWidget {
   const StreamPage({super.key});
 
   @override
-  _StreamPageState createState() => _StreamPageState();
+  State<StreamPage> createState() => _StreamPageState();
 }
 
 class _StreamPageState extends State<StreamPage> {

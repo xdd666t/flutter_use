@@ -77,7 +77,7 @@ class InputTextClear extends StatefulWidget {
   final bool? enabled;
 
   @override
-  _InputTextClearState createState() => _InputTextClearState();
+  State<InputTextClear> createState() => _InputTextClearState();
 }
 
 class _InputTextClearState extends State<InputTextClear>

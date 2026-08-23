@@ -10,7 +10,7 @@ class TestWidgetPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text(''));
+    return const SizedBox.shrink();
   }
 }
 
@@ -19,6 +19,6 @@ class Counter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Text(''));
+    return const Scaffold(body: SizedBox.shrink());
   }
 }

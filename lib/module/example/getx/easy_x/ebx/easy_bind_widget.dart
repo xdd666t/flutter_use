@@ -24,7 +24,7 @@ class EasyBindWidget extends StatefulWidget {
   final Widget child;
 
   @override
-  _EasyBindWidgetState createState() => _EasyBindWidgetState();
+  State<EasyBindWidget> createState() => _EasyBindWidgetState();
 }
 
 class _EasyBindWidgetState extends State<EasyBindWidget> {

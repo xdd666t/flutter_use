@@ -97,34 +97,35 @@ class AttachDialogLocation extends StatelessWidget {
     ];
     return StatefulBuilder(
       builder: (BuildContext context, StateSetter setState) {
-        return Row(
-          mainAxisSize: MainAxisSize.min,
-          children: List.generate(list.length, (index) {
-            return Row(
-              children: [
-                if (index == 0) const Text("SmartAttachAlignmentType(  "),
-                Text(
-                  "${list[index].toString()}: ".replaceAll(
-                    "SmartAttachAlignmentType.",
-                    "",
-                  ),
-                ),
-                Radio(
-                  value: index,
-                  groupValue: curIndex,
-                  onChanged: (value) {
-                    curIndex = value as int;
-                    SmartDialog.config.attach = SmartConfigAttach(
-                      attachAlignmentType: list[index],
-                    );
-                    setState(() {});
-                  },
-                ),
-                if (index == list.length - 1) const Text(" )"),
-                const SizedBox(width: 10),
-              ],
+        return RadioGroup<int>(
+          groupValue: curIndex,
+          onChanged: (value) {
+            if (value == null) return;
+            curIndex = value;
+            SmartDialog.config.attach = SmartConfigAttach(
+              attachAlignmentType: list[value],
             );
-          }),
+            setState(() {});
+          },
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: List.generate(list.length, (index) {
+              return Row(
+                children: [
+                  if (index == 0) const Text("SmartAttachAlignmentType(  "),
+                  Text(
+                    "${list[index].toString()}: ".replaceAll(
+                      "SmartAttachAlignmentType.",
+                      "",
+                    ),
+                  ),
+                  Radio(value: index),
+                  if (index == list.length - 1) const Text(" )"),
+                  const SizedBox(width: 10),
+                ],
+              );
+            }),
+          ),
         );
       },
     );

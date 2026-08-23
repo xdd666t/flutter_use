@@ -11,6 +11,7 @@ analyzer:
   exclude:
     - build/**
     - docs/**
+    - lib/generated/**
     - android/**
     - ios/**
     - web/**

@@ -61,7 +61,7 @@ class SearchBar extends StatefulWidget {
   final TextEditingController? controller;
 
   @override
-  _SearchBarState createState() => _SearchBarState();
+  State<SearchBar> createState() => _SearchBarState();
 }
 
 class _SearchBarState extends State<SearchBar>

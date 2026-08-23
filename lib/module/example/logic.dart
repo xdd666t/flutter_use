@@ -11,7 +11,7 @@ class ExampleLogic extends GetxController {
   final ExampleState state = ExampleState();
 
   ///跳转到功能模块
-  void toFun(context, tag) async {
+  void toFun(BuildContext context, String tag) {
     switch (tag) {
       ///GetX页面跳转
       case ExampleStatus.getCounterRx:

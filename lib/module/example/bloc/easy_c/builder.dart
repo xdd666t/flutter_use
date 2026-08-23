@@ -11,7 +11,7 @@ class EasyCBuilder<T extends EasyC<V>, V> extends StatefulWidget {
   final Function(BuildContext context, V state) builder;
 
   @override
-  _EasyCBuilderState createState() => _EasyCBuilderState<T, V>();
+  State<EasyCBuilder<T, V>> createState() => _EasyCBuilderState<T, V>();
 }
 
 class _EasyCBuilderState<T extends EasyC<V>, V>

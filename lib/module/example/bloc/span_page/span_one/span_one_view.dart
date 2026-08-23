@@ -6,7 +6,7 @@ class CubitSpanOnePage extends StatefulWidget {
   const CubitSpanOnePage({super.key});
 
   @override
-  _SpanOnePageState createState() => _SpanOnePageState();
+  State<CubitSpanOnePage> createState() => _SpanOnePageState();
 }
 
 class _SpanOnePageState extends State<CubitSpanOnePage> {

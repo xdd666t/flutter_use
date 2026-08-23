@@ -16,7 +16,7 @@ class EasyP {
     return element.value;
   }
 
-  /// 获取距离当前Element最近继承InheritedElement<T>的组件
+  /// 获取距离当前 Element 最近继承 `InheritedElement<T>` 的组件
   static EasyPInheritedElement<T>
   _getInheritedElement<T extends ChangeNotifier>(BuildContext context) {
     var inheritedElement =

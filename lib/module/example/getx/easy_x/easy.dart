@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 ///依赖注入，外部可将实例，注入该类中，由该类管理
 class Easy {
   ///注入实例
@@ -47,12 +49,12 @@ class _EasyInstance {
   bool delete<T>({String? tag, String? key}) {
     final newKey = key ?? _getKey(T, tag);
     if (!_single.containsKey(newKey)) {
-      print('Instance "$newKey" already removed.');
+      debugPrint('Instance "$newKey" already removed.');
       return false;
     }
 
     _single.remove(newKey);
-    print('Instance "$newKey" deleted.');
+    debugPrint('Instance "$newKey" deleted.');
     return true;
   }
 

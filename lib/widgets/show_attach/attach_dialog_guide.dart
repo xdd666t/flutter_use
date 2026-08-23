@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 //guide dialog
-late BuildContext _aContext;
-late BuildContext _bContext;
+BuildContext? _aContext;
+BuildContext? _bContext;
 
 class AttachDialogGuide extends StatelessWidget {
   const AttachDialogGuide({super.key});
@@ -14,13 +14,13 @@ class AttachDialogGuide extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: ElevatedButton(
-        onPressed: () => _show(),
+        onPressed: () => _show(context),
         child: const Text("click me"),
       ),
     );
   }
 
-  void _show() async {
+  Future<void> _show(BuildContext context) async {
     SmartDialog.show(
       builder: (_) {
         return Container(
@@ -37,7 +37,11 @@ class AttachDialogGuide extends StatelessWidget {
       },
     );
     await Future.delayed(const Duration(milliseconds: 500));
-    _guideA(_aContext);
+    final targetContext = _aContext;
+    if (!context.mounted || targetContext == null || !targetContext.mounted) {
+      return;
+    }
+    _guideA(targetContext);
   }
 
   Widget _pointA() {
@@ -132,8 +136,10 @@ class AttachDialogGuide extends StatelessWidget {
       builder: (_) {
         return _guide(
           onTap: () async {
+            final targetContext = _bContext;
             if (Random().nextBool()) await SmartDialog.dismiss();
-            _guideB(_bContext);
+            if (targetContext == null || !targetContext.mounted) return;
+            _guideB(targetContext);
           },
         );
       },

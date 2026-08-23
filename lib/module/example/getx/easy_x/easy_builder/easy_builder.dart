@@ -17,7 +17,7 @@ class EasyBuilder<T extends EasyXController> extends StatefulWidget {
   });
 
   @override
-  _EasyBuilderState<T> createState() => _EasyBuilderState<T>();
+  State<EasyBuilder<T>> createState() => _EasyBuilderState<T>();
 }
 
 class _EasyBuilderState<T extends EasyXController>

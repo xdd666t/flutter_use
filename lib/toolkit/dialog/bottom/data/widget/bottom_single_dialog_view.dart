@@ -49,7 +49,7 @@ class BottomSingleDialogView extends StatefulWidget {
   final TextStyle? itemTextStyle;
 
   @override
-  _BottomSingleDialogViewState createState() => _BottomSingleDialogViewState();
+  State<BottomSingleDialogView> createState() => _BottomSingleDialogViewState();
 }
 
 class _BottomSingleDialogViewState extends State<BottomSingleDialogView> {

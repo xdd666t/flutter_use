@@ -10,7 +10,7 @@ class AnimationLogic extends GetxController {
   final AnimationState state = AnimationState();
 
   ///测试功能模块
-  void showFun(tag) async {
+  void showFun(String tag) {
     switch (tag) {
       ///AnimationWidget
       case AnimationTag.animationWidget:

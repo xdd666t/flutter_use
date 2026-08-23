@@ -15,7 +15,7 @@ class FullImageDialogView extends StatefulWidget {
   final int currentIndex;
 
   @override
-  _FullImageDialogViewState createState() => _FullImageDialogViewState();
+  State<FullImageDialogView> createState() => _FullImageDialogViewState();
 }
 
 class _FullImageDialogViewState extends State<FullImageDialogView> {

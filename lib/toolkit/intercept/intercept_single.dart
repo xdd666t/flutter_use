@@ -33,7 +33,7 @@ class InterceptSingleHandler<T> {
 abstract class SingleHandler {
   /// span: 设置该参数，可控跨越多级节点
   /// 默认0，则不跨越节点（遍历所有节点）
-  next(dynamic data, {int span = 0});
+  void next(dynamic data, {int span = 0});
 }
 
 ///实现init处理器
@@ -45,7 +45,7 @@ class _InterceptSingleHandler extends SingleHandler {
   _InterceptSingleHandler({this.index = 0, required this.intercepts});
 
   @override
-  next(dynamic data, {int span = 0}) {
+  void next(dynamic data, {int span = 0}) {
     if ((index + span) >= intercepts.length) return;
 
     var intercept = intercepts[index + span];

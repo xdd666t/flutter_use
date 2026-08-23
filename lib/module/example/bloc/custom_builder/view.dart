@@ -47,7 +47,7 @@ class BlocEasyBuilder<T extends BlocBase<V>, V> extends StatefulWidget {
   final Function(BuildContext context, V state) builder;
 
   @override
-  _BlocEasyBuilderState createState() => _BlocEasyBuilderState<T, V>();
+  State<BlocEasyBuilder<T, V>> createState() => _BlocEasyBuilderState<T, V>();
 }
 
 class _BlocEasyBuilderState<T extends BlocBase<V>, V>

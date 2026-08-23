@@ -10,7 +10,7 @@ class Ebx extends StatefulWidget {
   final WidgetCallback builder;
 
   @override
-  _EbxState createState() => _EbxState();
+  State<Ebx> createState() => _EbxState();
 }
 
 class _EbxState extends State<Ebx> {

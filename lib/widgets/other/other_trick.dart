@@ -55,7 +55,7 @@ class InsideWidget extends StatefulWidget {
   final Function(VoidCallback onInvoke)? onUpdate;
 
   @override
-  _InsideWidgetState createState() => _InsideWidgetState();
+  State<InsideWidget> createState() => _InsideWidgetState();
 }
 
 class _InsideWidgetState extends State<InsideWidget> {

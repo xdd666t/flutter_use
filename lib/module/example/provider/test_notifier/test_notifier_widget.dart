@@ -6,7 +6,7 @@ class TestNotifierWidget extends StatefulWidget {
   final TestNotifierController? controller;
 
   @override
-  _TestNotifierState createState() => _TestNotifierState();
+  State<TestNotifierWidget> createState() => _TestNotifierState();
 }
 
 class _TestNotifierState extends State<TestNotifierWidget> {

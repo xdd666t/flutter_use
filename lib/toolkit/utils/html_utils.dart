@@ -7,6 +7,8 @@ class HtmlUtils {
 
   static void push(String prefix, String path) {
     final list = curUrl.split(prefix);
+    // universal_html exposes different nullability on native and web targets.
+    // ignore: unnecessary_nullable_for_final_variable_declarations
     final String? origin = html.window.location.origin;
     final curPath = curUrl.replaceFirst(origin ?? '', '');
     if (list.length == 2) {

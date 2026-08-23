@@ -92,7 +92,7 @@ class InputText extends StatefulWidget {
   final InputDecoration? decoration;
 
   @override
-  _InputTextState createState() => _InputTextState();
+  State<InputText> createState() => _InputTextState();
 }
 
 class _InputTextState extends State<InputText> {
